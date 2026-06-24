@@ -1,0 +1,344 @@
+% Created 2024-04-05 vie 10:48
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+
+\usepackage{parskip}
+\usepackage[utf8]{inputenc} %% For unicode chars
+\usepackage{placeins}
+\usepackage[margin=2.50cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\linespread{1.05}
+\usepackage[scaled]{helvet}
+\usepackage{courier}
+\hypersetup{colorlinks=true,linkcolor=blue}
+\RequirePackage{fancyvrb}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\small,formatcom = {\color[rgb]{0.5,0,0}}}
+\usepackage{mdframed}
+\BeforeBeginEnvironment{minted}{\begin{mdframed}}
+\AfterEndEnvironment{minted}{\end{mdframed}}
+\setcounter{secnumdepth}{3}
+\date{}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.6.18)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+\setlength\parindent{10pt}
+
+\section{Deep Learning}
+\label{sec:org98f2ef0}
+En el tema anterior construimos, entrenaos y ajustamos las primeras
+redes neuronales artificiales. Pero eran redes superficiales, con solo
+unas pocas capas ocultas. ¿Qué pasa si necesitas abordar un problema
+complejo, como detectar cientos de tipos de objetos en imágenes de
+alta resolución? Puede que necesites entrenar una ANN mucho más
+profunda, quizás con 10 capas o muchas más, cada una conteniendo
+cientos de neuronas, unidas por cientos de miles de
+conexiones. Entrenar una red neuronal profunda no es un paseo por el
+parque. Aquí están algunos de los problemas con los que podrías
+encontrarte:
+
+\begin{itemize}
+\item Podrías enfrentarte al problema de los gradientes que se vuelven
+cada vez más pequeños o más grandes, al fluir hacia atrás a través
+del DNN durante el entrenamiento. Ambos problemas hacen que las
+capas inferiores sean muy difíciles de entrenar.
+\item Puede que no tengas suficientes datos de entrenamiento para una red
+tan grande, o que sea demasiado costoso etiquetarlos.
+\item El entrenamiento puede ser extremadamente lento.
+\item Un modelo con millones de parámetros correría un grave riesgo de
+sobreajustar el conjunto de entrenamiento, especialmente si no hay
+suficientes instancias de entrenamiento o si son demasiado ruidosas.
+\end{itemize}
+
+En este tema vamos a pasar por cada uno de estos problemas y
+presentar técnicas para resolverlos. Comenzaremos explorando los
+problemas de gradientes desvanecientes y explodentes y algunas de sus
+soluciones más populares. A continuación, veremos el aprendizaje por
+transferencia y el preentrenamiento no supervisado, que pueden
+ayudarte a abordar tareas complejas incluso cuando tienes pocos datos
+etiquetados. Luego discutiremos varios optimizadores que pueden
+acelerar enormemente el entrenamiento de modelos grandes. Finalmente,
+cubriremos algunas técnicas de regularización populares para grandes
+redes neuronales. Con estas herramientas, podrás entrenar redes muy
+profundas. ¡Bienvenido al aprendizaje profundo!
+
+\subsection{Los problemas de gradientes que se desvanecen/explotan}
+\label{sec:orgcf80cba}
+Como se discutió anteriormente, la segunda fase del algoritmo de
+retropropagación funciona yendo desde la capa de salida hasta la capa
+de entrada, propagando el gradiente de error en el camino. Una vez que
+el algoritmo ha calculado el gradiente de la función de coste con
+respecto a cada parámetro en la red, usa estos gradientes para
+actualizar cada parámetro con un paso de descenso de gradiente.
+
+Desafortunadamente, los gradientes a menudo se vuelven más y más
+pequeños a medida que el algoritmo progresa hacia las capas
+inferiores. Como resultado, la actualización de descenso de gradiente
+deja los pesos de conexión de las capas inferiores prácticamente sin
+cambios, y el entrenamiento nunca converge a una buena solución. Esto
+se llama el problema de gradientes desvanecientes. En algunos casos,
+puede ocurrir lo contrario: los gradientes pueden crecer más y más
+hasta que las capas obtienen actualizaciones de peso increíblemente
+grandes y el algoritmo diverge. Esto es el problema de gradientes
+explodentes, que aparece más a menudo en las redes neuronales
+recurrentes (ver Capítulo 15). Más generalmente, las redes neuronales
+profundas sufren de gradientes inestables; diferentes capas pueden
+aprender a velocidades ampliamente diferentes.
+
+Este comportamiento desafortunado fue observado empíricamente hace
+mucho tiempo, y fue una de las razones por las que las redes
+neuronales profundas fueron en su mayoría abandonadas a principios de
+los 2000s. No estaba claro qué causaba que los gradientes fueran tan
+inestables al entrenar un DNN, pero algo de luz fue arrojado en un
+papel de 2010 por Xavier Glorot y Yoshua Bengio. Los autores
+encontraron algunos sospechosos, incluyendo la combinación de la
+popular función de activación sigmoide (logística) y la técnica de
+inicialización de peso que era más popular en ese momento (es decir,
+una distribución normal con una media de 0 y una desviación estándar
+de 1).
+
+En resumen, mostraron que con esta función de activación y este
+esquema de inicialización, la varianza de las salidas de cada capa es
+mucho mayor que la varianza de sus entradas. Avanzando en la red, la
+varianza sigue aumentando después de cada capa hasta que la función de
+activación se satura en las capas superiores. Esta saturación en
+realidad se empeora por el hecho de que la función sigmoide tiene una
+media de 0.5, no 0 (la función tangente hiperbólica tiene una media de
+0 y se comporta ligeramente mejor que la función sigmoide en redes
+profundas).
+
+Mirando la función de activación sigmoide (ver Figura
+11-1), puedes ver que cuando las entradas se vuelven grandes
+(negativas o positivas), la función se satura en 0 o 1, con una
+derivada extremadamente cercana a 0 (es decir, la curva es plana en
+ambos extremos). Así, cuando la retropropagación se activa,
+prácticamente no tiene gradiente para propagar hacia atrás a través de
+la red, y lo poco que queda de gradiente sigue diluyéndose a medida
+que la retropropagación avanza hacia abajo a través de las capas
+superiores, así que realmente no queda nada para las capas inferiores.
+
+Analogía de ejemplo: si ajustas el botón del amplificador de un
+micrófono demasiado cerca de cero, la gente no escuchará tu voz, pero
+si lo ajustas demasiado cerca del máximo, tu voz estará saturada y la
+gente no entenderá lo que estás diciendo. Ahora imagina una cadena de
+tales amplificadores: todos necesitan ser ajustados correctamente para
+que tu voz salga alta y clara al final de la cadena. Tu voz tiene que
+salir de cada amplificador con la misma amplitud con la que entró.
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{SaturacionFuncionActivacionSigmoide.png}
+\end{center}
+
+\subsection{Soluciones: Inicialización de Glorot y He}
+\label{sec:org45e61c6}
+En su artículo, Glorot y Bengio proponen una manera de aliviar
+significativamente el problema de gradientes inestables. Señalan que
+necesitamos que la señal fluya adecuadamente en ambas direcciones: en
+la dirección hacia adelante al hacer predicciones, y en la dirección
+inversa al retropropagar gradientes. No queremos que la señal se
+extinga, ni queremos que explote y sature. Para que la señal fluya
+correctamente, los autores argumentan que necesitamos que la varianza
+de las salidas de cada capa sea igual a la varianza de sus entradas, y
+necesitamos que los gradientes tengan igual varianza antes y después
+de fluir a través de una capa en la dirección inversa (por favor,
+consulta el artículo si estás interesado en los detalles
+matemáticos). Realmente no es posible garantizar ambos a menos que la
+capa tenga un número igual de entradas y salidas (estos números se
+llaman el fan-in y fan-out de la capa), pero Glorot y Bengio
+propusieron un buen compromiso que ha demostrado funcionar muy bien en
+la práctica: los pesos de conexión de cada capa deben inicializarse
+aleatoriamente como se describe en la Ecuación 11-1, donde \(fan_{avg} =
+(fan_{in} + fan_{out}) / 2\). Esta estrategia de inicialización se llama
+inicialización Xavier o inicialización Glorot, en honor al primer
+autor del artículo.
+
+\textbf{Ecuación 11-1}. Inicialización de Glorot (cuando se usa la función de activación sigmoide)
+
+Distribución normal con media 0 y varianza \(\sigma^{2} = \frac{1}{fan_{avg}}\)
+
+O una distribución uniforme entre \(-r\) y \(+r\), con \(r = \sqrt{\frac{3}{fan_{avg}} }\)
+
+Si reemplazas \(fan_{avg}\) con \(fan_{in}\) en la Ecuación 11-1, obtienes
+una estrategia de inicialización que Yann LeCun propuso en los
+años 90. Él la llamó inicialización de LeCun. Genevieve Orr y
+Klaus-Robert Müller incluso la recomendaron en su libro de 1998 Redes
+Neuronales: Trucos del Oficio (Springer). La inicialización de LeCun
+es equivalente a la inicialización de Glorot cuando \(fan_{in} =
+fan_{out}\). Pasó más de una década antes de que los investigadores se
+dieran cuenta de la importancia de este truco. Usar la inicialización
+de Glorot puede acelerar el entrenamiento considerablemente, y es una
+de las prácticas que llevó al éxito del aprendizaje profundo.
+
+Algunos artículos han proporcionado estrategias similares para
+diferentes funciones de activación. Estas estrategias difieren solo en
+la escala de la varianza y si usan \(fan_{avg}\) o \(fan_{in}\), como se
+muestra en la Tabla 11-1 (para la distribución uniforme, solo usa
+\(r=\sqrt{3\sigma^{2}}\).
+
+La estrategia de inicialización propuesta para la función de
+activación ReLU y sus variantes se llama inicialización de He o
+inicialización de Kaiming, en honor al primer autor del artículo. Para
+SELU, usa el método de inicialización de Yann LeCun, preferiblemente
+con una distribución normal.  Cubriremos todas estas funciones de
+activación en breve.
+
+Tabla 11-1. Parámetros de inicialización para cada tipo de función de activación
+\begin{center}
+\begin{tabular}{lll}
+ &  & \\[0pt]
+\hline
+\textbf{Inicialización} & \textbf{Funciones de Activación} & \textbf{σ²(Normal)}\\[0pt]
+\hline
+\hline
+Glorot & None, tanh, sigmoid, softmax & 1 / fanavg\\[0pt]
+\hline
+He & ReLU, Leaky ReLU, ELU, GELU, Swish, Mish & 2 / fanin\\[0pt]
+\hline
+LeCun & SELU & 1 / fanin\\[0pt]
+\hline
+\end{tabular}
+\end{center}
+
+Por defecto, Keras utiliza la inicialización de Glorot con una
+distribución uniforme. Cuando creas una capa, puedes cambiar a la
+inicialización de He estableciendo kernel\_initializer="he\_uniform" o
+kernel\_initializer="he\_normal" de esta manera:
+\begin{minted}[]{python}
+import tensorflow as tf
+dense = tf.keras.layers.Dense(50, activation="relu",
+                              kernel_initializer="he_normal")
+\end{minted}
+
+Alternativamente, puedes obtener cualquiera de las inicializaciones
+listadas en la Tabla 11-1 y más usando el inicializador
+VarianceScaling. Por ejemplo, si quieres la inicialización de He con
+una distribución uniforme y basada en fanavg (en lugar de fanin),
+puedes usar el siguiente código:
+
+\begin{minted}[]{python}
+he_avg_init = tf.keras.initializers.VarianceScaling(scale=2., mode="fan_avg",
+                                                    distribution="uniform")
+dense = tf.keras.layers.Dense(50, activation="sigmoid",
+                              kernel_initializer=he_avg_init)
+\end{minted}
+
+\subsection{Funciones de Activación Mejoradas}
+\label{sec:orgb3941da}
+Una de las perspectivas en el artículo de 2010 de Glorot y Bengio fue
+que los problemas con gradientes inestables eran en parte debido a una
+mala elección de la función de activación. Hasta entonces, la mayoría
+de las personas había asumido que si la Madre Naturaleza había elegido
+usar funciones de activación aproximadamente sigmoideas en neuronas
+biológicas, debían ser una excelente elección. Pero resulta que otras
+funciones de activación se comportan mucho mejor en redes neuronales
+profundas, en particular, la función de activación ReLU,
+principalmente porque no se satura para valores positivos, y también
+porque es muy rápida de computar.
+
+Desafortunadamente, la función de activación ReLU no es
+perfecta. Sufre de un problema conocido como ReLUs moribundos: durante
+el entrenamiento, algunas neuronas efectivamente "mueren", lo que
+significa que dejan de emitir cualquier cosa diferente de 0. En
+algunos casos, puedes encontrar que la mitad de las neuronas de tu red
+están muertas, especialmente si usaste una tasa de aprendizaje
+grande. Una neurona muere cuando sus pesos se ajustan de tal manera
+que la entrada de la función ReLU (es decir, la suma ponderada de las
+entradas de la neurona más su término de sesgo) es negativa para todas
+las instancias en el conjunto de entrenamiento. Cuando esto sucede,
+simplemente sigue emitiendo ceros, y el descenso de gradiente no la
+afecta más porque el gradiente de la función ReLU es cero cuando su
+entrada es negativa.
+
+Para resolver este problema, es posible que quieras usar una variante
+de la función ReLU, como la ReLU con fuga.
+
+\subsubsection{ReLU con Fuga}
+\label{sec:orgf55f9e6}
+La función de activación ReLU con fuga se define como LeakyReLUα(z) =
+max(αz, z) (ver Figura 11-2). El hiperparámetro α define cuánto
+"filtra" la función: es la pendiente de la función para z < 0. Tener
+una pendiente para z < 0 asegura que las ReLUs con fuga nunca mueren;
+pueden entrar en un largo coma, pero tienen la oportunidad de
+eventualmente despertar. Un artículo de 2015 de Bing Xu et al. comparó
+varias variantes de la función de activación ReLU, y una de sus
+conclusiones fue que las variantes con fuga siempre superaron a la
+estricta función de activación ReLU. De hecho, establecer α = 0.2 (una
+gran fuga) parecía resultar en un mejor rendimiento que α = 0.01 (una
+pequeña fuga). El artículo también evaluó la ReLU con fuga aleatoria
+(RReLU), donde α se elige aleatoriamente en un rango dado durante el
+entrenamiento y se fija a un valor promedio durante las pruebas. RReLU
+también tuvo un rendimiento bastante bueno y pareció actuar como un
+regularizador, reduciendo el riesgo de sobreajustar el conjunto de
+entrenamiento. Finalmente, el artículo evaluó la ReLU con fuga
+paramétrica (PReLU), donde se autoriza que α se aprenda durante el
+entrenamiento: en lugar de ser un hiperparámetro, se convierte en un
+parámetro que puede ser modificado por retropropagación como cualquier
+otro parámetro. Se informó que PReLU superaba fuertemente a ReLU en
+grandes conjuntos de datos de imágenes, pero en conjuntos de datos más
+pequeños corre el riesgo de sobreajustar el conjunto de entrenamiento.
+
+Una neurona muerta puede volver a la vida si sus entradas evolucionan
+con el tiempo y eventualmente vuelven a un rango donde la función de
+activación ReLU recibe nuevamente una entrada positiva. Por ejemplo,
+esto puede suceder si el descenso de gradiente ajusta las neuronas en
+las capas debajo de la neurona muerta.
+
+\textbf{imagen} Keras incluye las clases LeakyReLU y PReLU en el paquete
+tf.keras.layers. Al igual que con otras variantes de ReLU, deberías
+usar la inicialización de He con estas. Por ejemplo:
+
+\begin{minted}[]{python}
+# por defecto es alpha=0.3
+leaky_relu = tf.keras.layers.LeakyReLU(alpha=0.2)
+dense = tf.keras.layers.Dense(50, activation=leaky_relu,
+                              kernel_initializer="he_normal")
+\end{minted}
+
+Si prefieres, también puedes usar LeakyReLU como una capa separada en
+tu modelo; no hace diferencia para el entrenamiento y las
+predicciones:
+\begin{minted}[]{python}
+model = tf.keras.models.Sequential([
+[...] # más capas
+tf.keras.layers.Dense(50, kernel_initializer="he_normal"), # sin activación
+tf.keras.layers.LeakyReLU(alpha=0.2), # activación como una capa separada
+[...] # más capas
+])
+\end{minted}
+\subsubsection{PReLU}
+\label{sec:org573eceb}
+Para PReLU, reemplaza LeakyReLU con PReLU. Actualmente no hay una
+implementación oficial de RReLU en Keras, pero puedes implementar la
+tuya propia fácilmente.
+
+\subsubsection{ELU y SELU}
+\label{sec:org0038b2e}
+\subsubsection{GELU, Swish y Mish}
+\label{sec:org5e66577}
+\subsection{Normalización por lotes (batch normalization)}
+\label{sec:org296264a}
+\subsection{Recorte del gradiente (gradient clipping)}
+\label{sec:org554d6d2}
+\end{document}

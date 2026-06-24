@@ -1,0 +1,2 @@
+Este directorio contiene un enlace a Google Colab con la implementación de la red neuronal: https://colab.research.google.com/drive/18mVpX8QwzpQoY0b5cvg8K4zf7lIrxfQf?usp=sharing
+Y un zip con toda la implementación del caso práctico, red neuronal más servidor.

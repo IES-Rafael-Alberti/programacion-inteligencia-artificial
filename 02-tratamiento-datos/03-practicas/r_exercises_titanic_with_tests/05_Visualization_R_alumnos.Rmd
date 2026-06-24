@@ -1,0 +1,114 @@
+---
+title: "05_Visualization - Ejercicios en R (Alumnos)"
+output: html_document
+---    
+
+```{r setup, include=FALSE}
+# Carga de librerías recomendadas
+# install.packages("readr")      # si no lo tienes instalado
+# install.packages("dplyr")      # si no lo tienes instalado
+library(readr)
+library(dplyr)
+```    
+
+## Ejercicio 1
+
+Carga el dataset **Titanic** desde un fichero `titanic.csv` en el directorio actual en un data frame llamado `titanic` y muestra las primeras filas.
+
+
+
+```{r ejercicio1}
+# PISTA:
+# 1. Asegúrate de que el fichero 'titanic.csv' está en el mismo directorio que este Rmd.
+# 2. Usa read_csv() de la librería readr.
+# 3. Asigna el resultado a un objeto llamado titanic.
+# 4. Muestra las primeras filas con head(titanic).
+
+# tu código aquí
+
+```        
+
+```{r test1}
+# TEST Ejercicio 1
+if (!exists("titanic")) {
+  stop("No se ha encontrado el objeto 'titanic'. Debes crearlo usando read_csv().")
+}
+if (!is.data.frame(titanic)) {
+  stop("'titanic' debe ser un data frame.")
+}
+if (nrow(titanic) == 0) {
+  stop("El data frame 'titanic' está vacío. ¿Has cargado correctamente el CSV?")
+}
+cat("✅ TEST 1 superado: 'titanic' existe, es data frame y tiene filas.\n")
+```        
+
+## Ejercicio 2
+
+A partir del data frame `titanic`, crea un nuevo data frame llamado `titanic_num` que contenga **solo las columnas numéricas**.
+
+
+
+```{r ejercicio2}
+# PISTA:
+# 1. Usa la función select() de dplyr.
+# 2. Puedes seleccionar solo columnas numéricas usando where(is.numeric).
+# 3. Asigna el resultado a un nuevo data frame llamado titanic_num.
+
+# tu código aquí
+
+```        
+
+```{r test2}
+# TEST Ejercicio 2
+if (!exists("titanic_num")) {
+  stop("No se ha encontrado el objeto 'titanic_num'. Debes crearlo a partir de 'titanic'.")
+}
+if (!is.data.frame(titanic_num)) {
+  stop("'titanic_num' debe ser un data frame.")
+}
+if (ncol(titanic_num) == 0) {
+  stop("'titanic_num' no tiene columnas. Asegúrate de seleccionar columnas numéricas.")
+}
+# Comprobar que todas las columnas son numéricas
+numeric_cols <- sapply(titanic_num, is.numeric)
+if (!all(numeric_cols)) {
+  stop("Hay columnas no numéricas en 'titanic_num'. Revisa el uso de where(is.numeric).")
+}
+cat("✅ TEST 2 superado: 'titanic_num' contiene solo columnas numéricas.\n")
+```        
+
+## Ejercicio 3
+
+A partir del data frame `titanic`, crea un nuevo data frame llamado `titanic_mayores_30` que contenga solo las filas con pasajeros cuya edad (`Age`) sea **mayor de 30 años**.
+
+
+
+```{r ejercicio3}
+# PISTA:
+# 1. Usa filter() de dplyr.
+# 2. Recuerda que la columna se llama Age.
+# 3. La condición es Age > 30.
+# 4. Asigna el resultado a un nuevo data frame llamado titanic_mayores_30.
+
+# tu código aquí
+
+```        
+
+```{r test3}
+# TEST Ejercicio 3
+if (!exists("titanic_mayores_30")) {
+  stop("No se ha encontrado el objeto 'titanic_mayores_30'. Debes crearlo a partir de 'titanic'.")
+}
+if (!is.data.frame(titanic_mayores_30)) {
+  stop("'titanic_mayores_30' debe ser un data frame.")
+}
+if (!("Age" %in% names(titanic_mayores_30))) {
+  stop("No se encuentra la columna 'Age' en 'titanic_mayores_30'. ¿Has partido de 'titanic'?")
+}
+if (nrow(titanic_mayores_30) > 0) {
+  if (!all(titanic_mayores_30$Age > 30, na.rm = TRUE)) {
+    stop("Hay filas con Age <= 30 en 'titanic_mayores_30'. Revisa el filtro.")
+  }
+}
+cat("✅ TEST 3 superado: filtrado por Age > 30 correcto (o data frame vacío si no hay filas).\n")
+```        

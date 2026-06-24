@@ -1,0 +1,154 @@
+// ============================================================================
+// CUESTIONARIO 2: IA Generativa, RAG, Orquestación y Serving de Modelos
+// Módulo: Programación en Inteligencia Artificial (PIA) - Unidad 5
+// ============================================================================
+
+$CATEGORY: UD5_IA_Cloud/Cuestionario_2_IAGenerativa_RAG
+
+// ----------------------------------------------------------------------------
+// TEMA 1: APIs DE LLM Y EMBEDDINGS
+// ----------------------------------------------------------------------------
+
+::[APIs LLM] Proveedores y Fortalezas::
+Al comparar las principales APIs comerciales de modelos de lenguaje, ¿qué fortalezas distintivas destacan de Anthropic y de Google AI en el mercado actual? {
+    =Anthropic destaca por su calidad conversacional, redacción y razonamiento en contextos amplios, mientras que Google AI sobresale por ventanas de contexto hiper-extensas e integración natural con Vertex AI y el ecosistema GCP. #¡Correcto! Anthropic (Claude) es muy apreciado por la finura de su redacción y el seguimiento de instrucciones complejas, mientras que Google (Gemini) lidera en el soporte de ventanas de contexto gigantescas (multimodal nativo) y su integración en Google Cloud.
+    ~Anthropic ofrece la API de menor coste y mayor velocidad mononúcleo en CPU, y Google AI es la única que permite la descarga del código fuente para modificación local. #Incorrecto. Ambas APIs ofrecen modelos comerciales propietarios y cerrados (no open-source), y se consumen mediante endpoints HTTP remotos acelerados por GPUs/TPUs en la nube, no en la CPU local del cliente.
+    ~Anthropic está orientada estrictamente al procesamiento de imágenes y vídeo en tiempo real, mientras que Google AI solo procesa texto estructurado en bases de datos relacionales SQL. #Incorrecto. Ambas plataformas son multimodales avanzadas y procesan texto, imágenes, código y otros formatos de datos ricos.
+    ~Anthropic y Google AI utilizan la misma API de OpenAI de manera interna, por lo que no existen diferencias en sus capacidades, costes o características técnicas. #Incorrecto. Cada compañía desarrolla sus propias arquitecturas de modelos, datasets de entrenamiento y endpoints independientes, compitiendo directamente en el sector.
+}
+
+::[APIs LLM] Concepto y Rol de Embeddings::
+¿Cuál es la función técnica de un "Embedding" y cómo se utiliza para implementar un sistema de búsqueda semántica en la nube? {
+    =Transforma fragmentos de texto en vectores numéricos de dimensión fija que representan su significado conceptual, permitiendo calcular la similitud semántica mediante la distancia matemática (como la distancia coseno) entre vectores. #¡Correcto! Los embeddings mapean el texto a un espacio vectorial continuo multidimensional. Textos con significados conceptuales similares acaban en coordenadas espaciales muy cercanas, permitiendo realizar búsquedas basadas en el significado lógico y no solo en palabras clave textuales exactas.
+    ~Funciona como un algoritmo de compresión zip que reduce a la mitad el tamaño del texto para que viaje más rápido por la red HTTP de la API. #Incorrecto. Un embedding no es un formato de compresión sin pérdidas tipo ZIP; al contrario, el vector resultante de un texto corto puede ocupar más bytes en memoria que el propio texto original.
+    ~Es un tipo de prompt altamente estructurado que obliga al modelo de lenguaje a comportarse de una manera educada en un chatbot de atención al cliente. #Incorrecto. Eso es ingeniería de prompts (system prompt o directivas de comportamiento). Un embedding es un vector matemático abstracto generado por un modelo codificador.
+    ~Es una base de datos distribuida en la nube que almacena copias de seguridad de páginas web en formato Parquet comprimido con Snappy. #Incorrecto. Eso hace referencia a tecnologías de almacenamiento y Data Lake (como S3 o Glacier con Parquet), no a la representación matemática de texto para búsqueda conceptual.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 2: ORQUESTACIÓN Y AGENTES
+// ----------------------------------------------------------------------------
+
+::[Orquestación] LangChain vs LlamaIndex::
+¿Cómo se diferencian el enfoque principal y el caso de uso óptimo de "LangChain" frente a "LlamaIndex" al orquestar aplicaciones basadas en LLMs? {
+    =LangChain es un framework de propósito general idóneo para construir chains y workflows con integraciones muy diversas y uso de herramientas, mientras que LlamaIndex se especializa firmemente en ingesta, indexación y consulta estructurada sobre documentos propios (RAG). #¡Correcto! LangChain ofrece un catálogo masivo de conectores y utilidades generales para construir pipelines flexibles con herramientas. LlamaIndex, en cambio, está altamente optimizado para estructurar y consultar datos privados, siendo la biblioteca de referencia para desarrollar sistemas RAG robustos.
+    ~LangChain es de uso estrictamente gratuito y LlamaIndex requiere comprar una licencia por cada documento que se indexa en la base de datos. #Incorrecto. Ambos frameworks son librerías de software libre (open-source) y totalmente gratuitas bajo licencias muy permisivas como MIT.
+    ~LangChain solo funciona en local en ordenadores con sistema Linux y LlamaIndex está desarrollado exclusivamente para funcionar en servicios web del ecosistema de Microsoft Azure. #Incorrecto. Ambos frameworks se desarrollan en Python (y disponen de versiones en TypeScript) y son 100% multiplataforma, pudiendo ejecutarse en cualquier sistema o nube.
+    ~LangChain se encarga de reescribir prompts en inglés y LlamaIndex traduce de manera automatizada las respuestas del modelo a lenguaje ensamblador. #Incorrecto. LangChain orquesta componentes y LlamaIndex conecta datos. Ninguno traduce a lenguaje ensamblador; el modelo de lenguaje devuelve texto formateado y procesable por Python.
+}
+
+::[Orquestación] LangGraph y Flujos con Estado::
+¿Qué ventaja crítica introduce "LangGraph" sobre los pipelines o chains lineales tradicionales de LangChain al diseñar flujos avanzados con LLMs? {
+    =Permite construir flujos cíclicos y no lineales que mantienen un estado compartido (State), lo cual es fundamental para implementar bucles de razonamiento, agentes interactivos y procesos con pasos de revisión y corrección de errores. #¡Correcto! Los chains tradicionales son de ejecución unidireccional y lineal. LangGraph modela los flujos como grafos de estados con nodos y aristas condicionales, permitiendo bucles de retroalimentación donde el modelo puede reevaluar, usar una herramienta y volver a un paso anterior basándose en el estado.
+    ~Traduce de forma automática el código de Python de los prompts a diagramas interactivos en páginas web sin necesidad de ejecutar un servidor web. #Incorrecto. Aunque ayuda a visualizar grafos, su valor principal es lógico e informático (control del estado, ramificaciones y ciclos), no la visualización estética frontend en el navegador.
+    ~Elimina la necesidad de usar memoria RAM en el servidor cloud al almacenar todo el contexto y estado en la tarjeta de red física. #Incorrecto. El estado de LangGraph se almacena en memoria de la aplicación o se persiste en bases de datos asociadas (mediante checkpoints); el hardware de red no almacena variables de software.
+    ~Anula por completo los costes de consumo de tokens en las APIs de OpenAI al simular las respuestas mediante hilos concurrentes locales en el procesador. #Incorrecto. La orquestación lógica no altera cómo funcionan los LLMs remotos; cada llamada al modelo de lenguaje en el grafo consume tokens de la misma forma.
+}
+
+::[Orquestación] Multiagente CrewAI vs AutoGen::
+¿Cuál es la diferencia conceptual en el diseño de flujos multiagente entre "CrewAI" y "AutoGen"? {
+    =CrewAI ofrece una estructura muy organizada y fácil de usar basada en roles de un equipo (Agentes, Tareas y Equipo), mientras que AutoGen destaca por la flexibilidad en la comunicación directa y autónoma entre múltiples agentes programables. #¡Correcto! CrewAI simula un entorno laboral jerárquico o estructurado (ideal para procesos de negocio secuenciales o docentes), y AutoGen es un framework altamente flexible enfocado en interacciones autónomas complejas y conversaciones fluidas multiagente.
+    ~CrewAI se enfoca estrictamente en bases de datos relacionales tradicionales y AutoGen está diseñado solo para chatear sobre imágenes médicas de resonancias. #Incorrecto. Ambos frameworks son generalistas y se pueden usar para una inmensa variedad de tareas lógicas y de automatización sobre datos mixtos.
+    ~CrewAI solo funciona si todos los agentes se ejecutan en máquinas físicas distintas en la nube y AutoGen los unifica en una única CPU local sin internet. #Incorrecto. Ambas herramientas ejecutan los agentes como hilos o procesos dentro del mismo entorno de Python, y se comunican a través de APIs web con internet o localmente según el LLM configurado.
+    ~CrewAI requiere que el desarrollador controle manualmente cada palabra que dice el agente y AutoGen sustituye a los ingenieros de software eliminando el código Python. #Incorrecto. Ambos automatizan la conversación entre agentes mediante prompts estructurados. Ninguno sustituye al programador; al contrario, programar y afinar flujos multiagente requiere alta destreza técnica.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 3: BASES VECTORIALES
+// ----------------------------------------------------------------------------
+
+::[Bases Vectoriales] FAISS vs Qdrant/Milvus::
+¿Qué limitación técnica importante presenta una biblioteca como "FAISS" que justifica migrar a una base de datos vectorial dedicada como Qdrant, Milvus o Pinecone al desplegar un sistema RAG en producción? {
+    =FAISS es una librería de cálculo y estructuración de índices vectoriales en local sin funciones nativas de base de datos como inserciones dinámicas en tiempo real, gestión de metadatos avanzada ni escalabilidad distribuida out-of-the-box. #¡Correcto! FAISS (desarrollado por Meta) es extraordinariamente rápido para buscar vectores en memoria local, pero no está diseñado como un servidor de base de datos completo. No ofrece APIs concurrentes seguras, persistencia robusta de inserción en caliente con metadatos filtrables en producción, ni escalado horizontal transparente.
+    ~FAISS solo permite almacenar un máximo de 10 vectores numéricos por clúster, obligando a fragmentar la base de datos en disquetes independientes. #Incorrecto. FAISS puede gestionar millones de vectores en RAM con alta velocidad. Sus limitaciones no son de volumen crudo, sino de capacidades operacionales de base de datos y concurrencia.
+    ~FAISS deforma de manera aleatoria los vectores de entrada reduciendo a cero la precisión semántica del modelo de embeddings en producción. #Incorrecto. FAISS es una biblioteca matemática sumamente rigurosa y precisa de búsqueda de vecinos más cercanos (k-NN) y es el estándar de rendimiento en la industria.
+    ~FAISS cobra royalties millonarios por su uso comercial en la nube de AWS en comparación con la total gratuidad de Pinecone gestionado. #Incorrecto. FAISS es software libre y totalmente gratuito (licencia MIT). Pinecone, por su parte, es un servicio SaaS gestionado con planes de pago y dependiente de su infraestructura propietaria.
+}
+
+::[Bases Vectoriales] Búsqueda Clásica vs Vectorial vs Híbrida::
+En un sistema RAG para un manual técnico de maquinaria industrial, ¿por qué la "búsqueda híbrida" suele ofrecer mejores resultados que utilizar únicamente búsqueda vectorial por similitud semántica? {
+    =Porque combina la búsqueda vectorial (que entiende conceptos sinónimos) con la búsqueda léxica clásica (que coincide con precisión códigos técnicos exactos, números de pieza y nombres propios). #¡Correcto! En documentación técnica, un usuario puede buscar un tornillo con código específico "M8-120". La búsqueda semántica vectorial pura puede fallar porque busca el "concepto" de tornillo y no comprende la relevancia matemática del código de pieza exacto. Combinar ambos enfoques con una puntuación híbrida unificada garantiza precisión léxica y semántica.
+    ~Porque utiliza dos LLMs gigantescos funcionando de forma paralela en la GPU consumiendo el doble de recursos eléctricos para generar la respuesta. #Incorrecto. La búsqueda híbrida se ejecuta a nivel de base de datos o buscador antes de llamar al LLM; no requiere múltiples LLMs funcionando en paralelo para recuperar el contexto.
+    ~Porque convierte de forma automática todos los manuales técnicos redactados en formato PDF a formato de audio MP3 para que el operario los escuche en clase. #Incorrecto. No tiene relación con transformaciones de texto a voz (TTS), sino con las estrategias informáticas de indexación y recuperación de fragmentos de texto.
+    ~Porque elimina la necesidad de contar con bases de datos vectoriales al almacenar los textos en archivos planos Word compartidos por correo. #Incorrecto. Al contrario, la búsqueda híbrida se suele implementar integrando motores híbridos robustos (como ElasticSearch, Qdrant o Weaviate) que requieren almacenar y gestionar índices complejos.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 4: SERVING DE MODELOS ABIERTOS
+// ----------------------------------------------------------------------------
+
+::[Serving] Conceptos de Inferencia y Serving::
+En el contexto del despliegue de modelos abiertos en infraestructuras cloud, ¿cuál es la diferencia conceptual entre realizar "Inferencia" y configurar un servicio de "Serving"? {
+    =Inferencia es el cálculo matemático que ejecuta el modelo sobre una entrada para producir una salida, mientras que Serving es exponer y gestionar ese modelo de forma segura a través de una API web con concurrencia y escalado para que otras aplicaciones lo consuman. #¡Correcto! La inferencia es la computación pura de la red neuronal. El serving es la capa de ingeniería de software que envuelve el modelo para que sea accesible a través de endpoints (como un servidor REST compatible con la API de OpenAI), controlando colas de peticiones y balanceo de carga.
+    ~Inferencia es corregir la gramática de los prompts y Serving es entrenar un modelo desde cero usando datos estructurados tabulares Parquet. #Incorrecto. Ninguno de los dos conceptos hace referencia a la corrección gramatical de prompts ni al entrenamiento inicial de modelos desde cero.
+    ~Inferencia se ejecuta únicamente en la nube de Google y Serving está restringido estrictamente al hardware local de la marca Apple. #Incorrecto. Ambos procesos son agnósticos respecto al proveedor y sistema operativo, pudiéndose ejecutar en múltiples plataformas y servidores con GPUs.
+    ~Inferencia es una técnica de programación orientada a objetos en Java y Serving es un tipo de cable físico de fibra óptica para conectar servidores de red. #Incorrecto. Son conceptos fundamentales del despliegue y ciclo de vida de modelos en Inteligencia Artificial y MLOps, no técnicas de Java ni cables de red físicos.
+}
+
+::[Serving] Ollama vs vLLM::
+Al planificar la arquitectura de serving para un proyecto de IA en la nube, ¿cuándo deberías optar por "vLLM" en lugar de "Ollama" en tus servidores de producción? {
+    =Cuando se requiere servir un modelo para múltiples peticiones concurrentes de usuarios en producción a gran escala, aprovechando optimizaciones avanzadas en GPU como "PagedAttention" y "Continuous Batching". #¡Correcto! Ollama es excelente para docencia, pruebas rápidas y ejecución local cómoda en un solo equipo. Sin embargo, para producción comercial con alta concurrencia sobre GPUs, vLLM es significativamente más eficiente y rápido, ya que optimiza la gestión del KV Cache mediante PagedAttention e integra peticiones al vuelo en lotes dinámicos.
+    ~Cuando la máquina de producción no dispone de conexión a internet y se desea instalar el modelo mediante disquetes de almacenamiento físico de bajo coste. #Incorrecto. Ambos sistemas pueden configurarse para ejecución offline si se descargan previamente los archivos del modelo en disco, por lo que la conectividad no es la razón para elegir vLLM sobre Ollama.
+    ~Cuando el equipo de desarrollo no tiene conocimientos de programación en Python y prefiere programar la lógica del chatbot en lenguaje HTML plano. #Incorrecto. HTML es un lenguaje de marcado estructural de páginas web y no sirve para programar lógica de servidores de serving o interactuar con APIs de deep learning.
+    ~Cuando se desea ejecutar el modelo en CPUs antiguas de bajo coste sin tarjetas gráficas GPU dedicadas en la nube. #Incorrecto. Aunque vLLM puede funcionar en ciertos entornos de CPU, destaca precisamente por exprimir la VRAM y la arquitectura paralela de las GPUs de alto rendimiento; para procesamientos ligeros y sencillos en CPU local, Ollama con llama.cpp es mucho más accesible.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 5: RECUPERACIÓN AVANZADA PARA RAG
+// ----------------------------------------------------------------------------
+
+::[RAG Avanzado] Limitaciones del Chunking plano::
+¿Por qué el enfoque de RAG clásico basado en "chunking plano" (fragmentación en trozos de tamaño fijo) y bases vectoriales tradicionales puede degradar la calidad de las respuestas en documentos técnicos, jurídicos o de gran extensión? {
+    =Porque fragmentar el texto a ciegas por límites de caracteres o palabras rompe la coherencia lógica de las secciones, destruyendo el contexto de tablas estructuradas o cláusulas legales que se dispersan en fragmentos separados. #¡Correcto! El chunking plano carece de comprensión semántica de la estructura de un documento. Si una tabla de datos o un artículo legal se corta por la mitad debido al límite de caracteres, el significado del dato se rompe, y al recuperarlo e inyectarlo en el LLM, el modelo recibe información fragmentada e incoherente.
+    ~Porque las bases vectoriales tradicionales eliminan las vocales de los fragmentos recuperados para ahorrar espacio en la memoria RAM del servidor. #Incorrecto. Las bases vectoriales no alteran el texto legible que guardan en sus metadatos (payload); conservan el texto completo con vocales, consonantes y signos de puntuación originales.
+    ~Porque los modelos de lenguaje LLM tienen prohibido por ley procesar fragmentos de texto que no hayan sido escritos a mano por programadores titulados. #Incorrecto. No existen leyes que regulen la autoría manuscrita del código o texto a nivel lógico de ejecución de modelos, y los LLMs procesan cualquier texto que reciban en su ventana de contexto.
+    ~Porque fragmentar el texto aumenta de forma drástica el tamaño físico en gigabytes del archivo PDF original en el disco magnético. #Incorrecto. El PDF original en disco permanece intacto. El procesamiento y fragmentación de los fragmentos se realiza a nivel lógico en base de datos, lo cual no modifica el tamaño del archivo fuente PDF.
+}
+
+::[RAG Avanzado] Búsqueda Jerárquica y Rerankers::
+¿Qué función específica realiza un "Reranker" en una arquitectura avanzada de RAG y qué valor añade a la recuperación inicial? {
+    =Toma el conjunto de fragmentos recuperados en la primera fase rápida y los reordena de forma precisa utilizando un modelo de clasificación semántica profunda más lento para colocar los más relevantes arriba. #¡Correcto! Los rerankers actúan como un embudo de precisión. La base de datos vectorial recupera rápido decenas de candidatos usando similitud por distancia matemática simple. El Reranker analiza con mayor rigor cognitivo esas parejas (pregunta, fragmento) y las reordena, permitiendo enviar al LLM un contexto mucho más preciso y depurado.
+    ~Convierte de forma mágica las respuestas generadas en inglés a un español perfecto sin consumir recursos del procesador de la máquina. #Incorrecto. No se dedican a la traducción multilingüe de la generación final, sino a la ordenación lógica del contexto recuperado antes de que el LLM empiece a generar la respuesta.
+    ~Elimina de la base de datos vectorial todas las preguntas que hayan sido formuladas por los usuarios con faltas de ortografía. #Incorrecto. Un Reranker no borra ni altera la base de datos de origen; simplemente reordena la lista de resultados de una consulta puntual en memoria.
+    ~Es un tipo de tarjeta gráfica GPU especializada que solo realiza operaciones matemáticas de suma y resta secuencial. #Incorrecto. Un Reranker es un componente de software (un modelo de red neuronal tipo cross-encoder), no un componente de hardware o tarjeta gráfica física.
+}
+
+::[RAG Avanzado] PageIndex y Estructuras Jerárquicas::
+Al trabajar con manuales técnicos complejos de 500 páginas, ¿qué enfoque diferencial introduce una herramienta como "PageIndex" para evitar las limitaciones del RAG clásico? {
+    =Construye un índice jerárquico del documento estructurado en secciones y páginas, permitiendo una recuperación basada en razonamiento sobre esa estructura lógica en lugar de fragmentar el texto en trozos planos. #¡Correcto! PageIndex modela el documento de forma organizada y estructurada (respetando páginas, índices y secciones). En lugar de romper a ciegas el PDF en miles de fragmentos pequeños e inconexos (chunking) para guardarlos en bases vectoriales, PageIndex navega y razona sobre el árbol del documento para recuperar la información coherente con citas precisas por página.
+    ~Exige que el documento técnico se resuma previamente a mano por el docente en una única frase de 10 palabras como máximo. #Incorrecto. Al contrario, PageIndex está optimizado para tragar y estructurar documentos extensos de cientos de páginas con alta complejidad, sin requerir síntesis manuales.
+    ~Sustituye por completo al programador de Python al escribir de manera automática toda la aplicación web del cliente a partir del PDF. #Incorrecto. Proporciona un SDK de Python que el desarrollador debe instanciar y programar dentro de su código de servidor de manera técnica para construir su aplicación.
+    ~Fuerza a que todos los documentos se almacenen de forma temporal en formato de imagen GIF animado de baja resolución. #Incorrecto. Procesa los PDFs e información de manera textual y estructurada lógica a nivel de metadatos jerárquicos; no tiene relación con animaciones GIF de baja resolución.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 6: EVALUACIÓN Y OBSERVABILIDAD
+// ----------------------------------------------------------------------------
+
+::[Evaluación y Observabilidad] Diferencias de Enfoque::
+¿Cuál es la diferencia conceptual entre la "Evaluación" y la "Observabilidad" de una aplicación con LLMs en la nube? {
+    =La evaluación comprueba de forma sistemática la calidad semántica del sistema con métricas e históricos de prueba, mientras que la observabilidad analiza en tiempo real las trazas de ejecución, latencias y llamadas en producción. #¡Correcto! Son enfoques complementarios y necesarios en MLOps. Evalúas con conjuntos de test (usando herramientas como Ragas o Promptfoo) para medir la precisión y fidelidad semántica de los prompts antes y después de cambios. Observas (con herramientas como LangSmith, Phoenix o Helicone) para depurar la ejecución real en producción, rastreando fallos, costes y tiempos de respuesta.
+    ~La evaluación mide estrictamente el consumo de energía en los enchufes del aula y la observabilidad vigila a los alumnos a través de cámaras de seguridad web. #Incorrecto. No tienen relación con vigilancias físicas de vídeo ni mediciones de enchufes eléctricos del aula; son términos técnicos del ciclo de vida del software de Inteligencia Artificial.
+    ~La evaluación se ejecuta únicamente antes de que el desarrollador aprenda a programar en Python, y la observabilidad es obligatoria solo en sistemas que no consumen LLMs. #Incorrecto. Ambos procesos forman parte de las buenas prácticas de la ingeniería de software moderna con LLMs durante todo el ciclo de desarrollo y explotación del sistema.
+    ~La evaluación reescribe el código fuente de forma automática para corregir errores lógicos y la observabilidad borra los modelos de la base de datos si fallan. #Incorrecto. Ninguna de las dos técnicas altera el código de la aplicación de manera automática ni borra los modelos; proporcionan datos, trazas, visualizaciones y métricas analíticas para que el equipo técnico tome decisiones informadas.
+}
+
+::[Evaluación] Métricas de RAG::
+En la evaluación automatizada de sistemas RAG con la librería "Ragas", ¿a qué se refieren específicamente las métricas de "Relevancia de la Respuesta" (Answer Relevance) y "Fidelidad" (Faithfulness)? {
+    =Answer Relevance mide si la respuesta generada atiende directamente a la pregunta formulada, y Faithfulness evalúa si toda la información de la respuesta se puede justificar y trazar estrictamente a partir del contexto recuperado. #¡Correcto! Estas métricas ayudan a diagnosticar fallos en RAG: un sistema puede devolver una respuesta muy elocuente pero que no responde a lo consultado (baja Answer Relevance), o puede inventar datos que no estaban en los documentos de contexto inyectados (baja Faithfulness o alucinación factual del modelo).
+    ~Answer Relevance mide el número de caracteres escritos por el usuario en el prompt y Faithfulness cuenta cuántas palabras en inglés se usaron en total. #Incorrecto. Ragas utiliza modelos evaluadores (LLM-as-a-judge) para analizar semánticamente la calidad conceptual de los textos, no se limita a contar palabras o caracteres textuales simples.
+    ~Answer Relevance puntúa la velocidad en milisegundos de la tarjeta gráfica GPU y Faithfulness mide la cantidad de espacio disponible en la base de datos vectorial. #Incorrecto. Son métricas semánticas de calidad de texto y contenido lógico, no métricas de rendimiento físico de hardware o capacidad de almacenamiento de discos.
+    ~Ambas métricas evalúan la cantidad de veces que el usuario final le da al botón de "Me gusta" en la interfaz del chatbot web de producción. #Incorrecto. Son métricas internas automatizadas calculadas de forma programática con datos de test o trazas, sin depender de la interacción física directa o clics del usuario en producción.
+}
+
+// ----------------------------------------------------------------------------
+// PREGUNTA EXTRA DE INVESTIGACIÓN
+// ----------------------------------------------------------------------------
+
+::[INVESTIGACIÓN] Cuantización y Ventana de Contexto::
+En el serving de modelos abiertos en servidores cloud, ¿qué ventajas aporta la técnica de "Cuantización" (formatos como GGUF, AWQ o GPTQ) y qué limitación describe el efecto "Needle in a Haystack" (Aguja en un Pajar) en ventanas de contexto extensas? {
+    =La cuantización reduce la precisión de los pesos numéricos del modelo para disminuir drásticamente el consumo de VRAM y acelerar la inferencia; el efecto Needle in a Haystack describe la dificultad del LLM para recordar y recuperar información oculta en mitad de un contexto excesivamente largo. #¡Correcto! La cuantización (pasar de números flotantes de 16 bits a enteros de 4 u 8 bits) permite cargar modelos grandes en tarjetas gráficas con menos memoria a coste de una mínima pérdida de precisión. El Needle in a Haystack es un test crítico que demuestra que, aunque un modelo soporte ventanas de contexto gigantescas de 100K o más tokens, tiende a ignorar la información clave situada en la mitad media del texto que recibe.
+    ~La cuantización sirve para aumentar el consumo eléctrico del centro de datos y el Needle in a Haystack es un videojuego clásico para ordenadores antiguos que enseña a programar en ensamblador. #Incorrecto. No tiene que ver con consumos eléctricos ineficientes ni con videojuegos educativos, sino con técnicas de frontera en la optimización e inferencia avanzada de modelos de lenguaje en producción.
+    ~La cuantización duplica el tamaño en disco de las redes neuronales y el Needle in a Haystack garantiza que el modelo nunca alucine ni cometa fallos de precisión factual. #Incorrecto. Al contrario, la cuantización disminuye drásticamente el tamaño del modelo, facilitando su serving en hardware más modesto, y el Needle in a Haystack describe precisamente una limitación de recuperación/memoria de los modelos.
+    ~La cuantización traduce modelos a formato de imagen PNG y el Needle in a Haystack es una base de datos vectorial dedicada a buscar fotos de agujas en la nube de Azure. #Incorrecto. Son conceptos técnicos e informáticos puros del serving y rendimiento semántico de modelos de lenguaje a gran escala, sin relación con imágenes PNG ni fotos de agujas.
+}

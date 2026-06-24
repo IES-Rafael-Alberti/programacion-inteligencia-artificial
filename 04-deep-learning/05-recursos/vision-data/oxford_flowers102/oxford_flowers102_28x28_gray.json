@@ -1,0 +1,17 @@
+{
+  "train_images": 2040,
+  "test_images": 6149,
+  "image_shape": [
+    28,
+    28
+  ],
+  "num_classes": 102,
+  "class_name_example": [
+    "flower_000",
+    "flower_001",
+    "flower_002",
+    "flower_003",
+    "flower_004"
+  ],
+  "split_note": "train = official train + validation; test = official test"
+}

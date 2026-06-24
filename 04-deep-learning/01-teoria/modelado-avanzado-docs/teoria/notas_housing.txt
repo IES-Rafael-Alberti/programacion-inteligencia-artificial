@@ -1,0 +1,15 @@
+La exploración de datos implica comprender la estructura y las características del conjunto de datos. Incluye identificar la distribución de los datos, detectar valores atípicos y valores faltantes, y explorar las relaciones entre las variables.
+
+Aquí hay un ejemplo de cómo se puede explorar un conjunto de datos utilizando el conjunto de datos de House Prices:
+
+    Cargar el conjunto de datos: El conjunto de datos de House Prices contiene información sobre casas en Ames, Iowa. Primero, cargue el conjunto de datos en un software de análisis de datos, como Python o R.
+
+    Identificar la estructura del conjunto de datos: El conjunto de datos de House Prices contiene 79 variables que describen diversas características de las casas. Es importante comprender la estructura del conjunto de datos antes de realizar cualquier análisis.
+
+    Identificar valores faltantes: El conjunto de datos de House Prices puede contener valores faltantes en algunas de las variables. Es importante identificar estas variables y decidir si es necesario eliminar o imputar los valores faltantes.
+
+    Identificar valores atípicos: El conjunto de datos de House Prices también puede contener valores atípicos en algunas de las variables. Es importante identificar estos valores atípicos y decidir si es necesario eliminarlos o transformarlos.
+
+    Identificar la distribución de las variables: Para comprender mejor los datos, es importante identificar la distribución de las variables. Por ejemplo, puede utilizar histogramas para visualizar la distribución de las variables numéricas.
+
+    Explorar las relaciones entre variables: El conjunto de datos de House Prices contiene información sobre muchas variables diferentes. Es importante explorar las relaciones entre estas variables para comprender mejor cómo se relacionan las características de las casas con el precio de venta. Por ejemplo, puede utilizar gráficos :de dispersión para visualizar las relaciones entre variables numéricas y el precio de venta.

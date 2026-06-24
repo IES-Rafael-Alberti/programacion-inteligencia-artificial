@@ -1,0 +1,150 @@
+// ============================================================================
+// CUESTIONARIO 2: Orquestación, RAG Avanzado y Optimización Programática
+// Módulo: Programación en Inteligencia Artificial (PIA) - Unidad 6
+// ============================================================================
+
+$CATEGORY: UD6_Prog_IA/Cuestionario_2_Orquestacion_RAG_Optimizacion
+
+// ----------------------------------------------------------------------------
+// TEMA 1: ORQUESTACIÓN CON LANGCHAIN Y LANGGRAPH
+// ----------------------------------------------------------------------------
+
+::[LangChain] Concepto de Chains::
+¿Por qué se prefiere utilizar un framework de orquestación como "LangChain" en lugar de realizar llamadas directas aisladas a la API del LLM al programar aplicaciones complejas de IA? {
+    =Porque permite conectar de forma estructurada múltiples llamadas al modelo, integrar prompts dinámicos, usar herramientas externas y formatear las salidas en un pipeline mantenible. #¡Correcto! En aplicaciones reales, no basta con una llamada a un LLM. LangChain permite crear secuencias complejas (cadenas o chains) donde la salida de un paso alimenta al siguiente, integrando herramientas de búsqueda, bases de datos y memorias de conversación de forma robusta.
+    ~Porque LangChain reescribe de forma mágica el código del modelo para que funcione sin internet en cualquier disquete local antiguo. #Incorrecto. No convierte modelos a formatos locales antiguos ni elimina la necesidad de red si se usan APIs cloud remotas.
+    ~Porque es la única forma legalmente aceptada por el consorcio internacional para poder comercializar un chatbot de texto en España. #Incorrecto. No existen regulaciones o patentes que obliguen a usar LangChain; su elección responde estrictamente a criterios de ingeniería y productividad de software.
+    ~Porque LangChain elimina para siempre la necesidad de programar en Python al sustituir los scripts por interfaces de voz en español. #Incorrecto. Al contrario, LangChain es una librería en Python (o TypeScript) que exige escribir código técnico y estructurado para construir las cadenas de orquestación.
+}
+
+::[LangChain] Componentes Clave::
+Al diseñar un pipeline en LangChain, ¿cuál es el rol de un "Output Parser" y cómo interactúa con el Prompt y el LLM? {
+    =Toma la respuesta de texto libre generada por el LLM y la convierte de forma estructurada en un formato programático útil en Python (como un diccionario, JSON o un objeto Pydantic). #¡Correcto! Los LLM devuelven strings. Para usar esa respuesta en tu código Python de forma fiable, el Output Parser analiza el texto resultante, lo valida y lo mapea al tipo de datos estructurado correspondiente.
+    ~Comprime el prompt de entrada para que ocupe menos píxeles de pantalla en la interfaz visual de Gradio del usuario. #Incorrecto. No comprime píxeles de pantalla; trabaja a nivel lógico y tipado de datos textuales analizados por software.
+    ~Traduce de forma automática el código de Python de tu aplicación a comandos del sistema operativo MS-DOS de baja latencia. #Incorrecto. Trabaja a nivel de tipos de datos JSON/Pydantic en memoria, no interactúa con sistemas operativos retro como MS-DOS.
+    ~Obliga a que todos los hiperparámetros del modelo se guarden de forma secuencial en una base de datos relacional Access. #Incorrecto. No guarda parámetros en Access; valida e interpreta strings generadas por el modelo convirtiéndolas a estructuras lógicas utilizables en Python.
+}
+
+::[LangGraph] Grafos con Estado::
+¿Qué concepto técnico fundamental diferencia a "LangGraph" de las cadenas lineales tradicionales de LangChain a la hora de estructurar flujos lógicos complejos? {
+    =Modela las interacciones como un grafo dirigido donde cada nodo representa un paso, permitiendo ciclos y bucles de retroalimentación asíncronos que manipulan un estado (State) persistente. #¡Correcto! Las chains clásicas son secuenciales y lineales (A -> B -> C). LangGraph permite ciclos de ejecución y toma de decisiones no lineales (A -> B -> ¿C o volver a A?), manteniendo en memoria un objeto State único que los nodos leen y actualizan dinámicamente.
+    ~LangGraph requiere que toda la lógica de los prompts se dibuje físicamente en hojas de papel cuadriculado antes de compilar el código. #Incorrecto. Los grafos se declaran puramente en Python mediante código declarativo de nodos y aristas condicionales (`StateGraph`).
+    ~Elimina de forma definitiva la necesidad de contar con tarjetas de vídeo GPU, haciendo que modelos gigantes funcionen en un disquete local. #Incorrecto. No altera la necesidad física de hardware GPU para ejecutar los LLMs que consume el grafo; es un orquestador lógico de software.
+    ~Fuerza a que todos los datos y variables del pipeline se guarden en bases de datos relacionales locales de Microsoft Access por red. #Incorrecto. El estado se almacena en memoria o en checkpoints persistentes (usando bases como SQLite o PostgreSQL), pero no tiene dependencias exclusivas con Microsoft Access.
+}
+
+::[LangGraph] Agentes y Bucles de Revisión::
+En una aplicación de programación de agentes autónomos con LangGraph, ¿qué valor aporta un arista condicional ("conditional edge") en el flujo de ejecución? {
+    =Permite definir funciones lógicas que examinan el estado actual y deciden dinámicamente cuál debe ser el siguiente nodo a ejecutar en el flujo del grafo. #¡Correcto! En LangGraph, las aristas condicionales toman decisiones autónomas basándose en la salida anterior (p. ej. si un LLM de revisión determina que el código generado tiene un bug, la arista condicional devuelve la ejecución al nodo de corrección en lugar de finalizar el flujo).
+    ~Obliga a que el usuario introduzca obligatoriamente su número de teléfono móvil cada cinco segundos de interacción. #Incorrecto. No tiene que ver con capturas forzosas de datos del usuario, sino con la lógica interna de ramificación del flujo de los agentes.
+    ~Borra de forma definitiva todo el código fuente del servidor si el modelo de lenguaje comete una falta de ortografía leve. #Incorrecto. La arista condicional redirige el flujo lógico de ejecución en memoria, no ejecuta acciones de borrado destructivas sobre los archivos del programador.
+    ~Traduce automáticamente todo el pipeline a lenguaje ensamblador para que funcione en consolas de videojuegos antiguas de juguete. #Incorrecto. El orquestador opera en la máquina virtual asíncrona de Python y no realiza compilaciones o traducciones a lenguajes ensambladores retro.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 2: RAG Y CONSULTA DOCUMENTAL CON LLAMAINDEX
+// ----------------------------------------------------------------------------
+
+::[LlamaIndex] Ingesta y Loaders::
+Al programar un chatbot que debe responder preguntas sobre los PDFs y manuales de prácticas del departamento técnico usando "LlamaIndex", ¿cuál es el componente y la instrucción Python recomendados para cargar de forma rápida todos los documentos de una carpeta local? {
+    =Se utiliza "SimpleDirectoryReader" y se invoca su método "load_data()" para leer de forma automática y unificada todos los archivos compatibles en el directorio. #¡Correcto! `SimpleDirectoryReader("ruta").load_data()` es el cargador estándar de LlamaIndex. Detecta de forma inteligente y automática múltiples formatos comunes (PDFs, Markdown, texto, etc.) y los procesa a un formato interno de documentos listos para su indexación.
+    ~Se invoca la instrucción "pandas.read_excel()" configurada en modo distribuido sobre una máquina virtual local sin electricidad. #Incorrecto. pandas no es un componente de LlamaIndex para cargar directorios mixtos de documentos no estructurados, y ninguna máquina funciona sin energía eléctrica.
+    ~Se programa un bucle while infinito en C++ que traduzca cada carácter a código morse transmitido por cables de red físicos. #Incorrecto. No se requiere código en C++ ni transmisiones de código morse; LlamaIndex abstrae la ingesta en una sola línea de Python sumamente accesible.
+    ~Se descarga una base de datos vectorial vacía Pinecone y se guardan las rutas de los archivos mediante comandos de consola locales MySQL. #Incorrecto. Los cargadores (loaders) de LlamaIndex actúan antes de la base vectorial; leen y extraen el texto de los documentos para poder generar los fragmentos y embeddings de forma lógica.
+}
+
+::[LlamaIndex] Query Engine vs Chat Engine::
+¿Cuál es la diferencia conceptual y funcional de uso en la API de LlamaIndex entre un "Query Engine" y un "Chat Engine" creados sobre un índice de documentos? {
+    =El Query Engine está diseñado para responder a preguntas individuales y aisladas de tipo Q&A sin memoria, mientras que el Chat Engine mantiene de forma nativa el historial conversacional. #¡Correcto! El Query Engine toma una pregunta, recupera contexto, pregunta al LLM y devuelve el resultado de forma síncrona y aislada. El Chat Engine (usando modos como "context" o "condense_question") inyecta el historial del chat para que el usuario pueda formular preguntas de seguimiento referenciando al contexto de mensajes anteriores.
+    ~El Query Engine requiere obligatoriamente pagar una suscripción en euros y el Chat Engine es 100% libre y gratuito en local. #Incorrecto. Ambos motores forman parte del mismo framework open-source y gratuito LlamaIndex y no conllevan cobros por licenciamiento.
+    ~El Query Engine solo funciona en local en ordenadores Linux y el Chat Engine está limitado a teléfonos móviles con sistema operativo macOS. #Incorrecto. Ambos componentes son clases de Python compatibles con cualquier sistema operativo (Windows, Linux, macOS) o entorno en la nube.
+    ~El Query Engine traduce los PDFs a imágenes PNG y el Chat Engine graba llamadas de audio de los alumnos en archivos MP3 locales. #Incorrecto. Ambos trabajan a nivel lógico de procesamiento y generación de texto semántico sobre los datos indexados, no procesan audio MP3 ni fotos en PNG de esa manera.
+}
+
+::[LlamaIndex] Concepto de Chunking::
+En un pipeline de RAG programado con LlamaIndex, ¿por qué el ajuste de parámetros de fragmentación ("chunking") como el "chunk_size" y "chunk_overlap" es decisivo para la precisión de las respuestas del modelo? {
+    =Porque el chunk_size determina el tamaño de la ventana de contexto que se recupera de los documentos, y el chunk_overlap evita la pérdida de información lógica en los puntos de corte de los fragmentos consecutivos. #¡Correcto! Si el `chunk_size` es muy pequeño, el fragmento carecerá de contexto suficiente para que el LLM responda correctamente. Si es muy grande, se inyectará ruido irrelevante y se saturará la ventana de tokens. El `overlap` solapa unas palabras entre fragmentos para que las frases cortadas en el límite conserven sentido completo en alguno de los dos bloques.
+    ~Porque el chunk_size duplica de forma automática la velocidad del procesador gráfico GPU del servidor cloud sin consumir más energía. #Incorrecto. El tamaño de fragmento influye en el volumen de texto procesado, pero no puede alterar físicamente las capacidades de hardware de las GPUs ni su consumo eléctrico.
+    ~Porque si se configura el overlap en cero, el modelo de lenguaje empezará a responder en lenguaje de señas interactivo en la pantalla visual. #Incorrecto. La ausencia de solapamiento provoca pérdidas de contexto en los fragmentos recuperados, pero no hace que el modelo responda en formatos multimedia o visuales no textuales.
+    ~Porque el chunking convierte los manuales técnicos en bases de datos relacionales estructuradas en Access compartidas por red local. #Incorrecto. El chunking fragmenta textos extensos no estructurados en bloques lógicos o nodos vectoriales más pequeños en memoria o base de datos vectorial; no los migra a Microsoft Access.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 3: OPTIMIZACIÓN PROGRAMÁTICA CON DSPY
+// ----------------------------------------------------------------------------
+
+::[DSPy] Enfoque Conceptual::
+¿Cuál es la idea de diseño disruptiva que propone "DSPy" frente al flujo habitual de "prompting manual" en el desarrollo de software con modelos de lenguaje? {
+    =Pasar de escribir, refinar y probar instrucciones (prompts) a mano a definir contratos de tarea (Signatures), preparar conjuntos de datos y optimizar el sistema de forma sistemática y medible con algoritmos. #¡Correcto! En lugar de "jugar" con las palabras de un prompt largo a ojo, DSPy separa la lógica (signatures y módulos) de cómo se presenta esa tarea al LLM. Mediante optimizadores automáticos que evalúan contra ejemplos con métricas programadas, DSPy ajusta las instrucciones y selecciona los mejores ejemplos pocos-disparos (few-shot) de forma totalmente automatizada.
+    ~Sustituir el uso de modelos de lenguaje remotos por una base de datos distribuida clásica que autogenera textos en disquetes locales. #Incorrecto. DSPy sigue requiriendo y consumiendo LLMs remotos o locales; lo que cambia radicalmente es cómo se programan y refinan las llamadas a dichos modelos de forma sistemática en tu código.
+    ~Exigir que todos los prompts de los programadores se traduzcan de forma obligatoria al idioma chino para mejorar la precisión del modelo en España. #Incorrecto. DSPy optimiza la estructuración del prompt de forma autónoma en cualquier idioma, traduciéndolo al formato e instrucción que mejor cumpla tu métrica, sin forzar idiomas específicos.
+    ~Eliminar por completo la necesidad de definir métricas u objetivos al dejar que el modelo decida por su cuenta si su respuesta es correcta. #Incorrecto. Al contrario, DSPy exige como requisito crucial que el programador defina métricas programáticas de evaluación claras para guiar al optimizador sobre qué respuesta es de buena calidad.
+}
+
+::[DSPy] Signatures y Contratos::
+En el framework DSPy, ¿qué define una "Signature" y qué componentes se utilizan para declarar las entradas y salidas de la tarea? {
+    =Define el contrato declarativo de lo que debe realizar el módulo, utilizando "dspy.InputField" para declarar los datos de entrada y "dspy.OutputField" para los datos de salida esperados. #¡Correcto! Una Signature en DSPy es una clase simple (que hereda de `dspy.Signature`) donde documentas y declaras de forma limpia qué variables entran (inputs) y qué variables se esperan del LLM (outputs), abstrayéndote de la instrucción textual real que se enviará al modelo.
+    ~Una firma digital que cobra de forma automática dinero de la cuenta corriente de los alumnos cada vez que usan el LLM en clase. #Incorrecto. Es un concepto técnico de contrato de software para flujos de datos en el código de Python; no tiene que ver con transacciones monetarias o firmas bancarias.
+    ~Un comando especial del terminal de Linux que borra toda la memoria RAM para optimizar la velocidad del disco del ordenador. #Incorrecto. No interactúa con la limpieza de la memoria RAM del sistema operativo; define los parámetros de entrada y salida legibles de tu pipeline cognitivo.
+    ~Una base de datos de imágenes prediseñadas que se muestran a los usuarios en las pantallas gigantes del aula. #Incorrecto. Define flujos y contratos de datos para la generación textual o estructurada de los modelos, no almacena bibliotecas de imágenes prediseñadas para presentaciones.
+}
+
+::[DSPy] Modules Predict y ChainOfThought::
+Al instanciar módulos en DSPy, ¿cuál es la diferencia funcional de comportamiento entre utilizar "dspy.Predict" y configurar "dspy.ChainOfThought" con una misma Signature? {
+    =dspy.Predict realiza una llamada directa al LLM para obtener la salida, mientras que dspy.ChainOfThought le indica de forma transparente al modelo que razone paso a paso (generando una justificación intermedia) antes de devolver la respuesta final. #¡Correcto! `dspy.Predict` simplemente pide la predicción de los OutputFields. `dspy.ChainOfThought` inyecta de manera automática la lógica de "Pensamiento de Cadena" (Chain-of-Thought), solicitando y capturando una variable intermedia de justificación razonada (`rationale`) que mejora enormemente la precisión en tareas complejas de decisión.
+    ~dspy.Predict es una instrucción exclusiva de pago comercial y dspy.ChainOfThought funciona solo en sistemas locales sin conexión a internet. #Incorrecto. Ambos componentes son clases libres y gratuitas de la biblioteca DSPy que se pueden asociar a cualquier modelo (remoto con claves API o local con Ollama).
+    ~dspy.Predict traduce el código a sentencias de bases de datos relacionales clásicas MySQL y dspy.ChainOfThought las convierte a hojas Excel compartidas. #Incorrecto. Son clases de inferencia cognitiva web para guiar el flujo de prompts de los LLMs; no interactúan con bases relacionales ni archivos Excel de oficina de esa forma.
+    ~dspy.Predict requiere reentrenar físicamente el hardware de la tarjeta gráfica y dspy.ChainOfThought no consume recursos del procesador. #Incorrecto. Ambos ejecutan inferencia estándar consumiendo recursos del procesador y tokens de API de forma similar, variando únicamente el andamiaje del prompt y el razonamiento del modelo.
+}
+
+::[DSPy] Optimizers y Compilación::
+¿Qué proceso realiza internamente un optimizador (como "BootstrapFewShot") cuando se invoca el método "compile" sobre un módulo de DSPy pasándole un conjunto de entrenamiento ("trainset")? {
+    =Evalúa el módulo contra los ejemplos del dataset de entrenamiento, selecciona dinámicamente las mejores respuestas correctas y genera un prompt optimizado con los ejemplos "few-shot" e instrucciones más efectivas. #¡Correcto! El método `compile` automatiza el "prompt-tuning". En lugar de elegir ejemplos a mano, el optimizador corre tu pipeline, evalúa los resultados con tu métrica y recopila un subconjunto selecto de ejemplos exitosos (bootstrapped examples) que inyecta en el prompt final del módulo para garantizar la mayor precisión.
+    ~Borra de forma definitiva todo el conjunto de entrenamiento de los discos duros locales para ahorrar almacenamiento en el servidor cloud. #Incorrecto. No destruye el conjunto de datos de entrenamiento; al contrario, lo procesa y consume para guiar la optimización sistemática del prompt.
+    ~Traduce de forma automática todo el programa de Python a una aplicación web móvil interactiva Gradio sin intervención del programador. #Incorrecto. La compilación de DSPy optimiza el comportamiento semántico del LLM en el backend; la interfaz de usuario web (como Gradio) debe programarse aparte de forma independiente.
+    ~Obliga a que todos los ejemplos de entrenamiento se escriban de manera manual en hojas Excel compartidas por correo electrónico. #Incorrecto. Consume conjuntos de datos estructurados directamente en el código de Python (como listas de objetos `dspy.Example`), permitiendo automatización total sin hojas de cálculo Excel manuales.
+}
+
+::[DSPy] Metrics Programáticas::
+Al programar una métrica para optimizar un módulo de DSPy, ¿cómo debe estructurarse conceptualmente la función de métrica para que sea válida en el framework? {
+    =Debe aceptar los parámetros "example" (los datos del dataset), "prediction" (la salida del módulo) y retornar un valor numérico o booleano que califique la calidad de la respuesta. #¡Correcto! La métrica es una función simple de Python con la firma `def metric(example, prediction, trace\=None):`. Debe devolver un número (como un float entre 0.0 y 1.0) o un booleano (`True`/`False`), evaluando si la respuesta del LLM es correcta, factual, respeta límites de caracteres, incluye palabras clave o contiene citas al contexto.
+    ~Debe reescribir de forma obligatoria todos los prompts de la aplicación a lenguaje ensamblador para que funcionen más rápido. #Incorrecto. La métrica es una función de evaluación analítica en Python; no realiza traducciones de código a lenguajes ensambladores de bajo nivel.
+    ~Debe conectarse de forma secreta a satélites espaciales para verificar la geolocalización física de la máquina virtual del servidor cloud. #Incorrecto. Funciona localmente en el hilo de Python analizando y contrastando las variables semánticas en memoria; no requiere conexiones aeroespaciales de geolocalización.
+    ~Debe exigir que el alumno o docente le asigne de forma física una nota en un papel en blanco en el aula de clase en tiempo real. #Incorrecto. Aunque existen evaluaciones manuales, el objetivo de las métricas en DSPy es que sean programáticas y automatizadas para evaluar miles de iteraciones sin intervención humana en tiempo real.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 4: VALIDACIÓN Y CONTRATOS DE DATOS
+// ----------------------------------------------------------------------------
+
+::[Validación] Salidas Estructuradas con Instructor/PydanticAI::
+¿Qué ventaja técnica fundamental aporta utilizar librerías de validación y contratos de datos como "Instructor" o "PydanticAI" al construir aplicaciones de IA en producción? {
+    =Fuerza a que el modelo de lenguaje (LLM) devuelva estrictamente un objeto JSON que se valida de forma estricta contra un esquema de Pydantic, relanzando la petición autónomamente si el JSON llega dañado o incompleto. #¡Correcto! En producción, si un LLM debe rellenar campos de base de datos y alucina metiendo texto extra ("Aquí tienes tu JSON...") o deforma el esquema, tu código fallará. Estas librerías obligan al modelo a usar llamadas a funciones estructuradas (tool calling) y validan que el objeto mapeado sea 100% correcto, corrigiendo desviaciones de formato sobre la marcha mediante reintentos automatizados con el LLM.
+    ~Permite convertir cualquier respuesta de texto plano generada por el LLM a una animación de vídeo interactiva en tres dimensiones de bajo coste. #Incorrecto. No tiene que ver con animaciones de vídeo en tres dimensiones, sino con la robustez y conformidad del formato de datos (JSON/Pydantic) para su consumo por software.
+    ~Sustituye por completo las bases de datos vectoriales al almacenar todos los textos de forma mágica en las tarjetas de red físicas locales. #Incorrecto. No gestiona indexación ni búsqueda semántica en la red; valida los datos que entran o salen del LLM en memoria RAM para asegurar contratos de datos limpios.
+    ~Obliga a que todos los datos sensibles de los usuarios de la aplicación se publiquen de forma obligatoria en un canal abierto de Telegram. #Incorrecto. Al contrario, promueve buenas prácticas de seguridad e integridad de datos al forzar esquemas estrictos validados de forma privada en memoria, previniendo fugas o malas codificaciones de datos.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 5: BASES VECTORIALES E INFRAESTRUCTURA DE RECUPERACIÓN
+// ----------------------------------------------------------------------------
+
+::[RAG] Bases de Datos Vectoriales y Embeddings::
+¿Cuál es el rol principal de una base de datos vectorial (Vector Store) como Chroma o FAISS dentro de un pipeline de RAG (Generación Aumentada por Recuperación)? {
+    =Almacenar los embeddings (representaciones vectoriales numéricas) extraídos de los fragmentos de texto y permitir la búsqueda ultra rápida por similitud semántica (vecinos más cercanos) ante la consulta del usuario. #¡Correcto! Las bases vectoriales no almacenan solo texto plano; guardan representaciones matemáticas (embeddings) que capturan el significado de las palabras. Al llegar una pregunta, se calcula su embedding y se buscan de inmediato los fragmentos con mayor similitud de coseno, que luego servirán de contexto para el LLM.
+    ~Sustituir por completo a los modelos de lenguaje (LLMs) ejecutando de forma autónoma la generación del texto final sin consumir APIs. #Incorrecto. Las bases vectoriales sirven únicamente para indexar y recuperar el contexto relevante; no generan respuestas de texto libre ni sustituyen la labor de inferencia del LLM.
+    ~Traducir los documentos PDF de entrada a esquemas lógicos SQL tradicionales para guardarlos en Microsoft Access. #Incorrecto. Las bases vectoriales no convierten los documentos a SQL plano ni tienen relación con Access; almacenan vectores de alta dimensionalidad para búsqueda semántica.
+    ~Compilar los scripts de Python del backend de la aplicación para que se ejecuten directamente en la memoria caché de las GPUs. #Incorrecto. Las bases vectoriales son motores de búsqueda e indexación, no herramientas de compilación de código fuente Python para hardware GPU.
+}
+
+// ----------------------------------------------------------------------------
+// PREGUNTA EXTRA DE INVESTIGACIÓN
+// ----------------------------------------------------------------------------
+
+::[INVESTIGACIÓN] DSPy, SQLite y MCP en Práctica::
+Al examinar ejemplos avanzados como "98_dspy_mcp.ipynb", ¿qué ventaja aporta acoplar un módulo optimizable de DSPy con una base de datos local (como SQLite) mediante el estándar Model Context Protocol (MCP) para optimizar un pipeline con IA? {
+    =Permite que el optimizador de DSPy explore de forma dinámica y autónoma esquemas y datos locales del servidor mediante herramientas estandarizadas, adaptando y refinando de forma interactiva las instrucciones del LLM para citar fuentes con precisión absoluta. #¡Correcto! En este enfoque de frontera, el MCP proporciona el canal seguro para que el LLM (guiado por los signatures de DSPy) llame a funciones de consulta sobre SQLite (como herramientas estandarizadas). El compilador de DSPy corre iteraciones y evalúa si las respuestas con citas a las filas de la base de datos son correctas, refinando los prompts y el uso de las herramientas de forma programática.
+    ~Sustituye por completo al servidor web de FastAPI al compilar toda la base de datos relacional SQLite a un archivo de música MP3 de alta resolución. #Incorrecto. No compila bases de datos a formatos de audio musical MP3 ni sustituye a los servidores de la API (FastAPI); es una arquitectura analítica y cognitiva de datos avanzada.
+    ~Obliga a que el desarrollador pague licencias millonarias por cada fila que inserta en la base de datos local SQLite del servidor de producción. #Incorrecto. SQLite, DSPy y MCP son tecnologías 100% de código abierto, libres y gratuitas; no conllevan cobros por licenciamiento o volumen de inserciones de datos.
+    ~Hace que el ordenador del usuario final emita pitidos audibles en código morse cada vez que el modelo de lenguaje realiza una consulta de datos SQL. #Incorrecto. La comunicación se realiza de forma silenciosa e interna por red asíncrona TCP en el servidor; no incluye emisiones audibles en código morse en el hardware del cliente.
+}

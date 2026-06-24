@@ -1,0 +1,142 @@
+
+// Preguntas sobre Transformers
+
+::Q1:: ¿Cuál es la función principal del mecanismo de atención en un Transformer? {
+    =Permitir que el modelo enfoque su atención en partes relevantes de la secuencia
+    ~Reordenar las palabras de la entrada
+    ~Eliminar palabras irrelevantes
+    ~Reducir el tamaño de la entrada
+}
+
+::Q2:: ¿Qué representan las letras Q, K y V en el mecanismo de atención? {
+    =Query, Key y Value
+    ~Quote, Keyword y Variable
+    ~Quantity, Kernel y Vector
+    ~Quick, Keep y Validation
+}
+
+::Q3:: En el mecanismo de atención, ¿cómo se calcula la importancia entre palabras? {
+    =Con un producto escalar entre Queries y Keys
+    ~Con una multiplicación de Queries y Values
+    ~Usando una red convolucional
+    ~Restando Keys y Values
+}
+
+::Q4:: ¿Qué operación se aplica a los scores para convertirlos en pesos de atención? {
+    =Softmax
+    ~Relu
+    ~Sigmoid
+    ~LayerNorm
+}
+
+::Q5:: ¿Qué ventaja ofrece la atención multi-cabeza? {
+    =Permite al modelo aprender distintas relaciones contextuales en paralelo
+    ~Reduce el número de parámetros
+    ~Evita la normalización
+    ~Aumenta la longitud máxima de entrada
+}
+
+::Q6:: ¿Qué limitación tienen los modelos LSTM y GRU frente a Transformers? {
+    =Procesan la secuencia de forma secuencial
+    ~No pueden trabajar con texto
+    ~No pueden usar embeddings
+    ~No permiten entrenamiento
+}
+
+::Q7:: ¿Qué componente del Transformer incorpora información sobre el orden de las palabras? {
+    =Codificación posicional
+    ~Atención multi-cabeza
+    ~Capa de salida
+    ~Feed-forward
+}
+
+::Q8:: ¿Qué tipo de codificación posicional es fija y no se entrena? {
+    =Sinusoidal
+    ~Aprendida
+    ~Gramática profunda
+    ~Neuronal
+}
+
+::Q9:: ¿Qué ocurre en la atención enmascarada? {
+    =Se impide que el modelo vea posiciones futuras
+    ~Se bloquean las palabras irrelevantes
+    ~Se eliminan las palabras repetidas
+    ~Se evita el uso de embeddings
+}
+
+::Q10:: En la atención encoder-decoder, ¿de dónde vienen K y V? {
+    =Del encoder
+    ~Del decoder
+    ~De la entrada sin procesar
+    ~De la capa de embeddings
+}
+
+::Q11:: ¿Qué representa la matriz de atención? {
+    =Las relaciones de importancia entre tokens
+    ~El orden alfabético de las palabras
+    ~La frecuencia de aparición
+    ~La salida final del modelo
+}
+
+::Q12:: ¿Qué se aplica después de concatenar las salidas de cada cabeza en multi-head attention? {
+    =Una proyección lineal con W^O
+    ~Una capa convolucional
+    ~Una función de activación
+    ~Una capa recurrente
+}
+
+::Q13:: ¿Qué tipo de atención tiene el Transformer original? {
+    =Atención completa (full attention)
+    ~Atención global
+    ~Atención local
+    ~Atención aproximada
+}
+
+::Q14:: ¿Qué ventaja ofrece Longformer frente a Transformer? {
+    =Reduce la complejidad a O(n) con atención local y global
+    ~Usa capas recurrentes
+    ~No necesita codificación posicional
+    ~Tiene menos parámetros
+}
+
+::Q15:: ¿Qué modelo usa atención aproximada basada en kernels? {
+    =Performer
+    ~Linformer
+    ~Longformer
+    ~FlashAttention
+}
+
+::Q16:: ¿Cuál es la principal optimización de FlashAttention? {
+    =Reduce accesos a memoria en GPUs
+    ~Aplica máscara triangular automáticamente
+    ~Cambia Q por K
+    ~Evita el uso de embeddings
+}
+
+::Q17:: ¿Qué hace la capa feed-forward en cada bloque del Transformer? {
+    =Aplica una red neuronal totalmente conectada a cada posición
+    ~Elimina los tokens irrelevantes
+    ~Ajusta el orden de las palabras
+    ~Transforma los pesos Q, K y V
+}
+
+::Q18:: ¿Qué operación acompaña siempre a cada sub-bloque del Transformer? {
+    =Normalización y conexión residual
+    ~Dropout y max pooling
+    ~Sigmoid y tanh
+    ~LSTM y GRU
+}
+
+::Q19:: ¿Qué ocurre si eliminamos la codificación posicional? {
+    =El modelo no sabría el orden de las palabras
+    ~El modelo se entrena más rápido
+    ~Se mejora la precisión
+    ~No afecta el rendimiento
+}
+
+::Q20:: ¿Cuál de los siguientes modelos tiene menor complejidad de atención que el Transformer original? {
+    =Linformer
+    =Longformer
+    =Performer
+    ~Transformer
+}

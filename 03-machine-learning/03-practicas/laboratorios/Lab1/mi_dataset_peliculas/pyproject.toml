@@ -1,0 +1,21 @@
+[project]
+name = "mi-dataset-peliculas"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "jmsa",email = "tulkas72@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "requests (>=2.32.5,<3.0.0)",
+    "pandas (>=2.3.3,<3.0.0)",
+    "dotenv (>=0.9.9,<0.10.0)"
+]
+
+[tool.poetry]
+packages = [{include = "mi_dataset_peliculas", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

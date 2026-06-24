@@ -1,0 +1,111 @@
+#+TITLE:
+#+AUTHOR:
+#+EMAIL:
+#+DATE:
+#+OPTIONS: texht:t toc:nil num:nil -:nil ^:{} ":nil ':nil
+#+OPTIONS: tex:t
+#+LATEX_CLASS: article
+#+LATEX_HEADER:
+#+LANGUAGE: es
+
+#+BEGIN_COMMENT
+#+LATEX_HEADER: \usepackage[AUTO]{babel}
+#+END_COMMENT
+
+#+LATEX_HEADER_EXTRA: \usepackage{mdframed}
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{minted}{\begin{mdframed}}
+#+LATEX_HEADER_EXTRA: \AfterEndEnvironment{minted}{\end{mdframed}}
+
+#+LATEX: \setlength\parindent{10pt}
+#+LATEX_HEADER: \usepackage{parskip}
+
+#+latex_header: \usepackage[utf8]{inputenc} %% For unicode chars
+#+LATEX_HEADER: \usepackage{placeins}
+
+#+LATEX_HEADER: \usepackage[margin=2.50cm]{geometry}
+
+#+LaTeX_HEADER: \usepackage[T1]{fontenc}
+#+LaTeX_HEADER: \usepackage{mathpazo}
+#+LaTeX_HEADER: \linespread{1.05}
+#+LaTeX_HEADER: \usepackage[scaled]{helvet}
+#+LaTeX_HEADER: \usepackage{courier}
+
+#+LaTeX_HEADER: \hypersetup{colorlinks=true,linkcolor=blue}
+#+LATEX_HEADER: \RequirePackage{fancyvrb}
+#+LATEX_HEADER: \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\small,formatcom = {\color[rgb]{0.5,0,0}}}
+
+#+TITLE: Documentación sobre Redes Neuronales
+
+Este documento proporciona una guía paso a paso sobre distintos tipos de redes neuronales, desde modelos básicos hasta arquitecturas avanzadas. Cada sección incluye descripciones teóricas y ejemplos prácticos en PyTorch, Keras, Flax y Haiku.
+
+* 17. Guía para la Selección de Parámetros e Hiperparámetros
+
+El diseño de una red neuronal involucra la selección de múltiples hiperparámetros que afectan su rendimiento. A continuación, se proporciona una guía para elegir los mejores valores dependiendo del problema a resolver.
+
+** 17.1. Tasa de Aprendizaje (Learning Rate)
+- *Reglas generales:*
+  - Valores entre =0.001= y =0.01= suelen funcionar bien.
+  - *Muy alta*: Convergencia rápida, pero posible inestabilidad.
+  - *Muy baja*: Convergencia lenta, riesgo de quedar atrapado en mínimos locales.
+- *Estrategias de ajuste:*
+  - Uso de técnicas como *ReduceLROnPlateau* o *Learning Rate Schedulers*.
+  - Implementar *búsqueda en escala logarítmica* (=10^{-3}, 10^{-4}, 10^{-5}=).
+
+** 17.2. Número de Entradas y Salidas
+- *Entradas:*
+  - Determinado por la cantidad de características del dataset.
+  - Normalizar o estandarizar los datos mejora la convergencia.
+- *Salidas:*
+  - *Clasificación binaria*: 1 neurona con activación *sigmoide*.
+  - *Clasificación multiclase*: N neuronas con activación *softmax*.
+  - *Regresión*: 1 neurona con activación *lineal*.
+
+** 17.3. Función de Pérdida (Error)
+| Tipo de Problema      | Función de Pérdida            |
+|-----------------------|-------------------------------|
+| Regresión             | MSE, MAE                      |
+| Clasificación Binaria | Binary CrossEntropy           |
+| Clasificación Multiclase | Categorical CrossEntropy |
+
+** 17.4. Optimizador
+| Optimizador | Descripción                                                |
+|-------------|------------------------------------------------------------|
+| *SGD*       | Descenso de gradiente simple. Lento pero útil para convergencia estable. |
+| *Momentum*  | Introduce velocidad acumulada para superar mínimos locales. |
+| *RMSprop*   | Ajusta adaptativamente la tasa de aprendizaje por parámetro. |
+| *Adam*      | Combinación de Momentum y RMSprop. Ideal para la mayoría de los casos. |
+
+*Recomendación:* Si no se tiene conocimiento previo, *Adam* suele ser una buena opción inicial.
+
+** 17.5. Número de Capas Ocultas
+- *Reglas generales:*
+  - Para datos simples, 1 o 2 capas ocultas pueden ser suficientes.
+  - Para problemas más complejos (como imágenes o texto), usar más capas.
+- *Métodos de búsqueda:*
+  - *Grid Search / Random Search*.
+  - *Búsqueda progresiva*: Comenzar con pocas capas y aumentar gradualmente.
+
+** 17.6. Número de Neuronas por Capa
+- *Reglas generales:*
+  - *Demasiadas neuronas*: Sobreajuste y cómputo innecesario.
+  - *Muy pocas neuronas*: Subajuste, modelo incapaz de aprender patrones.
+- *Reglas empíricas:*
+  - Número de neuronas en una capa oculta: entre el número de entradas y salidas.
+  - Experimentos con múltiplos de 16 o 32 pueden mejorar eficiencia en GPUs.
+
+** 17.7. Función de Transferencia / Activación
+| Función de Activación | Características                                                |
+|-----------------------|----------------------------------------------------------------|
+| *ReLU*                | Rápida, evita gradiente desaparecido, recomendada para capas ocultas. |
+| *Leaky ReLU*          | Variante de ReLU que soluciona el problema de neuronas muertas. |
+| *Sigmoid*             | Útil en salidas para clasificación binaria, pero propensa a saturación. |
+| *Tanh*                | Similar a sigmoid, pero centrada en 0. Mejor para normalización. |
+| *Softmax*             | Útil para clasificación multiclase. |
+
+** 17.8. Estrategias de Ajuste de Hiperparámetros
+- *Búsqueda aleatoria (Random Search)*: Más eficiente que Grid Search.
+- *Optimización Bayesiana*: Ajuste automático en función de iteraciones previas.
+- *Validación Cruzada*: Evaluar modelos con distintos conjuntos de datos.
+
+*Conclusión*
+El ajuste de hiperparámetros no tiene una única solución óptima, y suele requerir experimentación. Seguir estas pautas puede reducir el número de iteraciones necesarias para encontrar la configuración ideal.

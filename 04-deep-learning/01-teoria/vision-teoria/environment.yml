@@ -1,0 +1,13 @@
+
+name: visionIA
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - opencv
+  - matplotlib
+  - numpy
+  - pillow
+  - pip
+  - pip:
+      - tensorflow

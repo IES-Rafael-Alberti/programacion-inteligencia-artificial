@@ -1,0 +1,99 @@
+// Preguntas de Opción Múltiple (10 preguntas, 0.5 puntos cada una)
+
+::OM1:: ¿Qué herramienta del stack convergente se encarga de detectar cambios en la distribución de los datos de entrada de un modelo en producción? {
+	~MLflow
+	=Evidently
+	~Prefect
+	~FastAPI
+}
+
+::OM2:: En un pipeline de ML orquestado, ¿cuál es la función principal de Prefect respecto a MLflow? {
+	~Sustituir el tracking de experimentos de MLflow
+	=Orquestar la ejecución de tareas que incluyen el registro en MLflow
+	~Visualizar los experimentos registrados en MLflow
+	~Servir el modelo registrado en MLflow como API
+}
+
+::OM3:: ¿Cuál de las siguientes opciones describe correctamente la relación entre FastAPI y MLflow en el stack convergente? {
+	~FastAPI reemplaza a MLflow para el versionado de modelos
+	=FastAPI carga modelos desde el Model Registry de MLflow para servirlos como API
+	~MLflow sirve como gateway API para modelos registrados
+	~Ambas herramientas realizan la misma función en el stack
+}
+
+::OM4:: ¿Qué ventaja aporta integrar la monitorización con Evidently en un pipeline orquestado por Prefect? {
+	~Evidently acelera el entrenamiento de modelos
+	=Permite detectar degradación del modelo y disparar re-entrenamientos automáticos mediante Prefect
+	~Evidently sustituye la necesidad de tests unitarios
+	~Prefect elimina la necesidad de monitorizar con Evidently
+}
+
+::OM5:: ¿Cuál es el propósito de integrar guardrails (NeMo Guardrails o Guardrails AI) en una API de clasificación construida con FastAPI? {
+	~Aumentar la velocidad de inferencia del modelo
+	=Filtrar entradas y salidas del modelo para prevenir contenido dañino o fuera de dominio
+	~Sustituir la autenticación por API Key
+	~Mejorar la accuracy del modelo de clasificación
+}
+
+::OM6:: En el contexto del stack convergente, ¿qué valor añade SHAP a un modelo servido mediante FastAPI? {
+	~SHAP optimiza el rendimiento de la API
+	=SHAP proporciona explicaciones interpretables sobre por qué el modelo produce una predicción concreta
+	~SHAP reemplaza la validación Pydantic de los esquemas de entrada
+	~SHAP genera documentación OpenAPI automática
+}
+
+::OM7:: ¿Cómo se relacionan las herramientas de la F3 (MLflow) y la F7 (Evidently) en el flujo convergente? {
+	~Son herramientas redundantes que realizan la misma función
+	=MLflow registra el rendimiento durante el entrenamiento y Evidently monitoriza el rendimiento en producción
+	~Evidently se utiliza durante el entrenamiento y MLflow en producción
+	~No existe relación entre ambas herramientas
+}
+
+::OM8:: ¿Qué papel juega la autenticación con API Key y el rate limiting en la arquitectura del stack convergente? {
+	~Son opcionales y solo afectan al rendimiento
+	=Controlan quién accede al modelo y protegen contra abusos, formando parte de la seguridad del sistema (RA3d)
+	~Solo son relevantes para sistemas con usuarios registrados
+	~Son mecanismos sustituibles por la monitorización con Evidently
+}
+
+::OM9:: ¿Qué conexión existe entre la orquestación con Prefect (F4) y la experimentación con MLflow (F3)? {
+	~No existe conexión, son fases independientes
+	=Prefect puede orquestar tareas que ejecutan experimentos y registran resultados en MLflow automáticamente
+	~MLflow orquesta los experimentos y Prefect los registra
+	~Ambas herramientas son incompatibles entre sí
+}
+
+::OM10:: ¿Cuál es la principal razón para integrar un sistema multi-agente (CrewAI) en lugar de un agente único en un sistema de clasificación de incidencias? {
+	~Es más fácil de programar
+	=Permite especializar agentes en tareas distintas (clasificación, búsqueda, validación) y mejorar la calidad de las respuestas
+	~Reduce el coste computacional
+	~Elimina la necesidad de supervisión humana
+}
+
+
+// Preguntas Verdadero/Falso (5 preguntas, 0.4 puntos cada una)
+
+::VF1:: La monitorización con Evidently debe configurarse antes de desplegar la API de serving para que los datos de producción queden registrados desde el primer momento. {FALSE#La monitorización puede configurarse después del despliegue. Aunque es recomendable tenerla desde el inicio, Evidently compara datos de producción contra una referencia (training), y la referencia debe existir antes de la monitorización activa, no antes del despliegue de la API.}
+
+::VF2:: En el stack convergente, una misma herramienta puede cumplir funciones en múltiples fases del pipeline si se configura adecuadamente. {TRUE#Herramientas como MLflow (tracking + registry) o FastAPI (serving + documentación) cumplen múltiples funciones. El stack convergente aprovecha estas capacidades multifunción para reducir la complejidad del sistema.}
+
+::VF3:: El proyecto final de la unidad solo requiere implementar un pipeline funcional; la documentación y la defensa oral son optativas. {FALSE#El proyecto final tiene tres componentes obligatorios: código (50%), informe técnico (30%) y defensa oral (20%). Sin defensa oral, el proyecto se considera suspenso directamente.}
+
+::VF4:: Los sistemas de guardrails y explicabilidad son redundantes: si tienes SHAP explicando las predicciones, no necesitas guardrails filtrando entradas. {FALSE#Guardrails y SHAP cumplen funciones complementarias. Los guardrails protegen contra entradas/salidas dañinas (seguridad), mientras que SHAP explica las predicciones (transparencia). Ambos son necesarios para una IA responsable completa.}
+
+::VF5:: La orquestación con Prefect permite que el pipeline completo (desde la ingesta de datos hasta el despliegue del modelo) se ejecute de forma automatizada y resiliente. {TRUE#Prefect puede orquestar todo el flujo: carga de datos (F2), experimentación (F3), registro en MLflow, y despliegue en FastAPI, con reintentos y logging en cada paso.}
+
+
+// Preguntas de Respuesta Corta (3 preguntas, 1 punto cada una)
+
+::RC1:: Explica cómo se conectarían Prefect (F4) y MLflow (F3) en un pipeline de re-entrenamiento automático de un clasificador de incidencias. Describe al menos 3 pasos del flujo. {
+	=Un posible flujo sería: (1) Prefect ejecuta una tarea de carga y validación de nuevos datos; (2) Prefect lanza una tarea de entrenamiento que registra el experimento en MLflow con métricas y artefactos; (3) MLflow compara la nueva métrica con la del modelo en producción; (4) Si mejora, Prefect ejecuta una tarea que promueve el modelo a Production en el Model Registry de MLflow; (5) Prefect notifica a FastAPI para que cargue la nueva versión del modelo. Este flujo automatiza el ciclo completo de re-entrenamiento sin intervención manual.
+}
+
+::RC2:: Un equipo ha desarrollado un clasificador de incidencias con FastAPI y quiere añadirle capacidades de IA responsable. Describe qué herramientas del stack convergente usarías y cómo las integrarías para cubrir seguridad, equidad y explicabilidad. {
+	=Para cubrir las tres dimensiones de IA responsable se integrarían: (1) Seguridad - NeMo Guardrails en el endpoint /predict para filtrar inputs maliciosos y outputs no seguros; (2) Equidad - Fairlearn para auditar el modelo en busca de sesgos por departamento o grupo, ajustando umbrales si es necesario; (3) Explicabilidad - SHAP para generar explicaciones de cada predicción, accesibles a través de un endpoint /explain. Las tres capas se integran en la API FastAPI existente, añadiendo rutas específicas y middleware de protección.
+}
+
+::RC3:: Describe la secuencia completa del stack convergente desde que llegan los datos hasta que se monitoriza el modelo en producción, nombrando al menos 5 herramientas y la función que cumple cada una. {
+	=La secuencia completa del stack convergente es: (1) Pipeline de datos - herramienta como pandas/pandera para extraer, limpiar y validar datos (F2); (2) Experimentación - MLflow registra experimentos, métricas y artefactos, y gestiona el Model Registry (F3); (3) Orquestación - Prefect orquesta todo el flujo de forma automatizada con reintentos y logging (F4); (4) Serving - FastAPI sirve el modelo como API REST con autenticación, rate limiting y versionado (F5); (5) Agentes - CrewAI construye sistemas multi-agente que enriquecen la clasificación con RAG (F6); (6) Monitorización - Evidently detecta drift en los datos de producción y genera alertas (F7); (7) IA Responsable - NeMo Guardrails protege el sistema y SHAP explica las predicciones (F8). Todas las herramientas se conectan formando un pipeline continuo donde la salida de una es la entrada de la siguiente.
+}

@@ -1,0 +1,209 @@
+#+TITLE: Guía de Keras 3 para construir redes neuronales.
+#+AUTHOR:
+#+EMAIL:
+#+DATE:
+#+OPTIONS: texht:t toc:nil num:nil -:nil ^:{} ":nil ':nil
+#+OPTIONS: tex:t
+#+LATEX_CLASS: article
+#+LATEX_HEADER:
+#+LANGUAGE: es
+
+#+BEGIN_COMMENT
+#+LATEX_HEADER: \usepackage[AUTO]{babel}
+#+END_COMMENT
+
+#+LATEX_HEADER_EXTRA: \usepackage{mdframed}
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{minted}{\begin{mdframed}}
+#+LATEX_HEADER_EXTRA: \AfterEndEnvironment{minted}{\end{mdframed}}
+
+#+LATEX: \setlength\parindent{10pt}
+#+LATEX_HEADER: \usepackage{parskip}
+
+#+latex_header: \usepackage[utf8]{inputenc} %% For unicode chars
+#+LATEX_HEADER: \usepackage{placeins}
+
+#+LATEX_HEADER: \usepackage[margin=2.50cm]{geometry}
+
+#+LaTeX_HEADER: \usepackage[T1]{fontenc}
+#+LaTeX_HEADER: \usepackage{mathpazo}
+#+LaTeX_HEADER: \linespread{1.05}
+#+LaTeX_HEADER: \usepackage[scaled]{helvet}
+#+LaTeX_HEADER: \usepackage{courier}
+
+#+LaTeX_HEADER: \hypersetup{colorlinks=true,linkcolor=blue}
+#+LATEX_HEADER: \RequirePackage{fancyvrb}
+#+LATEX_HEADER: \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\small,formatcom = {\color[rgb]{0.5,0,0}}}
+* Guía de Keras 3 para construir redes neuronales
+
+** Introducción a Keras 3
+
+Keras 3 es una API de alto nivel para la construcción y entrenamiento de modelos de deep learning. Es compatible con
+*TensorFlow, JAX y PyTorch* como backends, lo que permite flexibilidad y facilidad de integración en diferentes entornos.
+
+*** Características Claves de Keras 3
+- Compatibilidad con múltiples frameworks (TensorFlow, JAX, PyTorch).
+- Facilidad de uso con una API intuitiva.
+- Modularidad y extensibilidad para personalizar modelos y capas.
+- Soporte mejorado para entrenamiento distribuido.
+- Integración con `KerasCV` y `KerasHub` para modelos preentrenados y arquitecturas avanzadas.
+
+---
+
+** Instalación de Keras 3
+
+*** Instalación con pip
+
+Para instalar Keras 3, ejecuta el siguiente comando:
+
+#+begin_src bash
+pip install keras
+#+end_src
+
+Para soporte en *visión por computadora* y *modelos preentrenados*, instala `KerasCV` y `KerasHub`:
+
+#+begin_src bash
+pip install keras-cv keras-hub
+#+end_src
+
+*** Instalación con Conda
+
+Si utilizas *Anaconda* o *Miniconda*, puedes instalar Keras 3 en un entorno de Conda:
+
+#+begin_src bash
+conda create --name keras3_env python=3.9
+conda activate keras3_env
+conda install -c conda-forge keras tensorflow
+#+end_src
+
+Para instalar Keras con soporte para *JAX* o *PyTorch*, usa:
+
+#+begin_src bash
+conda install -c conda-forge jax jaxlib
+conda install -c conda-forge pytorch torchvision torchaudio
+#+end_src
+
+---
+
+** Configuración del Backend
+
+Keras 3 permite elegir entre TensorFlow, JAX o PyTorch como backend. Puedes establecer el backend deseado antes de
+ejecutar tu script:
+
+#+begin_src bash
+export KERAS_BACKEND=tensorflow  # O 'jax' o 'torch'
+#+end_src
+
+Si deseas utilizar la GPU con TensorFlow:
+
+#+begin_src bash
+pip install tensorflow-gpu
+#+end_src
+
+Para JAX con GPU (NVIDIA):
+
+#+begin_src bash
+pip install jax jaxlib -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+#+end_src
+
+Para PyTorch con GPU:
+
+#+begin_src bash
+pip install torch torchvision torchaudio
+#+end_src
+
+---
+
+** Construcción de una Red Neuronal en Keras 3
+
+*** Paso 1: Importar Keras y Cargar Datos
+
+#+begin_src python
+import keras
+from keras import layers
+from keras.datasets import mnist
+
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+x_train, x_test = x_train / 255.0, x_test / 255.0  # Normalización
+#+end_src
+
+*** Paso 2: Construcción del Modelo con API Secuencial
+
+#+begin_src python
+model = keras.Sequential([
+    layers.Flatten(input_shape=(28, 28)),
+    layers.Dense(128, activation='relu'),
+    layers.Dropout(0.2),
+    layers.Dense(10, activation='softmax')
+])
+#+end_src
+
+*** Paso 3: Compilar y Entrenar el Modelo
+
+#+begin_src python
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+
+model.fit(x_train, y_train, epochs=5, validation_data=(x_test, y_test))
+#+end_src
+
+*** Paso 4: Evaluación y Predicción
+
+#+begin_src python
+model.evaluate(x_test, y_test, verbose=2)
+predictions = model.predict(x_test[:5])
+print(predictions)
+#+end_src
+
+---
+
+** Uso de la API Funcional en Keras 3
+
+#+begin_src python
+inputs = keras.Input(shape=(28, 28))
+x = layers.Flatten()(inputs)
+x = layers.Dense(128, activation='relu')(x)
+x = layers.Dropout(0.2)(x)
+outputs = layers.Dense(10, activation='softmax')(x)
+
+model = keras.Model(inputs, outputs)
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+model.fit(x_train, y_train, epochs=5, validation_data=(x_test, y_test))
+#+end_src
+
+---
+
+** Uso de Modelos Preentrenados en Keras 3
+
+Keras 3 soporta modelos preentrenados de `KerasHub` y `KerasCV`. Ejemplo con *ResNet50*:
+
+#+begin_src python
+from keras.applications import ResNet50
+
+model = ResNet50(weights='imagenet', input_shape=(224, 224, 3))
+model.summary()
+#+end_src
+
+---
+
+** Guardado y Carga de Modelos en Keras 3
+
+Guardar el modelo entrenado:
+
+#+begin_src python
+model.save("modelo.keras")
+#+end_src
+
+Cargar el modelo guardado:
+
+#+begin_src python
+model = keras.models.load_model("modelo.keras")
+#+end_src
+
+---
+
+** Conclusión
+
+Hemos actualizado y ampliado la guía de Keras 2 a *Keras 3*, incorporando mejoras en compatibilidad, opciones de backend, y técnicas avanzadas como el uso de modelos preentrenados y entrenamiento distribuido.
+
+🚀 *Ahora puedes desarrollar modelos más flexibles y potentes con Keras 3.*

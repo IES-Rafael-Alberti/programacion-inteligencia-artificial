@@ -1,0 +1,116 @@
+#+TITLE:
+#+AUTHOR:
+#+EMAIL:
+#+DATE:
+#+OPTIONS: texht:t toc:3 num:3 -:nil ^:{} ":nil ':nil
+#+OPTIONS: tex:t
+#+LATEX_CLASS: article
+#+LATEX_HEADER:
+#+LANGUAGE: es
+
+#+BEGIN_COMMENT
+#+LATEX_HEADER: \usepackage[AUTO]{babel}
+#+END_COMMENT
+
+#+LATEX_HEADER_EXTRA: \usepackage{mdframed}
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{minted}{\begin{mdframed}}
+#+LATEX_HEADER_EXTRA: \AfterEndEnvironment{minted}{\end{mdframed}}
+
+#+LATEX: \setlength\parindent{10pt}
+#+LATEX_HEADER: \usepackage{parskip}
+
+#+latex_header: \usepackage[utf8]{inputenc} %% For unicode chars
+#+LATEX_HEADER: \usepackage{placeins}
+
+#+LATEX_HEADER: \usepackage[margin=2.50cm]{geometry}
+
+#+LaTeX_HEADER: \usepackage[T1]{fontenc}
+#+LaTeX_HEADER: \usepackage{mathpazo}
+#+LaTeX_HEADER: \linespread{1.05}
+#+LaTeX_HEADER: \usepackage[scaled]{helvet}
+#+LaTeX_HEADER: \usepackage{courier}
+
+#+LaTeX_HEADER: \hypersetup{colorlinks=true,linkcolor=blue}
+#+LATEX_HEADER: \RequirePackage{fancyvrb}
+#+LATEX_HEADER: \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\small,formatcom = {\color[rgb]{0.5,0,0}}}
+
+* Tarea de Clase: Explorando TensorFlow Playground
+
+** Objetivo de la Tarea:
+Utilizar [[https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.19905&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false][TensorFlow Playground]], un simulador de redes neuronales, para
+entrenar clasificadores binarios, ajustar la arquitectura del modelo y
+sus hiperparámetros, y obtener una comprensión intuitiva del
+funcionamiento de las redes neuronales y el impacto de sus
+hiperparámetros.
+
+** Descripción de la Tarea:
+Esta tarea está diseñada para permitirte experimentar directamente con
+redes neuronales sin necesidad de escribir código. A través de
+TensorFlow Playground, explorarás cómo diferentes configuraciones
+afectan el aprendizaje y la clasificación en redes neuronales.
+
+*** Instrucciones:
+
+1. **Entrenamiento de la Red Neuronal Predeterminada:**
+   - Accede a TensorFlow Playground y entrena la red neuronal
+     predeterminada haciendo clic en el botón "Ejecutar". Observa cómo
+     la red encuentra una solución para la tarea de clasificación.
+   - Examina los patrones aprendidos por las neuronas en cada capa
+     oculta. Reflexiona sobre cómo las capas combinan patrones simples
+     para formar patrones más complejos.
+
+2. **Exploración de Funciones de Activación:**
+   - Cambia la función de activación de "tanh" a "ReLU" y entrena la
+     red nuevamente. Nota la diferencia en el tiempo de entrenamiento
+     y la forma de los límites de decisión.
+
+3. **Análisis del Riesgo de Mínimos Locales:**
+   - Modifica la arquitectura de la red para tener una sola capa
+     oculta con tres neuronas. Entrénala varias veces, restableciendo
+     los pesos con el botón "Reiniciar". Documenta la variabilidad en
+     el tiempo de entrenamiento y la ocurrencia de mínimos locales.
+
+4. **Redes Neuronales Demasiado Pequeñas:**
+   - Reduce el número de neuronas a dos y evalúa la capacidad de la
+     red para encontrar una solución adecuada. Discute los casos de
+     subajuste.
+
+5. **Redes Neuronales Suficientemente Grandes:**
+   - Incrementa el número de neuronas a ocho y entrena la red varias
+     veces. Observa la consistencia en el rendimiento y la
+     velocidad. Reflexiona sobre la teoría de redes neuronales y
+     mínimos locales.
+
+6. **Desafíos de Gradientes Desvanecidos en Redes Profundas:**
+   - Selecciona el conjunto de datos "espiral" y configura la red con
+     cuatro capas ocultas de ocho neuronas cada una. Analiza el
+     impacto en el tiempo de entrenamiento y la incidencia de mesetas.
+
+7. **Experimentación Adicional:**
+   - Dedica aproximadamente una hora a experimentar con diferentes
+     configuraciones de hiperparámetros y arquitecturas. Intenta
+     obtener una comprensión intuitiva de la influencia de cada
+     parámetro en el aprendizaje de la red.
+
+** Entregables:
+- Un informe que incluya:
+   - Tus observaciones y conclusiones para cada uno de los puntos
+     explorados.
+   - Comparaciones entre diferentes funciones de activación y
+     arquitecturas de red.
+   - Reflexiones sobre el desempeño de redes grandes versus redes
+     pequeñas.
+   - Un análisis sobre el problema de los gradientes desvanecidos y
+     cómo afecta el entrenamiento en redes profundas.
+   - Conclusiones generales sobre tu experiencia y aprendizaje en
+     TensorFlow Playground.
+
+** Criterios de Evaluación:
+- Profundidad y detalle en el análisis de cada experimento.
+- Capacidad para conectar observaciones con conceptos teóricos de
+  redes neuronales.
+- Claridad y coherencia en las conclusiones y reflexiones finales.
+
+Esta tarea está diseñada para fortalecer tu comprensión práctica de
+las redes neuronales y prepararte para aplicaciones más avanzadas en
+el campo del aprendizaje automático y la inteligencia artificial.

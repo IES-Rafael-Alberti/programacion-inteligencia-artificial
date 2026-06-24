@@ -1,0 +1,166 @@
+#+TITLE: Guía de Keras para construir redes neuronales.
+#+AUTHOR:
+#+EMAIL:
+#+DATE:
+#+OPTIONS: texht:t toc:nil num:nil -:nil ^:{} ":nil ':nil
+#+OPTIONS: tex:t
+#+LATEX_CLASS: article
+#+LATEX_HEADER:
+#+LANGUAGE: es
+
+#+BEGIN_COMMENT
+#+LATEX_HEADER: \usepackage[AUTO]{babel}
+#+END_COMMENT
+
+#+LATEX_HEADER_EXTRA: \usepackage{mdframed}
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{minted}{\begin{mdframed}}
+#+LATEX_HEADER_EXTRA: \AfterEndEnvironment{minted}{\end{mdframed}}
+
+#+LATEX: \setlength\parindent{10pt}
+#+LATEX_HEADER: \usepackage{parskip}
+
+#+latex_header: \usepackage[utf8]{inputenc} %% For unicode chars
+#+LATEX_HEADER: \usepackage{placeins}
+
+#+LATEX_HEADER: \usepackage[margin=2.50cm]{geometry}
+
+#+LaTeX_HEADER: \usepackage[T1]{fontenc}
+#+LaTeX_HEADER: \usepackage{mathpazo}
+#+LaTeX_HEADER: \linespread{1.05}
+#+LaTeX_HEADER: \usepackage[scaled]{helvet}
+#+LaTeX_HEADER: \usepackage{courier}
+
+#+LaTeX_HEADER: \hypersetup{colorlinks=true,linkcolor=blue}
+#+LATEX_HEADER: \RequirePackage{fancyvrb}
+#+LATEX_HEADER: \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\small,formatcom = {\color[rgb]{0.5,0,0}}}
+
+** Capas en Keras
+
+Keras ofrece una amplia gama de capas que se pueden utilizar para
+construir redes neuronales. A continuación se presentan algunos de los
+tipos de capas más comunes:
+
+ - Capa Dense: Esta es la capa más común en Keras. Cada neurona en
+   esta capa está conectada a todas las neuronas de la capa
+   anterior. La capa Dense se utiliza para aprender patrones complejos
+   en los datos.
+ - Capa Conv2D: Esta capa se utiliza para procesar imágenes y es
+   especialmente útil en la detección de características. La capa
+   Conv2D aprende automáticamente filtros que se aplican a la entrada
+   para extraer características.
+ - Capa LSTM: Esta capa se utiliza para procesar datos secuenciales,
+   como series de tiempo o texto. La capa LSTM utiliza una red
+   recurrente para mantener una memoria a largo plazo de la secuencia
+   de entrada.
+ - Capa Dropout: Esta capa se utiliza para evitar el sobreajuste al
+   apagar aleatoriamente algunas neuronas durante el entrenamiento.
+
+** Neuronas y funciones de activación en Keras
+Las neuronas son la unidad básica de procesamiento en una red
+neuronal. Cada neurona toma varias entradas, las procesa y produce una
+salida. Las funciones de activación se utilizan para determinar la
+salida de una neurona. Keras ofrece una variedad de funciones de
+activación, como:
+
+ - Sigmoide: Una función de activación comúnmente utilizada en capas
+   ocultas. Produce una salida en el rango de 0 a 1.
+ - ReLU: Una función de activación popular en capas ocultas. Produce
+   una salida de 0 si la entrada es negativa y la entrada misma si es
+   positiva.
+ - Softmax: Una función de activación utilizada en la capa de salida
+   de una red neuronal de clasificación. Normaliza las salidas de la
+   capa anterior en una distribución de probabilidad.
+
+** Inicialización de pesos en Keras
+Los pesos de una red neuronal se inicializan en algún valor
+aleatorio. Keras ofrece varias formas de inicializar los pesos, como:
+
+ - Glorot: Esta es la inicialización por defecto en Keras. Es adecuada
+   para capas densas y se basa en la distribución uniforme de los
+   valores de entrada y salida de la capa.
+ - He: Esta inicialización es adecuada para capas que utilizan la
+   función de activación ReLU.
+ - Lecun: Esta inicialización se utiliza para capas que procesan datos
+   secuenciales.
+
+** Optimizadores en Keras
+Un optimizador se utiliza para ajustar los pesos de la red neuronal
+durante el entrenamiento. Keras ofrece varios optimizadores, como:
+
+ - SGD (Descenso de gradiente estocástico): Este es el optimizador más
+   básico y se utiliza comúnmente en la mayoría de las redes
+   neuronales.
+ - Adam: Este optimizador utiliza un algoritmo de gradiente adaptativo
+   y es muy efectivo en el entrenamiento de redes neuronales
+   profundas.
+ - RMSprop: Este optimizador utiliza un promedio móvil ponderado de
+   los gradientes y es muy útil en la minimización de problemas de
+   gradientes explosivos.
+
+** Funciones de pérdida —loss function— en Keras
+La función de pérdida se utiliza para determinar la distancia entre la
+salida de la red y los valores de destino durante el
+entrenamiento. Keras ofrece variasfunciones de pérdida que se pueden
+utilizar en función del problema que se esté abordando. A
+continuación, se presentan algunas de las funciones de pérdida más
+comunes en Keras:
+
+ - mean_squared_error: Esta función de pérdida se utiliza para
+   problemas de regresión y mide el error cuadrático medio entre la
+   salida de la red y los valores de destino.
+ - mean_absolute_error: Similar a mean_squared_error, pero mide el
+   error absoluto medio.
+ - binary_crossentropy: Esta función de pérdida se utiliza para
+   problemas de clasificación binaria y mide la entropía cruzada entre
+   la salida de la red y los valores de destino.
+ - categorical_crossentropy: Similar a binary_crossentropy, pero se
+   utiliza para problemas de clasificación multiclase.
+ - sparse_categorical_crossentropy: Similar a
+   categorical_crossentropy, pero se utiliza cuando los valores de
+   destino son enteros.
+ - hinge: Esta función de pérdida se utiliza para problemas de
+   clasificación binaria con valores de destino -1 y 1.
+
+** Entrenamiento
+Para entrenar una red neuronal en Keras, se utiliza el método.fit() de
+la clase Model. Este método recibe varios parámetros que permiten
+configurar el proceso de entrenamiento:
+
+ - X: Datos de entrada para el entrenamiento.
+ - y: Etiquetas o valores objetivo correspondientes a los datos de
+   entrada.
+ - batch_size: Número de muestras por actualización de gradiente. Si
+   no se especifica, se utiliza un valor predeterminado de 32.
+ - epochs: Número de épocas (iteraciones) de entrenamiento.
+ - verbose: 0, 1 o 2. Controla la cantidad de información que se
+   muestra durante el entrenamiento. 0 indica sin información, 1
+   indica información por época y 2 indica información por lote.
+ - validation_data: Datos de validación que se utilizan para evaluar
+   el rendimiento de la red después de cada época.
+ - shuffle: Si es verdadero, los datos de entrenamiento se barajan en
+   cada época antes de dividirse en lotes para el entrenamiento.
+ - callbacks: Lista de objetos de devolución de llamada que se
+   ejecutan durante el entrenamiento, como por ejemplo la detención
+   anticipada o el registro de métricas adicionales.
+
+Además de estos parámetros, la clase Model también tiene otros métodos
+útiles para el entrenamiento, como:
+
+ - .compile(): Configura la red neuronal para el entrenamiento al
+   especificar la función de pérdida, el optimizador y las métricas de
+   evaluación.
+ - .evaluate(): Evalúa el rendimiento de la red neuronal en un
+   conjunto de datos de prueba.
+ - .predict(): Genera predicciones para un conjunto de datos de
+   entrada.
+
+Una vez que la red neuronal ha sido entrenada, es importante guardarla
+en un archivo para poder reutilizarla posteriormente sin tener que
+volver a entrenarla desde cero. Esto se puede hacer utilizando el
+método .save() de la clase Model.
+
+** Predicción
+Para hacer predicciones utilizando una red neuronal entrenada en
+Keras, se utiliza el método predict() que toma como entrada un
+conjunto de datos de entrada y devuelve las predicciones
+correspondientes.

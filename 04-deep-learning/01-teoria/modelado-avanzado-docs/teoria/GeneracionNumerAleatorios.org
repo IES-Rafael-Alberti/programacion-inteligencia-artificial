@@ -1,0 +1,109 @@
+#+TITLE: Generación de números aleatorios según una distribución de probabilidad
+#+AUTHOR:
+#+EMAIL:
+#+DATE:
+#+OPTIONS: H:3
+#+OPTIONS: texht:t toc:3 num:3 -:nil ^:{} ":nil ':nil
+#+OPTIONS: tex:t
+#+LATEX_CLASS: article
+#+LATEX_HEADER:
+#+LANGUAGE: es
+
+#+BEGIN_COMMENT
+#+LATEX_HEADER: \usepackage[AUTO]{babel}
+#+END_COMMENT
+
+#+LATEX_HEADER_EXTRA: \usepackage{mdframed}
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{minted}{\begin{mdframed}}
+#+LATEX_HEADER_EXTRA: \AfterEndEnvironment{minted}{\end{mdframed}}
+
+#+LATEX: \setlength\parindent{10pt}
+#+LATEX_HEADER: \usepackage{parskip}
+
+#+latex_header: \usepackage[utf8]{inputenc} %% For unicode chars
+#+LATEX_HEADER: \usepackage{placeins}
+
+#+LATEX_HEADER: \usepackage[margin=2.50cm]{geometry}
+
+#+LaTeX_HEADER: \usepackage[T1]{fontenc}
+#+LaTeX_HEADER: \usepackage{mathpazo}
+#+LaTeX_HEADER: \linespread{1.05}
+#+LaTeX_HEADER: \usepackage[scaled]{helvet}
+#+LaTeX_HEADER: \usepackage{courier}
+
+#+LaTeX_HEADER: \hypersetup{colorlinks=true,linkcolor=blue}
+#+LATEX_HEADER: \RequirePackage{fancyvrb}
+#+LATEX_HEADER: \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\small,formatcom = {\color[rgb]{0.5,0,0}}}
+
+* Generación de números aleatorios según una distribución de probabilidad
+** Distribución Gaussiana o Normal
+En Python, puedes generar números aleatorios que sigan una
+distribución normal con una media $\mu$ y una desviación estándar
+$\sigma$ utilizando la función numpy.random.normal() de la biblioteca
+NumPy.
+
+Para generar n números aleatorios que sigan una distribución normal
+con una media mu y una desviación estándar sigma, puedes usar la
+siguiente sintaxis:
+#+begin_src python
+mport numpy as np
+
+mu = 10  # media
+sigma = 2  # desviación estándar
+n = 1000  # número de muestras
+
+# Generar n números aleatorios con distribución normal
+aleatorios = np.random.normal(mu, sigma, n)
+#+end_src
+
+** Keras Inicialización de pesos a medida
+En Keras podemos usar una "inicializador" propio para los pesos
+iniciales de una red neuronal (capa a capa). Se hace con una función
+que toma como parámetro la forma del "tensor" de pesos como entrada y
+devuelve un tensor de pesos inicializado.
+
+Ejemplo usando una distribución normal con media 0 y desviación típica
+—estándar— de 0,1.
+#+begin_src python
+from keras import backend as K
+from keras.initializers import Initializer
+import numpy as np
+
+class MyInitializer(Initializer):
+    def __init__(self, mean=0.0, stddev=0.1):
+        self.mean = mean
+        self.stddev = stddev
+
+    def __call__(self, shape, dtype=None):
+        return K.variable(np.random.normal
+                          (self.mean, self.stddev, shape),
+                          dtype=dtype)
+#+end_src
+
+Para usar este inicializador lo haremos así:
+#+begin_src python
+from keras.layers import Dense
+
+model = Sequential()
+model.add(Dense(64, input_dim=100, kernel_initializer=MyInitializer()))
+#+end_src
+
+El ejemplo usa =MyInitializer= para inciar los pesos de una capa
+*Densa* con 64 unidades y 100 entradas.
+
+*Nota*:
+#+Begin_mdframed
+Una capa Dense en Keras es una capa de red neuronal densa o
+completamente conectada. En esta capa, cada neurona recibe entradas de
+todas las neuronas de la capa anterior. La capa Dense se utiliza para
+realizar una operación de multiplicación de matrices entre la entrada
+y los pesos, y luego aplicar una función de activación. La capa Dense
+es la capa más utilizada en la construcción de redes neuronales
+feedforward.
+
+Para agregar una capa Dense en Keras, se debe especificar el número de
+neuronas en la capa y la función de activación que se
+utilizará. También se pueden establecer otros parámetros opcionales,
+como si se va a utilizar un sesgo (bias), la inicialización de pesos,
+la regularización y más.
+#+End_mdframed

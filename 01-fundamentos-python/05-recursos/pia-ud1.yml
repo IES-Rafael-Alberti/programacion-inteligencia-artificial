@@ -1,0 +1,32 @@
+name: pia-ud1
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Núcleo del entorno
+  - python=3.12
+  - pip
+  - ipykernel
+  - jupyterlab
+  - notebook
+
+  # Librerías científicas principales
+  - numpy
+  - pandas
+  - scipy
+
+  # Visualización
+  - matplotlib
+  - seaborn
+
+  # Soporte IA básico
+  - scikit-learn
+
+  # Aceleración opcional (solo CPU)
+  - jax
+  - jaxlib
+
+  # Utilidades
+  - tqdm
+  - typing-extensions
+

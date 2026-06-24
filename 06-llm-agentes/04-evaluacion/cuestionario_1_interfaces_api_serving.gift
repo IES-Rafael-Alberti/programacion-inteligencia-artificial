@@ -1,0 +1,142 @@
+// ============================================================================
+// CUESTIONARIO 1: Interfaces, APIs y Serving de Modelos de IA
+// Módulo: Programación en Inteligencia Artificial (PIA) - Unidad 6
+// ============================================================================
+
+$CATEGORY: UD6_Prog_IA/Cuestionario_1_Interfaces_API_Serving
+
+// ----------------------------------------------------------------------------
+// TEMA 1: GRADIO - INTERFACES WEB RÁPIDAS
+// ----------------------------------------------------------------------------
+
+::[Gradio] Estructura y Propósito::
+¿Cuál es el propósito principal de utilizar la librería "Gradio" en el desarrollo de aplicaciones de Inteligencia Artificial? {
+    =Permitir la creación rápida de demostraciones web interactivas sobre funciones o modelos de Python para visualizarlos y compartirlos de manera sencilla sin programar un frontend completo. #¡Correcto! Gradio abstrae por completo el desarrollo web frontend, permitiendo crear en pocas líneas de Python una interfaz gráfica funcional para interactuar con tus modelos de IA.
+    ~Sustituir a Docker para empaquetar y aislar las dependencias del sistema operativo en el servidor de producción. #Incorrecto. Gradio crea la interfaz visual web, pero no sustituye los contenedores ni aísla dependencias del sistema operativo (rol de Docker).
+    ~Optimizar la velocidad de cálculo matemático y algebraico de las GPUs de alto rendimiento durante el entrenamiento del modelo. #Incorrecto. Gradio no optimiza la ejecución matemática del modelo ni interfiere en el hardware GPU; es una capa estética de interacción de usuario.
+    ~Servir como una base de datos relacional robusta que almacena las consultas de los usuarios con soporte de transacciones ACID. #Incorrecto. Gradio no almacena datos de manera transaccional ni es una base de datos; es una interfaz frontend interactiva web.
+}
+
+::[Gradio] Interface frente a Blocks::
+¿Cuál es la diferencia conceptual de diseño entre instanciar una interfaz con "gr.Interface" y estructurarla mediante "gr.Blocks" en Gradio? {
+    =gr.Interface es rápido y directo para una función simple con entradas y salidas fijas, mientras que gr.Blocks ofrece control absoluto del diseño mediante filas, columnas, pestañas, eventos personalizados y estado. #¡Correcto! gr.Interface es ideal para prototipos rápidos de una sola función. Para diseños web complejos estructurados (con Row, Column, Tab, múltiples eventos y lógica no lineal), se debe usar el gestor de contexto gr.Blocks.
+    ~gr.Interface se ejecuta estrictamente en la nube de Hugging Face y gr.Blocks funciona solo en local sin acceso a internet. #Incorrecto. Ambos componentes funcionan igual de bien en local o desplegados en la nube (como Hugging Face Spaces).
+    ~gr.Interface requiere programar la interfaz visual en JavaScript y gr.Blocks permite programarla completamente en lenguaje C++. #Incorrecto. Ambas opciones se programan 100% en Python, abstrayendo al desarrollador del backend web subyacente.
+    ~gr.Interface solo acepta datos de texto plano y gr.Blocks está diseñado únicamente para el procesamiento interactivo de archivos de audio MP3. #Incorrecto. Ambos componentes admiten una amplísima y idéntica variedad de componentes multimedia de entrada y salida (texto, imagen, vídeo, audio, JSON, dataframe, etc.).
+}
+
+::[Gradio] Diseño con Blocks y Eventos::
+Al diseñar una interfaz con "gr.Blocks", ¿cómo se asocia la pulsación de un botón (`gr.Button`) con la ejecución de la función de IA y la actualización de los componentes web? {
+    =Mediante el método de evento click del botón, especificando la función en "fn", los componentes de origen en "inputs" y los componentes de destino en "outputs". #¡Correcto! En gr.Blocks los componentes se conectan explícitamente por eventos. Por ejemplo, `boton.click(fn\=predict, inputs\=caja_texto, outputs\=caja_salida)` toma el valor de `caja_texto`, lo envía a `predict` y escribe el retorno en `caja_salida`.
+    ~Importando la librería pandas y configurando una variable global compartida que actualiza automáticamente todos los puertos de red. #Incorrecto. pandas no gestiona eventos web ni puertos de red; la conexión en Gradio se realiza declarando los flujos del evento del componente.
+    ~Escribiendo de forma obligatoria un script de base de datos SQL que monitorice los clics físicos del ratón del usuario. #Incorrecto. No se requiere escribir código SQL para la interactividad web estándar de Gradio; las aristas de comunicación se definen en Python en la declaración de Blocks.
+    ~Llamando de forma secuencial a la función predict dentro de un bucle while infinito en el hilo principal de ejecución. #Incorrecto. Un bucle while infinito bloquearía por completo el servidor web e impediría responder peticiones; Gradio se basa en eventos web asíncronos concurrentes.
+}
+
+::[Gradio] Gestión de Estado con gr.State::
+¿Para qué se utiliza el componente "gr.State" al construir interfaces interactivas con Gradio? {
+    =Para persistir y mantener información o el historial de datos a través de múltiples interacciones consecutivas de un mismo usuario con la interfaz web. #¡Correcto! HTTP es un protocolo sin estado. gr.State proporciona una variable de sesión en memoria que retiene la información (por ejemplo, el historial de un chat) para que no se pierda entre clics sucesivos.
+    ~Para apagar o suspender la máquina virtual de cómputo en la nube cuando el usuario deja de usar la web. #Incorrecto. gr.State gestiona estado de variables de software en la aplicación; no controla la suspensión de máquinas físicas o VMs del cloud.
+    ~Para convertir de forma automatizada archivos de texto legibles a imágenes en formato vectorial para diseño gráfico. #Incorrecto. No tiene relación con conversores de imagen, sino con la conservación de variables en la memoria de la sesión web del usuario.
+    ~Para encriptar las contraseñas bancarias de los usuarios utilizando firmas criptográficas militares avanzadas. #Incorrecto. gr.State almacena datos genéricos de sesión, no es una utilidad especializada en cifrado o seguridad militar de claves.
+}
+
+::[Gradio] Streaming con yield::
+¿Cómo se implementa la generación progresiva de respuestas (streaming de tokens) en una interfaz de Gradio, de utilidad para aplicaciones de chat con LLMs? {
+    =Haciendo que la función de predicción sea un generador de Python que devuelve los fragmentos progresivos de texto utilizando la palabra clave "yield" en lugar de "return". #¡Correcto! Cuando la función de backend usa `yield`, Gradio detecta automáticamente que es un generador y va actualizando en tiempo real el componente visual en la web con cada fragmento de texto a medida que se produce.
+    ~Configurando un clúster distribuido de Apache Spark que multiplique por diez la velocidad de conexión a internet del servidor. #Incorrecto. Spark es un motor de procesamiento de datos por lotes en clúster; no influye en la capacidad de streaming de texto en tiempo real en una UI de Gradio.
+    ~Ejecutando un reentrenamiento completo del modelo de lenguaje desde cero cada vez que el modelo emite un nuevo token. #Incorrecto. Reentrenar un LLM tarda horas o días y consume enormes recursos; para hacer streaming simplemente se ejecuta inferencia y se van enviando los tokens generados uno a uno.
+    ~Eliminando todas las variables de la sesión y forzando un reinicio del navegador web del usuario cada cinco segundos. #Incorrecto. Reiniciar el navegador web del usuario arruinaría por completo la experiencia de usuario y cortaría la comunicación de red.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 2: FASTAPI - APIs PROFESIONALES DE PRODUCCIÓN
+// ----------------------------------------------------------------------------
+
+::[FastAPI] Propósito y Comparativa::
+¿Cuándo debería un desarrollador migrar su solución de IA desde una interfaz de Gradio hacia un framework web como FastAPI en un entorno de producción? {
+    =Cuando se necesita exponer el modelo como una API robusta, rápida y concurrente para ser consumida de forma automatizada por otros sistemas de software, requiriendo autenticación, validación de datos fuerte e integración profesional. #¡Correcto! Gradio es excelente para prototipos rápidos e interacción humana visual directa. FastAPI es el estándar industrial en Python para servir APIs de producción con alta velocidad (gracias a Starlette y Pydantic), documentación OpenAPI automática e integraciones de software seguras.
+    ~Cuando la aplicación web de IA requiere exclusivamente de un diseño visual animado y colorido con efectos tridimensionales para exposiciones en pantallas táctiles. #Incorrecto. FastAPI no proporciona ninguna interfaz visual gráfica para el usuario; de hecho, solo expone endpoints JSON de datos. Para interfaces visuales Gradio o Streamlit son los adecuados.
+    ~Cuando se desea ejecutar el código de Python en placas de hardware embebido de juguete sin conexión eléctrica. #Incorrecto. FastAPI se ejecuta en servidores web con alimentación eléctrica; no está diseñado como un sistema operativo para hardware embebido sin energía.
+    ~Cuando la única tarea del proyecto de IA es redactar informes en formato Word utilizando inteligencia artificial. #Incorrecto. Redactar informes es una tarea lógica de los prompts y modelos; el framework web FastAPI sirve para estructurar endpoints web para consumirlos por red, no escribe archivos locales de oficina de forma nativa.
+}
+
+::[FastAPI] Validación con Pydantic::
+¿Qué rol desempeñan los modelos de "Pydantic" (`BaseModel`) en una API de inferencia desarrollada con FastAPI? {
+    =Definir y forzar un contrato estricto de datos para las peticiones de entrada y respuestas de salida, validando tipos de datos y restricciones antes de ejecutar la lógica de la API. #¡Correcto! Pydantic valida que los datos que llegan a la API (en formato JSON) cumplan con los tipos esperados (p. ej. floats, strings) y restricciones (p. ej. valores numéricos en cierto rango), rechazando de forma automática peticiones inválidas con códigos de error 422 descriptivos.
+    ~Traducir el código de Python del backend de la API a sentencias SQL de bases de datos relacionales tradicionales de forma transparente. #Incorrecto. Eso es labor de un ORM (como SQLAlchemy o SQLModel), mientras que Pydantic se encarga estrictamente de la validación y tipado de esquemas de datos en memoria.
+    ~Compilar los modelos de deep learning de PyTorch para que consuman menos memoria RAM en la tarjeta gráfica del servidor. #Incorrecto. Pydantic valida datos estructurados estándar; no tiene relación con optimizaciones matemáticas o compilaciones del grafo de redes neuronales (como TensorRT).
+    ~Actuar como un firewall de red que previene ataques de denegación de servicio (DDoS) bloqueando IPs sospechosas. #Incorrecto. La validación a nivel de aplicación no sustituye las herramientas de seguridad e infraestructura perimetral de red como balanceadores de carga o firewalls.
+}
+
+::[FastAPI] Carga de Modelos y Lifespan::
+Al programar una API de inferencia con FastAPI, ¿por qué es una mala práctica técnica cargar el archivo del modelo (p. ej. un `.pkl` de scikit-learn o pesos de deep learning) dentro de la función de endpoint de predicción? {
+    =Porque el modelo se volvería a leer del disco a memoria RAM en cada petición recibida, lo cual es inmensamente ineficiente y provocaría latencias altísimas en producción. #¡Correcto! Cargar el modelo en cada llamada colapsa el servidor. La práctica correcta es cargar el modelo una sola vez al arrancar la API (usando eventos de lifespan como `@app.on_event("startup")` o el manejador `lifespan`) y mantenerlo en memoria RAM para predicciones instantáneas en los endpoints.
+    ~Porque FastAPI prohíbe de forma estricta la lectura de archivos locales si el desarrollador no ha pagado la suscripción anual del framework. #Incorrecto. FastAPI es software libre, de código abierto y 100% gratuito; no tiene bloqueos de lectura ni licencias de pago.
+    ~Porque cargar archivos `.pkl` en los endpoints provoca que el sistema operativo borre automáticamente todo el código fuente del proyecto de IA. #Incorrecto. Es un error de rendimiento y latencia, pero el sistema operativo nunca borrará tus archivos de código fuente por fallos de programación.
+    ~Porque FastAPI no es compatible con scikit-learn y obliga a usar únicamente bases de datos Access para almacenar modelos. #Incorrecto. FastAPI es totalmente compatible con scikit-learn o cualquier biblioteca de Python. No se limita en absoluto a Microsoft Access; de hecho, casi no se usa Access en entornos modernos de IA cloud.
+}
+
+::[FastAPI] Documentación Automática::
+¿Qué características singulares proporciona FastAPI en relación a la documentación de los endpoints de la API web creados por el desarrollador? {
+    =Genera de forma automática documentación interactiva, auto-actualizada y visual en las rutas "/docs" (Swagger UI) y "/redoc" (ReDoc) basándose en los esquemas de Pydantic. #¡Correcto! Esta es una de las grandes ventajas de FastAPI. Al declarar tus tipos e inputs con Pydantic, el framework genera de inmediato especificaciones OpenAPI interactivas donde puedes probar la API directamente en el navegador.
+    ~Redacta y publica de manera automática un libro de texto de 500 páginas sobre inteligencia artificial en la tienda Amazon. #Incorrecto. Genera documentación técnica e interactiva de los endpoints web en formato digital Swagger/ReDoc, no escribe libros de texto impresos de IA en tiendas.
+    ~Obliga al desarrollador a documentar manualmente cada línea de código escribiendo cartas impresas a las oficinas de soporte. #Incorrecto. Todo el proceso es automatizado y en tiempo real a partir del código de Python de la API, eliminando la sobrecarga documental manual para el programador.
+    ~Crea de forma mágica vídeos interactivos en YouTube explicando cómo funciona cada botón y endpoint de la API al usuario. #Incorrecto. Genera interfaces web interactivas de especificación técnica, no tiene herramientas de edición de vídeo ni publica en canales multimedia.
+}
+
+::[FastAPI] WebSockets y Streaming::
+Para servir respuestas progresivas (token por token) generadas por modelos de lenguaje en una API robusta, ¿qué recurso de FastAPI permite mantener un canal de comunicación bidireccional y persistente abierto con el cliente? {
+    =WebSockets mediante la declaración del decorador "@app.websocket" y la gestión asíncrona de conexión y envío con "await ws.send_text()". #¡Correcto! Los endpoints HTTP normales cierran la conexión al responder. Las conexiones WebSocket permiten mantener un canal abierto y continuo de baja latencia donde el servidor FastAPI puede enviar tokens de texto al vuelo en tiempo real a medida que el LLM local o remoto los genera.
+    ~Configurando un script secuencial con hilos físicos ejecutado en un disquete local. #Incorrecto. Los WebSockets son protocolos lógicos web de comunicación por red TCP; no guardan relación con hardware físico antiguo de almacenamiento (disquetes).
+    ~El uso estricto de consultas SQL embebidas dentro de bucles infinitos en bases de datos locales MySQL. #Incorrecto. Realizar consultas continuas SQL (polling) en base de datos para simular streaming saturaría innecesariamente la base de datos y no es una comunicación asíncrona basada en WebSockets.
+    ~La instalación del sistema de base de datos Access configurado en modo compartido por correo electrónico. #Incorrecto. No tiene que ver con Access ni compartición de correos; WebSockets es una tecnología de comunicación cliente-servidor nativa y en tiempo real sobre la web.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 3: OLLAMA Y MLFLOW
+// ----------------------------------------------------------------------------
+
+::[Ollama] Propósito en Entorno Educativo::
+¿Cuál es la principal ventaja de utilizar "Ollama" para ejecutar modelos de lenguaje (LLMs) en el aula en comparación con el consumo de APIs comerciales de pago? {
+    =Permite ejecutar e inferir modelos de lenguaje de gran calidad (como Llama o Mistral) de forma totalmente gratuita y local en los ordenadores de los alumnos sin depender de claves API ni cuotas de facturación cloud. #¡Correcto! Ollama simplifica enormemente el serving local. Proporciona una API compatible con OpenAI que corre localmente, permitiendo realizar prácticas con LLMs, embeddings y RAG de forma totalmente gratuita, independiente de internet y privada.
+    ~Garantiza que el modelo de lenguaje tenga acceso inmediato a todas las bases de datos bancarias secretas del mundo de forma automática. #Incorrecto. Ejecutar localmente modelos abiertos no otorga accesos mágicos a datos privados o bancarios protegidos del exterior.
+    ~Permite que modelos de inteligencia artificial de última generación funcionen en ordenadores antiguos apagados sin electricidad. #Incorrecto. Toda computación de red neuronal consume recursos físicos y exige energía eléctrica de red o batería para el procesamiento en CPU o GPU.
+    ~Sustituye por completo el uso del lenguaje de programación Python al automatizar la escritura de los programas con comandos de voz. #Incorrecto. Aunque puedes integrar Ollama con asistentes de voz, no sustituye a Python; de hecho, programarías tus scripts en Python para conectarte a la API local de Ollama.
+}
+
+::[Ollama] Comandos Básicos::
+Si un alumno necesita descargar y arrancar localmente el modelo "Mistral" de 7 mil millones de parámetros mediante la interfaz de comandos de Ollama, ¿qué instrucción exacta debe ejecutar en el terminal? {
+    =ollama run mistral #¡Correcto! El comando `ollama run <nombre_modelo>` se encarga de todo: si el modelo no está descargado localmente, se conecta al registro de Ollama, descarga los pesos eficientemente y abre una consola interactiva para chatear con él de forma local.
+    ~ollama install mistral-7b-full-weights-uncompressed #Incorrecto. Ese comando no existe en la sintaxis de Ollama; además, Ollama descarga formatos cuantizados optimizados automáticamente sin requerir el sufijo "full-weights-uncompressed".
+    ~python -m ollama --download-model=mistral --gpu-enable #Incorrecto. Ollama es un servicio ejecutable en el terminal de sistema (escrito en Go) y no se invoca como un módulo de Python de esa forma, aunque dispone de librerías Python asociadas para peticiones.
+    ~docker-compose pull ollama-mistral-database-system #Incorrecto. Aunque puedes correr Ollama en Docker, el comando directo y nativo es sumamente simple y provisto directamente por el binario de Ollama (`ollama run`).
+}
+
+::[MLflow] Carga de Modelos Registrados::
+Al construir una API de predicción en FastAPI para un entorno corporativo, ¿cómo facilita "MLflow" la transición entre versiones del modelo entrenadas por el equipo científico de datos y el servicio de producción? {
+    =Permite cargar el modelo de forma dinámica desde el Model Registry utilizando URI estándar de producción como "models:/NombreModelo/Production", independizando el código de la API de la ruta de archivos específica. #¡Correcto! Esto es clave para MLOps. En lugar de escribir a mano una ruta de archivo fija (como `/datos/modelov3.pkl`), la API de FastAPI carga el modelo llamando al registro central. Si el equipo científico promueve un nuevo modelo a "Production" en MLflow, la API cargará la versión actualizada de forma dinámica al arrancar sin modificar una línea de código.
+    ~MLflow traduce automáticamente el modelo a un archivo ejecutable `.exe` que funciona en consolas de videojuegos antiguas. #Incorrecto. MLflow no compila modelos a formatos de videoconsolas; gestiona su ciclo de vida y metadatos de experimentación y empaquetamiento a nivel analítico y de servidores de inferencia.
+    ~Borra de forma aleatoria la base de datos de producción cada vez que un modelo nuevo tiene peor precisión que el anterior. #Incorrecto. MLflow registra métricas e historias, pero nunca borrará de forma destructiva tus bases de datos operacionales de producción por pérdidas de precisión.
+    ~Obliga a que todos los modelos se reescriban manualmente en hojas de cálculo Excel compartidas en la red corporativa. #Incorrecto. Trabaja con serializaciones de modelos reales (como PyFunc, PyTorch, scikit-learn, ONNX) de forma programática; no requiere reescritura manual en Excel.
+}
+
+::[MLflow] Integración en el Ciclo de Vida::
+¿Cuál es la ventaja de integrar el seguimiento de experimentos de "MLflow" en el desarrollo práctico de pipelines de IA con notebooks en clase? {
+    =Permite registrar de forma sistemática y reproducible las métricas de precisión, hiperparámetros de entrenamiento y los artefactos finales del modelo para compararlos en una interfaz visual. #¡Correcto! En lugar de que los alumnos apunten en un papel qué precisión obtuvieron con cada hiperparámetro, añadir unas líneas de MLflow automatiza este registro histórico, guardando código, parámetros y resultados en una base estructurada consultable desde una interfaz web.
+    ~Elimina de forma definitiva la necesidad de que los alumnos hagan exámenes prácticos en clase. #Incorrecto. MLflow es una herramienta técnica de ingeniería de software y MLOps; no altera las directivas de evaluación académica o exámenes del centro educativo.
+    ~Traduce los notebooks de Python a presentaciones de diapositivas interactivas animadas con audio en MP3. #Incorrecto. Para diapositivas existen otras librerías y extensiones de Jupyter; MLflow se enfoca exclusivamente en la trazabilidad experimental y gobierno del modelo.
+    ~Hace que los modelos entrenados por los alumnos jueguen de forma competitiva al ajedrez entre sí. #Incorrecto. A no ser que los alumnos entrenen específicamente modelos de ajedrez, MLflow registra métricas genéricas de aprendizaje automático y no incluye tableros de juego interactivos.
+}
+
+// ----------------------------------------------------------------------------
+// PREGUNTA EXTRA DE INVESTIGACIÓN
+// ----------------------------------------------------------------------------
+
+::[INVESTIGACIÓN] Model Context Protocol::
+¿En qué consiste el estándar abierto "Model Context Protocol" (MCP) en el desarrollo moderno de sistemas con Inteligencia Artificial? {
+    =Es un protocolo estándar que permite conectar de forma segura y unificada a los modelos de lenguaje (LLMs) con herramientas, APIs y orígenes de datos locales o en la nube (como bases de datos SQLite o sistemas de archivos) mediante una arquitectura cliente-servidor. #¡Correcto! El MCP (Model Context Protocol) es un estándar sumamente novedoso y potente que define un canal unificado para que clientes de LLMs consuman recursos locales o remotos (prompts, recursos y herramientas) sin tener que reescribir integraciones a medida para cada base de datos o API.
+    ~Es un algoritmo de compresión de vídeo digital que reduce el tamaño de películas 4K para transmitirlas a través de satélites espaciales. #Incorrecto. MCP no tiene relación con el códec de compresión de vídeo digital ni con la telecomunicación satelital.
+    ~Es una ley de propiedad intelectual europea que prohíbe el uso de variables predictivas en proyectos de machine learning. #Incorrecto. Es un protocolo técnico y de software abierto de intercomunicación, no un marco legislativo o prohibitivo de variables.
+    ~Es un lenguaje de programación antiguo que sustituye a Python para programar páginas web interactivas sencillas. #Incorrecto. No sustituye a Python; es un protocolo de transporte de mensajes JSON-RPC que se integra y programa perfectamente en Python u otros lenguajes de desarrollo modernos.
+}

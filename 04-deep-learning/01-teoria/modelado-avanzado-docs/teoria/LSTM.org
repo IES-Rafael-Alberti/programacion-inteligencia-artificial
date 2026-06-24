@@ -1,0 +1,738 @@
+#+TITLE:
+#+AUTHOR:
+#+EMAIL:
+#+DATE:
+#+OPTIONS: texht:t toc:3 num:3 -:nil ^:{} ":nil ':nil
+#+OPTIONS: tex:t
+#+LATEX_CLASS: article
+#+LATEX_HEADER:
+#+LANGUAGE: es
+
+#+BEGIN_COMMENT
+#+LATEX_HEADER: \usepackage[AUTO]{babel}
+#+END_COMMENT
+
+#+LATEX_HEADER_EXTRA: \usepackage{mdframed}
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{minted}{\begin{mdframed}}
+#+LATEX_HEADER_EXTRA: \AfterEndEnvironment{minted}{\end{mdframed}}
+
+#+LATEX: \setlength\parindent{10pt}
+#+LATEX_HEADER: \usepackage{parskip}
+
+#+latex_header: \usepackage[utf8]{inputenc} %% For unicode chars
+#+LATEX_HEADER: \usepackage{placeins}
+
+#+LATEX_HEADER: \usepackage[margin=2.50cm]{geometry}
+
+#+LaTeX_HEADER: \usepackage[T1]{fontenc}
+#+LaTeX_HEADER: \usepackage{mathpazo}
+#+LaTeX_HEADER: \linespread{1.05}
+#+LaTeX_HEADER: \usepackage[scaled]{helvet}
+#+LaTeX_HEADER: \usepackage{courier}
+
+#+LaTeX_HEADER: \hypersetup{colorlinks=true,linkcolor=blue}
+#+LATEX_HEADER: \RequirePackage{fancyvrb}
+#+LATEX_HEADER: \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\small,formatcom = {\color[rgb]{0.5,0,0}}}
+
+
+* Introducción a las series temporales y el aprendizaje profundo
+Las series temporales son una secuencia de datos que se han
+recolectado a lo largo del tiempo. Estos datos pueden ser medidas de
+temperatura, precios de acciones, número de ventas, o cualquier otro
+tipo de dato que se recolecte en intervalos de tiempo regulares. Las
+series temporales son diferentes a otros tipos de datos porque su
+orden y tiempo son esenciales para el análisis. El objetivo del
+análisis de series temporales es encontrar patrones y tendencias en
+los datos que puedan ser utilizados para hacer predicciones precisas
+sobre el futuro.
+
+En los últimos años, el aprendizaje profundo ha revolucionado la forma
+en que se analizan las series temporales. Las redes neuronales
+recurrentes (RNN) son una arquitectura de aprendizaje profundo que se
+utiliza ampliamente en el análisis de series temporales. Las RNN son
+capaces de procesar datos secuenciales y utilizar la información
+anterior para influir en las predicciones futuras.
+
+Una de las variantes más populares de las RNN son las redes LSTM (Long
+Short-Term Memory), que se han utilizado con éxito en el análisis de
+series de tiempo debido a su capacidad para aprender a largo plazo y
+mantener la información relevante a lo largo del tiempo.
+
+En el siguiente apartado, nos centraremos en las redes LSTM y cómo se
+pueden aplicar al análisis de la calidad del aire en series
+temporales.
+
+===================
+
+El análisis de series de tiempo es una técnica estadística que se
+ocupa de datos que se recopilan a intervalos regulares en el
+tiempo. El objetivo del análisis de series de tiempo es extraer ideas
+y patrones significativos de los datos, que se pueden utilizar para la
+toma de decisiones y la predicción.
+
+El aprendizaje profundo es un subconjunto del aprendizaje automático
+que utiliza redes neuronales con múltiples capas para aprender
+relaciones complejas entre entradas y salidas. Estas redes neuronales
+son capaces de aprender y modelar relaciones no lineales, lo que las
+hace adecuadas para el análisis de series de tiempo.
+
+Un tipo popular de red neuronal utilizado para el análisis de series
+de tiempo es la red neuronal recurrente (RNN). Las RNN están diseñadas
+para manejar datos secuenciales y pueden tener en cuenta las
+dependencias temporales entre las observaciones. Las redes LSTM
+(Memoria a corto y largo plazo) son un tipo específico de RNN que han
+demostrado ser especialmente efectivas en la captura de dependencias a
+largo plazo en los datos de series de tiempo.
+
+Al combinar el poder del aprendizaje profundo con las ideas
+proporcionadas por el análisis de series de tiempo, es posible
+construir modelos potentes que pueden predecir con precisión las
+tendencias futuras y tomar decisiones informadas basadas en datos
+históricos.
+
+
+** LSTM
+Una de las variantes más eficientes y populares de las redes
+neuronales recurrentes (RNN) son las redes LSTM (Long Short-Term
+Memory). Las LSTM fueron introducidas para resolver algunos de los
+desafíos de las RNN estándar, como la dificultad de aprender
+dependencias a largo plazo en datos secuenciales.
+
+Las redes LSTM cuentan con una arquitectura única que incluye
+compuertas de entrada, olvido y salida, así como un estado de celda
+que permite almacenar información relevante durante periodos
+prolongados. Este diseño avanzado les otorga la capacidad de aprender
+patrones complejos en datos de series temporales, lo que las hace
+ideales para aplicaciones como el procesamiento de lenguaje natural,
+la predicción financiera y el análisis de secuencias en general.
+
+A pesar de que las LSTM tienen un número mayor de parámetros en
+comparación con las GRU, su capacidad para manejar dependencias más
+largas y su flexibilidad han hecho que sean ampliamente adoptadas en
+una variedad de tareas donde la precisión es crítica.
+
+En el siguiente apartado, nos centraremos en las redes LSTM y cómo se
+pueden aplicar al análisis de la calidad del aire en series
+temporales.
+*** Arquitectura redes LSTM
+
+Las redes LSTM (Long Short-Term Memory) son un tipo especial de redes
+neuronales recurrentes diseñadas para manejar dependencias a largo
+plazo en datos secuenciales. Su estructura incluye componentes clave
+que trabajan juntos para procesar y almacenar información de manera
+eficiente:
+
+1. **Celdas de memoria**: Son el núcleo de las LSTM y se encargan de
+   almacenar información relevante durante largos periodos de
+   tiempo. Estas celdas permiten que la red decida qué información
+   conservar o descartar.
+
+2. **Puertas**:
+   - **Puerta de entrada**: Controla qué información nueva se almacena
+     en la celda de memoria.
+   - **Puerta de olvido**: Decide qué información existente en la
+     celda debe ser eliminada.
+   - **Puerta de salida**: Determina qué parte de la información
+     almacenada en la celda se utiliza para la salida actual.
+
+3. **Estados**:
+   - **Estado de celda**: Es una línea de flujo que transporta
+     información a lo largo de la red, con interacciones mínimas.
+   - **Estado oculto**: Proporciona información al siguiente paso de
+     tiempo y a la salida.
+
+Estas características hacen que las LSTM sean ideales para tareas como
+procesamiento de lenguaje natural, reconocimiento de voz y predicción
+de series temporales.
+
+*** Funcionamiento red LSTM
+Las redes LSTM (Long Short-Term Memory) funcionan gestionando el flujo
+de información a través de pasos temporales en datos secuenciales. A
+continuación te explico su funcionamiento de manera más clara:
+
+1. **Procesamiento inicial**: En cada paso de tiempo, la LSTM recibe
+   la entrada actual, el estado oculto y el estado de celda del paso
+   anterior.
+
+2. **Puerta de olvido**: Determina si se debe eliminar información del
+   estado de celda. Esto se hace a través de una función sigmoide que
+   evalúa la relevancia de cada elemento del estado anterior.
+
+3. **Puerta de entrada**: Decide qué nueva información se debe agregar
+   al estado de celda. Aplica una función sigmoide para filtrar la
+   entrada y una función tangente hiperbólica para generar valores
+   candidatos.
+
+4. **Actualización del estado de celda**: El estado de celda se
+   actualiza combinando la información conservada de la puerta de
+   olvido y la nueva información de la puerta de entrada.
+
+5. **Puerta de salida**: Utiliza el estado de celda actualizado para
+   calcular el estado oculto que se enviará al siguiente paso temporal
+   y se usará como salida. También utiliza una función sigmoide para
+   filtrar información relevante.
+
+Gracias a esta arquitectura, las redes LSTM son capaces de recordar
+información importante durante largos periodos y descartar datos
+irrelevantes. Esto las hace ideales para tareas como traducción
+automática, análisis de sentimientos y predicción de series
+temporales.
+
+*** Preparación de los datos
+Una preparación adecuada de los datos es esencial para cualquier
+análisis de series temporales. Aquí hay algunos pasos que se pueden
+tomar para preparar los datos de series temporales para el análisis:
+
+- Manejo de datos faltantes: Los datos de series temporales a menudo
+  contienen valores faltantes, que pueden ocurrir debido a varias
+  razones como fallas en el equipo o errores de entrada de datos. Es
+  importante manejar los datos faltantes adecuadamente, ya que puede
+  afectar la precisión del análisis. Los métodos comunes para manejar
+  datos faltantes incluyen la interpolación, la imputación y la
+  eliminación.
+
+- Transformación de datos: Los datos de series temporales pueden
+  necesitar ser transformados para hacerlos estacionarios o para
+  mejorar su normalidad. Las transformaciones de datos comunes
+  incluyen la toma del logaritmo, la raíz cuadrada o la diferencia de
+  los datos.
+
+- Normalización: La normalización es el proceso de escalar los datos a
+  un rango común. Esto se hace a menudo para asegurarse de que todas
+  las variables tengan igual peso en el análisis. Las técnicas de
+  normalización comunes incluyen la normalización mín-máx y la
+  normalización z-score.
+
+- Selección de características: La selección de características es el
+  proceso de seleccionar variables relevantes para el análisis. Esto
+  se puede hacer utilizando conocimiento del dominio o utilizando
+  técnicas estadísticas como el análisis de correlación o el análisis
+  de componentes principales.
+
+*** Creación y entrenamiento de un red LSTM
+Breve guía sobre cómo crear y entrenar una red LSTM para el análisis
+de series temporales:
+
+1. **Configurar la arquitectura de la red**: El primer paso para crear
+   una red LSTM es configurar la arquitectura de la red. Esto implica
+   especificar el número de capas, el número de neuronas en cada capa
+   y el tipo de función de activación a utilizar. La arquitectura de
+   la red dependerá del problema específico que se esté abordando y
+   puede requerir algo de experimentación para encontrar la
+   configuración óptima.
+
+2. **Seleccionar hiperparámetros**: Los hiperparámetros son parámetros
+   que no son aprendidos por el modelo, sino que son establecidos por
+   el usuario antes del entrenamiento. Los hiperparámetros comunes
+   para las redes LSTM incluyen la tasa de aprendizaje, el tamaño del
+   lote (batch size) y el número de épocas. Estos hiperparámetros
+   pueden tener un impacto significativo en el rendimiento del modelo
+   y pueden requerir cierto ajuste para encontrar los valores óptimos.
+
+3. **Preparar los datos**: Antes de entrenar la red LSTM, los datos
+   deben prepararse en un formato que pueda alimentarse en la
+   red. Esto implica dividir los datos en conjuntos de entrenamiento y
+   prueba, normalizar los datos y remodelarlos en un tensor 3D con
+   forma (muestras, pasos de tiempo, características).
+
+4. **Entrenar el modelo**: Una vez que se han especificado la
+   arquitectura de la red y los hiperparámetros, y se han preparado
+   los datos, la red LSTM puede entrenarse usando la retropropagación
+   a través del tiempo (BPTT). Esto implica alimentar los datos de
+   entrenamiento en la red y actualizar los pesos utilizando el
+   descenso de gradiente para minimizar la función de pérdida.
+
+Siguiendo estos pasos, se puede crear y entrenar una red LSTM para el
+análisis de series temporales. Es importante tener en cuenta que la
+construcción de un modelo LSTM efectivo a menudo requiere cierta
+experimentación y ajuste fino para lograr resultados óptimos.
+
+**** Ejemplo en Python con Keras
+Aquí hay un ejemplo de cómo usar una red LSTM para el análisis de
+series de tiempo en Python:
+#+begin_src python
+import numpy as np
+from keras.models import Sequential
+from keras.layers import LSTM, Dense
+
+# preparar datos
+data = np.random.rand(1000, 1) # generar datos aleatorios
+timesteps = 10 # número de pasos de tiempo para usar en la entrada
+X = np.zeros((data.shape[0]-timesteps, timesteps, data.shape[1]))
+y = np.zeros((data.shape[0]-timesteps, data.shape[1]))
+for i in range(timesteps, data.shape[0]):
+    X[i-timesteps] = data[i-timesteps:i]
+    y[i-timesteps] = data[i]
+
+# dividir en conjuntos de entrenamiento y prueba
+train_size = int(X.shape[0] * 0.8)
+X_train, X_test = X[:train_size], X[train_size:]
+y_train, y_test = y[:train_size], y[train_size:]
+
+# crear red LSTM
+model = Sequential()
+model.add(LSTM(16, input_shape=(timesteps, data.shape[1])))
+model.add(Dense(data.shape[1]))
+model.compile(loss='mean_squared_error', optimizer='adam')
+
+# entrenar el modelo
+model.fit(X_train, y_train, epochs=100, batch_size=32)
+
+# evaluar el modelo
+mse = model.evaluate(X_test, y_test)
+print('MSE de prueba:', mse)
+#+end_src
+
+**** Ejemplo en Pytorch
+#+begin_src python
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader, TensorDataset
+
+# Datos ficticios de entrada (batch_size, time_steps, features)
+# 100 muestras, 10 pasos de tiempo, 8 características
+x = torch.randn(100, 10, 8)
+# Salida con 1 característica
+y = torch.randn(100, 1)
+
+dataset = TensorDataset(x, y)
+dataloader = DataLoader(dataset, batch_size=16, shuffle=True)
+
+class LSTMModel(nn.Module):
+   def __init__(self):
+       super().__init__()
+       self.lstm = nn.LSTM(input_size=8, hidden_size=64, batch_first=True)
+       self.fc = nn.Linear(64, 1)
+
+   def forward(self, x):
+       out, _ = self.lstm(x)
+       # Tomamos el último paso de tiempo
+       return self.fc(out[:, -1, :])
+
+model = LSTMModel()
+criterion = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+
+# Entrenamiento
+for epoch in range(10):
+    for batch_x, batch_y in dataloader:
+        optimizer.zero_grad()
+        output = model(batch_x)
+        loss = criterion(output, batch_y)
+        loss.backward()
+        optimizer.step()
+    print(f"Epoch {epoch + 1}, Loss: {loss.item():.4f}")
+#+end_src
+
+
+Los ejemplos crean una red LSTM simple con una capa LSTM y una capa de
+salida densa. La red se entrena con datos generados aleatoriamente y
+se evalúa en un conjunto de prueba. El error cuadrático medio (MSE) se
+calcula para medir el rendimiento del modelo.
+
+Este es solo un ejemplo simple para ilustrar cómo se puede utilizar
+una red LSTM para el análisis de series de tiempo en Python. En la
+práctica, la preparación de datos y la arquitectura del modelo
+tendrían que adaptarse al problema específico que se está abordando.
+
+*** Evaluación del modelo
+Vamos a ver, brevemente, cómo evaluar un modelo LSTM para análisis de
+series de tiempo:
+
+1. **Visualización de resultados**: Una forma de evaluar el
+   rendimiento de un modelo LSTM es visualizar los valores predichos
+   frente a los valores reales. Esto se puede hacer usando un gráfico
+   de líneas, con los valores reales representados en un color y los
+   valores predichos representados en otro color. Esto le permite
+   evaluar visualmente qué tan bien el modelo está capturando las
+   tendencias y patrones en los datos.
+
+2. **Cálculo de métricas de rendimiento**: Otra forma de evaluar el
+   rendimiento de un modelo LSTM es calcular métricas de rendimiento
+   como el error cuadrático medio (MSE) o el error absoluto medio
+   (MAE). Estas métricas proporcionan una medida cuantitativa de qué
+   tan bien el modelo está funcionando, con valores más bajos que
+   indican un mejor rendimiento.
+
+3. **Comparación con modelos de referencia**: También puede ser útil
+   comparar el rendimiento del modelo LSTM con modelos de referencia
+   como un pronóstico ingenuo o un promedio móvil simple. Esto
+   proporciona un punto de referencia para evaluar el rendimiento del
+   modelo LSTM y puede ayudar a determinar si la complejidad adicional
+   del modelo LSTM está justificada.
+
+Siguiendo estos pasos, se puede evaluar el rendimiento de un modelo
+LSTM en el análisis de series de tiempo. Es importante tener en cuenta
+que diferentes problemas pueden requerir diferentes métodos y métricas
+de evaluación, por lo que es importante elegir los métodos adecuados
+para el problema específico que se está abordando.
+
+**** Código para evaluar el modelo
+Ejemplo de cómo evaluar un modelo LSTM para el análisis de series
+temporales en Python, basado en el ejemplo anterior:
+#+begin_src python
+import matplotlib.pyplot as plt
+
+# generar predicciones
+y_pred = model.predict(X_test)
+
+# visualizar resultados
+plt.plot(y_test, label='Actual')
+plt.plot(y_pred, label='Predicted')
+plt.legend()
+plt.show()
+
+# calcular métricas de rendimiento
+mse = np.mean((y_test - y_pred)**2)
+mae = np.mean(np.abs(y_test - y_pred))
+print('MSE:', mse)
+print('MAE:', mae)
+
+# comparar con el modelo base (pronóstico ingenuo)
+y_naive = y_test[:-1]
+mse_naive = np.mean((y_test[1:] - y_naive)**2)
+print('Naive MSE:', mse_naive)
+#+end_src
+
+#+begin_src python
+import matplotlib.pyplot as plt
+import torch
+import numpy as np
+
+# Generar predicciones
+model.eval()  # Cambiar el modelo al modo de evaluación
+with torch.no_grad():
+    # Convertimos las predicciones en formato NumPy
+    y_pred = model(X_test).numpy()
+    # Aseguramos que los datos reales estén en formato NumPy
+    y_test = y_test.numpy()
+
+# Visualizar resultados
+plt.plot(y_test, label='Actual')
+plt.plot(y_pred, label='Predicted')
+plt.legend()
+plt.show()
+
+# Calcular métricas de rendimiento
+mse = np.mean((y_test - y_pred) ** 2)
+mae = np.mean(np.abs(y_test - y_pred))
+print('MSE:', mse)
+print('MAE:', mae)
+
+# Comparar con el modelo base (pronóstico ingenuo)
+y_naive = y_test[:-1]
+mse_naive = np.mean((y_test[1:] - y_naive) ** 2)
+print('Naive MSE:', mse_naive)
+#+end_src
+
+
+El código genera predicciones utilizando el modelo LSTM entrenado y
+visualiza los resultados utilizando un gráfico de líneas. Se calcula
+el error cuadrático medio (MSE) y el error absoluto medio (MAE) para
+proporcionar una medida cuantitativa del rendimiento del modelo. El
+rendimiento del modelo LSTM también se compara con un pronóstico
+ingenuo, que sirve como modelo base.
+
+Es solo un ejemplo simple para ilustrar cómo se puede evaluar un
+modelo LSTM para el análisis de series temporales en Python. En la
+práctica, los métodos y métricas de evaluación deberían adaptarse al
+problema específico que se está abordando.
+
+
+*** Mejorar el modelo
+Cómo mejorar y ajustar un modelo LSTM para el análisis de series temporales:
+
+ - Optimización de hiperparámetros: Una forma de mejorar el
+   rendimiento de un modelo LSTM es optimizar los
+   hiperparámetros. Esto implica probar sistemáticamente diferentes
+   combinaciones de hiperparámetros para encontrar los valores que
+   resulten en el mejor rendimiento. Los hiperparámetros comunes para
+   optimizar incluyen la tasa de aprendizaje, el tamaño del lote y el
+   número de épocas.
+
+ - Explorar diferentes arquitecturas de red: Otra forma de mejorar el
+   rendimiento de un modelo LSTM es explorar diferentes arquitecturas
+   de red. Esto podría implicar agregar o eliminar capas, cambiar el
+   número de neuronas en cada capa o usar diferentes tipos de capas,
+   como capas convolucionales o de abandono.
+
+ - Regularización: La regularización es una técnica utilizada para
+   evitar el sobreajuste mediante la adición de un término de
+   penalización a la función de pérdida. Las técnicas de
+   regularización comunes para las redes LSTM incluyen la
+   regularización L1 y L2, el abandono y la detención temprana.
+
+Siguiendo estos pasos, se puede mejorar y ajustar un modelo LSTM para
+obtener un mejor rendimiento en el análisis de series temporales. Es
+importante tener en cuenta que mejorar un modelo LSTM a menudo
+requiere cierta experimentación y ajuste fino para lograr resultados
+óptimos.
+
+**** Código
+ejemplo de cómo  mejorar un modelo LSTM para el  análisis de series de
+tiempo en Python, basado en los ejemplos anteriores:
+#+begin_src python
+from keras.layers import Dropout
+from keras.callbacks import EarlyStopping
+
+# crear una red LSTM con dropout
+model = Sequential()
+model.add(LSTM(16, input_shape=(timesteps, data.shape[1])))
+model.add(Dropout(0.2))
+model.add(Dense(data.shape[1]))
+model.compile(loss='mean_squared_error', optimizer='adam')
+
+# entrenar el modelo con early stopping
+early_stopping = EarlyStopping(monitor='val_loss', patience=10)
+history = model.fit(X_train, y_train, epochs=100, batch_size=32, validation_split=0.2, callbacks=[early_stopping])
+
+# evaluar el modelo
+mse = model.evaluate(X_test, y_test)
+print('Test MSE:', mse)
+#+end_src
+
+Creamos una red LSTM con una capa de dropout para prevenir el
+sobreajuste. La red se entrena usando early stopping para detener el
+entrenamiento cuando la pérdida de validación deja de mejorar. El
+rendimiento del modelo LSTM mejorado se evalúa en el conjunto de
+prueba y se compara con los resultados anteriores.
+
+Este es solo un ejemplo simple para ilustrar cómo se puede mejorar un
+modelo LSTM para el análisis de series de tiempo en Python. En la
+práctica, mejorar un modelo LSTM a menudo requiere experimentación y
+ajustes finos para lograr resultados óptimos.
+
+*** Siguientes pasos
+Aquí hay una breve guía sobre cómo sacar conclusiones e identificar
+los próximos pasos después de construir y evaluar un modelo LSTM para
+el análisis de series temporales:
+
+1. **Resumir las conclusiones clave**: Después de construir y evaluar
+   un modelo LSTM, es importante resumir las conclusiones clave y las
+   ideas obtenidas del análisis. Esto podría incluir un resumen del
+   rendimiento del modelo, cualquier patrón o tendencia interesante
+   identificada en los datos y cualquier limitación o desafío
+   encontrado durante el análisis.
+
+2. **Identificar áreas para una exploración adicional**: La
+   construcción de un modelo LSTM para el análisis de series
+   temporales a menudo plantea nuevas preguntas y áreas para una
+   exploración adicional. Identifique estas áreas y sugiera posibles
+   próximos pasos para un análisis adicional. Esto podría incluir la
+   exploración de diferentes fuentes de datos, la prueba de diferentes
+   arquitecturas de modelo o la aplicación del modelo a nuevos
+   problemas o dominios.
+
+3. **Comunicar los resultados**: Finalmente, es importante comunicar
+   efectivamente los resultados del análisis a las partes
+   interesadas. Esto podría implicar la creación de visualizaciones o
+   informes para resumir las conclusiones clave e ideas, y presentar
+   los resultados de manera clara y concisa.
+
+Siguiendo estos pasos, se pueden sacar conclusiones del análisis e
+identificar los próximos pasos para una exploración adicional o la
+aplicación del modelo LSTM.
+´
+
+
+dropout 1
+Dropout es una técnica de regularización utilizada para prevenir el
+sobreajuste en redes neuronales, incluyendo las redes LSTM. Durante el
+entrenamiento, el dropout "elimina" o desactiva de manera aleatoria
+una proporción de neuronas en una capa, lo que significa que su
+contribución al avance y retroceso temporalmente se elimina. Esto
+tiene el efecto de reducir la capacidad de la red y alentarla a
+aprender representaciones más robustas de los datos.
+
+En una red LSTM, el dropout se puede aplicar a las entradas, salidas o
+conexiones recurrentes de la capa LSTM. Aplicar dropout a las entradas
+y salidas se puede hacer utilizando la capa Dropout estándar en la
+mayoría de los marcos de aprendizaje profundo. Aplicar dropout a las
+conexiones recurrentes requiere el uso de una implementación
+especializada de la capa LSTM que admite dropout recurrente.
+
+El Dropout es una técnica poderosa para mejorar el rendimiento de las
+redes LSTM y prevenir el sobreajuste. Sin embargo, es importante
+ajustar cuidadosamente la tasa de dropout para equilibrar el
+compromiso entre la capacidad del modelo y la generalización.
+
+
+
+** GRU
+
+
+Una de las variantes más eficientes y populares de las redes neuronales recurrentes (RNN) son las redes GRU (Gated Recurrent Unit). Las GRU fueron introducidas como una alternativa más simple a las redes LSTM, pero manteniendo muchas de sus ventajas, como la capacidad para aprender dependencias a largo plazo en datos secuenciales.
+
+Las redes GRU simplifican la arquitectura de las LSTM combinando las compuertas de entrada y olvido en una sola compuerta de actualización, y eliminando el estado de celda separado. Esto reduce la cantidad de parámetros del modelo, lo que puede traducirse en tiempos de entrenamiento más cortos y un rendimiento comparable, e incluso superior, en ciertos conjuntos de datos.
+
+Gracias a su diseño más compacto, las redes GRU han demostrado ser especialmente útiles en situaciones donde se dispone de menos datos o cuando el tiempo de entrenamiento es crítico. También son ampliamente utilizadas en tareas de procesamiento de lenguaje natural, series temporales financieras, y análisis de secuencias en general.
+
+
+
+*** Estructura y función de las redes GRU
+Las GRU son una variante simplificada de las LSTM que también están diseñadas para manejar dependencias a largo plazo en datos secuenciales. Su estructura incluye:
+
+1. **Puertas**:
+   - **Puerta de actualización**: Combina las funciones de las puertas de entrada y olvido de las LSTM. Decide cuánto de la información pasada debe mantenerse y cuánto de la nueva información debe incorporarse.
+   - **Puerta de reinicio**: Controla cuánto de la información pasada se olvida antes de calcular el nuevo estado.
+
+2. **Estado oculto**:
+   - En las GRU, no hay un estado de celda separado como en las LSTM. En su lugar, el estado oculto actúa como el único portador de información a lo largo de los pasos temporales.
+
+Esta simplificación reduce el número de parámetros en comparación con las LSTM, lo que puede hacer que las GRU sean más rápidas de entrenar y menos propensas al sobreajuste en ciertos casos.
+
+---
+*** Funcionamiento de las redes GRU
+El flujo de información en una GRU se gestiona de la siguiente manera:
+
+1. **Procesamiento inicial**: En cada paso de tiempo, la GRU recibe la entrada actual y el estado oculto del paso anterior.
+
+2. **Cálculo de la puerta de actualización**:
+   - La puerta de actualización utiliza una función sigmoide para determinar cuánto de la información pasada debe mantenerse y cuánto de la nueva información debe incorporarse.
+
+3. **Cálculo de la puerta de reinicio**:
+   - La puerta de reinicio decide cuánto de la información pasada debe olvidarse antes de calcular el nuevo estado. Esto se hace aplicando una función sigmoide.
+
+4. **Cálculo del estado candidato**:
+   - Se genera un estado candidato utilizando la entrada actual y el estado oculto modificado por la puerta de reinicio. Esto se realiza mediante una función tangente hiperbólica.
+
+5. **Actualización del estado oculto**:
+   - El estado oculto final se calcula como una combinación ponderada del estado anterior y el estado candidato, utilizando los valores de la puerta de actualización.
+
+Gracias a esta arquitectura más simple, las GRU son eficaces para tareas como procesamiento de lenguaje natural, reconocimiento de voz y predicción de series temporales, al igual que las LSTM, pero con menor complejidad computacional.
+
+En el siguiente apartado, nos centraremos en las redes GRU y cómo se pueden aplicar al análisis de la calidad del aire en series temporales.
+
+---
+
+*** Preparación de los datos
+La preparación de los datos para una red GRU es similar a la de una red LSTM. Los pasos clave incluyen:
+
+- **Manejo de datos faltantes**: Como en otros modelos de series temporales, es crucial tratar los valores perdidos, utilizando métodos como interpolación, imputación o eliminación de registros, para evitar sesgos o errores en el aprendizaje del modelo.
+
+- **Transformación de datos**: Las transformaciones como el logaritmo, la raíz cuadrada o la diferenciación pueden ser necesarias para estabilizar la varianza o hacer los datos más estacionarios, lo cual es beneficioso para el modelado.
+
+- **Normalización**: Escalar los datos asegura que las diferentes variables tengan igual influencia en el modelo. Las técnicas comunes son la normalización min-max y la estandarización z-score.
+
+- **Selección de características**: Es útil seleccionar variables relevantes para reducir la complejidad del modelo y mejorar el rendimiento. Esto puede hacerse con análisis estadístico o conocimiento del dominio.
+
+*** Creación y entrenamiento de una red GRU
+Guía básica para implementar y entrenar una red GRU:
+
+1. **Diseñar la arquitectura**: Se define la estructura de la red, el número de capas GRU, neuronas por capa, funciones de activación y capas adicionales. Las GRU suelen requerir menos parámetros que las LSTM, lo que permite arquitecturas más ligeras.
+
+2. **Elegir hiperparámetros**: Los parámetros como tasa de aprendizaje, tamaño del batch y número de épocas afectan al rendimiento del modelo. Es común usar técnicas como búsqueda en cuadrícula o validación cruzada para ajustarlos.
+
+3. **Preparar los datos**: Los datos se deben convertir en tensores tridimensionales (muestras, pasos temporales, características). Además, se deben dividir en conjuntos de entrenamiento y prueba.
+
+4. **Entrenar el modelo**: Con los datos listos y la arquitectura definida, se entrena la red usando descenso de gradiente y retropropagación a través del tiempo.
+
+*** Ejemplo en Python con Keras
+#+begin_src python
+import numpy as np
+from keras.models import Sequential
+from keras.layers import GRU, Dense
+
+# preparar datos
+data = np.random.rand(1000, 1)
+timesteps = 10
+X = np.zeros((data.shape[0]-timesteps, timesteps, data.shape[1]))
+y = np.zeros((data.shape[0]-timesteps, data.shape[1]))
+for i in range(timesteps, data.shape[0]):
+    X[i-timesteps] = data[i-timesteps:i]
+    y[i-timesteps] = data[i]
+
+# dividir en entrenamiento y prueba
+train_size = int(X.shape[0] * 0.8)
+X_train, X_test = X[:train_size], X[train_size:]
+y_train, y_test = y[:train_size], y[train_size:]
+
+# crear modelo GRU
+model = Sequential()
+model.add(GRU(16, input_shape=(timesteps, data.shape[1])))
+model.add(Dense(data.shape[1]))
+model.compile(loss='mean_squared_error', optimizer='adam')
+
+# entrenar modelo
+model.fit(X_train, y_train, epochs=100, batch_size=32)
+#+end_src
+
+*** Ejemplo en PyTorch
+#+begin_src python
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader, TensorDataset
+
+x = torch.randn(100, 10, 8)
+y = torch.randn(100, 1)
+
+dataset = TensorDataset(x, y)
+dataloader = DataLoader(dataset, batch_size=16, shuffle=True)
+
+class GRUModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.gru = nn.GRU(input_size=8, hidden_size=64, batch_first=True)
+        self.fc = nn.Linear(64, 1)
+
+    def forward(self, x):
+        out, _ = self.gru(x)
+        return self.fc(out[:, -1, :])
+
+model = GRUModel()
+criterion = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+
+for epoch in range(10):
+    for batch_x, batch_y in dataloader:
+        optimizer.zero_grad()
+        output = model(batch_x)
+        loss = criterion(output, batch_y)
+        loss.backward()
+        optimizer.step()
+    print(f"Epoch {epoch + 1}, Loss: {loss.item():.4f}")
+#+end_src
+
+*** Evaluación del modelo
+Se evalúa el modelo GRU mediante:
+
+1. **Visualización de resultados**: Comparar las predicciones del modelo con los valores reales mediante gráficos.
+
+2. **Métricas de rendimiento**: Cálculo de métricas como MSE y MAE para cuantificar el rendimiento.
+
+3. **Comparación con modelos base**: Comparar el rendimiento del modelo GRU con modelos sencillos como promedio móvil o pronóstico ingenuo.
+
+*** Mejorar el modelo
+Algunas estrategias para optimizar un modelo GRU incluyen:
+
+- **Tuning de hiperparámetros**: Ajustar número de unidades GRU, tasa de aprendizaje, número de épocas, etc.
+
+- **Regularización**: Uso de dropout para prevenir el sobreajuste.
+
+- **Arquitecturas alternativas**: Experimentar con redes GRU bidireccionales o combinarlas con otras capas como convolucionales o de atención.
+
+*** Código con mejoras
+#+begin_src python
+from keras.layers import Dropout
+from keras.callbacks import EarlyStopping
+
+model = Sequential()
+model.add(GRU(16, input_shape=(timesteps, data.shape[1])))
+model.add(Dropout(0.2))
+model.add(Dense(data.shape[1]))
+model.compile(loss='mean_squared_error', optimizer='adam')
+
+early_stopping = EarlyStopping(monitor='val_loss', patience=10)
+history = model.fit(X_train, y_train, epochs=100, batch_size=32, validation_split=0.2, callbacks=[early_stopping])
+#+end_src
+
+*** Siguientes pasos
+Después de implementar una red GRU:
+
+1. **Extraer conclusiones**: Analizar los resultados y rendimiento del modelo.
+
+2. **Identificar mejoras futuras**: Evaluar posibles ajustes al modelo, nuevas fuentes de datos o tareas relacionadas.
+
+3. **Comunicar resultados**: Preparar visualizaciones e informes claros para compartir con otros equipos o partes interesadas.
+
+---

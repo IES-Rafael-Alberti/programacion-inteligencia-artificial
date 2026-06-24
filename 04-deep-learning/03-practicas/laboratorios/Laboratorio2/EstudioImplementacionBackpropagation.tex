@@ -1,0 +1,82 @@
+% Created 2023-02-13 lun 17:29
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+
+\usepackage{parskip}
+\usepackage[utf8]{inputenc} %% For unicode chars
+\usepackage{placeins}
+\usepackage[margin=2.50cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\linespread{1.05}
+\usepackage[scaled]{helvet}
+\usepackage{courier}
+\hypersetup{colorlinks=true,linkcolor=blue}
+\RequirePackage{fancyvrb}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\small,formatcom = {\color[rgb]{0.5,0,0}}}
+\usepackage{mdframed}
+\BeforeBeginEnvironment{minted}{\begin{mdframed}}
+\AfterEndEnvironment{minted}{\end{mdframed}}
+\date{}
+\title{Redes Neuronales: Backpropagation}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={Redes Neuronales: Backpropagation},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.6)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\maketitle
+\setlength\parindent{10pt}
+
+
+\section*{Estudio de la implementación de Backpropagation}
+\label{sec:org31f8a86}
+
+Comprender el algoritmo: Es importante comprender el funcionamiento
+básico del algoritmo de Backpropagation antes de compararlo con el
+código. Esto incluye cómo se realiza la propagación hacia atrás y cómo
+se ajustan los pesos en la red neuronal.
+
+Estudia la implementación en Python del algoritmo de Backprogagation y
+analiza los siguientes puntos:
+
+
+\subsection*{Tareas}
+\label{sec:org45244c6}
+\begin{itemize}
+\item \textbf{Correspondencia con el código}. \textbf{Identifica} los pasos del
+algoritmo en el código y asegúrate de que \textbf{el código refleje
+correctamente el algoritmo} y que se haya implementado de manera
+adecuada.
+
+\item \textbf{Eficiencia y escalabilidad}: La eficiencia y escalabilidad del
+código son factores importantes a considerar en la
+comparativa. \textbf{Evalúa el tiempo de ejecución y la capacidad de la
+implementación para manejar grandes conjuntos de datos}.
+
+\item \textbf{Límites y desventajas}: Evalúa los límites y desventajas tanto
+del algoritmo como del código. Esto incluye factores como la
+sensibilidad a la tasa de aprendizaje, la necesidad de una gran
+cantidad de datos para el entrenamiento y la posibilidad de
+quedarse atrapado en mínimos locales.
+
+\item \textbf{Mejoras y optimizaciones}: Mira si puedes hacer cualquier mejora u
+optimización en el código, como el uso de técnicas de
+regularización..
+\end{itemize}
+\end{document}

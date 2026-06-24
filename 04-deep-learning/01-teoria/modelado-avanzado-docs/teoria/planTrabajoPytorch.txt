@@ -1,0 +1,276 @@
+Introducción a Pytorch
+Crea una guía introductoria de pytorch con estos puntos: (añade ejemplos en cada caso)
+
+### Aprende lo Básico
+- Introducción Rápida
+- Tensores: 
+   creación e inicialización:
+   	desde constantes, random 
+   	desde numpy, pandas, 
+  	desde otro tensor
+   atributos
+   operaciones con tensores:
+   	indexación, 
+   	"slicing estilo numpy" (loncheado?)
+   	unión de tensores: cat, stack
+   	operaciones artiméticas:
+   		de matrices
+   		elemento a elemento
+   		agregaciones (tensores de un único elemento)
+   		operaciones in situ (in place)
+   	Puente con numpy
+   	
+   
+- Datasets y DataLoaders:
+  -datasets:
+   	parámetros: root, train, download, transform, target_transform
+   	creación de un dataset a medidas para nuestros ficheros: __init__, __len__, __getitem__
+   -DataLoaders
+   	Prepara tus datos para entrenar con DataLoaders
+   	Iterar a traves del DataLoader
+   	
+	
+- Transformaciones
+   -ToTensor
+   -Lambda Transform
+   -torchvision.transform API
+- Construir la Red Neuronal
+   - Obtener el dispositivo para entrenar
+   - Definir la clase
+   	- __init__, forward (mínimo a definir para que funcione)
+   - Crear instancia y enviar al dispositivo(entrenar?)
+   - Predecir
+   	- Enviar datos al dispositivo
+   	- Obtener los logits del modelo en clasificación, los... en regresión
+   	- obtener probabilidades softmax (clasificación), resultado en regresión
+	- Obtener la clase con argmax
+	- sacar la clase predicha
+
+   - Explicación de los modelos de Capas
+   	- Containers
+   		Tipos
+   	- Convolución
+   	- Pooling
+   	- Padding
+   	- De activación no lineal (suma ponderada, no linealidad)
+   	- De actinavión no lineal (otras)
+   	- Normalización
+   	- Recurrentes
+   	- Lineales
+   	- Dropout
+   	- Sparse
+   	- De funciones de distancia
+   	- De funciones de perdida
+   	- De visión
+   	- De barajado
+   	- Datos paralelos (multi-GPU, distribuidas)
+   	- De utilidades
+   	- Funciones quantizadas
+   	- De Inicialización de módulos perezosa
+   		- aliases 
+   - Model parameters
+   
+   
+- Diferenciación Automática con `torch.autograd`
+  -  Tensores, funciones y grafo computacional
+  - Calculando gradientes
+  - Desabilitar el seguimiento del gradiente (derivada)
+  - Más sobre los Grafos computacionales
+  - Lectura opcional, Gradientes de tensores y Productos Jacobianos
+  	- Mecanismos de autograd
+  
+- Optimización de Parámetros del Modelo
+   - Código preliminar para optimizar
+```python
+import torch
+from torch import nn
+from torch.utils.data import DataLoader
+from torchvision import datasets
+from torchvision.transforms import ToTensor
+
+training_data = datasets.FashionMNIST(
+    root="data",
+    train=True,
+    download=True,
+    transform=ToTensor()
+)
+
+test_data = datasets.FashionMNIST(
+    root="data",
+    train=False,
+    download=True,
+    transform=ToTensor()
+)
+
+train_dataloader = DataLoader(training_data, batch_size=64)
+test_dataloader = DataLoader(test_data, batch_size=64)
+
+class NeuralNetwork(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.flatten = nn.Flatten()
+        self.linear_relu_stack = nn.Sequential(
+            nn.Linear(28*28, 512),
+            nn.ReLU(),
+            nn.Linear(512, 512),
+            nn.ReLU(),
+            nn.Linear(512, 10),
+        )
+
+    def forward(self, x):
+        x = self.flatten(x)
+        logits = self.linear_relu_stack(x)
+        return logits
+
+model = NeuralNetwork()
+```
+
+  - Hiperparámetros
+  - Bucle de optimización
+    - Función de pérdida
+    - Otptimizador
+    - Implementación completa
+```python
+def train_loop(dataloader, model, loss_fn, optimizer):
+    size = len(dataloader.dataset)
+    # Set the model to training mode - important for batch normalization and dropout layers
+    # Unnecessary in this situation but added for best practices
+    model.train()
+    for batch, (X, y) in enumerate(dataloader):
+        # Compute prediction and loss
+        pred = model(X)
+        loss = loss_fn(pred, y)
+
+        # Backpropagation
+        loss.backward()
+        optimizer.step()
+        optimizer.zero_grad()
+
+        if batch % 100 == 0:
+            loss, current = loss.item(), batch * batch_size + len(X)
+            print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
+
+
+def test_loop(dataloader, model, loss_fn):
+    # Set the model to evaluation mode - important for batch normalization and dropout layers
+    # Unnecessary in this situation but added for best practices
+    model.eval()
+    size = len(dataloader.dataset)
+    num_batches = len(dataloader)
+    test_loss, correct = 0, 0
+
+    # Evaluating the model with torch.no_grad() ensures that no gradients are computed during test mode
+    # also serves to reduce unnecessary gradient computations and memory usage for tensors with requires_grad=True
+    with torch.no_grad():
+        for X, y in dataloader:
+            pred = model(X)
+            test_loss += loss_fn(pred, y).item()
+            correct += (pred.argmax(1) == y).type(torch.float).sum().item()
+
+    test_loss /= num_batches
+    correct /= size
+    print(f"Test Error: \n Accuracy: {(100*correct):>0.1f}%, Avg loss: {test_loss:>8f} \n")
+```
+  
+  - Loss functions
+  - torch.optim
+  	optimizadores, parámetros, diferencias, cuándo usar uno u otro
+  - Warmstart Training a Model
+  	- INtroducción,
+  	- Pasos
+  	- Imports
+  	- Definir e iniciar reades neuronales A y B
+ ```python
+ class NetA(nn.Module):
+    def __init__(self):
+        super(NetA, self).__init__()
+        self.conv1 = nn.Conv2d(3, 6, 5)
+        self.pool = nn.MaxPool2d(2, 2)
+        self.conv2 = nn.Conv2d(6, 16, 5)
+        self.fc1 = nn.Linear(16 * 5 * 5, 120)
+        self.fc2 = nn.Linear(120, 84)
+        self.fc3 = nn.Linear(84, 10)
+
+    def forward(self, x):
+        x = self.pool(F.relu(self.conv1(x)))
+        x = self.pool(F.relu(self.conv2(x)))
+        x = x.view(-1, 16 * 5 * 5)
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
+        return x
+
+netA = NetA()
+
+class NetB(nn.Module):
+    def __init__(self):
+        super(NetB, self).__init__()
+        self.conv1 = nn.Conv2d(3, 6, 5)
+        self.pool = nn.MaxPool2d(2, 2)
+        self.conv2 = nn.Conv2d(6, 16, 5)
+        self.fc1 = nn.Linear(16 * 5 * 5, 120)
+        self.fc2 = nn.Linear(120, 84)
+        self.fc3 = nn.Linear(84, 10)
+
+    def forward(self, x):
+        x = self.pool(F.relu(self.conv1(x)))
+        x = self.pool(F.relu(self.conv2(x)))
+        x = x.view(-1, 16 * 5 * 5)
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
+        return x
+
+netB = NetB()
+```
+      - Guardar modelo A
+      - Cargar en modelo B
+      - Seguir el entrenamiento
+     
+      
+  
+- Guardar y Cargar el Modelo
+  - Guardar y cargar los pesos del modelo
+  	- Ejemplos con modelos preentrenados ej vgg16
+  - Guardar y cargar modelos con "shapes"
+  - Guarda y cargar checkpoints generales
+  - Recomendaciones para cargar un nn.Module desde un checkpoint
+  
+  
+  
+  Además de Visión por Computador (CV), Procesamiento de Lenguaje Natural (NLP) y Audio, en los que PyTorch es ampliamente utilizado, hay otros grandes campos donde el Deep Learning con PyTorch tiene aplicaciones destacadas:
+
+Aprendizaje por Refuerzo (RL)
+
+Se usa para entrenar agentes en entornos simulados, como videojuegos (Deep Q-Learning, Policy Gradient Methods).
+Librerías como Stable-Baselines3 y TorchRL facilitan su implementación en PyTorch.
+Biomedicina y Bioinformática
+
+Procesamiento de imágenes médicas (rayos X, MRI, tomografías).
+Modelos para secuenciación genética y descubrimiento de fármacos.
+Redes neuronales para predicción de estructuras de proteínas (AlphaFold usa técnicas similares).
+Series Temporales y Finanzas Cuantitativas
+
+Modelado de datos secuenciales con LSTMs, GRUs y Transformers para predicción en mercados financieros.
+Análisis de riesgo y detección de fraudes.
+Forecasting de demanda en cadenas de suministro.
+Robótica
+
+Control de movimientos en robots autónomos.
+Percepción en sistemas de navegación y manipulación.
+Modelos para simulación física y aprendizaje motor.
+Generación de Contenido (Generative AI)
+
+Modelos de texto e imagen generativa (GPT, Stable Diffusion, StyleGAN).
+Creación de imágenes, audio, y modelos 3D.
+Ciencias Físicas y Químicas
+
+Simulación de sistemas físicos con Neural PDEs y redes neuronales diferenciales.
+Predicción de reacciones químicas y materiales.
+Sistemas de Recomendación
+
+Filtrado colaborativo y modelos basados en embeddings (Deep Factorization Machines, Transformers).
+Personalización en plataformas como Netflix, Spotify, YouTube.
+Estos son los campos más destacados, pero PyTorch es lo suficientemente flexible para aplicarse en cualquier dominio donde se necesiten modelos de aprendizaje profundo. ¿Quieres que detalle más algún área en particular?
+  
+

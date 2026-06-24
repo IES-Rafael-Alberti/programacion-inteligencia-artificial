@@ -1,0 +1,154 @@
+// ============================================================================
+// CUESTIONARIO 1: Ecosistema e Infraestructura de MLOps y Datos
+// Módulo: Programación en Inteligencia Artificial (PIA) - Unidad 5
+// ============================================================================
+
+$CATEGORY: UD5_IA_Cloud/Cuestionario_1_Infraestructura_Datos
+
+// ----------------------------------------------------------------------------
+// TEMA 1: FEATURE STORE
+// ----------------------------------------------------------------------------
+
+::[Feature Store] Concepto y Objetivo::
+¿Cuál es la función principal de un "Feature Store" en un flujo de trabajo de Machine Learning? {
+    =Almacenar, documentar y servir variables predictivas (features) de manera consistente tanto en la fase de entrenamiento como en la fase de inferencia en producción. #¡Correcto! El objetivo principal es evitar silos y asegurar que se usen exactamente las mismas variables y la misma lógica de cálculo en entrenamiento y en producción.
+    ~Servir como una base de datos vectorial para realizar búsquedas semánticas ultrarrápidas sobre embeddings de texto generados por LLMs. #Incorrecto. Las bases de datos vectoriales almacenan embeddings para búsqueda semántica, mientras que un Feature Store gestiona variables estructuradas tradicionales (o embeddings de entidad) para entrenamiento e inferencia de modelos tradicionales.
+    ~Funcionar como un registro exclusivo de modelos de machine learning que realiza el seguimiento de hiperparámetros y métricas de precisión. #Incorrecto. Eso es el registro de modelos (Model Registry), una pieza de MLOps. El Feature Store almacena y sirve las variables o características (features) del dato, no los modelos.
+    ~Actuar como un motor de procesamiento Big Data distribuido que sustituye completamente a Apache Spark. #Incorrecto. El Feature Store no es un motor de procesamiento que sustituya a Spark; de hecho, suele usar Spark de fondo en su almacén offline para calcular las variables por lotes.
+}
+
+::[Feature Store] Arquitectura Dual::
+En la arquitectura de un Feature Store como Hopsworks o Feast, ¿cuál es la diferencia de rol entre el almacén "offline" y el almacén "online"? {
+    =El almacén offline guarda datos históricos masivos para el cálculo y entrenamiento de modelos por lotes, mientras que el almacén online almacena los valores más actualizados para servirlos con bajísima latencia en inferencia en tiempo real. #¡Correcto! Esta arquitectura dual garantiza consistencia técnica: Spark o Iceberg en el offline para entrenar, y bases de datos rápidas como Redis o RonDB en el online para servir las variables al modelo en milisegundos en producción.
+    ~El almacén offline reside en las instalaciones locales (On-Premise) de la empresa y el almacén online reside estrictamente en una nube pública como AWS o GCP. #Incorrecto. Ambos almacenes residen normalmente en el mismo ecosistema (local o nube); la diferencia radica en la latencia, la velocidad y el propósito (entrenamiento histórico frente a inferencia en tiempo real).
+    ~El almacén offline solo guarda variables de tipo numérico y el almacén online se especializa en almacenar imágenes y archivos no estructurados de audio. #Incorrecto. La diferencia no está en el tipo de datos, sino en la velocidad de acceso y en si se usan para preparar datasets de entrenamiento o para servir valores en tiempo real.
+    ~El almacén offline es público para todos los desarrolladores de la empresa y el almacén online es privado y de acceso restringido solo para administradores. #Incorrecto. La división responde a necesidades puramente técnicas de rendimiento e ingeniería de datos (lecturas por lotes de gran volumen frente a lecturas individuales de baja latencia), no a directivas de permisos de usuario.
+}
+
+::[Feature Store] Inconsistencia entrenamiento-inferencia::
+¿A qué problema técnico se refiere el término "inconsistencia entre entrenamiento e inferencia" (training-serving skew) y cómo lo soluciona un Feature Store? {
+    =A que una variable se calcule de forma distinta en producción frente a cómo se calculó en entrenamiento, lo cual degrada el rendimiento del modelo; el Feature Store lo soluciona centralizando una definición única de la variable que se ejecuta en ambos contextos. #¡Correcto! El skew surge, por ejemplo, si entrenas usando "tiempo_desde_ultima_compra" calculado en días con PySpark y en producción lo reimplementas en JavaScript calculándolo en horas. Centralizar el cálculo garantiza que el modelo reciba datos en el mismo formato e intervalo matemático.
+    ~A la diferencia de tiempo entre entrenar un modelo y desplegarlo en producción; se soluciona ejecutando un entrenamiento continuo cada pocos minutos en un clúster autogestionado. #Incorrecto. El skew no es una diferencia de tiempo de despliegue, sino una discrepancia matemática o lógica en los datos que recibe el modelo.
+    ~A que el modelo sea demasiado grande para caber en memoria de inferencia; se soluciona cuantizando los pesos del modelo para reducir su tamaño de almacenamiento a la mitad. #Incorrecto. Eso es un problema de rendimiento de hardware o consumo de memoria del modelo, no tiene relación con el training-serving skew de las variables predictivas.
+    ~A la imposibilidad de evaluar la precisión del modelo en producción; se soluciona inyectando datos aleatorios (ruido) durante el proceso de entrenamiento. #Incorrecto. El skew se produce por divergencias de implementación o fuentes en las variables. Añadir ruido es una técnica de regularización, pero no resuelve las divergencias de lógica en producción.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 2: COMPUTE CLOUD
+// ----------------------------------------------------------------------------
+
+::[Compute Cloud] Modelos de Servicio::
+Si una empresa necesita ejecutar entrenamientos de deep learning configurando de raíz el sistema operativo, los drivers de NVIDIA CUDA y controlando por completo los puertos del firewall, ¿qué modelo de servicio cloud de cómputo debería contratar? {
+    =IaaS (Infraestructura como Servicio) mediante máquinas virtuales tradicionales con GPU, como AWS EC2 o Google Compute Engine. #¡Correcto! Las máquinas virtuales (IaaS) proporcionan control de root absoluto, permitiendo instalar y configurar a nivel de sistema operativo los drivers CUDA y redes, a costa de mayor complejidad de administración y mantenimiento.
+    ~PaaS (Plataforma como Servicio) a través de servicios gestionados como Vertex AI Endpoints o Azure ML. #Incorrecto. En los entornos PaaS los contenedores y sistemas están gestionados por el proveedor. Aunque puedes personalizar contenedores, no tienes el control de "root" absoluto ni gestionas el hypervisor de red del host físico o los drivers CUDA directamente.
+    ~SaaS (Software como Servicio) utilizando entornos web listos para ejecutar como Google Colab Enterprise o Kaggle. #Incorrecto. Los entornos SaaS son de consumo directo y abstraen por completo el sistema operativo subyacente y las configuraciones de red o hardware profundo.
+    ~FaaS (Función como Servicio) implementando funciones sin servidor (Serverless) como AWS Lambda. #Incorrecto. Las funciones serverless no permiten entrenamientos complejos de larga duración con control absoluto del hardware ni drivers CUDA, ya que tienen límites estrictos de tiempo de ejecución (generalmente 15 minutos).
+}
+
+::[Compute Cloud] Proveedores Especializados vs Grandes::
+¿Cuál es la principal ventaja competitiva de proveedores especializados en GPU como Lambda Labs, Paperspace o RunPod frente a los grandes hiperescaladores (AWS, Google Cloud o Azure) para entrenar un modelo pequeño o prototipar? {
+    =Ofrecen un aprovisionamiento de GPUs dedicadas mucho más rápido y sencillo, con costes por hora significativamente inferiores al no aplicar la sobretasa de servicios empresariales. #¡Correcto! Los proveedores especializados ("GPU clouds") destacan por su sencillez y costes muy competitivos por hora de GPU, lo que los hace ideales para investigación, docencia y prototipado rápido sin la complejidad de los entornos de grandes clouds.
+    ~Garantizan una integración nativa e instantánea con almacenes de datos Big Data distribuidos de la empresa como Amazon Redshift o Google BigQuery. #Incorrecto. De hecho, esta es una desventaja, ya que al estar fuera de los grandes clouds tradicionales, transferir datos masivos de Redshift o BigQuery a un entorno como RunPod puede ser lento y costoso debido a tasas de salida.
+    ~Son los únicos que permiten descargar el código fuente de los modelos de inteligencia artificial y ejecutarlos de manera local. #Incorrecto. El código de tus modelos (PyTorch, TensorFlow) es independiente del proveedor y se puede ejecutar localmente en cualquier máquina con Python.
+    ~Ofrecen una garantía de disponibilidad del 100% (SLA de cero caídas) respaldada por hardware redundante en todos sus centros de datos del mundo. #Incorrecto. Al contrario, las nubes de GPUs baratas suelen tener menor redundancia y mayor riesgo de variabilidad técnica en comparación con el robusto SLA de AWS, Azure o GCP.
+}
+
+::[Compute Cloud] Aspectos a Vigilar en la Nube::
+Al diseñar la arquitectura de cómputo en la nube para entrenar modelos de IA que procesan cientos de gigabytes de imágenes diariamente, ¿qué factor de coste o técnico suele pasarse por alto y puede disparar el presupuesto mensual? {
+    =El coste de transferencia de salida de datos (egress fees) desde la nube hacia el exterior, o la latencia y costes al transferir datos entre diferentes regiones de un mismo proveedor. #¡Correcto! Guardar datos o entrenar es barato, pero transferir enormes volúmenes de datos fuera del bucket del proveedor cloud (egress) o entre distintas regiones geográficas puede generar costes imprevistos sustanciales.
+    ~El coste de descargar librerías de software libre como PyTorch o scikit-learn mediante el instalador pip en las máquinas virtuales. #Incorrecto. El uso de pip y la descarga de librerías open-source son totalmente gratuitos; solo se paga por el ancho de banda consumido general, que para descargar librerías es despreciable.
+    ~El consumo eléctrico del monitor del usuario o alumno que está observando el proceso de entrenamiento desde su ordenador personal en casa. #Incorrecto. El consumo de energía local de la pantalla del usuario no influye en absoluto en la factura de la cuenta cloud corporativa.
+    ~La necesidad de reescribir todo el código de Python a lenguaje C++ cada vez que el modelo se ejecuta en una máquina virtual de AWS. #Incorrecto. Las máquinas cloud ejecutan Python de manera nativa sin problemas de traducción, por lo que no es necesario cambiar el lenguaje de programación.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 3: ALMACENAMIENTO
+// ----------------------------------------------------------------------------
+
+::[Almacenamiento] Clases de Object Storage::
+Si tu proyecto genera periódicamente copias de seguridad de datasets históricos de 10 TB que no se prevé consultar en meses, pero que deben conservarse por regulación legal, ¿qué clase de almacenamiento en la nube deberías elegir para minimizar costes? {
+    =Clases de archivo o frío como AWS Glacier, Google Cloud Coldline/Archive o Azure Archive. #¡Correcto! Estas clases de almacenamiento tienen tarifas mensuales sumamente bajas por GB almacenado. La contrapartida es que la recuperación del dato es lenta (puede tardar horas) y se penaliza económicamente si se accede antes del tiempo pactado.
+    ~Clases estándar o calientes (AWS S3 Standard, GCP Standard, Azure Hot). #Incorrecto. Estas clases están optimizadas para acceso inmediato y frecuente, pero su coste mensual por gigabyte es el más alto de todos, lo que resultaría muy costoso para conservar 10 TB inactivos.
+    ~Bases de datos en memoria ultrarrápidas basadas en Redis gestionado en la nube. #Incorrecto. Almacenar 10 TB de datos pasivos en memoria RAM (Redis) sería extremadamente caro y técnicamente inadecuado para copias de seguridad legales.
+    ~Clases de almacenamiento temporal en discos de estado sólido (SSD) locales de la máquina virtual de cómputo. #Incorrecto. Los discos locales temporales (efímeros) se borran al apagar o reiniciar la máquina virtual, por lo que no sirven para copias de seguridad o retención legal a largo plazo.
+}
+
+::[Almacenamiento] Formatos de Datos para IA::
+¿Por qué en los proyectos de IA sobre datos tabulares masivos se prefiere usar formatos como Apache Parquet o formatos de tabla abiertos (Delta Lake / Iceberg) en lugar de archivos de texto plano CSV? {
+    =Parquet almacena los datos de forma columnar y comprimida para optimizar las lecturas, mientras que Delta Lake e Iceberg añaden metadatos que permiten transacciones ACID, control de esquemas y versiones (Time Travel). #¡Correcto! Parquet reduce drásticamente el espacio de almacenamiento y acelera las consultas al leer solo las columnas necesarias. Delta Lake e Iceberg añaden capacidades transaccionales robustas de base de datos sobre los archivos planos del Data Lake, permitiendo volver a versiones pasadas del dataset de forma exacta.
+    ~Parquet encripta automáticamente los datos con algoritmos militares impidiendo que los ingenieros de datos puedan manipular el dataset sin contraseña. #Incorrecto. Parquet es un formato de serialización analítica abierto, no está diseñado como una herramienta criptográfica o de cifrado militar de datos.
+    ~Los archivos CSV tienen un límite físico estricto impuesto por la comunidad Python que impide almacenar más de 10.000 filas de datos por archivo. #Incorrecto. Un archivo CSV es texto sin formato y puede tener un número ilimitado de filas. La limitación del CSV es de rendimiento (lento de leer, pesado de almacenar y sin tipado de datos estricto).
+    ~Delta Lake e Iceberg convierten de manera automática cualquier tabla estructurada en un modelo de lenguaje LLM listo para chatear. #Incorrecto. Estas tecnologías gestionan datos tabulares estructurados a nivel de almacenamiento e ingeniería de datos; no crean ni entrenan LLMs de manera automática.
+}
+
+::[Almacenamiento] Concepto de Lakehouse::
+¿En qué consiste conceptualmente la arquitectura de datos denominada "Lakehouse" en entornos de Inteligencia Artificial en la nube? {
+    =En combinar la escalabilidad y bajo coste de un Object Storage (Data Lake) con la capacidad de gestión de esquemas, transacciones y consultas rápidas de un Data Warehouse usando formatos de tabla abiertos. #¡Correcto! El Lakehouse une lo mejor de los dos mundos: almacena archivos masivos baratos en S3 o GCS (Data Lake) pero permitiendo consultarlos con SQL, gestionar transacciones y controlar versiones como si fuera una base de datos relacional de gran escala (Data Warehouse).
+    ~En un centro de datos físico construido al lado de lagos o ríos para aprovechar el agua fría de la naturaleza para refrigerar superordenadores con GPUs. #Incorrecto. Es un concepto puramente arquitectónico de software e ingeniería de datos, no tiene relación con la ubicación física o refrigeración hidráulica del hardware.
+    ~En una plataforma en la nube dedicada exclusivamente a alojar proyectos de desarrollo de videojuegos con inteligencia artificial. #Incorrecto. Se trata de un término de la ingeniería y analítica de datos a gran escala, no es un entorno especializado de videojuegos.
+    ~En un servicio cloud que traduce de forma automatizada bases de datos relacionales SQL a bases de datos vectoriales NoSQL. #Incorrecto. No tiene que ver con traductores automáticos de esquemas vectoriales, sino con la unificación de estructuras de almacenamiento de datos tabulares (analíticos e históricos).
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 4: FRAMEWORKS DE ML
+// ----------------------------------------------------------------------------
+
+::[Frameworks ML] scikit-learn::
+Al diseñar un pipeline de machine learning en la nube, ¿cuál es una de las limitaciones técnicas más importantes de "scikit-learn" que un arquitecto de IA debe tener en cuenta al procesar volúmenes masivos de datos? {
+    =No tiene soporte nativo para ejecución distribuida en clústeres ni aprovecha la aceleración por hardware de GPUs de manera nativa para entrenar sus modelos. #¡Correcto! scikit-learn está diseñado para ejecutarse en un único nodo y sobre CPU de forma secuencial o multiproceso básico. Si se tienen cientos de gigabytes de datos o se requiere entrenamiento en GPU, se debe optar por alternativas como XGBoost, PyTorch o frameworks de computación distribuida.
+    ~Solo permite entrenar modelos de regresión lineal simple, impidiendo el uso de algoritmos complejos como árboles de decisión o random forests. #Incorrecto. scikit-learn posee un catálogo enorme y maduro de algoritmos de ML clásico, incluyendo Random Forests, SVMs, Gradient Boosting y clustering.
+    ~Exige obligatoriamente el pago de una licencia comercial mensual muy costosa si el código se ejecuta en servidores cloud públicos. #Incorrecto. scikit-learn es software libre bajo licencia BSD, por lo que su uso en servidores locales o en la nube es 100% gratuito.
+    ~Sus modelos entrenados no se pueden guardar en disco, lo que obliga a reentrenar el modelo en tiempo real cada vez que un usuario hace una petición. #Incorrecto. Los modelos de scikit-learn se pueden guardar perfectamente usando serializadores como pickle, joblib o exportándolos a formatos estándar como ONNX.
+}
+
+::[Frameworks ML] Comparativa y Ecosistema::
+Si estás construyendo una solución que requiere descargar un modelo preentrenado de procesamiento de lenguaje natural (NLP), realizarle un ajuste fino (fine-tuning) sobre textos de la empresa y desplegarlo rápidamente, ¿qué ecosistema y framework de la nube te proporciona mayor aceleración y herramientas directas? {
+    =El ecosistema de Hugging Face Transformers en conjunto con PyTorch, integrándolo mediante opciones cloud como SageMaker JumpStart o Vertex AI Model Garden. #¡Correcto! Hugging Face ofrece el mayor catálogo de modelos preentrenados y tokenizadores de NLP con integraciones nativas para PyTorch, facilitando su entrenamiento y despliegue rápido en los principales proveedores cloud a través de sus almacenes de modelos gestionados (Model Garden / JumpStart).
+    ~La librería básica de pandas combinada con bases de datos SQL tradicionales en Azure. #Incorrecto. pandas y SQL son herramientas de manipulación de datos estructurados, no ofrecen arquitecturas de redes neuronales, transformers ni tokenizadores para tareas avanzadas de NLP.
+    ~TensorFlow configurado estrictamente en modo secuencial sobre CPUs de bajo coste en Lambda Labs. #Incorrecto. Los transformers de NLP requieren gran potencia de cómputo para fine-tuning; realizarlo sobre CPU en lugar de GPU sería extremadamente lento y poco eficiente. Además, Hugging Face tiene mayor penetración y madurez en PyTorch.
+    ~El framework clásico de scikit-learn ejecutado directamente en Google Colab con el plan gratuito. #Incorrecto. scikit-learn no está diseñado para albergar redes neuronales de tipo transformer de última generación (como BERT o GPT); estas requieren deep learning.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 5: HERRAMIENTAS DE DATOS
+// ----------------------------------------------------------------------------
+
+::[Herramientas Datos] Polars vs pandas::
+¿Cuál es la principal ventaja de utilizar la librería "Polars" en lugar de "pandas" para la fase de preparación de datos en un script de Python ejecutado en una instancia de la nube? {
+    =Polars está escrita en Rust y diseñada desde cero para aprovechar el paralelismo de todos los núcleos de la CPU, soportando evaluación diferida (lazy evaluation) para optimizar consultas en memoria. #¡Correcto! pandas es principalmente mononúcleo e ineficiente en memoria con grandes datasets. Polars, al estar desarrollado en Rust y usar Apache Arrow de fondo, procesa datos mucho más rápido, optimiza el plan de ejecución antes de procesar (modo Lazy) y escala mejor en una sola máquina.
+    ~Polars se conecta directamente a los satélites de telecomunicaciones para descargar datos en zonas rurales sin conexión a internet. #Incorrecto. Es una librería de procesamiento de datos local en Python/Rust, no tiene funciones de hardware aeroespacial ni de red satelital.
+    ~Polars traduce de forma automática scripts de Python a código HTML interactivo para ser proyectados en pantallas gigantes de clase. #Incorrecto. Eso sería labor de frameworks de visualización web (como Streamlit). Polars se enfoca puramente en el procesamiento analítico y transformación tabular de datos a alta velocidad.
+    ~Polars no consume memoria RAM del sistema, ya que almacena todos los datos de forma mágica en el procesador gráfico (GPU). #Incorrecto. Polars se ejecuta en CPU y consume memoria RAM, aunque de una forma significativamente más optimizada y eficiente que pandas gracias a su gestión de memoria y a Arrow.
+}
+
+::[Herramientas Datos] Spark vs Dask vs DuckDB::
+Si un proyecto en la nube maneja un volumen de datos de 200 GB (que supera la memoria RAM de una máquina estándar) y el equipo desea realizar consultas SQL analíticas rápidas sobre archivos Parquet locales de forma sencilla, ¿qué herramienta ofrece el mejor encaje y simplicidad? {
+    =DuckDB, por ser un motor analítico SQL embebido extremadamente rápido para consultar archivos Parquet en local sin necesidad de desplegar ni gestionar un clúster distribuido. #¡Correcto! DuckDB es el "SQLite para analítica". Permite hacer consultas SQL vectorizadas de altísimo rendimiento sobre archivos locales (como Parquet o CSV) en una sola máquina sin la enorme sobrecarga operativa de configurar clústeres Big Data.
+    ~Apache Spark, ya que requiere instalar un clúster complejo de Hadoop y múltiples máquinas para poder hacer una consulta analítica básica sobre un archivo. #Incorrecto. Aunque Spark puede procesar 200 GB perfectamente, exige un despliegue muy pesado (JVM, nodos workers, configuración) que resulta innecesariamente complejo para una consulta analítica local rápida.
+    ~Dask, porque exige reescribir todo el motor de base de datos en lenguaje C y anula la posibilidad de usar sentencias SQL estándares. #Incorrecto. Dask sí soporta consultas y se escribe en Python. Sin embargo, para consultas SQL analíticas directas sobre archivos locales, DuckDB es mucho más rápido y directo de integrar.
+    ~La base de datos relacional tradicional MySQL configurada en una máquina virtual de disco magnético lento. #Incorrecto. MySQL no está optimizado para consultas analíticas columnares sobre archivos masivos Parquet, y configurar el volcado de datos desde Parquet a MySQL sería ineficiente.
+}
+
+// ----------------------------------------------------------------------------
+// TEMA 6: MLOPS y SEGUIMIENTO
+// ----------------------------------------------------------------------------
+
+::[MLOps] Concepto y Herramientas::
+¿Cuál es la diferencia de enfoque entre "MLflow" y "DVC" (Data Version Control) en el ecosistema MLOps? {
+    =MLflow se centra en el seguimiento de experimentos, registro de modelos y despliegue, mientras que DVC se especializa en el versionado ligero de datasets y pipelines de datos estilo Git. #¡Correcto! Son herramientas complementarias. MLflow monitoriza qué hiperparámetros y métricas genera el entrenamiento, guardando el modelo resultante en su Registry. DVC, en cambio, versiona los datos de entrada pesados (imágenes, archivos grandes) mediante punteros de texto ligeros en Git, permitiendo la reproducibilidad del dataset.
+    ~MLflow es una plataforma propietaria de pago obligatorio y DVC es un lenguaje de programación que sustituye a Python. #Incorrecto. Ambos son software libre y de código abierto. Ninguno sustituye a Python; son herramientas auxiliares de gestión y versionado.
+    ~MLflow solo se puede ejecutar en la nube de Google y DVC está limitado estrictamente al sistema operativo macOS. #Incorrecto. Ambas herramientas son totalmente multiplataforma y portables; se pueden ejecutar localmente en Windows/Linux/macOS o en cualquier proveedor de nube pública o privada.
+    ~MLflow sirve para automatizar el diseño gráfico de las interfaces de usuario y DVC monitoriza los fallos de red del router. #Incorrecto. Se dedican al ciclo de vida del machine learning (seguimiento de experimentos y versionado de datos masivos), no al diseño web ni al diagnóstico de redes de telecomunicaciones.
+}
+
+// ----------------------------------------------------------------------------
+// PREGUNTA EXTRA DE INVESTIGACIÓN
+// ----------------------------------------------------------------------------
+
+::[INVESTIGACIÓN] Formatos y Servidores de Inferencia::
+¿Qué ventaja crítica aporta exportar modelos entrenados a un formato estándar como ONNX (Open Neural Network Exchange) y servirlos en producción utilizando "Triton Inference Server" en la nube? {
+    =Permite independizar el modelo del framework de entrenamiento original (PyTorch, TensorFlow) y optimizar el uso de GPUs en producción mediante ejecución concurrente de modelos heterogéneos y procesamiento por lotes dinámico (dynamic batching). #¡Correcto! ONNX estandariza la representación del modelo de red para poder ejecutarlo en diferentes runtimes optimizados. Triton Inference Server puede cargar modelos de múltiples frameworks a la vez en la misma GPU, maximizando el rendimiento del hardware gracias a colas de peticiones unificadas y batching dinámico en tiempo real.
+    ~ONNX reescribe de forma mágica el código del modelo para que pueda ejecutarse en navegadores web muy antiguos de teléfonos móviles sin usar batería. #Incorrecto. ONNX Runtime Web permite ejecución en navegador, pero no está enfocado a omitir el consumo de batería en terminales antiguos, y el rol de Triton es el de servidor backend de alta capacidad.
+    ~Triton Inference Server elimina la necesidad de contar con tarjetas gráficas GPU, permitiendo que modelos gigantescos funcionen instantáneamente en un disquete o memoria USB. #Incorrecto. Al contrario, Triton destaca especialmente por exprimir y optimizar al máximo las tarjetas gráficas (GPUs) de alto rendimiento en servidores backend cloud; no elimina el requisito de hardware de procesamiento.
+    ~ONNX es una red social para científicos de datos que compiten de forma lúdica por ver quién desarrolla el algoritmo con más capas de neuronas. #Incorrecto. ONNX es un formato abierto de intercambio de modelos de aprendizaje profundo y aprendizaje automático, no una red social o portal de juegos competitivos.
+}

@@ -1,0 +1,134 @@
+% Created 2026-02-17 mar 21:12
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+
+\usepackage{parskip}
+\usepackage[utf8]{inputenc} %% For unicode chars
+\usepackage{placeins}
+\usepackage[margin=2.50cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\linespread{1.05}
+\usepackage[scaled]{helvet}
+\usepackage{courier}
+\hypersetup{colorlinks=true,linkcolor=blue}
+\RequirePackage{fancyvrb}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\small,formatcom = {\color[rgb]{0.5,0,0}}}
+\usepackage{mdframed}
+\BeforeBeginEnvironment{minted}{\begin{mdframed}}
+\AfterEndEnvironment{minted}{\end{mdframed}}
+\setcounter{secnumdepth}{3}
+\author{José Manuel Sánchez Álvarez}
+\date{}
+\title{Explorando redes neuronales}
+\hypersetup{
+ pdfauthor={José Manuel Sánchez Álvarez},
+ pdftitle={Explorando redes neuronales},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.6.18)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\maketitle
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+\setlength\parindent{10pt}
+
+\section{Tarea de Clase: Explorando TensorFlow Playground}
+\label{sec:org68ff327}
+
+\subsection{Objetivo de la Tarea:}
+\label{sec:org305690d}
+Utilizar \href{https://playground.tensorflow.org/\#activation=tanh\&batchSize=10\&dataset=circle\&regDataset=reg-plane\&learningRate=0.03\&regularizationRate=0\&noise=0\&networkShape=4,2\&seed=0.19905\&showTestData=false\&discretize=false\&percTrainData=50\&x=true\&y=true\&xTimesY=false\&xSquared=false\&ySquared=false\&cosX=false\&sinX=false\&cosY=false\&sinY=false\&collectStats=false\&problem=classification\&initZero=false\&hideText=false}{TensorFlow Playground}, un simulador de redes neuronales, para
+entrenar clasificadores binarios, ajustar la arquitectura del modelo y
+sus hiperparámetros, y obtener una comprensión intuitiva del
+funcionamiento de las redes neuronales y el impacto de sus
+hiperparámetros.
+
+Alternativas a Tensorflow Playground:
+\begin{itemize}
+\item \href{https://deeperplayground.org/}{Deeper Playgound}
+\item \href{https://playground.scienxlab.org/}{ScienceXlab}
+\end{itemize}
+
+\subsection{Descripción de la Tarea:}
+\label{sec:org89889b4}
+Esta tarea está diseñada para permitirte experimentar directamente con
+redes neuronales sin necesidad de escribir código. A través de
+TensorFlow Playground, explorarás cómo diferentes configuraciones
+afectan el aprendizaje y la clasificación en redes neuronales.
+
+\subsubsection{Instrucciones:}
+\label{sec:orgc87c837}
+
+\begin{enumerate}
+\item \textbf{\textbf{Entrenamiento de la Red Neuronal Predeterminada:}}
+\begin{itemize}
+\item Accede a TensorFlow Playground y entrena la red neuronal
+predeterminada haciendo clic en el botón "Ejecutar". Observa cómo
+la red encuentra una solución para la tarea de clasificación.
+\item Examina los patrones aprendidos por las neuronas en cada capa
+oculta. Reflexiona sobre cómo las capas combinan patrones simples
+para formar patrones más complejos.
+\end{itemize}
+
+\item \textbf{\textbf{Exploración de Funciones de Activación:}}
+\begin{itemize}
+\item Cambia la función de activación de "tanh" a "ReLU" y entrena la
+red nuevamente. Nota la diferencia en el tiempo de entrenamiento
+y la forma de los límites de decisión.
+\end{itemize}
+
+\item \textbf{\textbf{Análisis del Riesgo de Mínimos Locales:}}
+\begin{itemize}
+\item Modifica la arquitectura de la red para tener una sola capa
+oculta con tres neuronas. Entrénala varias veces, restableciendo
+los pesos con el botón "Reiniciar". Documenta la variabilidad en
+el tiempo de entrenamiento y la ocurrencia de mínimos locales.
+\end{itemize}
+
+\item \textbf{\textbf{Redes Neuronales Demasiado Pequeñas:}}
+\begin{itemize}
+\item Reduce el número de neuronas a dos y evalúa la capacidad de la
+red para encontrar una solución adecuada. Discute los casos de
+subajuste.
+\end{itemize}
+
+\item \textbf{\textbf{Redes Neuronales Suficientemente Grandes:}}
+\begin{itemize}
+\item Incrementa el número de neuronas a ocho y entrena la red varias
+veces. Observa la consistencia en el rendimiento y la
+velocidad. Reflexiona sobre la teoría de redes neuronales y
+mínimos locales.
+\end{itemize}
+
+\item \textbf{\textbf{Desafíos de Gradientes Desvanecidos en Redes Profundas:}}
+\begin{itemize}
+\item Selecciona el conjunto de datos "espiral" y configura la red con
+cuatro capas ocultas de ocho neuronas cada una. Analiza el
+impacto en el tiempo de entrenamiento y la incidencia de mesetas.
+\end{itemize}
+
+\item \textbf{\textbf{Experimentación Adicional:}}
+\begin{itemize}
+\item Dedica aproximadamente una hora a experimentar con diferentes
+configuraciones de hiperparámetros y arquitecturas. Intenta
+obtener una comprensión intuitiva de la influencia de cada
+parámetro en el aprendizaje de la red.
+\end{itemize}
+\end{enumerate}
+\end{document}

@@ -1,0 +1,127 @@
+site_name: Programación de Inteligencia Artificial
+site_description: Material del módulo Programación de Inteligencia Artificial - Curso 2026/2027
+site_url: https://ies-rafael-alberti.github.io/programacion-inteligencia-artificial/
+repo_url: https://github.com/IES-Rafael-Alberti/programacion-inteligencia-artificial
+repo_name: IES-Rafael-Alberti/programacion-inteligencia-artificial
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+site_dir: site
+
+# Solo material público para el alumnado.
+# Se excluyen planificación, secretos, archivo histórico y material docente interno.
+exclude_docs: |
+  **/90-archivo/
+  **/90-archivo-historico/
+  **/99-profesor/
+  **/_profesor/
+  **/99-sensible/
+  **/00-planificación/
+  **/openspec/
+  **/.atl/
+  **/.git/
+  **/__pycache__/
+  **/.ipynb_checkpoints/
+  **/.pytest_cache/
+  **/.mypy_cache/
+  **/.ruff_cache/
+  **/.venv/
+  **/venv/
+  **/env/
+  *.py
+  *.ipynb
+  *.csv
+  *.parquet
+  *.zip
+  *.tar
+  *.tar.gz
+  *.tgz
+  *.gz
+  *.7z
+  *.rar
+  *.docx
+  *.pptx
+  *.pdf
+  *.rmd
+  *.Rhistory
+  *.json
+  *.gift
+  *.gitignore
+  *.gitattributes
+  *.key
+  *.pem
+  *.p12
+  *API*KEY*
+  *api*key*
+  *Profesor*
+  *profesor*
+
+# El material heredado contiene enlaces absolutos y referencias a notebooks no publicados.
+# No se validan enlaces en esta primera publicación para que el despliegue no bloquee
+# por contenidos que aún están pendientes de normalización.
+validation:
+  omitted_files: ignore
+  absolute_links: ignore
+  unrecognized_links: ignore
+  links:
+    not_found: ignore
+
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Modo oscuro
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/IES-Rafael-Alberti/programacion-inteligencia-artificial
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+
+hooks:
+  - hooks/nav_generator.py
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - tables
+  - toc:
+      permalink: true
+      title: En esta página
+
+# El nav se genera automáticamente desde hooks/nav_generator.py.
+nav:
+  - Inicio: index.md

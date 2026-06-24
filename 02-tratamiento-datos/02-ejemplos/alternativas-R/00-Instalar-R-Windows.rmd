@@ -1,0 +1,129 @@
+
+## 🧩 1️⃣ Instalar R y comprobar versión
+
+1. Descarga R desde CRAN (recomendado para Windows):
+   🔗 [https://cran.r-project.org/bin/windows/base/](https://cran.r-project.org/bin/windows/base/)
+
+2. Instálalo en una ruta sin espacios, por ejemplo:
+
+   ```
+   C:\R\R-4.5.2
+   ```
+
+3. Añade esta ruta a tu `PATH` (si no lo hace el instalador).
+
+4. En PowerShell o terminal conda:
+
+   ```bash
+   R --version
+   ```
+
+---
+
+## ⚙️ 2️⃣ (Opción recomendada) usar **conda-forge** para instalar `r-irkernel`
+
+Esto evita todos los problemas de compilación y dependencias.
+
+```bash
+conda create -n r-env -c conda-forge r-base=4.3.2 r-essentials r-irkernel -y
+conda activate r-env
+```
+
+✅ `r-irkernel` incluye todo lo necesario y registrará el kernel automáticamente en Jupyter.
+
+Luego, abre R dentro de ese entorno (puedes hacer `R` en la terminal conda) y ejecuta para confirmar:
+
+```r
+IRkernel::installspec(user = FALSE)
+```
+
+Y listo: debería aparecer el kernel R en VS Code y Jupyter.
+
+---
+
+## 🧠 3️⃣ Si *ya tienen R instalado* fuera de conda (instalación nativa de Windows)
+
+Entonces pueden hacerlo así:
+
+1. Abrir R (no RStudio, sino el **R GUI** o **Rterm**).
+2. Ejecutar estas líneas:
+
+```r
+install.packages('IRkernel', repos='https://cloud.r-project.org')
+IRkernel::installspec()
+```
+
+> 💡 Si aparece el error “no disponible para esta versión de R”, instálalo desde GitHub directamente (más fiable):
+
+```r
+install.packages('devtools')
+devtools::install_github('IRkernel/IRkernel')
+IRkernel::installspec()
+```
+
+> 🔸 Esto compila el paquete desde la fuente; necesita **Rtools** instalado.
+
+---
+
+## 🧰 4️⃣ Instalar Rtools (solo si da error de compilación)
+
+1. Descargar **Rtools** desde:
+   🔗 [https://cran.r-project.org/bin/windows/Rtools/](https://cran.r-project.org/bin/windows/Rtools/)
+
+2. Durante la instalación, marca ✅ “Add Rtools to system PATH”.
+
+3. Reinicia la consola y prueba otra vez:
+
+```r
+devtools::install_github('IRkernel/IRkernel')
+```
+
+---
+
+## 🧪 5️⃣ Verificar en VS Code
+
+1. En VS Code, asegúrate de tener las extensiones:
+
+   * **Jupyter**
+   * **R** (Yuki Ueda)
+   * **Python** (opcional, si alternan kernels)
+
+2. Crea un nuevo `.ipynb` → selecciona el kernel:
+   **R [conda env: r-env]** o **R (base)**
+
+3. Ejecuta:
+
+```r
+version
+```
+
+Si responde sin errores, está configurado ✅
+
+---
+
+## ⚠️ 6️⃣ Problemas comunes
+
+| Síntoma                                              | Causa probable                       | Solución                                       |
+| ---------------------------------------------------- | ------------------------------------ | ---------------------------------------------- |
+| “IRkernel no está disponible para esta versión de R” | Mirror desactualizado o falta Rtools | Instalar desde GitHub o usar conda             |
+| “Jupyter no reconoce kernel R”                       | Kernel no registrado                 | Ejecutar `IRkernel::installspec()`             |
+| “No se encuentra Rterm.exe”                          | VS Code no detecta R                 | Añadir `C:\\R\\R-4.3.2\\bin` al PATH           |
+| “Error al cargar tidyverse en Windows”               | Faltan dependencias binarias         | Usar repositorio `https://cloud.r-project.org` |
+
+---
+
+## 🧩 7️⃣ Opción rápida para alumnos
+
+Si no quieren instalar nada “a mano”:
+
+```bash
+conda create -n r-env -c conda-forge r-base r-essentials r-irkernel -y
+conda activate r-env
+`¿Quieres que te prepare un **script `.bat`** (para Windows) que cree automáticamente el entorno con `r-base`, `r-essentials`, `r-irkernel` y registre el kernel, para que los alumnos solo tengan que ejecutarlo?
+``
+
+y luego abrir VS Code → Kernel → *R [conda env: r-env]*
+Esto **funciona en Linux, macOS y Windows** sin tocar Rtools ni devtools.
+
+---
+

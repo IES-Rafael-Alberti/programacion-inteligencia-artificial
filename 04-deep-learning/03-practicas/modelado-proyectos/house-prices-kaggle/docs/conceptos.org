@@ -1,0 +1,146 @@
+* Estadística
+** Variables de distribución
+Según los resultados de la búsqueda web¹²³⁴⁵, la asimetría y la
+curtosis son medidas que describen la forma de una distribución de
+datos.
+
+- La **asimetría** mide el grado de simetría o asimetría de una
+  distribución. Una distribución es simétrica si se ve igual a la
+  izquierda y a la derecha del punto central. Una distribución es
+  asimétrica si tiene una cola más larga o pesada que la otra. La
+  asimetría puede ser positiva (cola derecha más larga) o negativa
+  (cola izquierda más larga).
+- La **curtosis** mide el grado de concentración o dispersión de los
+  datos en las colas de una distribución. Una distribución tiene una
+  curtosis alta si tiene colas más pesadas o gruesas que una
+  distribución normal. Una distribución tiene una curtosis baja si
+  tiene colas más ligeras o finas que una distribución normal.
+
+Estas medidas se utilizan para analizar las propiedades estadísticas
+de los datos, como la normalidad, la variabilidad y los valores
+atípicos. También se utilizan para comparar diferentes distribuciones
+entre sí y con modelos teóricos.
+
+
+
+Origen: Conversación con Bing, 13/3/2023(1) The Complete Guide to Skewness and Kurtosis | Simplilearn. https://www.simplilearn.com/tutorials/statistics-tutorial/skewness-and-kurtosis Con acceso 13/3/2023.
+(2) The Complete Guide to Skewness and Kurtosis | Simplilearn. https://www.simplilearn.com/tutorials/statistics-tutorial/skewness-and-kurtosis Con acceso 13/3/2023.
+(3) Skewness and Kurtosis: Quick Guide (Updated 2023) - Analytics Vidhya. https://www.analyticsvidhya.com/blog/2021/05/shape-of-data-skewness-and-kurtosis/ Con acceso 13/3/2023.
+(4) Are the Skewness and Kurtosis Useful Statistics?. https://www.spcforexcel.com/knowledge/basic-statistics/are-skewness-and-kurtosis-useful-statistics Con acceso 13/3/2023.
+(5) Skewness | Definition, Examples & Formula - Scribbr. https://www.scribbr.com/statistics/skewness/ Con acceso 13/3/2023.
+(6) 1.3.5.11. Measures of Skewness and Kurtosis - NIST. https://www.itl.nist.gov/div898/handbook/eda/section3/eda35b.htm Con acceso 13/3/2023.
+
+
+** transformaciones
+Cuando un conjunto de datos no sigue una distribución normal, existen
+varias transformaciones que se pueden aplicar para lograr una
+distribución más cercana a la normalidad. Algunas de las
+transformaciones más comunes son:
+
+    Transformación logarítmica: Si los datos tienen una distribución sesgada positivamente, la transformación logarítmica puede ayudar a reducir el sesgo. Esta transformación es útil cuando los datos están en una escala de magnitud y se encuentran en un rango muy amplio.
+
+    Transformación de raíz cuadrada: La transformación de raíz cuadrada es similar a la transformación logarítmica y también puede ser útil para reducir el sesgo de datos sesgados positivamente.
+
+    Transformación Box-Cox: La transformación Box-Cox es una técnica que busca encontrar una transformación óptima para los datos para que se ajusten a una distribución normal. La transformación Box-Cox es una familia de transformaciones parametrizadas por un valor lambda, el cual se ajusta para maximizar la normalidad.
+
+    Transformación de Johnson: La transformación de Johnson es una técnica que se basa en la transformación Box-Cox y se utiliza para transformar los datos a una distribución normal. Esta técnica es útil cuando los datos tienen una distribución muy sesgada.
+
+    Transformación de Yeo-Johnson: La transformación de Yeo-Johnson es una variante de la transformación Box-Cox y se utiliza para transformar datos que pueden contener valores negativos. La transformación de Yeo-Johnson puede ser útil cuando los datos tienen una distribución sesgada positivamente o negativamente.
+
+En general, la elección de una transformación específica dependerá de la naturaleza de los datos y de la distribución inicial de los mismos. Es importante evaluar el impacto de la transformación sobre los datos y asegurarse de que los resultados sean interpretables y útiles para la posterior análisis.
+
+
+
+*** Existen varias transformaciones que se pueden aplicar a los datos dependiendo del tipo de distribución original. A continuación, se presentan algunas de las transformaciones que son comúnmente utilizadas para cada tipo de distribución:
+
+    Distribución normal: Si los datos tienen una distribución normal, no se requiere ninguna transformación adicional.
+
+    Distribución uniforme: Si los datos tienen una distribución uniforme, se puede utilizar la transformación logarítmica o la transformación de raíz cuadrada para reducir la variabilidad y hacer que los datos se distribuyan de manera más normal.
+
+    Distribución sesgada positivamente: Si los datos tienen una distribución sesgada positivamente, se puede aplicar la transformación logarítmica, la transformación de raíz cuadrada o la transformación Box-Cox para reducir el sesgo.
+
+    Distribución sesgada negativamente: Si los datos tienen una distribución sesgada negativamente, se puede aplicar la transformación inversa o la transformación de raíz cuadrada para reducir el sesgo.
+
+    Distribución bimodal: Si los datos tienen una distribución bimodal, se puede considerar dividir el conjunto de datos en dos subconjuntos y aplicar diferentes transformaciones a cada uno de ellos.
+
+Es importante recordar que no existe una única transformación adecuada para cada tipo de distribución y que la elección de la transformación depende de la naturaleza de los datos y de los objetivos del análisis. Por lo tanto, es recomendable explorar diferentes transformaciones y evaluar los efectos de cada una de ellas sobre los datos antes de decidir cuál utilizar.
+
+
+
+La elección de la transformación adecuada dependerá del tipo de distribución que tenga los datos iniciales. A continuación, se presentan algunas transformaciones comunes que se utilizan para diferentes tipos de distribuciones:
+
+    Distribución sesgada positivamente: Para los datos que tienen una distribución sesgada positivamente, las transformaciones logarítmicas y de raíz cuadrada son comunes. La transformación de Box-Cox y la transformación de Johnson también pueden ser útiles en este caso.
+
+    Distribución sesgada negativamente: Para los datos que tienen una distribución sesgada negativamente, las transformaciones inversas y de recíproco son comunes. Estas transformaciones son menos comunes que las transformaciones para sesgo positivo.
+
+    Distribución bimodal: Para los datos que tienen una distribución bimodal, la transformación de Box-Cox o la transformación de Yeo-Johnson pueden ser útiles para ayudar a normalizar los datos.
+
+    Distribución de cola pesada: Para los datos que tienen una distribución de cola pesada, las transformaciones que comprimen la cola, como la transformación de Box-Cox o la transformación de Johnson, pueden ser útiles.
+
+
+
+Es importante destacar que la elección de la transformación adecuada dependerá del tipo de distribución que tenga los datos iniciales y de la finalidad del análisis. También es importante considerar la interpretación de los resultados despué
+
+    Distribución exponencial: Si los datos tienen una distribución exponencial, se puede aplicar la transformación logarítmica para reducir la variabilidad y hacer que los datos se distribuyan de manera más normal.
+
+    Distribución de Poisson: Si los datos tienen una distribución de Poisson, se puede aplicar la transformación de raíz cuadrada o la transformación Box-Cox para reducir el sesgo y hacer que los datos se distribuyan de manera más normal.
+
+    Distribución gamma: Si los datos tienen una distribución gamma, se puede aplicar la transformación logarítmica o la transformación de raíz cuadrada para reducir el sesgo y hacer que los datos se distribuyan de manera más normal.
+
+    Distribución binomial: Si los datos tienen una distribución binomial, se puede aplicar la transformación arcseno para reducir la variabilidad y hacer que los datos se distribuyan de manera más normal.
+
+    Distribución de Weibull: Si los datos tienen una distribución de Weibull, se puede aplicar la transformación logarítmica o la transformación de raíz cuadrada para reducir el sesgo y hacer que los datos se distribuyan de manera más normal.
+
+Es importante tener en cuenta que estas transformaciones son solo algunas de las opciones disponibles y que la elección de una transformación específica dependerá de la naturaleza de los datos y de los objetivos del análisis. Es recomendable explorar diferentes transformaciones y evaluar los efectos de cada una de ellas sobre los datos antes de decidir cuál utilizar.
+
+
+
+!
+
+Las 7 distribuciones más frecuentes en datasets reales son:
+
+    Distribución normal: Esta es la distribución más común en los datasets reales y es aquella que presenta una forma de campana simétrica. En este caso, no se requiere ninguna transformación adicional, ya que los datos ya se distribuyen normalmente.
+
+    Distribución lognormal: Esta distribución surge cuando los datos positivos están sesgados hacia valores altos. En este caso, una transformación adecuada es la transformación logarítmica, ya que la distribución lognormal se convierte en una distribución normal después de aplicar esta transformación.
+
+    Distribución exponencial: Esta distribución es común en datasets que representan tiempos de espera o tiempo de vida. En este caso, una transformación adecuada es la transformación logarítmica, ya que los datos exponenciales se convierten en una distribución normal después de aplicar esta transformación.
+
+    Distribución de Poisson: Esta distribución se utiliza para modelar eventos raros. En este caso, una transformación adecuada es la transformación de raíz cuadrada o la transformación Box-Cox, ya que la distribución de Poisson se convierte en una distribución normal después de aplicar cualquiera de estas transformaciones.
+
+    Distribución uniforme: Esta distribución se utiliza cuando los datos tienen igual probabilidad de ocurrencia. En este caso, una transformación adecuada es la transformación de raíz cuadrada o la transformación Box-Cox, ya que la distribución uniforme se convierte en una distribución normal después de aplicar cualquiera de estas transformaciones.
+
+
+
+    Hay varias distribuciones que son comunes en los datasets reales. Aquí hay una lista de las 7 distribuciones más frecuentes y algunas transformaciones que se pueden aplicar para aproximarse a una distribución normal:
+
+    Distribución normal: Si los datos tienen una distribución normal, no es necesario aplicar ninguna transformación adicional.
+
+    Distribución uniforme: Si los datos tienen una distribución uniforme, se puede utilizar la transformación logarítmica o la transformación de raíz cuadrada para reducir la variabilidad y hacer que los datos se distribuyan de manera más normal.
+
+    Distribución exponencial: Si los datos tienen una distribución exponencial, se puede aplicar la transformación logarítmica para reducir la variabilidad y hacer que los datos se distribuyan de manera más normal.
+
+    Distribución de Poisson: Si los datos tienen una distribución de Poisson, se puede aplicar la transformación de raíz cuadrada o la transformación Box-Cox para reducir el sesgo y hacer que los datos se distribuyan de manera más normal.
+
+    Distribución gamma: Si los datos tienen una distribución gamma, se puede aplicar la transformación logarítmica o la transformación de raíz cuadrada para reducir el sesgo y hacer que los datos se distribuyan de manera más normal.
+
+    Distribución de Weibull: Si los datos tienen una distribución de Weibull, se puede aplicar la transformación logarítmica o la transformación de raíz cuadrada para reducir el sesgo y hacer que los datos se distribuyan de manera más normal.
+
+    Distribución de Bernoulli: Si los datos tienen una distribución de Bernoulli, se puede aplicar la transformación probit o la transformación logit para reducir la variabilidad y hacer que los datos se distribuyan de manera más normal.
+
+Es importante tener en cuenta que la elección de una transformación específica dependerá de la naturaleza de los datos y de los objetivos del análisis. Además, algunas distribuciones pueden requerir una combinación de varias transformaciones para aproximarse a una distribución normal.
+
+alguna distribución más a considerar?
+
+Por supuesto, hay varias distribuciones adicionales que se encuentran comúnmente en los datasets y que pueden requerir transformaciones para aproximarse a una distribución normal. Algunas de estas distribuciones son:
+
+    Distribución de chi-cuadrado: Si los datos tienen una distribución de chi-cuadrado, se puede aplicar la transformación de raíz cuadrada para reducir la variabilidad y hacer que los datos se distribuyan de manera más normal.
+
+    Distribución de t-student: Si los datos tienen una distribución de t-student, se puede aplicar la transformación logarítmica para reducir la variabilidad y hacer que los datos se distribuyan de manera más normal.
+
+    Distribución de F: Si los datos tienen una distribución de F, se puede aplicar la transformación de raíz cuadrada o la transformación Box-Cox para reducir la variabilidad y hacer que los datos se distribuyan de manera más normal.
+
+    Distribución de Pareto: Si los datos tienen una distribución de Pareto, se puede aplicar la transformación logarítmica para reducir el sesgo y hacer que los datos se distribuyan de manera más normal.
+
+    Distribución logística: Si los datos tienen una distribución logística, se puede aplicar la transformación probit o la transformación logit para reducir la variabilidad y hacer que los datos se distribuyan de manera más normal.
+
+Es importante recordar que no hay una única transformación que funcione para todos los datasets y distribuciones, y que es necesario evaluar los efectos de diferentes transformaciones para determinar cuál es la mejor opción para cada caso específi

@@ -1,0 +1,11 @@
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+statsmodels
+jupyter
+ipywidgets
+psutil
+torch
+pytorch-lightning

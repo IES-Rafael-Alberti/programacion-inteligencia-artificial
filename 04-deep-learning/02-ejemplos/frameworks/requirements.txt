@@ -1,0 +1,35 @@
+# Requisitos mínimos para los prácticos de optimizadores
+# Versión orientativa — los alumnos pueden instalar con conda/mamba o pip.
+
+# Núcleo (Python científico y utilidades)
+numpy>=1.24
+matplotlib>=3.5
+scikit-learn>=1.2
+
+# Keras / TensorFlow (CPU; para GPU instalar la variante con CUDA siguiendo la guía oficial)
+tensorflow>=2.12
+
+# PyTorch (recomendado instalar desde conda/mamba; si se usa pip, seleccionar la rueda adecuada para CUDA)
+torch
+torchvision
+
+# JAX + Optax + Equinox (opcional — requiere jaxlib acorde a la plataforma)
+# Instalación pip (CPU):
+#   pip install --upgrade jax jaxlib optax equinox
+# Para GPU en local o Colab, instala jaxlib con soporte CUDA siguiendo:
+#   https://github.com/google/jax#pip-installation
+
+# Otros útiles
+optax
+equinox
+
+# Sugerencias de instalación (conda/mamba) — preferido en entornos de aula:
+# mamba create -n ud4-optimizers -y python=3.10
+# conda activate ud4-optimizers
+# mamba install -y -c conda-forge numpy matplotlib scikit-learn
+# mamba install -n ud4-optimizers -y pytorch torchvision cpuonly -c pytorch
+# pip install -r requirements.txt   # para paquetes no disponibles en conda
+
+# Nota para profesores/alumnos:
+# - Para evitar problemas con JAX en GPU, siga la guía oficial para elegir la rueda correcta de jaxlib.
+# - En entornos gestionados (colab) usar la celda de instalación incluida en los notebooks.

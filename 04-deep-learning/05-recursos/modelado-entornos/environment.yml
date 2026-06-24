@@ -1,0 +1,32 @@
+name: deep_learning_all
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - jupyterlab
+  - ipython
+  # PyTorch
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda
+  # TensorFlow
+  - tensorflow
+  # Herramientas
+  - pip:
+    - keras>=3.0
+    - jax jaxlib
+    - flax equinox optax
+    - onnx onnxruntime
+    - onnxoptimizer onnxsim
+    - tf2onnx
+    - torchinfo tensorboard
+    - optuna neptune-api

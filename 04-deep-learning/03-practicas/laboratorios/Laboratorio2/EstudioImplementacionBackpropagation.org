@@ -1,0 +1,68 @@
+#+TITLE: Redes Neuronales: Backpropagation
+#+AUTHOR:
+#+EMAIL:
+#+DATE:
+#+OPTIONS: texht:t toc:nil num:nil -:nil ^:{} ":nil ':nil
+#+OPTIONS: tex:t
+#+LATEX_CLASS: article
+#+LATEX_HEADER:
+#+LANGUAGE: es
+
+#+BEGIN_COMMENT
+#+LATEX_HEADER: \usepackage[AUTO]{babel}
+#+END_COMMENT
+
+#+LATEX_HEADER_EXTRA: \usepackage{mdframed}
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{minted}{\begin{mdframed}}
+#+LATEX_HEADER_EXTRA: \AfterEndEnvironment{minted}{\end{mdframed}}
+
+#+LATEX: \setlength\parindent{10pt}
+#+LATEX_HEADER: \usepackage{parskip}
+
+#+latex_header: \usepackage[utf8]{inputenc} %% For unicode chars
+#+LATEX_HEADER: \usepackage{placeins}
+
+#+LATEX_HEADER: \usepackage[margin=2.50cm]{geometry}
+
+#+LaTeX_HEADER: \usepackage[T1]{fontenc}
+#+LaTeX_HEADER: \usepackage{mathpazo}
+#+LaTeX_HEADER: \linespread{1.05}
+#+LaTeX_HEADER: \usepackage[scaled]{helvet}
+#+LaTeX_HEADER: \usepackage{courier}
+
+#+LaTeX_HEADER: \hypersetup{colorlinks=true,linkcolor=blue}
+#+LATEX_HEADER: \RequirePackage{fancyvrb}
+#+LATEX_HEADER: \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\small,formatcom = {\color[rgb]{0.5,0,0}}}
+
+
+* Estudio de la implementación de Backpropagation
+
+Comprender el algoritmo: Es importante comprender el funcionamiento
+básico del algoritmo de Backpropagation antes de compararlo con el
+código. Esto incluye cómo se realiza la propagación hacia atrás y cómo
+se ajustan los pesos en la red neuronal.
+
+Estudia la implementación en Python del algoritmo de Backprogagation y
+analiza los siguientes puntos:
+
+
+** Tareas
+ - *Correspondencia con el código*. *Identifica* los pasos del
+   algoritmo en el código y asegúrate de que *el código refleje
+   correctamente el algoritmo* y que se haya implementado de manera
+   adecuada.
+
+ - *Eficiencia y escalabilidad*: La eficiencia y escalabilidad del
+   código son factores importantes a considerar en la
+   comparativa. *Evalúa el tiempo de ejecución y la capacidad de la
+   implementación para manejar grandes conjuntos de datos*.
+
+ - *Límites y desventajas*: Evalúa los límites y desventajas tanto
+   del algoritmo como del código. Esto incluye factores como la
+   sensibilidad a la tasa de aprendizaje, la necesidad de una gran
+   cantidad de datos para el entrenamiento y la posibilidad de
+   quedarse atrapado en mínimos locales.
+
+ - *Mejoras y optimizaciones*: Mira si puedes hacer cualquier mejora u
+   optimización en el código, como el uso de técnicas de
+   regularización..
