@@ -4,28 +4,43 @@
 
 Unidad dedicada al aprendizaje automático clásico con scikit-learn y CuML. Cubre el pipeline completo de ML: preparación de datos, selección de modelos, entrenamiento, evaluación, feature stores, y creación de datasets. Trabaja los RA/CE de modelado predictivo, clasificación y regresión.
 
-## Materiales incluidos
+## Estructura
 
-- **Teoría (01-teoria/):** Guías de ML (scikit-learn/CuML), preparación de datos, creación de datasets, feature stores, despliegue, Poetry, y repaso de Pandas/Scikit-Learn/PyCaret.
-- **Ejemplos (02-ejemplos/):** Demos de feature stores, scikit-learn vs CuML, FastAPI, OpenMeteo, scripts de limpieza de datos. Repositorios de repaso (Pandas, Scikit-Learn, PyCaret). Guías de despliegue FastAPI y Streamlit.
-- **Prácticas (03-practicas/):** Actividades EDA-clasificación (Titanic, Ames Housing, California), tareas Bank Marketing, laboratorios de creación de datasets (películas, meteorología), Midterm Capstone (películas completo).
-- **Evaluación (04-evaluacion/):** Cuestionario GIFT Bank Marketing, rúbricas de datasets y capstone de películas.
-- **Recursos (05-recursos/):** Datasets (bank marketing, titanic, housing), modelos entrenados (.joblib, .pkl), pipeline serializado.
+### Teoría (`01-teoria/`)
+Guías de ML con scikit-learn y CuML (capítulos 00-04), preparación de datos, creación de datasets, despliegue con Streamlit/FastAPI, Poetry, y feature stores con Hopsworks.
 
-## Prácticas asociadas
+### Ejemplos (`02-ejemplos/`)
+- `01-bloque1-pandas-eda-visualizacion.ipynb` — Repaso Pandas, EDA y visualización
+- `02-bloque2-scikitlearn-modelos-basicos.ipynb` — Repaso Scikit-Learn
+- `03-bloque3-pycaret-modelado-automatico.ipynb` — Repaso PyCaret
+- `04-cuml-vs-sklearn-demo.ipynb` — Comparativa CuML vs Scikit-Learn
+- `05-hopsworks-feature-store.ipynb` — Feature Store con Hopsworks
+- `06-openmeteo-clima.ipynb` — Demo OpenMeteo
+- `07-fastapi-servidor-clima.ipynb` — Servidor FastAPI
+- `fastapi/` — Ejemplo FastAPI con Docker
+- `streamlit/` — Ejemplo Streamlit
+- `scripts/` — Scripts auxiliares
 
-- Actividades EDA a clasificación (Titanic, Ames Housing, California)
-- Laboratorios de creación de datasets con APIs (TheMovieDB, OpenMeteo, AEMET)
-- Midterm Capstone: proyecto completo de películas (EDA + PyCaret + modelo final)
-- Tareas de preparación de datos y modelado (Bank Marketing)
+### Prácticas (`03-practicas/`)
+- `actividades/` — EDA-clasificación (Titanic, Ames Housing, California)
+- `laboratorios/Lab1/` — Creación de dataset de películas (TheMovieDB)
+- `laboratorios/Lab2/` — Creación de dataset meteorológico (OpenMeteo, AEMET)
+- `laboratorios/Lab3/` — Creación de dataset propio (Big Data)
+- `midterm-capstone/` — Proyecto completo de películas (EDA + PyCaret + modelo final)
+- `tarea07/` — Actividad Bank Marketing (ampliada)
+- `tarea08/` — Actividad Bank Marketing (estándar)
 
-## Evaluaciones
-
+### Evaluación (`04-evaluacion/`)
 - Cuestionario GIFT de Bank Marketing
 - Rúbrica de datasets (Lab1)
 - Rúbrica de películas (Midterm Capstone)
 
-## Pendientes
+### Recursos (`05-recursos/`)
+- `datos/` — Datasets (bank marketing, titanic, housing)
+- Modelos entrenados (.joblib, .pkl)
 
-- [ ] Revisar duplicados entre Actividades y Tareas
-- [ ] Decidir ubicación definitiva de los Recordatorio de repaso (Bloques 1-4)
+### Archivo (`90-archivo/`)
+Material original en formato Office/HTML/PDF que se ha migrado a markdown.
+
+### Profesor (`99-profesor/`)
+Soluciones y material docente separado del flujo público.

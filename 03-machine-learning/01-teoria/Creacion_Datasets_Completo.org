@@ -1,7 +1,0 @@
-* Ejemplo de documento
-
-** Sección
-
-#+BEGIN_SRC python
-print("Hola mundo")
-#+END_SRC
