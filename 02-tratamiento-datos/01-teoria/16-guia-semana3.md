@@ -9,10 +9,18 @@ En esta semana se han trabajado los siguientes temas y herramientas:
 - Pandas, Matplotlib, Seaborn
 
 ## 📓 Plan de notebooks y actividades
-| Notebook | Descripción | Soluciones | Tests |
-|----------|-------------|------------|-------|
-| 10_pandas_avanzado | Agrupaciones, combinaciones y operaciones avanzadas | Sí | Sí |
-| 11_visualizacion_basica | Visualización inicial con Matplotlib/Seaborn | Sí | Sí |
+Los notebooks de esta semana se corresponden con los números de orden:
+- **04** — `04_pandas_avanzado_demo.ipynb` (Pandas avanzado: agrupaciones, combinaciones, merges)
+- **05** — `05_pandas_avanzado_extendido.ipynb` (Pandas avanzado: tablas pivote, ventanas, estilos)
+- **06** — `06_pandas_avanzado_con_graficos.ipynb` (Pandas avanzado con visualización integrada)
+- **07** — `07_matplotlib_fundamentos.ipynb` (Matplotlib básico)
+- **08** — `08_matplotlib_parte1.ipynb` (Matplotlib figura, ejes, personalización)
+- **09** — `09_matplotlib_parte2.ipynb` (Matplotlib: subplots, estilos, anotaciones)
+- **10** — `10_matplotlib_avanzado.ipynb` (Matplotlib avanzado)
+- **11** — `11_seaborn_spotify.ipynb` (Seaborn: dataset Spotify, gráficos estadísticos)
+- **12-14** — Notebooks de EDA guiado: `12_semana3_eda`, `13_houseprices_seaborn`, `14_titanic_seaborn`
+
+Todas las soluciones están en `../99-profesor/ejemplos/` con el mismo número de orden.
 
 
 ## 📝 Tareas de refuerzo sugeridas
