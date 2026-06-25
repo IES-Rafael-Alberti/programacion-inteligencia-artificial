@@ -49,8 +49,8 @@ Crea un archivo `.env` (o un módulo `config.py` temporal) para guardar tus clav
 
 ```python
 # src/mi_dataset_peliculas/config.py
-TMDB_API_KEY = "tu_api_key_tmdb"
-OMDB_API_KEY = "tu_api_key_omdb"
+TMDB_API_KEY = "REPLACE_ME"
+OMDB_API_KEY = "REPLACE_ME"
 ```
 
 ---

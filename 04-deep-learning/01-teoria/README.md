@@ -197,6 +197,7 @@ Módulo de **Programación de Inteligencia Artificial** — IES Rafael Alberti 2
 ## Notas
 
 - Los **libros NLP** se centralizan en `docs/libros/` junto al resto de libros de Deep Learning.
+- El material de **spaCy** se trasladó desde `02-tratamiento-datos/`: la guía queda en `01-teoria/nlp-docs/003-spacy-guia-semana.md`, los notebooks en `02-ejemplos/nlp-spacy/` y las soluciones en `99-profesor/nlp-spacy/`.
 - El fichero `nlp/datos/el_quijote.txt` es la copia única (el duplicado en `nlp/transformers/` era idéntico y se eliminó).
 - `nlp/libros/` queda vacío (placeholder) porque los libros se consolidaron en `docs/libros/`.
 - Los archivos temporales eliminados: `.Rhistory`, `logs.log`, `.unison.*.tmp`, `__pycache__/`, `_minted-*/`, `.idea/`, `.vscode/`, directorios vacíos de Housing.

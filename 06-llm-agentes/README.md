@@ -8,11 +8,11 @@ Cubre interfaces de API, serving de modelos, orquestación de agentes, RAG avanz
 - **02-ejemplos**: Notebooks básicos de Gradio, LangChain, DSPy (con soluciones y tests)
 - **03-practicas**: Notebooks avanzados (Gradio, LangChain pipeline, DSPy+MCP, herramientas integradas, MLflow+LlamaIndex RAG, LangGraph, Ollama, FastAPI). Incluye Sem27 de UD9 (serving/orquestación) como subcarpeta
 - **04-evaluacion**: Cuestionarios GIFT (interfaces API serving, orquestación RAG optimización)
-- **90-archivo**: ZIP de herramientas, MCP 24-25 (pendiente de evaluar)
+- **05-recursos**: Material complementario, incluyendo refuerzo opcional de MCP con test inicial
+- **90-archivo**: Material histórico no activo
 
 ## Prácticas asociadas
 - Prácticas de la Semana 27 (Fase 1: Gradio/LangChain/DSPy, Fase 2: MLflow/LangGraph/Ollama/FastAPI)
 
 ## Pendientes
-- [ ] Evaluar si el material MCP de 24-25 (90-archivo/MCP-24-25/) debe integrarse como práctica
-- [ ] Revisar contenido del ZIP de herramientas
+- [ ] Decidir si se imparte el refuerzo MCP según el resultado del test inicial

@@ -58,8 +58,8 @@ Poetry crea el entorno virtual en `.venv`; usa un archivo `.env` para las claves
 (o un módulo `config.py` temporal)
 
 ```env
-TMDB_API_KEY=tu_api_key_tmdb
-OMDB_API_KEY=tu_api_key_omdb
+TMDB_API_KEY=REPLACE_ME
+OMDB_API_KEY=REPLACE_ME
 ```
 
 Carga las claves desde código (sin hardcodear) con `python-dotenv` o solo con `os.getenv`:
@@ -70,8 +70,8 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-TMDB_API_KEY = os.getenv("TMDB_API_KEY")
-OMDB_API_KEY = os.getenv("OMDB_API_KEY")
+TMDB_API_KEY=REPLACE_ME
+OMDB_API_KEY=REPLACE_ME
 ```
 
 ---

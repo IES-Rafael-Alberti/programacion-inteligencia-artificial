@@ -13,7 +13,7 @@ La reorganización parte principalmente del curso 2025-2026, con rescates select
 | Ruta | Contenido principal | Estado |
 |------|---------------------|--------|
 | `01-fundamentos-python/` | Fundamentos de Python, estructuras, NumPy y recursos iniciales. | Base copiada; revisión evaluativa pendiente |
-| `02-tratamiento-datos/` | Pandas, Polars, DuckDB, visualización, spaCy y transformación de datos. | Base copiada; revisión evaluativa pendiente |
+| `02-tratamiento-datos/` | Pandas, Matplotlib/Seaborn, Plotly, Polars, DuckDB, cuDF y transformación de datos. | Base copiada; revisión evaluativa pendiente |
 | `03-machine-learning/` | Scikit-learn, PyCaret, feature stores, datasets propios y capstone intermedio. | Base copiada |
 | `04-deep-learning/` | Fundamentos de deep learning, frameworks y laboratorios. | Base copiada; volumen alto |
 | `05-cloud-mlops/` | Cloud, MLOps, RAG, serving, observabilidad y herramientas de datos. | Base copiada |

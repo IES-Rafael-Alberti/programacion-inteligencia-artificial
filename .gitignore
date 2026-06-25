@@ -1,4 +1,6 @@
 # Public repository exclusions
+.slim/deepwork/
+.slim/zip-triage/
 99-sensible/
 00-planificación/
 openspec/

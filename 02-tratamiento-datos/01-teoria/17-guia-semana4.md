@@ -12,9 +12,9 @@ En esta semana se han trabajado los siguientes temas y herramientas:
 ## 📓 Plan de notebooks y actividades
 | Notebook | Descripción | Soluciones | Tests |
 |----------|-------------|------------|-------|
-| 12_matplotlib_avanzado | Personalización de gráficos | Sí | Sí |
-| 13_plotly_interactivo | Visualizaciones interactivas | Sí | Sí |
-| 14_mini_eda_storytelling | Mini proyecto de análisis exploratorio de datos | Sí | Sí |
+| `10_matplotlib_avanzado.ipynb` | Personalización de gráficos | Sí | Sí |
+| `17_plotly_express_interactivo.ipynb` | Visualizaciones interactivas | Sí | Sí |
+| `18_mini_eda_matplotlib_plotly.ipynb` | Mini proyecto de análisis exploratorio de datos | Sí | Sí |
 
 
 ## 📝 Tareas de refuerzo sugeridas

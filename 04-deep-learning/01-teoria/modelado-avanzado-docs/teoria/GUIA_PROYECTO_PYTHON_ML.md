@@ -293,7 +293,7 @@ MODEL_PATH=models/final/best_model.pt
 DATA_PATH=data/processed/train.csv
 
 # Secrets
-API_KEY=tu_api_key_aqui
+API_KEY=REPLACE_ME
 ```
 
 ---

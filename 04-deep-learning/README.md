@@ -7,7 +7,7 @@ Unidad dedicada al deep learning, cubriendo desde fundamentos teóricos (redes n
 ## Materiales incluidos
 
 - **Teoría (01-teoria/):** Fundamentos de deep learning (8 capítulos con imágenes), glosarios, documentación de frameworks (PyTorch, Keras, JAX, TensorFlow, Lightning), optimizadores, métricas, libros de referencia, teoría de visión, NLP, CNNs, RNNs, transformers. Incluye documentación detallada de Parte I (Fundamentos) y Parte II (Redes Especializadas).
-- **Ejemplos (02-ejemplos/):** Notebooks demo de fundamentos (gradiente descendente, visual), scripts de generación de imágenes para teoría, frameworks (optimizadores, redes neuronales en Keras/PyTorch/JAX/Lightning), ejemplos de modelado avanzado (fashion-mnist-flask), NLP con transformers (modelos, notebooks, scripts), visión (scripts YOLO).
+- **Ejemplos (02-ejemplos/):** Notebooks demo de fundamentos (gradiente descendente, visual), scripts de generación de imágenes para teoría, frameworks (optimizadores, redes neuronales en Keras/PyTorch/JAX/Lightning), ejemplos de modelado avanzado (fashion-mnist-flask), NLP clásico con spaCy, NLP con transformers (modelos, notebooks, scripts), visión (scripts YOLO).
 - **Prácticas (03-practicas/):** Laboratorios (TensorFlow PlayGround, backpropagation, transición de playground a código real), notebooks de modelado avanzado (fundamentos, series temporales, visión), proyectos (boston-housing, euromillones, house-prices-kaggle, used-cars), tareas de NLP, tareas de visión (chihuahua vs muffin).
 - **Evaluación (04-evaluacion/):** Pendiente de incorporar (rúbricas están dentro de laboratorios).
 - **Recursos (05-recursos/):** Datos de modelado avanzado, entornos (environment.yml, scripts de instalación para JAX, Keras3, MLX, ONNX, PyTorch, TensorFlow), datos de NLP y visión (FashionMNIST, datasets de visión), captura de video demo.
@@ -20,6 +20,7 @@ Unidad dedicada al deep learning, cubriendo desde fundamentos teóricos (redes n
 - Laboratorio 3: De PlayGround a código real
 - Proyectos: Boston housing, Euromillones, House Prices Kaggle, Used Cars
 - Tareas NLP con transformers
+- Ejemplos NLP clásico con spaCy (`02-ejemplos/nlp-spacy/`)
 - Tareas de visión (clasificación chihuahua vs muffin)
 
 ## Evaluaciones

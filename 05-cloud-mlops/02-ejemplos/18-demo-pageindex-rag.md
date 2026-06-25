@@ -136,7 +136,7 @@ Este ejemplo es intencionalmente corto. Puede variar según la versión del SDK,
 ```python
 from pageindex import PageIndexClient
 
-client = PageIndexClient(api_key="YOUR_API_KEY")
+client = PageIndexClient(api_key=os.environ["PAGEINDEX_API_KEY"])
 
 result = client.submit_document("./informe.pdf")
 doc_id = result["doc_id"]
