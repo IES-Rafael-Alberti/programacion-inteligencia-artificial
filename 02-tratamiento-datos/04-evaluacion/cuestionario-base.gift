@@ -1,7 +1,7 @@
 // Base revisable para Moodle. Ajustar antes de publicar.
 
 ::UD2_Pandas_01::
-¿Para que se usa pandas principalmente? {
+¿Para qué se usa pandas principalmente? {
 =Para manipular y analizar datos tabulares
 ~Para entrenar redes neuronales directamente
 ~Para crear juegos en tiempo real
@@ -9,7 +9,7 @@
 }
 
 ::UD2_Pandas_02::
-¿Que metodo se usa habitualmente para obtener un resumen estadistico rapido de un DataFrame? {
+¿Qué método se usa habitualmente para obtener un resumen estadístico rápido de un DataFrame? {
 =describe
 ~merge
 ~pivot
@@ -17,7 +17,7 @@
 }
 
 ::UD2_Pandas_03::
-¿Que tecnica ayuda a detectar valores nulos? {
+¿Qué técnica ayuda a detectar valores nulos? {
 =isna
 ~astype
 ~reset_index
@@ -25,7 +25,7 @@
 }
 
 ::UD2_Pandas_04::
-¿Para que sirve groupby? {
+¿Para qué sirve groupby? {
 =Agrupar datos y aplicar agregaciones
 ~Cambiar el formato de las columnas
 ~Eliminar siempre duplicados
@@ -33,15 +33,15 @@
 }
 
 ::UD2_Pandas_05::
-¿Que hace un join o merge? {
-=Combina tablas a partir de una clave comun
-~Convierte columnas en graficas
+¿Qué hace un join o merge? {
+=Combina tablas a partir de una clave común
+~Convierte columnas en gráficas
 ~Ordena filas al azar
-~Rellena automaticamente nulos
+~Rellena automáticamente nulos
 }
 
 ::UD2_Pandas_06::
-Selecciona una buena practica de limpieza de datos. {
+Selecciona una buena práctica de limpieza de datos. {
 =Documentar los cambios realizados
 ~Borrar columnas sin revisar
 ~Repetir pasos sin control
@@ -49,33 +49,33 @@ Selecciona una buena practica de limpieza de datos. {
 }
 
 ::UD2_Pandas_07::
-¿Que aporta una visualizacion bien elegida? {
+¿Qué aporta una visualización bien elegida? {
 =Facilita detectar patrones, tendencias y outliers
-~Sustituye el analisis de datos
+~Sustituye el análisis de datos
 ~Evita limpiar datos
 ~Elimina la necesidad de explicar resultados
 }
 
 ::UD2_Pandas_08::
-¿Cual es una forma correcta de mejorar la reproducibilidad? {
+¿Cuál es una forma correcta de mejorar la reproducibilidad? {
 =Fijar versiones y documentar el flujo
-~Cambiar el codigo sin registrar nada
+~Cambiar el código sin registrar nada
 ~Usar variables aleatorias sin control
 ~Depender de pasos manuales ocultos
 }
 
 ::UD2_Pandas_09::
-¿Que significa tratar un formato de datos de forma adecuada? {
-=Convertir y validar tipos segun el uso previsto
+¿Qué significa tratar un formato de datos de forma adecuada? {
+=Convertir y validar tipos según el uso previsto
 ~Mantener todos los campos como texto
 ~Eliminar siempre todas las columnas
-~Evitar revisar fechas o numeros
+~Evitar revisar fechas o números
 }
 
 ::UD2_Pandas_10::
 Completa la frase: en EDA, el objetivo es entender la estructura y ________ de los datos. {
 =calidad
-~decoracion
+~decoración
 ~rapidez
 ~publicidad
 }

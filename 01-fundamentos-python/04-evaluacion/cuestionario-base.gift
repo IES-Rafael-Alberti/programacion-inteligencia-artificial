@@ -18,14 +18,14 @@
 
 ::UD1_Python_Basico_03::
 ¿Qué hace una función en Python? {
-=Encapsula un bloque reutilizable de codigo
+=Encapsula un bloque reutilizable de código
 ~Convierte siempre datos en NumPy
 ~Solo sirve para imprimir mensajes
 ~Evita el uso de variables
 }
 
 ::UD1_Python_Basico_04::
-Selecciona la afirmacion correcta sobre una tupla. {
+Selecciona la afirmación correcta sobre una tupla. {
 =Es inmutable
 ~Siempre contiene solo texto
 ~No se puede recorrer
@@ -33,31 +33,31 @@ Selecciona la afirmacion correcta sobre una tupla. {
 }
 
 ::UD1_Python_Basico_05::
-¿Para que se usa NumPy principalmente? {
-=Para calculo numerico eficiente con arrays
+¿Para qué se usa NumPy principalmente? {
+=Para cálculo numérico eficiente con arrays
 ~Para crear presentaciones
 ~Para escribir archivos PDF
 ~Para sustituir al navegador web
 }
 
 ::UD1_Python_Basico_06::
-En un notebook, ¿que practica mejora mas la lectura y mantenimiento? {
-=Separar codigo, texto y resultados con orden
+En un notebook, ¿qué práctica mejora más la lectura y mantenimiento? {
+=Separar código, texto y resultados con orden
 ~Poner todo en una sola celda
-~Eliminar titulos y comentarios
+~Eliminar títulos y comentarios
 ~Usar nombres ambiguos para variables
 }
 
 ::UD1_Python_Basico_07::
-¿Que significa usar un placeholder de API? {
-=Dejar una marca segura para completar la clave real despues
+¿Qué significa usar un placeholder de API? {
+=Dejar una marca segura para completar la clave real después
 ~Publicar la clave real en un ejemplo
-~Desactivar la autenticacion siempre
+~Desactivar la autenticación siempre
 ~Cambiar el idioma del notebook
 }
 
 ::UD1_Python_Basico_08::
-Completa la frase: una buena practica en Python es mantener el codigo ________. {
+Completa la frase: una buena práctica en Python es mantener el código ________. {
 =legible
 ~oculto
 ~aleatorio
@@ -65,17 +65,17 @@ Completa la frase: una buena practica en Python es mantener el codigo ________. 
 }
 
 ::UD1_Python_Basico_09::
-¿Que hace un bucle for? {
+¿Qué hace un bucle for? {
 =Recorre una secuencia o iterable
-~Define una clase automaticamente
+~Define una clase automáticamente
 ~Crea un grafo de datos
 ~Convierte texto en imagen
 }
 
 ::UD1_Python_Basico_10::
-¿Cual es el objetivo de evitar valores magicos en el codigo? {
+¿Cuál es el objetivo de evitar valores mágicos en el código? {
 =Mejorar claridad y mantenimiento
-~Aumentar el numero de variables
-~Hacer el notebook mas largo
+~Aumentar el número de variables
+~Hacer el notebook más largo
 ~Sustituir las funciones por listas
 }
