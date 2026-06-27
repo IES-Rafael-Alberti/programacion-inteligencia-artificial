@@ -1,0 +1,81 @@
+// Base revisable para Moodle. Ajustar antes de publicar.
+
+::UD1_Python_Basico_01::
+¿Qué tipo de dato es mejor para almacenar una secuencia ordenada y mutable de elementos? {
+=lista
+~tupla
+~conjunto
+~diccionario
+}
+
+::UD1_Python_Basico_02::
+¿Qué estructura permite asociar claves con valores? {
+=diccionario
+~lista
+~cadena
+~rango
+}
+
+::UD1_Python_Basico_03::
+¿Qué hace una función en Python? {
+=Encapsula un bloque reutilizable de codigo
+~Convierte siempre datos en NumPy
+~Solo sirve para imprimir mensajes
+~Evita el uso de variables
+}
+
+::UD1_Python_Basico_04::
+Selecciona la afirmacion correcta sobre una tupla. {
+=Es inmutable
+~Siempre contiene solo texto
+~No se puede recorrer
+~Solo existe dentro de funciones
+}
+
+::UD1_Python_Basico_05::
+¿Para que se usa NumPy principalmente? {
+=Para calculo numerico eficiente con arrays
+~Para crear presentaciones
+~Para escribir archivos PDF
+~Para sustituir al navegador web
+}
+
+::UD1_Python_Basico_06::
+En un notebook, ¿que practica mejora mas la lectura y mantenimiento? {
+=Separar codigo, texto y resultados con orden
+~Poner todo en una sola celda
+~Eliminar titulos y comentarios
+~Usar nombres ambiguos para variables
+}
+
+::UD1_Python_Basico_07::
+¿Que significa usar un placeholder de API? {
+=Dejar una marca segura para completar la clave real despues
+~Publicar la clave real en un ejemplo
+~Desactivar la autenticacion siempre
+~Cambiar el idioma del notebook
+}
+
+::UD1_Python_Basico_08::
+Completa la frase: una buena practica en Python es mantener el codigo ________. {
+=legible
+~oculto
+~aleatorio
+~dependiente
+}
+
+::UD1_Python_Basico_09::
+¿Que hace un bucle for? {
+=Recorre una secuencia o iterable
+~Define una clase automaticamente
+~Crea un grafo de datos
+~Convierte texto en imagen
+}
+
+::UD1_Python_Basico_10::
+¿Cual es el objetivo de evitar valores magicos en el codigo? {
+=Mejorar claridad y mantenimiento
+~Aumentar el numero de variables
+~Hacer el notebook mas largo
+~Sustituir las funciones por listas
+}
