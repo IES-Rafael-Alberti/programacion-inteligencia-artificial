@@ -1,0 +1,54 @@
+// ============================================================================
+// CUESTIONARIO 1: RAPIDS, GPU y JAX
+// Unidad 9 - GPU Avanzado
+// ============================================================================
+
+$CATEGORY: UD9_Prog_IA/Cuestionario_1_RAPIDS_JAX
+
+::[cuDF] Propósito y sintaxis::
+¿Cuál es el propósito principal de cuDF dentro del ecosistema RAPIDS? {
+    =Proporcionar DataFrames acelerados por GPU con una API similar a Pandas. #¡Correcto! cuDF permite trabajar con DataFrames en GPU manteniendo una sintaxis casi idéntica a Pandas.
+    ~Sustituir completamente a PyTorch en tareas de deep learning. #Incorrecto. cuDF no es un framework de deep learning, sino una librería de DataFrames para GPU.
+    ~Compilar modelos de Machine Learning a código binario optimizado. #Incorrecto. cuDF se centra en manipulación de datos tabulares en GPU, no en compilación de modelos.
+    ~Visualizar gráficos interactivos en el navegador web. #Incorrecto. La visualización no es el propósito de cuDF.
+}
+
+::[cuDF] Transferencia de datos::
+¿Por qué es importante minimizar las transferencias CPU-GPU cuando se usa cuDF? {
+    =Porque mover datos entre CPU y GPU es una operación lenta que reduce el rendimiento. #¡Correcto! La transferencia es el cuello de botella; lo ideal es mantener los datos en GPU.
+    ~Porque la GPU no puede ejecutar código Python. #Incorrecto. La GPU ejecuta kernels, no código Python directamente, pero eso no es el motivo.
+    ~Porque cuDF solo funciona en CPU. #Incorrecto. cuDF está diseñado para GPU.
+    ~Porque las transferencias son instantáneas pero consumen mucha RAM. #Incorrecto. No son instantáneas.
+}
+
+::[JAX] autodiferenciación::
+¿Qué ventaja principal ofrece JAX frente a NumPy en cómputo científico? {
+    =Autodiferenciación automática y compilación JIT en GPU/TPU. #¡Correcto! JAX permite derivar funciones automáticamente y compilarlas para aceleración hardware.
+    ~Mayor número de funciones estadísticas predefinidas. #Incorrecto. NumPy también tiene amplio soporte estadístico.
+    ~Interfaz gráfica integrada para visualización de datos. #Incorrecto. JAX no incluye visualización.
+    ~Soporte nativo para bases de datos SQL. #Incorrecto. JAX no está relacionado con bases de datos.
+}
+
+::[JAX] jit::
+¿Qué hace la función jax.jit? {
+    =Compila una función Python en kernels XLA optimizados para acelerar su ejecución. #¡Correcto! jit compila y optimiza el cómputo para CPU/GPU/TPU mediante XLA.
+    ~Convierte arrays de JAX a NumPy automáticamente. #Incorrecto. jit no convierte tipos de datos.
+    ~Genera gráficos de rendimiento del modelo. #Incorrecto. jit no genera visualizaciones.
+    ~Entrena redes neuronales con descenso de gradiente. #Incorrecto. jit es un compilador, no un optimizador de redes.
+}
+
+::[RAPIDS] ecosistema::
+¿Qué librerías forman parte del ecosistema RAPIDS de NVIDIA? {
+    =cuDF, cuML y cuGraph. #¡Correcto! Estas son las librerías principales de RAPIDS para DataFrames, ML y grafos en GPU.
+    ~TensorFlow, PyTorch y JAX. #Incorrecto. Esos son frameworks de deep learning generalistas, no parte de RAPIDS.
+    ~NumPy, SciPy y Matplotlib. #Incorrecto. Esas son librerías clásicas del ecosistema científico Python.
+    ~Docker, Kubernetes y MLflow. #Incorrecto. Esas son herramientas de infraestructura y MLOps.
+}
+
+::[cuML] compatibilidad::
+¿Qué relación tiene la API de cuML con scikit-learn? {
+    =CuML mantiene una API muy similar a scikit-learn para facilitar la migración. #¡Correcto! La filosofía de cuML es ofrecer la misma API que sklearn para que el código sea fácilmente portable.
+    ~CuML es completamente incompatible con scikit-learn. #Incorrecto. La API es deliberadamente compatible.
+    ~CuML solo funciona con TensorFlow. #Incorrecto. CuML es independiente de TensorFlow.
+    ~CuML requiere reescribir todo el código en C++. #Incorrecto. CuML se usa desde Python.
+}

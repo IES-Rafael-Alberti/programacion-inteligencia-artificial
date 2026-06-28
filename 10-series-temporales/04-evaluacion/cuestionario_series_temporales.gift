@@ -1,0 +1,54 @@
+// ============================================================================
+// CUESTIONARIO 1: Series Temporales y Forecasting
+// Unidad 10 - Series Temporales
+// ============================================================================
+
+$CATEGORY: UD10_Prog_IA/Cuestionario_1_Series_Temporales
+
+::[ST] Definición::
+¿Qué es una serie temporal? {
+    =Una secuencia de observaciones ordenadas en el tiempo. #¡Correcto! Las series temporales se caracterizan por su dependencia temporal.
+    ~Un conjunto de datos sin orden específico. #Incorrecto. El orden temporal es la característica definitoria.
+    ~Una tabla de datos categóricos. #Incorrecto.
+    ~Un modelo de regresión lineal. #Incorrecto.
+}
+
+::[ST] Componentes::
+¿Cuáles son los componentes clásicos de una serie temporal? {
+    =Tendencia, estacionalidad, ciclo y ruido. #¡Correcto! Estos cuatro componentes describen el comportamiento de la mayoría de las series.
+    ~Media, mediana y moda. #Incorrecto. Esas son medidas estadísticas, no componentes de ST.
+    ~Precisión, recall y F1-score. #Incorrecto. Esas son métricas de clasificación.
+    ~Sesgo, varianza y error. #Incorrecto. Esos son conceptos de aprendizaje automático general.
+}
+
+::[ST] Estacionariedad::
+¿Qué significa que una serie temporal sea estacionaria? {
+    =Que sus propiedades estadísticas (media, varianza) no cambian con el tiempo. #¡Correcto! La estacionariedad es un requisito común en muchos modelos de forecasting.
+    ~Que todos los valores son idénticos. #Incorrecto.
+    ~Que la serie no tiene valores nulos. #Incorrecto.
+    ~Que solo contiene datos numéricos. #Incorrecto.
+}
+
+::[Forecasting] Baseline::
+¿Por qué es importante usar un baseline simple en forecasting? {
+    =Para tener una referencia mínima con la que comparar modelos más complejos. #¡Correcto! Si un modelo complejo no supera al baseline, no merece la pena.
+    ~Porque los baselines siempre dan el mejor resultado. #Incorrecto.
+    ~Para evitar tener que validar el modelo. #Incorrecto.
+    ~Porque los baselines no necesitan datos de entrenamiento. #Incorrecto.
+}
+
+::[Feature engineering] Lag::
+¿Qué es una feature lag en series temporales? {
+    =El valor de la serie en un instante anterior usado como predictor. #¡Correcto! Los lags permiten usar el pasado para predecir el futuro.
+    ~El error acumulado del modelo. #Incorrecto.
+    ~La diferencia entre el valor real y el predicho. #Incorrecto.
+    ~El tiempo que tarda el modelo en entrenar. #Incorrecto.
+}
+
+::[Deep Learning] TCN::
+¿Qué ventaja tienen las redes convolucionales (TCN) para series temporales frente a las RNN tradicionales? {
+    =Paralelización del entrenamiento y mayor estabilidad en secuencias largas. #¡Correcto! Las TCN pueden procesar en paralelo y evitan problemas de gradiente explosivo/desvaneciente.
+    ~Requieren menos datos que las RNN. #Incorrecto.
+    ~Solo funcionan con datos categóricos. #Incorrecto.
+    ~No necesitan normalización. #Incorrecto.
+}

@@ -9,6 +9,7 @@ Material complementario no incluido en las unidades regulares: neuro-simbólica 
   - **Reinforcement Learning**: Guía introductoria, tutorial Snake-RL, cronograma, PDFs de referencia (del curso 24-25)
 - **02-ejemplos**: Notebooks de RL (Q-Learning CartPole, DQN CartPole, Snake RL con Q-table y DQN)
 - **90-archivo**: Actividades RL y materiales comprimidos (snake_rl_materiales, snake_rl_completo, snake-rl-github)
+  - **`actividades-rl/`**: Actividad "Catch the Fruit" — RL opcional con Q-Table y DQN, entornos personalizados, guía con rúbrica y separación alumno/profesor.
 
 ## Prácticas asociadas
 - (Material anexo — sin prácticas obligatorias asociadas)
