@@ -1,4 +1,4 @@
-# Documentación de los notebooks de la Semana 27
+# Documentación de notebooks de serving y orquestación
 
 Esta documentación resume el objetivo de cada notebook y propone una ruta de trabajo de menor la mayor complejidad.
 

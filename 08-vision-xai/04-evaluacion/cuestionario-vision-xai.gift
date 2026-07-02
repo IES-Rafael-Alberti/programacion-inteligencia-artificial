@@ -1,0 +1,135 @@
+// Cuestionario — UD8 Visión por Computadora y XAI
+// Formato GIFT para importar en Moodle
+// Bloques: Segmentación (1-6), Tracking (7-12), XAI (13-18)
+
+// ===== BLOQUE 1: SEGMENTACIÓN =====
+
+::VIS-01:: ¿Cuál es la principal diferencia entre segmentación semántica y segmentación de instancias? {
+    =La segmentación semántica asigna una clase a cada píxel sin distinguir instancias individuales; la de instancias identifica y separa cada objeto por separado.
+    ~La segmentación semántica trabaja con vídeo y la de instancias solo con imágenes estáticas.
+    ~La segmentación de instancias asigna una clase a cada píxel; la semántica distingue objetos individuales.
+    ~No hay diferencia: ambas técnicas producen el mismo tipo de máscara de salida.
+}
+
+::VIS-02:: En la arquitectura U-Net, ¿qué función cumplen las skip connections entre el encoder y el decoder? {
+    =Permiten que el decoder recupere información espacial de alta resolución perdida durante el downsampling del encoder.
+    ~Reducen el número de parámetros entrenables de la red.
+    ~Evitan el overfitting aplicando dropout entre capas.
+    ~Conectan la última capa convolucional con la capa de entrada para acelerar la convergencia.
+}
+
+::VIS-03:: ¿Qué mide el Dice Score en segmentación de imágenes? {
+    =El solapamiento entre la máscara predicha y la máscara real, calculado como el doble de la intersección dividida entre la suma total de píxeles positivos de ambas.
+    ~La proporción de píxeles verdaderos positivos sobre el total de píxeles de la imagen.
+    ~La diferencia media en intensidad de píxel entre la predicción y la máscara de referencia.
+    ~El área total cubierta por la máscara predicha expresada como fracción de la imagen.
+}
+
+::VIS-04:: ¿Qué valor de IoU (Intersection over Union) se considera comúnmente como umbral de detección correcta en competiciones de visión por computadora? {
+    =0,5
+    ~0,1
+    ~0,9
+    ~1,0
+}
+
+::VIS-05:: Mask R-CNN extiende Faster R-CNN añadiendo: {
+    =Una rama de predicción de máscara de segmentación para cada región propuesta.
+    ~Una capa adicional de atención para mejorar la clasificación global.
+    ~Un módulo de tracking temporal para procesar secuencias de vídeo.
+    ~Un decoder de tipo U-Net conectado al backbone para segmentación semántica.
+}
+
+::VIS-06:: ¿Por qué se usa el Dice Loss en lugar de la entropía cruzada estándar en problemas de segmentación con clases muy desequilibradas? {
+    =Porque el Dice Loss mide directamente el solapamiento y no se ve dominado por la clase mayoritaria de fondo.
+    ~Porque la entropía cruzada no puede aplicarse a máscaras binarias.
+    ~Porque el Dice Loss converge más rápido en cualquier tipo de problema de clasificación.
+    ~Porque la entropía cruzada requiere probabilidades, mientras que el Dice Loss trabaja con valores enteros.
+}
+
+// ===== BLOQUE 2: TRACKING =====
+
+::VIS-07:: ¿Cuál es la diferencia fundamental entre detección de objetos y tracking de objetos? {
+    =La detección localiza objetos en un único fotograma; el tracking mantiene la identidad de cada objeto a lo largo de múltiples fotogramas consecutivos.
+    ~La detección trabaja en tiempo real y el tracking requiere procesamiento offline.
+    ~El tracking localiza objetos en un fotograma; la detección mantiene su identidad en el tiempo.
+    ~No hay diferencia: ambas tareas producen el mismo tipo de salida.
+}
+
+::VIS-08:: En el algoritmo SORT (Simple Online and Realtime Tracking), ¿qué técnica se usa para predecir la posición futura de cada objeto entre fotogramas? {
+    =Un filtro de Kalman que modela el movimiento lineal del bounding box.
+    ~Una red neuronal recurrente entrenada con trayectorias históricas.
+    ~Interpolación bilineal entre el último y el penúltimo bounding box detectado.
+    ~Un árbol de decisión que clasifica el tipo de movimiento de cada objeto.
+}
+
+::VIS-09:: ¿Qué mide la métrica MOTA (Multiple Object Tracking Accuracy)? {
+    =La precisión global del tracker combinando falsos positivos, falsos negativos e identity switches en una sola métrica.
+    ~Solo la proporción de objetos correctamente detectados en cada fotograma.
+    ~La distancia media entre el centro del bounding box predicho y el real.
+    ~El porcentaje de fotogramas en los que no se produce ningún identity swap.
+}
+
+::VIS-10:: ¿Cuál de las siguientes situaciones provoca un identity swap en un tracker? {
+    =Dos objetos se ocluyen mutuamente y el tracker les asigna identificadores cruzados al volver a aparecer.
+    ~El tracker detecta un objeto nuevo que no existía en el fotograma anterior.
+    ~La resolución del vídeo cambia entre fotogramas y obliga a reescalar los bounding boxes.
+    ~El modelo de detección produce un bounding box con IoU inferior a 0,5 respecto al ground truth.
+}
+
+::VIS-11:: YOLOv8 en modo tracking combina su detector con un algoritmo de asociación de datos. ¿Qué es la asociación de datos en este contexto? {
+    =El proceso de emparejar las detecciones del fotograma actual con los tracks activos del fotograma anterior para mantener la identidad de cada objeto.
+    ~La fusión de múltiples fuentes de datos de vídeo para mejorar la detección en escenas complejas.
+    ~El preprocesado de fotogramas para normalizar iluminación y resolución antes de la detección.
+    ~La técnica de data augmentation usada durante el entrenamiento del detector.
+}
+
+::VIS-12:: ¿Qué representa un valor negativo de MOTA? {
+    =Que el número de errores (falsos positivos, falsos negativos e identity switches) supera el número de objetos reales presentes en la secuencia.
+    ~Que el tracker no ha detectado ningún objeto en toda la secuencia.
+    ~Que la implementación tiene un bug y la métrica no se ha calculado correctamente.
+    ~Que el dataset de evaluación está mal etiquetado.
+}
+
+// ===== BLOQUE 3: XAI =====
+
+::VIS-13:: ¿Qué distingue a un método de explicabilidad local de uno global? {
+    =Un método local explica la predicción de una instancia concreta; un método global describe el comportamiento general del modelo sobre todos los datos.
+    ~Un método local usa menos memoria y un método global requiere GPU.
+    ~Un método global explica casos individuales; un método local describe el comportamiento promedio.
+    ~No hay distinción práctica: ambos producen el mismo tipo de explicación.
+}
+
+::VIS-14:: En LIME (Local Interpretable Model-agnostic Explanations), ¿cómo se genera la explicación de una predicción? {
+    =Se perturba la instancia de entrada, se obtienen las predicciones del modelo original para cada perturbación y se ajusta un modelo simple e interpretable sobre esas predicciones locales.
+    ~Se calcula el gradiente del modelo respecto a la entrada y se visualiza como mapa de calor.
+    ~Se entrena un árbol de decisión global sobre el dataset completo y se extrae la ruta de decisión de la instancia.
+    ~Se compara la predicción con la media del dataset y se identifica qué variables la alejan más de ese valor medio.
+}
+
+::VIS-15:: Los valores de Shapley en SHAP cuantifican la contribución de cada característica asignando: {
+    =La contribución marginal promedio de cada característica sobre todas las posibles coaliciones de características del modelo.
+    ~El gradiente parcial de la función de pérdida respecto a cada característica de entrada.
+    ~La correlación de Pearson entre cada característica y la variable objetivo.
+    ~El coeficiente de regresión logística equivalente más cercano al modelo original.
+}
+
+::VIS-16:: ¿Para qué tipo de modelos está específicamente diseñado Grad-CAM? {
+    =Redes neuronales convolucionales (CNNs), usando los gradientes de la señal de clasificación respecto a los mapas de activación de la última capa convolucional.
+    ~Modelos de regresión lineal, calculando la derivada de la predicción respecto a cada peso.
+    ~Árboles de decisión y random forests, propagando la importancia desde la raíz hasta las hojas.
+    ~Modelos de lenguaje de tipo transformer, visualizando los pesos de atención entre tokens.
+}
+
+::VIS-17:: Un mapa de calor Grad-CAM con activaciones altas en una región indica que: {
+    =Esa región de la imagen tuvo una influencia positiva en la clasificación predicha por el modelo.
+    ~El modelo ha fallado al clasificar esa región y debería ignorarla en futuras predicciones.
+    ~La región contiene el valor de píxel más alto de la imagen.
+    ~El modelo ha asignado una probabilidad baja a esa clase en esa región concreta.
+}
+
+::VIS-18:: ¿Cuál de las siguientes es una limitación conocida de LIME al explicar modelos complejos? {
+    =Las explicaciones pueden ser inestables: distintas ejecuciones con diferentes perturbaciones pueden producir importancias distintas para la misma instancia.
+    ~LIME solo funciona con datos tabulares y no puede aplicarse a texto o imágenes.
+    ~LIME requiere acceso al código fuente del modelo para calcular sus gradientes internos.
+    ~Las explicaciones de LIME son siempre globales y no pueden aplicarse a instancias individuales.
+}

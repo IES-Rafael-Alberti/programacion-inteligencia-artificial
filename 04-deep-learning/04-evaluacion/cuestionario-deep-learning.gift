@@ -1,0 +1,137 @@
+// Cuestionario — UD4 Deep Learning
+// Formato GIFT para importar en Moodle
+// Bloques: Fundamentos (1-5), Backpropagation (6-10), Frameworks y práctica (11-14), Arquitecturas avanzadas (15-18)
+
+// ===== BLOQUE 1: FUNDAMENTOS =====
+
+::DL-01:: ¿Cuál es la principal diferencia entre un perceptrón y una red neuronal multicapa (MLP)? {
+    =El perceptrón tiene una sola capa de pesos y solo puede aprender fronteras de decisión lineales; el MLP tiene capas ocultas y puede aprender representaciones no lineales.
+    ~El perceptrón usa backpropagation y el MLP usa descenso de gradiente.
+    ~El MLP solo puede usarse con datos tabulares; el perceptrón funciona con cualquier tipo de dato.
+    ~No hay diferencia funcional: ambos producen el mismo tipo de separación entre clases.
+}
+
+::DL-02:: ¿Por qué la función de activación ReLU (Rectified Linear Unit) se usa ampliamente en capas ocultas de redes profundas? {
+    =Porque no satura para valores positivos grandes, lo que permite que el gradiente fluya correctamente durante el entrenamiento y reduce el problema de vanishing gradient.
+    ~Porque produce salidas en el rango [0, 1], lo que facilita la interpretación probabilística en capas ocultas.
+    ~Porque su derivada es siempre positiva, lo que garantiza que la red converge en cualquier problema.
+    ~Porque ReLU normaliza automáticamente las activaciones entre -1 y 1 en cada capa.
+}
+
+::DL-03:: En TensorFlow Playground, al aumentar el número de capas ocultas, ¿qué fenómeno es más probable que se observe si los datos de entrenamiento son simples? {
+    =Sobreajuste: la red aprende la distribución de entrenamiento demasiado bien y no generaliza a datos nuevos.
+    ~Subajuste: la red no tiene suficiente capacidad para representar los datos.
+    ~El tiempo de inferencia se reduce proporcionalmente al número de capas.
+    ~La frontera de decisión se vuelve más lineal al añadir capas.
+}
+
+::DL-04:: ¿Qué mide la función de pérdida (loss function) durante el entrenamiento de una red neuronal? {
+    =La discrepancia entre las predicciones del modelo y los valores reales, que el optimizador intenta minimizar.
+    ~La velocidad de convergencia del optimizador en cada época de entrenamiento.
+    ~El número de parámetros activos de la red en cada capa durante el forward pass.
+    ~La similitud entre la arquitectura del modelo y la arquitectura óptima para el problema.
+}
+
+::DL-05:: ¿Cuál de las siguientes afirmaciones sobre el learning rate es correcta? {
+    =Un learning rate demasiado alto puede hacer que el optimizador salte por encima del mínimo y diverja; uno demasiado bajo hace que la convergencia sea extremadamente lenta.
+    ~Un learning rate alto siempre mejora la velocidad de convergencia sin penalizar la precisión final.
+    ~El learning rate solo afecta a la primera capa de la red; el resto de capas se optimizan de forma independiente.
+    ~Un learning rate de 1.0 es el óptimo universal para cualquier red y dataset.
+}
+
+// ===== BLOQUE 2: BACKPROPAGATION =====
+
+::DL-06:: ¿Qué calcula el paso forward (forward pass) en backpropagation? {
+    =Calcula las activaciones capa a capa desde la entrada hasta la salida, obteniendo la predicción y el valor de la pérdida.
+    ~Actualiza los pesos de la red usando los gradientes calculados en el paso anterior.
+    ~Propaga los gradientes desde la capa de salida hacia las capas de entrada para calcular las derivadas parciales.
+    ~Normaliza las activaciones de cada capa para estabilizar el entrenamiento.
+}
+
+::DL-07:: La regla de la cadena (chain rule) es fundamental en backpropagation. ¿Para qué se aplica? {
+    =Para calcular el gradiente de la pérdida respecto a los pesos de capas anteriores, descomponiendo la derivada compuesta capa a capa.
+    ~Para combinar múltiples funciones de pérdida en una sola durante el entrenamiento multi-tarea.
+    ~Para encadenar capas de normalización con capas de activación de forma eficiente.
+    ~Para calcular la precisión acumulada del modelo a lo largo de varias épocas.
+}
+
+::DL-08:: ¿Qué es el problema del gradiente evanescente (vanishing gradient)? {
+    =Cuando los gradientes se vuelven tan pequeños al propagarse hacia las capas iniciales que los pesos de esas capas apenas se actualizan, impidiendo el aprendizaje en redes profundas.
+    ~Cuando el modelo converge demasiado rápido y los gradientes se anulan antes de completar el entrenamiento.
+    ~Cuando la función de pérdida desaparece del grafo de cómputo por un error de implementación.
+    ~Cuando los gradientes crecen exponencialmente y provocan actualizaciones de peso inestables.
+}
+
+::DL-09:: En la actualización de pesos mediante descenso de gradiente estocástico (SGD), ¿qué diferencia hay entre un batch, un mini-batch y un ejemplo (online)? {
+    =Un batch usa todos los datos en cada actualización; un mini-batch usa un subconjunto; online usa un solo ejemplo por actualización. Mini-batch es el equilibrio más usado.
+    ~No hay diferencia práctica: los tres métodos producen el mismo gradiente y actualizan los pesos de igual forma.
+    ~El batch y el mini-batch son equivalentes; online es un método diferente que no usa gradientes.
+    ~Online converge siempre más rápido que mini-batch y batch para cualquier tamaño de dataset.
+}
+
+::DL-10:: ¿Por qué implementar backpropagation desde cero (sin framework) tiene valor pedagógico aunque no se use en producción? {
+    =Porque obliga a comprender con exactitud qué calcula cada paso del algoritmo, qué matrices se multiplican y dónde se aplica la regla de la cadena, sin que el framework lo oculte.
+    ~Porque los frameworks modernos tienen errores en sus implementaciones de backpropagation que solo detecta una implementación manual.
+    ~Porque la implementación desde cero es más eficiente en memoria que la de los frameworks para redes pequeñas.
+    ~Porque permite entrenar modelos sin GPU, lo cual es imposible con frameworks como PyTorch o TensorFlow.
+}
+
+// ===== BLOQUE 3: FRAMEWORKS Y PRÁCTICA =====
+
+::DL-11:: En Keras/TensorFlow, ¿qué hace `model.compile(optimizer, loss, metrics)`? {
+    =Configura el optimizador, la función de pérdida y las métricas de seguimiento que se usarán durante `model.fit()`.
+    ~Crea el grafo computacional y entrena el modelo con los datos proporcionados.
+    ~Guarda el modelo en disco con el optimizador y la función de pérdida como metadatos.
+    ~Define la arquitectura de las capas densas, convolucionales o recurrentes del modelo.
+}
+
+::DL-12:: En PyTorch, ¿por qué es necesario llamar a `optimizer.zero_grad()` antes de calcular los gradientes en cada iteración? {
+    =Porque PyTorch acumula los gradientes por defecto; sin reiniciarlos, los gradientes de iteraciones anteriores se suman a los actuales y corrompen la actualización de pesos.
+    ~Porque `zero_grad()` inicializa los pesos de la red a cero antes de cada iteración.
+    ~Porque reiniciar los gradientes libera la memoria de GPU usada en el forward pass anterior.
+    ~Porque sin esta llamada, PyTorch no puede calcular el backward pass en la iteración siguiente.
+}
+
+::DL-13:: ¿Qué es el dropout como técnica de regularización? {
+    =Consiste en desactivar aleatoriamente una fracción de neuronas durante el entrenamiento en cada forward pass, forzando a la red a aprender representaciones más robustas y menos dependientes de neuronas individuales.
+    ~Es una técnica para reducir el número de parámetros de la red eliminando permanentemente neuronas de baja activación.
+    ~Consiste en normalizar las activaciones de cada capa dividiendo por la desviación estándar del batch actual.
+    ~Es un optimizador adaptativo que ajusta el learning rate por neurona en función de su historial de gradientes.
+}
+
+::DL-14:: ¿Qué problema resuelve la normalización por lotes (Batch Normalization)? {
+    =Estabiliza y acelera el entrenamiento normalizando las activaciones de cada capa dentro de un mini-batch, reduciendo el problema del internal covariate shift.
+    ~Normaliza los datos de entrada al modelo para que todos los features tengan media 0 y varianza 1 antes del primer layer.
+    ~Divide el batch en grupos más pequeños para acelerar el cálculo del gradiente en redes profundas.
+    ~Reduce el sobreajuste penalizando los pesos grandes de la misma forma que la regularización L2.
+}
+
+// ===== BLOQUE 4: ARQUITECTURAS AVANZADAS =====
+
+::DL-15:: ¿Cuál es la operación central de una red neuronal convolucional (CNN) y qué ventaja ofrece respecto a una capa densa para imágenes? {
+    =La convolución: aplica filtros compartidos sobre regiones locales de la entrada, lo que reduce drásticamente el número de parámetros y captura patrones locales independientemente de su posición.
+    ~La atención: pondera cada píxel de la imagen en función de su relevancia global para la clasificación.
+    ~La recurrencia: procesa los píxeles de la imagen secuencialmente para capturar dependencias a larga distancia.
+    ~El pooling: reduce la resolución espacial de la imagen eliminando píxeles redundantes antes de la clasificación.
+}
+
+::DL-16:: ¿Para qué tipo de datos son especialmente adecuadas las redes recurrentes (RNN/LSTM)? {
+    =Para datos secuenciales con dependencias temporales, como texto, audio, series temporales o vídeo, donde el orden de los elementos importa.
+    ~Para imágenes de alta resolución, ya que procesan píxeles en orden y capturan texturas globales.
+    ~Para datos tabulares con muchas variables categóricas que necesitan codificación secuencial.
+    ~Para cualquier problema de clasificación, ya que las RNN son más eficientes que las MLP en todos los casos.
+}
+
+::DL-17:: ¿Qué mecanismo distingue a la arquitectura Transformer de las RNN y CNN? {
+    =La atención multi-cabeza (multi-head attention), que pondera la relevancia entre todos los elementos de la secuencia de forma paralela, sin procesar tokens uno a uno.
+    ~Las conexiones residuales (skip connections), que permiten entrenar redes muy profundas sin gradiente evanescente.
+    ~El uso de convoluciones causales que procesan la secuencia hacia adelante sin ver el futuro.
+    ~Un mecanismo de memoria externa persistente que almacena representaciones de secuencias anteriores.
+}
+
+::DL-18:: En el contexto de los laboratorios de UD4, ¿qué significa "frontera de decisión" (decision boundary)? {
+    =La región del espacio de entrada que el modelo usa para separar las clases: los puntos en un lado se clasifican en una clase y los del otro en otra distinta.
+    ~El umbral de pérdida por encima del cual el modelo deja de entrenarse en TensorFlow Playground.
+    ~El número de épocas a partir del cual el modelo comienza a sobreajustarse.
+    ~La capa final de la red que convierte las activaciones en probabilidades de clase mediante softmax.
+}

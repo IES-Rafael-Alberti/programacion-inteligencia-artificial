@@ -1,7 +1,7 @@
 ---
 title: "Chuleta rápida — Altair · hvPlot · Panel"
 author: "Curso de Especialización en Inteligencia Artificial y Big Data"
-subtitle: "Programación de Inteligencia Artificial — Semana 04"
+subtitle: "Programación de Inteligencia Artificial — Bloque 10"
 date: "2025-11-03"
 geometry: margin=2cm
 output: pdf_document
@@ -10,9 +10,9 @@ fontsize: 11pt
 
 # 🧠 Chuleta rápida: Altair · hvPlot · Panel
 
-> Curso: **Programación de Inteligencia Artificial — Semana 04**  
-> Tema: *Visualización avanzada e interactiva con Altair, hvPlot y Panel*  
-> Dataset: *Online Retail II (UCI)*  
+> Curso: **Programación de Inteligencia Artificial — Bloque 10**
+> Tema: *Visualización avanzada e interactiva con Altair, hvPlot y Panel*
+> Dataset: *Online Retail II (UCI)*
 
 ---
 
@@ -40,7 +40,7 @@ chart = (alt.Chart(df)
 chart
 ```
 
-**Tipos de dato:**  
+**Tipos de dato:**
 `:Q` (numérico) · `:N` (categórico) · `:O` (ordinal) · `:T` (temporal)
 
 ---
@@ -77,7 +77,7 @@ alt.Chart(df.sample(20000)).mark_circle(size=60, opacity=0.5).encode(
 ).add_params(selector).transform_filter(selector).interactive()
 ```
 
-🧭 *Más sobre selecciones avanzadas:*  
+🧭 *Más sobre selecciones avanzadas:*
 [https://altair-viz.github.io/user_guide/interactions.html](https://altair-viz.github.io/user_guide/interactions.html)
 
 ---
@@ -104,7 +104,7 @@ df.hvplot.line(x='Date', y=['Total','MA7'], title='Ventas diarias')
 .opts(width=600, height=300, legend_position='top_left')
 ```
 
-🧭 *Más ejemplos y tipos de gráfico:*  
+🧭 *Más ejemplos y tipos de gráfico:*
 [https://hvplot.holoviz.org/user_guide/Introduction.html](https://hvplot.holoviz.org/user_guide/Introduction.html)
 
 ---
@@ -144,7 +144,7 @@ pn.Tabs(('Ventas', grafico1), ('Países', grafico2))
 dashboard.save('dashboard_ventas.html')
 ```
 
-🧭 *Más sobre layouts y templates:*  
+🧭 *Más sobre layouts y templates:*
 [https://panel.holoviz.org/user_guide/index.html](https://panel.holoviz.org/user_guide/index.html)
 
 ---

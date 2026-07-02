@@ -2,21 +2,21 @@
 
 ## Estructura de la unidad
 
-La unidad se organiza en tres bloques temáticos, cada uno con una semana de trabajo:
+La unidad se organiza en tres bloques temáticos:
 
-### Semana 22 — Segmentación de Imágenes
+### Bloque 78-80 — Segmentación de Imágenes
 - Diferencias entre clasificación, detección y segmentación
 - U-Net: arquitectura encoder-decoder para segmentación semántica
 - Mask R-CNN: segmentación de instancias con PyTorch
 - Métricas: IoU (Intersection over Union) y Dice Score
 
-### Semana 23 — Tracking de Objetos
+### Bloque 81-83 — Tracking de Objetos
 - Detección vs seguimiento en vídeo
 - YOLOv8 en modo tracking
 - Algoritmo SORT (Simple Online and Realtime Tracking)
 - Métricas: MOTA (Multiple Object Tracking Accuracy) y MOTP (Multiple Object Tracking Precision)
 
-### Semana 24 — Explicabilidad (XAI)
+### Bloque 84-86 — Explicabilidad (XAI)
 - Conceptos de caja blanca vs caja negra
 - LIME: explicaciones locales agnósticas al modelo
 - SHAP: valores de Shapley para importancia de variables
@@ -24,11 +24,11 @@ La unidad se organiza en tres bloques temáticos, cada uno con una semana de tra
 
 ## Notebooks asociados
 
-| Semana | Notebooks | Tema |
+| Bloque | Notebooks | Tema |
 |---|---|---|
-| 22 | 78, 79, 80 | U-Net, Mask R-CNN, métricas segmentación |
-| 23 | 81, 82, 83 | YOLOv8 tracking, SORT, métricas tracking |
-| 24 | 84, 85, 86 | LIME, SHAP, Grad-CAM |
+| 78-80 | 78, 79, 80 | U-Net, Mask R-CNN, métricas segmentación |
+| 81-83 | 81, 82, 83 | YOLOv8 tracking, SORT, métricas tracking |
+| 84-86 | 84, 85, 86 | LIME, SHAP, Grad-CAM |
 
 ## RA/CE trabajados
 - **RA2.c**: Definición de arquitecturas de segmentación, tracking y XAI

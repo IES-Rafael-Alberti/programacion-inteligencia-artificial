@@ -8,8 +8,8 @@
 
 ## Documentación relacionada
 
-- 📄 **Teoría de optimizadores** → [`../../../docs/optimizadores/OPTIMIZADORES_Teorico.md`](../../../docs/optimizadores/OPTIMIZADORES_Teorico.md)
-- 📄 **Introducción a Keras** → [`../../../docs/introduccion/UD4_Intro_Keras.md`](../../../docs/introduccion/UD4_Intro_Keras.md)
+- 📄 **Teoría de optimizadores** → [`../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/optimizadores/OPTIMIZADORES_Teorico.md`](../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/optimizadores/OPTIMIZADORES_Teorico.md)
+- 📄 **Introducción a Keras** → [`../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/introduccion/UD4_Intro_Keras.md`](../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/introduccion/UD4_Intro_Keras.md)
 
 ## Notebooks relacionados en otras carpetas
 

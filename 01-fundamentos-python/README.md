@@ -15,7 +15,7 @@ Unidad introductoria que cubre los fundamentos de programación en Python orient
 
 ## Prácticas asociadas
 
-- Ejercicios de Python básico (semanas 1-2): sintaxis, variables, control de flujo, funciones, estructuras de datos
+- Ejercicios de Python básico (bloques iniciales): sintaxis, variables, control de flujo, funciones, estructuras de datos
 - Actividades NumPy: ejercicios guiados de computación numérica
 - Ejercicios NumPy con tests automatizados
 

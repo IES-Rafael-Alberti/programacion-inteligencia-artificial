@@ -1,4 +1,4 @@
-# Semana 23 – Video análisis y seguimiento de objetos
+# Bloque 81-83 – Video análisis y seguimiento de objetos
 
 ## 🎯 Objetivos
 - Comprender la diferencia entre detección en imágenes y **detección + seguimiento en vídeo**.

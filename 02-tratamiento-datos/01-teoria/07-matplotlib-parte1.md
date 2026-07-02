@@ -1,7 +1,7 @@
 ---
 title: "Tutorial de Matplotlib - Parte 1: Principales Gráficas y Parámetros de Configuración"
 author: "Curso de Especialización en Inteligencia Artificial y Big Data"
-subtitle: "Programación de Inteligencia Artificial — Semana 04"
+subtitle: "Programación de Inteligencia Artificial — Bloque 07"
 date: "2025-11-03"
 geometry: margin=2cm
 output: 

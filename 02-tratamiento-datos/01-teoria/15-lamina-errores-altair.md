@@ -1,7 +1,7 @@
 ---
 title: "Errores comunes y checklist rápido de Altair"
 author: "Curso de Especialización en Inteligencia Artificial y Big Data"
-subtitle: "Programación de Inteligencia Artificial — Semana 04"
+subtitle: "Programación de Inteligencia Artificial — Bloque 15"
 date: "2025-11-04"
 geometry: margin=2cm
 output: pdf_document

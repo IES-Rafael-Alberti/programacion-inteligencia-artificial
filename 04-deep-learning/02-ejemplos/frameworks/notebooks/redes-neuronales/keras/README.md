@@ -10,8 +10,8 @@
 
 ## Documentación relacionada
 
-- 📄 **Introducción a Keras** → [`../../../docs/introduccion/UD4_Intro_Keras.md`](../../../docs/introduccion/UD4_Intro_Keras.md)
-- 📄 **Comparativa de frameworks** → [`../../../docs/planificacion/UD4-DeepLearning-ComparativaFrameWorks.md`](../../../docs/planificacion/UD4-DeepLearning-ComparativaFrameWorks.md)
+- 📄 **Introducción a Keras** → [`../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/introduccion/UD4_Intro_Keras.md`](../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/introduccion/UD4_Intro_Keras.md)
+- 📄 **Comparativa de frameworks** → [`../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/planificacion/UD4-DeepLearning-ComparativaFrameWorks.md`](../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/planificacion/UD4-DeepLearning-ComparativaFrameWorks.md)
 
 ## Dataset
 

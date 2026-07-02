@@ -1,4 +1,4 @@
-# Semana 24 – Explicabilidad en modelos de Visión y NLP
+# Bloque 84-86 – Explicabilidad en modelos de Visión y NLP
 
 ## 🎯 Objetivos
 - Comprender la importancia de la **explicabilidad (XAI)** en modelos de IA.

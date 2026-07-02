@@ -4,10 +4,10 @@ Esta documentación compara los algoritmos y la API de **scikit-learn (CPU)** co
 
 ## Navegación rápida
 
-- [Cap. I - Introducción y Conceptos Fundamentales](01-ML-Scikit-CuML-Cap-I.md)
-- [Cap. II - Aprendizaje Supervisado](02-ML-Scikit-CuML-Cap-II.md)
-- [Cap. III - Aprendizaje No Supervisado](03-ML-Scikit-CuML-Cap-III.md)
-- [Cap. IV - Apartados Transversales](04-ML-Scikit-CuML-Cap-IV.md)
+- [Cap. I - Introducción y Conceptos Fundamentales](01-ml-scikit-cuml-capitulo-i.md)
+- [Cap. II - Aprendizaje Supervisado](02-ml-scikit-cuml-capitulo-ii.md)
+- [Cap. III - Aprendizaje No Supervisado](03-ml-scikit-cuml-capitulo-iii.md)
+- [Cap. IV - Apartados Transversales](04-ml-scikit-cuml-capitulo-iv.md)
 
 ## I. Introducción y Conceptos Fundamentales 🚀
 

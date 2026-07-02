@@ -1,4 +1,4 @@
-# Semana 29 – Proyecto integrador
+# Proyecto Integrador GPU — Guía General
 
 ## 🎯 Objetivos
 - Desarrollar un **proyecto grupal** que combine EDA → modelado → despliegue → interfaz/automatización.
@@ -17,9 +17,9 @@
 ---
 
 ## 📂 Notebooks de apoyo
-- `102_project_template.ipynb` → estructura base del proyecto (tabular sintético).
-- `103_dashboard_template.ipynb` → interfaz/demostrador con Gradio.
-- `104_pipeline_template.ipynb` → pipeline ETL (Prefect / Python puro).
+- `01_project_template.ipynb` → estructura base del proyecto (tabular sintético).
+- `02_dashboard_template.ipynb` → interfaz/demostrador con Gradio.
+- `03_pipeline_template.ipynb` → pipeline ETL (Prefect / Python puro).
 
 > Están disponibles en versiones **base**, **soluciones** y **soluciones + autotests**.
 

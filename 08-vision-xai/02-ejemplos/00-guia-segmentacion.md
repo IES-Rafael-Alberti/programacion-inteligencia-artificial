@@ -1,4 +1,4 @@
-# Semana 22 – Segmentación de Imágenes: U-Net y Mask R-CNN
+# Bloque 78-80 – Segmentación de Imágenes: U-Net y Mask R-CNN
 
 ## 🎯 Objetivos
 - Comprender las diferencias entre **clasificación, detección y segmentación**.

@@ -17,7 +17,7 @@ Las soluciones están en `../../99-profesor/nlp-spacy/`.
 
 ## Guía
 
-La guía de semana trasladada desde UD2 está en `../../01-teoria/nlp-docs/003-spacy-guia-semana.md`.
+La guía de spaCy trasladada desde UD2 está en `../../01-teoria/nlp-docs/003-spacy-guia.md`.
 
 ## Encaje curricular
 

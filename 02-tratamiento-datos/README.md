@@ -54,7 +54,7 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 | Pandas / EDA base | `01–03` | Fundamentos, EDA visual, EDA con Pandas |
 | Pandas avanzado | `04–06` | Demo, extendido, gráficos |
 | Matplotlib | `07–10` | Fundamentos, partes 1 y 2, avanzado |
-| Seaborn / EDA aplicada | `11–14` | Spotify, EDA semana 3, House Prices, Titanic |
+| Seaborn / EDA aplicada | `11–14` | Spotify, EDA base, House Prices, Titanic |
 | Visualización interactiva/declarativa | `15–19` | Altair, Plotly, mini EDA, HoloViz/Panel |
 | Alternativas / GPU / SQL local | `20–27` | cuDF, DuckDB, Polars, Pandas vs Polars |
 | Transformaciones | `28` | Transformaciones avanzadas |

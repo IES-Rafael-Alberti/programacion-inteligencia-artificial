@@ -9,9 +9,9 @@
 
 ## Documentación relacionada
 
-- 📄 **Introducción a PyTorch** → [`../../../docs/introduccion/UD4_Intro_PyTorch.md`](../../../docs/introduccion/UD4_Intro_PyTorch.md)
-- 📄 **Dataset y DataLoader en PyTorch** → [`../../../docs/introduccion/UD4_Intro_PyTorch_DataLoader.md`](../../../docs/introduccion/UD4_Intro_PyTorch_DataLoader.md)
-- 📄 **Comparativa de frameworks** → [`../../../docs/planificacion/UD4-DeepLearning-ComparativaFrameWorks.md`](../../../docs/planificacion/UD4-DeepLearning-ComparativaFrameWorks.md)
+- 📄 **Introducción a PyTorch** → [`../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/introduccion/UD4_Intro_PyTorch.md`](../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/introduccion/UD4_Intro_PyTorch.md)
+- 📄 **Dataset y DataLoader en PyTorch** → [`../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/introduccion/UD4_Intro_PyTorch_DataLoader.md`](../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/introduccion/UD4_Intro_PyTorch_DataLoader.md)
+- 📄 **Comparativa de frameworks** → [`../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/planificacion/UD4-DeepLearning-ComparativaFrameWorks.md`](../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/planificacion/UD4-DeepLearning-ComparativaFrameWorks.md)
 
 ## Dataset
 

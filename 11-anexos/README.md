@@ -16,4 +16,4 @@ Material complementario no incluido en las unidades regulares: neuro-simbólica 
 
 ## Pendientes
 - [ ] Evaluar si el material de RL debe integrarse como unidad completa o mantenerse como anexo
-- [ ] Recibir Sem25 de 09-gpu-avanzado/90-archivo cuando esté organizado
+- [ ] Recibir el material histórico de 09-gpu-avanzado/90-archivo cuando esté organizado

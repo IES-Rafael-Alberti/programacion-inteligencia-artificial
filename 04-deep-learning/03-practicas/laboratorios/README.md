@@ -19,7 +19,7 @@ Exploración visual de redes neuronales con [TensorFlow Playground](https://play
 | `TensorFlowPlayGround.org/.tex` | Fuentes del enunciado |
 | `TensorFlowPlayGround-V1.org` | Versión anterior (referencia) |
 
-**Relacionado con:** [`01-fundamentos/`](../01-fundamentos/) — fundamentos de redes, funciones de activación, gradientes.
+**Relacionado con:** [`01-redes-neuronales-genericas/`](../../01-teoria/01-redes-neuronales-genericas/) — fundamentos de redes, funciones de activación, gradientes.
 
 ---
 
@@ -35,7 +35,7 @@ Implementación manual del algoritmo de backpropagation en Python puro, sin fram
 | `backpropagationRNAscratch.py` | Script de referencia (RNA desde cero) |
 | `backPropScratch.py` | Variante simplificada |
 
-**Relacionado con:** [`01-fundamentos/docs/UD4_Capitulo_08_Backpropagation.md`](../01-fundamentos/docs/UD4_Capitulo_08_Backpropagation.md) y scripts en [`01-fundamentos/scripts/`](../01-fundamentos/scripts/).
+**Relacionado con:** [`UD4_Capitulo_08_Backpropagation.md`](../../01-teoria/01-redes-neuronales-genericas/fundamentos-docs/Parte-I-Fundamentos/UD4_Capitulo_08_Backpropagation.md) y scripts en [`fundamentos-scripts/`](../../02-ejemplos/fundamentos-scripts/).
 
 ---
 
@@ -49,7 +49,7 @@ Transición de la experimentación visual en TF Playground a implementación rea
 | `DePlayground_a_CodigoReal-Entrega.md` | Plantilla de entrega |
 | `DePlayground_a_CodigoReal-Rubrica.md` | Rúbrica de evaluación |
 
-**Relacionado con:** [`02-frameworks/`](../02-frameworks/) — implementación con Keras/PyTorch.
+**Relacionado con:** [`frameworks/`](../../02-ejemplos/frameworks/) — implementación con Keras/PyTorch.
 
 ---
 

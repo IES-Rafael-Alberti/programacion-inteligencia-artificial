@@ -5,8 +5,8 @@ Cubre visión por computadora (segmentación U-Net, Mask R-CNN, tracking YOLOv8+
 
 ## Materiales incluidos
 - **01-teoria**: (vacío — la teoría está incorporada en las guías de cada semana)
-- **02-ejemplos**: Sem22 — notebooks de segmentación (UNet, Mask R-CNN, métricas) con soluciones
-- **03-practicas**: Sem23 — notebooks de tracking (YOLOv8, SORT, métricas). Sem24 — notebooks de XAI (LIME texto, SHAP tabular, Grad-CAM CNN)
+- **02-ejemplos**: notebooks 78–80 de segmentación (UNet, Mask R-CNN, métricas) con soluciones
+- **03-practicas**: notebooks 81–83 de tracking (YOLOv8, SORT, métricas) y 84–86 de XAI (LIME texto, SHAP tabular, Grad-CAM CNN)
 - **04-evaluacion**: (pendiente — no hay GIFT en el original)
 - **05-recursos**: (vacío — datasets no incluidos)
 

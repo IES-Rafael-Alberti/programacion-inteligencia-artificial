@@ -24,48 +24,48 @@ Al finalizar la unidad, el alumnado deberá ser capaz de:
 
 | Tema | Archivo | Descripción |
 |------|---------|-------------|
-| Feature Store | [01-feature-store.md](./Documentacion/01-feature-store.md) | Repositorio de variables y features para entrenamiento e inferencia |
-| Compute Cloud | [02-compute-cloud.md](./Documentacion/02-compute-cloud.md) | Infraestructura de ejecución, GPUs y entornos gestionados |
-| MLOps | [03-mlops.md](./Documentacion/03-mlops.md) | Seguimiento de experimentos, registro, despliegue y monitorización |
-| Almacenamiento | [04-almacenamiento-ia.md](./Documentacion/04-almacenamiento-ia.md) | Almacenamiento orientado a datos y artefactos de IA |
+| Feature Store | [01-feature-store.md](./01-feature-store.md) | Repositorio de variables y features para entrenamiento e inferencia |
+| Compute Cloud | [02-compute-cloud.md](./02-compute-cloud.md) | Infraestructura de ejecución, GPUs y entornos gestionados |
+| MLOps | [03-mlops.md](./03-mlops.md) | Seguimiento de experimentos, registro, despliegue y monitorización |
+| Almacenamiento | [04-almacenamiento-ia.md](./04-almacenamiento-ia.md) | Almacenamiento orientado a datos y artefactos de IA |
 
 ### 2. Desarrollo y procesamiento
 
 | Tema | Archivo | Descripción |
 |------|---------|-------------|
-| Frameworks ML | [05-frameworks-ml.md](./Documentacion/05-frameworks-ml.md) | Frameworks y librerías para entrenamiento e inferencia |
-| APIs de LLM | [06-apis-llm.md](./Documentacion/06-apis-llm.md) | Servicios de modelos de lenguaje y embeddings |
-| Orquestación y agentes | [07-orquestacion-agents.md](./Documentacion/07-orquestacion-agents.md) | Frameworks para RAG, cadenas, herramientas y agentes |
-| Herramientas de datos | [08-herramientas-datos.md](./Documentacion/08-herramientas-datos.md) | Librerías y motores para procesamiento de datos |
+| Frameworks ML | [05-frameworks-ml.md](./05-frameworks-ml.md) | Frameworks y librerías para entrenamiento e inferencia |
+| APIs de LLM | [06-apis-llm.md](./06-apis-llm.md) | Servicios de modelos de lenguaje y embeddings |
+| Orquestación y agentes | [07-orquestacion-agents.md](./07-orquestacion-agents.md) | Frameworks para RAG, cadenas, herramientas y agentes |
+| Herramientas de datos | [08-herramientas-datos.md](./08-herramientas-datos.md) | Librerías y motores para procesamiento de datos |
 
 ### 3. Recuperación, evaluación y serving
 
 | Tema | Archivo | Descripción |
 |------|---------|-------------|
-| Bases vectoriales | [09-bases-vectoriales-recuperacion.md](./Documentacion/09-bases-vectoriales-recuperacion.md) | Recuperación semántica, índices y bases vectoriales |
-| Evaluación y observabilidad | [10-evaluacion-observabilidad-llm.md](./Documentacion/10-evaluacion-observabilidad-llm.md) | Calidad, trazas, métricas y análisis de aplicaciones con LLM |
-| Serving de modelos abiertos | [11-serving-modelos-abiertos.md](./Documentacion/11-serving-modelos-abiertos.md) | Despliegue e inferencia de modelos open source |
-| Recuperación avanzada para RAG | [12-recuperacion-avanzada-rag.md](./Documentacion/12-recuperacion-avanzada-rag.md) | Jerarquías documentales, búsqueda híbrida, reranking y PageIndex |
+| Bases vectoriales | [09-bases-vectoriales-recuperacion.md](./09-bases-vectoriales-recuperacion.md) | Recuperación semántica, índices y bases vectoriales |
+| Evaluación y observabilidad | [10-evaluacion-observabilidad-llm.md](./10-evaluacion-observabilidad-llm.md) | Calidad, trazas, métricas y análisis de aplicaciones con LLM |
+| Serving de modelos abiertos | [11-serving-modelos-abiertos.md](./11-serving-modelos-abiertos.md) | Despliegue e inferencia de modelos open source |
+| Recuperación avanzada para RAG | [12-recuperacion-avanzada-rag.md](./12-recuperacion-avanzada-rag.md) | Jerarquías documentales, búsqueda híbrida, reranking y PageIndex |
 
 ### 4. Material de apoyo para clase
 
 | Tema | Archivo | Descripción |
 |------|---------|-------------|
-| Ejemplos de stacks | [13-ejemplos-stacks-ia.md](./Documentacion/13-ejemplos-stacks-ia.md) | Combinaciones típicas de herramientas para proyectos de IA |
-| Guion de clase final | [14-guion-clase-recuperacion-stacks.md](./Documentacion/14-guion-clase-recuperacion-stacks.md) | Propuesta de 1-2 sesiones para contextualizar herramientas y stacks |
-| Demo RAG sencillo | [15-demo-rag-sencillo.md](./Demos/15-demo-rag-sencillo.md) | Guion técnico de una demo breve de RAG para clase |
-| Notebook-esqueleto | [16-demo-rag-sencillo.ipynb.md](./Demos/16-demo-rag-sencillo.ipynb.md) | Base de notebook o script para la demo de clase |
-| Demo RAG con Ollama | [17-demo-rag-ollama.md](./Demos/17-demo-rag-ollama.md) | Variante local de la demo para usar modelos elegidos por el alumnado |
-| Demo RAG con PageIndex | [18-demo-pageindex-rag.md](./Demos/18-demo-pageindex-rag.md) | Alternativa a chunking para documentos largos y estructurados |
-| Notebook PageIndex | [18-demo-pageindex-rag.ipynb.md](./Demos/18-demo-pageindex-rag.ipynb.md) | Guion por celdas para explicar recuperación estructurada |
-| Chuleta Ollama | [19-chuleta-modelos-ollama.md](./Documentacion/19-chuleta-modelos-ollama.md) | Guía rápida para elegir modelos según el equipo disponible |
+| Ejemplos de stacks | [13-ejemplos-stacks-ia.md](./13-ejemplos-stacks-ia.md) | Combinaciones típicas de herramientas para proyectos de IA |
+| Guion de clase final | [14-guion-clase-recuperacion-stacks.md](./14-guion-clase-recuperacion-stacks.md) | Propuesta de 1-2 sesiones para contextualizar herramientas y stacks |
+| Demo RAG sencillo | [15-demo-rag-sencillo.md](../02-ejemplos/15-demo-rag-sencillo.md) | Guion técnico de una demo breve de RAG para clase |
+| Notebook-esqueleto | [16-demo-rag-sencillo.ipynb.md](../02-ejemplos/16-demo-rag-sencillo.ipynb.md) | Base de notebook o script para la demo de clase |
+| Demo RAG con Ollama | [17-demo-rag-ollama.md](../02-ejemplos/17-demo-rag-ollama.md) | Variante local de la demo para usar modelos elegidos por el alumnado |
+| Demo RAG con PageIndex | [18-demo-pageindex-rag.md](../02-ejemplos/18-demo-pageindex-rag.md) | Alternativa a chunking para documentos largos y estructurados |
+| Notebook PageIndex | [18-demo-pageindex-rag.ipynb.md](../02-ejemplos/18-demo-pageindex-rag.ipynb.md) | Guion por celdas para explicar recuperación estructurada |
+| Chuleta Ollama | [19-chuleta-modelos-ollama.md](./19-chuleta-modelos-ollama.md) | Guía rápida para elegir modelos según el equipo disponible |
 
 ### 5. Actividad y evaluación
 
 | Tema | Archivo | Descripción |
 |------|---------|-------------|
-| Tarea | [tarea-comparativa-herramientas.md](./Tareas/tarea-comparativa-herramientas.md) | Instrucciones de la actividad individual y grupal |
-| Rúbrica | [rubrica-tarea.md](./Tareas/rubrica-tarea.md) | Criterios de evaluación |
+| Tarea | [tarea-comparativa-herramientas.md](../03-practicas/tarea-comparativa-herramientas.md) | Instrucciones de la actividad individual y grupal |
+| Rúbrica | [rubrica-tarea.md](../03-practicas/rubrica-tarea.md) | Criterios de evaluación |
 
 ---
 
