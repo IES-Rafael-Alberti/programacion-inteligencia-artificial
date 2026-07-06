@@ -174,7 +174,7 @@ Decisión recomendada:
 
 ## Pendiente transversal añadido — 2026-07-05
 
-- Valorar ampliación de R en UD2 (`02-tratamiento-datos`) para análisis estadístico, visualización y EDA. Debe plantearse como complemento/itinerario alternativo, no como sustitución del eje Python/pandas/scikit-learn.
+- **Resuelto 2026-07-06**: R queda como itinerario opcional en `02-tratamiento-datos/03-practicas/r_exercises_titanic_with_tests/`, centrado en Titanic y comparación Pandas ↔ dplyr. No sustituye el eje Python/pandas/scikit-learn.
 
 ## Revisión específica — `euromillones` — 2026-07-05
 

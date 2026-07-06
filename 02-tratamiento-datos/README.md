@@ -14,7 +14,8 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 | Complementos | Plotly, Altair, hvPlot, Panel | Interactividad y visualización declarativa |
 | Alternativas a Pandas | Polars, DuckDB | Rendimiento, lazy execution y SQL local |
 | Avanzado | cuDF/RAPIDS | DataFrames con GPU NVIDIA/CUDA |
-| Anexos/archivo | FireDucks, R, NLTK antiguo | Referencia histórica o curiosidad técnica |
+| Itinerario opcional | R / dplyr | Ampliación para comparar con Pandas sin desplazar el eje Python |
+| Anexos/archivo | FireDucks, NLTK antiguo, R histórico | Referencia histórica o curiosidad técnica |
 
 ## Estructura
 
@@ -24,8 +25,8 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 02-ejemplos/       → Notebooks de Pandas, EDA, cuDF, Matplotlib, Plotly,
 │                    Altair, Seaborn, Polars y semanas guiadas
 03-practicas/      → Ejercicios alumno: EDA visual, Pandas seleccionados,
-│                    R Titanic alumno y zips de apoyo
-04-evaluacion/     → Pendiente de incorporar
+│                    itinerario opcional R/Titanic y zips de apoyo
+04-evaluacion/     → Rúbrica, checklist y cuestionario base
 05-recursos/       → Datasets, gráficos demo, chuletas y comparativas EDA
 90-archivo/        → NLP_old, alternativas-R, ud3-content, fireducks
 99-profesor/       → Soluciones de prácticas y ejemplos
@@ -63,7 +64,7 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 
 - `EDA_Visual_Practicas.ipynb` — práctica integrada de visualización.
 - `ejercicios_seleccionados/` — 10 ejercicios de Pandas con datasets.
-- `r_exercises_titanic_with_tests/` — ejercicios R para alumnado; versiones profesor en `99-profesor/practicas/`.
+- `r_exercises_titanic_with_tests/` — itinerario opcional R/Titanic para comparar Pandas ↔ dplyr; versiones profesor en `99-profesor/practicas/`.
 - Zips de apoyo para ejercicios Pandas/Polars/R.
 
 ## 05-recursos/
@@ -78,7 +79,7 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 Material conservado fuera del flujo principal:
 
 - `NLP_old/` — material antiguo de NLTK.
-- `alternativas-R/` — notebooks y chuletas de R.
+- `alternativas-R/` — material histórico de R no activo salvo revisión docente explícita.
 - `ud3-content/` — documento de UD3 archivado aquí.
 - `fireducks/` — FireDucks como curiosidad técnica, no alternativa central.
 

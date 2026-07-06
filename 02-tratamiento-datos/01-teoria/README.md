@@ -36,7 +36,7 @@
 - Los documentos **06–08** son tres enfoques de Matplotlib: fundamentos (`06`), tutorial parte 1 (`07`) y parte 2 (`08`). No son excluyentes.
 - **10** documenta Altair y hvPlot; los ejemplos `15_altair_chuleta.ipynb` y `16_altair_online_retail.ipynb` los complementan, pero no sustituyen a Matplotlib/Seaborn/Plotly.
 - Las guías **16–19** son material de planificación docente, no teoría de alumno.
-- El contenido archivado de R está en `../90-archivo/alternativas-R/`.
+- R queda como itinerario opcional de práctica en `../03-practicas/r_exercises_titanic_with_tests/`; el material histórico adicional está en `../90-archivo/alternativas-R/`.
 - FireDucks queda archivado en `../90-archivo/fireducks/` como curiosidad técnica.
 - spaCy/NLP se trasladó a `../../04-deep-learning/02-ejemplos/nlp-spacy/`.
 - Las soluciones de ejemplos y prácticas están en `../99-profesor/`.

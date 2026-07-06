@@ -1,6 +1,6 @@
 # 🧩 **Chuleta R para estudiantes que vienen de Python (Pandas → dplyr)**
 
-*(Edición compacta yorientada a los ejercicios con Titanic)*
+*(Edición compacta y orientada a los ejercicios con Titanic)*
 
 ---
 

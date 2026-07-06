@@ -8,6 +8,12 @@
 - [ ] Se usan joins, groupby o agregaciones cuando procede.
 - [ ] El resultado es reproducible y está ordenado.
 
+## Si se usa el itinerario R
+
+- [ ] Se compara explícitamente la operación en R con el concepto equivalente trabajado en Pandas.
+- [ ] No se exige R como sustituto del flujo principal salvo indicación expresa del profesorado.
+- [ ] La entrega incluye explicación de decisiones, no sólo código ejecutado.
+
 ## Para el profesorado
 
 - [ ] La actividad encaja con la base de evaluación.

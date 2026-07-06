@@ -337,7 +337,7 @@ Los datos locales de Kaggle, vino y cacao no se versionan; quedan fuera de Git.
 
 ## Pendiente docente transversal — R en UD2 — 2026-07-05
 
-Se anota como pendiente valorar una ampliación de R en `02-tratamiento-datos`, especialmente para análisis estadístico, visualización y EDA. Debe quedar como complemento o itinerario alternativo sin desplazar el eje principal Python/pandas/scikit-learn.
+Resuelto el 2026-07-06: R queda como itinerario opcional en `02-tratamiento-datos/03-practicas/r_exercises_titanic_with_tests/`, especialmente para análisis estadístico, visualización y EDA. Se mantiene como complemento sin desplazar el eje principal Python/pandas/scikit-learn.
 
 ### 2026-07-05 — Cierre del residuo `modelado-avanzado-docs/`
 
