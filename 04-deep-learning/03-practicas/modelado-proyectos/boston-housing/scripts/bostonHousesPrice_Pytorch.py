@@ -1,3 +1,4 @@
+from pathlib import Path
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -8,8 +9,10 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error
 
 # Cargar el dataset
+DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "housing.csv"
+
 column_names = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV']
-df = pd.read_csv("housing.csv", delimiter=r"\s+", header=None, names=column_names)
+df = pd.read_csv(DATA_PATH, delimiter=r"\s+", header=None, names=column_names)
 
 # Separar variables predictoras y objetivo
 X = df.drop(columns=['MEDV']).values

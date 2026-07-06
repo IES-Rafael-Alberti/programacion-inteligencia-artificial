@@ -17,6 +17,7 @@
 
 
 # Import required libraries
+from pathlib import Path
 import pandas as pd
 import numpy as np 
 import matplotlib.pyplot as plt
@@ -31,8 +32,10 @@ from keras.models import Sequential
 from keras.layers import Dense
 
 #Ponemos nombre a las columnas y cargamos el dataset
+DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "housing.csv"
+
 column_names = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV']
-df = pd.read_csv("housing.csv",  delimiter=r"\s+", header=None, names=column_names)
+df = pd.read_csv(DATA_PATH,  delimiter=r"\s+", header=None, names=column_names)
 print(df.shape)
 df.describe()
 #Ponemos com target la columna MEDV
@@ -68,4 +71,4 @@ pred_train= model.predict(X_train)
 print(np.sqrt(mean_squared_error(y_train,pred_train)))
 #Test
 pred= model.predict(X_test)
-print(np.sqrt(mean_squared_error(y_test,pred))) 
+print(np.sqrt(mean_squared_error(y_test,pred)))

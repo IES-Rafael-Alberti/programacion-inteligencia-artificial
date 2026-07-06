@@ -1,3 +1,4 @@
+from pathlib import Path
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -9,8 +10,10 @@ from sklearn.pipeline import Pipeline
 from sklearn.base import BaseEstimator, RegressorMixin
 from sklearn.metrics import mean_squared_error
 
+DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "housing.csv"
+
 # Cargar el dataset
-dataframe = pd.read_csv("housing.csv", delim_whitespace=True, header=None)
+dataframe = pd.read_csv(DATA_PATH, delimiter=r"\s+", header=None)
 dataset = dataframe.values
 
 # Separar variables predictoras y objetivo

@@ -1,3 +1,4 @@
+from pathlib import Path
 from pandas import read_csv
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
@@ -6,8 +7,10 @@ from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import KFold
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
+DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "housing.csv"
+
 # load dataset
-dataframe = read_csv("housing.csv", delim_whitespace=True, header=None)
+dataframe = read_csv(DATA_PATH, delimiter=r"\s+", header=None)
 dataset = dataframe.values
 # split into input (X) and output (Y) variables
 X = dataset[:,0:13]
