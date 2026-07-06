@@ -170,7 +170,7 @@ Decisión recomendada:
 - Cacao Flavors movido a `02-tratamiento-datos/05-recursos/datasets/cacao-flavors/`.
 - Notebook R movido a `02-tratamiento-datos/90-archivo/alternativas-R/house-prices-r/`.
 - Notebook de prueba pandas/vino movido a `02-tratamiento-datos/90-archivo/pandas-wine-reviews/`.
-- Pendiente posible: valorar si se amplía R en UD2 para análisis estadístico y visualización EDA.
+- Resuelto 2026-07-06: R queda ampliado en UD2 como itinerario opcional R/Titanic con tidyverse, entrega y rúbrica; queda sólo probar ejecución completa en entorno R antes de aula.
 
 ## Pendiente transversal añadido — 2026-07-05
 
