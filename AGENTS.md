@@ -8,6 +8,19 @@ Después de cualquier cambio significativo, revisión, decisión docente, limpie
 
 No se debe responder que una tarea está terminada si antes no se ha comprobado si procede actualizar esta hoja de ruta.
 
+## Regla anti-pendientes obsoletos
+
+Cuando una tarea, pendiente o decisión quede resuelta, hay que marcarla como hecha inmediatamente en `ESTADO_ACTUAL_Y_PENDIENTES.md`, antes de empezar otro bloque de trabajo.
+
+La actualización debe incluir, cuando proceda:
+
+- cambiar `[ ]` o `[~]` a `[x]`;
+- sustituir textos antiguos tipo "queda pendiente" por el estado real;
+- mover la acción fuera de "Próximas acciones sugeridas" si ya se ha completado;
+- dejar sólo pendientes reales, no históricos ya cerrados.
+
+Si se detecta una contradicción entre una sección antigua y una sección nueva de la hoja de ruta, corregirla en el mismo turno. No se debe dejar una tarea hecha marcada como pendiente.
+
 ## Qué debe anotarse
 
 - Qué se ha hecho.
