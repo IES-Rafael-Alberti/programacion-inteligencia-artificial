@@ -16,6 +16,7 @@ Por eso, la hoja principal para evaluación es **Registro_CE**, no `Registro_Not
 - **Resumen_CE**: medias por alumno y CE calculadas desde `Registro_CE`.
 - **Registro_Notas**: hoja auxiliar para una nota global de actividad si se necesita internamente. No debe sustituir a la calificación por CE.
 - **RA_CE**: texto de referencia de resultados de aprendizaje y criterios de evaluación.
+- **Prueba_CE**: ejemplo cerrado con 2 alumnos ficticios y 2 actividades para comprobar el flujo de calificación por CE antes de usar datos reales.
 - **Listas**: estados normalizados para evitar anotaciones inconsistentes.
 
 ## Uso recomendado
@@ -26,6 +27,7 @@ Por eso, la hoja principal para evaluación es **Registro_CE**, no `Registro_Not
 4. Usar `Peso CE %` si una actividad reparte varios CE con pesos diferentes.
 5. En **Resumen_CE**, copiar el nombre del alumno en las filas de los CE que se quieran consultar.
 6. Usar `Registro_Notas` sólo como apoyo interno cuando interese conservar una nota global de práctica.
+7. Revisar **Prueba_CE** como ejemplo de comprobación: una práctica puede repartir peso entre varios CE y otra puede cubrir un CE completo.
 
 ## Relación con la trazabilidad RA/CE
 
