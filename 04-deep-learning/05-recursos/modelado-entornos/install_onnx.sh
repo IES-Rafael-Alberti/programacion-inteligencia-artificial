@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 # Instalación de entorno para ONNX (Deployment)
 # Uso: bash install_onnx.sh
@@ -9,6 +10,7 @@ echo "Creando entorno conda para ONNX..."
 conda create -n dl_onnx python=3.11 -y
 
 # Activar entorno
+source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate dl_onnx
 
 # Instalar ONNX y ONNX Runtime

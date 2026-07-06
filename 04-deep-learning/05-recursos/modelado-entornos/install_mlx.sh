@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 # Instalación de entorno para MLX (Apple Silicon)
 # Uso: bash install_mlx.sh
@@ -16,6 +17,7 @@ fi
 conda create -n dl_mlx python=3.11 -y
 
 # Activar entorno
+source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate dl_mlx
 
 # Instalar MLX

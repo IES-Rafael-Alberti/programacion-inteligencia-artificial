@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 # Instalación de entorno para TensorFlow (standalone)
 # Uso: bash install_tensorflow.sh
@@ -9,6 +10,7 @@ echo "Creando entorno conda para TensorFlow..."
 conda create -n dl_tensorflow python=3.11 -y
 
 # Activar entorno
+source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate dl_tensorflow
 
 # Instalar TensorFlow (CPU o GPU)

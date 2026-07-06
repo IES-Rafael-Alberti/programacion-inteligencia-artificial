@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 # Instalación de entorno para Deep Learning con PyTorch
 # Uso: bash install_pytorch.sh
@@ -9,6 +10,7 @@ echo "Creando entorno conda para PyTorch..."
 conda create -n dl_pytorch python=3.11 -y
 
 # Activar entorno
+source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate dl_pytorch
 
 # Instalar PyTorch

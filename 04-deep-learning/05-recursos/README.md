@@ -21,10 +21,11 @@ Ya no conserva como recursos activos:
 
 | Ruta | Uso |
 |---|---|
-| `modelado-datos/` | Datos usados por prácticas o ejemplos de modelado pendientes de revisión. |
-| `modelado-entornos/` | Entornos y scripts de instalación asociados a frameworks de deep learning. |
+| `modelado-datos/` | Datos tabulares de apoyo. `blackfriday/` queda documentado como recurso local opcional, no evaluable por defecto. |
+| `modelado-entornos/` | Plantillas de instalación para frameworks de deep learning; revisadas como apoyo docente, no receta obligatoria. |
 
 ## Pendientes
 
-- Revisar `modelado-datos/` para decidir qué se mantiene en UD4, qué pasa a UD3 y qué se archiva.
-- Revisar `modelado-entornos/` para eliminar entornos obsoletos o duplicados.
+- `modelado-datos/blackfriday/` queda revisado como recurso local opcional de regresión tabular; no se enlaza a evaluación hasta crear práctica específica.
+- `modelado-entornos/` queda revisado como colección de plantillas docentes; probar en hardware real antes de usar en clase.
+- `captura.mp4` se archiva fuera del flujo activo porque no tiene referencias docentes.

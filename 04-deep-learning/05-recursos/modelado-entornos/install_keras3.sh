@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 # Instalación de entorno para Keras 3 (multi-backend)
 # Uso: bash install_keras3.sh
@@ -9,10 +10,11 @@ echo "Creando entorno conda para Keras 3..."
 conda create -n dl_keras3 python=3.11 -y
 
 # Activar entorno
+source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate dl_keras3
 
 # Instalar Keras 3 y backends
-pip install keras>=3.0
+pip install "keras>=3.0"
 pip install tensorflow
 pip install torch
 pip install jax jaxlib flax optax

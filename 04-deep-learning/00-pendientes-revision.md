@@ -39,9 +39,9 @@ El residuo de `01-teoria/01-redes-neuronales-genericas/modelado-avanzado-docs/` 
 
 | Ruta | Qué contiene | Duda | Opciones razonables | Recomendación provisional |
 |---|---|---|---|---|
-| `05-recursos/modelado-datos/blackfriday/` | Dataset Black Friday. | Se usó en una tarea de regresión con redes neuronales. | Mantener en UD4 · enlazar desde la práctica correspondiente. | Mantener como recurso UD4 y documentar el enlace con la tarea de regresión NN. |
-| `05-recursos/modelado-entornos/` | Entornos y scripts de instalación de frameworks. | Puede haber duplicados u obsoletos. | Mantener depurado · archivar scripts antiguos. | Revisar después de cerrar teoría/frameworks. |
-| `05-recursos/captura.mp4` | Vídeo/captura. | No está claro su uso. | Mantener si está referenciado · archivo · eliminar si generado. | Buscar referencias antes de decidir. |
+| `05-recursos/modelado-datos/blackfriday/` | Dataset Black Friday local (`blkfri_train.csv`, `blkfri_test.csv`). | **Resuelto 2026-07-06**: no hay práctica activa enlazada; los CSV están ignorados por Git. | Mantener en UD4 como recurso opcional · no enlazar evaluación sin enunciado. | Hecho: añadido README; si se reactiva, preparar práctica reproducible con baseline y métricas de regresión. |
+| `05-recursos/modelado-entornos/` | Entornos y scripts de instalación de frameworks. | **Resuelto 2026-07-06**: plantillas útiles pero no recetas verificadas de aula. | Mantener en UD4 como apoyo docente. | Hecho: añadido README, `set -euo pipefail`, activación robusta de conda, comillas en `keras>=3.0` y canal `nvidia` en `environment.yml`. |
+| `05-recursos/captura.mp4` | Vídeo/captura sin referencia activa. | **Resuelto 2026-07-06**: no aparece enlazado desde materiales activos. | Archivar, no eliminar. | Movido a `90-archivo/recursos/captura.mp4`. |
 
 ## Pendientes en evaluación
 
@@ -62,7 +62,7 @@ Revisar primero `03-practicas/modelado-proyectos/`, porque define qué debe cons
 - Los ficheros `.org` no se eliminan: pueden ser fuentes originales no migradas a Markdown.
 - `LSTM`/RNN debe mantener una introducción en UD4, continuar en NLP y cerrarse en series temporales.
 - `PyCaret` pertenece a AutoML; si está dentro de `used-cars`, debe separarse del bloque DL.
-- `blackfriday` se conserva como recurso de regresión con redes neuronales.
+- `blackfriday` se conserva como recurso local opcional de regresión tabular con redes neuronales; no es práctica canónica evaluable mientras no tenga enunciado reproducible.
 
 ## Revisión específica — `used-cars` — 2026-07-04
 

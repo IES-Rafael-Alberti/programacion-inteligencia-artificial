@@ -1,6 +1,7 @@
 name: deep_learning_all
 channels:
   - pytorch
+  - nvidia
   - conda-forge
   - defaults
 dependencies:

@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 # Instalación de entorno para JAX (Flax/Equinox)
 # Uso: bash install_jax.sh
@@ -9,6 +10,7 @@ echo "Creando entorno conda para JAX..."
 conda create -n dl_jax python=3.11 -y
 
 # Activar entorno
+source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate dl_jax
 
 # Instalar JAX (CPU o GPU)
