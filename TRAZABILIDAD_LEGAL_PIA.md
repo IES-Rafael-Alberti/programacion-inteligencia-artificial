@@ -4,6 +4,12 @@ Este documento recoge una evidencia rápida de alineación entre los resultados 
 
 Su objetivo es defensivo y operativo: demostrar que el curso cubre lo exigido por la normativa, aunque los materiales estén actualizados respecto a los índices editoriales disponibles.
 
+## Fuente normativa verificada
+
+- Real Decreto 279/2021, de 20 de abril, BOE-A-2021-7686.
+- Módulo 5073: Programación de Inteligencia Artificial.
+- Revisión detallada: [`REVISION_COBERTURA_REAL_DECRETO_PIA.md`](REVISION_COBERTURA_REAL_DECRETO_PIA.md).
+
 ## Veredicto rápido
 
 El curso está **alineado con los RA/CE del módulo** y, en varios bloques, supera la cobertura que sugieren los índices editoriales revisados.
