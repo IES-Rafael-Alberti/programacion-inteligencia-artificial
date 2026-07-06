@@ -92,6 +92,7 @@ Thumbs.db
 *.csv
 *.tsv
 *.xlsx
+!TRAZABILIDAD_CALIFICACIONES_RA_CE.xlsx
 *.xls
 *.jsonl
 *.sqlite
@@ -143,3 +144,12 @@ models/
 **/lightning_logs/
 *.log
 events.out.tfevents*
+
+# Small teaching dataset kept for reproducible Boston Housing scripts
+!04-deep-learning/03-practicas/modelado-proyectos/boston-housing/data/
+!04-deep-learning/03-practicas/modelado-proyectos/boston-housing/data/housing.csv
+
+# UD4 curated historical archive kept after modelado-avanzado cleanup
+!04-deep-learning/90-archivo/
+!04-deep-learning/90-archivo/modelado-avanzado-docs/
+!04-deep-learning/90-archivo/modelado-avanzado-docs/**
