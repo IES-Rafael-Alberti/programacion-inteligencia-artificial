@@ -93,6 +93,7 @@ Thumbs.db
 *.tsv
 *.xlsx
 !TRAZABILIDAD_CALIFICACIONES_RA_CE.xlsx
+!SEGUIMIENTO_CURSO_PIA.xlsx
 *.xls
 *.jsonl
 *.sqlite
