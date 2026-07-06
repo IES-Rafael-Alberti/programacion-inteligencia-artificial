@@ -81,4 +81,4 @@ No conviene evaluarlo con un examen de sintaxis. Debe evaluarse con una entrega 
 
 ## Estado
 
-Implementación mínima aplicada en `03-practicas/r_exercises_titanic_with_tests/`: carga, filtrado, transformación, agrupación, joins, fechas, visualización, mini-EDA y comparativa Pandas ↔ dplyr. Queda pendiente probar ejecución real en un entorno R si se va a usar en clase.
+Implementación mínima aplicada en `03-practicas/r_exercises_titanic_with_tests/`: carga, filtrado, transformación, agrupación, joins, fechas, visualización, mini-EDA, entrega y comparativa Pandas ↔ dplyr. Se añade rúbrica específica en `04-evaluacion/rubrica-itinerario-r.md`. Las soluciones de profesor se han actualizado localmente en `99-profesor/practicas/`, pero esa carpeta está ignorada por Git. Queda pendiente probar ejecución real en un entorno R si se va a usar en clase.

@@ -21,6 +21,7 @@ Este bloque permite trabajar los mismos conceptos de tratamiento de datos desde 
    - `04_TimeSeries_R_alumnos.Rmd`
    - `05_Visualization_R_alumnos.Rmd`
    - `06_comparativa_pandas_dplyr.md`
+   - `07_entrega_itinerario_R.md`
 3. Comparar cada operación con su equivalente en Pandas.
 4. Evaluar sólo si el profesorado decide activar este itinerario.
 
