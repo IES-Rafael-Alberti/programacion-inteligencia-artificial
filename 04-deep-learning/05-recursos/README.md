@@ -1,63 +1,30 @@
-# UD4 — Redes Neuronales: Fundamentos, Práctica y Modelado Avanzado
+# UD4 — Recursos de Deep Learning base
 
-Módulo de **Programación de Inteligencia Artificial** — IES Rafael Alberti 2025/26.
+Recursos complementarios de la unidad **04 - Deep Learning** tras la separación de visión, NLP y series temporales.
 
----
+## Frontera actual
 
-## Estructura general
+UD4 conserva recursos relacionados con:
 
-```
-UD4/
-├── 01-teoria/            Teoría organizada por bloques
-├── 02-ejemplos/          Ejemplos, notebooks y scripts
-├── 03-practicas/         Laboratorios y tareas
-├── 04-evaluacion/        Rúbrica, checklist y cuestionario
-└── 05-recursos/          Recursos complementarios
-```
+- fundamentos de redes neuronales;
+- frameworks de deep learning;
+- modelado base;
+- entornos de trabajo para Keras, PyTorch, JAX, TensorFlow, Lightning, ONNX o MLX cuando correspondan al bloque base.
 
----
+Ya no conserva como recursos activos:
 
-## Bloques
+- datasets de visión → `08-vision-xai/05-recursos/`;
+- recursos NLP → `06-llm-agentes/05-recursos/`;
+- material de series temporales → `10-series-temporales/`.
 
-### 01 · Fundamentos ([`01-redes-neuronales-genericas/`](../01-teoria/01-redes-neuronales-genericas/))
+## Estructura
 
-Teoría completa de deep learning desde cero:
-- Capítulos 01–08: introducción, perceptrones, activaciones, pérdida, optimización, backpropagation, regularización, hiperparámetros
-- Scripts de generación de imágenes y animaciones
-- Notebooks de visualización del gradiente y fundamentos visuales
+| Ruta | Uso |
+|---|---|
+| `modelado-datos/` | Datos usados por prácticas o ejemplos de modelado pendientes de revisión. |
+| `modelado-entornos/` | Entornos y scripts de instalación asociados a frameworks de deep learning. |
 
-### 02 · Frameworks ([`frameworks/`](../02-ejemplos/frameworks/))
+## Pendientes
 
-Implementación de redes neuronales con los tres frameworks principales:
-- Keras: clasificación binaria y multiclase (FashionMNIST)
-- PyTorch: mismo problema, training loop manual
-- JAX: enfoque funcional, Equinox
-- Optimizadores comparados en los tres frameworks
-
-### 03 · Laboratorios ([`laboratorios/`](../03-practicas/laboratorios/))
-
-Laboratorios evaluables con enunciado, rúbrica y plantilla de entrega:
-
-| Lab | Título | Materiales |
-|-----|--------|------------|
-| 1 | TF Playground — exploración visual de redes | enunciado, rúbrica, notebook |
-| 2 | Backpropagation desde cero | enunciado, rúbrica, scripts Python |
-| 3 | De Playground a código real | enunciado, rúbrica |
-
-### 04 · Modelado avanzado ([`02-redes-neuronales-vision/`](../01-teoria/02-redes-neuronales-vision/) y [`03-redes-neuronales-nlp/`](../01-teoria/03-redes-neuronales-nlp/))
-
-Módulo extenso con temas avanzados y proyectos reales:
-- **Vision**: CNN, detección de objetos (YOLO, Faster R-CNN), segmentación de tumores
-- **NLP**: embeddings, Transformers (teoría + notebooks + tareas)
-- **Proyectos**: Boston Housing, House Prices (Kaggle), Used Cars, Euromillones
-- **Docs**: frameworks, conceptos, métricas, teoría, libros (15+ PDFs)
-- **Tareas** evaluables, **entornos** conda/pip
-
----
-
-## Progresión pedagógica
-
-```
-01-teoria  →  02-ejemplos/frameworks  →  03-practicas/laboratorios  →  bloques de visión/NLP
-   (teoría)          (código)          (evaluación)          (profundización)
-```
+- Revisar `modelado-datos/` para decidir qué se mantiene en UD4, qué pasa a UD3 y qué se archiva.
+- Revisar `modelado-entornos/` para eliminar entornos obsoletos o duplicados.

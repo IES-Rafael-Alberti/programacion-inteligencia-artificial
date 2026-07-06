@@ -1,32 +1,37 @@
-# UD4 · Deep Learning
+# UD4 · Teoría de Deep Learning base
 
-Módulo de **Programación de Inteligencia Artificial** — IES Rafael Alberti 2026/27.
+Esta carpeta contiene la teoría que permanece en UD4 tras separar visión, NLP y series temporales hacia sus unidades naturales.
 
----
+## Frontera de UD4
 
-## Estructura del directorio
+UD4 cubre:
 
-```
+- fundamentos de redes neuronales;
+- tensores, activaciones y funciones de pérdida;
+- gradiente descendente y backpropagation;
+- frameworks base de deep learning;
+- métricas y generalización;
+- material de modelado avanzado sólo cuando refuerza el núcleo de deep learning;
+- una introducción conceptual breve a RNN/LSTM como puente hacia UD6 y UD10.
+
+No cubre ya como bloque activo:
+
+- visión aplicada, YOLO, transfer learning y datasets de imagen: `08-vision-xai/`;
+- NLP, embeddings, transformers, BERT y spaCy: `06-llm-agentes/`;
+- series temporales: `10-series-temporales/`.
+
+## Estructura actual
+
+```text
 01-teoria/
-├── 01-redes-neuronales-genericas/
-│   ├── fundamentos-docs/
-│   ├── frameworks-docs/
-│   ├── modelado-avanzado-docs/
-│   └── vision-teoria/
-├── 02-redes-neuronales-vision/
-│   ├── vision/                     Materiales de visión por computador
-│   └── yolo/                       Materiales YOLO v11
-└── 03-redes-neuronales-nlp/
-    ├── nlp-docs/
-    ├── nlp-libros/
-    └── nlp-transformers/
+├── 01-fundamentos-redes-neuronales/
+│   ├── Parte-I-Fundamentos/
+│   └── Parte-II-RedesEspecializadas/
+├── 02-frameworks-deep-learning/
+├── 03-metricas-evaluacion/
+└── README.md
 ```
 
----
+## Nota de limpieza
 
-## Notas
-
-- La teoría se ha reagrupado para evitar la estructura monolítica anterior.
-- La documentación canónica se reparte ahora en tres bloques: genéricas, visión y NLP.
-- Los artefactos `.html` y `.pdf` que quedaban en la estructura antigua se consideran material legado; la referencia principal es la versión Markdown o notebook equivalente cuando exista.
-- El material de spaCy queda fuera de este bloque y vive en `02-tratamiento-datos/` y sus áreas de ejemplo/profesor.
+Los `.html` generados se han eliminado de UD4 cuando existía fuente Markdown equivalente. La referencia activa debe ser Markdown, notebook o código fuente, no HTML derivado. El antiguo `modelado-avanzado-docs/` queda cerrado y archivado en `04-deep-learning/90-archivo/modelado-avanzado-docs/`.

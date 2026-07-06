@@ -42,24 +42,14 @@ Usa esta lista antes de entregar. Cada laboratorio tiene su propia plantilla de 
 - [ ] El trabajo puede revisarse sin acceder a recursos externos no indicados.
 - [ ] Los errores conocidos o limitaciones encontradas están documentados.
 
-## Tareas de visión por computador
+## Nota sobre visión y NLP
 
-**Enunciados:** `03-practicas/vision-tareas/`
+Las tareas de visión por computador y NLP ya no forman parte de la evaluación canónica de UD4.
 
-### Entrega 1 — Mini-tareas de visión (CNN fundamentals)
+- Visión, CNN aplicada, transfer learning y YOLO se evalúan desde `08-vision-xai/`.
+- NLP, embeddings, transformers y spaCy se evalúan desde `06-llm-agentes/`.
 
-- [ ] Se entregan los notebooks indicados con las mini-tareas completadas (bloques de código incompletos rellenados).
-- [ ] Los notebooks ejecutan sin errores críticos desde cero.
-- [ ] Las visualizaciones muestran los resultados de cada mini-tarea claramente.
-- [ ] El enunciado es `Vision_ordenador_entrega_Clase1.md`.
-
-### Entrega 2 — Chihuahua vs. Muffin / Transfer Learning
-
-- [ ] El modelo de clasificación binaria está entrenado y evaluado con métricas sobre test.
-- [ ] Se aplica transfer learning o fine-tuning según lo indicado en el enunciado.
-- [ ] Las curvas de entrenamiento (pérdida y accuracy) están visualizadas e interpretadas.
-- [ ] Se documenta brevemente la arquitectura usada y las decisiones tomadas.
-- [ ] El enunciado es `CompeticiionVision-DeepL.md` o la guía de `fase2_transfer_learning_pack/`.
+UD4 queda centrada en fundamentos de deep learning, frameworks base y laboratorios introductorios.
 
 ---
 

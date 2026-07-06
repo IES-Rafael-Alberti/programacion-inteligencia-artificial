@@ -4,6 +4,7 @@
 Cubre análisis y forecasting de series temporales: desde introducción y procesamiento hasta deep learning (TCN, Transformers) y proyecto final.
 
 ## Materiales incluidos
+- **Material reorganizado desde UD4**: notebooks de series temporales procedentes de deep learning se han movido a `03-practicas/modelado-notebooks-series-ud4/`.
 - **01-teoria**: Guías MD, PDFs, presentaciones (slides HTML+PDF+MD) de los 10 temas + seguimiento del taller
 - **02-ejemplos**: Notebooks Jupyter de los 10 temas (introducción, procesamiento, análisis, baselines, regresión, feature engineering, DL, TCN, Transformers, proyecto)
 - **03-practicas**: Scripts Python (generación de datos, creación de notebooks) y código fuente del paquete `series_temporales`

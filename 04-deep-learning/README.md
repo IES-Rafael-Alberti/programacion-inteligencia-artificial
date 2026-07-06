@@ -2,33 +2,37 @@
 
 ## Propósito
 
-Unidad dedicada al deep learning, organizada en tres bloques: fundamentos generales, redes neuronales aplicadas a visión y redes neuronales aplicadas a NLP. Cubre desde redes neuronales, backpropagation y gradiente descendente hasta frameworks prácticos (Keras, PyTorch, JAX, Lightning) y modelado avanzado (CNN, RNN, visión por computador, transformers). Trabaja los RA/CE de deep learning, frameworks de IA y modelado avanzado.
+Unidad dedicada al **deep learning base**: fundamentos de redes neuronales, entrenamiento, backpropagation, gradiente descendente, funciones de pérdida, métricas y frameworks principales.
+
+Tras la reorganización, UD4 deja de ser el contenedor de visión y NLP aplicados. Ese material se ha movido a sus unidades naturales:
+
+- visión, CNN aplicada, transfer learning, YOLO y datasets de imagen → `08-vision-xai/`;
+- NLP, embeddings, transformers, BERT y spaCy → `06-llm-agentes/`;
+- prácticas/notebooks de series temporales → `10-series-temporales/`.
 
 ## Materiales incluidos
 
-- **Teoría (01-teoria/):** Bloques reorganizados en `01-redes-neuronales-genericas/`, `02-redes-neuronales-vision/` y `03-redes-neuronales-nlp/`. Reúne fundamentos de deep learning, documentación de frameworks (PyTorch, Keras, JAX, TensorFlow, Lightning), teoría de visión y NLP, CNNs, RNNs, transformers, optimizadores, métricas y material de referencia.
-- **Ejemplos (02-ejemplos/):** Notebooks demo de fundamentos (gradiente descendente, visual), scripts de generación de imágenes para teoría, frameworks (optimizadores, redes neuronales en Keras/PyTorch/JAX/Lightning), ejemplos de modelado avanzado (fashion-mnist-flask), NLP clásico con spaCy, NLP con transformers (modelos, notebooks, scripts), visión (scripts YOLO).
-- **Prácticas (03-practicas/):** Laboratorios (TensorFlow PlayGround, backpropagation, transición de playground a código real), notebooks de modelado avanzado (fundamentos, series temporales, visión), proyectos (boston-housing, euromillones, house-prices-kaggle, used-cars), tareas de NLP, tareas de visión (chihuahua vs muffin).
-- **Evaluación (04-evaluacion/):** Rúbricas, checklist de entrega y cuestionario GIFT consolidados en la carpeta de evaluación.
-- **Recursos (05-recursos/):** Datos de modelado avanzado, entornos (environment.yml, scripts de instalación para JAX, Keras3, MLX, ONNX, PyTorch, TensorFlow), datos de NLP y visión (FashionMNIST, datasets de visión), captura de video demo.
-- **Archivo (90-archivo/):** Material antiguo de fundamentos (código scratch, primeras versiones de teoría en Org/TeX/PDF).
+- **Teoría (`01-teoria/`)**: fundamentos generales de redes neuronales, frameworks, métricas y modelado avanzado estrictamente relacionado con deep learning base.
+- **Ejemplos (`02-ejemplos/`)**: notebooks y scripts de fundamentos, frameworks y ejemplos introductorios.
+- **Prácticas (`03-practicas/`)**: laboratorios de TensorFlow Playground, backpropagation y transición de conceptos a código real, además de proyectos pendientes de revisión manual.
+- **Evaluación (`04-evaluacion/`)**: rúbricas, checklist y cuestionario GIFT consolidados para la frontera actual de UD4.
+- **Recursos (`05-recursos/`)**: datos y entornos asociados a modelado y frameworks de deep learning.
+- **Archivo (`90-archivo/`)**: material histórico o no activo.
 
 ## Prácticas asociadas
 
-- Laboratorio 1: TensorFlow PlayGround
-- Laboratorio 2: Implementación de backpropagation desde cero
-- Laboratorio 3: De PlayGround a código real
-- Proyectos: Boston housing, Euromillones, House Prices Kaggle, Used Cars
-- Tareas NLP con transformers
-- Ejemplos NLP clásico con spaCy (`02-ejemplos/nlp-spacy/`)
-- Tareas de visión (clasificación chihuahua vs muffin)
+- Laboratorio 1: TensorFlow Playground.
+- Laboratorio 2: implementación de backpropagation desde cero.
+- Laboratorio 3: de Playground a código real.
+- Proyectos de modelado pendientes de revisar uno a uno.
 
-## Evaluaciones
+## Documentos de reorganización
 
-- Rúbricas consolidadas en `04-evaluacion/` para laboratorio, checklist de entrega y cuestionario GIFT.
-- Los laboratorios mantienen su documentación de referencia, pero la evaluación canónica vive en la carpeta de evaluación.
+- [`00-inventario.md`](00-inventario.md): inventario de situación previo a la reorganización.
+- [`00-decisiones-reorganizacion.md`](00-decisiones-reorganizacion.md): tabla de decisiones y registro de movimientos.
 
 ## Pendientes
 
-- [ ] Revisar duplicados entre `02-ejemplos/frameworks/` y `02-ejemplos/nlp-transformers/`
-- [ ] Evaluar si `vision-teoria/` (1.8G) debe mantenerse completo o referenciar externamente
+- [ ] Revisar `modelado-avanzado-docs/` archivo por archivo.
+- [ ] Decidir qué proyectos de `03-practicas/modelado-proyectos/` siguen activos en UD4 y cuáles deben moverse o archivarse.
+- [ ] Revisar la evaluación para asegurar que ya no evalúa visión/NLP como parte de UD4.

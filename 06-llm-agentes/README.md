@@ -4,6 +4,7 @@
 Cubre interfaces de API, serving de modelos, orquestación de agentes, RAG avanzado, optimización de LLMs, y herramientas de IA (Gradio, LangChain, DSPy, LangGraph, MLflow, LlamaIndex, FastAPI, Ollama).
 
 ## Materiales incluidos
+- **Material reorganizado desde UD4**: NLP clásico, embeddings, transformers, BERT, spaCy, tareas y ejemplos asociados se han movido aquí desde `04-deep-learning/` para que UD4 quede como deep learning base. Los modelos y zips de transformers quedan en `90-archivo/nlp-transformers-ud4/`.
 - **01-teoria**: Documentación de herramientas (DSPy, FastAPI, Gradio, LangChain, LangGraph, LlamaIndex, MLflow, Ollama) + guías de notebooks
 - **02-ejemplos**: Notebooks básicos de Gradio, LangChain, DSPy (con soluciones y tests)
 - **03-practicas**: Notebooks avanzados (Gradio, LangChain pipeline, DSPy+MCP, herramientas integradas, MLflow+LlamaIndex RAG, LangGraph, Ollama, FastAPI). Incluye la subcarpeta `serving-orquestacion/` como material de apoyo

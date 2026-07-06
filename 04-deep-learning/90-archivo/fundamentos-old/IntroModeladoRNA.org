@@ -1,0 +1,886 @@
+#+STARTUP: noinlineimages
+#+TITLE: Redes Neuronales Artificiales: Introducción
+#+AUTHOR:
+#+EMAIL:
+#+DATE:
+#+OPTIONS: H:3
+#+OPTIONS: texht:t toc:4 num:4 -:nil ^:{} ":nil ':nil
+#+OPTIONS: tex:t H:5
+#+LATEX_CLASS: article
+#+LATEX_HEADER:
+#+LANGUAGE: es
+
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+#+BEGIN_COMMENT
+#+LATEX_HEADER: \usepackage[AUTO]{babel}
+#+END_COMMENT
+
+#+LATEX_HEADER: \renewcommand*{\contentsname}{Contenidos}
+#+LATEX_HEADER: \renewcommand*{\figurename}{Figura}
+#+LATEX_HEADER: \renewcommand*{\tablename}{Tabla}
+
+#+LATEX_HEADER_EXTRA: \usepackage{mdframed}
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{minted}{\begin{mdframed}}
+#+LATEX_HEADER_EXTRA: \AfterEndEnvironment{minted}{\end{mdframed}}
+
+#+LATEX: \setlength\parindent{10pt}
+#+LATEX_HEADER: \usepackage{parskip}
+
+#+latex_header: \usepackage[utf8]{inputenc} %% For unicode chars
+#+LATEX_HEADER: \usepackage{placeins}
+
+#+LATEX_HEADER: \usepackage[margin=2.50cm]{geometry}
+
+#+LaTeX_HEADER: \usepackage[T1]{fontenc}
+#+LaTeX_HEADER: \usepackage{mathpazo}
+#+LaTeX_HEADER: \linespread{1.05}
+#+LaTeX_HEADER: \usepackage[scaled]{helvet}
+#+LaTeX_HEADER: \usepackage{courier}
+
+#+LATEX_HEADER: \usepackage[table]{xcolor}
+
+#+LaTeX_HEADER: \hypersetup{colorlinks=true,linkcolor=blue}
+#+LATEX_HEADER: \RequirePackage{fancyvrb}
+#+LATEX_HEADER: \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\small,formatcom = {\color[rgb]{0.5,0,0}}}
+
+* Introducción a las Redes Neuronales Artificiales (RNA)
+Las redes neuronales artificiales (RNA), generalmente llamadas
+simplemente redes neuronales (RN) o redes de neuronas, son sistemas de
+computación inspirados en las redes neuronales biológicas que
+constituyen los cerebros animales.
+
+Una RNA se basa en una colección de unidades o nodos conectados
+llamados neuronas artificiales, que modelan aproximadamente las
+neuronas en un cerebro biológico. Cada conexión, como las sinapsis en
+un cerebro biológico, puede transmitir una señal a otras neuronas. Una
+neurona artificial recibe señales, las procesa y puede señalar a
+neuronas conectadas a ella. La "señal" en una conexión es un número
+real, y la salida de cada neurona se calcula mediante alguna función
+no lineal de la suma de sus entradas. Las conexiones se llaman
+aristas. Las neuronas y las aristas típicamente tienen un peso que se
+ajusta a medida que el aprendizaje continúa. El peso aumenta o
+disminuye la fuerza de la señal en una conexión. Las neuronas pueden
+tener un umbral de tal manera que solo se envía una señal si la señal
+agregada cruza ese umbral.
+
+Típicamente, las neuronas se agrupan en capas. Diferentes capas pueden
+realizar diferentes transformaciones en sus entradas. Las señales
+viajan desde la primera capa (la capa de entrada), hasta la última
+capa (la capa de salida), posiblemente después de atravesar las capas
+varias veces.
+
+Las RNA se utilizan en una amplia variedad de tareas, como la
+clasificación, la regresión, la generación de imágenes y texto,
+entre otros. Se pueden entrenar utilizando algoritmos supervisados o
+no supervisados, dependiendo del tipo de tarea y del tipo de datos
+disponibles.
+
+En el entrenamiento supervisado, se proporcionan al sistema datos de
+entrada y su correspondiente salida deseada. La RNA se ajusta a
+estos datos para aprender a producir la salida correcta para cualquier
+entrada dada. La backpropagation es un algoritmo comúnmente utilizado
+para el entrenamiento supervisado de RNA.
+
+Las RNA pueden ser simples o muy complejas, con muchas capas y
+muchas más neuronas. La complejidad aumenta con el tamaño de los
+datos y la complejidad de la tarea. A menudo, se utilizan técnicas
+de regularización para evitar el sobreajuste, es decir, el aprendizaje
+de características irrelevantes o ruido en los datos.
+
+En resumen, las RNA son una herramienta poderosa para la resolución de
+problemas de aprendizaje automático y pueden aplicarse a una amplia
+variedad de tareas.
+
+* La Neurona Artificial
+La neurona artificial es un elemento básico de una red neuronal
+artificial. Modela aproximadamente la estructura y función de una
+neurona biológica. Una neurona artificial tiene entradas y una salida,
+y su propósito es recibir señales de otras neuronas, procesarlas y
+producir una salida.
+
+Cada entrada se asocia con un peso, que representa la importancia de
+la señal entrante. La neurona suma las entradas ponderadas y, si el
+resultado supera un umbral, la neurona produce una señal de salida. La
+señal de salida se utiliza como entrada para otras neuronas
+conectadas.
+
+La función no lineal utilizada para calcular la salida de la neurona
+es conocida como la función de activación. Algunas funciones comunes
+de activación son la función sigmoide, la función tangente hiperbólica
+y la función ReLU (Rectified Linear Unit). La elección de la función
+de activación depende de la naturaleza del problema que se está
+tratando de resolver.
+
+La idea detrás de la neurona artificial es simple, pero la combinación
+de muchas neuronas artificiales puede crear modelos complejos y
+poderosos para la resolución de problemas.
+
+** Tipos de neuronas
+Las RNA se componen de diferentes tipos de neuronas, que están
+organizadas en capas. Cada tipo de neurona cumple una función
+específica en la red:
+
+ - Neuronas de entrada: Estas neuronas reciben las entradas de los
+   datos y las transmiten a las siguientes capas.
+ - Neuronas ocultas o intermedias: Estas neuronas realizan cálculos
+   complejos en las señales y las transmiten a la siguiente
+   capa. Pueden haber varias capas ocultas en una RNA, y cada capa
+   puede realizar diferentes transformaciones en las señales.
+ - Neuronas de salida: Estas neuronas producen las salidas finales de
+   la red y se utilizan para hacer predicciones o tomar decisiones.
+
+** Las neuronas ocultas en una red feedforward
+Las neuronas ocultas en una red neuronal feedforward son aquellas que
+están ubicadas entre la capa de entrada y la capa de salida. Son
+llamadas ocultas porque los datos de entrada no se conectan
+directamente con las neuronas de salida. En su lugar, los datos de
+entrada se transmiten a las neuronas ocultas, que procesan los datos y
+los transmiten a las neuronas de salida.
+
+El objetivo de las neuronas ocultas es realizar una transformación no
+lineal en los datos de entrada. La no linealidad es importante porque
+permite que la red neuronal sea capaz de aprender relaciones más
+complejas en los datos de entrada. Las relaciones complejas son
+importantes para resolver problemas de aprendizaje supervisado, ya que
+los datos de salida pueden ser altamente no lineales.
+
+Las neuronas ocultas en una red neuronal feedforward están conectadas
+tanto con las neuronas de entrada como con las neuronas de
+salida. Cada neurona oculta recibe una señal de cada neurona de
+entrada y produce una señal para cada neurona de salida. La señal
+total que cada neurona oculta produce es una combinación lineal de las
+señales que recibe de las neuronas de entrada, con pesos ajustables
+asociados con cada conexión.
+
+La cantidad de neuronas ocultas y su ubicación en la red puede ser
+ajustada para mejorar el rendimiento de la red. A menudo, una cantidad
+mayor de neuronas ocultas conduce a un mejor rendimiento, pero también
+aumenta el riesgo de sobreajuste.
+
+*** Funcionamiento de una neurona.
+El funcionamiento de una neurona artificial es similar al de una
+neurona biológica. La entrada de una neurona artificial es una
+combinación lineal de las entradas recibidas de otras neuronas, cada
+una de las cuales está ponderada por un peso asociado con la conexión
+entre las neuronas. La entrada se agrega en la neurona artificial, y
+luego se aplica una función de activación no lineal, la cual produce
+una salida. La función de activación es una transformación matemática
+que introduce no linearidad en el modelo, permitiendo a la red
+aprender mapeos complejos y no lineales.
+
+La función de activación más comúnmente utilizada es la función
+sigmoide, pero también existen otras como la función de activación de
+rectificación lineal (ReLU) y la tangente hiperbólica. La salida de la
+neurona artificial se usa como entrada para otras neuronas conectadas
+a ella, y este proceso se repite hasta que se produzca una salida
+deseada en la última capa de salida de la red.
+
+** La función de activación. Papel.
+La función de activación es una función matemática que se aplica a la
+agregación de las entradas en una neurona. Es la función que controla
+el comportamiento de la neurona y decide si la neurona envía una señal
+a las neuronas conectadas a ella o no. La función de activación es
+crucial para la capacidad de las RNA de aprender y realizar tareas
+complejas.
+
+Hay muchas funciones de activación diferentes disponibles, cada una
+con sus propias propiedades y usos específicos. Algunas de las
+funciones de activación más comunes son la función sigmoide, la
+función tangente hiperbólica y la función ReLU (rectified linear
+unit). La selección de la función de activación adecuada depende de la
+tarea específica que se desea realizar y de la arquitectura de la red
+neuronal.
+
+En resumen, la función de activación desempeña un papel crucial en el
+funcionamiento de una neurona artificial y en la capacidad de la RNA
+para aprender y realizar tareas complejas.
+
+*** Funciones de activación más importantes.
+Las funciones de activación juegan un papel importante en el
+funcionamiento de las neuronas artificiales, ya que determinan la
+salida de una neurona en función de sus entradas.
+
+Algunas de las funciones de activación más importantes son:
+ - Sigmoide: Esta función produce una salida sigmoidal o S-shaped, que
+   varía de 0 a 1. La función sigmoide es adecuada para problemas de
+   clasificación binaria, donde se necesita una probabilidad de clase.
+ - Tangente hiperbólica: Esta función produce una salida en un rango
+   de -1 a 1, y es adecuada para problemas de regresión.
+ - ReLU (Rectified Linear Unit): Esta función produce una salida
+   lineal cuando la entrada es positiva, y 0 cuando la entrada es
+   negativa. Es una de las funciones de activación más utilizadas,
+   debido a su simplicidad y rapidez en la computación.
+ - Leaky ReLU: Esta función es similar a ReLU, pero permite un pequeño
+   flujo de activación cuando la entrada es negativa. Esto ayuda a
+   solucionar el problema de "muerte neuronal" en las redes ReLU.
+ - La función softmax es una función de activación que se utiliza a
+   menudo en la capa de salida de una red neuronal feedforward. Es una
+   función no lineal que convierte un vector de valores reales en una
+   distribución de probabilidad.
+
+Pros y contras:
+ - La sigmoide es útil para la clasificación binaria, pero puede ser
+   lenta y no es adecuada para problemas de clasificación múltiple.
+ - La tangente hiperbólica es adecuada para problemas de regresión,
+   pero puede ser difícil de optimizar debido a su comportamiento en
+   los extremos.
+ - ReLU es rápido y fácil de optimizar, pero puede tener problemas de
+   "muerte neuronal" cuando la entrada es negativa.
+ - Leaky ReLU es una mejora en ReLU, pero aún puede tener problemas de
+   optimización.
+ - La función softmax se utiliza en clasificación multiclase y produce
+   una distribución de probabilidades sobre un conjunto de posibles
+   clases, asegurando que la suma sea igual a 1. Es suave, por lo que
+   puede ser menos robusta en caso de valores de entrada
+   extremadamente grandes o pequeños. Sin embargo, es sensible a
+   cambios mínimos en los valores de entrada, lo que puede producir
+   resultados no deseados. En general, es adecuada para clasificación
+   multiclase, pero debe ser utilizada con precaución en otros
+   problemas.
+
+Hay algunas otras funciones de activación que se usan menos comúnmente
+en comparación con las funciones mencionadas anteriormente, pero que
+aún pueden tener aplicaciones específicas.
+
+Aquí están algunas de ellas:
+ - Función de activación Gaussiana: es una función de activación no
+   lineal que produce una salida gaussiana. Se utiliza en aplicaciones
+   de procesamiento de señales y procesamiento de imágenes.
+ - Función de activación Sigmoidal Softplus: es una función de
+   activación sigmoidal suave que se utiliza en problemas de
+   regresión.
+ - Función de activación ReLU sech: es una combinación de la función
+   ReLU y la función sech. Se utiliza en aplicaciones de procesamiento
+   de imágenes y procesamiento de señales.
+ - Función de activación de escalón tangencial hiperbólico: es una
+   función de activación no lineal que se utiliza en problemas de
+   clasificación binaria.
+
+En general, es importante experimentar con diferentes funciones de
+activación para encontrar la que mejor se adapte a un problema
+particular.
+
+#+begin_src python :results output file :file activationFunct.png :output-dir images/
+import numpy as np
+import matplotlib.pyplot as plt
+import sys
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+def tanh(x):
+    return np.tanh(x)
+
+def relu(x):
+    return np.maximum(0, x)
+
+def leaky_relu(x, alpha=0.01):
+    return np.maximum(alpha * x, x)
+
+def softplus(x):
+    return np.log(1 + np.exp(x))
+
+def softmax(x):
+    return np.exp(x) / np.sum(np.exp(x), axis=0)
+
+def plot_activation_functions(x):
+    fig, ax = plt.subplots(2, 3, figsize=(15, 10))
+
+    ax[0,0].axhline(0, color='black', linewidth=.5)
+    ax[0,0].axvline(0, color='black', linewidth=.5)
+    ax[0,0].grid(True, which='both')
+    ax[0, 0].plot(x, sigmoid(x), 'r', label='Sigmoid')
+    ax[0, 0].legend()
+
+    ax[0, 1].axhline(0, color='black', linewidth=.5)
+    ax[0, 1].axvline(0, color='black', linewidth=.5)
+    ax[0, 1].grid(True, which='both')
+    ax[0, 1].plot(x, tanh(x), 'g', label='Tanh')
+    ax[0, 1].legend()
+
+    ax[0, 2].axhline(0, color='black', linewidth=.5)
+    ax[0, 2].axvline(0, color='black', linewidth=.5)
+    ax[0, 2].grid(True, which='both')
+    ax[0, 2].plot(x, relu(x), 'b', label='ReLU')
+    ax[0, 2].legend()
+
+    ax[1, 0].axhline(0, color='black', linewidth=.5)
+    ax[1, 0].axvline(0, color='black', linewidth=.5)
+    ax[1, 0].grid(True, which='both')
+    ax[1, 0].plot(x, leaky_relu(x), 'y', label='Leaky ReLU')
+    ax[1, 0].legend()
+
+    ax[1, 1].axhline(0, color='black', linewidth=.5)
+    ax[1, 1].axvline(0, color='black', linewidth=.5)
+    ax[1, 1].grid(True, which='both')
+    ax[1, 1].plot(x, softplus(x), 'c', label='Softplus')
+    ax[1, 1].legend()
+
+    ax[1, 2].axhline(0, color='black', linewidth=.5)
+    ax[1, 2].axvline(0, color='black', linewidth=.5)
+    ax[1, 2].grid(True, which='both')
+    ax[1, 2].plot(x, softmax(x), 'c', label='SoftMax')
+    ax[1, 2].legend()
+    ax[1, 2].set(xlabel="Entrada",ylabel="Probabilidad")
+    #plt.show()
+    plt.savefig(sys.stdout.buffer)
+
+
+x = np.linspace(-10, 10, num=100)
+plot_activation_functions(x)
+#+end_src
+
+#+RESULTS:
+#+CAPTION: Algunas funciones de activación
+[[file:images/activationFunct.png]]
+
+Este código define las funciones de activación más comunes y las
+grafica en una figura con dos filas y tres columnas, que incluye el
+sigmoide, la tangente hiperbólica, ReLU, ReLU con fuga, Softplus y
+SoftMax. El eje x varía de -10 a 10, y se han graficado las funciones
+en 100 puntos diferentes para obtener una mejor visualización.
+
+** Topologías de redes neuronales
+Las topologías de redes neuronales son la estructura o diseño de una
+red neuronal. Hay diferentes tipos de topologías de redes neuronales,
+incluyendo:
+
+ - Perceptrón Simple: Es la topología más básica de una red neuronal y
+   consta de una sola capa con varios nodos.
+ - Multi-Capa Perceptrón (MLP): Es un tipo de red neuronal que
+   consiste en varias capas ocultas y una capa de salida. La capa
+   oculta es responsable de aprender las características relevantes de
+   los datos de entrada.
+ - Convolutional Neural Network (CNN): Es un tipo de red neuronal que
+   se utiliza para problemas de visión por computadora, como la
+   detección de objetos y la segmentación de imágenes.
+ - Recurrent Neural Network (RNN): Es un tipo de red neuronal diseñada
+   para manejar secuencias de datos, como texto, audio y vídeo.
+ - Autoencoder: Es un tipo de red neuronal que se utiliza para la
+   reducción de dimensionalidad y la extracción de características.
+
+Las redes neuronales monocapas, también conocidas como perceptrones,
+están compuestas por una sola capa de neuronas que reciben entradas y
+realizan una operación matemática para producir una salida. Estas
+redes son adecuadas para resolver problemas lineales simples, pero no
+son efectivas para problemas más complejos que requieren una
+representación no lineal de los datos.
+
+Por otro lado, las redes neuronales multicapas, también conocidas como
+redes feedforward, están compuestas por múltiples capas de neuronas
+interconectadas. La primera capa, llamada capa de entrada, recibe las
+entradas y las transfiere a la siguiente capa, llamada capa oculta. La
+capa oculta realiza cálculos complejos en las entradas y las
+transfiere a la capa de salida, que produce la respuesta o
+predicción. Las redes multicapas son más flexibles y pueden modelar
+una amplia variedad de problemas, incluyendo problemas no lineales.
+
+Además de estas dos clasificaciones, existen otras topologías de redes
+neuronales, como las redes de recurrentes, las redes convolucionales y
+las redes autoencoders. Cada topología es adecuada para un conjunto
+diferente de problemas y requiere un enfoque diferente en la forma en
+que se entrenan y se usan las redes.
+
+Las topologías de redes neuronales son utilizadas en diversos ámbitos,
+incluyendo el aprendizaje automático, la inteligencia artificial, la
+visión por computadora, el procesamiento del lenguaje natural, entre
+otros.
+ - Redes neuronales monocapas: son las más simples y se utilizan para
+   solucionar problemas lineales, como la regresión lineal.
+ - Redes neuronales multicapas (Feedforward): estas topologías son las
+   más utilizadas y se caracterizan por tener varias capas entre la
+   entrada y la salida. Estas redes son capaces de solucionar
+   problemas no lineales y se utilizan en una gran variedad de
+   aplicaciones, como el reconocimiento de patrones, clasificación de
+   imágenes, procesamiento de lenguaje natural, entre otros.
+ - Redes neuronales recurrentes (RNN): son redes que permiten modelar
+   secuencias de datos, es decir, tienen una memoria a largo
+   plazo. Estas redes se utilizan en aplicaciones que requieren la
+   predicción de secuencias, como el modelado de series de tiempo, el
+   procesamiento de lenguaje natural y el análisis de texto.
+ - Redes neuronales convolucionales (CNN): estas redes se utilizan en
+   problemas de visión artificial y se caracterizan por tener capas
+   especiales que extraen características importantes de los datos de
+   entrada.
+ - Redes neuronales profundas (Deep Neural Networks): son redes que
+   tienen muchas capas y se utilizan en aplicaciones de aprendizaje
+   profundo, como la clasificación de imágenes y el procesamiento de
+   lenguaje natural.
+
+
+** Proceso de aprendizaje de una red neuronal
+*** Diseño de una red neural
+El diseño de una red neuronal puede ser un proceso complejo que
+requiere una combinación de conocimiento teórico y experiencia
+práctica. Aquí describo los principales factores a considerar al
+diseñar una red neuronal:
+
+ - Entrada: La primera etapa en el diseño de una red neuronal es
+   definir la entrada, lo que incluye el número de atributos y
+   características de los datos de entrada. Es importante considerar
+   la naturaleza de los datos y preprocesarlos en caso de ser
+   necesario, como normalizarlos o escalarlos.
+ - Capas ocultas: Una vez definida la entrada, la siguiente etapa es
+   elegir el número de capas ocultas y el número de neuronas en cada
+   capa. En general, una red neuronal con más capas ocultas es más
+   compleja y puede aprender patrones más complejos. Sin embargo,
+   también es más propensa a sufrir overfitting, por lo que es
+   importante considerar técnicas de regularización.
+ - Técnicas de regularización: Las técnicas de regularización ayudan a
+   prevenir el overfitting y mejoran la capacidad de generalización de
+   la red neuronal. Algunas técnicas comunes incluyen la
+   regularización L1 y L2, el uso de dropout y la normalización de
+   pesos.
+ - Función de activación: La función de activación es una función
+   matemática que determina cómo se activa o no una neurona. Algunas
+   funciones de activación comunes son la función sigmoidal, tanh,
+   ReLU y softmax. La elección de la función de activación depende de
+   la naturaleza de los datos y el tipo de problema que se está
+   tratando de resolver.
+ - Capa de salida: La capa de salida define la forma en que se genera
+   la predicción de la red neuronal. En una tarea de clasificación,
+   por ejemplo, la capa de salida puede ser una capa softmax que
+   proporciona una distribución de probabilidad sobre las clases. En
+   una tarea de regresión, la capa de salida puede ser una neurona
+   lineal.
+
+En resumen, el diseño de una red neuronal requiere una combinación de
+conocimiento teórico y experiencia práctica, así como una evaluación
+cuidadosa de la naturaleza de los datos y el problema a resolver.
+*** La función de pérdida o coste (loss or cost).
+La función de pérdida o coste es una medida de la diferencia entre los
+valores reales y los valores previstos por la red neuronal. Es
+importante para determinar el éxito de un modelo de aprendizaje
+automático y se utiliza para optimizar los pesos y bias de las
+conexiones entre las neuronas.
+
+Hay varias funciones de pérdida que se pueden usar, incluyendo:
+
+ - Función de pérdida cuadrática (mean squared error, MSE): calcula la
+   diferencia media cuadrada entre los valores previstos y reales.
+ - Función de pérdida logarítmica (binary cross-entropy): se utiliza
+   en clasificación binaria para calcular la diferencia entre las
+   probabilidades previstas y reales.
+ - Función de pérdida categórica cruzada (categorical cross-entropy):
+   se utiliza en clasificación multiclase para calcular la diferencia
+   entre las distribuciones de probabilidad previstas y reales.
+
+La función de pérdida es una parte importante del entrenamiento de la
+red neuronal, ya que es la base para la optimización de los pesos y
+bias. Una función de pérdida eficaz permite a la red neuronal aprender
+y mejorar su precisión en la tarea de aprendizaje.
+
+*** Mecanismos de aprendizaje
+Los mecanismos de aprendizaje son procesos que permiten a las redes
+neuronales mejorar su capacidad de clasificación o regresión a lo
+largo del tiempo, ajustando los pesos de las conexiones entre las
+neuronas. Estos procesos están basados en el proceso de entrenamiento,
+el cual implica la presentación de un conjunto de datos conocidos
+(datos de entrenamiento) a la red neuronal.
+
+Algunos de los mecanismos de aprendizaje más utilizados son:
+ - Backpropagation: es una técnica de entrenamiento de redes
+   neuronales feedforward multicapas. Consiste en ajustar los pesos de
+   las conexiones sinápticas en función del error cometido por la red
+   en su tarea de clasificación o regresión.
+ - Algoritmo de aprendizaje por refuerzo: es un enfoque de aprendizaje
+   donde la red neuronal se "entrena" a través de la retroalimentación
+   en forma de recompensa o castigo, con el objetivo de maximizar una
+   función de recompensa.
+ - Aprendizaje unsupervised: se utiliza cuando los datos de entrada no
+   están etiquetados. El objetivo es descubrir patrones o relaciones
+   en los datos para poder clasificarlos o agruparlos.
+ - Aprendizaje semisupervised: es un enfoque intermedio entre el
+   aprendizaje supervisado y el no supervisado, donde solo una parte
+   de los datos de entrada están etiquetados.
+
+Cada uno de estos mecanismos de aprendizaje tiene sus propias ventajas
+y desventajas y se utiliza en función del tipo de problema que se
+quiere abordar. Por ejemplo, el backpropagation es una técnica
+efectiva para resolver problemas de clasificación y regresión,
+mientras que el algoritmo de aprendizaje por refuerzo es más adecuado
+para problemas de toma de decisiones en entornos dinámicos.
+
+**** Algoritmode de retropropagación (backpropagation).
+La retropropagación es un algoritmo de aprendizaje supervisado
+utilizado en redes neuronales para ajustar los pesos y sesgos de la
+red. Es un método de optimización utilizado para ajustar los pesos y
+sesgos de las conexiones entre las neuronas en una red neuronal, con
+el objetivo de reducir el error entre las salidas esperadas y las
+salidas reales.
+
+El proceso funciona en dos etapas. En la primera etapa, la red se usa
+para hacer una predicción basada en los datos de entrada y los pesos y
+sesgos actuales. En la segunda etapa, el error en la predicción se
+propaga hacia atrás a través de la red, y los pesos y sesgos se
+ajustan para reducir este error. Este proceso se repite varias veces,
+hasta que se alcance un nivel aceptable de precisión en las
+predicciones.
+
+La retropropagación utiliza el gradiente de la función de pérdida, que
+es una medida de la dirección y magnitud de los cambios en los pesos y
+sesgos necesarios para reducir el error. La retropropagación también
+utiliza la técnica de descenso del gradiente, en la que los pesos y
+sesgos se ajustan en la dirección opuesta al gradiente, con el
+objetivo de reducir la función de pérdida.
+
+En resumen, la retropropagación es un algoritmo eficaz y ampliamente
+utilizado para el entrenamiento de redes neuronales, y se considera
+uno de los métodos más importantes en el campo de la inteligencia
+artificial y el aprendizaje profundo.
+
+El algoritmo de retropropagación (también conocido como
+"backpropagation") es un método de entrenamiento de redes neuronales
+que utiliza una técnica de optimización basada en gradiente. La idea
+esencial detrás de backpropagation es calcular el error en la salida
+de la red neuronal y utilizar esta información para actualizar los
+pesos de las conexiones sinápticas y mejorar la precisión de la red.
+
+A continuación, se describen los pasos básicos de backpropagation:
+ - Inicializar los pesos sinápticos de forma aleatoria: Al comenzar el
+   entrenamiento, los pesos se inicializan de forma aleatoria para
+   permitir que la red aprenda a través de la optimización.
+ - Propagación hacia adelante: Para cada entrada de entrenamiento, se
+   realiza una propagación hacia adelante a través de la red
+   neuronal. Esto implica calcular las activaciones y las salidas de
+   cada neurona a medida que la señal se propaga desde la entrada
+   hasta la capa de salida.
+ - Cálculo del error: A partir de la salida de la red, se calcula el
+   error en relación a la salida deseada para cada entrada de
+   entrenamiento.
+ - Propagación hacia atrás: En esta fase, se utiliza el error
+   calculado en el paso anterior para ajustar los pesos sinápticos. Se
+   propaga el error hacia atrás a través de la red, actualizando los
+   pesos para minimizar el error.
+ - Actualización de pesos: Finalmente, los pesos se actualizan en
+   función de la propagación hacia atrás y el algoritmo continúa con
+   el siguiente conjunto de entradas de entrenamiento.
+ - Repetir hasta que se alcance un criterio de detención: Este proceso
+   se repite hasta que se cumpla un criterio de detención, como un
+   número máximo de épocas o un error mínimo en la salida.
+
+Estos son los pasos básicos del algoritmo de retropropagación. Este
+proceso se repite muchas veces hasta que la red neuronal aprenda a
+clasificar o realizar una tarea de forma precisa.
+
+*** Implementación Orientada a Objetos con NumPy
+#+begin_src python
+import numpy as np
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+def sigmoid_derivative(x):
+    return x * (1 - x)
+
+class NeuralNetwork:
+    def __init__(self, x, y):
+        self.input = x
+        self.weights1 = np.random.rand(self.input.shape[1], 4)
+        self.weights2 = np.random.rand(4, 1)
+        self.y = y
+        self.output = np.zeros(y.shape)
+
+    def feedforward(self):
+        self.layer1 = sigmoid(np.dot(self.input, self.weights1))
+        self.output = sigmoid(np.dot(self.layer1, self.weights2))
+
+    def backprop(self):
+        d_weights2 = np.dot(self.layer1.T,
+           (2*(self.y - self.output) * sigmoid_derivative(self.output)))
+        d_weights1 = np.dot(self.input.T,
+          (np.dot(2*(self.y - self.output) * sigmoid_derivative(self.output),
+          self.weights2.T) * sigmoid_derivative(self.layer1)))
+
+        self.weights1 += d_weights1
+        self.weights2 += d_weights2
+
+    def train(self, X, y):
+        self.output = np.zeros(y.shape)
+        self.input = X
+        self.y = y
+        self.feedforward()
+        self.backprop()
+
+X = np.array([[0,0,1], [0,1,1], [1,0,1], [1,1,1]])
+y = np.array([[0], [1], [1], [0]])
+nn = NeuralNetwork(X, y)
+
+for i in range(1500):
+    nn.train(X, y)
+
+print(nn.output)
+import pandas as pd
+
+# cargar el dataset de iris desde un archivo csv
+data = pd.read_csv("iris.csv")
+
+# separar las características (inputs) de las etiquetas (outputs)
+inputs = data.drop("species", axis=1).values
+outputs = data["species"].values
+
+# entrenar la red neuronal
+nn = NeuralNetwork(input_size=4, hidden_size=10, output_size=3)
+nn.train(inputs, outputs, epochs=1000)
+
+# evaluar la red neuronal con el dataset de iris
+predictions = nn.predict(inputs)
+
+#+end_src
+En este ejemplo, hemos definido una red neuronal con 4 inputs
+(correspondientes a las 4 características de las flores de iris), una
+capa oculta de 10 neuronas y una capa de salida de 3 neuronas
+(correspondientes a las 3 especies de flores). También hemos entrenado
+la red neuronal por 1000 epochs con los datos
+normalizados. Finalmente, hemos evaluado la red neuronal con los
+mismos datos con los que se entrenó y obtenido las predicciones
+correspondientes.
+
+*** Ejemplo Implementación, sin clases
+#+begin_src python
+import numpy as np
+
+# Función de activación sigmoide
+def sigmoid(x):
+  return 1 / (1 + np.exp(-x))
+
+# Derivada de la función de activación sigmoide
+def sigmoid_derivative(x):
+  return x * (1 - x)
+
+# Inicialización de pesos aleatorios
+def initialize_weights(inputs, hidden, output):
+  W1 = np.random.rand(inputs, hidden)
+  W2 = np.random.rand(hidden, output)
+  b1 = np.zeros((1, hidden))
+  b2 = np.zeros((1, output))
+  return W1, W2, b1, b2
+
+# Propagación hacia adelante
+def forward_propagation(X, W1, W2, b1, b2):
+  Z1 = np.dot(X, W1) + b1
+  A1 = sigmoid(Z1)
+  Z2 = np.dot(A1, W2) + b2
+  A2 = sigmoid(Z2)
+  return Z1, A1, Z2, A2
+
+# Propagación hacia atrás
+def backward_propagation(X, Y, Z1, A1, Z2, A2, W2, b2, learning_rate):
+  m = X.shape[0]
+  dZ2 = A2 - Y
+  dW2 = np.dot(A1.T, dZ2) / m
+  db2 = np.sum(dZ2, axis=0, keepdims=True) / m
+  dZ1 = np.dot(dZ2, W2.T) * sigmoid_derivative(A1)
+  dW1 = np.dot(X.T, dZ1) / m
+  db1 = np.sum(dZ1, axis=0, keepdims=True) / m
+  W2 -= learning_rate * dW2
+  b2 -= learning_rate * db2
+  W1 -= learning_rate * dW1
+  b1 -= learning_rate * db1
+  return W1, W2, b1, b2
+
+# Predicción de salida
+def predict(X, W1, W2, b1, b2):
+  Z1, A1, Z2, A2 = forward_propagation(X, W1, W2, b1, b2)
+  predictions = np.round(A2)
+  return predictions
+
+# Función de costo
+def cost_function(A2, Y):
+  m = Y.shape[0]
+  cost = -1 / m * np.sum(Y * np.log(A2) + (1 - Y) * np.log(1 - A2))
+  return cost
+
+# Cargar el dataset de iris
+from sklearn import datasets
+
+iris = datasets.load_iris()
+X = iris.data
+Y = iris.target
+Convertir la salida a una matriz de salida codificada one-hot
+
+num_classes = 3
+Y = np.eye(num_classes)[Y.reshape(-1)]
+#Partición de datos en conjunto de entrenamiento y conjunto de prueba
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, Y_train, Y_test =
+train_test_split(X, Y, test_size=0.2, random_state=0)
+
+#Definir hiperparámetros
+inputs = X_train.shape[1]
+hidden = 5
+output = Y_train.shape[1]
+learning_rate = 0.1
+num_epochs = 1000
+
+#Inicializar pesos
+W1, W2, b1, b2 = initialize_weights(inputs, hidden, output)
+#Entrenamiento
+for epoch in range(num_epochs):
+   Z1, A1, Z2, A2 = forward_propagation(X_train, W1, W2, b1, b2)
+   W1, W2, b1, b2 = backward_propagation(X_train, Y_train, Z1, A1,
+             Z2, A2, W2, b2, learning_rate)
+   cost = cost_function(A2, Y_train)
+   if epoch % 100 == 0:
+      print("Epoch: ", epoch, "Cost: ", cost)
+#Evaluación del modelo
+
+Y_pred_train = predict(X_train, W1, W2, b1, b2)
+Y_pred_test = predict(X_test, W1, W2, b1, b2)
+
+#Calculo del accuracy
+
+train_accuracy = np.mean(np.all(Y_train == Y_pred_train, axis=1))
+test_accuracy = np.mean(np.all(Y_test == Y_pred_test, axis=1))
+
+print("Accuracy en conjunto de entrenamiento: ", train_accuracy)
+print("Accuracy en conjunto de prueba: ", test_accuracy)
+#+end_src
+
+
+*** Ejemplo sin librerías en la otra documentación
+#+begin_src python
+
+
+
+#+end_src
+
+
+*** Ejemplo con Keras:
+#+begin_src python
+  import numpy as np
+  import pandas as pd
+  from sklearn.model_selection import train_test_split
+  from sklearn.preprocessing import StandardScaler
+  import tensorflow as tf
+  from tensorflow import keras
+
+  # Load the iris dataset
+  url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+  names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class']
+  dataset = pd.read_csv(url, names=names)
+
+  # Split the data into training and test sets
+  train_data, test_data, train_labels, test_labels = train_test_split(dataset.values[:, :4], dataset.values[:, 4], test_size=0.2, stratify=dataset.values[:, 4])
+
+  # Standardize the data
+  scaler = StandardScaler()
+  train_data = scaler.fit_transform(train_data)
+  test_data = scaler.transform(test_data)
+
+  # Create the model
+  model = keras.Sequential([
+      keras.layers.Dense(8, activation='relu', input_shape=(4,)),
+      keras.layers.Dense(3, activation='softmax')
+  ])
+
+
+  # Compile the model
+  model.compile(optimizer='adam',
+                loss=tf.keras.losses.SparseCategoricalCrossentropy(),
+                metrics=['accuracy'])
+
+  # Train the model
+  history = model.fit(train_data, train_labels, epochs=100, batch_size=32)
+
+  # Evaluate the model on the test data
+  test_loss, test_acc = model.evaluate(test_data, test_labels, verbose=0)
+  print('Test Accuracy:', test_acc)
+#+end_src
+
+Este código carga el conjunto de datos Iris, lo divide en conjuntos de
+entrenamiento y prueba, estandariza los datos, crea el modelo de red
+neuronal con dos capas densas, compila el modelo con un optimizador
+adam y una función de pérdida SparseCategoricalCrossentropy, y entrena
+el modelo con 100 épocas. Finalmente, se evalúa el modelo en los datos
+de prueba y se imprime la precisión de la prueba.
+
+http://experiments.mostafa.io/public/ffbpann/
+
+http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.15049&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false
+
+https://analyticsindiamag.com/how-to-visualize-backpropagation-in-neural-networks/
+
+https://cs231n.github.io/optimization-2/
+
+https://www.asimovinstitute.org/neural-network-zoo/
+
+** Otros conceptos en las redes neuronales
+*** Momento y ratio de aprendizaje
+El momento (en inglés, momentum) y el ratio de aprendizaje (en inglés,
+learning rate) son dos hiperparámetros importantes en el entrenamiento
+de redes neuronales que afectan a la velocidad y precisión de
+convergencia del modelo.
+
+El ratio de aprendizaje es un número que se multiplica por el
+gradiente calculado para actualizar los pesos de la red en cada
+iteración. Su valor determina el tamaño del paso que se da en cada
+actualización y puede afectar tanto a la velocidad de convergencia
+como a la precisión del modelo. Si el ratio de aprendizaje es muy
+grande, el modelo puede saltar el mínimo global y no converger,
+mientras que si es muy pequeño, el modelo puede tardar demasiado
+tiempo en converger. A menudo, el ratio de aprendizaje se ajusta
+durante el entrenamiento para obtener el mejor rendimiento.
+
+El momento es un hiperparámetro que se utiliza para acelerar el
+entrenamiento y evitar que el modelo se atasque en mínimos
+locales. Funciona como una especie de inercia para los cambios en los
+pesos de la red: en lugar de actualizar los pesos solo en función del
+gradiente actual, se utiliza también el gradiente de la iteración
+anterior. De esta manera, los cambios de peso se acumulan en la
+dirección correcta, lo que puede acelerar el entrenamiento y mejorar
+la precisión del modelo.
+
+El valor óptimo de estos hiperparámetros depende del modelo y del
+conjunto de datos utilizados, y a menudo se determina mediante prueba
+y error o mediante técnicas más avanzadas como la búsqueda de
+cuadrícula (en inglés, grid search) o la optimización bayesiana.
+
+
+
+
+Tabla
+#+attr_latex: :align |c|c|l|l|
+|----------+---+------------+----|
+|          |   | predicción |    |
+|----------+---+------------+----|
+|          |   | 0          | 1  |
+|----------+---+------------+----|
+| realidad | 0 | TN         | FP |
+|----------+---+------------+----|
+|          | 1 | FN         | TP |
+|----------+---+------------+----|
+
+Para la curva ROC necesitamos dos medidas que extraemos de la *matriz
+de confusión*:
+ - Recall: $$precision = \frac{TP}{TP+FN}$$
+ - 1- Specifity: $$1 - specificity = 1 - \frac{TN}{TN+FP}=1-\frac{TN}{N}$$
+
+
+
+
+*** Título 3
+
+*** Código ejecutable
+ROC curve:
+#+BEGIN_SRC python :results output file :file roc1.png :output-dir images/
+import sys
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([0.0,0.25,0.75,1.0])
+y = np.array([0.0,0.25,0.5,1.0])
+plt.plot(x, y,'-bD',mfc='black',mec='k', c='red',linestyle='-')
+plt.savefig(sys.stdout.buffer)
+#plt.show()
+#+END_SRC
+
+### Imagen
+#+Caption: Gráfica de una curva ROC conectando 4 puntos ROC
+#+ATTR_LATEX: :with 350px
+#+RESULTS:
+[[file:images/roc1.png]]
+
+ # [[file:images/roc1.png]]
