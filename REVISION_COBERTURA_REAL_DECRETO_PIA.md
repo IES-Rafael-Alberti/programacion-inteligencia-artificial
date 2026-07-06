@@ -9,14 +9,13 @@
 
 ## Veredicto ejecutivo
 
-El curso reorganizado cubre los **RA/CE del Real Decreto** de forma suficiente para impartición, pero hay cuatro puntos que conviene reforzar documentalmente para que la defensa sea más limpia:
+El curso reorganizado cubre los **RA/CE del Real Decreto** de forma suficiente para impartición. Tras añadir la evidencia de RA1, quedan tres puntos principales de blindaje documental:
 
-1. **RA1.b/c/f**: dejar más explícita la comparación de lenguajes y formatos/marcado.
-2. **Contenidos básicos RA1**: mencionar explícitamente Java, JavaScript/NodeJS y JSON como lenguajes/formatos de comparación, aunque no se desarrollen en profundidad.
-3. **RA3.d y RA3.e**: seguridad en convergencia tecnológica y toma de decisiones estratégicas deben aparecer como evidencia evaluable, no sólo como contenido técnico disperso.
-4. **RA4.a/b/d**: automatización industrial/de negocio, relación empresa-cliente, gestión de recursos y conveniencia del modelo necesitan una evidencia empresarial obligatoria en UD7 o proyecto final.
+1. **RA1.b/c/f y contenidos básicos RA1**: ya queda evidencia explícita en `01-fundamentos-python/04-evaluacion/comparativa-lenguajes-formatos-ia.md`, incluyendo Java, JavaScript/NodeJS, JSON y formatos de marcado/intercambio.
+2. **RA3.d y RA3.e**: seguridad en convergencia tecnológica y toma de decisiones estratégicas deben aparecer como evidencia evaluable, no sólo como contenido técnico disperso.
+3. **RA4.a/b/d**: automatización industrial/de negocio, relación empresa-cliente, gestión de recursos y conveniencia del modelo necesitan una evidencia empresarial obligatoria en UD7 o proyecto final.
 
-La revisión no detecta una necesidad de rehacer el curso. Detecta, sobre todo, necesidad de **blindaje documental y evaluativo**.
+La revisión no detecta una necesidad de rehacer el curso. Tras cubrir RA1 de forma explícita, el blindaje pendiente se concentra en **negocio, seguridad, toma de decisiones y automatización**.
 
 ## Lectura normativa usada
 
@@ -37,13 +36,13 @@ Los contenidos básicos del módulo incluyen, además de Python/R y entornos de 
 
 | RA/CE del RD 279/2021 | Cobertura actual | Evidencia principal del curso | Riesgo documental | Acción recomendada |
 |---|---|---|---|---|
-| **RA1. Caracteriza lenguajes de programación valorando su idoneidad en IA.** | Cubierto | UD1, UD2, UD3, UD4, UD6, UD9; Python, R, Pandas, scikit-learn, PyCaret, Keras, PyTorch, JAX, RAPIDS, APIs. | Medio | Hacer explícita una comparación de lenguajes/formatos. |
+| **RA1. Caracteriza lenguajes de programación valorando su idoneidad en IA.** | Cubierto explícito | UD1, UD2, UD3, UD4, UD6, UD9; actividad específica de comparativa de lenguajes y formatos. | Bajo | Mantener la actividad como evidencia RA1.b/c/d/e/f. |
 | RA1.a estructura de un programa informático | Cubierto | UD1: sintaxis, control de flujo, funciones, estructuras de datos, NumPy. | Bajo | Mantener evidencia inicial. |
-| RA1.b características de lenguajes según aplicación | Cubierto parcialmente explícito | Python como base; R como complemento; frameworks y librerías por contexto. | Medio | Tabla comparativa Python/R/Java/JavaScript/NodeJS/JSON. |
-| RA1.c lenguaje apropiado para la aplicación | Cubierto parcialmente explícito | Decisiones prácticas en notebooks, pipelines, APIs y proyecto final. | Medio | Exigir justificación breve de elección tecnológica en prácticas clave. |
+| RA1.b características de lenguajes según aplicación | Cubierto explícito | Actividad de comparativa Python/R/Java/JavaScript/NodeJS/formatos. | Bajo | Usar la tabla como evidencia evaluable. |
+| RA1.c lenguaje apropiado para la aplicación | Cubierto explícito | La actividad exige elegir y descartar tecnologías con justificación. | Bajo | Mantener decisión técnica razonada. |
 | RA1.d lenguajes para desarrollo de IA | Cubierto | Ecosistema Python/R/JAX/RAPIDS; frameworks IA y datos. | Bajo | Referenciar bibliotecas, rendimiento, soporte y comunidad. |
 | RA1.e lenguaje apropiado para aplicación de IA | Cubierto | UD3/UD4/UD6/UD9/UD12, elección según problema, despliegue y rendimiento. | Bajo-medio | Añadir criterio de rúbrica: idoneidad del lenguaje/herramienta. |
-| RA1.f lenguajes de marcado y etiquetas | Cubierto implícito | Markdown, YAML, JSON, notebooks, APIs, configuración, documentación. | Medio | Añadir microactividad/documento sobre JSON/YAML/Markdown/XML/HTML en IA. |
+| RA1.f lenguajes de marcado y etiquetas | Cubierto explícito | La actividad incluye JSON, YAML, Markdown y XML/HTML. | Bajo | Mantener explicación de función y limitaciones de cada formato. |
 | **RA2. Desarrolla aplicaciones de IA utilizando entornos de modelado.** | Muy cubierto | UD3, UD4, UD5, UD6, UD7, UD8, UD9, UD10, UD12. | Bajo | No requiere reestructuración. |
 | RA2.a plataformas de IA | Cubierto | Cloud/MLOps, APIs LLM, PyCaret, Hopsworks, MLflow, LlamaIndex, herramientas cloud. | Bajo | Conservar comparativas como evidencia. |
 | RA2.b entornos de modelado | Cubierto | scikit-learn, PyCaret, TensorFlow/Keras, PyTorch, JAX, RAPIDS, notebooks, pipelines. | Bajo | Indicar en rúbricas que se evalúa elección del entorno. |
@@ -68,8 +67,8 @@ Los contenidos básicos del módulo incluyen, además de Python/R y entornos de 
 |---|---|---|
 | Programa informático, etapas y lenguajes | Cubierto en UD1 | Correcto. |
 | Características de lenguajes para IA: bibliotecas, rendimiento, herramientas, soporte | Cubierto, pero disperso | Conviene consolidar en una tabla o mini-informe. |
-| Python, R, Java, JavaScript, NodeJS, JSON | Python/R cubiertos; JSON implícito; Java/JS/Node sólo contextual | No hace falta enseñar Java/Node a fondo, pero sí compararlos formalmente para cubrir RD. |
-| Lenguajes de marcado e información de etiquetas | Implícito | Añadir evidencia explícita con Markdown/YAML/JSON/XML/HTML. |
+| Python, R, Java, JavaScript, NodeJS, JSON | Cubierto con actividad comparativa específica en UD1. | No hace falta enseñar Java/Node a fondo; la evidencia formal ya compara su idoneidad. |
+| Lenguajes de marcado e información de etiquetas | Cubierto con actividad comparativa específica en UD1. | Mantener JSON/YAML/Markdown/XML/HTML como evidencia de formatos y marcado. |
 | Plataformas IA, librerías y servicios | Muy cubierto | Curso actualizado respecto al RD. |
 | Entornos de modelado y herramientas | Muy cubierto | Curso supera índices editoriales. |
 | Modelado de redes neuronales | Cubierto en UD4/UD8/UD10 | Correcto. |
@@ -116,7 +115,7 @@ La comparación editorial no cambia el veredicto: **el criterio principal debe s
 
 ### Prioridad 2 — RA1 formal
 
-3. Añadir una mini-actividad o anexo de comparación de lenguajes y formatos:
+3. Añadida mini-actividad de comparación de lenguajes y formatos:
    - Python;
    - R;
    - Java;

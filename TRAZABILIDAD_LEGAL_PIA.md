@@ -16,8 +16,8 @@ El curso está **alineado con los RA/CE del módulo** y, en varios bloques, supe
 
 Los puntos que conviene hacer más explícitos no requieren rehacer el curso, sino añadir o reforzar evidencias documentales:
 
-- comparación formal de lenguajes para IA;
-- uso de formatos/lenguajes de marcado y serialización de datos;
+- comparación formal de lenguajes para IA — cubierta con `01-fundamentos-python/04-evaluacion/comparativa-lenguajes-formatos-ia.md`;
+- uso de formatos/lenguajes de marcado y serialización de datos — cubierto con la misma actividad;
 - impacto de negocio, seguridad y toma de decisiones en la convergencia tecnológica;
 - justificación de modelos de automatización industrial o de negocio.
 
@@ -25,11 +25,11 @@ Los puntos que conviene hacer más explícitos no requieren rehacer el curso, si
 
 | Resultado de aprendizaje / criterio | Cobertura en el curso | Evidencias actuales | Estado | Refuerzo recomendado |
 |---|---|---|---|---|
-| **RA1. Caracteriza lenguajes de programación valorando su idoneidad en el desarrollo de IA.** | UD1 principalmente; apoyo en UD2, UD4, UD6 y UD9. | `01-fundamentos-python/` trabaja Python, estructuras, funciones, NumPy, JAX y R. UD2 trabaja herramientas de datos. UD4 compara frameworks de deep learning. UD6 y UD9 amplían el ecosistema con APIs, agentes, GPU y JAX. | **Cubierto** | Añadir una evidencia breve y explícita de comparación de lenguajes para IA. |
+| **RA1. Caracteriza lenguajes de programación valorando su idoneidad en el desarrollo de IA.** | UD1 principalmente; apoyo en UD2, UD4, UD6 y UD9. | `01-fundamentos-python/` trabaja Python, estructuras, funciones, NumPy, JAX y R; incluye actividad específica de comparativa de lenguajes y formatos. UD2 trabaja herramientas de datos y R como complemento. UD4, UD6 y UD9 amplían ecosistema con frameworks, APIs, agentes, GPU y JAX. | **Cubierto explícito** | Mantener la actividad como evidencia RA1.b/c/d/e/f. |
 | CE RA1.a — estructura de un programa informático. | UD1. | Ejercicios de Python básico: sintaxis, variables, control de flujo, funciones y estructuras de datos. | **Cubierto** | Mantener como evidencia inicial. |
-| CE RA1.b/c — características e idoneidad de lenguajes según la aplicación. | UD1, UD2, UD4, UD6, UD9. | Python como lenguaje base; R como complemento; JAX/RAPIDS para aceleración; FastAPI/Gradio para interfaces; frameworks Keras/PyTorch/JAX/TensorFlow. | **Cubierto parcialmente explícito** | Crear una mini-actividad o tabla comparativa: Python, R, JavaScript/Node, Java, JSON y casos de uso en IA. |
+| CE RA1.b/c — características e idoneidad de lenguajes según la aplicación. | UD1, UD2, UD4, UD6, UD9. | Python como lenguaje base; R como complemento; JAX/RAPIDS para aceleración; FastAPI/Gradio para interfaces; frameworks Keras/PyTorch/JAX/TensorFlow; actividad específica `comparativa-lenguajes-formatos-ia.md`. | **Cubierto explícito** | Mantener la actividad como evidencia breve de decisión tecnológica. |
 | CE RA1.d/e — características e idoneidad de lenguajes para IA. | UD1, UD3, UD4, UD9. | NumPy, Pandas, scikit-learn, PyCaret, Keras, PyTorch, JAX, RAPIDS/cuML. | **Cubierto** | Vincular explícitamente bibliotecas, rendimiento, soporte y ecosistema con la elección del lenguaje. |
-| CE RA1.f — lenguajes de marcado y etiquetas. | UD1, UD3, UD5, UD6, UD12. | Uso transversal de JSON/YAML/Markdown/notebooks/configuración, APIs y documentación de proyectos. | **Cubierto de forma implícita** | Añadir una evidencia corta sobre JSON/YAML/Markdown/XML/HTML como formatos de intercambio, configuración, documentación y APIs en IA. |
+| CE RA1.f — lenguajes de marcado y etiquetas. | UD1, UD3, UD5, UD6, UD12. | Uso transversal de JSON/YAML/Markdown/notebooks/configuración, APIs y documentación; actividad específica de JSON/YAML/Markdown/XML/HTML. | **Cubierto explícito** | Conservar la evidencia en UD1 y reutilizarla en UD2 si procede. |
 | **RA2. Desarrolla aplicaciones de IA utilizando entornos de modelado.** | UD3, UD4, UD5, UD6, UD8, UD9, UD10 y UD12. | Scikit-learn, PyCaret, CuML, Keras, PyTorch, JAX, TensorFlow, cloud/MLOps, RAG, agentes, visión, series temporales y proyecto final. | **Muy cubierto** | No requiere ampliación estructural. |
 | CE RA2.a — evaluar plataformas de IA. | UD5, UD6, UD7, UD12. | Comparativas cloud, herramientas de MLOps, APIs LLM, RAG, agentes, feature stores y herramientas convergentes. | **Cubierto** | Conservar tareas comparativas como evidencia. |
 | CE RA2.b — caracterizar entornos de modelado de IA. | UD3, UD4, UD5, UD9, UD10. | Scikit-learn/PyCaret, TensorFlow/Keras/PyTorch/JAX, RAPIDS/cuML, notebooks, pipelines y entornos cloud. | **Cubierto** | Hacer visible en rúbricas que se evalúa la elección del entorno. |
@@ -65,7 +65,7 @@ Los puntos que conviene hacer más explícitos no requieren rehacer el curso, si
 
 Para blindar la trazabilidad legal sin rehacer el curso:
 
-1. Añadir en UD1 una actividad breve de **comparativa de lenguajes y formatos para IA**.
+1. Mantener en UD1 la actividad breve de **comparativa de lenguajes y formatos para IA** ya creada.
 2. Añadir en UD7 o UD12 un apartado evaluable de **impacto empresarial, seguridad, toma de decisiones y automatización**.
 3. En el proyecto final, exigir una sección corta: **proceso afectado, usuarios, valor esperado, riesgos, alternativa descartada y criterio de conveniencia**.
 

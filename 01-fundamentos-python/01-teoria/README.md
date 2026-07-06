@@ -17,6 +17,7 @@ Esta carpeta contiene la teoría de apoyo y las guías de la unidad. Para no dup
 | 07 | Broadcasting y vectorización | `07-broadcasting-numpy.md`, `07b-broadcasting-numpy-infografia.md` | `../02-ejemplos/07_numpy_broadcasting_vectorizacion.ipynb` |
 | 08 | Introducción comparativa a JAX | `../02-ejemplos/08_introduccion_jax_comparativa.ipynb` | `05-guia-numpy-jax.md` |
 | 09 | R como complemento | `09-guia-r-complementario.md` | `../02-ejemplos/06_introduccion_R_fundamentos.ipynb` |
+| 10 | Comparativa de lenguajes y formatos para IA | `../04-evaluacion/comparativa-lenguajes-formatos-ia.md` | Python, R, Java, JavaScript/NodeJS, JSON, YAML, Markdown, XML/HTML |
 
 ## Cobertura
 
@@ -28,4 +29,4 @@ Esta carpeta contiene la teoría de apoyo y las guías de la unidad. Para no dup
 
 ## Pendiente
 
-- Incorporar evaluación en `../04-evaluacion/` si se decide crear GIFT/rúbrica para la unidad.
+- Decidir si JAX queda como introducción ligera o se desarrolla como bloque propio más adelante.
