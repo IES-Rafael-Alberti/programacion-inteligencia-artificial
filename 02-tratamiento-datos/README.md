@@ -14,7 +14,7 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 | Complementos | Plotly, Altair, hvPlot, Panel | Interactividad y visualización declarativa |
 | Alternativas a Pandas | Polars, DuckDB | Rendimiento, lazy execution y SQL local |
 | Avanzado | cuDF/RAPIDS | DataFrames con GPU NVIDIA/CUDA |
-| Itinerario opcional | R / dplyr | Ampliación para comparar con Pandas sin desplazar el eje Python |
+| Itinerario opcional | R / dplyr | Ampliación para comparar con Pandas; pendiente de reforzar si se busca suficiencia profesional básica |
 | Anexos/archivo | FireDucks, NLTK antiguo, R histórico | Referencia histórica o curiosidad técnica |
 
 ## Estructura
@@ -59,6 +59,10 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 | Visualización interactiva/declarativa | `15–19` | Altair, Plotly, mini EDA, HoloViz/Panel |
 | Alternativas / GPU / SQL local | `20–27` | cuDF, DuckDB, Polars, Pandas vs Polars |
 | Transformaciones | `28` | Transformaciones avanzadas |
+
+## Decisiones docentes
+
+- `00-r-itinerario-laboral.md` — diagnóstico y propuesta de ampliación de R para suficiencia profesional básica.
 
 ## 03-practicas/
 

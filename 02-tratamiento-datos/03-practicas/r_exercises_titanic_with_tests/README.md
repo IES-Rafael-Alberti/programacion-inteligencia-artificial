@@ -4,10 +4,10 @@ Este bloque permite trabajar los mismos conceptos de tratamiento de datos desde 
 
 ## Decisión docente
 
-- **Estado:** material opcional de ampliación.
+- **Estado:** material opcional de ampliación, actualmente insuficiente como competencia profesional básica completa.
 - **Rol:** contraste Pandas ↔ dplyr para alumnado que quiera ver R como herramienta de análisis de datos.
 - **No sustituye** al eje obligatorio de UD2: Python, Pandas, Matplotlib y Seaborn.
-- **Uso recomendado:** refuerzo, ampliación o comparación metodológica, no práctica principal si el grupo aún no domina Pandas.
+- **Uso recomendado:** refuerzo, ampliación o comparación metodológica, no práctica principal si el grupo aún no domina Pandas. Si se quiere que el alumnado se defienda profesionalmente con R, hay que ampliar este itinerario según `../../00-r-itinerario-laboral.md`.
 
 ## Camino rápido
 
