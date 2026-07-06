@@ -47,7 +47,7 @@ Esta carpeta centraliza los instrumentos de evaluación de la unidad. Las rúbri
 
 ## Cuestionario disponible
 
-- `cuestionario-deep-learning.gift`: preguntas de comprensión teórica sobre fundamentos de DL, backpropagation, frameworks y arquitecturas.
+- `cuestionario-deep-learning.gift`: preguntas de comprensión teórica sobre fundamentos de DL, backpropagation, frameworks, regularización y arquitecturas puente.
 
 ## Criterios de superación
 

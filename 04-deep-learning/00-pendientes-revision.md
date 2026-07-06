@@ -47,9 +47,9 @@ El residuo de `01-teoria/01-redes-neuronales-genericas/modelado-avanzado-docs/` 
 
 | Ruta | Duda | Recomendación provisional |
 |---|---|---|
-| `04-evaluacion/rubrica.md` | Puede seguir evaluando visión/NLP o proyectos que ya salieron de UD4. | Revisar y ajustar a Deep Learning base. |
-| `04-evaluacion/cuestionario-deep-learning.gift` | Puede contener preguntas de visión/NLP/transformers que ahora pertenecen a UD8/UD6. | Revisar después de cerrar frontera de teoría. |
-| `04-evaluacion/checklist-entrega.md` | Ya se retiró la parte de visión, pero puede necesitar una segunda pasada. | Revisar tras decidir proyectos. |
+| `04-evaluacion/rubrica.md` | **Revisada 2026-07-06**: centrada en los tres laboratorios base de UD4. | Sin cambios necesarios. |
+| `04-evaluacion/cuestionario-deep-learning.gift` | **Revisado 2026-07-06**: retiradas preguntas canónicas de CNN/Transformer. | Ajustado a fundamentos, backpropagation, frameworks, regularización y arquitecturas puente. |
+| `04-evaluacion/checklist-entrega.md` | **Revisado 2026-07-06**: mantiene sólo una nota de frontera para derivar visión/NLP a UD8/UD6. | Sin cambios necesarios. |
 
 ## Próxima decisión recomendada
 

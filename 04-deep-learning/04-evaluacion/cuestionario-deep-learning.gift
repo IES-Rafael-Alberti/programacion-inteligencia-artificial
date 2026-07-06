@@ -1,6 +1,6 @@
 // Cuestionario — UD4 Deep Learning
 // Formato GIFT para importar en Moodle
-// Bloques: Fundamentos (1-5), Backpropagation (6-10), Frameworks y práctica (11-14), Arquitecturas avanzadas (15-18)
+// Bloques: Fundamentos (1-5), Backpropagation (6-10), Frameworks y práctica (11-14), Generalización y arquitecturas puente (15-18)
 
 // ===== BLOQUE 1: FUNDAMENTOS =====
 
@@ -106,13 +106,13 @@
     ~Reduce el sobreajuste penalizando los pesos grandes de la misma forma que la regularización L2.
 }
 
-// ===== BLOQUE 4: ARQUITECTURAS AVANZADAS =====
+// ===== BLOQUE 4: GENERALIZACIÓN Y ARQUITECTURAS PUENTE =====
 
-::DL-15:: ¿Cuál es la operación central de una red neuronal convolucional (CNN) y qué ventaja ofrece respecto a una capa densa para imágenes? {
-    =La convolución: aplica filtros compartidos sobre regiones locales de la entrada, lo que reduce drásticamente el número de parámetros y captura patrones locales independientemente de su posición.
-    ~La atención: pondera cada píxel de la imagen en función de su relevancia global para la clasificación.
-    ~La recurrencia: procesa los píxeles de la imagen secuencialmente para capturar dependencias a larga distancia.
-    ~El pooling: reduce la resolución espacial de la imagen eliminando píxeles redundantes antes de la clasificación.
+::DL-15:: ¿Qué indica que una red neuronal puede estar sobreajustando el conjunto de entrenamiento? {
+    =La pérdida de entrenamiento sigue bajando mientras la pérdida de validación deja de mejorar o empeora, señal de que el modelo memoriza patrones específicos del entrenamiento.
+    ~La pérdida de entrenamiento y validación bajan juntas de forma estable durante todo el entrenamiento.
+    ~El modelo tiene pocas capas y no consigue reducir la pérdida de entrenamiento.
+    ~El learning rate es tan bajo que el entrenamiento avanza lentamente desde la primera época.
 }
 
 ::DL-16:: ¿Para qué tipo de datos son especialmente adecuadas las redes recurrentes (RNN/LSTM)? {
@@ -122,11 +122,11 @@
     ~Para cualquier problema de clasificación, ya que las RNN son más eficientes que las MLP en todos los casos.
 }
 
-::DL-17:: ¿Qué mecanismo distingue a la arquitectura Transformer de las RNN y CNN? {
-    =La atención multi-cabeza (multi-head attention), que pondera la relevancia entre todos los elementos de la secuencia de forma paralela, sin procesar tokens uno a uno.
-    ~Las conexiones residuales (skip connections), que permiten entrenar redes muy profundas sin gradiente evanescente.
-    ~El uso de convoluciones causales que procesan la secuencia hacia adelante sin ver el futuro.
-    ~Un mecanismo de memoria externa persistente que almacena representaciones de secuencias anteriores.
+::DL-17:: ¿Para qué se usa early stopping durante el entrenamiento de una red neuronal? {
+    =Para detener el entrenamiento cuando la métrica de validación deja de mejorar, reduciendo el riesgo de sobreajuste y evitando épocas innecesarias.
+    ~Para detener el entrenamiento en cuanto la pérdida de entrenamiento llega exactamente a cero.
+    ~Para sustituir la función de pérdida cuando el optimizador no converge.
+    ~Para eliminar automáticamente las capas que menos contribuyen al resultado final.
 }
 
 ::DL-18:: En el contexto de los laboratorios de UD4, ¿qué significa "frontera de decisión" (decision boundary)? {
