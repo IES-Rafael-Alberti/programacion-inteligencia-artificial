@@ -4,7 +4,7 @@ Este bloque permite trabajar los mismos conceptos de tratamiento de datos desde 
 
 ## Decisión docente
 
-- **Estado:** material opcional de ampliación, actualmente insuficiente como competencia profesional básica completa.
+- **Estado:** material opcional de ampliación reforzado para competencia operativa básica.
 - **Rol:** contraste Pandas ↔ dplyr para alumnado que quiera ver R como herramienta de análisis de datos.
 - **No sustituye** al eje obligatorio de UD2: Python, Pandas, Matplotlib y Seaborn.
 - **Uso recomendado:** refuerzo, ampliación o comparación metodológica, no práctica principal si el grupo aún no domina Pandas. Si se quiere que el alumnado se defienda profesionalmente con R, hay que ampliar este itinerario según `../../00-r-itinerario-laboral.md`.
@@ -13,12 +13,14 @@ Este bloque permite trabajar los mismos conceptos de tratamiento de datos desde 
 
 1. Leer `00D-Chuleta-R.md` para ver equivalencias básicas Pandas ↔ dplyr.
 2. Trabajar los `.Rmd` de alumnado en orden:
+   - `00_instalacion_y_entorno_R.md`
    - `00_Intro_R_alumnos.Rmd`
    - `01_Filter_Index_R_alumnos.Rmd`
    - `02_GroupApply_R_alumnos.Rmd`
    - `03_Merge_R_alumnos.Rmd`
    - `04_TimeSeries_R_alumnos.Rmd`
    - `05_Visualization_R_alumnos.Rmd`
+   - `06_comparativa_pandas_dplyr.md`
 3. Comparar cada operación con su equivalente en Pandas.
 4. Evaluar sólo si el profesorado decide activar este itinerario.
 

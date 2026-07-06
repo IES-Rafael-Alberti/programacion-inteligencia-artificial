@@ -81,4 +81,4 @@ No conviene evaluarlo con un examen de sintaxis. Debe evaluarse con una entrega 
 
 ## Estado
 
-Pendiente de implementación si se decide que R debe cubrir empleabilidad básica, no sólo curiosidad o comparación puntual.
+Implementación mínima aplicada en `03-practicas/r_exercises_titanic_with_tests/`: carga, filtrado, transformación, agrupación, joins, fechas, visualización, mini-EDA y comparativa Pandas ↔ dplyr. Queda pendiente probar ejecución real en un entorno R si se va a usar en clase.
