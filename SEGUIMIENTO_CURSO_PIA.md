@@ -2,24 +2,31 @@
 
 Este documento acompaña al libro `SEGUIMIENTO_CURSO_PIA.xlsx` y define su uso operativo durante el curso.
 
+## Idea clave
+
+La actividad o práctica es el contenedor de evidencias. La calificación oficial debe poder registrarse por criterio de evaluación (CE) asociado al RA correspondiente.
+
+Por eso, la hoja principal para evaluación es **Registro_CE**, no `Registro_Notas`.
+
 ## Hojas incluidas
 
 - **Imparticion**: seguimiento de partes impartidas por unidad, bloque, fecha, grupo, sesiones reales y próxima acción.
-- **Actividades**: catálogo de actividades, prácticas, cuestionarios y rúbricas detectadas en `03-practicas/` y `04-evaluacion/`.
-- **Registro_Notas**: registro por alumno y actividad para controlar entregas, corrección, nota, peso y nota ponderada.
-- **Resumen_Alumno**: medias por alumno calculadas desde `Registro_Notas`.
+- **Actividades**: catálogo de actividades, prácticas, cuestionarios y rúbricas detectadas en `03-practicas/` y `04-evaluacion/`. Incluye una columna `CE previstos` para anotar los criterios que cubre cada actividad.
+- **Registro_CE**: registro por alumno, actividad y CE evaluado. Permite anotar nota del CE, peso dentro de la actividad, evidencia y estado de corrección.
+- **Resumen_CE**: medias por alumno y CE calculadas desde `Registro_CE`.
+- **Registro_Notas**: hoja auxiliar para una nota global de actividad si se necesita internamente. No debe sustituir a la calificación por CE.
+- **RA_CE**: texto de referencia de resultados de aprendizaje y criterios de evaluación.
 - **Listas**: estados normalizados para evitar anotaciones inconsistentes.
 
 ## Uso recomendado
 
-1. Al empezar una unidad, filtrar **Imparticion** por unidad y marcar cada parte como `En curso`, `Impartido`, `Reforzar` u `Omitido`.
-2. En **Actividades**, marcar qué prácticas se proponen realmente, fechas, entregas esperadas, entregas recibidas y pendientes de corrección.
-3. En **Registro_Notas**, introducir una fila por alumno y actividad evaluada. La columna `Nota ponderada` se calcula si hay `Nota 0-10` y `Peso %`.
-4. En **Resumen_Alumno**, escribir el alumnado en la columna `Alumno` para obtener media simple, media ponderada, número de actividades registradas y correcciones pendientes.
-5. Para trazabilidad fina por RA/CE, cruzar este libro con `TRAZABILIDAD_CALIFICACIONES_RA_CE.xlsx`.
+1. En **Actividades**, anotar en `CE previstos` los CE que cubre cada práctica antes de proponerla.
+2. En **Registro_CE**, introducir una fila por alumno, actividad y CE evaluado.
+3. Usar `Nota CE 0-10` para la calificación real del criterio, no sólo de la tarea completa.
+4. Usar `Peso CE %` si una actividad reparte varios CE con pesos diferentes.
+5. En **Resumen_CE**, copiar el nombre del alumno en las filas de los CE que se quieran consultar.
+6. Usar `Registro_Notas` sólo como apoyo interno cuando interese conservar una nota global de práctica.
 
-## Criterio de mantenimiento
+## Relación con la trazabilidad RA/CE
 
-- Si se añade una práctica nueva al repositorio, debe añadirse también a la hoja **Actividades**.
-- Si se cambia la estructura de una unidad, debe revisarse la hoja **Imparticion**.
-- Este libro es una herramienta de aula: no sustituye a la programación ni a la trazabilidad legal, pero facilita el seguimiento diario.
+`TRAZABILIDAD_CALIFICACIONES_RA_CE.xlsx` sirve para mapa y propagación rápida actividad → RA/CE. Para seguimiento diario y calificación defendible por CE, usar preferentemente `SEGUIMIENTO_CURSO_PIA.xlsx`, hoja **Registro_CE**.

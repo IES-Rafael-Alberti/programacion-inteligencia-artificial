@@ -2,6 +2,8 @@
 
 Archivo asociado: `TRAZABILIDAD_CALIFICACIONES_RA_CE.xlsx`.
 
+> **Nota operativa:** esta plantilla propaga una nota global de actividad a los RA/CE marcados. Si se quiere registrar la calificación oficial directamente por criterio de evaluación, usar `SEGUIMIENTO_CURSO_PIA.xlsx`, hoja `Registro_CE`.
+
 ## Uso
 
 1. En la hoja `Mapa_RA_CE`, revisar qué RA/CE trata cada actividad.
