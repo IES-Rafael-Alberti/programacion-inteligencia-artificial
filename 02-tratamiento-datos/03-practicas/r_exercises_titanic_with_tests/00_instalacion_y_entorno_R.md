@@ -1,6 +1,6 @@
 # Preparación del entorno R
 
-Este itinerario usa R como ampliación opcional de UD2. El objetivo no es sustituir Python/Pandas, sino reconocer y resolver tareas habituales con R/tidyverse.
+Este itinerario usa R como ampliación opcional de UD2. El objetivo no es sustituir Python/Pandas, sino reconocer y resolver tareas habituales con paquetes habituales del ecosistema R para datos.
 
 ## Herramientas recomendadas
 
@@ -14,13 +14,15 @@ Este itinerario usa R como ampliación opcional de UD2. El objetivo no es sustit
 ## Paquetes mínimos
 
 ```r
-install.packages(c("tidyverse", "lubridate"), repos = "https://cloud.r-project.org")
+install.packages(c("dplyr", "ggplot2", "tibble", "lubridate", "rmarkdown", "knitr"), repos = "https://cloud.r-project.org")
 ```
 
 En cada práctica:
 
 ```r
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(tibble)
 library(lubridate)
 ```
 
@@ -35,3 +37,5 @@ Si el fichero no está disponible en el entorno de ejecución, el profesorado de
 ## Resultado esperado
 
 Al terminar, el alumnado debe poder abrir un `.Rmd`, ejecutar los bloques, interpretar errores básicos y explicar qué operación de Pandas equivale a cada operación de `dplyr`.
+
+> Nota: la lectura de CSV se hace con `read.csv()` de R base para evitar depender de `readr` si hay problemas de compilación.

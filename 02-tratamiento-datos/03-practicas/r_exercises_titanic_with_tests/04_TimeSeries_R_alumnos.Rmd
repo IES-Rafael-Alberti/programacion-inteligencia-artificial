@@ -4,7 +4,8 @@ output: html_document
 ---
 
 ```{r setup, message=FALSE, warning=FALSE}
-library(tidyverse)
+library(dplyr)
+library(tibble)
 library(lubridate)
 ```
 

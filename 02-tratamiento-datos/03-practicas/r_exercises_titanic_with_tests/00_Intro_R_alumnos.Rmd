@@ -4,7 +4,7 @@ output: html_document
 ---
 
 ```{r setup, message=FALSE, warning=FALSE}
-library(tidyverse)
+library(dplyr)
 ```
 
 ## Objetivo
@@ -12,7 +12,7 @@ library(tidyverse)
 Cargar Titanic, inspeccionar su estructura y reconocer tipos de variables. Equivalente aproximado en Pandas: `read_csv`, `head`, `info`, `describe`.
 
 ```{r cargar-datos}
-titanic <- read_csv("../../05-recursos/datasets/titanic.csv")
+titanic <- read.csv("../../05-recursos/datasets/titanic.csv")
 ```
 
 ## Ejercicio 1 — Primeras filas

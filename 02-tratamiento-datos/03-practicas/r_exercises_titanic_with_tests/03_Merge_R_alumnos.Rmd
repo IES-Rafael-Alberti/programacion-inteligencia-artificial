@@ -4,8 +4,9 @@ output: html_document
 ---
 
 ```{r setup, message=FALSE, warning=FALSE}
-library(tidyverse)
-titanic <- read_csv("../../05-recursos/datasets/titanic.csv")
+library(dplyr)
+library(tibble)
+titanic <- read.csv("../../05-recursos/datasets/titanic.csv")
 ```
 
 ## Objetivo
