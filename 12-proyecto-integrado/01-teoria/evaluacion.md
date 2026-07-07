@@ -16,7 +16,7 @@ Esta distribución corresponde al **proyecto final de módulo**. No modifica la 
 | Componente IA/ML | 25% | Modelo, sistema inteligente, RAG, recomendador, clasificación, predicción o análisis justificado |
 | Ingeniería del proyecto | 20% | Estructura del repositorio, reproducibilidad, código modular, pipeline o automatización |
 | Salida útil | 15% | API, dashboard, informe, asistente, ranking, alerta o interfaz con utilidad clara |
-| Documentación | 10% | README, explicación de datos, decisiones, limitaciones e instrucciones de uso |
+| Documentación | 10% | README, explicación de datos, decisiones, limitaciones, impacto de negocio y criterios de conveniencia |
 | Defensa oral | 10% | Claridad, evidencias, demo y capacidad para justificar decisiones |
 
 ## Requisitos mínimos para aprobar
@@ -27,6 +27,7 @@ Esta distribución corresponde al **proyecto final de módulo**. No modifica la 
 - [ ] Incluye limpieza, curación o transformación de datos.
 - [ ] Contiene un componente de IA/ML razonado.
 - [ ] Produce una salida útil para usuario, análisis o toma de decisiones.
+- [ ] Incluye una sección explícita de proceso, usuario, valor esperado, riesgos, alternativa descartada y conveniencia.
 - [ ] Incluye documentación suficiente para ejecutar o entender el proyecto.
 - [ ] El equipo realiza una defensa oral con demostración o evidencias.
 
@@ -34,9 +35,9 @@ Esta distribución corresponde al **proyecto final de módulo**. No modifica la 
 
 | Nivel | Descripción |
 |---|---|
-| Excelente | Integra varias fuentes con criterio, el modelo aporta valor claro, la solución es reproducible y la defensa justifica decisiones y limitaciones. |
-| Bien | Cumple los requisitos mínimos, funciona de forma razonable y está documentado, aunque con margen de mejora técnica. |
-| Mejorable | Hay idea válida, pero integración, modelo, documentación o salida útil son débiles o incompletos. |
+| Excelente | Integra varias fuentes con criterio, el modelo aporta valor claro, la solución es reproducible y la defensa justifica decisiones, impacto de negocio, riesgos y limitaciones. |
+| Bien | Cumple los requisitos mínimos, funciona de forma razonable y está documentado, aunque con margen de mejora técnica o de defensa empresarial. |
+| Mejorable | Hay idea válida, pero integración, modelo, documentación, valor de negocio o salida útil son débiles o incompletos. |
 | Insuficiente | Es un notebook aislado, usa una sola fuente sin integración, copia un ejemplo externo sin adaptación o no demuestra un componente IA/ML claro. |
 
 ## Errores frecuentes

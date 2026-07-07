@@ -35,6 +35,8 @@ Al finalizar, el equipo debe poder explicar con claridad:
 6. Qué salida útil ofrece.
 7. Cómo se ha construido, probado y documentado.
 8. Qué limitaciones, riesgos y mejoras futuras tiene.
+9. Qué impacto tiene sobre un proceso real, un usuario o un cliente.
+10. Por qué la solución elegida es conveniente frente a alternativas más simples.
 
 ## Requisitos obligatorios
 
@@ -138,6 +140,20 @@ Opciones válidas:
 - Pipeline que genere resultados periódicamente.
 
 La salida debe estar alineada con el usuario objetivo del proyecto.
+
+### Sección obligatoria de negocio, automatización y conveniencia
+
+Además del componente técnico, la memoria del proyecto final debe incluir una sección breve y evaluable con estos puntos:
+
+- proceso, tarea o decisión real que se quiere mejorar;
+- usuario, cliente o equipo afectado;
+- valor esperado o mejora concreta;
+- recursos, datos o activos implicados;
+- riesgos, límites o dependencias;
+- alternativa descartada y motivo del descarte;
+- criterio de conveniencia de la solución elegida frente a opciones más simples.
+
+Esta sección no sustituye al modelo ni a la demo. Los complementa para que el proyecto se pueda defender también desde el punto de vista de negocio y automatización.
 
 ## Fase inicial de validación
 

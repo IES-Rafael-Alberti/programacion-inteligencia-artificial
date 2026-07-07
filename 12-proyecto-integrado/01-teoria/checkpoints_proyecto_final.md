@@ -36,7 +36,9 @@ Documento breve de 1 página o formulario con:
 - usuarios o destinatarios;
 - utilidad esperada;
 - primeras fuentes de datos posibles;
-- posible salida final: API, dashboard, informe, asistente, recomendador, ranking, alerta, etc.
+- posible salida final: API, dashboard, informe, asistente, recomendador, ranking, alerta, etc.;
+- proceso, tarea o decisión que se quiere mejorar;
+- valor esperado, riesgos iniciales y alternativa sencilla descartada.
 
 ### Criterios de aceptación
 
@@ -45,6 +47,7 @@ Documento breve de 1 página o formulario con:
 - [ ] No depende de datos imposibles de conseguir.
 - [ ] La dificultad parece adecuada para el módulo.
 - [ ] Puede evolucionar durante el curso.
+- [ ] Hay una primera idea de proceso, usuario y valor esperado.
 
 ### Motivos para devolver la propuesta
 
@@ -168,6 +171,7 @@ Primera salida usable del proyecto:
 - [ ] Tiene usuario o destinatario claro.
 - [ ] Usa el componente IA/ML del proyecto.
 - [ ] Puede demostrarse en clase.
+- [ ] La solución elegida es razonable frente a alternativas más simples.
 
 ## CP6 — Calidad, límites e IA responsable
 

@@ -26,6 +26,7 @@ El proyecto integrador de UD7 puede reutilizarse como ensayo o avance técnico, 
 - Limpieza y curación de datos.
 - Componente de IA/ML justificado.
 - Salida útil: API, dashboard, informe, asistente, recomendador, predicción u otra interfaz razonada.
+- Sección explícita sobre proceso afectado, usuarios, valor esperado, riesgos, alternativa descartada y conveniencia.
 - Documentación y defensa final.
 
 ## Documento principal
