@@ -116,6 +116,8 @@ El proyecto DEBE incluir:
 | **Informe técnico** | PDF (4–6 páginas) | 30% |
 | **Defensa oral** | Presentación 10 min + preguntas | 20% |
 
+> **Obligatorio en el informe y la defensa**: explicar qué proceso o decisión mejora el sistema, qué usuarios o cliente se benefician, qué riesgos o límites hay y por qué la solución elegida conviene más que una alternativa más simple.
+
 ### 4.1 Repositorio de Código
 
 Estructura recomendada:
@@ -153,10 +155,11 @@ Estructura sugerida:
 1. **Introducción** (½ pág): problema que resuelve y enfoque
 2. **Arquitectura** (1 pág): diagrama del stack convergente con todas las herramientas
 3. **Decisiones técnicas** (1 pág): por qué elegiste cada herramienta y cómo se conectan
-4. **Experimentación** (½ pág): modelos probados, métricas, selección final
-5. **Monitorización y calidad** (½ pág): resultados de Evidently, decisiones basadas en datos
-6. **IA Responsable** (½ pág): guardrails, equidad, explicabilidad
-7. **Conclusiones** (½ pág): qué aprendiste, qué harías diferente
+4. **Impacto, seguridad y conveniencia** (½ pág): proceso afectado, usuarios o cliente, valor esperado, riesgos, alternativa descartada y por qué la solución conviene frente a una opción más simple
+5. **Experimentación** (½ pág): modelos probados, métricas, selección final
+6. **Monitorización y calidad** (½ pág): resultados de Evidently, decisiones basadas en datos
+7. **IA Responsable** (½ pág): guardrails, equidad, explicabilidad
+8. **Conclusiones** (½ pág): qué aprendiste, qué harías diferente
 
 ### 4.3 Defensa Oral
 

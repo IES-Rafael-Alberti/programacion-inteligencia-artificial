@@ -116,15 +116,16 @@ Cada criterio se evalúa en 4 niveles. La nota final del proyecto se calcula com
 
 | Nivel | Puntos | Descripción |
 |-------|--------|-------------|
-| **Excelente** | 4 | Informe completo (4-6 páginas) con diagrama de arquitectura, justificación de decisiones técnicas por RA/CE, resultados de experimentación, monitorización y conclusiones. |
+| **Excelente** | 4 | Informe completo (4-6 páginas) con diagrama de arquitectura, justificación de decisiones técnicas por RA/CE, impacto de negocio o proceso, riesgos, resultados de experimentación, monitorización y conclusiones. |
 | **Bien** | 3 | Informe claro y completo, aunque sin diagrama de arquitectura o con justificación RA superficial. |
-| **Mejorable** | 2 | Informe básico que describe qué se hizo pero no justifica por qué. Sin conexión RA. |
+| **Mejorable** | 2 | Informe básico que describe qué se hizo pero no justifica por qué ni deja claro el valor o los riesgos. Sin conexión RA. |
 | **Insuficiente** | 1 | Informe incompleto, sin estructura clara o no entregado. |
 
 **Indicadores específicos**:
 - ¿Incluye diagrama del stack convergente?
 - ¿Justifica la elección de cada herramienta?
 - ¿Conecta decisiones con RA3/RA4?
+- ¿Explica qué proceso/usuario mejora y por qué conviene la solución elegida?
 - ¿Incluye resultados de monitorización y explicabilidad?
 
 ---

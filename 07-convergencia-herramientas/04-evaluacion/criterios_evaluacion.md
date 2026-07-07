@@ -117,7 +117,7 @@ Este proyecto es el cierre de la unidad UD7 sobre stack convergente. Puede reuti
 | Componente | Peso | Cobertura RA/CE |
 |-----------|------|-----------------|
 | **Código** | 50% (del 40%) | RA3a, RA3b, RA3c, RA3d, RA3e, RA4a, RA4c, RA4d |
-| **Informe técnico** | 30% (del 40%) | RA3a, RA3e, RA4a |
+| **Informe técnico** | 30% (del 40%) | RA3a, RA3e, RA4a, RA4d |
 | **Defensa oral** | 20% (del 40%) | RA3e (comunicación de decisiones) |
 
 ### 2.2 Requisitos Mínimos para Aprobar
@@ -129,6 +129,7 @@ Este proyecto es el cierre de la unidad UD7 sobre stack convergente. Puede reuti
 - [ ] Explicabilidad (SHAP o LIME)
 - [ ] README con instrucciones
 - [ ] Informe técnico entregado
+- [ ] El informe explica proceso afectado, usuarios, valor esperado, riesgos y conveniencia de la solución
 
 ### 2.3 Penalizaciones
 

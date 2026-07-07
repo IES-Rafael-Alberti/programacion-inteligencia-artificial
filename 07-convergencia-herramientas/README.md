@@ -8,6 +8,8 @@
 
 Unidad diseñada con enfoque **workflow-based + problem-first**: parte del problema real de llevar un notebook a producción y recorre el stack convergente completo, desde datos y experimentación hasta serving, agentes, observabilidad e IA responsable.
 
+El proyecto final de UD7 debe dejar explícitos el impacto sobre el negocio o el proceso afectado, la seguridad del sistema y la conveniencia de la solución elegida frente a alternativas más simples.
+
 ## Estructura
 
 - `01-teoria/`: guías teóricas F0–F8 y proyecto integrador.
