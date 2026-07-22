@@ -43,9 +43,9 @@ Esta unidad introduce los **fundamentos de Python**, base imprescindible para to
 ---
 
 ## 5. Herramientas
-- **Python 3.11+**
+- **Python 3.12** (versión objetivo del entorno del curso).
 - **Jupyter Notebook** o **Google Colab**
-- Editor: **VSCode** o **PyCharm Community**
+- Editor: **VSCode** o **PyCharm Community** (u otro editor de tu preferencia).
 
 ---
 
