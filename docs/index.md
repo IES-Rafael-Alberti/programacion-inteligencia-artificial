@@ -31,6 +31,10 @@ Consulta la [guía del Proyecto Integrado](unidades/ud12.md) para acceder al mat
 
 Todas las tareas, prácticas y proyectos con entrega están sujetos a las [normas comunes de entrega y uso de inteligencia artificial](normas-entregas-y-uso-de-ia.md). En ellas se explican la penalización gradual por retraso, las evidencias que deben aportarse cuando se utilice IA y cómo demostrar que el resultado se ha verificado.
 
+## Entornos de trabajo
+
+El [manual práctico de Pixi para PIA](manual-pixi-pia.md) explica la herramienta y el diseño piloto de entornos base, por unidad y con GPU.
+
 ## Portal común
 
 Está prevista la creación de un portal común para coordinar la publicación de materiales de **SBD**, **PIA** y **DWES** desde un punto de acceso compartido.
