@@ -1,202 +1,95 @@
-# 🎬 Actividad Práctica: Construcción de un Dataset de Películas con TMDB + OMDb
+# Actividad práctica: construir un dataset de películas
 
-**Objetivo:** Aprender a consumir dos APIs distintas (TMDB y OMDb), fusionar sus datos en un dataset común, procesarlo y guardarlo de forma estructurada. Todo el flujo estará contenido en un proyecto Poetry.
+Esta actividad consume las API de TMDB y OMDb, combina sus respuestas y guarda un dataset para analizarlo después. El entorno reproducible del laboratorio es el entorno Pixi `ud3-datasets` del repositorio PIA.
 
----
+## Ruta rápida
 
-## 🔧 Requisitos previos
-
-* Tener instalado Python 3.10 o superior
-* Tener instalado Poetry
-* Cuenta creada en TMDB para obtener una API Key:
-  👉 [https://developer.themoviedb.org/signup](https://developer.themoviedb.org/signup)
-* Clave gratuita de OMDb API:
-  👉 [https://www.omdbapi.com/apikey.aspx](https://www.omdbapi.com/apikey.aspx)
-
----
-
-## 🧱 Estructura del proyecto
+Desde la raíz del repositorio:
 
 ```bash
-mi_dataset_peliculas/
-├── data/                     # Aquí se guardarán los CSV
-├── notebooks/                # Experimentos opcionales
-├── src/
-│   └── mi_dataset_peliculas/
-│       ├── tmdb.py           # Código para TMDB
-│       ├── omdb.py           # Código para OMDb
-│       ├── merge.py          # Fusionar datos
-│       └── build_dataset.py  # Script principal
-├── pyproject.toml            # Configuración de Poetry
-└── README.md
+pixi install
+pixi run --environment ud3-datasets python --version
 ```
 
----
-
-## 📦 Paso 1 – Crear el proyecto
-
-```bash
-poetry new mi_dataset_peliculas --src
-cd mi_dataset_peliculas
-poetry add requests pandas python-dotenv
-# Alternativas:
-# - Cliente HTTP: httpx (sync/async) o aiohttp (todo async)
-# - DataFrames: polars (CPU rápido) o cudf (GPU con CUDA)
-# Ejemplo: poetry add httpx polars
-```
-**Nota:**
-Para lanzar el entorno virtual creado por poetry, se usaba `poetry shell`. Desde la versión
-2.0, `shell` ya no está disponible y hay que instalarlo de esta manera:
-```bash
-poetry self add poetry-plugin-shell
-```
----
-
-## 🔑 Paso 2 – Configurar claves API
-
-Poetry crea el entorno virtual en `.venv`; usa un archivo `.env` para las claves y añádelo a `.gitignore`.
-(o un módulo `config.py` temporal)
+Configura tus claves en un archivo `.env` dentro de `mi_dataset_peliculas/` (no lo subas al repositorio):
 
 ```env
 TMDB_API_KEY=REPLACE_ME
 OMDB_API_KEY=REPLACE_ME
 ```
 
-Carga las claves desde código (sin hardcodear) con `python-dotenv` o solo con `os.getenv`:
+Para ejecutar el código del laboratorio, usa la tarea definida en `pixi.toml`:
 
-```python
-# src/mi_dataset_peliculas/config.py
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-TMDB_API_KEY=REPLACE_ME
-OMDB_API_KEY=REPLACE_ME
+```bash
+pixi run --environment ud3-datasets lab1-dataset
 ```
 
----
+La tarea establece el directorio de trabajo del proyecto y el `PYTHONPATH` necesario para que funcionen los imports relativos. No ejecutes `build_dataset.py` directamente: al hacerlo se pierde el contexto del paquete y pueden fallar imports como `from .tmdb import ...`.
 
-## 🌐 Paso 3 – Consultar TMDB
+## Requisitos previos
+
+- Pixi instalado siguiendo el [manual de Pixi para PIA](../../../../docs/manual-pixi-pia.md).
+- Una clave de TMDB: <https://developer.themoviedb.org/signup>.
+- Una clave gratuita de OMDb: <https://www.omdbapi.com/apikey.aspx>.
+
+Pixi sustituye aquí las instrucciones antiguas de Poetry. El `pyproject.toml` y `poetry.lock` del ejemplo se conservan provisionalmente como metadatos del proyecto hasta completar la migración; no es necesario instalar Poetry para realizar esta actividad.
+
+## Estructura del proyecto
+
+```text
+mi_dataset_peliculas/
+├── data/
+├── src/mi_dataset_peliculas/
+│   ├── config.py
+│   ├── tmdb.py
+│   ├── omdb.py
+│   ├── merge.py
+│   └── build_dataset.py
+├── pyproject.toml          # pendiente de retirar o conservar como metadato
+└── README.md
+```
+
+## Cómo funciona
+
+`config.py` lee las claves mediante `python-dotenv` y los módulos `tmdb.py` y `omdb.py` usan `requests`. `merge.py` conserva las columnas seleccionadas de ambas API. `build_dataset.py` crea `data/dataset_peliculas.csv`.
+
+El flujo mínimo de consulta TMDB es:
 
 ```python
-# src/mi_dataset_peliculas/tmdb.py
-import httpx
+import requests
 from .config import TMDB_API_KEY
 
 
 def get_popular_movies(page=1):
-    url = "https://api.themoviedb.org/3/movie/popular"
-    params = {"api_key": TMDB_API_KEY, "language": "es-ES", "page": page}
-    resp = httpx.get(url, params=params, timeout=10.0)
-    resp.raise_for_status()
-    data = resp.json()
-    return data.get("results", [])
+    response = requests.get(
+        "https://api.themoviedb.org/3/movie/popular",
+        params={"api_key": TMDB_API_KEY, "language": "es-ES", "page": page},
+        timeout=10,
+    )
+    response.raise_for_status()
+    return response.json()["results"]
 ```
 
----
+Para OMDb se usa el mismo patrón, pasando `apikey` y el título consultado. No guardes claves en el código ni en notebooks versionados.
 
-## 🍿 Paso 4 – Consultar OMDb
+## Tarea
 
-```python
-# src/mi_dataset_peliculas/omdb.py
-import httpx
-from .config import OMDB_API_KEY
+1. Completa o revisa `tmdb.py` y `omdb.py`.
+2. Obtén varias páginas y evita duplicados.
+3. Añade columnas justificadas, por ejemplo género, actores o director.
+4. Analiza el CSV resultante con pandas y documenta decisiones y limitaciones.
+5. Comprueba casos normales, respuestas sin resultados y errores de red.
+6. Entrega también las evidencias de proceso y verificación exigidas por las [normas comunes de entregas y uso de IA](../../../../docs/normas-entregas-y-uso-de-ia.md).
 
+## Problemas habituales
 
-def get_omdb_data(title):
-    params = {"apikey": OMDB_API_KEY, "t": title}
-    resp = httpx.get("http://www.omdbapi.com/", params=params, timeout=10.0)
-    resp.raise_for_status()
-    return resp.json()
-```
+| Problema | Solución |
+|---|---|
+| `pixi: command not found` | Abre un terminal nuevo y comprueba el `PATH`. |
+| `ModuleNotFoundError: mi_dataset_peliculas` | Ejecuta la tarea `lab1-dataset` desde la raíz del repositorio. |
+| Clave `None` o respuesta 401 | Revisa `.env`, los nombres de las variables y los permisos de las claves. |
+| El CSV aparece en otra carpeta | Ejecuta la tarea Pixi; su directorio de trabajo es el proyecto del laboratorio. |
 
----
+## Siguiente paso
 
-## 🔗 Paso 5 – Combinar información
-
-```python
-# src/mi_dataset_peliculas/merge.py
-def merge_tmdb_omdb(tmdb_list, omdb_getter):
-    result = []
-    for movie in tmdb_list:
-        omdb = omdb_getter(movie['title'])
-        if omdb.get('Response') == 'True':
-            movie_data = {
-                "title": movie["title"],
-                "release_date": movie.get("release_date"),
-                "vote_average": movie.get("vote_average"),
-                "runtime": omdb.get("Runtime"),
-                "director": omdb.get("Director"),
-                "imdb_rating": omdb.get("imdbRating")
-            }
-            result.append(movie_data)
-    return result
-```
-
----
-
-## 🧰 Paso 6 – Construir y guardar el dataset
-
-```python
-# src/mi_dataset_peliculas/build_dataset.py
-from pathlib import Path
-import polars as pl  # cambia a pandas si prefieres
-from .tmdb import get_popular_movies
-from .omdb import get_omdb_data
-from .merge import merge_tmdb_omdb
-
-
-def main():
-    Path("data").mkdir(exist_ok=True)
-    tmdb_movies = get_popular_movies(page=1)
-    merged_data = merge_tmdb_omdb(tmdb_movies, get_omdb_data)
-
-    df = pl.DataFrame(merged_data)
-    df.write_csv("data/dataset_peliculas.csv")
-    df.write_parquet("data/dataset_peliculas.parquet")
-    print("✅ Dataset guardado correctamente.")
-
-
-if __name__ == "__main__":
-    main()
-```
-
----
-
-## 🚀 Paso 7 – Ejecutar
-
-```bash
-poetry run python src/mi_dataset_peliculas/build_dataset.py
-```
-
----
-
-## 🎯 Tarea para el alumnado
-
-1. Completar los módulos `tmdb.py` y `omdb.py`
-2. Probar a obtener datos de varias páginas (cambiar parámetro `page`)
-3. Añadir columnas extra como `actors`, `genre`, `plot`, `poster_url`
-4. Realizar análisis con pandas o seaborn sobre el CSV resultante
-5. (Opcional) Servir el dataset con FastAPI desde el mismo proyecto. Ejemplo rápido:
-   ```python
-   # src/mi_dataset_peliculas/api.py
-   from fastapi import FastAPI
-   import polars as pl
-
-   app = FastAPI()
-   df = pl.read_parquet("data/dataset_peliculas.parquet")
-
-
-   @app.get("/movies")
-   def list_movies(title: str | None = None, director: str | None = None):
-       result = df
-       if title:
-           result = result.filter(pl.col("title").str.contains(title, literal=False))
-       if director:
-           result = result.filter(pl.col("director").str.contains(director, literal=False))
-       return result.to_dicts()
-   ```
-   Ejecuta con `poetry add fastapi uvicorn` y `poetry run uvicorn mi_dataset_peliculas.api:app --reload`.
-
----
-
+Cuando este laboratorio esté validado en Linux/WSL2, Windows y macOS, se decidirá si se elimina `poetry.lock` y el `pyproject.toml` o si se conserva este último como metadato de empaquetado.
