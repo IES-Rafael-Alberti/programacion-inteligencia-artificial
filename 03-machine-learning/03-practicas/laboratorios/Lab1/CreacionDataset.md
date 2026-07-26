@@ -32,7 +32,7 @@ La tarea establece el directorio de trabajo del proyecto y el `PYTHONPATH` neces
 - Una clave de TMDB: <https://developer.themoviedb.org/signup>.
 - Una clave gratuita de OMDb: <https://www.omdbapi.com/apikey.aspx>.
 
-Pixi sustituye aquí las instrucciones antiguas de Poetry. El `pyproject.toml` y `poetry.lock` del ejemplo se conservan provisionalmente como metadatos del proyecto hasta completar la migración; no es necesario instalar Poetry para realizar esta actividad.
+Pixi es el único gestor de entorno y dependencias de este laboratorio. No es necesario instalar ni configurar otro gestor de paquetes.
 
 ## Estructura del proyecto
 
@@ -45,7 +45,6 @@ mi_dataset_peliculas/
 │   ├── omdb.py
 │   ├── merge.py
 │   └── build_dataset.py
-├── pyproject.toml          # pendiente de retirar o conservar como metadato
 └── README.md
 ```
 
@@ -92,4 +91,4 @@ Para OMDb se usa el mismo patrón, pasando `apikey` y el título consultado. No 
 
 ## Siguiente paso
 
-Cuando este laboratorio esté validado en Linux/WSL2, Windows y macOS, se decidirá si se elimina `poetry.lock` y el `pyproject.toml` o si se conserva este último como metadato de empaquetado.
+Ejecuta el laboratorio con tus claves reales y documenta las comprobaciones realizadas junto con el dataset entregado.
