@@ -86,7 +86,9 @@ Esta documentación compara los algoritmos y la API de **scikit-learn (CPU)** co
 
 4.1. **Modelos Ensemble Acelerados (XGBoost y LightGBM).**
 
-4.2. Módulos de Preprocesamiento (`preprocessing`).
+4.2. Módulos de Preprocesamiento (`preprocessing`) y regla anti-fuga: separar train/test antes de ajustar transformadores ([guía](05-preparacion-datos-ml.md)).
+
+4.2a. [Marco CRISP-DM](05a-marco-crisp-dm.md): ciclo iterativo para contextualizar datos, modelado, evaluación y entrega.
 
 4.3. Métricas de Evaluación Aceleradas (`metrics`).
 

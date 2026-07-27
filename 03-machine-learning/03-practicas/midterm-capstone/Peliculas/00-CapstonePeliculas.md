@@ -6,6 +6,19 @@ El objetivo no es solo que el código funcione, sino que **entiendas lo que hace
 
 ---
 
+## 🧭 Marco de trabajo: CRISP-DM
+
+Usaremos CRISP-DM como guía breve y **iterativa**: no se trata de completar seis casillas, sino de poder justificar las decisiones con evidencia.
+
+| Fase | Evidencia en este capstone |
+|---|---|
+| Comprensión del problema y datos | objetivo de clasificación/regresión, fuente, variables y límites del dataset. |
+| Preparación | EDA, tratamiento de nulos, selección de variables y partición train/test antes de ajustar transformadores. |
+| Modelado y evaluación | comparación y ajuste con validación dentro de entrenamiento; evaluación final única sobre test, errores y decisión razonada. |
+| Entrega | notebooks reproducibles, conclusiones, limitaciones y defensa oral. |
+
+La [guía CRISP-DM de UD3](../../../01-teoria/05a-marco-crisp-dm.md) explica el marco. Para evitar fuga de datos, imputadores, escaladores, codificadores o selectores se ajustan solo con entrenamiento. Los modelos y sus hiperparámetros se comparan o ajustan con validación cruzada o un conjunto de validación dentro de entrenamiento; el test se usa una sola vez, al final, para evaluar el modelo elegido.
+
 ## 📌 Qué vas a hacer
 
 El proyecto se divide en **3 prácticas encadenadas**:
@@ -21,15 +34,16 @@ El proyecto se divide en **3 prácticas encadenadas**:
 
 * Definir un problema de IA (clasificación o regresión)
 * Probar varios modelos con PyCaret
-* Comparar métricas
-* Elegir **un modelo** y justificar por qué
+* Comparar métricas mediante validación cruzada o un conjunto de validación dentro de entrenamiento
+* Elegir **un modelo** y justificar por qué, sin usar el test para decidir
 
 ### 🔹 Práctica 3 — Modelo final
 
 * Implementar el modelo elegido **sin PyCaret**
-* Ajustar hiperparámetros
-* Evaluar el rendimiento
+* Ajustar hiperparámetros mediante validación cruzada o un conjunto de validación dentro de entrenamiento
+* Evaluar una única vez el rendimiento final sobre test
 * Analizar errores y limitaciones
+* Confirmar que cualquier transformación aprendida se ajustó solo con entrenamiento
 
 ---
 
@@ -51,7 +65,7 @@ Si tienes GPU o acceso a GPU en la nube, puedes:
   * Práctica 1
   * Práctica 2
   * Práctica 3
-* Un **documento final de conclusiones** (plantilla proporcionada)
+* Un **documento final de conclusiones** (plantilla proporcionada), con el objetivo, decisiones de datos, métricas, limitaciones y siguiente paso
 
 Formato:
 

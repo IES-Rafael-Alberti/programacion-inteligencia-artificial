@@ -50,7 +50,7 @@ Trabajamos principalmente estos **RA habituales del módulo PIA** (formulación 
 | CE                                                      | Evidencia                                      | Instrumento      |
 | ------------------------------------------------------- | ---------------------------------------------- | ---------------- |
 | Analiza y prepara datasets para su uso en modelos de IA | Limpieza, selección de variables, EDA          | P1 Notebook      |
-| Aplica técnicas de preprocesado adecuadas               | Encoding, normalización, selección de features | P2 / P3 Notebook |
+| Aplica técnicas de preprocesado adecuadas               | Encoding, normalización y selección de variables ajustados solo con entrenamiento; test reservado para evaluación | P2 / P3 Notebook |
 
 ---
 
@@ -80,7 +80,7 @@ Trabajamos principalmente estos **RA habituales del módulo PIA** (formulación 
 | Aspecto evaluado         | Excelente                          | Adecuado                 | Básico / Insuficiente       |
 | ------------------------ | ---------------------------------- | ------------------------ | --------------------------- |
 | **EDA (P1)**             | Análisis profundo y crítico        | Análisis correcto        | Superficial o incompleto    |
-| **Preparación de datos** | Decisiones justificadas            | Preparación funcional    | Errores o falta de criterio |
+| **Preparación de datos** | Decisiones justificadas y sin fuga de datos | Preparación funcional    | Errores, fuga de datos o falta de criterio |
 | **Uso de PyCaret (P2)**  | Comparación e interpretación clara | Uso correcto             | Uso mecánico                |
 | **Elección de modelo**   | Totalmente razonada                | Parcialmente justificada | Sin justificación           |
 | **Modelo final (P3)**    | Bien afinado y evaluado            | Funcional                | Deficiente                  |

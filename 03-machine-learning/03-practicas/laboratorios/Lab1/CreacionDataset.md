@@ -73,11 +73,22 @@ Para OMDb se usa el mismo patrón, pasando `apikey` y el título consultado. No 
 
 ## Tarea
 
+### Trazabilidad CRISP-DM mínima
+
+Antes de entregar, deja una tabla o apartado breve con estas evidencias. No hace falta reproducir la teoría: basta justificar decisiones reales del laboratorio.
+
+| Fase | Evidencia en Lab1 |
+|---|---|
+| Comprensión del problema y datos | propósito del dataset, TMDB/OMDb, campos y condiciones de uso. |
+| Preparación | columnas elegidas, duplicados, nulos o conflictos al fusionar respuestas. |
+| Evaluación y entrega | comprobaciones de casos normales/errores, CSV generado, limitaciones y cómo repetir la ejecución con Pixi. |
+
+
 1. Completa o revisa `tmdb.py` y `omdb.py`.
 2. Obtén varias páginas y evita duplicados.
 3. Añade columnas justificadas, por ejemplo género, actores o director.
 4. Analiza el CSV resultante con pandas y documenta decisiones y limitaciones.
-5. Comprueba casos normales, respuestas sin resultados y errores de red.
+5. Comprueba casos normales, respuestas sin resultados y errores de red; registra el resultado y la limitación de las comprobaciones.
 6. Entrega también las evidencias de proceso y verificación exigidas por las [normas comunes de entregas y uso de IA](../../../../docs/normas-entregas-y-uso-de-ia.md).
 
 ## Problemas habituales

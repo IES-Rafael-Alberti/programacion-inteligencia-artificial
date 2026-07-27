@@ -14,7 +14,7 @@ Evaluar la capacidad del alumno para diseñar, obtener, procesar y documentar un
 | **3. Limpieza y transformación**       | Conversión a estructura útil, normalización, tratamiento de nulos          | 20%      |
 | **4. Generación del dataset final**    | Guardado correcto (CSV, Parquet), estructura clara y reusable              | 10%      |
 | **5. Código estructurado y reproducible** | Proyecto ejecutable con Pixi, dependencias declaradas y módulos separados | 10%      |
-| **6. Documentación del proceso**       | README con explicación clara de fuente, pasos, dificultades y mejoras      | 10%      |
+| **6. Documentación del proceso**       | README o trazabilidad CRISP-DM mínima: objetivo, fuente, transformaciones, comprobaciones, límites y cómo repetirlo | 10%      |
 | **7. Calidad y relevancia del dataset**| Dataset tiene potencial para análisis reales o integrarse en flujo mayor   | 10%      |
 | **8. Creatividad y profundidad**       | Nivel de personalización, esfuerzo adicional (paginación, fusión, etc.)    | 10%      |
 
@@ -27,6 +27,7 @@ Evaluar la capacidad del alumno para diseñar, obtener, procesar y documentar un
 - Prepara el proyecto como si fuera a integrarse en un flujo de producción
 - Usa el entorno y las tareas Pixi indicados para que otra persona pueda ejecutar el proyecto
 - Añade comentarios y ejemplos de uso en el README
+- Documenta las decisiones de CRISP-DM que correspondan: objetivo y fuente, preparación aplicada, comprobaciones y límites
 
 ---
 

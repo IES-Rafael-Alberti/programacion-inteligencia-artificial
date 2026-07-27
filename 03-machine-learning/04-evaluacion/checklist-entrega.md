@@ -19,7 +19,7 @@ Usa esta lista antes de entregar. El profesorado indica cuál o cuáles de las p
 
 - [ ] El notebook o script crea el dataset correctamente con la fuente indicada (TheMovieDB, OpenMeteo/AEMET, o fuente propia).
 - [ ] El dataset resultante tiene las columnas y el número de registros mínimos indicados en el enunciado.
-- [ ] Se documenta el proceso de obtención: API usada, parámetros, transformaciones y limpieza aplicada.
+- [ ] Se documenta el proceso de obtención: objetivo, API usada, parámetros, transformaciones, limpieza aplicada y limitaciones (trazabilidad CRISP-DM mínima).
 - [ ] Se incluye al menos una visualización o análisis exploratorio básico del dataset generado.
 - [ ] El código está limpio, comentado y ejecuta sin errores críticos.
 - [ ] No se incluyen claves API en el notebook; se usan variables de entorno o fichero `.env.example`.
@@ -34,7 +34,8 @@ Usa esta lista antes de entregar. El profesorado indica cuál o cuáles de las p
 - [ ] El notebook ejecuta el flujo completo: carga → EDA → preprocesado → PyCaret → modelo final.
 - [ ] El EDA incluye análisis de distribuciones, valores nulos y relaciones entre variables relevantes.
 - [ ] PyCaret está configurado correctamente con la tarea indicada (clasificación o regresión).
-- [ ] Se comparan al menos dos modelos con métricas sobre el mismo conjunto de test.
+- [ ] Se comparan al menos dos modelos y se selecciona el candidato mediante validación cruzada o un conjunto de validación dentro de entrenamiento; el conjunto de test queda reservado para una única evaluación final.
+- [ ] La separación train/test se realiza antes de ajustar imputadores, escaladores, codificadores o selectores; el conjunto de test no se usa para `fit`.
 - [ ] El modelo final está justificado con criterio técnico (no solo por ser el de mayor métrica).
 - [ ] Las visualizaciones son legibles y tienen título o descripción.
 - [ ] El informe explica las decisiones tomadas y los resultados obtenidos.
@@ -48,8 +49,8 @@ Usa esta lista antes de entregar. El profesorado indica cuál o cuáles de las p
 
 - [ ] Se responden todas las preguntas del enunciado con argumentación técnica.
 - [ ] Se usa el dataset Bank Marketing indicado, sin sustituirlo por otro.
-- [ ] Las métricas de evaluación están calculadas correctamente sobre el conjunto de test.
-- [ ] La selección del modelo está justificada (no solo "tiene mejor accuracy").
+- [ ] La selección y el ajuste del modelo se realizan mediante validación cruzada o un conjunto de validación dentro de entrenamiento; el conjunto de test queda reservado para una única evaluación final.
+- [ ] La selección del modelo está justificada con las métricas de validación y el objetivo (no solo "tiene mejor accuracy").
 - [ ] El análisis de variables/características está documentado.
 
 ---

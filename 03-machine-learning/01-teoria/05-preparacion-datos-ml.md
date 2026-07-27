@@ -1,107 +1,115 @@
 # Titanic – Preparación de datos para modelado
 
-En este notebook continuaremos con el análisis del famoso dataset *Titanic* después del Análisis Exploratorio de Datos (EDA). Supondremos que en el EDA anterior se limpió el conjunto de datos y se guardó en formato Parquet. Ahora, nuestro objetivo es preparar los datos para construir modelos de machine learning. Realizaremos los siguientes pasos:
+Después del EDA, prepararemos Titanic para modelar sin contaminar la evaluación. La regla que guía todo el flujo es simple: **separamos entrenamiento y prueba antes de ajustar cualquier transformación que aprenda de los datos**.
 
-- **Carga del dataset limpio:** leeremos el archivo Parquet con los datos ya limpios.  
-- **Separación de características (X) y variable objetivo (y):** definiremos la matriz de características y el vector objetivo (`Survived`).  
-- **Codificación de variables categóricas:** convertiremos variables categóricas en valores numéricos mediante técnicas de codificación (por ejemplo, *One-Hot Encoding* u *Ordinal Encoding*).  
-- **Escalado de variables numéricas (opcional):** aplicaremos escalado a las variables numéricas si el modelo lo requiere (modelos sensibles a la escala).  
-- **Separación en conjunto de entrenamiento y prueba:** dividiremos los datos preparados en un conjunto para entrenar el modelo y otro para evaluarlo.  
-- **Guardado de los datos preparados:** almacenaremos los conjuntos de entrenamiento y prueba en disco para su uso posterior (por ejemplo, con `joblib`).
+Esto evita la *fuga de datos*: si un imputador, escalador o codificador conoce estadísticas o categorías del conjunto de prueba durante el ajuste, la métrica deja de representar un caso nuevo. Esta fase corresponde a la preparación de datos de [CRISP-DM](05a-marco-crisp-dm.md).
 
-Cada sección irá acompañada de explicaciones para entender qué se está haciendo y por qué. ¡Comencemos!
-
-## Carga del dataset limpio
-
-Primero, cargaremos el dataset limpio que se guardó tras el EDA. Asumimos que el archivo Parquet resultante se encuentra en la ruta correspondiente (por ejemplo, `datos/titanic_limpio.parquet`). Utilizaremos **Pandas** para leer el archivo Parquet, aunque también podríamos emplear **Polars** de forma similar. 
-
-Vamos a leer el dataset y a inspeccionar brevemente su contenido para asegurarnos de que se cargó correctamente (por ejemplo, viendo las primeras filas y las dimensiones del DataFrame).
+## Carga y separación de objetivo
 
 ```python
 import pandas as pd
 
-# Cargar el dataset limpio desde el archivo Parquet
-df = pd.read_parquet('datos/titanic_limpio.parquet')
+# Dataset limpio tras el EDA; Survived es la variable objetivo.
+df = pd.read_parquet("datos/titanic_limpio.parquet")
+y = df["Survived"]
+X = df.drop(columns=["Survived"])
 
-# Mostrar las primeras 5 filas para verificar
-print("Primeras 5 filas del dataset:\n", df.head(), "\n")
-# Mostrar la forma (dimensiones) del DataFrame
-print("Dimensiones del dataset:", df.shape)
-```
-
-## Separación de características (X) y variable objetivo (y)
-
-```python
-# Definir la variable objetivo y las características
-y = df['Survived']               # variable objetivo
-X = df.drop(columns=['Survived'])  # todas las columnas excepto 'Survived'
-
-# Verificar la separación
 print("Dimensiones de X:", X.shape)
 print("Dimensiones de y:", y.shape)
-print("Columnas de X:", X.columns.tolist())
 ```
 
-## Codificación de variables categóricas
-
-```python
-from sklearn.preprocessing import OneHotEncoder
-
-columnas_categoricas = ['Sex', 'Embarked']
-ohe = OneHotEncoder(sparse_output=False)
-X_cat_encoded = ohe.fit_transform(X[columnas_categoricas])
-nombres_ohe = ohe.get_feature_names_out(columnas_categoricas)
-X_cat_encoded_df = pd.DataFrame(X_cat_encoded, columns=nombres_ohe, index=X.index)
-
-X_numeric = X.drop(columns=columnas_categoricas)
-X_encoded = pd.concat([X_numeric, X_cat_encoded_df], axis=1)
-
-print("Columnas originales categóricas:", columnas_categoricas)
-print("Columnas nuevas tras One-Hot Encoding:", nombres_ohe.tolist())
-print("Dimensiones de X antes vs después de codificar:", X.shape, "->", X_encoded.shape)
-```
-
-## Escalado de variables numéricas (opcional)
-
-```python
-from sklearn.preprocessing import StandardScaler
-
-columnas_numericas = ['Age', 'Fare']
-scaler = StandardScaler()
-X_encoded[columnas_numericas] = scaler.fit_transform(X_encoded[columnas_numericas])
-
-print("Media de Age escalada:", X_encoded['Age'].mean().round(2))
-print("Desviación estándar de Age escalada:", X_encoded['Age'].std().round(2))
-print("Media de Fare escalada:", X_encoded['Fare'].mean().round(2))
-print("Desviación estándar de Fare escalada:", X_encoded['Fare'].std().round(2))
-```
-
-## Separación del dataset en conjuntos de entrenamiento y test
+## Separar antes de transformar
 
 ```python
 from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test = train_test_split(
-    X_encoded, y, test_size=0.20, random_state=42
+    X,
+    y,
+    test_size=0.20,
+    random_state=42,
+    stratify=y,
 )
 
-print("Tamaño de X_train:", X_train.shape)
-print("Tamaño de X_test:", X_test.shape)
-print("Tamaño de y_train:", y_train.shape)
-print("Tamaño de y_test:", y_test.shape)
+print("Entrenamiento:", X_train.shape)
+print("Prueba:", X_test.shape)
 ```
 
-## Guardado de los datos preparados
+## Preparar columnas con un pipeline
+
+`SimpleImputer`, `StandardScaler` y `OneHotEncoder` se ajustan con `X_train`. `X_test` se transforma con esos mismos parámetros; nunca se vuelve a ajustar.
+
+```python
+from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+
+columnas_numericas = ["Age", "Fare"]
+columnas_categoricas = ["Sex", "Embarked"]
+
+transformador_numerico = Pipeline(
+    steps=[
+        ("imputador", SimpleImputer(strategy="median")),
+        ("escalador", StandardScaler()),
+    ]
+)
+transformador_categorico = Pipeline(
+    steps=[
+        ("imputador", SimpleImputer(strategy="most_frequent")),
+        ("codificador", OneHotEncoder(handle_unknown="ignore")),
+    ]
+)
+
+preprocesado = ColumnTransformer(
+    transformers=[
+        ("numericas", transformador_numerico, columnas_numericas),
+        ("categoricas", transformador_categorico, columnas_categoricas),
+    ]
+)
+
+# ÚNICO ajuste: aprende medianas, medias/desviaciones y categorías del entrenamiento.
+X_train_preparado = preprocesado.fit_transform(X_train)
+# Solo aplica lo aprendido; no debe usarse fit_transform aquí.
+X_test_preparado = preprocesado.transform(X_test)
+
+print("Entrenamiento preparado:", X_train_preparado.shape)
+print("Prueba preparada:", X_test_preparado.shape)
+```
+
+## Entrenar sin romper la regla
+
+En la práctica, se recomienda encapsular preparación y modelo en un único `Pipeline`; así cada validación y predicción aplica el mismo flujo correctamente.
+
+```python
+from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline
+
+modelo = Pipeline(
+    steps=[
+        ("preprocesado", preprocesado),
+        ("clasificador", LogisticRegression(max_iter=1_000)),
+    ]
+)
+
+modelo.fit(X_train, y_train)
+print("Exactitud en test:", round(modelo.score(X_test, y_test), 3))
+```
+
+## Guardado reproducible
+
+Si necesitas conservar el modelo y su preparación, guarda el pipeline completo, no solo el escalador ni los arrays ya transformados.
 
 ```python
 import joblib
 
-joblib.dump((X_train, X_test, y_train, y_test), "datos/titanic_datos_preparados.joblib")
-
-print("Datos de entrenamiento y prueba guardados correctamente.")
+joblib.dump(modelo, "datos/titanic_pipeline.joblib")
+print("Pipeline guardado correctamente.")
 ```
 
----
+## Comprobación final
 
-Con esto concluimos la preparación de los datos: hemos cargado el dataset limpio, separado características y objetivo, codificado las variables categóricas, escalado las numéricas (si era necesario), dividido en entrenamiento y prueba, y guardado los resultados. Los datos están listos para la etapa de modelado predictivo. ¡Continuemos con el desarrollo del modelo en el siguiente notebook!
-
+- [ ] `train_test_split` ocurre antes de `fit` o `fit_transform`.
+- [ ] Imputación, codificación, escalado y selección de variables se ajustan solo con entrenamiento.
+- [ ] El conjunto de prueba usa exclusivamente `transform` o `predict`.
+- [ ] La métrica final se calcula sobre el conjunto de prueba sin reutilizarlo para decidir transformaciones.
