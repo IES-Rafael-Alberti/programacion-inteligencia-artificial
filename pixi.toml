@@ -5,7 +5,7 @@ channels = ["conda-forge"]
 platforms = ["linux-64", "win-64", "osx-64", "osx-arm64"]
 
 # Base común, deliberadamente sin GPU ni dependencias específicas de una UD.
-[dependencies]
+[feature.base.dependencies]
 python = "3.12.*"
 numpy = ">=2,<3"
 pandas = ">=2.2,<3"
@@ -18,10 +18,26 @@ ipykernel = ">=6,<7"
 scikit-learn = ">=1.5,<2"
 xgboost = ">=2,<3"
 
+# AutoML de P2 (UD3): PyCaret 3.3 admite NumPy >=1.21,<1.27; se fija la serie 1.26.
+# Es un entorno autónomo (Python 3.11), sin la feature base, UD3 ni GPU.
+[feature.ud3-pycaret.dependencies]
+python = "3.11.*"
+numpy = ">=1.26,<1.27"
+pandas = ">=1.5,<2.2"
+scipy = ">=1.11,<1.12"
+jupyterlab = ">=4,<5"
+ipykernel = ">=6,<7"
+pycaret = ">=3.3,<4"
+
 # Lab1 de datasets: dependencias adicionales del proyecto TMDB + OMDb.
 [feature.ud3-datasets.dependencies]
 requests = ">=2.32,<3"
 python-dotenv = ">=1.0,<2"
+
+# Alternativa experimental de AutoML para UD3. Comparte la base y ML clásico;
+# no sustituye PyCaret ni forma parte de las actividades obligatorias.
+[feature.ud3-flaml.dependencies]
+flaml = ">=2.3,<3"
 
 [feature.ud3-datasets.activation.env]
 PYTHONPATH = "$PIXI_PROJECT_ROOT/03-machine-learning/03-practicas/laboratorios/Lab1/mi_dataset_peliculas/src"
@@ -39,8 +55,10 @@ torchvision = ">=0.19,<1"
 [feature.gpu]
 
 [environments]
-default = ["default"]
-ud3 = ["default", "ud3"]
-ud3-datasets = ["default", "ud3", "ud3-datasets"]
-ud4 = ["default", "ud4"]
-ud4-gpu = ["default", "ud4", "gpu"]
+default = ["base"]
+ud3 = ["base", "ud3"]
+ud3-pycaret = ["ud3-pycaret"]
+ud3-flaml = ["base", "ud3", "ud3-flaml"]
+ud3-datasets = ["base", "ud3", "ud3-datasets"]
+ud4 = ["base", "ud4"]
+ud4-gpu = ["base", "ud4", "gpu"]

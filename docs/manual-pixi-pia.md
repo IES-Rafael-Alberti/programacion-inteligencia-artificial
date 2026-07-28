@@ -51,7 +51,7 @@ En equipos docentes conviene revisar el script antes de ejecutarlo, conservar la
 - **`pixi.lock`**: versiones exactas resueltas. Debe versionarse para reproducibilidad.
 - **Feature**: conjunto nombrado de dependencias, por ejemplo `ud3` o `gpu`.
 - **Environment**: combinación de features que se instala y ejecuta como un entorno independiente.
-- **Feature `default`**: dependencias comunes que se aplican cuando no se indica otra combinación.
+- **Feature `base`**: dependencias comunes del curso. Cada entorno la incluye de forma explícita cuando la necesita; así se pueden aislar herramientas incompatibles.
 - **`.pixi/`**: prefijos y metadatos locales de los entornos. No se versiona; la caché de paquetes suele estar fuera del proyecto.
 
 Referencia: [manifesto y conceptos de Pixi](https://pixi.prefix.dev/latest/reference/pixi_manifest/).
@@ -102,7 +102,7 @@ name = "pia"
 channels = ["conda-forge"]
 platforms = ["linux-64", "win-64", "osx-64", "osx-arm64"]
 
-[dependencies]
+[feature.base.dependencies]
 python = "3.12.*"
 numpy = "*"
 pandas = "*"
@@ -120,10 +120,12 @@ torchvision = "*"
 # La selección concreta de CUDA debe validarse por plataforma y hardware.
 
 [environments]
-default = ["default"]
-ud3 = ["default", "ud3"]
-ud4 = ["default", "ud4"]
-ud4-gpu = ["default", "ud4", "gpu"]
+default = ["base"]
+ud3 = ["base", "ud3"]
+ud3-pycaret = ["ud3-pycaret"]
+ud3-flaml = ["base", "ud3", "ud3-flaml"]
+ud4 = ["base", "ud4"]
+ud4-gpu = ["base", "ud4", "gpu"]
 ```
 
 La sintaxis y las dependencias concretas deben validarse con el prototipo real. En particular, no se debe añadir CUDA al entorno común: muchos equipos del alumnado solo disponen de CPU y una variante GPU puede exigir controladores compatibles. Consulta la guía oficial de [entornos múltiples y features](https://pixi.prefix.dev/latest/workspace/multi_environment/).
@@ -140,6 +142,29 @@ pixi run --environment ud4-gpu python entrenamiento_gpu.py
 ```
 
 También puedes entrar en una shell (`pixi shell --environment ud3`) y trabajar normalmente. Sal de ella con `exit`. Para evitar errores, indica siempre el entorno en instrucciones escritas para el alumnado.
+
+## PyCaret (UD3, P2)
+
+PyCaret 3.3 declara compatibilidad con NumPy `>=1.21,<1.27`, mientras que la base del curso usa NumPy 2. Para P2 se fija la serie 1.26, ya validada con el lockfile, en un entorno autónomo con Python 3.11; no compone `default` ni `ud3`:
+
+```bash
+pixi install --environment ud3-pycaret
+pixi run --environment ud3-pycaret python -c "import pycaret; print(pycaret.__version__)"
+pixi run --environment ud3-pycaret jupyter lab
+```
+
+Usa `ud3-pycaret` únicamente para P2. Para el resto del modelado clásico, usa `ud3`; no añadas GPU a esta práctica.
+
+## FLAML (UD3, alternativa experimental)
+
+[FLAML](https://microsoft.github.io/FLAML/) queda disponible como alternativa ligera de AutoML para evaluar durante el curso. **No sustituye PyCaret ni es requisito de P2**. Comparte la base de UD3 (Python 3.12 y NumPy 2), por lo que no necesita el aislamiento de compatibilidad de PyCaret.
+
+```bash
+pixi install --environment ud3-flaml
+pixi run --environment ud3-flaml python 03-machine-learning/02-ejemplos/flaml/flaml_holdout_sintetico.py
+```
+
+El ejemplo reserva el 20 % de datos sintéticos antes de la búsqueda, limita el tiempo y usa F1. Sus métricas solo son una comprobación técnica: no se interpretan ni se entregan. Consulta su [README](../03-machine-learning/02-ejemplos/flaml/README.md) para el patrón completo.
 
 ## VS Code y Jupyter
 

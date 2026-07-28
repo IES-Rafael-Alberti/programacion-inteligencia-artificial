@@ -6,6 +6,31 @@ qué modelos funcionan mejor con el dataset.
 
 PyCaret se usará como apoyo para la toma de decisiones, no como solución final.
 
+> **Alternativa en observación:** FLAML es una opción de AutoML más ligera disponible como ejemplo experimental en [el repositorio](../../../../../02-ejemplos/flaml/README.md). No sustituye PyCaret en esta práctica ni es un requisito del curso; se valorará durante el curso con datos reales.
+
+## Entorno reproducible
+
+Desde la raíz del repositorio, prepara y usa el entorno aislado de esta práctica:
+
+```bash
+pixi install --environment ud3-pycaret
+pixi run --environment ud3-pycaret jupyter lab
+```
+
+Este entorno es autónomo: usa Python 3.11 y la serie NumPy 1.26 elegida para el curso. PyCaret 3.3 declara compatibilidad con `numpy >=1.21,<1.27`; el pin `>=1.26,<1.27` evita mezclarlo con NumPy 2 de la base común. No compone las dependencias generales de UD3 ni GPU: P2 se ejecuta solo en CPU. No ejecutes el notebook con el Python del sistema.
+
+## Dataset: ruta única y procedencia
+
+El CSV del capstone **no está versionado** en este repositorio. Antes de abrir el notebook, el profesorado debe facilitar el dataset validado y guardarlo exactamente en:
+
+```text
+03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/data/movies.csv
+```
+
+Inicia Jupyter desde la raíz del repositorio; las dos versiones del notebook usan esa ruta relativa. El fichero debe contener `rating_high` y las columnas que se acuerden para el modelo. No sustituyas silenciosamente este CSV por el resultado bruto de Lab1: `data/dataset_peliculas.csv` de Lab1 es un ejercicio independiente de adquisición y solo puede convertirse en entrada del capstone tras una revisión docente de columnas, calidad y objetivo.
+
+El dataset sintético de 400 filas usado para la comprobación técnica del entorno fue temporal y **no es material docente ni sustituye** al CSV validado. Puede recrearse solo como *smoke test* separado, sin interpretar sus métricas ni entregar sus resultados.
+
 ## Flujo obligatorio: entrenamiento, CV y holdout
 
 PyCaret no sustituye al criterio de quien modela. En esta práctica se sigue este flujo reproducible:
