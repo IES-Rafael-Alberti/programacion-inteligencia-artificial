@@ -17,6 +17,7 @@ ipykernel = ">=6,<7"
 [feature.ud3.dependencies]
 scikit-learn = ">=1.5,<2"
 xgboost = ">=2,<3"
+matplotlib = ">=3.8,<4"
 
 # AutoML de P2 (UD3): PyCaret 3.3 admite NumPy >=1.21,<1.27; se fija la serie 1.26.
 # Es un entorno autónomo (Python 3.11), sin la feature base, UD3 ni GPU.

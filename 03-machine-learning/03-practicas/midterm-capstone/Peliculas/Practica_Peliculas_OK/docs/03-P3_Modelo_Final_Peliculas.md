@@ -4,6 +4,16 @@
 
 Reimplementa con scikit-learn el enfoque elegido en P2 mediante un flujo **reproducible y sin fuga de datos**. El resultado no es solo una métrica: debe mostrar cómo se reservaron los datos, cómo se ajustó el pipeline y qué errores mantiene el modelo.
 
+## Dataset y ejecución portátil
+
+El CSV del capstone no se versiona. El profesorado debe proporcionar el dataset validado en:
+
+```text
+03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/data/movies.csv
+```
+
+Los notebooks localizan automáticamente la raíz del repositorio desde su directorio actual, por lo que Jupyter puede iniciarse tanto desde la raíz como desde la carpeta del notebook. El CSV debe incluir `rating_high`; no sustituyas esta entrada validada por el resultado bruto de Lab1 sin revisión docente.
+
 ## Flujo obligatorio
 
 1. Define el objetivo (`rating_high` en el ejemplo), las variables predictoras y las columnas excluidas con su motivo.
