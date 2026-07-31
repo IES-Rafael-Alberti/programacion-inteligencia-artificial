@@ -11,14 +11,16 @@ Proyecto integrador individual/grupal que combina aceleración GPU (RAPIDS/JAX),
 
 ## Criterios y niveles
 
-### 1. Aceleración GPU con RAPIDS y/o JAX (3 puntos)
+### 1. Aceleración GPU con RAPIDS (3 puntos)
+
+Este criterio requiere evidencia obtenida en una **GPU NVIDIA verificable** (local o mediante Google Colab/runtime cloud indicado por el profesorado): EDA con cuDF, entrenamiento con cuML y benchmark frente al baseline CPU. JAX es una ampliación o complemento y no sustituye ninguna de esas evidencias. El trabajo realizado solo en CPU puede apoyar el desarrollo, pero no acredita el criterio.
 
 | Nivel | Descripción | Puntos |
 |-------|-------------|--------|
-| **Insuficiente** | No se usa GPU de forma efectiva o el código falla al ejecutarse. No hay comparativa con CPU. | 0 – 1.2 |
-| **Básico** | Se usa cuDF o JAX de forma básica (ejemplo copiado sin adaptar). La comparativa CPU/GPU existe pero no hay análisis de resultados. | 1.2 – 1.8 |
-| **Adecuado** | Se emplea cuDF o JAX sobre datos del proyecto con adaptación real. Se incluye benchmark con tiempos medidos y reflexión sobre los resultados. | 1.8 – 2.4 |
-| **Excelente** | Uso combinado de varias herramientas GPU (p. ej. cuDF + cuML, JAX con jit+grad). Análisis detallado de factores de aceleración, limitaciones y contexto de uso. | 2.4 – 3.0 |
+| **Insuficiente** | No se aporta evidencia verificable de ejecución en GPU NVIDIA, falta el EDA con cuDF o el entrenamiento con cuML, el código GPU falla o no hay comparativa con CPU. | 0 – 1.2 |
+| **Básico** | Se usan cuDF y cuML de forma básica. La comparativa CPU/GPU existe, pero no hay análisis de resultados. | 1.2 – 1.8 |
+| **Adecuado** | Se emplean cuDF para el EDA y cuML para el entrenamiento sobre datos del proyecto. Se incluye benchmark con tiempos medidos y reflexión sobre los resultados. | 1.8 – 2.4 |
+| **Excelente** | Uso sólido de cuDF y cuML, con benchmark reproducible y análisis detallado de aceleración, limitaciones y contexto de uso. JAX puede aportar una comparación adicional. | 2.4 – 3.0 |
 
 ---
 

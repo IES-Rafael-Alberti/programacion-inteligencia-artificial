@@ -2,8 +2,18 @@
 
 ## 🎯 Objetivos
 - Desarrollar un **proyecto grupal** que combine EDA → modelado → despliegue → interfaz/automatización.
-- Fomentar **reproducibilidad** (entornos con conda/poetry/uv, versionado de datos/código).
+- Fomentar **reproducibilidad** (entorno declarado, versiones fijadas y versionado de datos/código).
 - Preparar **documentación** y **presentación** finales.
+
+---
+
+## 🖥️ Runtime requerido
+
+La parte evaluable de aceleración requiere una **GPU NVIDIA**. Si tu equipo no dispone de una, utiliza **Google Colab con runtime GPU** como ruta canónica o el runtime cloud equivalente que indique el profesorado.
+
+Antes de trabajar, completa el [preflight obligatorio con sus comandos](README.md#preflight-obligatorio-del-runtime). Incluye en la entrega la salida de `nvidia-smi`, el modelo de GPU, las versiones de las librerías y el backend/dispositivo utilizado.
+
+Puedes adelantar o depurar en CPU las partes compatibles, pero una ejecución CPU **no demuestra** el uso de cuDF/cuML ni sustituye las mediciones del benchmark GPU.
 
 ---
 
@@ -13,6 +23,7 @@
 3. **Dashboard** ejecutable (Gradio o alternativa) con instrucciones para levantarlo.
 4. **Pipeline** reproducible (Prefect/Airflow o versión Python pura).
 5. **README** con pasos de ejecución y requisitos.
+6. **Evidencia del runtime GPU** usado para la ejecución evaluable.
 
 ---
 
@@ -34,8 +45,7 @@
 ---
 
 ## ✅ Consejos prácticos
-- Bloquea dependencias (`environment.yml` o `pyproject.toml`/`poetry.lock`).
+- Fija las dependencias en el archivo de entorno indicado para el proyecto.
 - Guarda *checkpoints* y evita *hard-coding* de rutas.
 - Añade tests mínimos (véase notebooks **SOLUCIONES_TESTS**).
 - Prepara una demo corta (3–5 minutos) con el dashboard.
-

@@ -8,6 +8,43 @@ Se trabaja con los tres notebooks plantilla. Cada uno es una pieza del mismo pro
 
 ---
 
+## Preflight obligatorio del runtime
+
+Realiza estas comprobaciones **antes de empezar la Práctica 1**:
+
+- [ ] Dispongo de una GPU NVIDIA local o he activado el acelerador `GPU` en Google Colab (`Entorno de ejecución` → `Cambiar tipo de entorno de ejecución`).
+- [ ] `nvidia-smi` muestra el modelo de GPU y no devuelve un error (en Colab: `!nvidia-smi`).
+- [ ] El runtime puede importar `cudf` y `cuml`; si uso JAX, también confirma que su backend es GPU.
+- [ ] He guardado como primera evidencia la salida con el modelo de GPU, las versiones de las librerías y el backend/dispositivo usado.
+
+Ejecuta primero en una terminal:
+
+```bash
+nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader
+```
+
+En Google Colab, ejecuta el mismo comando en una celda como `!nvidia-smi`. Después ejecuta esta celda Python:
+
+```python
+import cupy as cp
+import cudf
+import cuml
+
+device_id = cp.cuda.Device().id
+device_name = cp.cuda.runtime.getDeviceProperties(device_id)["name"]
+if isinstance(device_name, bytes):
+    device_name = device_name.decode()
+
+_ = cudf.Series([1, 2, 3]).sum()
+cp.cuda.Stream.null.synchronize()
+print("cuDF:", cudf.__version__, "| cuML:", cuml.__version__)
+print("Backend: CUDA/RAPIDS | Dispositivo:", device_id, device_name)
+```
+
+Si alguna comprobación falla, **no inicies las mediciones**: cambia al runtime cloud GPU o comunícalo al profesorado. La CPU puede usarse para preparación y depuración, pero no se acepta como evidencia equivalente para cuDF, cuML ni el benchmark GPU.
+
+---
+
 ## Práctica 1 — Proyecto GPU: EDA, modelado y benchmarking
 
 **Notebook**: `01_project_template.ipynb`
@@ -41,6 +78,7 @@ Partirás de un dataset tabular sintético (incluido en el notebook). El objetiv
 ### Entregables
 
 - Notebook ejecutado de principio a fin sin errores.
+- Evidencia del preflight con modelo de GPU NVIDIA, versiones y backend/dispositivo utilizado.
 - `artifacts/model.joblib` — modelo cuML guardado.
 - `artifacts/metrics.json` — métricas del modelo (al menos accuracy/RMSE y tiempos).
 - `artifacts/clean.csv` — dataset procesado listo para los pasos siguientes.

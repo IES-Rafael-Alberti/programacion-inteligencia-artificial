@@ -8,6 +8,16 @@ Programación GPU de alto rendimiento con RAPIDS (cuDF, cuML) y JAX. Orquestaci�
 
 ---
 
+## Requisito de ejecución
+
+Las evidencias evaluables de cuDF, cuML y benchmarking GPU deben ejecutarse en una **GPU NVIDIA**. Si no dispones de una local, usa como ruta canónica un cuaderno de **Google Colab con runtime GPU** o el runtime cloud equivalente que indique el profesorado.
+
+La ejecución en CPU sirve para preparar, depurar y completar las partes no aceleradas, pero **no sustituye** la evidencia GPU ni permite acreditar un benchmark CPU/GPU.
+
+Antes de empezar, completa el [preflight de la práctica](03-practicas/README.md#preflight-obligatorio-del-runtime). Después consulta el [enunciado del proyecto](03-practicas/00-guia-proyecto-gpu.md) y los [instrumentos de evaluación](04-evaluacion/README.md).
+
+---
+
 ## Estructura
 
 ```
@@ -81,6 +91,6 @@ Proyecto integrador en tres partes. Ver [`03-practicas/README.md`](03-practicas/
 
 ---
 
-## Pendiente
+## Mejora opcional
 
 - [ ] Valorar si mover `90-archivo/NN-neurosimbólica/` a `11-anexos/` (material histórico sin uso activo).

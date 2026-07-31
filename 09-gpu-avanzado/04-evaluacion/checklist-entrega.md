@@ -8,7 +8,7 @@ Verifica cada punto antes de hacer la entrega final. Una casilla sin marcar impl
 ## Repositorio / ZIP de entrega
 
 - [ ] El directorio raíz tiene un `README.md` con las instrucciones de instalación y ejecución.
-- [ ] El entorno está reproducido: `environment.yml` o `pyproject.toml` / `requirements.txt` con versiones fijadas.
+- [ ] El entorno está declarado con el archivo indicado para el proyecto y versiones fijadas.
 - [ ] No hay credenciales, API keys ni rutas absolutas hardcodeadas en el código.
 - [ ] El proyecto tiene control de versiones (`.git/`) o se entrega como ZIP con estructura clara.
 
@@ -16,11 +16,16 @@ Verifica cada punto antes de hacer la entrega final. Una casilla sin marcar impl
 
 ## Aceleración GPU — Notebook `01_project_template.ipynb`
 
-- [ ] Se usa cuDF o JAX sobre datos reales del proyecto (no solo el ejemplo de clase).
+- [ ] La ejecución evaluable se ha realizado en una GPU NVIDIA local o en Google Colab/runtime cloud GPU indicado por el profesorado.
+- [ ] La entrega muestra la salida de `nvidia-smi`, el modelo de GPU, las versiones y el backend/dispositivo utilizado.
+- [ ] Se realiza el EDA con cuDF sobre los datos del proyecto (no solo el ejemplo de clase).
+- [ ] Se entrena el modelo GPU con cuML y se compara con el baseline equivalente en CPU.
 - [ ] Existe una comparativa de tiempos CPU vs GPU con `time.perf_counter` o equivalente.
 - [ ] Los tiempos están medidos tras un warmup (primera ejecución excluida).
 - [ ] Hay un análisis escrito de los resultados: ¿cuánto se aceleró? ¿por qué ese factor?
 - [ ] Los datos caben en VRAM o se aplica chunking si son grandes.
+
+> cuDF para el EDA, cuML para el entrenamiento y el benchmark CPU/GPU son obligatorios. JAX puede añadirse como ampliación o complemento, pero no sustituye esas evidencias. La ejecución CPU puede servir para preparar o depurar.
 
 ---
 
