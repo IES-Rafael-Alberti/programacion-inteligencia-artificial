@@ -28,26 +28,19 @@ Esta carpeta reúne los instrumentos para evaluar la unidad de segmentación de 
 
 No se deben entregar claves API, tokens, credenciales ni datos sensibles.
 
-## Relación con prácticas y notebooks
+## Relación con ejemplos y prácticas
 
-La evaluación se apoya en las prácticas de `08-vision-xai/03-practicas/`:
+El profesorado seleccionará uno o varios bloques. La ruta canónica parte siempre de los notebooks base, no de las versiones `*_SOLUCIONES*`:
 
-**Segmentación (notebooks 78-80):**
-- `78_unet_segmentation.ipynb`: segmentación semántica con U-Net
-- `79_maskrcnn_instances.ipynb`: segmentación de instancias con Mask R-CNN
-- `80_metrics_segmentation.ipynb`: cálculo de IoU y Dice Score
-
-**Tracking (notebooks 81-83):**
-- `81_yolov8_tracking.ipynb`: tracking con YOLOv8
-- `82_sort_tracking.ipynb`: algoritmo SORT
-- `83_metrics_tracking.ipynb`: métricas MOTA y MOTP
-
-**XAI (notebooks 84-86):**
-- `84_lime_text.ipynb`: explicaciones locales con LIME
-- `85_shap_tabular.ipynb`: importancia de variables con SHAP
-- `86_gradcam_cnn.ipynb`: mapas de activación Grad-CAM en CNNs
+| Bloque | Ubicación | Material base |
+| --- | --- | --- |
+| Segmentación | [`../02-ejemplos/`](../02-ejemplos/) | [`78_unet_segmentation.ipynb`](../02-ejemplos/78_unet_segmentation.ipynb), [`79_maskrcnn_pytorch.ipynb`](../02-ejemplos/79_maskrcnn_pytorch.ipynb) y [`80_metrics_segmentation.ipynb`](../02-ejemplos/80_metrics_segmentation.ipynb) |
+| Tracking | [`../03-practicas/`](../03-practicas/) | [`81_yolov8_tracking.ipynb`](../03-practicas/81_yolov8_tracking.ipynb), [`82_sort_tracking.ipynb`](../03-practicas/82_sort_tracking.ipynb) y [`83_metrics_tracking.ipynb`](../03-practicas/83_metrics_tracking.ipynb) |
+| XAI | [`../03-practicas/`](../03-practicas/) | [`84_lime_text.ipynb`](../03-practicas/84_lime_text.ipynb), [`85_shap_tabular.ipynb`](../03-practicas/85_shap_tabular.ipynb) y [`86_gradcam_cnn.ipynb`](../03-practicas/86_gradcam_cnn.ipynb) |
 
 El profesorado puede seleccionar uno o varios bloques como entrega evaluable. No es obligatorio entregar los tres bloques en la misma entrega salvo que el enunciado lo indique.
+
+Antes de entregar, comprueba las evidencias en [`checklist-entrega.md`](checklist-entrega.md) y contrasta el resultado con [`rubrica.md`](rubrica.md).
 
 ## Cuestionario disponible
 

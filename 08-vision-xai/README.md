@@ -1,22 +1,28 @@
-# 08-vision-xai
+# UD8 — Visión por Computadora y XAI
 
-## Propósito
-Cubre visión por computadora (segmentación U-Net, Mask R-CNN, tracking YOLOv8+SORT) y XAI (LIME, SHAP, Grad-CAM).
+Esta unidad recorre tres bloques: segmentación de imágenes, tracking de objetos y explicabilidad de modelos. El profesorado indicará qué bloque o bloques forman parte de la entrega evaluable.
 
-## Materiales incluidos
-- **Material reorganizado desde UD4**: teoría de visión, CNN aplicada, transfer learning, YOLO, tareas de visión y datasets de imagen se han movido aquí desde `04-deep-learning/`.
-- **01-teoria**: (vacío — la teoría está incorporada en las guías de cada semana)
-- **02-ejemplos**: notebooks 78–80 de segmentación (UNet, Mask R-CNN, métricas) con soluciones
-- **03-practicas**: notebooks 81–83 de tracking (YOLOv8, SORT, métricas) y 84–86 de XAI (LIME texto, SHAP tabular, Grad-CAM CNN)
-- **04-evaluacion**: (pendiente — no hay GIFT en el original)
-- **05-recursos**: (vacío — datasets no incluidos)
+## Empieza aquí
 
-## Prácticas asociadas
-- Segmentación semántica (UNet, Mask R-CNN)
-- Tracking de objetos (YOLOv8, SORT)
-- Explicabilidad (LIME, SHAP, Grad-CAM)
+1. Lee el [índice de teoría](01-teoria/00-indice-vision-xai.md) y estudia los bloques en este orden:
+   - [segmentación de imágenes](01-teoria/01-segmentacion-imagenes.md);
+   - [tracking de objetos](01-teoria/02-tracking-objetos.md);
+   - [explicabilidad (XAI)](01-teoria/03-explicabilidad-xai.md).
+2. Trabaja los materiales base del bloque indicado:
+   - **Segmentación:** [guía](02-ejemplos/00-guia-segmentacion.md) y notebooks `78_unet_segmentation.ipynb`, `79_maskrcnn_pytorch.ipynb` y `80_metrics_segmentation.ipynb`, todos en [`02-ejemplos/`](02-ejemplos/).
+   - **Tracking:** [guía](03-practicas/00-guia-tracking.md) y notebooks 81–83 en [`03-practicas/`](03-practicas/).
+   - **XAI:** [guía](03-practicas/00-guia-xai.md) y notebooks 84–86 en [`03-practicas/`](03-practicas/).
+3. Conserva como evidencia el notebook ejecutado, las métricas, una visualización relevante y una breve interpretación de resultados.
+4. Antes de entregar, consulta la [evaluación de la unidad](04-evaluacion/README.md), completa el [checklist](04-evaluacion/checklist-entrega.md) y revisa la [rúbrica](04-evaluacion/rubrica.md).
 
-## Pendientes
-- [ ] Crear cuestionarios GIFT para evaluación
-- [ ] Añadir datasets necesarios a 05-recursos
-- [ ] Separar claramente demos de prácticas si es necesario
+## Material disponible
+
+| Sección | Contenido |
+| --- | --- |
+| [`01-teoria/`](01-teoria/) | Índice y teoría de segmentación, tracking y XAI. |
+| [`02-ejemplos/`](02-ejemplos/) | Ejemplos base de segmentación (notebooks 78–80) y materiales complementarios de visión. |
+| [`03-practicas/`](03-practicas/) | Prácticas base de tracking (81–83) y XAI (84–86), además de ampliaciones de visión. |
+| [`04-evaluacion/`](04-evaluacion/) | Orientación de entrega, checklist, rúbrica y cuestionario GIFT. |
+| [`05-recursos/`](05-recursos/) | Referencias y recursos locales para visión y XAI. |
+
+Las versiones `*_SOLUCIONES*`, los paquetes ZIP y los materiales trasladados desde UD4 son apoyo docente o ampliación. Para realizar una actividad, parte del notebook base que indique el profesorado.
