@@ -12,7 +12,7 @@ El CSV del capstone no se versiona. El profesorado debe proporcionar el dataset 
 03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/data/movies.csv
 ```
 
-Los notebooks localizan automáticamente la raíz del repositorio desde su directorio actual, por lo que Jupyter puede iniciarse tanto desde la raíz como desde la carpeta del notebook. El CSV debe incluir `rating_high`; no sustituyas esta entrada validada por el resultado bruto de Lab1 sin revisión docente.
+Los notebooks localizan automáticamente la raíz del repositorio desde su directorio actual, por lo que Jupyter puede iniciarse tanto desde la raíz como desde la carpeta del notebook. El CSV debe cumplir el [contrato de datos](../DATASET_CONTRACT.md), incluido `rating_high` y la exclusión de IDs y métricas de valoración posteriores. No sustituyas esta entrada validada por el resultado bruto de Lab1 sin revisión docente.
 
 ## Flujo obligatorio
 

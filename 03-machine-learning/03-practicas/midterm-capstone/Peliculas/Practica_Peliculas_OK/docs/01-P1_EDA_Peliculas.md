@@ -2,7 +2,13 @@
 
 ## Contexto
 En esta práctica trabajarás con un dataset de películas que ya ha sido construido
-a partir de fuentes externas (APIs, ficheros, etc.).
+a partir de fuentes externas. El único snapshot autorizado es
+`data/movies.csv`: P1 usa la misma ruta portátil que P2 y P3, por lo que puede
+abrirse desde la raíz o desde la carpeta del notebook.
+
+Antes de empezar, el profesorado debe generar y validar el snapshot según el
+[contrato de datos](../DATASET_CONTRACT.md). No sustituyas el fichero por la
+salida bruta de Lab1 ni lo regeneres durante la práctica.
 
 Antes de aplicar modelos de Inteligencia Artificial, es imprescindible comprender
 los datos, detectar problemas y formular preguntas relevantes.

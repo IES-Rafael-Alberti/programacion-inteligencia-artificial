@@ -27,7 +27,7 @@ El CSV del capstone **no está versionado** en este repositorio. Antes de abrir 
 03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/data/movies.csv
 ```
 
-Puedes iniciar Jupyter desde la raíz o desde el directorio del notebook: las dos versiones localizan la raíz del repositorio y cargan esa ubicación única. El fichero debe contener `rating_high` y las columnas que se acuerden para el modelo. No sustituyas silenciosamente este CSV por el resultado bruto de Lab1: `data/dataset_peliculas.csv` de Lab1 es un ejercicio independiente de adquisición y solo puede convertirse en entrada del capstone tras una revisión docente de columnas, calidad y objetivo.
+Puedes iniciar Jupyter desde la raíz o desde el directorio del notebook: las dos versiones localizan la raíz del repositorio y cargan esa ubicación única. El fichero debe cumplir el [contrato de datos](../DATASET_CONTRACT.md): contiene `rating_high` y no incluye IDs ni métricas de valoración posteriores (`imdb_rating`, `vote_average`, `vote_count`). No sustituyas silenciosamente este CSV por el resultado bruto de Lab1: `data/dataset_peliculas.csv` de Lab1 es un ejercicio independiente de adquisición y solo puede convertirse en entrada del capstone tras una revisión docente de columnas, calidad y objetivo.
 
 El dataset sintético de 400 filas usado para la comprobación técnica del entorno fue temporal y **no es material docente ni sustituye** al CSV validado. Puede recrearse solo como *smoke test* separado, sin interpretar sus métricas ni entregar sus resultados.
 
