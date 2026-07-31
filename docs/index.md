@@ -33,7 +33,7 @@ Todas las tareas, prácticas y proyectos con entrega están sujetos a las [norma
 
 ## Entornos de trabajo
 
-El [manual práctico de Pixi para PIA](manual-pixi-pia.md) explica la herramienta y el diseño piloto de entornos base, por unidad y con GPU.
+Empieza por la [ruta común para trabajar con los materiales](guia-inicio.md): portal, copia local del repositorio, entorno indicado y ejecución. El [manual práctico de Pixi para PIA](manual-pixi-pia.md) amplía la instalación y el uso de los entornos disponibles.
 
 ## Portal común
 

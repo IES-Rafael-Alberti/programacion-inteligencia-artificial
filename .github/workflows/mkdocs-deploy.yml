@@ -24,6 +24,7 @@ jobs:
           python-version: '3.12'
       - run: pip install mkdocs mkdocs-material
       - run: mkdocs build --strict
+      - run: python scripts/check_public_unit_links.py --site-dir site
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
