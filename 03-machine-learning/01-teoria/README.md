@@ -17,7 +17,7 @@ Documentación de apoyo para la unidad de Machine Learning con scikit-learn y Cu
 | 07 | Referencia de datasets de películas | `07-referencia-datasets-peliculas.md` |
 | 08 | Guía dataset películas — qué hacer | `08-guia-dataset-peliculas-que-hacer.md` |
 | 09 | Despliegue con Streamlit / FastAPI | `09-despliegue-streamlit-fastapi.md` |
-| 10 | Guía de proyecto con Python y Poetry | `10-guia-proyecto-python-poetry.md` |
+| 10 | Guía de proyecto con Python y Pixi | `10-guia-proyecto-python-pixi.md` |
 | 11 | Feature Store con Hopsworks | `11-feature-store-hopsworks.md` |
 
 ## Notas

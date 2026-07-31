@@ -4,11 +4,19 @@ Esta guía explica cómo desplegar un modelo de machine learning como una API RE
 
 ---
 
-## 📦 1. Instalar FastAPI y dependencias
+## 📦 1. Preparar el entorno de despliegue
+
+En un proyecto Pixi independiente:
 
 ```bash
-poetry add fastapi uvicorn pydantic joblib
+pixi init mi_api
+cd mi_api
+pixi add python=3.12 fastapi uvicorn pandas joblib scikit-learn
 ```
+
+Pixi genera `pixi.toml` y `pixi.lock`; versiónalos y no instales paquetes globalmente.
+`scikit-learn` es necesario para cargar el modelo del ejemplo incluido; si usas un
+modelo creado con otra biblioteca, añade también su dependencia de ejecución.
 
 ---
 
@@ -18,7 +26,7 @@ poetry add fastapi uvicorn pydantic joblib
 mi_api/
 ├── main.py                     # API principal con endpoints
 ├── outputs/modelo.pkl          # Modelo entrenado
-└── pyproject.toml              # Proyecto Poetry
+└── pixi.toml                  # Entorno y dependencias Pixi
 ```
 
 ---
@@ -51,7 +59,7 @@ def predict(data: InputData):
 ## ▶️ 4. Ejecutar servidor
 
 ```bash
-poetry run uvicorn main:app --reload
+pixi run uvicorn main:app --reload
 ```
 
 ---
@@ -80,7 +88,7 @@ Ejemplo de JSON para POST:
 Para producción usa:
 
 ```bash
-uvicorn main:app --host 0.0.0.0 --port 8000 --workers 2
+pixi run uvicorn main:app --host 0.0.0.0 --port 8000 --workers 2
 ```
 
 Puedes combinarlo con Docker, Nginx, o plataformas cloud como Render o Railway.

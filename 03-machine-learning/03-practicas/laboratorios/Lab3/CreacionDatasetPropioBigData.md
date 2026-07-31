@@ -43,11 +43,25 @@ mi_dataset_custom/
 │       ├── fetch.py         # Código para obtener los datos
 │       ├── clean.py         # Código para limpieza y transformación
 │       └── build.py         # Script principal
-├── pyproject.toml
+├── pixi.toml               # Dependencias y tareas
+├── pixi.lock               # Versiones reproducibles
 └── README.md
 ```
 
 ---
+
+## ▶️ Entorno reproducible
+
+Usa Pixi para declarar y ejecutar las dependencias. En un proyecto independiente:
+
+```bash
+pixi init mi_dataset_custom
+cd mi_dataset_custom
+pixi add python=3.12 pandas requests python-dotenv
+pixi run python src/mi_dataset_custom/build.py
+```
+
+Versiona `pixi.toml` y `pixi.lock`; conserva las claves en `.env` y entrega un `.env.example` sin secretos.
 
 ## 🧠 Evaluación
 

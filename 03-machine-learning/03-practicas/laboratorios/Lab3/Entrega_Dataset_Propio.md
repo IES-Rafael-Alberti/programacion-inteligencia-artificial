@@ -39,11 +39,11 @@ Breve descripción de cada fuente:
 
 - ☐ requests / httpx
 - ☐ pandas
-- ☐ poetry
+- ☐ pixi
 - ☐ fastapi
 - ☐ otra(s) (indicar):
 
-¿Se ha gestionado el entorno con Poetry? ☐ Sí ☐ No
+¿Se entrega `pixi.toml` y `pixi.lock` junto al comando de ejecución? ☐ Sí ☐ No
 
 ¿Se ha probado en entorno local / Colab / otro?
 

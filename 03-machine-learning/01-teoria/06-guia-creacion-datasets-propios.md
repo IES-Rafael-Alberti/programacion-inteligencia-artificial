@@ -1,6 +1,6 @@
 # Guía Teórica para la Creación de Datasets Propios en Aprendizaje Automático
 
-En este documento se presenta una guía exhaustiva sobre cómo obtener, construir y servir datasets propios para proyectos de Machine Learning. Abarca desde la justificación de crear un dataset desde cero hasta las fuentes de datos disponibles, el proceso de construcción, los formatos de almacenamiento más comunes, un mini-ejemplo práctico y nociones de herramientas avanzadas como Poetry (gestión de entornos) y FastAPI (exposición de datos vía API). Cada sección amplía detalladamente los puntos clave para convertir datos crudos en conjuntos de datos útiles para aprendizaje automático, con ejemplos claros en Python.
+En este documento se presenta una guía exhaustiva sobre cómo obtener, construir y servir datasets propios para proyectos de Machine Learning. Abarca desde la justificación de crear un dataset desde cero hasta las fuentes de datos disponibles, el proceso de construcción, los formatos de almacenamiento más comunes, un mini-ejemplo práctico y nociones de herramientas avanzadas como Pixi (gestión de entornos) y FastAPI (exposición de datos vía API). Cada sección amplía detalladamente los puntos clave para convertir datos crudos en conjuntos de datos útiles para aprendizaje automático, con ejemplos claros en Python.
 
 ## Justificación: ¿Por qué construir tu propio dataset?
 
@@ -426,79 +426,52 @@ Y listo. Ahora tendríamos dos archivos: - clima_cadiz.csv: que se puede abrir e
 
 Este mini-ejemplo cubre varias partes del flujo: - Uso de una API pública con requests. - Manejo de JSON de respuesta para construir una estructura tabular. - Almacenamiento en formatos comunes. - Todo ello con muy pocas líneas de código, gracias a la potencia de las librerías usadas. En proyectos reales, habría pasos adicionales (ej. validar que los datos son correctos, quizás combinar con datos de otras ciudades, etc.), pero la idea base es la misma.
 
-## Introducción a Poetry (Gestión de Entornos y Dependencias)
+## Entornos y dependencias con Pixi
 
-Al desarrollar proyectos de ciencia de datos o Machine Learning, es importante manejar bien las dependencias (librerías) y el entorno de ejecución (versiones de Python, etc.). Poetry es una herramienta moderna que facilita enormemente esta tarea. A continuación, introduciremos qué es Poetry, cómo se usa para estructurar proyectos Python y cuáles son sus ventajas frente a usar simplemente pip y entornos virtuales (venv).
+Un proyecto de datos debe poder repetirse en otro equipo. En este módulo Pixi es la herramienta operativa: `pixi.toml` declara las dependencias y los entornos, mientras que `pixi.lock` fija las versiones resueltas para cada plataforma compatible.
 
-¿Qué es Poetry? Es un gestor de dependencias y empaquetado para proyectos Python. En palabras de su documentación, "Poetry te permite declarar las librerías de las que tu proyecto depende y se encargará de instalarlas/actualizarlas por ti, ofreciendo además un lockfile para instalaciones reproducibles"[20]. En otras palabras, Poetry combina en una sola herramienta lo que antes se hacía con pip (instalar paquetes) + venv (aislar entornos) + setup.py (definir un paquete). Con Poetry, cada proyecto tiene su propio entorno virtual aislado y un archivo de configuración pyproject.toml donde están listadas las dependencias exactas (y un poetry.lock que fija las versiones precisas instaladas, para garantizar que en cualquier máquina se instalen las mismas versiones).
+### Ruta de trabajo en UD3
 
-Instalación de Poetry: Se instala de manera independiente a tus proyectos. Puedes instalarlo vía pip (pip install poetry) o mediante su instalador oficial. Una vez instalado, tienes el comando poetry disponible en terminal. Poetry es compatible con Python 3.9+ y funciona en Linux, macOS y Windows.
+Desde la raíz del repositorio, instala y ejecuta el entorno que corresponda a la actividad:
 
-Ventajas frente a pip + venv:
+```bash
+pixi install --environment ud3-datasets
+pixi run --environment ud3-datasets lab1-dataset
+```
 
-Gestión automática del entorno virtual: Con Poetry no necesitas ejecutar manualmente python -m venv env ni activar el entorno. Al crear un proyecto, Poetry generará un entorno virtual aislado (normalmente en una ubicación central o dentro del proyecto) y todas las instalaciones de paquetes irán allí. Puedes usar poetry shell para entrar al entorno o poetry run <comando> para ejecutarlo dentro del entorno.
+El entorno `ud3-datasets` incluye la base de UD3, `requests` y `python-dotenv`; además configura el `PYTHONPATH` necesario para Lab1. Para prácticas de ML clásico usa `ud3`; para P2 con PyCaret, `ud3-pycaret`. No instales paquetes globalmente ni actives un entorno distinto al indicado.
 
-Archivo de dependencias declarativas: En pip, muchas veces uno acaba con un requirements.txt escrito a mano o generado con pip freeze (que incluye versiones). Poetry hace esto más elegante con el pyproject.toml: allí declaras por ejemplo que tu proyecto depende de pandas ^2.0 y fastapi ^0.100. Poetry resolverá versiones compatibles y las fijará en poetry.lock. Esto evita conflictos y asegura que todos los colaboradores usen las mismas versiones, reduciendo “pero en mi máquina funciona”.
+### Proyecto Pixi independiente
 
-Publicación sencilla: Si algún día quieres empacar tu proyecto como librería, Poetry puede generar archivos de distribución (wheel) fácilmente a partir de la misma configuración, sin tener que escribir setup.py.
+Si el dataset es un proyecto nuevo, crea un manifiesto junto a su código y añade solo las dependencias que necesite:
 
-Comandos integrados: Poetry ofrece comandos para tareas comunes: add para agregar dependencia (similar a pip install pero actualiza pyproject y lock), update para actualizar todas, remove para quitar, etc. También run para ejecutar comandos dentro del entorno sin activarlo manualmente, y export para exportar a requirements.txt si lo necesitas.
+```bash
+pixi init mi_dataset_custom
+cd mi_dataset_custom
+pixi add python=3.12 pandas requests python-dotenv
+pixi run python src/build.py
+```
 
-Comparado con pipenv: Poetry es similar a pipenv (otro gestor) pero muchos lo prefieren por ser más rápido y tener mayor predictibilidad en resolución de versiones.
+Una estructura útil separa los datos, el código y la documentación:
 
-Crear la estructura de un proyecto con Poetry: Supongamos que quieres empezar un nuevo proyecto de ciencia de datos llamado "MiProyecto". Usando Poetry harías:
-
-$ poetry new MiProyecto
-
-Esto creará una carpeta MiProyecto/ con una estructura básica:
-
-MiProyecto/
-├── pyproject.toml
-├── README.md
-├── MiProyecto/__init__.py
-└── tests/
-
-Aquí MiProyecto/ (subcarpeta) es un paquete Python vacío por ahora, y Poetry ya inicializó pyproject.toml con el nombre del proyecto y la dependencia de Python. Para un proyecto de data science quizá prefieras una estructura ligeramente distinta. Muchas veces se usa:
-
-MiProyecto/
-├── pyproject.toml
-├── README.md
+```text
+mi_dataset_custom/
 ├── data/
 ├── notebooks/
-├── src/          (código fuente, a veces en lugar del paquete nombrado)
-├── MiProyecto/   (paquete con código fuente principal)
-└── tests/
+├── src/
+├── tests/
+├── .env
+├── .env.example
+├── README.md
+├── pixi.toml
+└── pixi.lock
+```
 
-No estás obligado a seguir una plantilla fija, pero es importante organizar: podrías tener tus notebooks Jupyter en una carpeta separada, los datos brutos o procesados en data/, el código Python (funciones, scripts, etc.) dentro de src/ o directamente en el paquete nominal. Poetry no impone cómo trabajas dentro, solo se encarga de las dependencias.
+Versiona `pixi.toml` y `pixi.lock`, pero no `.env`, datos sensibles ni resultados regenerables. Al cambiar una dependencia, revisa el cambio de lockfile antes de compartirlo.
 
-Añadir dependencias (librerías) con Poetry: Imaginemos que nuestro proyecto necesitará pandas, requests y fastapi. Podemos agregar esas librerías haciendo:
+### Nota sobre Poetry
 
-$ cd MiProyecto/
-$ poetry add pandas requests fastapi
-
-Poetry resolverá las últimas versiones compatibles (respetando posibles restricciones) e instalará los paquetes en el entorno del proyecto. Tras esto, en pyproject.toml verás algo así:
-
-[tool.poetry.dependencies]
-python = ">=3.10,<3.12"
-pandas = "^2.1.0"
-requests = "^2.31.0"
-fastapi = "^0.103.0"
-
-Y en poetry.lock quedarán las versiones exactas elegidas (por ejemplo pandas 2.1.1, requests 2.31.0, fastapi 0.103.2, además de sub-dependencias como numpy, pydantic, Starlette, etc.). Ahora, si otro desarrollador clona este proyecto, solo debe hacer poetry install dentro de la carpeta y Poetry leerá el lockfile e instalará exactamente esas versiones.
-
-Usando Poetry en el día a día: Una vez que tienes todo configurado, trabajas así:
-
-Puedes abrir tus notebooks Jupyter dentro del entorno de Poetry. Por ejemplo, poetry run jupyter notebook lanzará Jupyter con las dependencias disponibles. (También puedes instalar ipykernel y crear un kernel específico, pero no es obligatorio).
-
-Si vas a correr un script Python, poetry run python script.py.
-
-Si quieres depurar dentro del entorno, poetry shell te da una terminal con el venv activo.
-
-Cuando termines el proyecto o quieras compartirlo, tus archivos .toml y .lock garantizan replicabilidad. Incluso puedes usar poetry export -f requirements.txt > requirements.txt si necesitas un requirements.txt clásico.
-
-Ventajas resumidas de Poetry: - Centraliza la configuración del proyecto (nombre, versión, dependencias) en un solo archivo. - Hace más fácil recrear entornos exactamente iguales. - Evita instalar paquetes globalmente por error: siempre todo va al venv del proyecto. - Puede manejar múltiples entornos/proyectos en la misma máquina sin conflictos. - En proyectos colaborativos, elimina el "¿qué versión de X usaste?" ya que todo está en pyproject/lockfile.
-
-En conclusión, Poetry es una herramienta muy útil para proyectos de datos donde sueles depender de muchas librerías. Facilita comenzar con buen pie en la gestión de entornos, algo crucial para que tu proyecto de creación de datasets (y posteriores modelos) sea reproducible y mantenible.
+Poetry puede seguir siendo útil para publicar un paquete Python, pero no es el flujo de ejecución de UD3. No combines Poetry y Pixi en el mismo proyecto: escoger un único manifiesto y lockfile evita entornos contradictorios.
 
 ## Introducción a Servir Datos con FastAPI
 
@@ -559,21 +532,19 @@ En este código: - Leemos el CSV una vez. (Nota: si el CSV es grande, quizás se
 
 FastAPI automáticamente genera documentación interactiva (Swagger UI) en /docs donde verías estos endpoints y podrías probarlos.
 
-Ejecutar la aplicación FastAPI: Para poner esto en marcha localmente, usamos Uvicorn, un servidor ASGI que ejecuta aplicaciones FastAPI. Desde la terminal, estando en tu proyecto (y con el entorno Poetry o venv activo con fastapi instalado), ejecutas:
+Ejecutar la aplicación FastAPI: Para poner esto en marcha localmente, usamos Uvicorn, un servidor ASGI que ejecuta aplicaciones FastAPI. Este ejemplo no forma parte de los entornos compartidos de PIA; crea primero un proyecto Pixi independiente y declara sus dependencias:
 
-uvicorn nombre_del_archivo:app --reload
+```bash
+pixi init servidor_datos
+cd servidor_datos
+pixi add python=3.12 fastapi uvicorn pandas
+pixi run uvicorn servidor:app --reload
+```
 
-Por ejemplo, si el código anterior está en servidor.py, harías:
+La opción `--reload` es útil en desarrollo: recarga el servidor si detecta cambios en el código. Una vez corriendo (por defecto en http://127.0.0.1:8000), puedes abrir en un navegador http://127.0.0.1:8000/clima y ver el JSON completo, o http://127.0.0.1:8000/clima/2025-12-14 para la fecha específica. También http://127.0.0.1:8000/docs mostrará la UI de documentación donde puedes probar los endpoints sin salir del navegador.
 
-uvicorn servidor:app --reload
+Pixi crea y actualiza `pixi.toml` y `pixi.lock`. Versiona los dos archivos para que otra persona pueda reproducir el servicio sin usar el Python global.
 
-La opción --reload es útil en desarrollo: recarga el servidor si detecta cambios en el código. Una vez corriendo (por defecto en http://127.0.0.1:8000), puedes abrir en un navegador http://127.0.0.1:8000/clima y ver el JSON completo, o http://127.0.0.1:8000/clima/2025-12-14 para la fecha específica. También http://127.0.0.1:8000/docs mostrará la UI de documentación donde puedes probar los endpoints sin salir del navegador.
-
-Integración con Poetry: Si usaste Poetry para gestionar este proyecto, puedes correr el servidor via Poetry sin problemas:
-
-$ poetry run uvicorn servidor:app --reload
-
-Esto utiliza el uvicorn instalado en el entorno Poetry. También podrías agregar uvicorn como dependencia de desarrollo via poetry add -D uvicorn para que quede registrado.
 
 Consideraciones al servir datos: Ten en cuenta:
 
@@ -597,7 +568,7 @@ FastAPI es asíncrono por naturaleza, por lo que si la obtención de datos impli
 
 En resumen, FastAPI te permite convertir tu dataset en un servicio web rápida y fácilmente. Puedes empezar exponiendo un simple endpoint que devuelva datos crudos o resumidos, e ir construyendo más funcionalidad (filtros, agregaciones, incluso endpoints que corran modelos ML) dentro de la misma aplicación. Para nuestros propósitos iniciales, saber que con unas pocas líneas podemos servir un CSV o un fragmento de DataFrame vía HTTP abre la puerta a crear prototipos de data products útiles, donde otros sistemas puedan aprovechar los datos que hemos recopilado y preparado.
 
-¡Conclusión: Crear tu propio dataset de aprendizaje automático es un proceso desafiante pero gratificante. Requiere combinar habilidades de recolección (APIs, scraping, IoT, logs, open data), ingeniería de datos (limpieza, transformación, almacenamiento) y también buenas prácticas de desarrollo (gestión de dependencias con Poetry, servir resultados con FastAPI). Siguiendo esta guía, tienes un panorama completo para iniciarte en la construcción de datasets a medida. Desde la justificación teórica hasta la implementación práctica con Python, ahora cuentas con las bases para desarrollar conjuntos de datos personalizados** que te permitan abordar problemas de Machine Learning del mundo real con datos relevantes y bien gestionados. ¡Manos a la obra con tus propios datos![10][25]
+¡Conclusión: Crear tu propio dataset de aprendizaje automático es un proceso desafiante pero gratificante. Requiere combinar habilidades de recolección (APIs, scraping, IoT, logs, open data), ingeniería de datos (limpieza, transformación, almacenamiento) y también buenas prácticas de desarrollo (gestión reproducible de dependencias con Pixi, servir resultados con FastAPI). Siguiendo esta guía, tienes un panorama completo para iniciarte en la construcción de datasets a medida. Desde la justificación teórica hasta la implementación práctica con Python, ahora cuentas con las bases para desarrollar conjuntos de datos personalizados** que te permitan abordar problemas de Machine Learning del mundo real con datos relevantes y bien gestionados. ¡Manos a la obra con tus propios datos![10][25]
 
 [1] [2] [3] [25] Custom vs Pre-Built Datasets – How to Choose, When to Build
 
@@ -618,10 +589,6 @@ https://iotconsulting.tech/10-paquetes-de-software-open-source-para-iot/
 [18] [19] Weather Forecast using OpenMeteo API — Geospatial Python Tutorials
 
 https://www.geopythontutorials.com/notebooks/openmeteo_weather_forecast.html
-
-[20]  Introduction | Documentation | Poetry - Python dependency management and packaging made easy
-
-https://python-poetry.org/docs/
 
 [21] [23] [24] Tutorial de FastAPI: Introducción al uso de FastAPI | DataCamp
 

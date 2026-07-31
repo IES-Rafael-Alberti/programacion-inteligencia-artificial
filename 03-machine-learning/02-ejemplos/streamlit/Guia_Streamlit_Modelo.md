@@ -4,13 +4,17 @@ Esta guía te muestra cómo crear y ejecutar una aplicación web básica con [St
 
 ---
 
-## 📦 1. Instalar Streamlit
+## 📦 1. Preparar el entorno de despliegue
 
-Si usas Poetry, añade:
+En un proyecto Pixi independiente:
 
 ```bash
-poetry add streamlit joblib
+pixi init mi_proyecto
+cd mi_proyecto
+pixi add python=3.12 streamlit pandas numpy joblib scikit-learn
 ```
+
+Pixi genera `pixi.toml` y `pixi.lock`; versiónalos y no instales paquetes globalmente.
 
 ---
 
@@ -20,10 +24,10 @@ poetry add streamlit joblib
 mi_proyecto/
 ├── app.py              # Aplicación Streamlit
 ├── outputs/
-│   └── modelo.pkl      # Modelo entrenado (scikit-learn o PyCaret)
+│   └── modelo.pkl      # Modelo de scikit-learn guardado con joblib
 ├── src/                # Código auxiliar (opcional)
 ├── data/               # Datos si se usan
-└── pyproject.toml      # Dependencias
+└── pixi.toml          # Entorno y dependencias Pixi
 ```
 
 ---
@@ -51,7 +55,7 @@ if st.button("Predecir"):
 ## ▶️ 4. Ejecutar la app
 
 ```bash
-poetry run streamlit run app.py
+pixi run streamlit run app.py
 ```
 
 ---
@@ -61,7 +65,8 @@ poetry run streamlit run app.py
 - Usa `st.selectbox`, `st.slider`, `st.radio` para capturar entradas.
 - Usa `st.dataframe` o `st.plotly_chart` para visualizar datos.
 - Usa `@st.cache_resource` para no recargar modelos cada vez.
-- Usa `poetry export` si vas a desplegar en cloud.
+- Si el modelo se guardó con scikit-learn, declara también `scikit-learn`: es necesario para deserializarlo con `joblib`.
+- Versiona `pixi.toml` y `pixi.lock` si el despliegue vive en un proyecto independiente.
 
 ---
 

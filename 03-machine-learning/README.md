@@ -7,7 +7,7 @@ Unidad dedicada al aprendizaje automático clásico con scikit-learn y CuML. Cub
 ## Estructura
 
 ### Teoría (`01-teoria/`)
-Guías de ML con scikit-learn y CuML (capítulos 00-04), preparación de datos, creación de datasets, despliegue con Streamlit/FastAPI, Poetry, y feature stores con Hopsworks.
+Guías de ML con scikit-learn y CuML (capítulos 00-04), preparación de datos, creación de datasets, despliegue con Streamlit/FastAPI, Pixi y feature stores con Hopsworks.
 
 ### Ejemplos (`02-ejemplos/`)
 - `01-bloque1-pandas-eda-visualizacion.ipynb` — Repaso Pandas, EDA y visualización
