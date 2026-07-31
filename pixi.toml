@@ -45,6 +45,7 @@ PYTHONPATH = "$PIXI_PROJECT_ROOT/03-machine-learning/03-practicas/laboratorios/L
 
 [feature.ud3-datasets.tasks]
 lab1-dataset = { cmd = "python -m mi_dataset_peliculas.build_dataset", cwd = "03-machine-learning/03-practicas/laboratorios/Lab1/mi_dataset_peliculas" }
+capstone-movies-dataset = { cmd = "python -m mi_dataset_peliculas.build_capstone_dataset" }
 
 # Deep Learning (UD4), sin imponer una variante CUDA al entorno común.
 [feature.ud4.dependencies]

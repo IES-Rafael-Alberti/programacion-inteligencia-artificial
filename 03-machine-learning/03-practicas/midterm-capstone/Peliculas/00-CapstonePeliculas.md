@@ -104,3 +104,9 @@ No basta con que “funcione”.
 
 Este proyecto se parece mucho a cómo se trabaja **en proyectos reales de IA**.
 Si entiendes bien este proceso, estás haciendo **IA de verdad**, no solo ejercicios.
+
+## Dataset docente
+
+P1, P2 y P3 consumen el mismo snapshot local. Su procedencia, contrato,
+validación y reconstrucción se describen en
+[`Practica_Peliculas_OK/DATASET_CONTRACT.md`](Practica_Peliculas_OK/DATASET_CONTRACT.md).

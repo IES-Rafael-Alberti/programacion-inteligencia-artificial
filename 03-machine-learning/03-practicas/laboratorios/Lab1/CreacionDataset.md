@@ -56,13 +56,14 @@ El flujo mínimo de consulta TMDB es:
 
 ```python
 import requests
-from .config import TMDB_API_KEY
+from .config import get_api_keys
 
 
 def get_popular_movies(page=1):
+    tmdb_api_key, _ = get_api_keys()
     response = requests.get(
         "https://api.themoviedb.org/3/movie/popular",
-        params={"api_key": TMDB_API_KEY, "language": "es-ES", "page": page},
+        params={"api_key": tmdb_api_key, "language": "es-ES", "page": page},
         timeout=10,
     )
     response.raise_for_status()

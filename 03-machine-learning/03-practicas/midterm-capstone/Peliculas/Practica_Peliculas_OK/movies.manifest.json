@@ -1,0 +1,47 @@
+{
+  "dataset": "movies.csv",
+  "snapshot_path": "03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/data/movies.csv",
+  "snapshot_sha256": "0101bdc0c2e4df5b74366ab6bbd7ed9c35ba2a87586f59a56333df02e3758c84",
+  "generated_at_utc": "2026-07-31T15:33:42.911664+00:00",
+  "sources": {
+    "primary": "TMDB API v3",
+    "enrichment": "OMDb API queried exclusively by imdb_id"
+  },
+  "parameters": {
+    "tmdb_discover_pages": 10,
+    "rating_high_rule": "OMDb imdbRating >= 7.0"
+  },
+  "schema": {
+    "release_year": "int64",
+    "runtime_minutes": "int64",
+    "budget_usd": "int64",
+    "genres": "string",
+    "original_language": "string",
+    "production_countries_count": "int64",
+    "production_companies_count": "int64",
+    "is_collection": "int64",
+    "adult": "int64",
+    "rating_high": "int64"
+  },
+  "predictor_exclusions": [
+    "id",
+    "imdb_id",
+    "imdb_rating",
+    "title",
+    "tmdb_id",
+    "vote_average",
+    "vote_count"
+  ],
+  "validation": {
+    "rows": 154,
+    "class_distribution": {
+      "0": 0.402597,
+      "1": 0.597403
+    },
+    "tmdb_candidates": 200,
+    "duplicate_tmdb_candidates": 1,
+    "without_imdb_id": 3,
+    "without_omdb_record": 1,
+    "discarded_by_contract": 41
+  }
+}
