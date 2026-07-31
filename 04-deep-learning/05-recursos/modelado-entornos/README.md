@@ -1,10 +1,15 @@
 # Entornos de Deep Learning — plantillas docentes
 
-Plantillas de instalación para frameworks usados en UD4.
+Plantillas especializadas para frameworks usados en UD4. La ruta principal del alumnado es el entorno Pixi `ud4` de la raíz:
+
+```bash
+pixi install --environment ud4
+pixi run --environment ud4 jupyter lab
+```
 
 ## Estado
 
-- **Uso:** apoyo docente/profesorado, no requisito único para el alumnado.
+- **Uso:** apoyo docente/profesorado para casos que no cubre la ruta PyTorch base; no son alternativas por defecto para el alumnado.
 - **Validación:** scripts revisados sintácticamente, pero no ejecutados en esta pasada.
 - **Criterio:** cada práctica debe indicar su entorno mínimo; este directorio sólo conserva recetas base.
 

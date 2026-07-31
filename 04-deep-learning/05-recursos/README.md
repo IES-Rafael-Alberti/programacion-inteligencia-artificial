@@ -22,10 +22,10 @@ Ya no conserva como recursos activos:
 | Ruta | Uso |
 |---|---|
 | `modelado-datos/` | Datos tabulares de apoyo. `blackfriday/` queda documentado como recurso local opcional, no evaluable por defecto. |
-| `modelado-entornos/` | Plantillas de instalación para frameworks de deep learning; revisadas como apoyo docente, no receta obligatoria. |
+| `modelado-entornos/` | Plantillas históricas o especializadas para profesorado; no sustituyen al entorno Pixi `ud4`. |
 
 ## Pendientes
 
 - `modelado-datos/blackfriday/` queda revisado como recurso local opcional de regresión tabular; no se enlaza a evaluación hasta crear práctica específica.
-- `modelado-entornos/` queda revisado como colección de plantillas docentes; probar en hardware real antes de usar en clase.
+- `modelado-entornos/` queda como contexto para necesidades especializadas; probar en hardware real antes de indicarlo en clase.
 - `captura.mp4` se archiva fuera del flujo activo porque no tiene referencias docentes.

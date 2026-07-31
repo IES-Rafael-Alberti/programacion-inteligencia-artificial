@@ -239,7 +239,7 @@ es imprescindible antes de pasar a:
 
 Ahora que entiendes la estructura de una red neuronal (neuronas, pesos, capas), es el momento de ver cómo se definen estas redes en código.
 
-👉 **Implementación: Redes multicapa** en [Keras Fashion MNIST Multiclase](../../../../02-ejemplos/frameworks/notebooks/redes-neuronales/keras/UD4_03_Red_Neuronal_Keras_Multiclase_FashionMNIST.ipynb) — verás cómo se crean capas ocultas y cómo impactan en el rendimiento.
+👉 **Implementación: Redes multicapa** en [Keras Fashion MNIST Multiclase](../../../02-ejemplos/frameworks/notebooks/redes-neuronales/keras/UD4_03_Red_Neuronal_Keras_Multiclase_FashionMNIST.ipynb) — verás cómo se crean capas ocultas y cómo impactan en el rendimiento.
 
 ---
 

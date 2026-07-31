@@ -227,7 +227,7 @@ En los notebooks prácticos verás cómo cambia el entrenamiento al modificar:
 - Activación de salida
 - Función de pérdida
 
-👉 **Keras Fashion MNIST** en [UD4_01_Red_Neuronal_Keras_Binaria_FashionMNIST.ipynb](../../../../02-ejemplos/frameworks/notebooks/redes-neuronales/keras/UD4_01_Red_Neuronal_Keras_Binaria_FashionMNIST.ipynb)
+👉 **Keras Fashion MNIST** en [UD4_01_Red_Neuronal_Keras_Binaria_FashionMNIST.ipynb](../../../02-ejemplos/frameworks/notebooks/redes-neuronales/keras/UD4_01_Red_Neuronal_Keras_Binaria_FashionMNIST.ipynb)
 
 ---
 

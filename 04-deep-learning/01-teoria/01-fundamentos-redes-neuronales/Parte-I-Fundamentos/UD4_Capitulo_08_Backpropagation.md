@@ -253,7 +253,7 @@ Entramos en:
 
 Backpropagation es automático en todos los frameworks modernos. Pero es vital que entiendas qué sucede "detrás de cámaras" para debugging y optimización.
 
-👉 **Observe GradientTape en acción** en [PyTorch Multiclase](../../../../02-ejemplos/frameworks/notebooks/redes-neuronales/pytorch/UD4_05_Red_Neuronal_PyTorch_Multiclase_FashionMNIST.ipynb) y [JAX Fashion MNIST](../../../../02-ejemplos/frameworks/notebooks/redes-neuronales/jax/UD4_Apendice_JAX_FashionMNIST.ipynb) — nota cómo los frameworks calculan automáticamente los gradientes.
+👉 **Observe GradientTape en acción** en [PyTorch Multiclase](../../../02-ejemplos/frameworks/notebooks/redes-neuronales/pytorch/UD4_05_Red_Neuronal_PyTorch_Multiclase_FashionMNIST.ipynb) y [JAX Fashion MNIST](../../../02-ejemplos/frameworks/notebooks/redes-neuronales/jax/UD4_Apendice_JAX_FashionMNIST.ipynb) — nota cómo los frameworks calculan automáticamente los gradientes.
 
 ---
 

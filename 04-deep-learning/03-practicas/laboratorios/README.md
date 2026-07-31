@@ -2,6 +2,13 @@
 
 Laboratorios evaluables de la UD4. Cada laboratorio incluye enunciado, rúbrica y plantilla de entrega.
 
+## Antes de empezar
+
+- Sigue los laboratorios en orden.
+- TensorFlow Playground se abre en el navegador y no necesita entorno local.
+- Para la implementación PyTorch del Laboratorio 3, ejecuta desde la raíz `pixi run --environment ud4 jupyter lab`.
+- Usa Keras u otra receta especializada sólo si la actividad o el profesorado lo indican; las plantillas de `05-recursos/modelado-entornos/` son referencias contextuales, no alternativas por defecto.
+
 ---
 
 ## Laboratorios
@@ -19,7 +26,7 @@ Exploración visual de redes neuronales con [TensorFlow Playground](https://play
 | `TensorFlowPlayGround.org/.tex` | Fuentes del enunciado |
 | `TensorFlowPlayGround-V1.org` | Versión anterior (referencia) |
 
-**Relacionado con:** [`01-redes-neuronales-genericas/`](../../01-teoria/01-redes-neuronales-genericas/) — fundamentos de redes, funciones de activación, gradientes.
+**Relacionado con:** [fundamentos de redes neuronales](../../01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4-DeepLearning-Indice-Parte1-Teoria.md).
 
 ---
 
@@ -35,7 +42,7 @@ Implementación manual del algoritmo de backpropagation en Python puro, sin fram
 | `backpropagationRNAscratch.py` | Script de referencia (RNA desde cero) |
 | `backPropScratch.py` | Variante simplificada |
 
-**Relacionado con:** [`UD4_Capitulo_08_Backpropagation.md`](../../01-teoria/01-redes-neuronales-genericas/fundamentos-docs/Parte-I-Fundamentos/UD4_Capitulo_08_Backpropagation.md) y scripts en [`fundamentos-scripts/`](../../02-ejemplos/fundamentos-scripts/).
+**Relacionado con:** [`UD4_Capitulo_08_Backpropagation.md`](../../01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_08_Backpropagation.md) y scripts en [`fundamentos-scripts/`](../../02-ejemplos/fundamentos-scripts/).
 
 ---
 

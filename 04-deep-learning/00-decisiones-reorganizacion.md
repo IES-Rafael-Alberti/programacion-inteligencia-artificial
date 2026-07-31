@@ -26,7 +26,7 @@ La regla general es: **UD4 debe quedarse como Deep Learning base**. Lo que sea v
 | `fundamentos-docs/Parte-I-Fundamentos/*.pdf` | PDFs generados desde Markdown. | Eliminar generado o archivar | `90-archivo/generados/ud4-fundamentos/` si se conservan | No deben vivir junto a la fuente activa. | Confirmar que existe `.md` equivalente antes de borrar. |
 | `fundamentos-docs/Parte-I-Fundamentos/*.html` | HTML generado desde Markdown. | Eliminar generado | Ninguno | El sitio se genera desde Markdown; mantener HTML duplica ruido. | Confirmar fuente `.md`. |
 | `fundamentos-docs/Parte-I-Fundamentos/*.docx` | Documentos editables/generados. | Revisar manualmente | `90-archivo/generados/ud4-fundamentos/` | Puede haber versiones alternativas no equivalentes al `.md`. | No borrar sin comparar. |
-| `01-teoria/01-redes-neuronales-genericas/frameworks-docs/` | Keras, PyTorch, JAX, Lightning, DataLoader, optimizadores. | Mantener reorganizado | `04-deep-learning/01-teoria/02-frameworks-deep-learning/` | Pertenece a UD4 como introducción a frameworks. | Evitar duplicar con UD9/JAX avanzado. |
+| `01-teoria/02-frameworks-deep-learning/frameworks-docs/` | Keras, PyTorch, JAX, Lightning, DataLoader, optimizadores. | Mantener reorganizado | `04-deep-learning/01-teoria/02-frameworks-deep-learning/` | Pertenece a UD4 como introducción a frameworks. | Evitar duplicar con UD9/JAX avanzado. |
 | `frameworks-docs/introduccion/*.md` | Introducciones a frameworks. | Mantener | Nueva carpeta de frameworks UD4. | Material activo y útil. | Crear una ruta de lectura única: no todos los frameworks al mismo nivel de profundidad. |
 | `frameworks-docs/introduccion/*.html` | HTML generado. | Eliminar generado | Ninguno | Duplicado de Markdown. | Confirmar fuente `.md`. |
 | `frameworks-docs/optimizadores/*.md` | Teoría de optimizadores. | Mantener | Nueva carpeta de frameworks/fundamentos UD4. | Es contenido base de DL. | Puede integrarse con fundamentos o frameworks. |
@@ -257,7 +257,7 @@ Se movieron los bloques internos claros para que UD4 tenga una estructura legibl
 | Origen | Destino |
 |---|---|
 | `01-teoria/01-redes-neuronales-genericas/fundamentos-docs/` | `01-teoria/01-fundamentos-redes-neuronales/` |
-| `01-teoria/01-redes-neuronales-genericas/frameworks-docs/` | `01-teoria/02-frameworks-deep-learning/frameworks-docs/` |
+| `01-teoria/02-frameworks-deep-learning/frameworks-docs/` | `01-teoria/02-frameworks-deep-learning/frameworks-docs/` |
 | `01-teoria/01-redes-neuronales-genericas/modelado-avanzado-docs/frameworks/` | `01-teoria/02-frameworks-deep-learning/frameworks-avanzados/` |
 | `01-teoria/01-redes-neuronales-genericas/modelado-avanzado-docs/conceptos/TensorFlow_BajoNivel.md` | `01-teoria/02-frameworks-deep-learning/tensorflow-avanzado/TensorFlow_BajoNivel.md` |
 | `01-teoria/01-redes-neuronales-genericas/modelado-avanzado-docs/conceptos/TensorFlow_DataAPI.md` | `01-teoria/02-frameworks-deep-learning/tensorflow-avanzado/TensorFlow_DataAPI.md` |

@@ -8,8 +8,8 @@
 
 ## Documentación relacionada
 
-- 📄 **Teoría de optimizadores** → [`../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/optimizadores/OPTIMIZADORES_Teorico.md`](../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/optimizadores/OPTIMIZADORES_Teorico.md)
-- 📄 **Introducción a PyTorch** → [`../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/introduccion/UD4_Intro_PyTorch.md`](../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/introduccion/UD4_Intro_PyTorch.md)
+- 📄 **Teoría de optimizadores** → [`../../../../../01-teoria/02-frameworks-deep-learning/frameworks-docs/optimizadores/OPTIMIZADORES_Teorico.md`](../../../../../01-teoria/02-frameworks-deep-learning/frameworks-docs/optimizadores/OPTIMIZADORES_Teorico.md)
+- 📄 **Introducción a PyTorch** → [`../../../../../01-teoria/02-frameworks-deep-learning/frameworks-docs/introduccion/UD4_Intro_PyTorch.md`](../../../../../01-teoria/02-frameworks-deep-learning/frameworks-docs/introduccion/UD4_Intro_PyTorch.md)
 
 ## Notebooks relacionados en otras carpetas
 

@@ -207,7 +207,7 @@ Saber **cuándo usar cada enfoque** es una de las competencias más importantes 
 
 Una vez tengas clara la motivación detrás de las redes neuronales, estará bien que veas cómo se usan en la práctica.
 
-👉 **Primera implementación práctica**: [Red Neuronal Binaria con Keras (Fashion MNIST)](../../../../02-ejemplos/frameworks/notebooks/redes-neuronales/keras/UD4_01_Red_Neuronal_Keras_Binaria_FashionMNIST.ipynb)
+👉 **Primera implementación práctica**: [Red Neuronal Binaria con Keras (Fashion MNIST)](../../../02-ejemplos/frameworks/notebooks/redes-neuronales/keras/UD4_01_Red_Neuronal_Keras_Binaria_FashionMNIST.ipynb)
 
 ---
 

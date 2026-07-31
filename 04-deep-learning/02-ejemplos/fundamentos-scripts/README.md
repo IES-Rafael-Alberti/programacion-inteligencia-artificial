@@ -28,4 +28,4 @@ done
 
 ## Documentación relacionada
 
-- 📄 **Cap. 08 — Backpropagation** → [`../../01-teoria/01-redes-neuronales-genericas/fundamentos-docs/Parte-I-Fundamentos/UD4_Capitulo_08_Backpropagation.md`](../../01-teoria/01-redes-neuronales-genericas/fundamentos-docs/Parte-I-Fundamentos/UD4_Capitulo_08_Backpropagation.md)
+- 📄 **Cap. 08 — Backpropagation** → [`../../01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_08_Backpropagation.md`](../../01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_08_Backpropagation.md)

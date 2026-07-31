@@ -10,8 +10,8 @@
 
 ## Documentación relacionada
 
-- 📄 **Teoría de optimizadores** → [`../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/optimizadores/OPTIMIZADORES_Teorico.md`](../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/optimizadores/OPTIMIZADORES_Teorico.md)
-- 📄 **Introducción a JAX** → [`../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/introduccion/UD4_Intro_JAX.md`](../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/introduccion/UD4_Intro_JAX.md)
+- 📄 **Teoría de optimizadores** → [`../../../../../01-teoria/02-frameworks-deep-learning/frameworks-docs/optimizadores/OPTIMIZADORES_Teorico.md`](../../../../../01-teoria/02-frameworks-deep-learning/frameworks-docs/optimizadores/OPTIMIZADORES_Teorico.md)
+- 📄 **Introducción a JAX** → [`../../../../../01-teoria/02-frameworks-deep-learning/frameworks-docs/introduccion/UD4_Intro_JAX.md`](../../../../../01-teoria/02-frameworks-deep-learning/frameworks-docs/introduccion/UD4_Intro_JAX.md)
 
 ## Notebooks relacionados en otras carpetas
 

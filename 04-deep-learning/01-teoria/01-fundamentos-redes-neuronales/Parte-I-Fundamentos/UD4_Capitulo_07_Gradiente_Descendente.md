@@ -332,7 +332,7 @@ Eso nos lleva al siguiente capítulo:
 
 El gradiente descendente está en el corazón de todos los frameworks modernos. Verás cómo TensorFlow/PyTorch/Keras lo implementan automáticamente.
 
-👉 **Optimizadores en práctica** en [PyTorch Fashion MNIST Binaria](../../../../02-ejemplos/frameworks/notebooks/redes-neuronales/pytorch/UD4_04_Red_Neuronal_PyTorch_Binaria_FashionMNIST.ipynb) — experimenta con diferentes learning rates y observa cómo afecta la convergencia.
+👉 **Optimizadores en práctica** en [PyTorch Fashion MNIST Binaria](../../../02-ejemplos/frameworks/notebooks/redes-neuronales/pytorch/UD4_04_Red_Neuronal_PyTorch_Binaria_FashionMNIST.ipynb) — experimenta con diferentes learning rates y observa cómo afecta la convergencia.
 
 ---
 

@@ -44,59 +44,13 @@ Cada subdirectorio de `notebooks/` contiene un `README.md` con enlaces a la docu
 | `redes-neuronales/jax/` | `docs/introduccion/UD4_Intro_JAX.md` |
 | `optimizadores/*/` | `docs/optimizadores/OPTIMIZADORES_Teorico.md` + intro del framework |
 
-Quick start (recomendado con `mamba` / `conda`):
+## Ejecución local
+
+La ruta local principal es el entorno Pixi `ud4`, válido para los ejemplos base de PyTorch:
 
 ```bash
-# Crear entorno
-mamba create -n ud4-optimizers -y python=3.10
-conda activate ud4-optimizers
-
-# Instalar dependencias principales (CPU)
-mamba install -y -c conda-forge tensorflow numpy matplotlib scikit-learn
-mamba install -n ud4-optimizers -y pytorch torchvision cpuonly -c pytorch
+pixi install --environment ud4
+pixi run --environment ud4 jupyter lab
 ```
 
-Ejecutar notebooks localmente:
-
-- Abre Jupyter (`jupyter lab` o `jupyter notebook`) dentro del entorno.
-- Carga y ejecuta cualquiera de los notebooks en `notebooks/practicos/`.
-
-Instalación rápida (comando que los alumnos pueden copiar):
-
-```bash
-# Conda/mamba (recomendado):
-mamba create -n ud4-optimizers -y python=3.10 && conda activate ud4-optimizers && mamba install -y -c conda-forge numpy matplotlib scikit-learn && mamba install -n ud4-optimizers -y pytorch torchvision cpuonly -c pytorch
-
-# Pip (alternativa; JAX/CPU como ejemplo):
-pip install -r requirements.txt
-```
-
-Usar Google Colab (badge + snippet):
-
-- Puedes generar un badge "Open In Colab" que apunte a la ruta del notebook en GitHub. Ejemplo (reemplaza `<USERNAME>/<REPO>`):
-
-```
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<USERNAME>/<REPO>/blob/main/notebooks/practicos/jax/UD4_Practico_Optimizadores_JAX_Equinox.ipynb)
-```
-
-- Celda de instalación rápida para Colab (añádela como primera celda del notebook):
-
-```python
-# Celda Colab — instala dependencias (ajusta si necesitas jaxlib GPU wheel)
-!pip install -q equinox optax jax jaxlib
-# Opcional: montar Google Drive
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
-Notas:
-
-- Si vas a usar GPU en Colab, puede ser necesario instalar un `jaxlib` con soporte CUDA específico; sigue https://github.com/google/jax#installation para instrucciones.
-- Para instalar localmente con `pip`, usa `pip install -r requirements.txt` y asegúrate de elegir la rueda de `jaxlib` correcta si usas JAX.
-
-Siguientes pasos disponibles:
-
-- Insertar badges directamente dentro de los notebooks en `notebooks/practicos/`.
-- Generar un script que añada automáticamente los badges a todos los notebooks.
-
-Si quieres que inserte los badges automáticamente en los notebooks, dímelo y lo hago.
+Abre los notebooks desde `notebooks/redes-neuronales/pytorch/` o `notebooks/optimizadores/pytorch/`. Los materiales Keras y JAX son comparativas complementarias y pueden necesitar dependencias que no forman parte de `ud4`; usa una receta especializada sólo cuando se indique expresamente. Las recetas de `requirements.txt` y `05-recursos/modelado-entornos/` quedan como referencia docente, no como flujo principal del alumnado.

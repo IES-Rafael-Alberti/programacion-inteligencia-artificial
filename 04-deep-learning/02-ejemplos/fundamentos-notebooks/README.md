@@ -9,10 +9,10 @@
 
 ## Documentación relacionada
 
-- 📄 **Cap. 03 — Representación Matemática** → [`../../01-teoria/01-redes-neuronales-genericas/fundamentos-docs/Parte-I-Fundamentos/UD4_Capitulo_03_Representacion_Matematica_Datos.md`](../../01-teoria/01-redes-neuronales-genericas/fundamentos-docs/Parte-I-Fundamentos/UD4_Capitulo_03_Representacion_Matematica_Datos.md)
-- 📄 **Cap. 04 — Tensores y Redes como Funciones** → [`../../01-teoria/01-redes-neuronales-genericas/fundamentos-docs/Parte-I-Fundamentos/UD4_Capitulo_04_Operaciones_Tensores_Redes_Como_Funciones.md`](../../01-teoria/01-redes-neuronales-genericas/fundamentos-docs/Parte-I-Fundamentos/UD4_Capitulo_04_Operaciones_Tensores_Redes_Como_Funciones.md)
-- 📄 **Cap. 06 — Derivadas y Gradientes** → [`../../01-teoria/01-redes-neuronales-genericas/fundamentos-docs/Parte-I-Fundamentos/UD4_Capitulo_06_Derivadas_y_Gradientes.md`](../../01-teoria/01-redes-neuronales-genericas/fundamentos-docs/Parte-I-Fundamentos/UD4_Capitulo_06_Derivadas_y_Gradientes.md)
-- 📄 **Cap. 07 — Gradiente Descendente** → [`../../01-teoria/01-redes-neuronales-genericas/fundamentos-docs/Parte-I-Fundamentos/UD4_Capitulo_07_Gradiente_Descendente.md`](../../01-teoria/01-redes-neuronales-genericas/fundamentos-docs/Parte-I-Fundamentos/UD4_Capitulo_07_Gradiente_Descendente.md)
+- 📄 **Cap. 03 — Representación Matemática** → [`../../01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_03_Representacion_Matematica_Datos.md`](../../01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_03_Representacion_Matematica_Datos.md)
+- 📄 **Cap. 04 — Tensores y Redes como Funciones** → [`../../01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_04_Operaciones_Tensores_Redes_Como_Funciones.md`](../../01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_04_Operaciones_Tensores_Redes_Como_Funciones.md)
+- 📄 **Cap. 06 — Derivadas y Gradientes** → [`../../01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_06_Derivadas_y_Gradientes.md`](../../01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_06_Derivadas_y_Gradientes.md)
+- 📄 **Cap. 07 — Gradiente Descendente** → [`../../01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_07_Gradiente_Descendente.md`](../../01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_07_Gradiente_Descendente.md)
 
 ## Scripts relacionados
 

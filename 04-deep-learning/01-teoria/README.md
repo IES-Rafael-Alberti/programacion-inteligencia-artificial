@@ -32,6 +32,14 @@ No cubre ya como bloque activo:
 └── README.md
 ```
 
+## Ruta de lectura
+
+1. [Índice de fundamentos](01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4-DeepLearning-Indice-Parte1-Teoria.md).
+2. [Plan práctico de frameworks](02-frameworks-deep-learning/frameworks-docs/planificacion/UD4-DeepLearning-Indice-Parte2-Practica.md).
+3. [Métricas con PyTorch y Keras](03-metricas-evaluacion/002-MetricasPytorchKeras.md).
+
+Después continúa con los [laboratorios canónicos](../03-practicas/laboratorios/README.md).
+
 ## Nota de limpieza
 
 Los `.html` generados se han eliminado de UD4 cuando existía fuente Markdown equivalente. La referencia activa debe ser Markdown, notebook o código fuente, no HTML derivado. El antiguo `modelado-avanzado-docs/` queda cerrado y archivado en `04-deep-learning/90-archivo/modelado-avanzado-docs/`.

@@ -7,7 +7,7 @@ Perfecto. Cerramos la UD4 como debe ser, con **JAX** y **la comparación final**
 Ya tienes el **apéndice en JAX**, alineado exactamente con lo visto en Keras y PyTorch:
 
 📓 **Descargar notebook**
-[UD4_Apendice_JAX_FashionMNIST.ipynb](sandbox:/mnt/data/UD4_Apendice_JAX_FashionMNIST.ipynb)
+[UD4_Apendice_JAX_FashionMNIST.ipynb](../../../../02-ejemplos/frameworks/notebooks/redes-neuronales/jax/UD4_Apendice_JAX_FashionMNIST.ipynb)
 
 ### Qué aporta este notebook (y por qué está bien así)
 

@@ -11,8 +11,8 @@ JAX se trata como **apéndice** en esta unidad: muestra cómo se ve la misma red
 
 ## Documentación relacionada
 
-- 📄 **Introducción a JAX** → [`../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/introduccion/UD4_Intro_JAX.md`](../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/introduccion/UD4_Intro_JAX.md)
-- 📄 **Comparativa de frameworks** → [`../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/planificacion/UD4-DeepLearning-ComparativaFrameWorks.md`](../../../../../01-teoria/01-redes-neuronales-genericas/frameworks-docs/planificacion/UD4-DeepLearning-ComparativaFrameWorks.md)
+- 📄 **Introducción a JAX** → [`../../../../../01-teoria/02-frameworks-deep-learning/frameworks-docs/introduccion/UD4_Intro_JAX.md`](../../../../../01-teoria/02-frameworks-deep-learning/frameworks-docs/introduccion/UD4_Intro_JAX.md)
+- 📄 **Comparativa de frameworks** → [`../../../../../01-teoria/02-frameworks-deep-learning/frameworks-docs/planificacion/UD4-DeepLearning-ComparativaFrameWorks.md`](../../../../../01-teoria/02-frameworks-deep-learning/frameworks-docs/planificacion/UD4-DeepLearning-ComparativaFrameWorks.md)
 
 ## Dataset
 
