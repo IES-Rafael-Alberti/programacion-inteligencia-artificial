@@ -14,6 +14,7 @@ Esta unidad recorre tres bloques: segmentación de imágenes, tracking de objeto
    - **XAI:** [guía](03-practicas/00-guia-xai.md) y notebooks 84–86 en [`03-practicas/`](03-practicas/).
 3. Conserva como evidencia el notebook ejecutado, las métricas, una visualización relevante y una breve interpretación de resultados.
 4. Antes de entregar, consulta la [evaluación de la unidad](04-evaluacion/README.md), completa el [checklist](04-evaluacion/checklist-entrega.md) y revisa la [rúbrica](04-evaluacion/rubrica.md).
+5. Sigue las [normas comunes de entrega y uso de IA](../docs/normas-entregas-y-uso-de-ia.md).
 
 ## Material disponible
 

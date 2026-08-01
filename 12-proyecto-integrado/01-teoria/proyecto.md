@@ -8,6 +8,8 @@ La idea no es entregar un notebook aislado al final del curso. El proyecto debe 
 
 > **Regla clave:** el tema es libre, pero el proyecto debe integrar al menos dos fuentes de datos de forma real y justificada.
 
+> Todas las entregas parciales y finales se rigen por las [normas comunes de entrega y uso de IA](../../docs/normas-entregas-y-uso-de-ia.md).
+
 > **Relación con UD7**: el proyecto de stack convergente de UD7 (`../../07-convergencia-herramientas/01-teoria/10_stack_convergente.md`) puede servir como ensayo, checkpoint técnico o base reutilizable. Para que cuente dentro del proyecto final de módulo, debe adaptarse al tema del equipo, incorporar al menos dos fuentes de datos e integrarlas con sentido.
 
 ## Modelo de trabajo del módulo

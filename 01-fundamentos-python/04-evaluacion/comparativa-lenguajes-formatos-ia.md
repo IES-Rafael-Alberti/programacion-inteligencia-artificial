@@ -35,6 +35,8 @@ Debe decidir qué tecnologías usar para:
 
 La entrega debe ser breve: una tabla comparativa y una conclusión técnica.
 
+Esta actividad se rige por las [normas comunes de entrega y uso de IA](../../docs/normas-entregas-y-uso-de-ia.md).
+
 ### 1. Tabla comparativa
 
 Completar una tabla con estas columnas:

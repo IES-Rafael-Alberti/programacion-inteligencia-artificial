@@ -110,6 +110,8 @@ El proyecto DEBE incluir:
 
 ## 4. Entregables
 
+La entrega se rige por las [normas comunes de entrega y uso de IA](../../docs/normas-entregas-y-uso-de-ia.md).
+
 | Entregable | Formato | Peso |
 |-----------|---------|------|
 | **Repositorio de código** | GitHub / GitLab / ZIP | 50% |

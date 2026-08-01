@@ -8,6 +8,7 @@ Laboratorios evaluables de la UD4. Cada laboratorio incluye enunciado, rúbrica 
 - TensorFlow Playground se abre en el navegador y no necesita entorno local.
 - Para la implementación PyTorch del Laboratorio 3, ejecuta desde la raíz `pixi run --environment ud4 jupyter lab`.
 - Usa Keras u otra receta especializada sólo si la actividad o el profesorado lo indican; las plantillas de `05-recursos/modelado-entornos/` son referencias contextuales, no alternativas por defecto.
+- Todas las entregas se rigen por las [normas comunes de entrega y uso de IA](../../../docs/normas-entregas-y-uso-de-ia.md).
 
 ---
 

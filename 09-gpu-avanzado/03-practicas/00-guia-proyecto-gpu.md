@@ -18,6 +18,9 @@ Puedes adelantar o depurar en CPU las partes compatibles, pero una ejecución CP
 ---
 
 ## 📚 Entregables mínimos
+
+La entrega se rige por las [normas comunes de entrega y uso de IA](../../docs/normas-entregas-y-uso-de-ia.md).
+
 1. **Código** del proyecto (notebooks + módulos auxiliares si los hay).
 2. **Artefactos**: `artifacts/model.joblib`, métricas (`metrics.json`), datos procesados (`clean.csv`).
 3. **Dashboard** ejecutable (Gradio o alternativa) con instrucciones para levantarlo.
