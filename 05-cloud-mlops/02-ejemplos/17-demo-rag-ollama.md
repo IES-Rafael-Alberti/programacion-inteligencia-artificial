@@ -25,7 +25,7 @@ Esta variante usa solo `Ollama` y Python. Es útil para clase porque cada alumno
 
 El notebook preparado está en:
 
-- [17-demo-rag-ollama.ipynb](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Demos/17-demo-rag-ollama.ipynb)
+- [17-demo-rag-ollama.ipynb](../02-ejemplos/17-demo-rag-ollama.ipynb)
 
 ## Qué hace
 
@@ -40,6 +40,6 @@ El notebook preparado está en:
 
 Este ejemplo encaja muy bien con:
 
-- [12-recuperacion-avanzada-rag.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Documentacion/12-recuperacion-avanzada-rag.md)
-- [13-ejemplos-stacks-ia.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Documentacion/13-ejemplos-stacks-ia.md)
-- [15-demo-rag-sencillo.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Demos/15-demo-rag-sencillo.md)
+- [12-recuperacion-avanzada-rag.md](../01-teoria/12-recuperacion-avanzada-rag.md)
+- [13-ejemplos-stacks-ia.md](../01-teoria/13-ejemplos-stacks-ia.md)
+- [15-demo-rag-sencillo.md](../02-ejemplos/15-demo-rag-sencillo.md)

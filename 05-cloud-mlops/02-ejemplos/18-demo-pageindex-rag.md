@@ -221,11 +221,11 @@ Por tanto, para esta sesión `GraphRAG` sirve mejor para explicar otra familia d
 
 Esta demo complementa directamente:
 
-- [12-recuperacion-avanzada-rag.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Documentacion/12-recuperacion-avanzada-rag.md)
-- [15-demo-rag-sencillo.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Demos/15-demo-rag-sencillo.md)
-- [17-demo-rag-ollama.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Demos/17-demo-rag-ollama.md)
-- [18-demo-pageindex-rag.ipynb](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Demos/18-demo-pageindex-rag.ipynb)
-- [18-demo-pageindex-rag.ipynb.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Demos/18-demo-pageindex-rag.ipynb.md)
+- [12-recuperacion-avanzada-rag.md](../01-teoria/12-recuperacion-avanzada-rag.md)
+- [15-demo-rag-sencillo.md](../02-ejemplos/15-demo-rag-sencillo.md)
+- [17-demo-rag-ollama.md](../02-ejemplos/17-demo-rag-ollama.md)
+- [18-demo-pageindex-rag.ipynb](../02-ejemplos/18-demo-pageindex-rag.ipynb)
+- [18-demo-pageindex-rag.ipynb.md](../02-ejemplos/18-demo-pageindex-rag.ipynb.md)
 
 Sirve especialmente bien como segunda demo o como cierre comparativo tras explicar el enfoque básico.
 

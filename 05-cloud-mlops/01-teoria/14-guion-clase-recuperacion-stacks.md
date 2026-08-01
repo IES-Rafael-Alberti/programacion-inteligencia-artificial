@@ -35,9 +35,9 @@ Qué explicar:
 
 Material de apoyo:
 
-- [12-recuperacion-avanzada-rag.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Documentacion/12-recuperacion-avanzada-rag.md)
-- [13-ejemplos-stacks-ia.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Documentacion/13-ejemplos-stacks-ia.md)
-- [18-demo-pageindex-rag.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Demos/18-demo-pageindex-rag.md)
+- [12-recuperacion-avanzada-rag.md](../01-teoria/12-recuperacion-avanzada-rag.md)
+- [13-ejemplos-stacks-ia.md](../01-teoria/13-ejemplos-stacks-ia.md)
+- [18-demo-pageindex-rag.md](../02-ejemplos/18-demo-pageindex-rag.md)
 
 #### 2. Explicación de recuperación avanzada
 
@@ -196,8 +196,8 @@ Qué mostrar:
 
 Material de apoyo:
 
-- [18-demo-pageindex-rag.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Demos/18-demo-pageindex-rag.md)
-- [18-demo-pageindex-rag.ipynb.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Demos/18-demo-pageindex-rag.ipynb.md)
+- [18-demo-pageindex-rag.md](../02-ejemplos/18-demo-pageindex-rag.md)
+- [18-demo-pageindex-rag.ipynb.md](../02-ejemplos/18-demo-pageindex-rag.ipynb.md)
 
 No hace falta montar un sistema completo en directo si no compensa en tiempo. También puede usarse el notebook explicativo como apoyo visual.
 

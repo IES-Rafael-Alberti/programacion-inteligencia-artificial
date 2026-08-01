@@ -63,9 +63,9 @@ La idea es que el alumnado vea claramente de dónde sale la respuesta.
 
 En esta unidad ya tienes una carpeta lista para la demo:
 
-- [proyecto.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Documentacion/documentos_demo/proyecto.md)
-- [evaluacion.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Documentacion/documentos_demo/evaluacion.md)
-- [faq.md](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Documentacion/documentos_demo/faq.md)
+- [proyecto.md](../01-teoria/documentos_demo/proyecto.md)
+- [evaluacion.md](../01-teoria/documentos_demo/evaluacion.md)
+- [faq.md](../01-teoria/documentos_demo/faq.md)
 
 ### Paso 3. Explicar el flujo
 
@@ -146,7 +146,7 @@ Ahí puedes explicar:
 
 La carpeta recomendada para usar directamente en la demo es:
 
-- [documentos_demo](/datos/RafaelAlberti/RafaelAlberti25_26/Modulos/PIA/UD5/Documentacion/documentos_demo)
+- [documentos_demo](../01-teoria/documentos_demo)
 
 ---
 
