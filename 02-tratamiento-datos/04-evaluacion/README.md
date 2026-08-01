@@ -4,6 +4,8 @@
 
 Base revisable para evaluar práctica, notebook y entrega de la unidad. No sustituye la evaluación final de la programación didáctica.
 
+La entrega está sujeta a las [normas comunes de entrega y uso de IA](../../docs/normas-entregas-y-uso-de-ia.md). Si se utiliza IA, deben declararse su uso y las comprobaciones realizadas.
+
 ## Instrumentos
 
 - **Práctica/notebook:** análisis y tratamiento de datos con pandas.
@@ -23,8 +25,8 @@ Si se activa `../03-practicas/r_exercises_titanic_with_tests/`, se evalúa con l
 
 Si se activa como actividad evaluable, usar `rubrica-itinerario-r.md`. Si se usa sólo como demostración o refuerzo, basta con feedback formativo.
 
-## Pendientes
+## Ajustes docentes opcionales
 
 - Revisar si el dataset o el caso práctico exige adaptación.
 - Ajustar la profundidad de EDA y limpieza al grupo.
-- Validar el reparto entre práctica, test y entrega.
+- Ajustar el reparto entre práctica, test y entrega si la programación del grupo lo requiere.

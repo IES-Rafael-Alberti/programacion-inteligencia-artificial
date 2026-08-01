@@ -4,7 +4,7 @@ Esta carpeta reúne los instrumentos de evaluación de la unidad: cuestionarios 
 
 ## Camino rápido
 
-1. Completa la tarea comparativa de herramientas cloud o la tarea AWS según indique el profesorado.
+1. Completa la tarea comparativa de herramientas cloud. La tarea AWS es una alternativa opcional solo si el profesorado la activa expresamente.
 2. Entrega el trabajo con justificaciones técnicas claras.
 3. Realiza los cuestionarios GIFT si el profesorado los activa en Moodle.
 
@@ -19,8 +19,8 @@ Esta carpeta reúne los instrumentos de evaluación de la unidad: cuestionarios 
 
 | Práctica | Descripción |
 | --- | --- |
-| Tarea comparativa de herramientas cloud | Análisis y justificación de selección de herramientas cloud para un caso de uso. Enunciado y rúbrica en `03-practicas/`. |
-| Tarea AWS | Implementación básica de infraestructura AWS para un pipeline ML. Rescatada del curso 24-25; enunciado en `03-practicas/`. |
+| **Canónica:** tarea comparativa de herramientas cloud | Análisis y justificación de selección de herramientas cloud para un caso de uso. Enunciado y rúbrica en `03-practicas/`. |
+| **Opcional:** tarea AWS | Implementación básica de infraestructura AWS para un pipeline ML. Material rescatado del curso 24-25, solo por indicación expresa del profesorado. |
 
 Los cuestionarios GIFT evalúan comprensión conceptual y son complemento de las prácticas, no sustituto salvo decisión expresa del profesorado.
 

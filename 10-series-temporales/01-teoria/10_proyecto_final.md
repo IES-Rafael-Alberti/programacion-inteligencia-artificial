@@ -11,6 +11,8 @@ Este proyecto tiene tres fases:
 2. **Reto autónomo:** Fusión con downsampling (Energía).
 3. **El Torneo:** Competición de modelos con tabla comparativa final.
 
+Esta actividad está sujeta a las [normas comunes de entrega y uso de IA](../../docs/normas-entregas-y-uso-de-ia.md). Si se ha utilizado IA, debe declararse su uso y aportarse evidencia de la verificación realizada.
+
 ---
 
 ## Requisitos técnicos
@@ -18,12 +20,23 @@ Este proyecto tiene tres fases:
 ```python
 import sys
 import os
+from pathlib import Path
 
 os.environ["USE_TF"] = "0"
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 os.environ["LIGHTNING_DISABLE_TIPS"] = "1"
 
-sys.path.append("src")
+def find_unit_root(start=Path.cwd()):
+    """Localiza UD10 tanto desde la raíz del repo como desde una subcarpeta."""
+    for candidate in (start, *start.parents):
+        direct = candidate if candidate.name == "10-series-temporales" else candidate / "10-series-temporales"
+        if (direct / "05-recursos").is_dir():
+            return direct
+    raise FileNotFoundError("No se encuentra 10-series-temporales/05-recursos")
+
+
+UNIT_ROOT = find_unit_root()
+DATA_DIR = UNIT_ROOT / "05-recursos"
 
 import numpy as np
 import pandas as pd
@@ -66,17 +79,17 @@ class TimeSeriesDataset(Dataset):
 
 Trabajas como Data Scientist para una cadena de tiendas físicas. El Director Comercial quiere predecir las ventas del día siguiente para optimizar el stock y los turnos de personal. Tienes acceso a dos fuentes de datos:
 
-- **Ventas diarias** (`datos/ventas_diarias.csv`): El software de caja exporta un resumen cada noche a las 23:59. Los domingos la tienda cierra y no hay registro.
-- **Tráfico peatonal horario** (`datos/trafico_peatonal_horario.csv`): Un sensor láser en la puerta cuenta el número de personas que pasan cada hora, 24/7, incluso los domingos.
+- **Ventas diarias** (`05-recursos/ventas_diarias.csv`): El software de caja exporta un resumen cada noche a las 23:59. Los domingos la tienda cierra y no hay registro.
+- **Tráfico peatonal horario** (`05-recursos/trafico_peatonal_horario.csv`): Un sensor láser en la puerta cuenta el número de personas que pasan cada hora, 24/7, incluso los domingos.
 
 ### 1.1 Cargando las dos realidades
 
 ```python
-df_ventas = pd.read_csv("datos/ventas_diarias.csv")
+df_ventas = pd.read_csv(DATA_DIR / "ventas_diarias.csv")
 df_ventas["fecha"] = pd.to_datetime(df_ventas["fecha"])
 df_ventas = df_ventas.set_index("fecha")
 
-df_trafico = pd.read_csv("datos/trafico_peatonal_horario.csv")
+df_trafico = pd.read_csv(DATA_DIR / "trafico_peatonal_horario.csv")
 df_trafico["timestamp"] = pd.to_datetime(df_trafico["timestamp"])
 df_trafico = df_trafico.set_index("timestamp")
 
@@ -149,10 +162,10 @@ Tienes dos fuentes:
 **Paso 1: Carga y diagnóstico**
 ```python
 # Carga los dos archivos, convierte a DatetimeIndex y comprueba las frecuencias
-df_consumo = pd.read_csv("datos/consumo_energia_15min.csv", parse_dates=["timestamp"])
+df_consumo = pd.read_csv(DATA_DIR / "consumo_energia_15min.csv", parse_dates=["timestamp"])
 df_consumo = df_consumo.set_index("timestamp").sort_index()
 
-df_clima = pd.read_csv("datos/clima_horario.csv", parse_dates=["timestamp"])
+df_clima = pd.read_csv(DATA_DIR / "clima_horario.csv", parse_dates=["timestamp"])
 df_clima = df_clima.set_index("timestamp").sort_index()
 
 print(df_consumo.index.inferred_freq)

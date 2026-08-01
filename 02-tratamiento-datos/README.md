@@ -6,6 +6,15 @@ Unidad centrada en el tratamiento, limpieza, transformación, análisis explorat
 
 El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen complementos razonables: Plotly para interactividad, Polars y DuckDB como alternativas modernas, y cuDF/RAPIDS como caso avanzado condicionado por GPU NVIDIA/CUDA.
 
+## Ruta canónica del alumnado
+
+| Paso | Material |
+|---|---|
+| Empieza aquí | [`01-teoria/00-guia-unidad.md`](01-teoria/00-guia-unidad.md), que ordena el núcleo de Pandas, EDA y visualización. |
+| Práctica canónica | [`03-practicas/EDA_Visual_Practicas.ipynb`](03-practicas/EDA_Visual_Practicas.ipynb). Los ejercicios seleccionados y el itinerario R son refuerzo u opción docente. |
+| Entrega y evaluación | Notebook ejecutado, decisiones de limpieza y transformación justificadas, EDA, visualizaciones y conclusiones. [`04-evaluacion/rubrica.md`](04-evaluacion/rubrica.md) y [`04-evaluacion/checklist-entrega.md`](04-evaluacion/checklist-entrega.md) son una base revisable; el enunciado y la programación del grupo concretan la evaluación definitiva. El GIFT es un complemento si se activa en Moodle. |
+| Entorno real | La celda inicial del notebook enumera las dependencias de la práctica. La ruta común de ejecución está en [`docs/guia-inicio.md`](../docs/guia-inicio.md); el entorno Pixi `default` aporta la base, pero no declara por sí solo todos los extras de visualización. |
+
 ## Jerarquía de contenidos
 
 | Nivel | Herramientas | Rol |
@@ -14,7 +23,7 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 | Complementos | Plotly, Altair, hvPlot, Panel | Interactividad y visualización declarativa |
 | Alternativas a Pandas | Polars, DuckDB | Rendimiento, lazy execution y SQL local |
 | Avanzado | cuDF/RAPIDS | DataFrames con GPU NVIDIA/CUDA |
-| Itinerario opcional | R / dplyr | Ampliación para comparar con Pandas; pendiente de reforzar si se busca suficiencia profesional básica |
+| Itinerario opcional | R / dplyr | Ampliación para comparar con Pandas; no sustituye la ruta canónica |
 | Anexos/archivo | FireDucks, NLTK antiguo, R histórico | Referencia histórica o curiosidad técnica |
 
 ## Estructura
@@ -103,4 +112,6 @@ Soluciones separadas del material de alumno:
 
 ## Evaluaciones
 
-- Pendiente: integrar rúbricas y/o cuestionarios en `04-evaluacion/`.
+- `04-evaluacion/rubrica.md` — rúbrica de la entrega práctica.
+- `04-evaluacion/checklist-entrega.md` — comprobaciones antes de entregar.
+- `04-evaluacion/cuestionario-base.gift` — complemento conceptual para Moodle.

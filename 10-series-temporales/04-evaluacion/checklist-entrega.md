@@ -19,7 +19,7 @@ Usa esta lista antes de entregar el proyecto final capstone (Torneo de Modelos).
 
 - Entregar una carpeta comprimida o repositorio según indique el profesorado.
 - El notebook debe incluirse ejecutado con salidas visibles cuando el tamaño lo permita.
-- Mantener la estructura de carpetas del taller (`datos/`, `src/`, notebook principal).
+- Mantener las rutas portátiles del taller: el notebook localiza los datasets existentes en `05-recursos/` sin copiarlos a otra carpeta.
 - Incluir solo material necesario; no subir checkpoints de modelos pesados salvo que el profesorado lo indique.
 
 ## Archivos requeridos
@@ -27,7 +27,7 @@ Usa esta lista antes de entregar el proyecto final capstone (Torneo de Modelos).
 - [ ] `10_proyecto_final.ipynb` completado (o nombre equivalente indicado por el profesorado).
 - [ ] `README.md` o apartado introductorio con instrucciones de ejecución.
 - [ ] Fichero de dependencias: `requirements.txt` o `environment.yml`.
-- [ ] Datos de muestra o instrucciones para generarlos con el script proporcionado en `src/`.
+- [ ] Referencia a los datos de `05-recursos/` o, si se usan datos externos, instrucciones para obtenerlos sin duplicar datasets innecesariamente.
 
 ## Evidencias mínimas
 

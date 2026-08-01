@@ -2,9 +2,11 @@
 
 Esta carpeta reúne los instrumentos para evaluar la unidad de interfaces, APIs, serving de modelos, orquestación, RAG y agentes. Los cuestionarios GIFT existentes se mantienen como evaluación teórica o complementaria; la entrega principal debe evidenciar una solución práctica y reproducible.
 
+La entrega está sujeta a las [normas comunes de entrega y uso de IA](../../docs/normas-entregas-y-uso-de-ia.md). Deben declararse las herramientas utilizadas y aportarse evidencias de verificación, sin incluir secretos ni conversaciones completas.
+
 ## Camino rápido
 
-1. Completa las prácticas/notebooks indicados por el profesorado.
+1. Construye un proyecto integrado a partir de `03-practicas/100_mlflow_llamaindex_rag.ipynb` y adapta a ese proyecto el patrón de API de `03-practicas/103_fastapi_serving_modelos.ipynb`.
 2. Entrega el código, notebooks y evidencias siguiendo `checklist-entrega.md`.
 3. Revisa la calificación esperada con `rubrica.md`.
 4. Realiza los cuestionarios GIFT si el profesorado los activa en Moodle.
@@ -32,18 +34,23 @@ No se deben entregar claves API, tokens, credenciales ni datos sensibles.
 
 ## Relación con prácticas y notebooks
 
-La evaluación se apoya en las prácticas de `06-llm-agentes/03-practicas/`:
+La ruta canónica combina RAG, evaluación/trazabilidad y serving con:
+
+- `100_mlflow_llamaindex_rag.ipynb`: base de recuperación sobre documentos, ejemplos de respuesta y registro de resultados.
+- `103_fastapi_serving_modelos.ipynb`: patrón independiente de contrato de entrada y pruebas con una API de clasificación Iris. No sirve el RAG del notebook `100`; debe adaptarse al flujo construido por el alumnado.
+
+`99_herramientas_ia_integradas.ipynb` sirve como introducción con ejemplos y fallbacks simulados; no sustituye por sí solo la entrega funcional. El resto de prácticas de `06-llm-agentes/03-practicas/` permiten ampliar o sustituir un bloque cuando el profesorado lo indique:
 
 - `96_gradio_model.ipynb`: interfaz rápida para probar modelos.
 - `97_langchain_pipeline.ipynb`: pipeline con LangChain.
 - `98_dspy_mcp.ipynb`: optimización programática y MCP integrado.
-- `99_herramientas_ia_integradas.ipynb`: herramientas de IA aplicadas al flujo de trabajo.
+- `99_herramientas_ia_integradas.ipynb`: introducción a herramientas y patrones integrados.
 - `100_mlflow_llamaindex_rag.ipynb`: RAG con trazabilidad/evaluación cuando proceda.
 - `101_langgraph_orquestacion.ipynb`: orquestación con grafos y estado.
 - `102_ollama_modelos_locales.ipynb`: modelos locales.
 - `103_fastapi_serving_modelos.ipynb`: serving profesional mediante API.
 
-El profesorado puede seleccionar una o varias prácticas como entrega evaluable. No todas las herramientas tienen que aparecer en una misma entrega salvo que el enunciado lo pida.
+El entregable evaluable es el proyecto integrado por el alumnado, no la mera ejecución de ambos notebooks. El profesorado puede aceptar otra arquitectura que produzca las mismas evidencias. No todas las herramientas tienen que aparecer en una misma entrega.
 
 ## Cuestionarios disponibles
 

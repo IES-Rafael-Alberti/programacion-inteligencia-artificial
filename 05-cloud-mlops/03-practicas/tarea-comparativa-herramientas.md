@@ -4,6 +4,8 @@
 
 Analizar y comparar herramientas cloud para IA con el fin de decidir cuáles encajan mejor en el proyecto del grupo.
 
+Esta actividad está sujeta a las [normas comunes de entrega y uso de IA](../../docs/normas-entregas-y-uso-de-ia.md). Si se ha utilizado IA, debe declararse su uso y aportarse evidencia de cómo se verificaron sus resultados.
+
 ## Forma de trabajo
 
 Trabajo en grupo con reparto por categorías. Cada miembro se responsabiliza de una categoría y el equipo consolida después una propuesta conjunta.
