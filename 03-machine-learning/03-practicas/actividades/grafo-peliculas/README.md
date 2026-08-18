@@ -2,18 +2,18 @@
 
 Ampliación **opcional** de UD3: representar el dataset de películas como grafo de propiedades. La teoría, el modelo y las consultas completas están en el [apéndice de dataset como grafo](../../01-teoria/apendice-dataset-grafos.md). Aquí se prepara su uso en el aula.
 
-## Contenido
+## Contenido publicado
 
 | Archivo | Uso |
 |---|---|
-| `demo-profesor.md` | Guion de la demostración del profesorado (~25 min) con tiempos y resultados esperados |
 | `mini-tarea-alumnado.md` | Ficha de la mini-tarea del alumnado (~50 min), auto-verificable |
-| `fixture/movies_graph.csv` | Copia local del fixture (8 filas, 4 películas) para importar en el contenedor |
+| `fixture/movies_graph.csv` | Copia del fixture (8 filas, 4 películas) para importar en el contenedor |
 | `cypher/00-restricciones.cypher` | Restricciones de unicidad (`Movie`, `Genre`, `Director`, `Actor`) |
 | `cypher/01-carga.cypher` | Carga idempotente con `MERGE` |
 | `cypher/02-consultas-ejemplo.cypher` | Las 4 consultas de la demostración + comprobación de idempotencia |
 | `cypher/03-caracteristicas.cypher` | Exportación de la tabla de características para ML |
-| `cypher/04-mini-tarea-solucion.cypher` | Soluciones de referencia de la mini-tarea (profesorado) |
+
+El guion de la demostración (`demo-profesor.md`) y las soluciones de referencia de la mini-tarea (`cypher/04-mini-tarea-solucion.cypher`) son **material docente local, no versionado** (reglas `*profe*` y `*-sol*` del `.gitignore`): se conservan en la máquina del profesorado y no viajan con el repositorio.
 
 ## Preparación antes de la clase (profesorado)
 

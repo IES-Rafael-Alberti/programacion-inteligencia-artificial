@@ -14,7 +14,7 @@ La ampliación se plantea como una actividad breve de aula, no como otro proyect
 
 La mini-tarea debe poder terminarse en una sesión y no requiere modificar P1, P2 ni P3.
 
-> **Material listo para el aula** (en `03-practicas/actividades/grafo-peliculas/`): guion de la [demostración del profesorado](../../03-machine-learning/03-practicas/actividades/grafo-peliculas/demo-profesor.md) con tiempos y resultados esperados, la [mini-tarea del alumnado](../../03-machine-learning/03-practicas/actividades/grafo-peliculas/mini-tarea-alumnado.md), el fixture y los bloques Cypher en [cypher/](../../03-machine-learning/03-practicas/actividades/grafo-peliculas/cypher/).
+> **Material listo para el aula** (en `03-practicas/actividades/grafo-peliculas/`): ficha de la [mini-tarea del alumnado](../../03-machine-learning/03-practicas/actividades/grafo-peliculas/mini-tarea-alumnado.md), copia local del fixture (`fixture/movies_graph.csv`) y los bloques Cypher listos para pegar en `cypher/`. El guion de la demostración y las soluciones de la mini-tarea son material docente local, no versionado.
 
 ## Guion operativo para el aula
 
