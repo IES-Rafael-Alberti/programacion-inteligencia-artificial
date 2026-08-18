@@ -140,6 +140,8 @@ docker rm --force neo4j-movies
 
 > En un aula sin Docker se puede usar una instalación local o una instancia temporal autorizada por el profesor. No introduzcas datos personales ni credenciales reales.
 
+> **Atención (profesorado):** al montar una carpeta del host como `/var/lib/neo4j/import`, la imagen cambia su propietario al usuario de Neo4j (UID 7474) y puede dejarla sin permiso de escritura para tu usuario. Tras la clase, restaura propiedad y permisos (por ejemplo `sudo chown -R $(id -u):$(id -g) ruta/al/fixture`) o monta una copia desechable en vez de la carpeta del repositorio.
+
 ## 2. Modelo e importación idempotente
 
 El modelo es un grafo de propiedades:

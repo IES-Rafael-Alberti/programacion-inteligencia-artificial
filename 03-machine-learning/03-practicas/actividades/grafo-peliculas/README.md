@@ -25,6 +25,8 @@ El guion de la demostración (`demo-profesor.md`) y las soluciones de referencia
 4. Probar `cypher/02-consultas-ejemplo.cypher` y `cypher/03-caracteristicas.cypher` contra los resultados esperados de `demo-profesor.md`.
 5. Llevar copia local del fixture y de los bloques Cypher por si se trabaja sin Internet.
 
+> **Gotcha conocido:** el contenedor de Neo4j cambia el propietario de la carpeta que montas en `/var/lib/neo4j/import` al usuario `7474`. Si montas `fixture/` directamente, al terminar la clase restaúrale propiedad y permisos (`sudo chown -R $(id -u):$(id -g) .../fixture/`) o monta una copia desechable.
+
 ## No modifica el curso
 
 - No toca el entorno común: Neo4j va en Docker aparte y el driver Python vive en la feature/entorno `ud3-graph` de `pixi.toml`.
