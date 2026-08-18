@@ -46,4 +46,12 @@ Antes de cerrar una sesión de trabajo, revisar:
 3. `ESTADO_ACTUAL_Y_PENDIENTES.md`
 4. Siguiente paso recomendado
 
+Además, **al final de cada sesión** hay que:
+
+- consolidar en commits los cambios relevantes;
+- dejar `ESTADO_ACTUAL_Y_PENDIENTES.md` al día y sin pendientes obsoletos;
+- subir al remoto (`git push origin main`) para no dejar trabajo local suelto.
+
+Solo así los pendientes que se lean otro día son reales: la hoja de ruta se vuelve a consultar siempre con el repo sincronizado.
+
 La memoria persistente ayuda, pero no sustituye a la hoja de ruta del repo.
