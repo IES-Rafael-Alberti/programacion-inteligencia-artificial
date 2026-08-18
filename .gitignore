@@ -153,6 +153,9 @@ events.out.tfevents*
 !04-deep-learning/03-practicas/modelado-proyectos/boston-housing/data/
 !04-deep-learning/03-practicas/modelado-proyectos/boston-housing/data/housing.csv
 
+# Small teaching fixture kept for the optional Neo4j/Cypher graph appendix
+!03-machine-learning/03-practicas/actividades/grafo-peliculas/fixture/movies_graph.csv
+
 # UD4 curated historical archive kept after modelado-avanzado cleanup
 !04-deep-learning/90-archivo/
 !04-deep-learning/90-archivo/modelado-avanzado-docs/

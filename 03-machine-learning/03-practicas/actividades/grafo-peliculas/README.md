@@ -1,0 +1,32 @@
+# Kit de aula — Dataset de películas como grafo (Neo4j/Cypher)
+
+Ampliación **opcional** de UD3: representar el dataset de películas como grafo de propiedades. La teoría, el modelo y las consultas completas están en el [apéndice de dataset como grafo](../../01-teoria/apendice-dataset-grafos.md). Aquí se prepara su uso en el aula.
+
+## Contenido
+
+| Archivo | Uso |
+|---|---|
+| `demo-profesor.md` | Guion de la demostración del profesorado (~25 min) con tiempos y resultados esperados |
+| `mini-tarea-alumnado.md` | Ficha de la mini-tarea del alumnado (~50 min), auto-verificable |
+| `fixture/movies_graph.csv` | Copia local del fixture (8 filas, 4 películas) para importar en el contenedor |
+| `cypher/00-restricciones.cypher` | Restricciones de unicidad (`Movie`, `Genre`, `Director`, `Actor`) |
+| `cypher/01-carga.cypher` | Carga idempotente con `MERGE` |
+| `cypher/02-consultas-ejemplo.cypher` | Las 4 consultas de la demostración + comprobación de idempotencia |
+| `cypher/03-caracteristicas.cypher` | Exportación de la tabla de características para ML |
+| `cypher/04-mini-tarea-solucion.cypher` | Soluciones de referencia de la mini-tarea (profesorado) |
+
+## Preparación antes de la clase (profesorado)
+
+1. Arrancar el contenedor y montar el fixture:
+   - carpeta local `fixture/` → `/var/lib/neo4j/import/` del contenedor;
+   - el CSV debe quedar como `import/movies_graph.csv` (ver apéndice, sección 1).
+2. Ejecutar `cypher/00-restricciones.cypher` y `cypher/01-carga.cypher` una vez.
+3. Comprobar que `count(m)` devuelve `4` y que la recarga no duplica películas.
+4. Probar `cypher/02-consultas-ejemplo.cypher` y `cypher/03-caracteristicas.cypher` contra los resultados esperados de `demo-profesor.md`.
+5. Llevar copia local del fixture y de los bloques Cypher por si se trabaja sin Internet.
+
+## No modifica el curso
+
+- No toca `pixi.toml` ni los entornos comunes (Neo4j va en Docker aparte).
+- No altera `movies.csv` del capstone, ni P1/P2/P3.
+- La variante Python con el driver `neo4j` sigue siendo opcional y posterior (ver apéndice, sección 5).
