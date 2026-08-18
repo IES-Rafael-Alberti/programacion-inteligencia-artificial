@@ -27,6 +27,6 @@ El guion de la demostración (`demo-profesor.md`) y las soluciones de referencia
 
 ## No modifica el curso
 
-- No toca `pixi.toml` ni los entornos comunes (Neo4j va en Docker aparte).
+- No toca el entorno común: Neo4j va en Docker aparte y el driver Python vive en la feature/entorno `ud3-graph` de `pixi.toml`.
 - No altera `movies.csv` del capstone, ni P1/P2/P3.
-- La variante Python con el driver `neo4j` sigue siendo opcional y posterior (ver apéndice, sección 5).
+- La **ruta programática** (objetivo del módulo) está en el ejemplo `03-machine-learning/02-ejemplos/grafo-peliculas-python/`: consulta desde Python, conversión a pandas y uso con un modelo de scikit-learn.

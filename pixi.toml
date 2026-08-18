@@ -40,6 +40,14 @@ python-dotenv = ">=1.0,<2"
 [feature.ud3-flaml.dependencies]
 flaml = ">=2.3,<3"
 
+# Driver oficial de Neo4j para el apéndice de grafos (UD3). Aislado del entorno
+# común: solo lo instala quien va a consultar el grafo desde Python, no todo el
+# grupo. El servidor Neo4j sigue corriendo aparte, en Docker.
+# En conda-forge el paquete se llama neo4j-python-driver (import `neo4j`); en
+# PyPI su equivalente es `neo4j`.
+[feature.ud3-graph.dependencies]
+neo4j-python-driver = ">=6,<7"
+
 [feature.ud3-datasets.activation.env]
 PYTHONPATH = "$PIXI_PROJECT_ROOT/03-machine-learning/03-practicas/laboratorios/Lab1/mi_dataset_peliculas/src"
 
@@ -62,5 +70,6 @@ ud3 = ["base", "ud3"]
 ud3-pycaret = ["ud3-pycaret"]
 ud3-flaml = ["base", "ud3", "ud3-flaml"]
 ud3-datasets = ["base", "ud3", "ud3-datasets"]
+ud3-graph = ["base", "ud3", "ud3-graph"]
 ud4 = ["base", "ud4"]
 ud4-gpu = ["base", "ud4", "gpu"]

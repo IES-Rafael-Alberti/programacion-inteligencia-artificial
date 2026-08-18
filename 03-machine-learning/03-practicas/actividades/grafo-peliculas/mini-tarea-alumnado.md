@@ -75,3 +75,7 @@ Responde en 3–5 líneas: de las consultas que has escrito, ¿cuál es más nat
 ## Nota final
 
 El CSV/Parquet del capstone sigue siendo la fuente canónica para ML. Este grafo es una representación derivada para explorar relaciones; las consultas que has hecho podrían convertirse en variables tabulares (como en la tarea 4) para continuar el pipeline.
+
+## Ampliación programática (opcional)
+
+El módulo es Programación de IA: el objetivo último es usar el grafo desde un programa. Si te queda tiempo, prueba el ejemplo completo `03-machine-learning/02-ejemplos/grafo-peliculas-python/grafo_a_ml.py`, que consulta Neo4j desde Python, convierte el resultado a pandas y alimenta un modelo de scikit-learn con las características del grafo.

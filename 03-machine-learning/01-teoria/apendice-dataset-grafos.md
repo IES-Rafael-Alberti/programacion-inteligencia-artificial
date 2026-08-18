@@ -256,36 +256,31 @@ RETURN m.id AS movie_id,
 ORDER BY movie_id;
 ```
 
-En Neo4j Browser cambia el resultado a vista **Table** si fuese necesario y usa el icono de descarga de la esquina superior derecha del marco de resultados → **CSV**. Ese archivo puede cargarse con pandas y unirse a otras variables, siempre documentando su procedencia. En una automatización posterior, la misma consulta puede ejecutarse con `cypher-shell` o con el driver oficial; no añadimos ese driver al entorno común del curso.
+En Neo4j Browser cambia el resultado a vista **Table** si fuese necesario y usa el icono de descarga de la esquina superior derecha del marco de resultados → **CSV**. Ese archivo puede cargarse con pandas y unirse a otras variables, siempre documentando su procedencia.
 
-## 5. Consultar Neo4j desde Python (variante posterior)
+## 5. Consultar Neo4j desde Python (ruta programática)
 
-La imagen Docker proporciona el **servidor** Neo4j. Para consultar ese servidor desde Python solo hace falta el driver oficial, cuyo paquete actual se llama `neo4j` (el nombre antiguo `neo4j-driver` está obsoleto).
+El módulo es **Programación de IA**: el uso en el entorno web de Neo4j (Browser) sirve para entender la representación de forma visual, pero el fin último es consultar el grafo **desde un programa** y usar las características resultantes con modelos de ML. Por eso esta es la ruta recomendada al cerrar la actividad.
 
-Si se quisiera añadirlo al entorno Pixi común, la dependencia sería:
+La imagen Docker proporciona el **servidor** Neo4j. Para consultarlo desde Python solo hace falta el driver oficial, cuyo paquete en PyPI se llama `neo4j` (el nombre antiguo `neo4j-driver` está obsoleto) y en conda-forge `neo4j-python-driver`.
 
-```toml
-[feature.base.dependencies]
-neo4j = ">=6,<7"
-```
-
-La opción recomendada para el curso es mantenerlo aislado en una feature/entorno `ud3-graph`, para no instalarlo a todo el alumnado que no haga la ampliación:
+La dependencia queda aislada en una feature/entorno `ud3-graph`, para no instalarla a todo el alumnado que no haga la ampliación:
 
 ```toml
 [feature.ud3-graph.dependencies]
-neo4j = ">=6,<7"
+neo4j-python-driver = ">=6,<7"
 
 [environments]
 ud3-graph = ["base", "ud3", "ud3-graph"]
 ```
 
-Tras modificar el manifiesto, se instalaría con:
+Se instala con:
 
 ```bash
 pixi install --environment ud3-graph
 ```
 
-Ejemplo mínimo de consulta. Las credenciales deben llegar por variables de entorno, nunca escribirse en el código:
+El ejemplo completo del bucle grafo → tabla → modelo está en `03-machine-learning/02-ejemplos/grafo-peliculas-python/grafo_a_ml.py`. Ejemplo mínimo de consulta. Las credenciales deben llegar por variables de entorno, nunca escribirse en el código:
 
 ```python
 import os
@@ -311,7 +306,14 @@ df = pd.DataFrame([record.data() for record in records])
 print(df.head())
 ```
 
-Esta variante no sustituye el uso directo de Cypher en Browser: introduce una segunda capa de programación y solo merece la pena cuando la consulta forma parte de un pipeline Python reproducible.
+Ejecutar con el servidor en marcha:
+
+```bash
+NEO4J_PASSWORD=course-only-password \
+pixi run --environment ud3-graph python 03-machine-learning/02-ejemplos/grafo-peliculas-python/grafo_a_ml.py
+```
+
+Esta ruta no elimina el uso introductorio de Cypher en Browser: es la segunda capa (programática) que convierte el grafo en un dato más para el pipeline de ML.
 
 ## Grafo frente a CSV/Parquet
 
