@@ -19,6 +19,7 @@ Documentación de apoyo para la unidad de Machine Learning con scikit-learn y Cu
 | 09 | Despliegue con Streamlit / FastAPI | `09-despliegue-streamlit-fastapi.md` |
 | 10 | Guía de proyecto con Python y Pixi | `10-guia-proyecto-python-pixi.md` |
 | 11 | Feature Store con Hopsworks | `11-feature-store-hopsworks.md` |
+| 12 | **Ampliación opcional:** dataset de películas como grafo con Neo4j/Cypher | `apendice-dataset-grafos.md` |
 
 ## Notas
 

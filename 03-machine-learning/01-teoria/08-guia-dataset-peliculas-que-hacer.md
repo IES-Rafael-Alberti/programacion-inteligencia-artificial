@@ -156,7 +156,7 @@
 ### Herramientas
 
 * NetworkX
-* Neo4j (ampliación)
+* [Neo4j y Cypher (ampliación opcional)](apendice-dataset-grafos.md)
 
 ---
 
