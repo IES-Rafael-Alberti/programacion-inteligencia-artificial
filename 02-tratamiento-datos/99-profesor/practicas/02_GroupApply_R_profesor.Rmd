@@ -1,0 +1,49 @@
+---
+title: "02 — Transformación, agrupación y resumen en R — Solución profesor"
+output: html_document
+---
+
+```{r setup, message=FALSE, warning=FALSE}
+library(tidyverse)
+titanic <- read_csv("../../05-recursos/datasets/titanic.csv")
+```
+
+## Solución 1 — Nuevas variables
+
+```{r mutate}
+titanic_enriquecido <- titanic %>%
+  mutate(
+    menor_edad = Age < 18,
+    tarifa_alta = Fare > median(Fare, na.rm = TRUE),
+    viajaba_solo = SibSp == 0 & Parch == 0
+  )
+
+head(titanic_enriquecido %>% select(Age, Fare, menor_edad, tarifa_alta, viajaba_solo))
+```
+
+## Solución 2 — Resumen agrupado
+
+```{r resumen}
+resumen_clase_sexo <- titanic_enriquecido %>%
+  group_by(Pclass, Sex) %>%
+  summarise(
+    pasajeros = n(),
+    supervivencia_media = mean(Survived, na.rm = TRUE),
+    edad_media = mean(Age, na.rm = TRUE),
+    tarifa_media = mean(Fare, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+resumen_clase_sexo
+```
+
+## Solución 3 — Interpretación
+
+```{r ordenado}
+resumen_clase_sexo %>%
+  arrange(desc(supervivencia_media))
+```
+
+## Nota de corrección
+
+La clave no es memorizar `summarise`, sino justificar qué resume cada métrica y no confundir correlación descriptiva con causalidad.

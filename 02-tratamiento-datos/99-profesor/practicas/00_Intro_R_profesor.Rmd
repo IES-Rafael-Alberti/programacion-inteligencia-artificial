@@ -1,0 +1,34 @@
+---
+title: "00 — Introducción a R y carga de datos — Solución profesor"
+output: html_document
+---
+
+```{r setup, message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+## Solución 1 — Carga e inspección
+
+```{r cargar-datos}
+titanic <- read_csv("../../05-recursos/datasets/titanic.csv")
+head(titanic)
+glimpse(titanic)
+dim(titanic)
+names(titanic)
+```
+
+## Solución 2 — Resumen y valores perdidos
+
+```{r resumen}
+summary(titanic)
+colSums(is.na(titanic))
+```
+
+## Notas de corrección
+
+El alumnado debe detectar al menos:
+
+- variable objetivo posible: `Survived`;
+- variables categóricas relevantes: `Sex`, `Embarked`, `Pclass`;
+- variables numéricas relevantes: `Age`, `Fare`, `SibSp`, `Parch`;
+- presencia de valores perdidos, especialmente en `Age`, `Cabin` y posiblemente `Embarked` según la versión del dataset.

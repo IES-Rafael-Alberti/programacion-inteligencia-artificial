@@ -1,0 +1,272 @@
+[2023-04-27T10:40:21.020+0000] {processor.py:153} INFO - Started process (PID=33) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:40:21.049+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:40:21.050+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:40:21.050+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:40:22.170+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:40:22.167+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:40:22.171+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:40:22.216+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 1.200 seconds
+[2023-04-27T10:40:52.352+0000] {processor.py:153} INFO - Started process (PID=88) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:40:52.353+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:40:52.353+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:40:52.353+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:40:52.569+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:40:52.567+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:40:52.569+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:40:52.588+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.238 seconds
+[2023-04-27T10:41:23.157+0000] {processor.py:153} INFO - Started process (PID=138) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:41:23.159+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:41:23.160+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:41:23.160+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:41:23.410+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:41:23.409+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:41:23.411+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:41:23.531+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.377 seconds
+[2023-04-27T10:41:53.656+0000] {processor.py:153} INFO - Started process (PID=193) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:41:53.657+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:41:53.658+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:41:53.657+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:41:53.953+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:41:53.952+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:41:53.954+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:41:53.974+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.320 seconds
+[2023-04-27T10:42:24.821+0000] {processor.py:153} INFO - Started process (PID=247) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:42:24.829+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:42:24.830+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:42:24.830+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:42:25.047+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:42:25.046+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:42:25.048+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:42:25.067+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.249 seconds
+[2023-04-27T10:42:55.164+0000] {processor.py:153} INFO - Started process (PID=301) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:42:55.165+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:42:55.166+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:42:55.165+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:42:55.363+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:42:55.361+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:42:55.363+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:42:55.380+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.218 seconds
+[2023-04-27T10:43:25.427+0000] {processor.py:153} INFO - Started process (PID=355) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:43:25.428+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:43:25.428+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:43:25.428+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:43:25.717+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:43:25.716+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:43:25.718+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:43:25.739+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.314 seconds
+[2023-04-27T10:43:56.470+0000] {processor.py:153} INFO - Started process (PID=407) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:43:56.472+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:43:56.472+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:43:56.472+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:43:56.762+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:43:56.760+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:43:56.762+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:43:56.782+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.315 seconds
+[2023-04-27T10:44:27.672+0000] {processor.py:153} INFO - Started process (PID=460) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:44:27.672+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:44:27.673+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:44:27.673+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:44:27.900+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:44:27.899+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:44:27.901+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:44:27.916+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.247 seconds
+[2023-04-27T10:44:58.413+0000] {processor.py:153} INFO - Started process (PID=513) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:44:58.414+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:44:58.415+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:44:58.415+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:44:58.656+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:44:58.655+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:44:58.657+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:44:58.781+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.371 seconds
+[2023-04-27T10:45:28.855+0000] {processor.py:153} INFO - Started process (PID=568) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:45:28.856+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:45:28.856+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:45:28.856+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:45:29.167+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:45:29.165+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:45:29.167+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:45:29.185+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.332 seconds
+[2023-04-27T10:46:00.160+0000] {processor.py:153} INFO - Started process (PID=621) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:46:00.162+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:46:00.163+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:46:00.163+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:46:00.475+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:46:00.473+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:46:00.475+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:46:00.491+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.334 seconds
+[2023-04-27T10:46:30.866+0000] {processor.py:153} INFO - Started process (PID=674) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:46:30.870+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:46:30.870+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:46:30.870+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:46:31.540+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:46:31.537+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:46:31.541+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:46:31.577+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.714 seconds
+[2023-04-27T10:47:01.614+0000] {processor.py:153} INFO - Started process (PID=728) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:47:01.615+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:47:01.616+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:47:01.616+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:47:02.849+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:47:02.845+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:47:02.849+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:47:02.879+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 1.269 seconds
+[2023-04-27T10:47:33.017+0000] {processor.py:153} INFO - Started process (PID=785) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:47:33.017+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:47:33.018+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:47:33.018+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:47:33.822+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:47:33.820+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:47:33.823+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:47:33.855+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.842 seconds
+[2023-04-27T10:48:03.907+0000] {processor.py:153} INFO - Started process (PID=840) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:48:03.908+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:48:03.909+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:48:03.909+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:48:04.357+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:48:04.356+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:48:04.358+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:48:04.378+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.476 seconds
+[2023-04-27T10:48:34.420+0000] {processor.py:153} INFO - Started process (PID=893) to work on /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:48:34.421+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/iris_ml_workflow.py for tasks to queue
+[2023-04-27T10:48:34.422+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:48:34.422+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:48:34.682+0000] {logging_mixin.py:137} INFO - [2023-04-27T10:48:34.679+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/iris_ml_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/iris_ml_workflow.py", line 5, in <module>
+    from data_extraction import extract_data
+  File "/opt/airflow/dags/data_extraction.py", line 2, in <module>
+    from sklearn.datasets import load_iris
+ModuleNotFoundError: No module named 'sklearn'
+[2023-04-27T10:48:34.682+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/iris_ml_workflow.py
+[2023-04-27T10:48:34.830+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/iris_ml_workflow.py took 0.412 seconds

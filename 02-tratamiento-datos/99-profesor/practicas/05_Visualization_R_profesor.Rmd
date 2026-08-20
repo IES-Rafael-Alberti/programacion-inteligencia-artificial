@@ -1,0 +1,52 @@
+---
+title: "05 — Visualización y mini-EDA con ggplot2 — Solución profesor"
+output: html_document
+---
+
+```{r setup, message=FALSE, warning=FALSE}
+library(tidyverse)
+titanic <- read_csv("../../05-recursos/datasets/titanic.csv")
+```
+
+## Solución 1 — Histograma de edad
+
+```{r edad}
+ggplot(titanic, aes(x = Age)) +
+  geom_histogram(binwidth = 5, fill = "steelblue", color = "white", na.rm = TRUE) +
+  labs(title = "Distribución de edad", x = "Edad", y = "Número de pasajeros")
+```
+
+## Solución 2 — Supervivencia por sexo
+
+```{r supervivencia-sexo}
+ggplot(titanic, aes(x = Sex, fill = factor(Survived))) +
+  geom_bar(position = "fill") +
+  labs(title = "Proporción de supervivencia por sexo", x = "Sexo", y = "Proporción", fill = "Sobrevive")
+```
+
+## Solución 3 — Tarifa por clase
+
+```{r tarifa-clase}
+ggplot(titanic, aes(x = factor(Pclass), y = Fare)) +
+  geom_boxplot(fill = "tan", na.rm = TRUE) +
+  labs(title = "Distribución de tarifa por clase", x = "Clase", y = "Tarifa")
+```
+
+## Solución 4 — Mini-EDA
+
+```{r mini-eda}
+resumen <- titanic %>%
+  group_by(Pclass, Sex) %>%
+  summarise(
+    pasajeros = n(),
+    supervivencia_media = mean(Survived, na.rm = TRUE),
+    edad_media = mean(Age, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+resumen
+```
+
+## Ejemplo de conclusión esperada
+
+Una respuesta adecuada debería indicar patrones observables, por ejemplo diferencias de supervivencia por sexo y clase, pero también advertir que Titanic es un dataset histórico, pequeño y con sesgos. No debe presentar el análisis como prueba causal simple.

@@ -1,0 +1,53 @@
+---
+title: "04 — Fechas y orden temporal en R — Solución profesor"
+output: html_document
+---
+
+```{r setup, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(lubridate)
+```
+
+## Datos didácticos
+
+```{r datos}
+embarques <- tibble(
+  fecha = c("1912-04-08", "1912-04-09", "1912-04-10", "1912-04-10", "1912-04-11"),
+  puerto = c("Southampton", "Cherbourg", "Southampton", "Queenstown", "Queenstown"),
+  pasajeros = c(120, 80, 300, 95, 60)
+) %>%
+  mutate(fecha = ymd(fecha))
+```
+
+## Solución 1 — Componentes temporales
+
+```{r componentes}
+embarques %>%
+  mutate(
+    dia = day(fecha),
+    mes = month(fecha),
+    semana = isoweek(fecha)
+  )
+```
+
+## Solución 2 — Agregación diaria
+
+```{r agregacion}
+embarques_dia <- embarques %>%
+  group_by(fecha) %>%
+  summarise(total_pasajeros = sum(pasajeros), .groups = "drop")
+
+embarques_dia
+```
+
+## Solución 3 — Acumulado temporal
+
+```{r acumulado}
+embarques_dia %>%
+  arrange(fecha) %>%
+  mutate(acumulado = cumsum(total_pasajeros))
+```
+
+## Nota de corrección
+
+El foco es distinguir fecha real de texto. No es una unidad de series temporales; sólo prepara el concepto.

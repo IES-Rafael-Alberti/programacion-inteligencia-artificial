@@ -1,0 +1,127 @@
+#+TITLE:
+#+AUTHOR:
+#+EMAIL:
+#+DATE:
+#+OPTIONS: texht:t toc:nil num:nil -:nil ^:{} ":nil ':nil
+#+OPTIONS: tex:t
+#+LATEX_CLASS: article
+#+LATEX_HEADER:
+#+LANGUAGE: es
+
+#+BEGIN_COMMENT
+#+LATEX_HEADER: \usepackage[AUTO]{babel}
+#+END_COMMENT
+
+#+LATEX_HEADER_EXTRA: \usepackage{mdframed}
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{minted}{\begin{mdframed}}
+#+LATEX_HEADER_EXTRA: \AfterEndEnvironment{minted}{\end{mdframed}}
+
+#+LATEX: \setlength\parindent{10pt}
+#+LATEX_HEADER: \usepackage{parskip}
+
+#+latex_header: \usepackage[utf8]{inputenc} %% For unicode chars
+#+LATEX_HEADER: \usepackage{placeins}
+
+#+LATEX_HEADER: \usepackage[margin=2.50cm]{geometry}
+
+#+LaTeX_HEADER: \usepackage[T1]{fontenc}
+#+LaTeX_HEADER: \usepackage{mathpazo}
+#+LaTeX_HEADER: \linespread{1.05}
+#+LaTeX_HEADER: \usepackage[scaled]{helvet}
+#+LaTeX_HEADER: \usepackage{courier}
+
+#+LaTeX_HEADER: \hypersetup{colorlinks=true,linkcolor=blue}
+#+LATEX_HEADER: \RequirePackage{fancyvrb}
+#+LATEX_HEADER: \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\small,formatcom = {\color[rgb]{0.5,0,0}}}
+
+* Blockchain
+Blockchain es una tecnología que ha recibido mucha atención en los últimos años debido a su capacidad para asegurar transacciones y datos en línea de manera segura y descentralizada. En este informe, exploraremos los conceptos básicos de Blockchain y cómo se relaciona con la Inteligencia Artificial.
+
+**  Introducción a Blockchain:
+https://www.youtube.com/watch?v=SSo_EIwHSd4
+
+    Para empezar, es importante entender que Blockchain es una base de datos descentralizada y distribuida que registra transacciones de manera segura y transparente. Las transacciones se agrupan en bloques y se validan mediante algoritmos de consenso. Una vez validados, los bloques se añaden a la cadena de bloques, lo que hace que sea muy difícil modificar los datos previos.
+
+    Prueba de trabajo, dificultad de minado y seguridad en Blockchain:
+    Uno de los aspectos más importantes de Blockchain es la seguridad. Para garantizar la seguridad, se utilizan técnicas como la Prueba de Trabajo y la Dificultad de Minado. La Prueba de Trabajo implica resolver un rompecabezas matemático para validar un bloque y agregarlo a la cadena. La Dificultad de Minado se utiliza para ajustar la velocidad a la que se agregan bloques a la cadena y mantener una tasa constante.
+
+    Ethereum: Conceptos básicos:
+    Ethereum es una plataforma de Blockchain que permite la creación de contratos inteligentes. Los contratos inteligentes son programas que se ejecutan automáticamente cuando se cumplen ciertas condiciones. Ethereum utiliza una criptomoneda llamada Ether para incentivar a los usuarios a validar transacciones y agregar bloques a la cadena.
+
+    El entorno de desarrollo Remix:
+    Para desarrollar contratos inteligentes en Ethereum, es necesario utilizar un entorno de desarrollo adecuado. Remix es uno de los entornos de desarrollo más populares para Ethereum y proporciona una interfaz fácil de usar para desarrollar y probar contratos inteligentes.
+
+    ¡Hola Contrato! en Solidity:
+    Solidity es el lenguaje de programación utilizado para desarrollar contratos inteligentes en Ethereum. Para empezar a programar en Solidity, es común empezar con el contrato inteligente "¡Hola Contrato!", que simplemente devuelve un saludo.
+
+    Despliegue y pruebas locales:
+    Antes de desplegar un contrato inteligente en la red Ethereum, es importante probarlo en un entorno local para asegurarse de que funciona correctamente. Remix permite probar contratos inteligentes en un entorno local.
+
+    Metamask: La cartera para Ethereum:
+    Metamask es una cartera de Ethereum que permite a los usuarios interactuar con la red Ethereum y enviar transacciones. Metamask se utiliza para conectarse a una red de prueba y desplegar y probar contratos inteligentes.
+
+    Despliegue real en la red Ropsten:
+    Una vez que se ha probado un contrato inteligente en un entorno local, es posible desplegarlo en la red Ethereum. Ropsten es una red de prueba de Ethereum que permite desplegar y probar contratos inteligentes en un entorno seguro.
+
+    Aplicaciones a la Inteligencia Artificial:
+    La combinación de Blockchain y la Inteligencia Artificial tiene varias aplicaciones interesantes. En particular, es posible utilizar Blockchain para asegurar el despliegue y acceso de un modelo de Machine Learning. Esto se logra mediante el registro de los modelos de Machine Learning en la cadena de bloques
+
+** Blockchain
+
+Blockchain es una tecnología que permite crear y gestionar bases de datos distribuidas, que almacenan información de forma segura, transparente y descentralizada. En este artículo, te explicaremos paso a paso cómo funciona Blockchain y cuáles son sus principales características y aplicaciones.
+
+Paso 1: Entender el concepto de bloque
+Un bloque es la unidad básica de información en Blockchain. Cada bloque contiene un conjunto de datos, como por ejemplo, las transacciones realizadas entre los usuarios de una red. Además, cada bloque tiene un identificador único llamado hash, que se genera mediante un algoritmo criptográfico y que depende del contenido del bloque y del hash del bloque anterior. De esta forma, se crea una cadena de bloques (Blockchain) que registra el historial completo de la base de datos.
+
+Paso 2: Conocer el papel de los nodos
+Los nodos son los participantes de la red Blockchain, que pueden ser personas u organizaciones. Cada nodo tiene una copia actualizada de la base de datos y puede validar y transmitir los nuevos bloques que se generan. Los nodos se comunican entre sí mediante un protocolo de consenso, que establece las reglas para añadir o modificar los bloques. Así, se garantiza que la información sea coherente y verificable en toda la red.
+
+Paso 3: Descubrir las ventajas de Blockchain
+Blockchain ofrece una serie de beneficios frente a las bases de datos tradicionales, como por ejemplo:
+
+- Seguridad: Los datos están cifrados y protegidos contra ataques o manipulaciones, ya que se requiere el acuerdo de la mayoría de los nodos para modificarlos.
+- Transparencia: Los datos son públicos y accesibles para todos los usuarios, que pueden comprobar su autenticidad y origen.
+- Descentralización: Los datos no dependen de una autoridad central o intermediario, sino que son gestionados por la propia red de forma democrática y colaborativa.
+- Eficiencia: Los datos se transmiten y procesan de forma rápida y directa, reduciendo los costes y los tiempos de operación.
+
+Paso 4: Explorar las aplicaciones de Blockchain
+Blockchain tiene múltiples usos en diferentes sectores y ámbitos, como por ejemplo:
+
+- Financiero: Blockchain permite realizar pagos y transferencias de forma segura, rápida y barata, sin necesidad de intermediarios como bancos o plataformas digitales. Además, facilita la creación y el intercambio de criptomonedas, como el Bitcoin o el Ethereum, que son monedas virtuales basadas en Blockchain.
+- Legal: Blockchain permite registrar y certificar documentos e identidades digitales, como contratos, títulos de propiedad o diplomas, sin necesidad de notarios o registros públicos. Además, posibilita la ejecución automática de acuerdos mediante los contratos inteligentes, que son programas informáticos que se activan cuando se cumplen unas condiciones preestablecidas.
+- Social: Blockchain permite crear y gestionar redes sociales descentralizadas, donde los usuarios tienen el control sobre sus datos y su privacidad. Además, favorece la participación ciudadana y la transparencia en procesos como las elecciones o las donaciones.
+
+
+** Blockchain
+Introducción a Blockchain
+
+Blockchain es una tecnología revolucionaria que ha transformado la forma en que se gestionan y validan las transacciones en línea. Esta tecnología se ha convertido en una herramienta esencial para la creación de aplicaciones y sistemas seguros, transparentes y descentralizados.
+
+En esta página de introducción, vamos a repasar los conceptos básicos de Blockchain y explicar cómo funciona paso a paso.
+
+Paso 1: ¿Qué es Blockchain?
+Blockchain es una base de datos descentralizada y distribuida que registra transacciones de manera segura y transparente. A diferencia de una base de datos centralizada, en la que los datos están almacenados en un solo lugar, en una base de datos descentralizada, los datos se distribuyen en múltiples nodos o computadoras en toda la red.
+
+Paso 2: ¿Cómo funciona Blockchain?
+Blockchain funciona mediante la creación de bloques de transacciones que se validan mediante algoritmos de consenso. Una vez validados, los bloques se agregan a una cadena de bloques, que actúa como un registro inmutable de todas las transacciones realizadas en la red.
+
+Paso 3: ¿Cómo se asegura la seguridad en Blockchain?
+Para asegurar la seguridad, se utilizan técnicas como la Prueba de Trabajo y la Dificultad de Minado. La Prueba de Trabajo implica resolver un rompecabezas matemático para validar un bloque y agregarlo a la cadena. La Dificultad de Minado se utiliza para ajustar la velocidad a la que se agregan bloques a la cadena y mantener una tasa constante.
+
+Paso 4: ¿Cómo se utilizan los contratos inteligentes en Blockchain?
+Los contratos inteligentes son programas que se ejecutan automáticamente cuando se cumplen ciertas condiciones. Estos contratos se crean en lenguajes de programación específicos, como Solidity, y se ejecutan en una máquina virtual Ethereum. Los contratos inteligentes permiten la creación de aplicaciones descentralizadas y sistemas autónomos.
+
+Paso 5: ¿Qué es una criptomoneda y cómo se utiliza en Blockchain?
+Una criptomoneda es una moneda digital que utiliza criptografía para asegurar y verificar transacciones y controlar la creación de nuevas unidades. En Blockchain, las criptomonedas se utilizan para incentivar a los usuarios a validar transacciones y agregar bloques a la cadena.
+
+En resumen, Blockchain es una tecnología que ha revolucionado la forma en que se gestionan y validan las transacciones en línea. Utilizando técnicas de seguridad avanzadas y contratos inteligentes, Blockchain permite la creación de sistemas seguros, transparentes y descentralizados. En los próximos años, se espera que esta tecnología siga evolucionando y transformando múltiples sectores.
+
+
+
+
+https://www.geeksforgeeks.org/create-simple-blockchain-using-python/
+
+
+https://medium.com/coinmonks/python-tutorial-build-a-blockchain-713c706f6531
+
+https://codluck.com/build-a-blockchain-in-python-example/

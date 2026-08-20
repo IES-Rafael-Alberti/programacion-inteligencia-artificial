@@ -1,0 +1,47 @@
+name: pia-ud
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+
+  # Núcleo científico
+  - numpy
+  - pandas>=3.0
+  - scipy
+  - scikit-learn
+
+  # Visualización
+  - matplotlib
+  - seaborn
+  - plotly
+  - ipywidgets
+
+  # Estadística / modelos clásicos
+  - statsmodels
+
+  # DataFrames alternativos
+  - polars
+
+  # Deep Learning (CUDA 13.0 para PyTorch 2.13; ajustar al CUDA del alumno)
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=13.0
+  - tensorflow
+  - pytorch-lightning
+
+  # NLP / LLMs
+  - transformers
+
+  # Jupyter
+  - jupyter
+  - jupyterlab
+
+  # pip para lo que no está en conda-forge o va más actualizado
+  - pip:
+    - keras>=3.0
+    - gradio

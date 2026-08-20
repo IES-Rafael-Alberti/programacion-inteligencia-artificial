@@ -1,0 +1,47 @@
+---
+title: "03 — Joins y tablas auxiliares en R — Solución profesor"
+output: html_document
+---
+
+```{r setup, message=FALSE, warning=FALSE}
+library(tidyverse)
+titanic <- read_csv("../../05-recursos/datasets/titanic.csv")
+```
+
+## Solución 1 — Tabla auxiliar
+
+```{r auxiliar}
+clases <- tibble(
+  Pclass = c(1, 2, 3),
+  clase_nombre = c("Primera", "Segunda", "Tercera"),
+  segmento = c("alta", "media", "popular")
+)
+
+clases
+```
+
+## Solución 2 — Join
+
+```{r join}
+titanic_clases <- titanic %>%
+  left_join(clases, by = "Pclass")
+
+head(titanic_clases %>% select(Pclass, clase_nombre, segmento, Survived, Sex, Age))
+```
+
+## Solución 3 — Resumen tras join
+
+```{r resumen}
+titanic_clases %>%
+  group_by(clase_nombre, segmento) %>%
+  summarise(
+    pasajeros = n(),
+    supervivencia_media = mean(Survived, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  arrange(desc(supervivencia_media))
+```
+
+## Nota de corrección
+
+Debe comprobarse que el join no multiplica filas por error y que la clave `Pclass` tiene correspondencia completa.

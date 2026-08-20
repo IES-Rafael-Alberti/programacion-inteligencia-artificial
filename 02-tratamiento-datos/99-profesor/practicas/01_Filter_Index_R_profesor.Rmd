@@ -1,0 +1,42 @@
+---
+title: "01 — Selección, filtrado y ordenación en R — Solución profesor"
+output: html_document
+---
+
+```{r setup, message=FALSE, warning=FALSE}
+library(tidyverse)
+titanic <- read_csv("../../05-recursos/datasets/titanic.csv")
+```
+
+## Solución 1 — Selección
+
+```{r seleccion}
+titanic_basico <- titanic %>%
+  select(Survived, Pclass, Sex, Age, Fare, Embarked)
+
+head(titanic_basico)
+```
+
+## Solución 2 — Filtrado
+
+```{r filtrado}
+mediana_fare <- median(titanic$Fare, na.rm = TRUE)
+
+primera_tarifa_alta <- titanic %>%
+  filter(Pclass == 1, Fare > mediana_fare)
+
+head(primera_tarifa_alta)
+```
+
+## Solución 3 — Ordenación
+
+```{r ordenacion}
+titanic_ordenado <- titanic %>%
+  arrange(desc(Age), desc(Fare))
+
+head(titanic_ordenado)
+```
+
+## Nota de corrección
+
+Aceptar variantes si usan `select`, `filter` y `arrange` correctamente y explican qué subconjunto están creando.

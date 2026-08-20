@@ -1,0 +1,22 @@
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/09-gpu-avanzado/05-recursos/00-guia-presentacion-final.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/09-gpu-avanzado/05-recursos/plantilla-autoevaluacion.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/09-gpu-avanzado/05-recursos/plantilla-informe.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/09-gpu-avanzado/05-recursos/plantilla-presentacion.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/11-anexos/01-teoria/00-IA-NeuroSimbolica-Plan.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/11-anexos/01-teoria/001-ReinfordementLearning.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/11-anexos/01-teoria/01-UD-IA-NeuroSimbolica-I.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/11-anexos/01-teoria/Snake-RL.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/docs/guia-inicio.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/docs/index.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/docs/manual-pixi-pia.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/docs/normas-entregas-y-uso-de-ia.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/03-machine-learning/03-practicas/laboratorios/Lab1/CreacionDataset (1).md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/03-machine-learning/03-practicas/laboratorios/Lab1/CreacionDataset.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/03-machine-learning/03-practicas/laboratorios/Lab1/Entrega_Proyecto_Dataset_Peliculas.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/03-machine-learning/03-practicas/midterm-capstone/Peliculas/00-CapstonePeliculas.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/03-machine-learning/03-practicas/midterm-capstone/Peliculas/DefensaOralPeliculas-Chuleta.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/03-machine-learning/03-practicas/midterm-capstone/Peliculas/DefensaOralPeliculas.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-docs/planificacion/UD4-DeepLearning-ComparativaFrameWorks.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-docs/planificacion/UD4-DeepLearning-Indice-Parte2-Practica.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-docs/planificacion/UD4-DeepLearning-Practica-QueHaremos.md
+/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/PIA/04-deep-learning/03-practicas/laboratorios/Laboratorio3/DePlayground_a_CodigoReal-Entrega.md

@@ -1,0 +1,274 @@
+% Created 2023-04-26 mié 17:55
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+
+\renewcommand*{\contentsname}{Contenidos}
+\renewcommand*{\figurename}{Figura}
+\renewcommand*{\tablename}{Tabla}
+\usepackage{parskip}
+\usepackage[utf8]{inputenc} %% For unicode chars
+\usepackage{placeins}
+\usepackage[margin=2.50cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\linespread{1.05}
+\usepackage[scaled]{helvet}
+\usepackage{courier}
+\usepackage[table]{xcolor}
+\hypersetup{colorlinks=true,linkcolor=blue}
+\RequirePackage{fancyvrb}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\small,formatcom = {\color[rgb]{0.5,0,0}}}
+\usepackage{mdframed}
+\BeforeBeginEnvironment{minted}{\begin{mdframed}}
+\AfterEndEnvironment{minted}{\end{mdframed}}
+\setcounter{secnumdepth}{4}
+\date{}
+\title{Automatización de tareas}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={Automatización de tareas},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.6)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\maketitle
+\setcounter{tocdepth}{4}
+\tableofcontents
+
+\setlength\parindent{10pt}
+
+
+
+\section{Automatización de tareas}
+\label{sec:orgf641fbc}
+
+\subsection{Airflow}
+\label{sec:orgccca450}
+Airflow es una plataforma de orquestación de flujo de trabajo que se
+utiliza para automatizar y programar tareas en un entorno de
+datos. Permite crear flujos de trabajo (DAG) de manera fácil y rápida,
+lo que puede ser muy útil en el contexto de machine learning.
+
+\subsection{Microsoft Power Auomate}
+\label{sec:org8054020}
+\subsection{Luigi}
+\label{sec:org6795d89}
+\subsection{Dagster}
+\label{sec:org1a4d3f1}
+
+
+\section{Tarea}
+\label{sec:org4c16067}
+Un pequeño flujo de trabajo con Airflow relacionado con machine
+learning podría involucrar los siguientes pasos:
+
+\begin{enumerate}
+\item Extracción y preprocesamiento de datos: Crear un DAG que extraiga
+datos de una fuente externa, como una base de datos o un archivo
+CSV. Una vez que se extraen los datos, se pueden realizar
+operaciones de preprocesamiento para preparar los datos para el
+modelado. Esto podría incluir la limpieza de datos faltantes, la
+eliminación de variables innecesarias, la codificación de
+variables categóricas, y la normalización de variables numéricas.
+\item Entrenamiento del modelo: Crear una tarea en el DAG que entrene un
+modelo de machine learning utilizando los datos
+preprocesados. Esto puede implicar la división de los datos en
+conjuntos de entrenamiento y prueba, la selección de un algoritmo
+de machine learning adecuado y la optimización de sus parámetros.
+\item Validación del modelo: Una vez que se ha entrenado el modelo,
+crear una tarea que realice la validación del modelo con los datos
+de prueba. Esto puede involucrar la evaluación del rendimiento del
+modelo utilizando métricas de evaluación, como el error cuadrático
+medio o la precisión.
+\item Despliegue del modelo: Una vez que se ha validado el modelo, crear
+una tarea que implemente el modelo en un entorno de
+producción. Esto puede implicar el empaquetamiento del modelo en
+un formato que pueda ser utilizado por otros sistemas, como una
+API RESTful, o la integración del modelo en una plataforma de
+nube, como AWS o Google Cloud.
+\item Monitoreo del modelo: Finalmente, crear una tarea que monitoree
+continuamente el rendimiento del modelo en producción, y alerte a
+los usuarios si el rendimiento del modelo disminuye o si se
+detectan problemas.
+\end{enumerate}
+
+\subsection{Ejemplo Airflow}
+\label{sec:org3aa5928}
+
+\begin{enumerate}
+\item Crear el archivo DAG
+Primero, crearemos un archivo Python que definirá nuestro DAG. Este
+archivo puede llamarse, por ejemplo, iris\_ml\_workflow.py. A
+continuación se muestra el código que debe contener:
+\begin{minted}[]{python}
+from datetime import datetime, timedelta
+from airflow import DAG
+from airflow.operators.python_operator import PythonOperator
+
+# Importar las funciones que definiremos más adelante
+from data_extraction import extract_data
+from data_preprocessing import preprocess_data
+from train_model import train_model
+from validate_model import validate_model
+
+default_args = {
+    'owner': 'airflow',
+    'depends_on_past': False,
+    'start_date': datetime(2023, 4, 28),
+    'email': ['airflow@example.com'],
+    'email_on_failure': False,
+    'email_on_retry': False,
+    'retries': 1,
+    'retry_delay': timedelta(minutes=5),
+}
+
+dag = DAG(
+    'iris_ml_workflow',
+    default_args=default_args,
+    description='A workflow to train and validate'
+    'a machine learning model for Iris classification',
+    schedule_interval=timedelta(days=1),
+)
+
+# Definir las tareas del DAG
+extract_task = PythonOperator(task_id='extract_data',
+                       python_callable=extract_data, dag=dag)
+preprocess_task = PythonOperator(task_id='preprocess_data',
+                       python_callable=preprocess_data, dag=dag)
+train_task = PythonOperator(task_id='train_model',
+                       python_callable=train_model, dag=dag)
+validate_task = PythonOperator(task_id='validate_model',
+                       python_callable=validate_model, dag=dag)
+
+# Establecer las dependencias entre las tareas
+preprocess_task.set_upstream(extract_task)
+train_task.set_upstream(preprocess_task)
+validate_task.set_upstream(train_task)
+\end{minted}
+
+En este código, creamos un DAG con el nombre
+"iris\_ml\_workflow". Definimos cuatro tareas: "extract\_data",
+"preprocess\_data", "train\_model" y "validate\_model". También
+establecemos las dependencias entre las tareas.
+\end{enumerate}
+
+
+\begin{enumerate}
+\item Crear las funciones para las tareas
+\end{enumerate}
+
+A continuación, crearemos las funciones que se ejecutarán en cada
+tarea. Suponemos que tienes los archivos data\_extraction.py,
+data\_preprocessing.py, train\_model.py y validate\_model.py en el mismo
+directorio que el archivo iris\_ml\_workflow.py. A continuación se
+muestra el código para cada archivo.
+data\_extraction.py:
+\begin{minted}[]{python}
+import pandas as pd
+from sklearn.datasets import load_iris
+
+def extract_data():
+    iris = load_iris()
+    data = pd.DataFrame(iris.data, columns=iris.feature_names)
+    target = pd.DataFrame(iris.target, columns=['target'])
+    data.to_csv('/path/to/data/iris_data.csv', index=False)
+    target.to_csv('/path/to/data/iris_target.csv', index=False)
+
+\end{minted}
+
+data\_preprocessing.py:
+\begin{minted}[]{python}
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+def preprocess_data():
+    data = pd.read_csv('/path/to/data/iris_data.csv')
+    target = pd.read_csv('/path/to/data/iris_target.csv')
+    X_train, X_test, y_train, y_test =
+             train_test_split(data, target, test_size=0.2)
+    scaler = StandardScaler()
+    X_train_scaled = scaler.fit_transform(X_train)
+    X_test_scaled = scaler.transform(X_test)
+    X_train_scaled.to_csv('/path/to/data/iris_train_data.csv', index=False)
+    y_train.to_csv('/path/to/data/iris_train_target.csv', index=False)
+    X_test_scaled.to_csv('/path/to/data/iris_test_data.csv', index=False)
+    y_test.to_csv('/path/to/data/iris_test_target.csv', index=False)
+
+
+\end{minted}
+`train\_model.py`:
+\begin{minted}[]{python}
+import pandas as pd
+from sklearn.linear_model import LogisticRegression
+
+def train_model():
+    X_train = pd.read_csv('/path/to/data/iris_train_data.csv')
+    y_train = pd.read_csv('/path/to/data/iris_train_target.csv')
+    clf = LogisticRegression()
+    clf.fit(X_train, y_train)
+    joblib.dump(clf, '/path/to/models/iris_model.joblib')
+\end{minted}
+
+validate\_model.py:
+\begin{minted}[]{python}
+import pandas as pd
+from sklearn.metrics import accuracy_score
+import joblib
+
+def validate_model():
+    X_test = pd.read_csv('/path/to/data/iris_test_data.csv')
+    y_test = pd.read_csv('/path/to/data/iris_test_target.csv')
+    clf = joblib.load('/path/to/models/iris_model.joblib')
+    y_pred = clf.predict(X_test)
+    accuracy = accuracy_score(y_test, y_pred)
+    with open('/path/to/results/accuracy.txt', 'w') as f:
+        f.write(str(accuracy))
+
+\end{minted}
+En estas funciones, extraemos los datos del dataset Iris, los
+preprocesamos, entrenamos un modelo de regresión logística y validamos
+el modelo en un conjunto de prueba. Los datos y modelos se guardan en
+archivos en el sistema de archivos local.
+
+3.Ejecutar el DAG Una vez que hayamos creado nuestro DAG y las
+funciones para las tareas, podemos iniciar Airflow y ejecutar el
+DAG. Para iniciar Airflow, ejecuta el siguiente comando en tu
+terminal:
+
+\begin{minted}[]{bash}
+airflow webserver -p 8080
+\end{minted}
+
+Luego, en otra terminal, ejecuta el siguiente comando:
+
+\begin{minted}[]{bash}
+airflow scheduler
+\end{minted}
+
+Esto iniciará los servidores de Airflow y el planificador,
+respectivamente. Luego, en tu navegador, ve a localhost:8080 para
+acceder a la interfaz de usuario de Airflow. Allí, deberías ver el DAG
+"iris\_ml\_workflow" en la pantalla. Haz clic en "Trigger DAG" para
+iniciar el flujo de trabajo.
+
+Si todo ha ido bien, deberías ver que cada tarea se ejecuta en
+secuencia. Los archivos de datos, modelos y resultados deberían estar
+disponibles en el sistema de archivos local, y deberías poder revisar
+el archivo accuracy.txt para ver la precisión del modelo en el
+conjunto de prueba.
+\end{document}
