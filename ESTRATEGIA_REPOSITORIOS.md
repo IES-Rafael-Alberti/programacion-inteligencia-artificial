@@ -168,3 +168,58 @@ añadiendo excepciones puntuales: deben quedar fuera de la exportación y fuera 
 No se mantienen dos copias manuales del proyecto. Se mantiene un único directorio y se decide en cada
 publicación qué parte del trabajo docente merece pasar al repositorio público. El repositorio privado es
 la copia completa; el público es una publicación filtrada para el alumnado.
+
+## Trabajo con dos ordenadores y Unison
+
+La organización prevista es:
+
+- GitHub coordina el repositorio PIA, sus commits, ramas e historial.
+- Unison sincroniza materiales generales y otros ficheros que no son exclusivamente docentes.
+- El disco duro se utiliza como copia de seguridad, no como ubicación habitual de trabajo.
+
+Aunque el disco duro no se modifique normalmente, Unison puede sincronizar `.git` si el perfil no lo
+excluye. En ese caso, una copia completa conserva todas las ramas, el historial y la configuración de
+los remotos, no sólo la rama activa.
+
+### Protocolo al cambiar de ordenador
+
+Antes de empezar en casa o en el instituto:
+
+```bash
+git switch teacher
+git pull teacher main
+git fetch origin
+```
+
+Después de trabajar y antes de cambiar de equipo:
+
+```bash
+git status
+git push teacher teacher:main
+```
+
+Si se han preparado cambios públicos, subir también `origin/main` después de validarlos según el
+procedimiento anterior.
+
+Ejecutar Unison sólo después de cerrar editores, notebooks, Jupyter, procesos de Pixi y operaciones Git.
+En el segundo ordenador, sincronizar primero con Unison y actualizar después el repositorio desde GitHub.
+
+### Reglas para evitar conflictos
+
+- Trabajar sólo en uno de los dos ordenadores cada vez.
+- No modificar simultáneamente el mismo repositorio desde ambas copias.
+- No usar el disco duro como copia de trabajo ordinaria.
+- Revisar el perfil de Unison para saber si incluye `.git`; buscar exclusiones como `ignore = Name .git`
+  o `ignore = Path .git/*`.
+- Mantener excluidos los artefactos regenerables y pesados, salvo que exista una razón concreta para
+  respaldarlos:
+
+  ```text
+  .pixi/
+  site/
+  .opencode/node_modules/
+  __pycache__/
+  ```
+
+GitHub debe ser la autoridad para el código y sus ramas. Unison debe ser la autoridad de sincronización
+para los materiales generales que no tengan un flujo Git propio.
