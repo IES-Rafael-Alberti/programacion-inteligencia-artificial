@@ -43,7 +43,7 @@ pixi --version
 pixi info
 ```
 
-En equipos docentes conviene revisar el script antes de ejecutarlo, conservar la versión instalada y evitar instalar Pixi como administrador si no es necesario. En Windows, utiliza el método documentado para PowerShell o WinGet en la [guía oficial](https://pixi.sh/latest/installation/).
+En Windows, utiliza el método documentado para PowerShell o WinGet en la [guía oficial](https://pixi.sh/latest/installation/).
 
 ## Conceptos esenciales
 
@@ -198,21 +198,12 @@ No abras notebooks desde otro Python del sistema: es una causa frecuente de impo
 
 - Versiona `pixi.toml` y `pixi.lock`.
 - Añade `.pixi/` al `.gitignore`; nunca versiones los prefijos locales.
-- No mezcles cambios de actualización masiva del lockfile con cambios docentes sin revisarlos.
+- Revisa los cambios de actualización masiva del lockfile antes de confirmarlos.
 - Mantén features pequeñas y con nombres estables (`ud3`, `ud4`, `gpu`).
 - Documenta la versión de Pixi y las plataformas probadas.
 - Conserva `environment.yml` hasta cerrar la migración y verificar dependencias reales.
 
 ## Flujo recomendado
-
-### Profesorado
-
-1. Probar el diseño con las dependencias reales de cada unidad.
-2. Resolver y revisar `pixi.lock` en las plataformas objetivo.
-3. Publicar instrucciones cortas por unidad y una ruta CPU garantizada.
-4. Probar notebooks y tareas desde un clon limpio.
-
-### Alumnado
 
 1. Instalar Pixi una sola vez.
 2. Clonar o actualizar el repositorio.
@@ -220,6 +211,5 @@ No abras notebooks desde otro Python del sistema: es una causa frecuente de impo
 4. Usar el entorno indicado en la tarea (`pixi run --environment ud3 ...`).
 5. Comunicar el comando y el error completo si algo falla; no borrar `.pixi/` sin conservar el mensaje de error.
 
-## Siguiente paso
-
-Completar el prototipo real de PIA (`default`, `ud3`, `ud4` y `gpu`), comprobar sus dependencias y decidir después si sustituye a `environment.yml`. Hasta entonces, este manual describe el procedimiento y el diseño previsto, no una migración ya realizada.
+Si una actividad no indica un entorno Pixi, sigue su enunciado o consulta al
+profesorado antes de instalar dependencias adicionales.

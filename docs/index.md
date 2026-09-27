@@ -4,7 +4,9 @@ Bienvenido al portal público del módulo **Programación de Inteligencia Artifi
 
 ## Propósito
 
-Este espacio reúne los materiales de trabajo para el alumnado: teoría, ejemplos, prácticas, recursos y guías de proyecto. La publicación está pensada para consultar las unidades de forma progresiva y mantener fuera del sitio público la planificación interna, los materiales sensibles, los archivos históricos y los recursos exclusivos del profesorado.
+Aquí encontrarás las guías, ejemplos, prácticas, recursos y materiales de proyecto del módulo. Sigue las unidades en orden, consulta las instrucciones de cada actividad y usa Moodle para los avisos, plazos y entregas.
+
+Empieza por la [presentación del curso](presentacion-curso.md), que resume la forma de trabajo, la evaluación, las entregas y el proyecto integrado.
 
 ## Unidades
 
@@ -34,7 +36,3 @@ Todas las tareas, prácticas y proyectos con entrega están sujetos a las [norma
 ## Entornos de trabajo
 
 Empieza por la [ruta común para trabajar con los materiales](guia-inicio.md): portal, copia local del repositorio, entorno indicado y ejecución. El [manual práctico de Pixi para PIA](manual-pixi-pia.md) amplía la instalación y el uso de los entornos disponibles.
-
-## Portal común
-
-Está prevista la creación de un portal común para coordinar la publicación de materiales de **SBD**, **PIA** y **DWES** desde un punto de acceso compartido.

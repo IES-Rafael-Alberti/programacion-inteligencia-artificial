@@ -169,7 +169,10 @@ def scan_unit(unit_symlink: Path, docs_dir: Path, index_path: str):
 
 def on_config(config):
     docs_dir = Path(config['docs_dir']).resolve()
-    nav = [{'Inicio': 'index.md'}]
+    nav = [
+        {'Inicio': 'index.md'},
+        {'Presentación del curso': 'presentacion-curso.md'},
+    ]
 
     for unit_dirname, (unit_title, index_path) in UNIT_NAMES.items():
         unit_symlink = docs_dir / unit_dirname
