@@ -9,6 +9,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 
 ## Estado operativo actual
 
+- [x] Sincronizado el remoto privado `teacher/main` (commit `5582bfca`) y publicada en `origin/main` la presentación del curso y la limpieza de textos docentes en el portal (commit `daca527c`). Se retiraron del árbol público dos notebooks de soluciones y un GIFT con respuestas (commit `5d4b3f29`); los ficheros permanecen en el repositorio privado.
 - [x] Ampliado y ubicado en `01-fundamentos-python/99-profesor/GUION_PRIMERA_CLASE_PIA_2026_09_29.md` el guion docente de la primera clase: presentacion del modulo, ritmo principal de dos horas, alternativa si la presentacion llega a 30 minutos, diagnostico inicial, notebook guiado y mini-reto.
 - [x] Importado en Moodle el GIFT de diagnostico tecnico inicial de PIA; queda como cuestionario no evaluable y separado del calificador.
 - [x] Adaptado el diagnostico inicial de PIA desde el formulario historico: Feedback anonimo para circunstancias y experiencia, GIFT tecnico no evaluable de 20 preguntas sobre Python, IA, ML, DL, LLM, RAG, agentes y modelos locales, y separacion del bloque de Big Data para SBD.
@@ -116,13 +117,14 @@ La carpeta `00-planificación` se conserva como archivo de trazabilidad y materi
 
 ## Próximas acciones sugeridas
 
-1. Antes de la clase del 2026-09-29, publicar y comprobar con una cuenta de prueba los recursos marcados como iniciales en `00-planificación/CHECKLIST_MOODLE_UD1_2026_2027.md`.
-2. Configurar y verificar en Seneca los pesos RA/CE de `00-planificación/PONDERACION_RA_SENECA_2026_2027.md`.
-3. Montar y comprobar con una cuenta de prueba el curso plantilla Moodle segun `00-planificación/CONFIGURACION_CALIFICADOR_MOODLE_2026_2027.md`, incluida la validacion de GIFT de UD1 y UD2 cuando termine el mantenimiento.
-4. Antes de evaluar al primer grupo, duplicar `00-planificación/plantilla_seguimiento_ra_ce.csv` por alumno y realizar una prueba con dos evidencias ficticias.
-5. Realizar las comprobaciones Windows/macOS de Pixi y de los ejemplos que se vayan a usar cuando haya equipos disponibles.
-6. El día que se imparta el apéndice de grafos: arrancar el contenedor Neo4j, cargar el fixture y repasar los resultados esperados de `demo-profesor.md`.
-7. Profundizar o adaptar prácticas concretas solo si el uso durante el curso revela una necesidad docente real.
+1. Decidir si se solicita la purga del historial de `origin/main`: los tres materiales docentes retirados siguen recuperables en commits públicos anteriores; eliminarlos del historial requeriría reescribirlo y coordinar la actualización de clones.
+2. Antes de la clase del 2026-09-29, publicar y comprobar con una cuenta de prueba los recursos marcados como iniciales en `00-planificación/CHECKLIST_MOODLE_UD1_2026_2027.md`.
+3. Configurar y verificar en Seneca los pesos RA/CE de `00-planificación/PONDERACION_RA_SENECA_2026_2027.md`.
+4. Montar y comprobar con una cuenta de prueba el curso plantilla Moodle segun `00-planificación/CONFIGURACION_CALIFICADOR_MOODLE_2026_2027.md`, incluida la validacion de GIFT de UD1 y UD2 cuando termine el mantenimiento.
+5. Antes de evaluar al primer grupo, duplicar `00-planificación/plantilla_seguimiento_ra_ce.csv` por alumno y realizar una prueba con dos evidencias ficticias.
+6. Realizar las comprobaciones Windows/macOS de Pixi y de los ejemplos que se vayan a usar cuando haya equipos disponibles.
+7. El día que se imparta el apéndice de grafos: arrancar el contenedor Neo4j, cargar el fixture y repasar los resultados esperados de `demo-profesor.md`.
+8. Profundizar o adaptar prácticas concretas solo si el uso durante el curso revela una necesidad docente real.
 
 
 ## Continuación — 2026-07-21 (normas comunes de entrega y uso de IA)
