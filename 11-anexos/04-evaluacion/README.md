@@ -1,6 +1,8 @@
 # Evaluación — UD11 Anexos
 
-Esta unidad contiene material complementario (neuro-simbólica y reinforcement learning) sin prácticas obligatorias asociadas al itinerario principal del módulo.
+Esta unidad reúne material complementario de búsqueda y juegos de IA clásica,
+IA neuro-simbólica y reinforcement learning. No hay prácticas obligatorias
+asociadas al itinerario principal del módulo.
 
 ## Carácter de la evaluación
 
@@ -8,6 +10,7 @@ El material de UD11 no forma parte de la evaluación ordinaria del módulo. Su u
 
 - **Actividad de ampliación voluntaria**, con puntuación extra si el profesorado así lo decide.
 - **Contenido de apoyo** para el proyecto integrado (UD12) cuando el equipo elige un tema de RL o neuro-simbólica.
+- **Ampliación formativa** de búsqueda, planificación y juegos adversarios mediante los ejemplos de `02-ejemplos/`; no añade calificación ni RA/CE ordinarios.
 
 ## Actividad evaluable disponible (opcional)
 
