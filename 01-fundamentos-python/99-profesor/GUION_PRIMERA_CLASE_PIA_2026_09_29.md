@@ -24,7 +24,7 @@ de la siguiente sesion.
 ## Presentacion del modulo - 15 a 20 minutos
 
 | Tiempo | Mensaje y accion docente |
-|---:|---|
+|---:|---|---|
 | 0-2 min | Bienvenida. "No vamos a pulsar botones de IA: vamos a construir soluciones que expliquen que datos usan, que modelo eligen y por que el resultado merece confianza." |
 | 2-5 min | Mostrar el recorrido: Python y datos, ML, deep learning, cloud/MLOps, LLM y agentes, vision, GPU, series temporales y proyecto integrado. UD11 es ampliacion opcional. |
 | 5-8 min | Explicar el producto final: una solucion pequena pero util, reproducible y defendible. El proyecto integrado usa al menos dos fuentes de datos y una salida util. |

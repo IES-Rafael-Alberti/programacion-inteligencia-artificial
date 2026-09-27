@@ -9,6 +9,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 
 ## Estado operativo actual
 
+- [x] Corregido el separador de tres columnas en la tabla de ritmo principal del guion docente de primera clase.
 - [x] Sincronizado el remoto privado `teacher/main` (commit `5582bfca`) y publicada en `origin/main` la presentación del curso y la limpieza de textos docentes en el portal (commit `daca527c`). Se retiraron del árbol público dos notebooks de soluciones y un GIFT con respuestas (commit `5d4b3f29`); los ficheros permanecen en el repositorio privado.
 - [x] Ampliado y ubicado en `01-fundamentos-python/99-profesor/GUION_PRIMERA_CLASE_PIA_2026_09_29.md` el guion docente de la primera clase: presentacion del modulo, ritmo principal de dos horas, alternativa si la presentacion llega a 30 minutos, diagnostico inicial, notebook guiado y mini-reto.
 - [x] Importado en Moodle el GIFT de diagnostico tecnico inicial de PIA; queda como cuestionario no evaluable y separado del calificador.
