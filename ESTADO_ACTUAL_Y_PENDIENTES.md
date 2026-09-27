@@ -9,7 +9,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 
 ## Estado operativo actual
 
-- [x] Preparado un apéndice optativo de IA clásica en UD11: guía de búsqueda y juegos, ejemplos Python autocontenidos de DFS/BFS/A* y minimax/alfa-beta, enlaces públicos y aclaración de que no añade evaluación ordinaria.
+- [x] Preparado y publicado el apéndice optativo de IA clásica en UD11: guía de búsqueda y juegos, ejemplos Python autocontenidos de DFS/BFS/A* y minimax/alfa-beta. Commit privado `be2b1a6d`, publicación en `origin/main` `703f3aa8`; no añade evaluación ordinaria.
 - [x] Corregida la estructura de las tres tablas Markdown del guion docente y revisadas las tildes y la ortografía del documento.
 - [x] Corregido el separador de tres columnas en la tabla de ritmo principal del guion docente de primera clase.
 - [x] Sincronizado el remoto privado `teacher/main` (commit `5582bfca`) y publicada en `origin/main` la presentación del curso y la limpieza de textos docentes en el portal (commit `daca527c`). Se retiraron del árbol público dos notebooks de soluciones y un GIFT con respuestas (commit `5d4b3f29`); los ficheros permanecen en el repositorio privado.
