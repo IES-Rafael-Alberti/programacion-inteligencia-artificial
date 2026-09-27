@@ -1,4 +1,5 @@
 # Public repository exclusions
+Moodle/
 .slim/deepwork/
 .slim/zip-triage/
 99-sensible/
@@ -160,3 +161,14 @@ events.out.tfevents*
 !04-deep-learning/90-archivo/
 !04-deep-learning/90-archivo/modelado-avanzado-docs/
 !04-deep-learning/90-archivo/modelado-avanzado-docs/**
+
+# Operational 2026-2027 evaluation design retained from planning
+!00-planificación/
+00-planificación/*
+!00-planificación/PONDERACION_RA_SENECA_2026_2027.md
+!00-planificación/CONFIGURACION_CALIFICADOR_MOODLE_2026_2027.md
+!00-planificación/MATRIZ_SEGUIMIENTO_RA_CE_2026_2027.md
+!00-planificación/plantilla_seguimiento_ra_ce.csv
+!00-planificación/GUION_PRIMERA_CLASE_PIA_2026_09_29.md
+!00-planificación/CHECKLIST_MOODLE_UD1_2026_2027.md
+!00-planificación/CONFIGURACION_DIAGNOSTICO_INICIAL_PIA_2026_2027.md

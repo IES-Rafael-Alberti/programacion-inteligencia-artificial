@@ -60,3 +60,10 @@ Además de los prompts de reorganización, esta carpeta contiene plantillas para
 - `plantillas/plantilla_declaracion_uso_ia.md`: declaración de uso de IA adaptada a PIA.
 - `plantillas/politica_uso_ia_pia.md`: política transversal para permitir IA con trazabilidad, verificación y defensa.
 - `plantillas/normas_trabajo_equipo_entregas.md`: base para regular trabajo en equipo, coevaluación y entregas tardías.
+
+## Evaluacion operativa 2026-2027
+
+- `PONDERACION_RA_SENECA_2026_2027.md`: ponderacion oficial de RA y CE para Seneca.
+- `CONFIGURACION_CALIFICADOR_MOODLE_2026_2027.md`: categorias, instrumentos, IDs y pesos internos de Moodle.
+- `MATRIZ_SEGUIMIENTO_RA_CE_2026_2027.md`: evidencia primaria por CE y regla de acreditacion individual.
+- `plantilla_seguimiento_ra_ce.csv`: registro individual editable que acompana la matriz.

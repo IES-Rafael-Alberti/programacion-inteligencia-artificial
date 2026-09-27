@@ -1,0 +1,21 @@
+Alumno;RA;CE;Peso_RA_modulo;Peso_CE_en_RA;Unidad_primaria;Item_Moodle_ID;Evidencia_enlace;Instrumento;Fecha_revision;Nota_CE_0_10;Estado;Observaciones
+;RA1;a;15%;16,67%;UD1;ud1-practica-python;;Practica Python y NumPy;;;NE;
+;RA1;b;15%;16,67%;UD1;ud1-comparativa-lenguajes;;Comparativa de lenguajes y formatos;;;NE;
+;RA1;c;15%;16,67%;UD1;ud1-comparativa-lenguajes;;Comparativa de lenguajes y formatos;;;NE;
+;RA1;d;15%;16,67%;UD1;ud1-practica-python;;Practica Python y NumPy;;;NE;
+;RA1;e;15%;16,67%;UD1;ud1-comparativa-lenguajes;;Comparativa de lenguajes y formatos;;;NE;
+;RA1;f;15%;16,67%;UD1;ud1-comparativa-lenguajes;;Comparativa de lenguajes y formatos;;;NE;
+;RA2;a;45%;20%;UD5;ud5-comparativa-cloud;;Tarea comparativa cloud y MLOps;;;NE;
+;RA2;b;45%;20%;UD3;ud3-capstone-ml;;Laboratorio o capstone de ML;;;NE;
+;RA2;c;45%;20%;UD3;ud3-capstone-ml;;Laboratorio o capstone de ML;;;NE;
+;RA2;d;45%;20%;UD3;ud3-capstone-ml;;Laboratorio o capstone de ML;;;NE;
+;RA2;e;45%;20%;UD3;ud3-capstone-ml;;Laboratorio o capstone de ML;;;NE;
+;RA3;a;20%;20%;UD7;ud7-proyecto-stack;;Proyecto de stack convergente;;;NE;
+;RA3;b;20%;20%;UD7;ud7-proyecto-stack;;Proyecto de stack convergente;;;NE;
+;RA3;c;20%;20%;UD7;ud7-proyecto-stack;;Proyecto de stack convergente;;;NE;
+;RA3;d;20%;20%;UD7;ud7-proyecto-stack;;Proyecto de stack convergente;;;NE;
+;RA3;e;20%;20%;UD7;ud7-proyecto-stack;;Proyecto de stack convergente y defensa;;;NE;
+;RA4;a;20%;25%;UD12;ud12-proyecto-final;;Proyecto final integrado;;;NE;
+;RA4;b;20%;25%;UD12;ud12-proyecto-final;;Proyecto final integrado;;;NE;
+;RA4;c;20%;25%;UD7;ud7-proyecto-stack;;Proyecto de stack convergente;;;NE;
+;RA4;d;20%;25%;UD12;ud12-proyecto-final;;Proyecto final integrado y defensa;;;NE;

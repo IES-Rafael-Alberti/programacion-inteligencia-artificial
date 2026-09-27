@@ -1,0 +1,133 @@
+// Diagnostico inicial PIA 2026/2027. No evaluable: usar solo para conocer el punto de partida.
+
+$CATEGORY: $course$/PIA/Diagnostico inicial
+
+::DIA_PIA_01_Python::Python se utiliza habitualmente en IA porque: {
+=cuenta con bibliotecas amplias para datos, ML y deep learning
+~solo sirve para crear paginas web estaticas
+~sustituye siempre cualquier otro lenguaje
+~no puede ejecutarse en notebooks
+}
+
+::DIA_PIA_02_Variables::Que mostrara este codigo? `x = 4` seguido de `print(x + 3)` {=7 ~1 ~43 ~Error siempre}
+
+::DIA_PIA_03_Estructuras::Que estructura de Python permite asociar claves con valores? {=diccionario ~lista ~tupla ~cadena}
+
+::DIA_PIA_04_Funciones::Para que sirve principalmente una funcion en Python? {
+=para agrupar codigo reutilizable que realiza una tarea
+~para convertir cualquier dato en una imagen
+~para evitar usar variables
+~para guardar automaticamente el notebook en internet
+}
+
+::DIA_PIA_05_Notebook::Que ventaja ofrece un notebook para aprender y documentar una solucion? {
+=combina explicaciones, codigo ejecutable y resultados en un mismo documento
+~impide modificar el codigo despues de ejecutarlo
+~solo puede contener texto
+~no permite mostrar graficos
+}
+
+::DIA_PIA_06_IA::Cual describe mejor una aplicacion de inteligencia artificial? {
+=un sistema que usa datos o conocimiento para realizar una tarea que requiere decisiones o predicciones
+~cualquier programa que tenga una interfaz grafica
+~un archivo PDF con informacion tecnica
+~un programa que solo suma dos numeros
+}
+
+::DIA_PIA_07_ML::Cual es la relacion correcta entre IA y machine learning? {
+=machine learning es una familia de tecnicas dentro de la IA que aprende patrones a partir de datos
+~IA y machine learning son exactamente lo mismo en cualquier contexto
+~machine learning no usa datos
+~la IA solo incluye robots fisicos
+}
+
+::DIA_PIA_08_DL::Que caracteriza al deep learning? {
+=usa redes neuronales con varias capas para aprender representaciones complejas
+~solo funciona con tablas de dos columnas
+~no necesita datos ni evaluacion
+~es una forma de almacenar archivos en la nube
+}
+
+::DIA_PIA_09_Modelo::Antes de elegir un modelo de IA, lo mas importante es: {
+=definir el problema, los datos disponibles y como se medira el resultado
+~elegir siempre el modelo mas reciente
+~usar el mayor numero posible de herramientas
+~entrenar sin saber que se quiere predecir o clasificar
+}
+
+::DIA_PIA_10_Evaluacion::Para que se reserva normalmente un conjunto de test? {
+=para comprobar el rendimiento final con datos no usados durante el entrenamiento
+~para entrenar repetidamente el modelo hasta memorizar los datos
+~para sustituir la documentacion del proyecto
+~para guardar las credenciales de una API
+}
+
+::DIA_PIA_11_LLM::Que limitacion debe tenerse presente al usar un asistente basado en un LLM? {
+=puede producir respuestas plausibles pero incorrectas que requieren verificacion
+~siempre cita fuentes exactas y verificadas
+~no puede ayudar a redactar o programar
+~sustituye la responsabilidad de quien entrega un trabajo
+}
+
+::DIA_PIA_12_Seguridad::Que debe hacerse con una clave de API en un notebook que se comparte? {
+=sustituirla por un placeholder y conservar la clave real fuera del archivo compartido
+~escribirla en una celda visible para facilitar su uso
+~subirla al repositorio junto con el codigo
+~enviarla como comentario dentro del notebook
+}
+
+::DIA_PIA_13_Supervisado::Cual es un ejemplo de problema de aprendizaje supervisado? {
+=predecir si un correo es spam a partir de mensajes ya etiquetados
+~agrupar documentos sin conocer previamente sus categorias
+~guardar un archivo en una carpeta local
+~No lo se todavia
+}
+
+::DIA_PIA_14_Sobreajuste::Que indica normalmente que un modelo aprende muy bien los datos de entrenamiento pero falla con datos nuevos? {
+=puede estar sufriendo sobreajuste
+~ha demostrado necesariamente que generaliza mejor
+~no necesita evaluarse con test
+~No lo se todavia
+}
+
+::DIA_PIA_15_LLM::Un modelo de lenguaje grande (LLM) genera texto principalmente al: {
+=predecir el siguiente token a partir del contexto
+~buscar siempre una frase exacta en una base de datos
+~ejecutar codigo Python sin interpretarlo
+~No lo se todavia
+}
+
+::DIA_PIA_16_RAG::Que aporta un sistema RAG a una aplicacion con LLM? {
+=recupera informacion relevante de documentos y la usa como contexto para responder
+~entrena de nuevo el modelo base en cada pregunta
+~garantiza que toda respuesta sea correcta
+~No lo se todavia
+}
+
+::DIA_PIA_17_Agentes::Que distingue a un agente de IA orientado a tareas? {
+=puede planificar pasos y usar herramientas autorizadas para avanzar hacia un objetivo
+~solo puede mostrar una respuesta fija escrita por una persona
+~no necesita instrucciones ni limites
+~No lo se todavia
+}
+
+::DIA_PIA_18_Modelos_locales::Que ventaja potencial ofrece ejecutar un modelo local con herramientas como Ollama o llama.cpp? {
+=puede funcionar sin enviar cada consulta a un servicio externo, si se configura correctamente
+~garantiza que el modelo sea siempre mas preciso que uno remoto
+~elimina toda necesidad de revisar resultados
+~No lo se todavia
+}
+
+::DIA_PIA_19_Modelos_locales::Cual es una afirmacion correcta sobre privacidad al usar un modelo local? {
+=hay que revisar datos, registros, integraciones y configuracion; local no significa privacidad automatica
+~un modelo local permite publicar cualquier dato personal sin restricciones
+~no hace falta aplicar controles de acceso
+~No lo se todavia
+}
+
+::DIA_PIA_20_Agentes_codigo::Que puede hacer un agente de codigo como Claude Code, Codex u OpenCode cuando recibe permisos y herramientas? {
+=analizar archivos, proponer o aplicar cambios y ejecutar comprobaciones bajo supervision
+~garantizar que todo cambio sea correcto sin revision humana
+~sustituir la responsabilidad de quien entrega el proyecto
+~No lo se todavia
+}
