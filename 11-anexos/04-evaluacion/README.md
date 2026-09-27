@@ -1,28 +1,15 @@
-# Evaluación — UD11 Anexos
+# Actividades optativas — UD11
 
-Esta unidad contiene material complementario (neuro-simbólica y reinforcement learning) sin prácticas obligatorias asociadas al itinerario principal del módulo.
+UD11 es una unidad de ampliación. Sus materiales y ejemplos no forman parte de la
+evaluación ordinaria de PIA ni añaden una entrega obligatoria.
 
-## Carácter de la evaluación
+## Qué puedes explorar
 
-El material de UD11 no forma parte de la evaluación ordinaria del módulo. Su uso evaluable queda a criterio del profesorado como:
+- Búsqueda en espacios de estados y juegos adversarios: DFS, BFS, A*, minimax y
+  poda alfa-beta.
+- IA neuro-simbólica y representación explícita del conocimiento.
+- Reinforcement learning con Q-learning y DQN.
 
-- **Actividad de ampliación voluntaria**, con puntuación extra si el profesorado así lo decide.
-- **Contenido de apoyo** para el proyecto integrado (UD12) cuando el equipo elige un tema de RL o neuro-simbólica.
-
-## Actividad evaluable disponible (opcional)
-
-La actividad de Reinforcement Learning «Catch the Fruit» incluye su propia guía y rúbrica en:
-
-```
-90-archivo/actividades-rl/
-```
-
-Esta actividad cubre Q-Table y DQN sobre entornos personalizados. Consultar la guía y la rúbrica incluidas en esa carpeta para los criterios de evaluación.
-
-## Cuándo se evalúa este material
-
-El profesorado puede activar la evaluación de UD11 en los siguientes casos:
-
-1. El grupo dispone de tiempo curricular para actividades de ampliación.
-2. Un equipo elige RL o neuro-simbólica como tema del proyecto integrado (UD12).
-3. Se activa como práctica electiva con puntuación extra sobre la nota final del módulo.
+Si se propone una actividad concreta para el aula, Moodle indicará sus
+instrucciones y si genera alguna evidencia. El trabajo voluntario de estos anexos
+no cambia la ponderación de RA/CE del módulo.

@@ -1,19 +1,29 @@
-# 11-anexos
+# UD11 — Anexos optativos
 
-## Propósito
-Material complementario no incluido en las unidades regulares: neuro-simbólica y reinforcement learning.
+Esta unidad reúne materiales de ampliación que no forman parte del recorrido
+ordinario ni de la evaluación obligatoria de PIA. Puedes consultarlos para
+explorar enfoques complementarios de inteligencia artificial.
 
-## Materiales incluidos
-- **01-teoria**:
-  - **Neuro-simbólica**: Plan de unidad + desarrollo teórico (del curso actual)
-  - **Reinforcement Learning**: Guía introductoria, tutorial Snake-RL, cronograma, PDFs de referencia (del curso 24-25)
-- **02-ejemplos**: Notebooks de RL (Q-Learning CartPole, DQN CartPole, Snake RL con Q-table y DQN)
-- **90-archivo**: Actividades RL y materiales comprimidos (snake_rl_materiales, snake_rl_completo, snake-rl-github)
-  - **`actividades-rl/`**: Actividad "Catch the Fruit" — RL opcional con Q-Table y DQN, entornos personalizados, guía con rúbrica y separación alumno/profesor.
+## IA clásica: búsqueda y juegos
 
-## Prácticas asociadas
-- (Material anexo — sin prácticas obligatorias asociadas)
+Introducción breve a problemas con reglas explícitas y espacios de estados:
 
-## Pendientes
-- [ ] Evaluar si el material de RL debe integrarse como unidad completa o mantenerse como anexo
-- [ ] Recibir el material histórico de 09-gpu-avanzado/90-archivo cuando esté organizado
+- [Guía de búsqueda y juegos](01-teoria/02-busqueda-y-juegos-ia-clasica.md):
+  DFS, BFS, A*, minimax y poda alfa-beta.
+- [Ejemplo de búsqueda en un laberinto](02-ejemplos/ia_clasica_busqueda.py).
+- [Ejemplo de minimax para tres en raya](02-ejemplos/ia_clasica_minimax.py).
+
+Duración orientativa: 3–4 horas. Los ejemplos usan Python estándar y no
+requieren instalar bibliotecas adicionales.
+
+## Otros materiales de ampliación
+
+- **IA neuro-simbólica:** [guía introductoria](01-teoria/01-UD-IA-NeuroSimbolica-I.md).
+- **Reinforcement learning:** materiales y notebooks de Q-learning, DQN y Snake.
+  Sigue las instrucciones de Moodle si se propone alguna actividad concreta.
+
+## Cómo trabajar estos anexos
+
+No necesitas completar todos los materiales. Elige el tema que te interese y
+consulta Moodle para saber si hay una actividad asociada a la clase. El trabajo
+de UD11 no modifica las calificaciones ordinarias de los RA/CE.
