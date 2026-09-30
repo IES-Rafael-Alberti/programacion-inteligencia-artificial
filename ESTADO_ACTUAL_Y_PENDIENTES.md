@@ -1,6 +1,6 @@
 # Estado actual y pendientes — PIA 2026-2027
 
-**Fecha de snapshot:** 2026-09-08
+**Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
 «Semicerrado» significa que el repositorio está listo para uso docente y no tiene bloqueos operativos, pero seguirá admitiendo mejoras cuando una revisión en profundidad o el uso real en aula revele cambios convenientes.
@@ -23,7 +23,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 - [x] Definida la evaluacion operativa 2026-2027: ponderacion de RA para Seneca, arbol e instrumentos del calificador Moodle y matriz individual RA/CE en `00-planificación/`.
 - [x] Las notas de continuidad técnica se separan del estado docente en `NOTAS_PROXIMA_SESION.md`; el fichero recoge la exploración pendiente del grafo Graphify y no sustituye esta hoja de ruta.
 - [x] Cerrada la sesión del 2026-08-19 dejando en `NOTAS_PROXIMA_SESION.md` el orden de trabajo recomendado para la siguiente sesión.
-- [x] Grafo de conocimiento Graphify generado para el corpus completo de PIA: 2.655 nodos, 3.508 aristas, 332 comunidades y salidas `graphify-out/graph.html`, `graphify-out/graph.json` y `graphify-out/GRAPH_REPORT.md`; el diagnóstico deja visibles 423 aristas con extremos ausentes y colapsos de endpoints, por lo que el grafo debe interpretarse como utilizable pero no íntegramente cerrado.
+- [x] Grafo de conocimiento Graphify generado para el corpus completo de PIA: 2.655 nodos, 3.508 aristas, 332 comunidades y salidas `graphify-out/graph.html`, `graphify-out/graph.json` y `graphify-out/GRAPH_REPORT.md`; el diagnóstico histórico registraba 423 aristas con extremos ausentes; la revisión del JSON actual del 2026-09-30 encuentra cero extremos ausentes en aristas e hiperconexiones. El grafo sigue siendo parcial para los materiales recientes de Moodle y no acredita publicación externa.
 - [x] Regenerado desde cero el chunk 03 de Graphify: `graphify-out/.graphify_chunk_03.json` contiene JSON válido y fue parseado tras la escritura (22 nodos, 20 aristas y 3 hiperconexiones; `DEEP_MODE=false`).
 - [x] Regenerado desde cero el chunk 04 de Graphify: `graphify-out/.graphify_chunk_04.json` contiene JSON válido y fue parseado tras la escritura (35 nodos, 27 aristas y 3 hiperconexiones; `DEEP_MODE=false`; 22/22 archivos representados).
 - [x] Regenerado desde cero el chunk 02 de Graphify: `graphify-out/.graphify_chunk_02.json` contiene JSON válido y fue parseado tras la escritura (41 nodos, 37 aristas y 3 hiperconexiones; `DEEP_MODE=false`).
@@ -39,7 +39,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 - [x] Navegación pública P0 corregida: las 12 páginas de unidad ofrecen destinos reales o estados explícitos para sus 60 secciones, una ruta común de puesta en marcha y una comprobación automática posterior al build.
 - [x] Rutas canónicas del alumnado aclaradas y normas comunes de entrega y uso de IA enlazadas desde las actividades evaluables activas de UD1–UD10 y UD12; UD11 queda fuera por ser anexo opcional sin evaluación ordinaria.
 - [x] Apéndice de dataset como grafo (Neo4j/Cypher) preparado para aula: apéndice versionado, kit de aula con mini-tarea del alumnado, fixture y bloques Cypher; demo y soluciones como material docente local.
-- [~] Validación GIFT en Moodle aplazada por mantenimiento de Moodle; no bloquea el cierre operativo del repo.
+- [ ] Validar los cuestionarios base GIFT de UD1 y UD2 en Moodle; el diagnóstico inicial ya consta como importado. El mantenimiento histórico no se considera un bloqueo actual sin una nueva comprobación.
 
 ## Revisión de `00-planificación` — 2026-08-20
 
@@ -100,7 +100,7 @@ La carpeta `00-planificación` se conserva como archivo de trazabilidad y materi
 ## Pendientes importantes
 
 - [x] **Reabrir UD4 (Deep Learning) para saneamiento estructural.** Cerrado operativamente el 2026-07-06: teoría separada, visión movida a UD8, NLP/Transformers a UD6, series temporales a UD10, proyectos tabulares decididos, recursos revisados, evaluación alineada y `mkdocs build --strict` validado.
-- [~] Validar en Moodle los cuestionarios base GIFT de UD1 y UD2 cuando Moodle vuelva a estar disponible; aplazado por mantenimiento externo.
+- [ ] Validar en Moodle los cuestionarios base GIFT de UD1 y UD2; no confundirlos con el diagnóstico inicial ya importado.
 - [x] Revisar ZIPs archivados reales con decisión explícita: conservar, mover, documentar o descartar (completado 2026-06-28).
 - [x] MCP queda incorporado a UD6 como contenido activo integrado en prácticas, documentación y evaluación. El refuerzo MCP de `06-llm-agentes/05-recursos/mcp-refuerzo/` se mantiene como material opcional condicionado al test inicial; el material antiguo de `06-llm-agentes/90-archivo/MCP-24-25/` queda como histórico.
 - [x] Revisar materiales de archivo (`90-archivo/` y `90-archivo-historico/`) antes de distribuirlos al alumnado (completado 2026-06-28).
@@ -121,9 +121,9 @@ La carpeta `00-planificación` se conserva como archivo de trazabilidad y materi
 ## Próximas acciones sugeridas
 
 1. Decidir si se solicita la purga del historial de `origin/main`: los tres materiales docentes retirados siguen recuperables en commits públicos anteriores; eliminarlos del historial requeriría reescribirlo y coordinar la actualización de clones.
-2. Antes de la clase del 2026-09-29, publicar y comprobar con una cuenta de prueba los recursos marcados como iniciales en `00-planificación/CHECKLIST_MOODLE_UD1_2026_2027.md`.
+2. Confirmar qué recursos iniciales están realmente visibles en Moodle y decidir la publicación de la documentación completa de Python: usar la checklist existente como inventario, ampliar el paquete de consulta con la secuencia NumPy/JAX ya corregida y comprobar el acceso con una cuenta de prueba. No marcar como publicados los archivos sólo preparados.
 3. Configurar y verificar en Seneca los pesos RA/CE de `00-planificación/PONDERACION_RA_SENECA_2026_2027.md`.
-4. Montar y comprobar con una cuenta de prueba el curso plantilla Moodle segun `00-planificación/CONFIGURACION_CALIFICADOR_MOODLE_2026_2027.md`, incluida la validacion de GIFT de UD1 y UD2 cuando termine el mantenimiento.
+4. Montar y comprobar con una cuenta de prueba el curso plantilla Moodle segun `00-planificación/CONFIGURACION_CALIFICADOR_MOODLE_2026_2027.md`, incluida la validación de los cuestionarios base GIFT de UD1 y UD2; el diagnóstico inicial ya está registrado como importado.
 5. Antes de evaluar al primer grupo, duplicar `00-planificación/plantilla_seguimiento_ra_ce.csv` por alumno y realizar una prueba con dos evidencias ficticias.
 6. Realizar las comprobaciones Windows/macOS de Pixi y de los ejemplos que se vayan a usar cuando haya equipos disponibles.
 7. El día que se imparta el apéndice de grafos: arrancar el contenedor Neo4j, cargar el fixture y repasar los resultados esperados de `demo-profesor.md`.
@@ -1881,3 +1881,33 @@ Continuar mañana desde esta ruta y atender incidencias reales del curso.
 ### Siguiente paso recomendado
 
 En la próxima sesión, comprobar el resultado de la copia Unison y continuar trabajando desde `teacher`. Pasar cambios a `origin/main` sólo mediante selección explícita de archivos públicos, validación MkDocs y comprobador de navegación.
+
+
+## Revisión — 2026-09-30 (Graphify, Moodle y orden de Python)
+
+### Comprobado
+
+- [x] Revisados `graphify-out/graph.json`, la hoja de ruta, la checklist Moodle, el paquete inicial y los índices y contenidos de teoría UD1. No se ha accedido a Moodle ni se ha publicado ningún recurso en esta revisión.
+- [x] El JSON actual conserva 2.655 nodos, 3.508 aristas, 332 comunidades y 62 hiperconexiones: cero extremos ausentes en aristas e hiperconexiones y cero rutas de origen inexistentes. La cifra histórica de 423 no describe este JSON. `built_at_commit` apunta a `fb91cdcd` (2026-08-18); la fecha reciente del archivo no garantiza una extracción reciente.
+- [x] El grafo no contiene nodos de origen para `00-planificación/CHECKLIST_MOODLE_UD1_2026_2027.md` ni `Moodle/00-inicio-ud1/README.md`; estos documentos deben consultarse directamente. La CLI Graphify no está disponible en el entorno revisado; se inspeccionó el JSON sin instalar ni regenerar nada.
+- [x] Localizado el plan de publicación en `00-planificación/CHECKLIST_MOODLE_UD1_2026_2027.md` y su inventario de 10 archivos en `Moodle/00-inicio-ud1/README.md`. El paquete es de arranque, no reúne toda la teoría ni todos los notebooks UD1.
+- [x] La única importación Moodle explícitamente registrada en esa checklist es el diagnóstico técnico inicial, no evaluable. El resto de las casillas de publicación siguen sin confirmar: preparar PDFs o publicar en GitHub Pages no demuestra una subida a Moodle.
+- [x] La dosificación documentada consiste en publicar el siguiente notebook tras completar el inicio y abrir evaluación sólo con enunciado, rúbrica y plazo. No se ha encontrado una justificación técnica para retener toda la documentación de consulta de Python.
+- [x] Detectada una incoherencia real en `01-fundamentos-python/01-teoria/05-guia-numpy-jax.md`: es una guía heredada de NumPy/Pandas, no una explicación de JAX; menciona notebooks con nombres antiguos. El commit `6e48e0df` renombró la guía semanal y la introducción NumPy sin cambiar sus contenidos. El índice actual coloca rendimiento (`05`) antes de introducción NumPy (`06`) y usa esa misma guía como apoyo de JAX (`08`).
+
+### Recomendación pendiente de confirmación
+
+- [ ] Publicar ya la documentación de consulta de Python y los ejemplos guiados destinados al alumnado, manteniendo el ritmo de trabajo indicado en clase. No incluir soluciones, `99-profesor/`, GIFT con respuestas ni abrir futuras tareas evaluables automáticamente.
+- [x] Corregida la guía heredada y alineada la secuencia: teoría `05-numpy-introduccion.md` + notebook `05_numpy_fundamentos.ipynb` → `06_numpy_rendimiento.ipynb` → broadcasting `07` → guía `08-guia-numpy-jax.md` y notebook JAX `08`. La guía explica la mejora posterior a NumPy, sin presentar Pandas como contenido del bloque.
+- [x] Actualizados el índice activo de teoría y los títulos de los notebooks renumerados. No se encontraron referencias a estas cuatro rutas antiguas en el guion docente, checklist Moodle o inventario del paquete inicial: sus 10 archivos de arranque no incluyen los materiales renombrados, por lo que no necesitan regenerarse.
+- [ ] Confirmar con el docente o mediante acceso autorizado qué archivos están realmente visibles en Moodle; después actualizar la checklist y registrar fecha y alcance de publicación. La validación de los GIFT base UD1/UD2 sigue pendiente, pero no se atribuye a mantenimiento sin verificarlo.
+
+### Rutas y siguiente paso
+
+- [x] Revisión independiente de los cambios aprobada para consolidación docente; publicación web aún requiere build estricto y comprobación de navegación.
+- [ ] Antes de publicar el notebook `08_introduccion_jax_comparativa.ipynb`, ajustar el benchmark: tipos numéricos equivalentes en NumPy/JAX y tamaño de arrays adecuado para equipos de aula. Es una incidencia preexistente y no bloquea publicar la documentación teórica de consulta.
+- Rutas modificadas: `ESTADO_ACTUAL_Y_PENDIENTES.md`, `01-fundamentos-python/01-teoria/README.md`, teoría NumPy `06` → `05`, guía NumPy/JAX `05` → `08`, notebook fundamentos `06` → `05` y notebook rendimiento `05` → `06`. El grafo y los archivos Moodle de arranque se han conservado.
+- Siguiente paso recomendado: revisar la corrección NumPy/JAX y confirmar la publicación de consulta completa; después preparar el inventario ampliado Moodle y comprobarlo con una cuenta de alumnado. La subida real sigue pendiente.
+- Las menciones a mantenimiento en cierres históricos describen su fecha de registro, no un bloqueo vigente. Para el estado actual prevalece esta revisión y los pendientes de cabecera.
+
+- [x] Validaciones locales: notebooks renombrados parsean como JSON y conservan las celdas de código y sus salidas; enlaces locales de la guía y destinos del índice comprobados, sin referencias antiguas en documentos activos. `git diff --check` sin errores. Graphify no se actualiza porque su CLI no está disponible; sus rutas NumPy renombradas quedan pendientes de refresco.
