@@ -1905,6 +1905,8 @@ En la próxima sesión, comprobar el resultado de la copia Unison y continuar tr
 ### Rutas y siguiente paso
 
 - [x] Revisión independiente de los cambios aprobada para consolidación docente; publicación web aún requiere build estricto y comprobación de navegación.
+- [x] Generados 12 PDFs de teoría y recursos de consulta de Python UD1 en `Moodle/01-ud1-documentacion-python/`, con índice de fuentes y destinos. Se preservan los Markdown originales; no se convierten notebooks, ejercicios, evaluación ni documentos ajenos a Python.
+- [ ] Subir los 12 PDFs de consulta de Python a Moodle y verificar su visibilidad con una cuenta de alumnado; la generación local no equivale a publicación.
 - [ ] Antes de publicar el notebook `08_introduccion_jax_comparativa.ipynb`, ajustar el benchmark: tipos numéricos equivalentes en NumPy/JAX y tamaño de arrays adecuado para equipos de aula. Es una incidencia preexistente y no bloquea publicar la documentación teórica de consulta.
 - Rutas modificadas: `ESTADO_ACTUAL_Y_PENDIENTES.md`, `01-fundamentos-python/01-teoria/README.md`, teoría NumPy `06` → `05`, guía NumPy/JAX `05` → `08`, notebook fundamentos `06` → `05` y notebook rendimiento `05` → `06`. El grafo y los archivos Moodle de arranque se han conservado.
 - Siguiente paso recomendado: revisar la corrección NumPy/JAX y confirmar la publicación de consulta completa; después preparar el inventario ampliado Moodle y comprobarlo con una cuenta de alumnado. La subida real sigue pendiente.
