@@ -122,7 +122,7 @@ La carpeta `00-planificación` se conserva como archivo de trazabilidad y materi
 
 ## Próximas acciones sugeridas
 
-1. Decidir si se solicita la purga del historial de `origin/main`: los tres materiales docentes retirados siguen recuperables en commits públicos anteriores; eliminarlos del historial requeriría reescribirlo y coordinar la actualización de clones.
+1. En la próxima sesión, abrir en `teacher` y revisar el contenido de los tres archivos retirados de `origin/main`: `03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/notebooks/profesor/P2_PyCaret_sol.ipynb`, `03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/notebooks/profesor/P3_Modelo_sol.ipynb` y `06-llm-agentes/02-ejemplos/nlp-transformers-ud4/tareas/Transformers_Test_Moodle.gift`; después decidir si se solicita la purga del historial público. Los archivos siguen recuperables en commits anteriores y purgarlos requiere reescribir historial y coordinar clones.
 2. Confirmar qué recursos iniciales están realmente visibles en Moodle y decidir la publicación de la documentación completa de Python: usar la checklist existente como inventario, ampliar el paquete de consulta con la secuencia NumPy/JAX ya corregida y comprobar el acceso con una cuenta de prueba. No marcar como publicados los archivos sólo preparados.
 3. Configurar y verificar en Seneca los pesos RA/CE de `00-planificación/PONDERACION_RA_SENECA_2026_2027.md`.
 4. Montar y comprobar con una cuenta de prueba el curso plantilla Moodle segun `00-planificación/CONFIGURACION_CALIFICADOR_MOODLE_2026_2027.md`, incluida la validación de los cuestionarios base GIFT de UD1 y UD2; el diagnóstico inicial ya está registrado como importado.
@@ -130,6 +130,14 @@ La carpeta `00-planificación` se conserva como archivo de trazabilidad y materi
 6. Realizar las comprobaciones Windows/macOS de Pixi y de los ejemplos que se vayan a usar cuando haya equipos disponibles.
 7. El día que se imparta el apéndice de grafos: arrancar el contenedor Neo4j, cargar el fixture y repasar los resultados esperados de `demo-profesor.md`.
 8. Profundizar o adaptar prácticas concretas solo si el uso durante el curso revela una necesidad docente real.
+
+## Agenda de la próxima sesión
+
+1. Revisar el apéndice optativo de IA clásica de UD11 y sus ejemplos DFS/BFS/A*, minimax y alfa-beta.
+2. Inspeccionar los tres archivos docentes que permanecen en el historial público y decidir si hace falta solicitar su purga; no reescribir el historial sin acordar coordinación y clones.
+3. Comprobar qué recursos UD0/UD1 están realmente publicados en Moodle; decidir el alcance de la documentación de Python, verificar que el cuestionario base sigue oculto y comprobar si se creó la encuesta Feedback.
+4. Revisar el guion docente de segunda clase de PIA, en particular el ritmo de funciones/listas y la explicación del valor mutable por defecto.
+5. Preparar el inicio de SBD con el método de PIA: primero revisar el estado del repo, la presentación y los guiones existentes; después ajustar la clase de dos horas y organizar los materiales Moodle por unidad, conservando el paquete como preparación temporal excluida de Git.
 
 
 ## Continuación — 2026-07-21 (normas comunes de entrega y uso de IA)
