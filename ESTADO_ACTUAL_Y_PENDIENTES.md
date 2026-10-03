@@ -9,7 +9,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 
 ## Estado operativo actual
 
-- [x] Añadida a la guía de Python de UD1 la advertencia sobre listas y otros valores mutables como parámetros por defecto, con el patrón recomendado de `None`; enlazada desde la ampliación del guion de segunda clase. Actualización pública `origin/main` en `b0a50719`; guion y PDF regenerado en el paquete Moodle permanecen locales/docentes.
+- [x] Añadida a la guía de Python de UD1 la trampa práctica de listas y otros valores mutables como parámetros por defecto, con el patrón recomendado de `None`; enlazada desde la ampliación del guion de segunda clase. Actualización pública `origin/main` en `b0a50719`; guion y PDF regenerado en el paquete Moodle permanecen locales/docentes.
 - [x] Preparado el guion de la segunda clase de PIA según el avance real: revisión de control de flujo, funciones con parámetros y `return`, y aplicación a listas con una ruta alternativa de refuerzo.
 - [x] Preparado y publicado el apéndice optativo de IA clásica en UD11: guía de búsqueda y juegos, ejemplos Python autocontenidos de DFS/BFS/A* y minimax/alfa-beta. Commit privado `be2b1a6d`, publicación en `origin/main` `703f3aa8`; no añade evaluación ordinaria.
 - [x] Corregida la estructura de las tres tablas Markdown del guion docente y revisadas las tildes y la ortografía del documento.

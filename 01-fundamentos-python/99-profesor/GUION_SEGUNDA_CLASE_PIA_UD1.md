@@ -126,7 +126,7 @@ notas = [4, 7, 5, 3, 9, 6]
   parámetro.
 - Calcular la media de las notas con acumulador y devolverla desde una función.
 - Probar la función con una lista vacía y discutir qué resultado tendría sentido.
-- Si ya pasan listas a funciones, explicar el [valor mutable como parámetro por defecto](../01-teoria/03-python-esencial-control-funciones-patrones.md#cuidado-con-las-listas-como-parámetros-por-defecto): el `[]` de la definición no se crea de nuevo en cada llamada; usar `None` cuando se necesita una lista independiente.
+- Si ya pasan listas a funciones, explicar la [trampa de las listas como parámetros por defecto](../01-teoria/03-python-esencial-control-funciones-patrones.md#trampa-común-listas-como-parámetros-por-defecto): es fácil olvidarla si hace tiempo que no se usan listas; el `[]` de la definición no se crea de nuevo en cada llamada. Usar `None` cuando se necesita una lista independiente.
 
 Estas ampliaciones no deben convertirse en requisito para el resto del grupo.
 

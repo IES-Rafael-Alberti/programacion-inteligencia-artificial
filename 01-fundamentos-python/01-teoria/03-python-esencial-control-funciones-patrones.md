@@ -36,12 +36,12 @@ def normalizar(valor, minimo, maximo):
 
 Una función útil tiene una responsabilidad clara y un nombre que explica la intención.
 
-### Cuidado con las listas como parámetros por defecto
+### Trampa común: listas como parámetros por defecto
 
-Los valores por defecto de los parámetros se evalúan una sola vez, cuando Python
-ejecuta la definición de la función. Si el valor por defecto es una lista,
-diccionario o conjunto, las llamadas que omiten ese argumento comparten el mismo
-objeto mutable.
+Es fácil caer en esta trampa cuando hace tiempo que no trabajas con listas: el
+valor por defecto de un parámetro se evalúa una sola vez, al definir la función.
+Si ese valor es una lista, diccionario o conjunto, las llamadas que omiten el
+argumento comparten el mismo objeto mutable.
 
 Este ejemplo puede sorprender:
 
