@@ -36,6 +36,41 @@ def normalizar(valor, minimo, maximo):
 
 Una función útil tiene una responsabilidad clara y un nombre que explica la intención.
 
+### Cuidado con las listas como parámetros por defecto
+
+Los valores por defecto de los parámetros se evalúan una sola vez, cuando Python
+ejecuta la definición de la función. Si el valor por defecto es una lista,
+diccionario o conjunto, las llamadas que omiten ese argumento comparten el mismo
+objeto mutable.
+
+Este ejemplo puede sorprender:
+
+```python
+def agregar_elemento(elemento, elementos=[]):
+    elementos.append(elemento)
+    return elementos
+
+print(agregar_elemento("a"))  # ['a']
+print(agregar_elemento("b"))  # ['a', 'b'] — conserva la lista de la llamada anterior
+```
+
+La función no crea una lista nueva en cada llamada. Para obtener una lista nueva
+cuando no se proporciona ninguna, usa `None` como valor centinela:
+
+```python
+def agregar_elemento(elemento, elementos=None):
+    if elementos is None:
+        elementos = []
+    elementos.append(elemento)
+    return elementos
+
+print(agregar_elemento("a"))  # ['a']
+print(agregar_elemento("b"))  # ['b'] — llamada independiente
+```
+
+Si quien llama proporciona explícitamente una lista, la función modificará esa
+lista. Eso puede ser intencional; conviene documentarlo y tenerlo en cuenta.
+
 ## Errores y ficheros
 
 No hace falta profundizar aún en entrada/salida, pero sí reconocer el patrón básico:
