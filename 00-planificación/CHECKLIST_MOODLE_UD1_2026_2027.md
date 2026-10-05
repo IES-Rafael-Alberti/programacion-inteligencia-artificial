@@ -26,9 +26,13 @@ subcarpeta para relacionar los archivos con sus fuentes.
 
 - [ ] Crear la sección `UD1 - Fundamentos de Python`.
 - [ ] Publicar la documentación preparada en `Moodle/01-UD1/01-documentacion/`.
-- [ ] Publicar el ejemplo de inicio desde `Moodle/01-UD1/02-ejemplos/`.
+- [ ] Publicar o confirmar el notebook inicial desde `Moodle/01-UD1/02-ejemplos/`.
+- [ ] Publicar el notebook de estructuras adicionales desde
+  `Moodle/01-UD1/02-ejemplos/` para la siguiente sesión.
 - [ ] Publicar el notebook de repaso desde `Moodle/01-UD1/03-practicas/` como
   recurso sin calificación.
+- [ ] Si se alcanza POO en la siguiente sesión, publicar el ejemplo y los
+  ejercicios de POO; si no, dejarlos preparados para una sesión posterior.
 - [ ] Indicar Pixi `default` para JupyterLab y Google Colab como alternativa
   temporal si un equipo no puede preparar Pixi.
 
