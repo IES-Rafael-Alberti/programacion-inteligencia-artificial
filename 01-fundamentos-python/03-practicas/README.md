@@ -1,6 +1,8 @@
 # Prácticas UD1 — Fundamentos de Python
 
-Esta carpeta contiene las prácticas de alumnado. Las soluciones y versiones de revisión se han separado a `../99-profesor/` para no mezclarlas con el flujo público.
+Aquí encontrarás notebooks y enunciados para practicar Python, estructuras de
+datos y NumPy. En Moodle se indicará qué material se trabaja en cada sesión y si
+alguna actividad requiere una entrega.
 
 ## Prácticas disponibles
 
@@ -13,14 +15,10 @@ Esta carpeta contiene las prácticas de alumnado. Las soluciones y versiones de 
 | `10-ejercicios_numpy.ipynb` | Ejercicios NumPy en notebook. |
 | `10-ejercicios_numpy-tests.md` | Enunciados con enfoque de autocorrección. |
 | `10-ejercicios_numpy-tests.ipynb` | Ejercicios NumPy con tests. |
+| `06-ejercicios_poo.ipynb` | Ejercicios de orientación a objetos. |
 
-## Material docente separado
+El cuaderno de POO es una ampliación: úsalo cuando se hayan trabajado clases,
+instancias y métodos en la sesión.
 
-- Soluciones y notebooks con tests resueltos: `../99-profesor/03-practicas-soluciones/`.
-- Variante revisable del cuaderno de tests NumPy que estaba duplicada en `ejercicios/`: `../99-profesor/03-practicas-revision/`.
-
-## Criterio aplicado
-
-- Mantener en esta carpeta solo material entregable o trabajable por alumnado.
-- Evitar subdirectorios pequeños con duplicados aparentes.
-- Conservar soluciones fuera del flujo público.
+Antes de entregar una actividad, sigue el enunciado, la fecha y la rúbrica que se
+publiquen en Moodle. No todos los notebooks de esta carpeta son tareas evaluables.

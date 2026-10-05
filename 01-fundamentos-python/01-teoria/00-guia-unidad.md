@@ -27,6 +27,7 @@ Esta unidad introduce los **fundamentos de Python**, base imprescindible para to
 - Usar variables y tipos de datos.
 - Aplicar estructuras de control (condicionales y bucles).
 - Definir y utilizar funciones simples.
+- Modelar datos y comportamientos con clases, composición y herencia básica.
 - Entender la lógica detrás de un programa.
 
 ---
@@ -39,6 +40,7 @@ Esta unidad introduce los **fundamentos de Python**, base imprescindible para to
 - Condicionales (`if`, `elif`, `else`).
 - Bucles (`for`, `while`).
 - Funciones (`def`, parámetros, retorno).
+- Orientación a objetos: clases, instancias, métodos, composición, herencia y métodos especiales.
 
 ---
 
@@ -56,6 +58,7 @@ Esta unidad introduce los **fundamentos de Python**, base imprescindible para to
 4. **Mini-proyecto grupal** → Simulador de notas de alumnos:
    - Entrada: lista de calificaciones.
    - Salida: nota media, nota máxima, número de aprobados y suspensos.
+5. **Actividad de orientación a objetos** → Convertir el simulador en clases `Alumno` y `Curso`, e identificar qué parte podría reutilizarse después en un `Dataset`.
 
 ---
 
