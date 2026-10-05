@@ -1,0 +1,69 @@
+::UD1_EDA_NUMPY_01::¿Cuál es la regla básica de compatibilidad del broadcasting desde la última dimensión? {
+=Cada par de dimensiones debe ser igual o una de ellas debe valer 1. #La comparación se realiza de derecha a izquierda.
+~La primera dimensión siempre debe ser igual. #La comparación comienza por la última dimensión.
+~Todas las dimensiones deben ser iguales. #El valor 1 permite expandir una dimensión.
+~Solo se permite combinar arrays unidimensionales. #También se combinan arrays de varias dimensiones.
+}
+
+::UD1_EDA_NUMPY_02::Si `matriz` tiene forma `(3, 2)` y `vector` forma `(2,)`, ¿qué ocurre al sumar ambos? {
+=El vector se aplica a cada fila y el resultado tiene forma `(3, 2)`. #La última dimensión coincide y el vector se difunde sobre las filas.
+~Se produce un error porque las dimensiones iniciales no coinciden. #La dimensión ausente del vector puede alinearse por la derecha.
+~El resultado tiene forma `(2, 3)`. #El broadcasting no intercambia los ejes.
+~Solo se suma la primera fila. #La operación se aplica a todas las filas.
+}
+
+::UD1_EDA_NUMPY_03::Si `matriz` tiene forma `(3, 2)` y `columna` forma `(3, 1)`, ¿qué resultado produce `matriz + columna`? {
+=Se suma cada valor de la columna a la fila correspondiente y el resultado es `(3, 2)`. #La dimensión 1 se expande a las dos columnas.
+~Se produce un error porque 2 y 3 son distintos. #La comparación alineada es `(2, 1)`, que sí es compatible.
+~El resultado tiene forma `(3, 1)`. #La operación conserva las dos columnas de la matriz.
+~Se repite la matriz tres veces y resulta `(9, 2)`. #No se replica el eje de filas de esa manera.
+}
+
+::UD1_EDA_NUMPY_04::¿Qué sucede al intentar sumar arrays de formas `(2, 3)` y `(4, 3)`? {
+=El broadcasting falla porque las dimensiones 2 y 4 no son iguales ni valen 1. #La última dimensión coincide, pero la anterior es incompatible.
+~El segundo array se convierte automáticamente en forma `(2, 3)`. #NumPy no cambia arbitrariamente la forma.
+~Se obtiene siempre un escalar. #Una suma elemento a elemento compatible no produce necesariamente un escalar.
+~Se concatenan por filas. #La suma no concatena arrays.
+}
+
+::UD1_EDA_NUMPY_05::¿Para qué sirve fijar `np.random.seed(7)` antes de generar datos aleatorios? {
+=Para hacer reproducible la secuencia pseudoaleatoria generada. #La misma semilla permite repetir la misma secuencia en condiciones iguales.
+~Para eliminar todos los valores atípicos. #La semilla no modifica la distribución de esa forma.
+~Para convertir los datos en enteros. #El tipo depende de la función y sus argumentos.
+~Para ordenar automáticamente el array. #La semilla no ordena datos.
+}
+
+::UD1_EDA_NUMPY_06::Dado `x \= np.array([2, 5, 8])`, ¿qué expresión selecciona los valores mayores que 4? {
+=`x[x > 4]` #La comparación crea una máscara booleana que indexa el array.
+~`x[4]` #Eso intenta acceder a una posición concreta y no compara valores.
+~`x > 4` #Eso devuelve la máscara, no los valores seleccionados.
+~`np.where(x)` #`where` requiere una condición y no expresa esa selección por sí sola.
+}
+
+::UD1_EDA_NUMPY_07::¿Cómo se detectan los valores NaN de un array `x`? {
+=Con `np.isnan(x)`. #Devuelve una máscara booleana con True en las posiciones NaN.
+~Con `x \=\= np.nan`. #Las comparaciones directas con NaN no funcionan como prueba fiable.
+~Con `np.isfinite(x)` exclusivamente. #`isfinite` detecta finitos, no identifica específicamente NaN.
+~Con `x.shape`. #`shape` solo describe la forma.
+}
+
+::UD1_EDA_NUMPY_08::Para reemplazar NaN por la media calculada con los valores válidos, ¿qué enfoque es adecuado? {
+=Calcular la media ignorando NaN y asignarla donde `np.isnan(x)` sea True. #La máscara permite reemplazar solo las posiciones ausentes.
+~Sustituir todos los valores por cero sin revisar la máscara. #Eso descarta información válida y no usa la media.
+~Aplicar `reshape` sobre los NaN. #Cambiar la forma no imputa valores.
+~Usar `np.corrcoef` sobre cada NaN. #La correlación no es una técnica de reemplazo.
+}
+
+::UD1_EDA_NUMPY_09::Con Q1, Q3 e IQR definidos como `Q3 - Q1`, ¿qué criterio identifica un outlier superior? {
+=Un valor mayor que `Q3 + 1.5 * IQR`. #Es el umbral superior habitual basado en el rango intercuartílico.
+~Un valor mayor que la media siempre. #Superar la media no implica ser un outlier.
+~Un valor igual a Q1. #Q1 es un cuartil, no un umbral superior.
+~Un valor menor que `Q1 - 1.5 * IQR`. #Ese es el criterio inferior.
+}
+
+::UD1_EDA_NUMPY_10::¿Qué afirmación describe correctamente una herramienta de EDA con NumPy? {
+=`np.corrcoef` resume correlaciones lineales y `np.column_stack` puede combinar columnas por filas. #Ambas operaciones ayudan a explorar relaciones y estructurar datos.
+~Una correlación demuestra por sí sola una relación de causa y efecto. #Correlación no basta para establecer causa y efecto.
+~La normalización min-max elimina necesariamente los outliers. #Escala los valores, pero no elimina necesariamente extremos.
+~`np.where` solo sirve para generar números aleatorios. #`where` selecciona o asigna según una condición.
+}

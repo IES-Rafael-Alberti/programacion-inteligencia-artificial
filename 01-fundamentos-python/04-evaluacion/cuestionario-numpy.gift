@@ -1,0 +1,69 @@
+::UD1_NUMPY_01::¿Qué es un `ndarray` de NumPy? {
+=Una estructura multidimensional para almacenar datos homogéneos. #El array ofrece forma, tipo y operaciones vectorizadas.
+~Una lista de Python que solo puede contener texto. #Una lista no tiene las mismas garantías ni operaciones.
+~Un diccionario ordenado de claves numéricas. #Un diccionario es otra estructura de Python.
+~Un iterador que solo produce valores una vez. #Un `ndarray` permite acceso y operaciones repetidas.
+}
+
+::UD1_NUMPY_02::¿Qué información proporciona `a.shape`? {
+=Las dimensiones y el tamaño de cada eje del array. #`shape` describe la forma, por ejemplo filas y columnas.
+~El tipo de datos de cada elemento. #Esa información la proporciona `dtype`.
+~El número total de bytes siempre. #El tamaño en bytes se consulta con otras propiedades.
+~El número de ejes únicamente. #El número de ejes es `ndim`.
+}
+
+::UD1_NUMPY_03::¿Qué resultado conceptual produce `np.array([1, 2, 3])`? {
+=Un `ndarray` unidimensional con tres elementos. #`np.array` construye un array a partir de la secuencia.
+~Una matriz identidad de tamaño tres. #La matriz identidad se crea con `np.eye`.
+~Un array vacío sin forma. #La secuencia aporta tres elementos y una forma definida.
+~Una lista enlazada de Python. #El resultado pertenece a NumPy.
+}
+
+::UD1_NUMPY_04::¿Qué función crea un array de ceros con una forma indicada? {
+=`np.zeros` #`zeros` inicializa todos los elementos a cero.
+~`np.ones` #`ones` inicializa todos los elementos a uno.
+~`np.arange` #`arange` genera una secuencia espaciada.
+~`np.eye` #`eye` crea una matriz identidad.
+}
+
+::UD1_NUMPY_05::¿Qué permite hacer `astype`? {
+=Convertir el array a otro tipo de datos. #`astype` devuelve un array con el `dtype` solicitado.
+~Cambiar únicamente su número de filas. #La forma se modifica con operaciones como `reshape`.
+~Ordenar siempre los elementos. #El ordenamiento usa funciones específicas.
+~Concatenar dos arrays sin indicar un eje. #La concatenación usa funciones como `concatenate`.
+}
+
+::UD1_NUMPY_06::Si `a` y `b` tienen la misma forma, ¿qué realiza normalmente `a + b`? {
+=Una suma elemento a elemento. #Las operaciones entre arrays se aplican posición a posición cuando las formas son compatibles.
+~Una multiplicación matricial avanzada. #La multiplicación matricial no es la interpretación general de `+`.
+~Una concatenación automática. #Concatenar requiere una función específica.
+~Una conversión de `b` a lista. #Los operandos siguen siendo arrays.
+}
+
+::UD1_NUMPY_07::¿Qué expresa `a.mean(axis\=0)` en un array bidimensional compatible? {
+=La media calculada a lo largo del eje 0. #El eje indicado se reduce y se conserva el resumen de los otros ejes.
+~La media de todos los elementos sin conservar ningún eje. #Eso corresponde a omitir `axis` o usar una reducción global.
+~El valor máximo de cada fila. #El máximo se calcula con `max`.
+~La desviación estándar de cada columna. #La desviación estándar se calcula con `std`.
+}
+
+::UD1_NUMPY_08::¿Qué condición debe cumplir `reshape` para conservar todos los datos? {
+=La nueva forma debe tener el mismo número total de elementos. #`reshape` reorganiza, pero no elimina ni crea elementos.
+~La nueva forma debe ser siempre cuadrada. #Puede tener cualquier forma compatible.
+~El array debe ser de tipo texto. #El tipo de datos no impone esa condición.
+~La nueva forma debe tener más dimensiones. #También puede tener menos o las mismas dimensiones.
+}
+
+::UD1_NUMPY_09::¿Qué se entiende por vectorización en NumPy? {
+=Aplicar operaciones sobre arrays completos evitando bucles Python explícitos cuando procede. #Las ufuncs y operaciones de NumPy aprovechan operaciones por bloques.
+~Convertir todos los arrays en listas. #Eso suele perder las ventajas de NumPy.
+~Usar siempre álgebra lineal avanzada. #La vectorización también se aplica a operaciones elementales.
+~Medir el tamaño de un array con `shape`. #`shape` describe forma, no vectorización.
+}
+
+::UD1_NUMPY_10::¿Qué herramienta permite comparar tiempos de ejecución de fragmentos pequeños de código? {
+=`timeit` o una función de `bench` preparada para medir. #La medición repetida permite comparar implementaciones sin fijar cifras universales.
+~`dtype` #`dtype` describe tipos, no tiempos.
+~`reshape` #`reshape` cambia la forma.
+~`repr` #`repr` genera una representación textual.
+}

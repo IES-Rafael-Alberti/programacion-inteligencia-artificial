@@ -2,6 +2,11 @@
 
 > **Documento interno del profesorado. No publicar en GitHub Pages ni en Moodle.**
 
+> **Registro de continuidad:** la clase se impartió y el grupo completó un
+> cuestionario y ejercicios básicos, llegando hasta estructuras de datos
+> fundamentales. Este guion conserva la planificación prevista; para la sesión
+> siguiente, usar `GUION_TERCERA_CLASE_PIA_UD1.md`.
+
 **Duración:** 2 horas.  
 **Punto de continuidad:** en la primera clase se presentó el módulo y se llegó
 hasta control de flujo. Aunque al principio parecía que el grupo dominaba Python,

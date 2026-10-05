@@ -1,0 +1,69 @@
+::UD1_POO_01::¿Qué representa una instancia en programación orientada a objetos? {
+=Un objeto concreto creado a partir de una clase. #Una instancia es un objeto concreto de una clase.
+~La definición general de sus operaciones. #Esa es la función de la clase.
+~Un módulo que contiene varias clases. #Un módulo organiza código, pero no es necesariamente una instancia.
+~Un paquete externo de Python. #Una instancia pertenece al modelo de objetos, no a la distribución de paquetes.
+}
+
+::UD1_POO_02::En el método `__init__`, ¿qué papel desempeña `self`? {
+=Referencia a la instancia que se está inicializando. #`self` permite acceder al estado y comportamiento de esa instancia.
+~Referencia automática a la clase padre. #La clase padre se trata con herencia y `super()`.
+~Nombre reservado para el primer atributo. #`self` representa la instancia, no un atributo concreto.
+~Valor que indica que el método es estático. #Un método estático no recibe `self` implícitamente.
+}
+
+::UD1_POO_03::Dada la clase `Cuenta` con `__init__` que asigna `self.saldo`, ¿qué expresión lee el atributo de una instancia `c`? {
+=`c.saldo` #La notación de punto accede al atributo de la instancia.
+~`Cuenta.saldo()` #El saldo es un atributo, no una llamada a método.
+~`self.saldo` desde cualquier módulo. #`self` solo tiene sentido dentro de los métodos de la clase.
+~`c.__init__.saldo` #`__init__` es un método de inicialización, no el propietario del atributo.
+}
+
+::UD1_POO_04::¿Qué describe mejor la composición? {
+=Una clase contiene o utiliza objetos de otras clases. #La composición expresa una relación de tipo “tiene un”.
+~Una clase hereda todos los métodos de otra. #Eso describe la herencia.
+~Un atributo se convierte siempre en privado. #La visibilidad no define la composición.
+~Una función se transforma en módulo. #No es una relación entre objetos.
+}
+
+::UD1_POO_05::Si `Perro` hereda de `Animal`, ¿qué expresa esa relación? {
+=`Perro` es una especialización de `Animal`. #La herencia modela una relación de tipo “es un”.
+~`Animal` contiene obligatoriamente una instancia de `Perro`. #Eso sería composición, no herencia.
+~Ambas clases deben tener exactamente los mismos atributos. #La subclase puede ampliar o redefinir el comportamiento.
+~`Perro` deja de ser una clase. #La subclase sigue siendo una clase.
+}
+
+::UD1_POO_06::En un método redefinido de una subclase, ¿para qué se usa habitualmente `super()`? {
+=Para invocar la implementación de la clase padre. #Permite reutilizar la inicialización o comportamiento heredado.
+~Para crear siempre una instancia independiente. #La creación de instancias se realiza llamando a la clase.
+~Para ocultar todos los atributos públicos. #`super()` no cambia la visibilidad de los atributos.
+~Para convertir el método en estático. #La decoración estática se expresa con `@staticmethod`.
+}
+
+::UD1_POO_07::¿Cuál es la diferencia práctica entre `_atributo` y `__atributo`? {
+=El doble guion bajo activa name mangling; el simple comunica uso interno por convención. #`__atributo` se renombra internamente con el nombre de la clase.
+~El simple guion bajo impide siempre el acceso y el doble lo permite. #La relación es la contraria y ninguno es una seguridad absoluta.
+~Ambos son métodos especiales de Python. #Son nombres de atributos, no métodos especiales por sí mismos.
+~El doble guion bajo convierte el atributo en constante. #No existe esa conversión automática.
+}
+
+::UD1_POO_08::¿Qué finalidad tiene definir `__repr__` en una clase? {
+=Proporcionar una representación textual útil y no ambigua del objeto. #Facilita inspección, depuración y representación en la consola.
+~Controlar cuántos elementos devuelve `len`. #Ese protocolo corresponde a `__len__`.
+~Permitir indexar el objeto. #La indexación se implementa con `__getitem__`.
+~Inicializar automáticamente la clase padre. #La inicialización se gestiona en `__init__` y, si procede, `super()`.
+}
+
+::UD1_POO_09::Si una clase define `__len__` y `__getitem__`, ¿qué operaciones puede admitir de forma natural? {
+=`len(objeto)` y `objeto[indice]`. #Esos protocolos conectan la clase con longitud e indexación.
+~`repr(objeto)` y `objeto + otro`. #`repr` requiere `__repr__` y la suma requiere otro protocolo.
+~`objeto()`, y `objeto \=\= otro`. #La llamada y la igualdad tienen protocolos distintos.
+~Solo la impresión con `print`. #La impresión no es el objetivo específico de esos dos métodos.
+}
+
+::UD1_POO_10::¿Qué aporta `@dataclass` a una clase de datos sencilla? {
+=Genera automáticamente métodos habituales como `__init__` y una representación. #Reduce código repetitivo para clases centradas en almacenar datos.
+~Convierte todos los atributos en privados mediante name mangling. #La privacidad no se aplica automáticamente de ese modo.
+~Sustituye la herencia por composición. #No decide la relación entre clases.
+~Impide modificar los valores de las instancias. #La inmutabilidad requiere opciones específicas y no es el comportamiento general.
+}

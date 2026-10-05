@@ -12,6 +12,8 @@ Tras la reorganización, UD4 deja de ser el contenedor de visión y NLP aplicado
 
 ## Ruta recomendada
 
+Antes de la ruta PyTorch, consulta la [guía de orientación a objetos de Python](../01-fundamentos-python/01-teoria/04c-orientacion-objetos-python.md).
+
 1. Empieza por el [índice de teoría](01-teoria/README.md).
 2. Realiza los [tres laboratorios canónicos](03-practicas/laboratorios/README.md) en orden.
 3. Consulta la [evaluación](04-evaluacion/README.md) antes de preparar la entrega.

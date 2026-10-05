@@ -1,29 +1,20 @@
-# Evaluación base — UD1 Fundamentos de Python
+# Evaluación — UD1 Fundamentos de Python
 
-## Propósito
+En esta unidad se recoge evidencia de programación básica, control de flujo,
+funciones, estructuras de datos y primeros usos de NumPy. Moodle indicará qué
+actividades se realizan, cuáles requieren entrega y sus fechas.
 
-Base revisable para evaluar práctica, notebook y entrega de la unidad. No sustituye la evaluación final de la programación didáctica.
+## Material de referencia
 
-## Instrumentos
+- **Rúbrica base:** criterios de corrección técnica, uso de estructuras y
+  funciones, NumPy y claridad del notebook.
+- **Checklist de entrega:** comprobaciones para revisar el notebook antes de
+  entregarlo.
+- **Comparativa de lenguajes y formatos:** actividad breve sobre la elección de
+  tecnologías para IA, cuando se asigne en Moodle.
+- **Cuestionarios:** apoyo para comprobar los conceptos trabajados; Moodle
+  indicará cuándo se realizan y si forman parte de una actividad evaluable.
 
-- **Práctica/notebook:** resolución guiada con código limpio y ejecutable.
-- **Entrega breve:** evidencias de trabajo, explicación y reflexión técnica.
-- **Cuestionario Moodle:** apoyo de verificación conceptual.
-- **Rúbrica base:** criterio común para corrección inicial.
-- **Comparativa de lenguajes y formatos:** actividad breve para evidenciar RA1.b/c/d/e/f (`comparativa-lenguajes-formatos-ia.md`).
-
-## Uso en Moodle
-
-- Importar `cuestionario-base.gift` como banco de preguntas o cuestionario.
-- Revisar pesos, penalizaciones y retroalimentación antes de publicar.
-- Ajustar nombres, puntuación y redacción si se reutiliza en otra convocatoria.
-
-## Relación RA/CE explícita
-
-La actividad `comparativa-lenguajes-formatos-ia.md` cubre de forma directa RA1.b, RA1.c, RA1.d, RA1.e y RA1.f: idoneidad de lenguajes para aplicaciones de IA y uso de formatos/marcado.
-
-## Pendientes
-
-- Validar la adecuación al nivel del grupo.
-- Revisar si procede ampliar o reducir el banco de preguntas.
-- Adaptar el peso de práctica y test a la unidad concreta.
+El trabajo de UD1 aporta evidencias a los RA/CE correspondientes y prepara
+conceptos que se utilizarán en unidades posteriores. La calificación oficial se
+calcula por RA/CE en Séneca; Moodle organiza las actividades y las evidencias.
