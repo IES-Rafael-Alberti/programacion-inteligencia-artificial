@@ -9,6 +9,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 
 ## Estado operativo actual
 
+- [x] Actualizado `NOTAS_PROXIMA_SESION.md` como handoff portable para reanudar PIA desde otro ordenador, con el avance real de clase, el plan de mañana, rutas Moodle y decisiones pendientes.
 - [x] Cerrada la preparación de la tercera clase de PIA: guion de estructuras adicionales con POO opcional, materiales listos en `Moodle/01-UD1/` y validación de notebooks/build completada. Antes de entrar al aula solo falta confirmar que el notebook de estructuras adicionales está visible en Moodle; los recursos de POO se mantienen ocultos si no se alcanza ese bloque.
 - [x] Registrado el resultado real de la segunda clase: cuestionario y ejercicios básicos, hasta estructuras de datos fundamentales. Preparado el guion de la tercera clase, que prioriza `Counter`, `defaultdict` y `deque`, con POO opcional.
 - [x] Incorporados al paquete temporal Moodle de UD1 los notebooks de estructuras adicionales, POO y ejercicios de POO; el bloque POO se publica solo si se alcanza en clase.

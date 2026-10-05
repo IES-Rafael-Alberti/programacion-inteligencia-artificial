@@ -1,42 +1,81 @@
-# Notas para la próxima sesión
+# Handoff PIA — próxima sesión (2026-10-05)
 
-## Estado de repositorios
+Este documento es el punto de reanudación portable para abrir PIA desde otro
+ordenador. La hoja de ruta completa sigue en `ESTADO_ACTUAL_Y_PENDIENTES.md` y el
+flujo de publicación, en `ESTRATEGIA_REPOSITORIOS.md`.
 
-- Repositorio privado docente: `teacher` → `teacher/main`.
-- Repositorio público del alumnado: `main` → `origin/main`.
-- `public-students` queda como rama auxiliar local histórica; no forma parte del flujo normal.
-- `ESTRATEGIA_REPOSITORIOS.md` contiene el procedimiento de publicación selectiva y el protocolo Unison.
-- GitHub Pages del repositorio público está operativo tras corregir los enlaces de UD3 y UD10.
+## Estado del módulo y clase siguiente
 
-## Próximo arranque
+- La segunda clase ya se impartió: cuestionario y ejercicios básicos de Python;
+  se llegó hasta las estructuras de datos básicas. En el grupo hay alumnado sin
+  experiencia previa en Python, así que conviene comprobar comprensión antes de
+  acelerar.
+- El guion de la tercera clase está en
+  `01-fundamentos-python/99-profesor/GUION_TERCERA_CLASE_PIA_UD1.md`.
+- Núcleo de la sesión: `Counter`, `defaultdict` y `deque`, con ejemplos y una
+  actividad breve de conteo y agrupación. La introducción a POO es opcional y se
+  hace solo si queda tiempo: clase/instancia, `__init__`, `self` y un método.
+- La conexión con PyTorch/PyTorch Lightning es motivacional: `nn.Module` y
+  `Dataset` reutilizan ideas de clases e interfaces. No instalar PyTorch ni
+  impartir todavía esos marcos en UD1.
 
-- Comprobar que la copia Unison ha terminado correctamente y revisar cualquier conflicto antes de aceptarlo.
-- En el ordenador receptor, ejecutar `git switch teacher` y `git pull --ff-only teacher main`.
-- Mantener cerrados editores, Jupyter, Pixi y Git durante la sincronización Unison.
+## Comprobaciones para mañana
 
-## Graphify (pendiente no urgente)
+1. En Moodle, confirmar que está visible el notebook de estructuras adicionales:
+   `Moodle/01-UD1/02-ejemplos/02_Estructuras_datos_adicionales.ipynb`.
+2. Si se llega a POO, publicar o abrir los recursos de POO de Moodle:
+   `Moodle/01-UD1/01-documentacion/06_Orientacion_objetos_Python.pdf`,
+   `Moodle/01-UD1/02-ejemplos/03_Orientacion_objetos_python.ipynb` y, si procede,
+   `Moodle/01-UD1/03-practicas/02_Ejercicios_orientacion_objetos.ipynb`.
+3. Mantener el bloque POO y sus ejercicios ocultos/no asignados si no se alcanza.
+4. Los GIFT `cuestionario-poo-python.gift`, `cuestionario-numpy.gift` y
+   `cuestionario-eda-numpy.gift` son fuentes docentes con respuestas; todavía
+   requieren validación/importación y no deben publicarse en GitHub Pages.
 
-- Explorar el grafo completo generado en `graphify-out/`.
-- Trazar la pregunta puente sobre la Unidad 5 con `graphify query`.
-- Revisar los 423 extremos ausentes y decidir si son errores de extracción o referencias externas.
-- Valorar soporte Office para incluir los dos XLSX omitidos, sólo si la exploración lo justifica.
+## Paquete Moodle y fuentes
 
-## Estado histórico de Graphify
+- `Moodle/00-UD0/`: presentación, guía de inicio, normas y diagnóstico inicial.
+- `Moodle/01-UD1/`: documentación en PDF, ejemplos y prácticas separados.
+- `Moodle/` está excluida de Git y es temporal. Los PDF se regeneran desde
+  Markdown; los notebooks y GIFT se copian desde sus fuentes. Después de subir y
+  comprobar los recursos, se puede borrar el paquete entero.
+- El cuestionario técnico inicial ya se importó a Moodle y no es evaluable. El
+  estado del cuestionario base de Python y de la encuesta Feedback debe
+  confirmarse en la plataforma, no inferirse a partir de archivos preparados.
 
-- Grafo completo generado: 2.655 nodos, 3.508 aristas y 332 comunidades.
-- Salidas principales: `graphify-out/graph.html`, `graphify-out/graph.json` y `graphify-out/GRAPH_REPORT.md`.
-- Diagnóstico: 423 aristas con extremos ausentes; 71 colapsos de endpoints dirigidos y 100 no dirigidos.
-- Corpus procesado: 564 ficheros y aproximadamente 829.481 palabras; quedaron fuera dos ficheros XLSX por falta de soporte Office.
-- Coste registrado: 389.481 tokens de entrada y 248.650 de salida.
+## Repositorios y sincronización entre ordenadores
 
-## Orden recomendado para una sesión específica de Graphify
+- Último estado verificado: `teacher` sincronizada con `teacher/main`; `main`
+  sincronizada con `origin/main`.
+- Para continuar desde el ordenador receptor, tras transferir los archivos
+  generales con el procedimiento habitual, ejecutar:
 
-1. Ejecutar `graphify query` con la pregunta puente de Unidad 5.
-2. Revisar las rutas y comunidades atravesadas por la respuesta.
-3. Decidir si los extremos ausentes son errores de extracción, referencias externas o nodos que conviene recuperar.
-4. Sólo después valorar una regeneración con soporte Office.
+  ```bash
+  git fetch --all --prune
+  git switch teacher
+  git pull --ff-only teacher main
+  ```
 
-## Cierre
+- No copiar ni subir el paquete temporal `Moodle/`, cachés de Graphify ni las
+  carpetas locales `.codex/` y `.opencode/`.
 
-- Sesión de repositorios y sincronización cerrada el 2026-08-22.
-- No quedan acciones urgentes; el siguiente paso práctico es comprobar la copia Unison.
+## Pendientes del módulo
+
+- Confirmar qué materiales de UD0/UD1 ya son visibles en Moodle y decidir si se
+  publican los 13 PDF preparados.
+- Configurar y verificar en Séneca los pesos RA/CE; montar y probar el
+  calificador Moodle.
+- Revisar el contenido de los tres materiales retirados del árbol actual
+  público: los notebooks `P2_PyCaret_sol.ipynb` y `P3_Modelo_sol.ipynb`, y
+  `Transformers_Test_Moodle.gift`. Después decidir si se solicita purgar esos
+  archivos de commits públicos anteriores; la purga reescribe el historial y
+  requiere coordinación de clones.
+- Las comprobaciones Windows/macOS de Pixi se harán cuando haya equipos
+  disponibles.
+
+## Tarea SBD para una sesión futura
+
+El estado de SBD se consulta en
+`/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/SBD/00-planificacion/ESTADO_ACTUAL_Y_PENDIENTES.md`.
+Antes de crear un guion nuevo, revisar la presentación y las guías ya existentes
+de las primeras sesiones; adaptar solo lo que falte y comprobar el Moodle real.
