@@ -9,12 +9,13 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 
 ## Estado operativo actual
 
-- [x] Actualizado el guion de la próxima clase de PIA tras registrar que la segunda sesión llegó a estructuras básicas e incluyó cuestionario y ejercicios; la tercera sesión prioriza `Counter`, `defaultdict` y `deque`, con POO opcional.
+- [x] Registrado el resultado real de la segunda clase: cuestionario y ejercicios básicos, hasta estructuras de datos fundamentales. Preparado el guion de la tercera clase, que prioriza `Counter`, `defaultdict` y `deque`, con POO opcional.
 - [x] Incorporados al paquete temporal Moodle de UD1 los notebooks de estructuras adicionales, POO y ejercicios de POO; el bloque POO se publica solo si se alcanza en clase.
 - [x] Reorientadas las páginas públicas de prácticas y evaluación de UD1 al alumnado; retiradas las rutas internas a material docente y las instrucciones para importar GIFT.
-- [x] Incorporada la guía activa de orientación a objetos de Python en UD1, enlazada entre estructuras de datos y NumPy, y referenciada desde UD4 como preparación para PyTorch. Actualizados objetivos, contenidos, actividades, propósito y materiales asociados; añadidos un notebook guiado y un cuaderno de ejercicios, sin modificar código de PyTorch ni materiales sensibles.
+- [x] Incorporada la guía activa de orientación a objetos de Python en UD1, enlazada entre estructuras de datos y NumPy, y referenciada desde UD4 como preparación para PyTorch. Actualizados objetivos, contenidos, actividades, propósito y materiales asociados; añadidos un notebook guiado y un cuaderno de ejercicios, sin modificar código de PyTorch ni materiales sensibles. Publicación selectiva en `origin/main`: `9e921dac`.
 
 - [x] Añadida a la guía de Python de UD1 la trampa práctica de listas y otros valores mutables como parámetros por defecto, con el patrón recomendado de `None`; enlazada desde la ampliación del guion de segunda clase. La corrección de redacción se sincronizó en el repo docente `f9edfd54` y en el público `179592f4`; el PDF regenerado permanece en el paquete Moodle local.
+- [x] Preparados tres bancos GIFT adicionales de UD1 (POO, NumPy y EDA, diez preguntas cada uno). Permanecen como fuentes docentes con respuesta correcta; queda pendiente validarlos e importarlos a Moodle cuando se decida activarlos.
 - [x] Preparado el guion de la segunda clase de PIA según el avance real: revisión de control de flujo, funciones con parámetros y `return`, y aplicación a listas con una ruta alternativa de refuerzo.
 - [x] Preparado y publicado el apéndice optativo de IA clásica en UD11: guía de búsqueda y juegos, ejemplos Python autocontenidos de DFS/BFS/A* y minimax/alfa-beta. Commit privado `be2b1a6d`, publicación en `origin/main` `703f3aa8`; no añade evaluación ordinaria.
 - [x] Corregida la estructura de las tres tablas Markdown del guion docente y revisadas las tildes y la ortografía del documento.

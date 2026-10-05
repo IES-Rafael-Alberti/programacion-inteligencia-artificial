@@ -42,6 +42,9 @@ subcarpeta para relacionar los archivos con sus fuentes.
 - [ ] Crear la subcategoría `UD1 - Cuestionarios Moodle`.
 - [ ] Previsualizar el cuestionario base `01-fundamentos-python/04-evaluacion/cuestionario-base.gift`.
 - [ ] Mantener oculto el cuestionario hasta haber trabajado Python y NumPy.
+- [ ] Cuando se impartan POO, NumPy y EDA, revisar los GIFT específicos e importar
+  solo los cuestionarios que se decida activar; mantenerlos no evaluables u ocultos
+  hasta concretar sus condiciones.
 - [ ] Aplicar al activar los instrumentos los pesos previstos: práctica de Python
   y NumPy 60 %, comparativa de lenguajes 20 % y cuestionarios 20 %.
 
