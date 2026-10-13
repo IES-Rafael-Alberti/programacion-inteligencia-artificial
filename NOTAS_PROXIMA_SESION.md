@@ -1,81 +1,86 @@
-# Handoff PIA — próxima sesión (2026-10-05)
+# Handoff PIA — NumPy/JAX (2026-10-14)
 
-Este documento es el punto de reanudación portable para abrir PIA desde otro
-ordenador. La hoja de ruta completa sigue en `ESTADO_ACTUAL_Y_PENDIENTES.md` y el
-flujo de publicación, en `ESTRATEGIA_REPOSITORIOS.md`.
+Documento portátil para reanudar el trabajo en otro ordenador. La hoja de ruta
+completa está en `ESTADO_ACTUAL_Y_PENDIENTES.md`; el procedimiento de remotos y
+publicación selectiva, en `ESTRATEGIA_REPOSITORIOS.md`.
 
-## Estado del módulo y clase siguiente
+## Objetivo de la próxima clase
 
-- La segunda clase ya se impartió: cuestionario y ejercicios básicos de Python;
-  se llegó hasta las estructuras de datos básicas. En el grupo hay alumnado sin
-  experiencia previa en Python, así que conviene comprobar comprensión antes de
-  acelerar.
-- El guion de la tercera clase está en
-  `01-fundamentos-python/99-profesor/GUION_TERCERA_CLASE_PIA_UD1.md`.
-- Núcleo de la sesión: `Counter`, `defaultdict` y `deque`, con ejemplos y una
-  actividad breve de conteo y agrupación. La introducción a POO es opcional y se
-  hace solo si queda tiempo: clase/instancia, `__init__`, `self` y un método.
-- La conexión con PyTorch/PyTorch Lightning es motivacional: `nn.Module` y
-  `Dataset` reutilizan ideas de clases e interfaces. No instalar PyTorch ni
-  impartir todavía esos marcos en UD1.
+El grupo dice que la sesión de NumPy avanzada se quedó corta. La siguiente clase
+debe ofrecer más práctica y ejemplos, reforzar especialmente broadcasting y
+pasar después a JAX si el entorno está listo. R no es obligatorio; si queda tiempo
+se puede hacer una breve conexión con pandas o R, pero no ambas.
 
-## Comprobaciones para mañana
+Guion docente: `01-fundamentos-python/99-profesor/GUION_CUARTA_CLASE_PIA_UD1.md`.
 
-1. En Moodle, confirmar que está visible el notebook de estructuras adicionales:
-   `Moodle/01-UD1/02-ejemplos/02_Estructuras_datos_adicionales.ipynb`.
-2. Si se llega a POO, publicar o abrir los recursos de POO de Moodle:
-   `Moodle/01-UD1/01-documentacion/06_Orientacion_objetos_Python.pdf`,
-   `Moodle/01-UD1/02-ejemplos/03_Orientacion_objetos_python.ipynb` y, si procede,
-   `Moodle/01-UD1/03-practicas/02_Ejercicios_orientacion_objetos.ipynb`.
-3. Mantener el bloque POO y sus ejercicios ocultos/no asignados si no se alcanza.
-4. Los GIFT `cuestionario-poo-python.gift`, `cuestionario-numpy.gift` y
-   `cuestionario-eda-numpy.gift` son fuentes docentes con respuestas; todavía
-   requieren validación/importación y no deben publicarse en GitHub Pages.
+## Materiales NumPy/JAX preparados
 
-## Paquete Moodle y fuentes
+- `01-fundamentos-python/01-teoria/06-numpy-avanzado.md`: tipos/memoria, ejes,
+  indexación, máscaras, vistas y agregaciones.
+- `01-fundamentos-python/01-teoria/07-broadcasting-numpy.md`: regla de formas,
+  centrado, normalización, productos exteriores y distancias.
+- `01-fundamentos-python/01-teoria/07c-casos-practicos-numpy.md`: ejes,
+  `keepdims`, máscaras, `where`, linalg, random, normalización y ejercicios.
+- `01-fundamentos-python/02-ejemplos/09_numpy_avanzado.ipynb`: notebook
+  canónico avanzado.
+- `01-fundamentos-python/02-ejemplos/10_numpy_casos_practicos.ipynb`: taller
+  ejecutable con muchos ejemplos y ejercicios.
+- `01-fundamentos-python/02-ejemplos/07_numpy_broadcasting_vectorizacion.ipynb`.
+- JAX: `01-fundamentos-python/01-teoria/08-guia-numpy-jax.md` y
+  `01-fundamentos-python/02-ejemplos/08_introduccion_jax_comparativa.ipynb`.
+- Pandas para un enganche breve (la revisión concluyó que UD2 ya tiene material
+  suficiente): `02-tratamiento-datos/01-teoria/01-pandas-introduccion.md` y
+  `02-tratamiento-datos/01-teoria/02-pandas-ejemplos-guia.md`.
 
-- `Moodle/00-UD0/`: presentación, guía de inicio, normas y diagnóstico inicial.
-- `Moodle/01-UD1/`: documentación en PDF, ejemplos y prácticas separados.
-- `Moodle/` está excluida de Git y es temporal. Los PDF se regeneran desde
-  Markdown; los notebooks y GIFT se copian desde sus fuentes. Después de subir y
-  comprobar los recursos, se puede borrar el paquete entero.
-- El cuestionario técnico inicial ya se importó a Moodle y no es evaluable. El
-  estado del cuestionario base de Python y de la encuesta Feedback debe
-  confirmarse en la plataforma, no inferirse a partir de archivos preparados.
+El entorno Pixi `default` **no incluye JAX**. Para la demo JAX, comprobar el
+entorno `pia-ud1` definido en `01-fundamentos-python/05-recursos/pia-ud1.yml` o
+usar un entorno ya preparado en el aula. No instalar dependencias sobre la marcha;
+si JAX no está listo, continuar con NumPy y dejar JAX como demo posterior. El
+notebook JAX usa un benchmark moderado de 300 000 elementos.
 
-## Repositorios y sincronización entre ordenadores
+## Paquete temporal Moodle
 
-- Último estado verificado: `teacher` sincronizada con `teacher/main`; `main`
-  sincronizada con `origin/main`.
-- Para continuar desde el ordenador receptor, tras transferir los archivos
-  generales con el procedimiento habitual, ejecutar:
+- `Moodle/01-UD1/01-documentacion/` contiene 15 PDF, incluidos NumPy avanzado y
+  casos prácticos, regenerados desde sus fuentes Markdown.
+- `Moodle/01-UD1/02-ejemplos/` contiene los notebooks de fundamentos, estructuras,
+  NumPy, broadcasting, casos prácticos, JAX y R opcional.
+- POO sigue siendo opcional; no publicar ni asignar sus materiales si no se llega
+  al bloque.
+- `Moodle/` está excluida de Git. Los PDF se regeneran y los notebooks se copian
+  desde sus fuentes; después de confirmar la subida se puede borrar el paquete.
+- Confirmar en Moodle qué recursos están visibles; el paquete local preparado no
+  equivale a una publicación ya realizada.
 
-  ```bash
-  git fetch --all --prune
-  git switch teacher
-  git pull --ff-only teacher main
-  ```
+## Comprobaciones realizadas
 
-- No copiar ni subir el paquete temporal `Moodle/`, cachés de Graphify ni las
-  carpetas locales `.codex/` y `.opencode/`.
+- Ejecutados correctamente `09_numpy_avanzado.ipynb`,
+  `10_numpy_casos_practicos.ipynb` y `08_introduccion_jax_comparativa.ipynb`.
+- Los PDF `14_NumPy_avanzado.pdf` y `15_Casos_practicos_NumPy.pdf` se generaron y
+  validaron.
+- `mkdocs build --strict` y `python scripts/check_public_unit_links.py` pasan.
+- La ficha pública `docs/accesos-rapidos.md` enlaza el GitHub Pages y el
+  repositorio del alumnado.
 
-## Pendientes del módulo
+## Repositorios y otras tareas pendientes
 
-- Confirmar qué materiales de UD0/UD1 ya son visibles en Moodle y decidir si se
-  publican los 13 PDF preparados.
-- Configurar y verificar en Séneca los pesos RA/CE; montar y probar el
-  calificador Moodle.
-- Revisar el contenido de los tres materiales retirados del árbol actual
-  público: los notebooks `P2_PyCaret_sol.ipynb` y `P3_Modelo_sol.ipynb`, y
-  `Transformers_Test_Moodle.gift`. Después decidir si se solicita purgar esos
-  archivos de commits públicos anteriores; la purga reescribe el historial y
-  requiere coordinación de clones.
-- Las comprobaciones Windows/macOS de Pixi se harán cuando haya equipos
-  disponibles.
+- Trabajar en `teacher`; el directorio único usa `teacher/main` como fuente
+  docente y `origin/main` para la exportación pública del alumnado.
+- Revisar qué materiales UD0/UD1 están realmente visibles en Moodle y confirmar
+  el estado del cuestionario base de Python y la encuesta Feedback.
+- Pendiente configurar/verificar Séneca y el calificador Moodle, y validar los
+  cuestionarios GIFT base y los tres adicionales de POO/NumPy/EDA. Los GIFT con
+  respuestas correctas son fuentes docentes y no se publican en `origin/main`.
+- Pendiente decidir si se pide purgar del historial público tres materiales
+  docentes retirados del árbol actual; eso requiere reescribir historial y
+  coordinar clones.
+- Antes de cambiar de ordenador, comprobar que Unison finalizó y que no queden
+  conflictos; no copiar `.codex/`, `.opencode/` ni artefactos temporales de
+  `graphify-out/`.
 
-## Tarea SBD para una sesión futura
+Para sincronizar en el ordenador receptor:
 
-El estado de SBD se consulta en
-`/datos/RafaelAlberti/RafaelAlberti26_27/Modulos/SBD/00-planificacion/ESTADO_ACTUAL_Y_PENDIENTES.md`.
-Antes de crear un guion nuevo, revisar la presentación y las guías ya existentes
-de las primeras sesiones; adaptar solo lo que falte y comprobar el Moodle real.
+```bash
+git fetch --all --prune
+git switch teacher
+git pull --ff-only teacher main
+```

@@ -9,7 +9,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 
 ## Estado operativo actual
 
-- [x] Ampliado el material de NumPy: guía avanzada `06-numpy-avanzado.md`, broadcasting con ejemplos aplicados, casos prácticos `07c-casos-practicos-numpy.md` y taller ejecutable `10_numpy_casos_practicos.ipynb`. El notebook JAX usa ahora un tamaño de benchmark moderado para el aula.
+- [x] Ampliado el material de NumPy: guía avanzada `06-numpy-avanzado.md`, broadcasting con ejemplos aplicados, casos prácticos `07c-casos-practicos-numpy.md`, notebook canónico `09_numpy_avanzado.ipynb` y taller `10_numpy_casos_practicos.ipynb`. Preparado para publicación pública; el notebook JAX usa un benchmark moderado para el aula.
 - [x] Creada y enlazada desde la portada la ficha pública `docs/accesos-rapidos.md` con las direcciones de GitHub Pages y del repositorio del alumnado.
 - [x] Preparada la cuarta clase de PIA (NumPy ampliado y JAX). Revisada la teoría y los ejemplos de pandas de UD2: hay material suficiente (`01-pandas-introduccion.md`, `02-pandas-ejemplos-guia.md` y opcionalmente `05-preparacion-datos-ml.md`), así que solo se enlaza como bloque opcional de preparación de datos en el guion si sobra tiempo tras NumPy/JAX, sin crear teoría nueva.
 
@@ -58,7 +58,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 - [ ] Validar los cuestionarios base GIFT de UD1 y UD2 en Moodle; el diagnóstico inicial ya consta como importado. El mantenimiento histórico no se considera un bloqueo actual sin una nueva comprobación.
 - [x] Creados y validados sintácticamente los tres cuestionarios GIFT específicos de UD1 (`cuestionario-poo-python.gift`, `cuestionario-numpy.gift` y `cuestionario-eda-numpy.gift`), con 10 preguntas cada uno y contenidos limitados a los materiales activos.
 - [ ] Pendiente validar e importar en Moodle los tres cuestionarios GIFT específicos de UD1.
-- [x] Ampliado NumPy en UD1 con teoría, broadcasting, ejemplos prácticos y guion docente de cuarta clase. Rutas: `06-numpy-avanzado.md`, `07-broadcasting-numpy.md`, `07c-casos-practicos-numpy.md`, notebooks `09_numpy_avanzado.ipynb` y `10_numpy_casos_practicos.ipynb`, más `GUION_CUARTA_CLASE_PIA_UD1.md`. Queda pendiente confirmar la publicación de los recursos Moodle.
+- [x] Ampliado NumPy en UD1 con teoría, broadcasting, ejemplos prácticos y guion docente de cuarta clase. Rutas: `06-numpy-avanzado.md`, `07-broadcasting-numpy.md`, `07c-casos-practicos-numpy.md`, notebooks `09_numpy_avanzado.ipynb` y `10_numpy_casos_practicos.ipynb`, más `GUION_CUARTA_CLASE_PIA_UD1.md`. Build y ejecución de notebooks validados; queda pendiente confirmar su publicación en Moodle y la sincronización selectiva a GitHub Pages.
 - [x] Cerrado el hueco documental de rendimiento y vectorización de NumPy con `01-fundamentos-python/01-teoria/07-numpy-rendimiento.md`, enlazado como material principal al notebook `06_numpy_rendimiento.ipynb`. Queda pendiente únicamente validar y publicar el material en Moodle.
 
 ## Revisión de `00-planificación` — 2026-08-20
@@ -149,12 +149,16 @@ La carpeta `00-planificación` se conserva como archivo de trazabilidad y materi
 7. El día que se imparta el apéndice de grafos: arrancar el contenedor Neo4j, cargar el fixture y repasar los resultados esperados de `demo-profesor.md`.
 8. Profundizar o adaptar prácticas concretas solo si el uso durante el curso revela una necesidad docente real.
 
-## Agenda de la próxima sesión
+## Agenda de la próxima sesión — NumPy/JAX
 
-1. Revisar el apéndice optativo de IA clásica de UD11 y sus ejemplos DFS/BFS/A*, minimax y alfa-beta.
-2. Inspeccionar los tres archivos docentes que permanecen en el historial público y decidir si hace falta solicitar su purga; no reescribir el historial sin acordar coordinación y clones.
-3. Comprobar qué recursos UD0/UD1 están realmente publicados en Moodle; decidir el alcance de la documentación de Python, verificar que el cuestionario base sigue oculto y comprobar si se creó la encuesta Feedback.
-4. Revisar el guion docente de segunda clase de PIA, en particular el ritmo de funciones/listas y la explicación del valor mutable por defecto.
+1. Antes de clase, confirmar que los notebooks `09_numpy_avanzado.ipynb`, `10_numpy_casos_practicos.ipynb` y `08_introduccion_jax_comparativa.ipynb` están accesibles en Moodle.
+2. Comprobar si está disponible el entorno `pia-ud1` con JAX. Si no, no instalar dependencias durante la sesión: completar NumPy y dejar JAX para otra ocasión.
+3. Priorizar ejes, máscaras, broadcasting aplicado y los ejemplos de distancia/normalización del taller. JAX después; si sobra tiempo, elegir solo un enganche entre pandas y R.
+4. Tras la clase, anotar lo realmente trabajado y ajustar el paquete Moodle. Confirmar aparte visibilidad de los 15 PDF y estado del cuestionario base.
+
+## Pendiente de seguridad del repositorio público
+
+Decidir, tras revisar su contenido, si se solicita la purga del historial de los tres archivos docentes retirados de `origin/main`; hacerlo reescribe el historial y requiere coordinación de clones. No purgar sin decisión expresa.
 5. Preparar el inicio de SBD con el método de PIA: primero revisar el estado del repo, la presentación y los guiones existentes; después ajustar la clase de dos horas y organizar los materiales Moodle por unidad, conservando el paquete como preparación temporal excluida de Git.
 
 

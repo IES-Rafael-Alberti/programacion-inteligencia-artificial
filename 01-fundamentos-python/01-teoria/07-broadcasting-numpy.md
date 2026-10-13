@@ -234,7 +234,7 @@ print("Nº de celdas que lo superan por fila:", supera.sum(axis=1))
 
 ## 📚 Ejemplo 8: matriz de distancias por parejas
 
-Distantcias entre puntos de un conjunto usando broadcasting:
+Distancias entre puntos de un conjunto usando broadcasting:
 
 ```python
 puntos = np.array([[0., 0.],
@@ -297,4 +297,3 @@ k-NN, clustering y otros algoritmos de IA.
 * Es una de las razones por las que NumPy es tan rápido y eficiente.
 
 ---
-
