@@ -147,6 +147,138 @@ print(X * Y)  # Broadcasting
 
 ---
 
+## 📚 Ejemplo 3: restar la media de cada columna
+
+Una operación muy habitual es **centrar los datos**: restar a cada columna su
+propia media. Con broadcasting se hace en una línea:
+
+```python
+datos = np.array([[2.0, 10.0, 100.0],
+                  [4.0, 20.0, 200.0],
+                  [6.0, 30.0, 300.0]])
+
+media_col = datos.mean(axis=0)   # forma (3,) -> media de cada columna
+print("Media por columna:", media_col)
+
+centrados = datos - media_col    # broadcasting: se resta por cada fila
+print("Datos centrados:\n", centrados)
+```
+
+Si quieres centrar **por fila** en vez de por columna, haz que la media tenga
+forma `(n_filas, 1)` para que el broadcast se aplique por columnas:
+
+```python
+media_fila = datos.mean(axis=1, keepdims=True)   # forma (3,1)
+print("Media por fila:\n", media_fila)
+centrados_fila = datos - media_fila
+print("Centrados por fila:\n", centrados_fila)
+```
+
+Darse cuenta de cuándo hace falta `keepdims=True` (o `[:, np.newaxis]`) para
+controlar la dirección del broadcast es una de las habilidades más útiles de NumPy.
+
+---
+
+## 📚 Ejemplo 4: normalizar los datos (min-max)
+
+```python
+x = np.array([3, 1, 4, 1, 5, 9, 2, 6])
+
+minimo = x.min()
+maximo = x.max()
+
+# (x - minimo) / (maximo - minimo) -> cada valor se escala a [0, 1]
+norm = (x - minimo) / (maximo - minimo)
+print("Normalizados:", norm)
+print("Rango resultado:", norm.min(), norm.max())
+```
+
+## 📚 Ejemplo 5: escalar cada columna por su desviación
+
+```python
+X = np.random.default_rng(0).normal(size=(4, 3))
+desv = X.std(axis=0)                     # (3,)
+estandar = X / desv                      # se divide cada columna por su desv
+print("Columnas con desviación 1:\n", estandar)
+print("Desv de cada columna:", estandar.std(axis=0))
+```
+
+## 📚 Ejemplo 6: rejillas con multiplicación externa
+
+Combinar un vector columna y un vector fila construye una tabla:
+
+```python
+a = np.array([1, 2, 3])
+b = np.array([10, 100, 1000])
+
+tabla = a[:, np.newaxis] * b[np.newaxis, :]   # (3,1) * (1,3) -> (3,3)
+print("Tabla de productos:\n", tabla)
+```
+
+Esto es la base de `np.outer` y también de construir rejillas de coordenadas
+para gráficos o simulaciones.
+
+## 📚 Ejemplo 7: comparar cada fila con un vector
+
+```python
+X = np.array([[1, 2, 3],
+              [4, 5, 6],
+              [7, 8, 9]])
+limite = np.array([5, 5, 5])
+
+# compara elemento a elemento cada fila con el vector
+supera = X > limite
+print("Qué supera el límite:\n", supera)
+print("Nº de celdas que lo superan por fila:", supera.sum(axis=1))
+```
+
+## 📚 Ejemplo 8: matriz de distancias por parejas
+
+Distantcias entre puntos de un conjunto usando broadcasting:
+
+```python
+puntos = np.array([[0., 0.],
+                   [3., 4.],
+                   [6., 8.]])
+
+# diferencias por parejas: diferencias[i,j] = puntos[i] - puntos[j]
+diferencias = puntos[:, np.newaxis, :] - puntos[np.newaxis, :, :]
+distancias = np.sqrt((diferencias ** 2).sum(axis=-1))
+print("Matriz de distancias:\n", distancias)
+```
+
+El resultado es simétrico y su diagonal vale 0. Esta misma idea aparece en
+k-NN, clustering y otros algoritmos de IA.
+
+---
+
+## 🔬 Casos donde suele aparecer el broadcast
+
+| Situación | Patrón habitual |
+|---|---|
+| Centrar / estandarizar columnas | `X - X.mean(axis=0)` o `X / X.std(axis=0)` |
+| Añadir una constante o umbral | `X + 1`, `X > umbral` |
+| Escalar filas | `X * pesos[:, np.newaxis]` |
+| Escalar columnas | `X * pesos[np.newaxis, :]` |
+| Construir rejillas | `a[:, None] * b[None, :]` |
+| Sumar un vector a cada fila | `X + v` |
+| Sumar un vector a cada columna | `X + v[:, None]` |
+
+---
+
+## 🎯 Ejercicios para practicar
+
+1. `A = np.ones((4, 5))`; súmale un vector `v = [1, 2, 3, 4, 5]` y explica la forma.
+2. Centra una matriz 3×4 de datos restando la media de cada **fila** (usa `keepdims=True`).
+3. Normaliza cada **columna** de una matriz para que quede entre 0 y 1.
+4. Construye con broadcasting la tabla de multiplicar del 9 (usando dos vectores).
+5. Dados los puntos `[[0,0],[3,4],[6,8]]`, calcula y comprueba que la diagonal
+   de la matriz de distancias es 0 y que la matriz es simétrica.
+6. `a = np.array([1,2,3])` y `b = np.array([10,20])`: ¿por qué `a + b` da error?
+   ¿Cómo harías su producto para obtener una forma (3,2)?
+
+---
+
 ## 🧩 Resumen visual
 
 | Forma A | Forma B | ¿Compatible? | Resultado                    |
