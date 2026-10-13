@@ -9,8 +9,8 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 
 ## Estado operativo actual
 
-- [x] Ampliado el material de NumPy: guía avanzada `06-numpy-avanzado.md`, broadcasting con ejemplos aplicados, casos prácticos `07c-casos-practicos-numpy.md`, notebook canónico `09_numpy_avanzado.ipynb` y taller `10_numpy_casos_practicos.ipynb`. Preparado para publicación pública; el notebook JAX usa un benchmark moderado para el aula.
-- [x] Creada y enlazada desde la portada la ficha pública `docs/accesos-rapidos.md` con las direcciones de GitHub Pages y del repositorio del alumnado.
+- [x] Ampliado y publicado en `origin/main` el material de NumPy: guía avanzada `06-numpy-avanzado.md`, broadcasting con ejemplos aplicados, casos prácticos `07c-casos-practicos-numpy.md`, notebook canónico `09_numpy_avanzado.ipynb` y taller `10_numpy_casos_practicos.ipynb` (commit `8a81bb4c`); corrección de errata en broadcasting publicada en `d65f9959`. El notebook JAX usa un benchmark moderado para el aula.
+- [x] Creada, enlazada desde la portada y publicada la ficha `docs/accesos-rapidos.md` con las direcciones de GitHub Pages y del repositorio del alumnado (commit `8a81bb4c`).
 - [x] Preparada la cuarta clase de PIA (NumPy ampliado y JAX). Revisada la teoría y los ejemplos de pandas de UD2: hay material suficiente (`01-pandas-introduccion.md`, `02-pandas-ejemplos-guia.md` y opcionalmente `05-preparacion-datos-ml.md`), así que solo se enlaza como bloque opcional de preparación de datos en el guion si sobra tiempo tras NumPy/JAX, sin crear teoría nueva.
 
 - [x] Actualizado `NOTAS_PROXIMA_SESION.md` como handoff portable para reanudar PIA desde otro ordenador, con el avance real de clase, el plan de mañana, rutas Moodle y decisiones pendientes.
