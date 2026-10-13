@@ -54,6 +54,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 - [x] Creados y validados sintácticamente los tres cuestionarios GIFT específicos de UD1 (`cuestionario-poo-python.gift`, `cuestionario-numpy.gift` y `cuestionario-eda-numpy.gift`), con 10 preguntas cada uno y contenidos limitados a los materiales activos.
 - [ ] Pendiente validar e importar en Moodle los tres cuestionarios GIFT específicos de UD1.
 - [x] Ampliado NumPy en UD1 con teoría avanzada, notebook guiado y guion docente de cuarta clase. Rutas creadas/actualizadas: `01-fundamentos-python/01-teoria/06-numpy-avanzado.md`, `01-fundamentos-python/02-ejemplos/09_numpy_avanzado.ipynb`, `01-fundamentos-python/99-profesor/GUION_CUARTA_CLASE_PIA_UD1.md` y los README de UD1. Queda pendiente validar y publicar en Moodle. Siguiente paso recomendado: revisión final de contenido y ejecución docente.
+- [x] Cerrado el hueco documental de rendimiento y vectorización de NumPy con `01-fundamentos-python/01-teoria/07-numpy-rendimiento.md`, enlazado como material principal al notebook `06_numpy_rendimiento.ipynb`. Queda pendiente únicamente validar y publicar el material en Moodle.
 
 ## Revisión de `00-planificación` — 2026-08-20
 
