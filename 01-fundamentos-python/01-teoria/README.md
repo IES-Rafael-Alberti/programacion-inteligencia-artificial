@@ -14,12 +14,13 @@ Esta carpeta contiene la teoría de apoyo y las guías de la unidad. Para no dup
 | 04b | Estructuras adicionales | `04b-estructuras-datos-adicionales.md` | `../02-ejemplos/04b-estructuras-datos-adicionales.ipynb` |
 | 04c | Orientación a objetos | `04c-orientacion-objetos-python.md`, `../02-ejemplos/05_orientacion_objetos_python.ipynb` | — |
 | 05 | Introducción y fundamentos de NumPy | `05-numpy-introduccion.md` | `../02-ejemplos/05_numpy_fundamentos.ipynb` |
-| 06 | NumPy en profundidad | `05-numpy-avanzado.md` | `../02-ejemplos/09_numpy_avanzado.ipynb` |
-| 07 | Rendimiento y vectorización con NumPy | `../02-ejemplos/06_numpy_rendimiento.ipynb` | `05-numpy-introduccion.md` |
+| 06 | NumPy avanzado | `06-numpy-avanzado.md` | `../02-ejemplos/09_numpy_avanzado.ipynb` |
+| 07 | Rendimiento y vectorización | `07-numpy-rendimiento.md` | `../02-ejemplos/06_numpy_rendimiento.ipynb` |
 | 08 | Broadcasting y vectorización | `07-broadcasting-numpy.md`, `07b-broadcasting-numpy-infografia.md` | `../02-ejemplos/07_numpy_broadcasting_vectorizacion.ipynb` |
-| 09 | Introducción comparativa a JAX | `../02-ejemplos/08_introduccion_jax_comparativa.ipynb` | `08-guia-numpy-jax.md` |
-| 10 | R como complemento | `09-guia-r-complementario.md` | `../02-ejemplos/06_introduccion_R_fundamentos.ipynb` |
-| 11 | Comparativa de lenguajes y formatos para IA | `../04-evaluacion/comparativa-lenguajes-formatos-ia.md` | Python, R, Java, JavaScript/NodeJS, JSON, YAML, Markdown, XML/HTML |
+| 09 | Casos prácticos de NumPy | `07c-casos-practicos-numpy.md` | `../02-ejemplos/10_numpy_casos_practicos.ipynb` |
+| 10 | Introducción comparativa a JAX | `../02-ejemplos/08_introduccion_jax_comparativa.ipynb` | `08-guia-numpy-jax.md` |
+| 11 | R como complemento | `09-guia-r-complementario.md` | `../02-ejemplos/06_introduccion_R_fundamentos.ipynb` |
+| 12 | Comparativa de lenguajes y formatos para IA | `../04-evaluacion/comparativa-lenguajes-formatos-ia.md` | Python, R, Java, JavaScript/NodeJS, JSON, YAML, Markdown, XML/HTML |
 
 ## Cobertura
 

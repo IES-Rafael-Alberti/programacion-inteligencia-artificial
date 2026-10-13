@@ -9,6 +9,8 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 
 ## Estado operativo actual
 
+- [x] Ampliado el material de NumPy: guía avanzada `06-numpy-avanzado.md`, broadcasting con ejemplos aplicados, casos prácticos `07c-casos-practicos-numpy.md` y taller ejecutable `10_numpy_casos_practicos.ipynb`. El notebook JAX usa ahora un tamaño de benchmark moderado para el aula.
+- [x] Creada y enlazada desde la portada la ficha pública `docs/accesos-rapidos.md` con las direcciones de GitHub Pages y del repositorio del alumnado.
 - [x] Preparada la cuarta clase de PIA (NumPy ampliado y JAX). Revisada la teoría y los ejemplos de pandas de UD2: hay material suficiente (`01-pandas-introduccion.md`, `02-pandas-ejemplos-guia.md` y opcionalmente `05-preparacion-datos-ml.md`), así que solo se enlaza como bloque opcional de preparación de datos en el guion si sobra tiempo tras NumPy/JAX, sin crear teoría nueva.
 
 - [x] Actualizado `NOTAS_PROXIMA_SESION.md` como handoff portable para reanudar PIA desde otro ordenador, con el avance real de clase, el plan de mañana, rutas Moodle y decisiones pendientes.
@@ -21,6 +23,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 - [x] Añadida a la guía de Python de UD1 la trampa práctica de listas y otros valores mutables como parámetros por defecto, con el patrón recomendado de `None`; enlazada desde la ampliación del guion de segunda clase. La corrección de redacción se sincronizó en el repo docente `f9edfd54` y en el público `179592f4`; el PDF regenerado permanece en el paquete Moodle local.
 - [x] Preparados tres bancos GIFT adicionales de UD1 (POO, NumPy y EDA, diez preguntas cada uno). Permanecen como fuentes docentes con respuesta correcta; queda pendiente validarlos e importarlos a Moodle cuando se decida activarlos.
 - [x] Preparado el guion de la segunda clase de PIA según el avance real: revisión de control de flujo, funciones con parámetros y `return`, y aplicación a listas con una ruta alternativa de refuerzo.
+- [x] Ampliada la secuencia de NumPy en UD1: `06-numpy-avanzado.md`, guía de casos `07c-casos-practicos-numpy.md`, broadcasting extendido y notebook de casos con muchos ejemplos. El guion de cuarta clase prioriza NumPy/JAX; pandas y R quedan como enganches optativos.
 - [x] Preparado y publicado el apéndice optativo de IA clásica en UD11: guía de búsqueda y juegos, ejemplos Python autocontenidos de DFS/BFS/A* y minimax/alfa-beta. Commit privado `be2b1a6d`, publicación en `origin/main` `703f3aa8`; no añade evaluación ordinaria.
 - [x] Corregida la estructura de las tres tablas Markdown del guion docente y revisadas las tildes y la ortografía del documento.
 - [x] Corregido el separador de tres columnas en la tabla de ritmo principal del guion docente de primera clase.
@@ -29,7 +32,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 - [x] Importado en Moodle el GIFT de diagnostico tecnico inicial de PIA; queda como cuestionario no evaluable y separado del calificador.
 - [x] Adaptado el diagnostico inicial de PIA desde el formulario historico: Feedback anonimo para circunstancias y experiencia, GIFT tecnico no evaluable de 20 preguntas sobre Python, IA, ML, DL, LLM, RAG, agentes y modelos locales, y separacion del bloque de Big Data para SBD.
 - [x] Reorganizado el paquete temporal de Moodle por unidad en `Moodle/00-UD0/` y `Moodle/01-UD1/`, con documentación de UD1 en PDF y los notebooks en carpetas separadas; `Moodle/` permanece excluida de Git y se regenera desde las fuentes tras borrarla o subirla.
-- [x] Regenerado localmente el paquete canónico de documentación de UD1 con 13 PDF mediante Pandoc + XeLaTeX en `Moodle/01-UD1/01-documentacion/`; queda pendiente publicar y comprobar estos recursos en Moodle.
+- [x] Regenerado localmente el paquete de documentación de UD1 con 15 PDF mediante Pandoc + XeLaTeX en `Moodle/01-UD1/01-documentacion/`; queda pendiente publicar y comprobar estos recursos en Moodle.
 - [x] Revisada la orientacion publica del portal: portada y manual Pixi reescritos para el alumnado; eliminadas referencias a planificacion interna, recursos del profesorado, flujo docente y un portal futuro.
 - [x] Preparada la primera clase del 2026-09-29: guion de presentacion de 15-20 minutos y checklist de publicacion inicial de Moodle para UD1 en `00-planificación/`.
 - [x] Añadida `docs/presentacion-curso.md` y enlazada desde la portada y la navegación pública; resume ruta, evaluación, entregas, uso de IA y proyecto integrado sin sustituir las normas ni rúbricas detalladas.
@@ -55,7 +58,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 - [ ] Validar los cuestionarios base GIFT de UD1 y UD2 en Moodle; el diagnóstico inicial ya consta como importado. El mantenimiento histórico no se considera un bloqueo actual sin una nueva comprobación.
 - [x] Creados y validados sintácticamente los tres cuestionarios GIFT específicos de UD1 (`cuestionario-poo-python.gift`, `cuestionario-numpy.gift` y `cuestionario-eda-numpy.gift`), con 10 preguntas cada uno y contenidos limitados a los materiales activos.
 - [ ] Pendiente validar e importar en Moodle los tres cuestionarios GIFT específicos de UD1.
-- [x] Ampliado NumPy en UD1 con teoría avanzada, notebook guiado y guion docente de cuarta clase. Rutas creadas/actualizadas: `01-fundamentos-python/01-teoria/06-numpy-avanzado.md`, `01-fundamentos-python/02-ejemplos/09_numpy_avanzado.ipynb`, `01-fundamentos-python/99-profesor/GUION_CUARTA_CLASE_PIA_UD1.md` y los README de UD1. Queda pendiente validar y publicar en Moodle. Siguiente paso recomendado: revisión final de contenido y ejecución docente.
+- [x] Ampliado NumPy en UD1 con teoría, broadcasting, ejemplos prácticos y guion docente de cuarta clase. Rutas: `06-numpy-avanzado.md`, `07-broadcasting-numpy.md`, `07c-casos-practicos-numpy.md`, notebooks `09_numpy_avanzado.ipynb` y `10_numpy_casos_practicos.ipynb`, más `GUION_CUARTA_CLASE_PIA_UD1.md`. Queda pendiente confirmar la publicación de los recursos Moodle.
 - [x] Cerrado el hueco documental de rendimiento y vectorización de NumPy con `01-fundamentos-python/01-teoria/07-numpy-rendimiento.md`, enlazado como material principal al notebook `06_numpy_rendimiento.ipynb`. Queda pendiente únicamente validar y publicar el material en Moodle.
 
 ## Revisión de `00-planificación` — 2026-08-20
@@ -138,7 +141,7 @@ La carpeta `00-planificación` se conserva como archivo de trazabilidad y materi
 ## Próximas acciones sugeridas
 
 1. En la próxima sesión, abrir en `teacher` y revisar el contenido de los tres archivos retirados de `origin/main`: `03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/notebooks/profesor/P2_PyCaret_sol.ipynb`, `03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/notebooks/profesor/P3_Modelo_sol.ipynb` y `06-llm-agentes/02-ejemplos/nlp-transformers-ud4/tareas/Transformers_Test_Moodle.gift`; después decidir si se solicita la purga del historial público. Los archivos siguen recuperables en commits anteriores y purgarlos requiere reescribir historial y coordinar clones.
-2. Confirmar qué recursos iniciales están realmente visibles en Moodle y decidir si se suben los 13 PDF de UD1 preparados, incluidos POO y NumPy/JAX; comprobar también qué notebooks de UD1 están publicados y probar el acceso con una cuenta de estudiante. No marcar como publicados los archivos que solo estén preparados.
+2. Confirmar qué recursos iniciales están realmente visibles en Moodle y decidir si se suben los 15 PDF de UD1 preparados, incluidos POO y NumPy/JAX; comprobar también qué notebooks de UD1 están publicados y probar el acceso con una cuenta de estudiante. No marcar como publicados los archivos que solo estén preparados.
 3. Configurar y verificar en Seneca los pesos RA/CE de `00-planificación/PONDERACION_RA_SENECA_2026_2027.md`.
 4. Montar y comprobar con una cuenta de prueba el curso plantilla Moodle según `00-planificación/CONFIGURACION_CALIFICADOR_MOODLE_2026_2027.md`; validar los GIFT base de UD1/UD2 y decidir cuándo importar los cuestionarios adicionales de POO, NumPy y EDA. El diagnóstico inicial ya está registrado como importado.
 5. Antes de evaluar al primer grupo, duplicar `00-planificación/plantilla_seguimiento_ra_ce.csv` por alumno y realizar una prueba con dos evidencias ficticias.

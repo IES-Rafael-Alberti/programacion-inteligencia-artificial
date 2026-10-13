@@ -8,6 +8,9 @@ Aquí encontrarás las guías, ejemplos, prácticas, recursos y materiales de pr
 
 Empieza por la [presentación del curso](presentacion-curso.md), que resume la forma de trabajo, la evaluación, las entregas y el proyecto integrado.
 
+Consulta [Accesos rápidos](accesos-rapidos.md) para guardar los enlaces al portal,
+al repositorio y a la descarga ZIP del material.
+
 ## Unidades
 
 1. [UD1 — Fundamentos de Python](unidades/ud01.md)

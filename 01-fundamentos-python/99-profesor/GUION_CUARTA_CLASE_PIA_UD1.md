@@ -24,13 +24,17 @@ cierra NumPy/JAX con holgura y hay tiempo.
 | 45–75 | Mismo bloque: indexación avanzada, máscaras, `where`, `clip`, `argmax/argsort/unique`, uso con datos. |
 | 75–90 | **Álgebra lineal** (`@`, `solve`, `det`, `inv`, `eig`) y utilidades. |
 | 90–105 | **Aplicaciones** con broadcasting: estandarización, tabla de multiplicar, distancias por parejas, correlación. |
-| 105–120 | **JAX** (si hay entorno), o pandas de preparación de datos (bloque opcional), o R opcional, y cierre. |
+| 105–115 | **JAX** si el entorno está listo; si no, demostración conceptual y dudas. |
+| 115–120 | Cierre. Si sobra tiempo, elige un solo enganche breve: pandas o R. |
 
 ## Recursos
 
-- Teoría: `01-fundamentos-python/01-teoria/05-numpy-avanzado.md`.
-- Teoría broadcasting: `01-fundamentos-python/01-teoria/07-broadcasting-numpy.md`.
-- Práctico: `01-fundamentos-python/02-ejemplos/09_numpy_avanzado.ipynb`.
+- Teoría avanzada: `01-fundamentos-python/01-teoria/06-numpy-avanzado.md`.
+- Guía de casos prácticos: `01-fundamentos-python/01-teoria/07c-casos-practicos-numpy.md`.
+- Ejemplos canónicos: `01-fundamentos-python/02-ejemplos/09_numpy_avanzado.ipynb` y
+  `01-fundamentos-python/02-ejemplos/10_numpy_casos_practicos.ipynb`.
+- Broadcasting: `01-fundamentos-python/01-teoria/07-broadcasting-numpy.md` y
+  `01-fundamentos-python/02-ejemplos/07_numpy_broadcasting_vectorizacion.ipynb`.
 - JAX: `01-fundamentos-python/01-teoria/08-guia-numpy-jax.md` y
   `01-fundamentos-python/02-ejemplos/08_introduccion_jax_comparativa.ipynb`.
 - R opcional: `01-fundamentos-python/01-teoria/09-guia-r-complementario.md`.
@@ -39,11 +43,14 @@ cierra NumPy/JAX con holgura y hay tiempo.
 
 Antes de la clase:
 
-- Confirmar que el notebook `09_numpy_avanzado.ipynb` está visible en
-  Moodle si se trabaja desde ahí.
-- Si está previsto JAX, comprobar `pixi run --environment ud1 jupyter lab` (o el
-  entorno indicado) y que `import jax` funciona; si no, dejar JAX como demo o
-  saltarlo.
+- Confirmar que `09_numpy_avanzado.ipynb`, `10_numpy_casos_practicos.ipynb` y
+  `08_introduccion_jax_comparativa.ipynb` están visibles en Moodle si se trabaja
+  desde ahí.
+- El entorno `default` de Pixi no incluye JAX. Para la demostración, comprobar
+  previamente el entorno `pia-ud1` de `01-fundamentos-python/05-recursos/pia-ud1.yml`,
+  o usar un entorno ya preparado en el aula. Si `import jax` no funciona, no
+  instalar paquetes durante la sesión: trabajar NumPy y dejar JAX para una
+  demostración o sesión posterior.
 - Preparar el tensor/generador `default_rng` para que los resultados de ejemplos
   salgan iguales en todos los equipos (usar la misma semilla).
 
@@ -83,8 +90,10 @@ Actividad breve, solo si hay tiempo:
 4. `df.groupby(...)["columna"].mean()` y un `pivot_table` sencillo.
 5. Exportar a CSV en memoria o a Parquet si está disponible.
 
-No entrar en UD2 en profundidad: es un enganche conceptual para que el alumnado
-vea que el ecosistema numérico (NumPy) se apoya en pandas para datos tabulares.
+Recomendación: prioriza NumPy y JAX; si quedan unos minutos, elige un solo
+enganche opcional. Pandas es el más conectado con la siguiente unidad; R puede
+mencionarse como complemento y reservarse para su bloque. No intentes impartir
+pandas y R a la vez ni entrar en UD2 en profundidad.
 
 ## Cierre
 

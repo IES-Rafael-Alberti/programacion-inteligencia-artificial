@@ -29,6 +29,9 @@ subcarpeta para relacionar los archivos con sus fuentes.
 - [ ] Publicar o confirmar el notebook inicial desde `Moodle/01-UD1/02-ejemplos/`.
 - [ ] Publicar el notebook de estructuras adicionales desde
   `Moodle/01-UD1/02-ejemplos/` para la siguiente sesión.
+- [ ] Para la sesión de NumPy/JAX, publicar los ejemplos seleccionados de
+  `Moodle/01-UD1/02-ejemplos/` (NumPy fundamentos, avanzado, broadcasting,
+  casos prácticos y JAX); R queda opcional.
 - [ ] Publicar el notebook de repaso desde `Moodle/01-UD1/03-practicas/` como
   recurso sin calificación.
 - [ ] Si se alcanza POO en la siguiente sesión, publicar el ejemplo y los
