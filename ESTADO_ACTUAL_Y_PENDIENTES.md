@@ -53,6 +53,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 - [ ] Validar los cuestionarios base GIFT de UD1 y UD2 en Moodle; el diagnóstico inicial ya consta como importado. El mantenimiento histórico no se considera un bloqueo actual sin una nueva comprobación.
 - [x] Creados y validados sintácticamente los tres cuestionarios GIFT específicos de UD1 (`cuestionario-poo-python.gift`, `cuestionario-numpy.gift` y `cuestionario-eda-numpy.gift`), con 10 preguntas cada uno y contenidos limitados a los materiales activos.
 - [ ] Pendiente validar e importar en Moodle los tres cuestionarios GIFT específicos de UD1.
+- [x] Ampliado NumPy en UD1 con teoría avanzada, notebook guiado y guion docente de cuarta clase. Rutas creadas/actualizadas: `01-fundamentos-python/01-teoria/06-numpy-avanzado.md`, `01-fundamentos-python/02-ejemplos/09_numpy_avanzado.ipynb`, `01-fundamentos-python/99-profesor/GUION_CUARTA_CLASE_PIA_UD1.md` y los README de UD1. Queda pendiente validar y publicar en Moodle. Siguiente paso recomendado: revisión final de contenido y ejecución docente.
 
 ## Revisión de `00-planificación` — 2026-08-20
 
