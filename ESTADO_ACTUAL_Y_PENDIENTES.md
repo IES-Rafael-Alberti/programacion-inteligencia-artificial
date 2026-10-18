@@ -3,6 +3,37 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Revisión de sincronización y libros NumPy — 2026-10-18
+
+- [x] Revisado el estado local de PIA: hay cambios sin consolidar en cuatro notebooks (`01_introduccion_entorno_python.ipynb`, `02_variables_tipos_operadores.ipynb`, `10_numpy_casos_practicos.ipynb` y `01_pandas_fundamentos.ipynb`), además de `.codex/` y `.opencode/origin` locales. Se conservan como trabajo local.
+- [ ] Consolidar con Unison al volumen EVO: el perfil `RafaelAlberti_26-27-EVO` apunta a `/media/jmsa/Evo500/IESRafaelAlberti/RafaelAlberti26_27`, pero ese volumen no está montado en este equipo. No se sincronizó ni sobrescribió ningún cambio.
+- [x] Localizado el archivo histórico `01-fundamentos-python/90-archivo/NumPy-20251016.zip` (7,8 MB), que contiene el EPUB de referencia según `DECISIONES_MATERIAL_ARCHIVADO.md`; el material activo está en `01-fundamentos-python/01-teoria/` y `02-ejemplos/`.
+
+**Siguiente paso:** montar el volumen EVO y repetir Unison limitado a `Modulos/PIA`; después decidir si se revisa el EPUB del ZIP histórico.
+
+## Catálogo de bibliografía NumPy — 2026-10-18
+
+- [x] Buscados los mejores libros sobre NumPy (solo o con DS/ML) y comprobado qué tenemos en el equipo. Todo lo relevante está en `/datos/RafaelAlberti` (mayoritariamente en `RafaelAlberti26_27/Libros/`, con duplicados históricos en 23_24/24_25/25_26); `/datos/Biblioteca` es de ficción y `/datos/libros` está sin descomprimir; `/datos/descargas` no existe.
+- [x] Extraídos los TOC de los manuales con sección NumPy: **Python Data Science Handbook** (VanderPlas 2023, Parte II C4-C12), **Python for Data Analysis** (McKinney 2022, C4), **Python NumPy For Beginners** (2022, 6 caps), **Machine Learning for Beginners** (2020, C3), **Essential Math for Data Science** (C4 álgebra lineal), **Python for Data Science** (Vasiliev 2022, C3), **Python 4 DS For Dummies**, **Hands-On Data Analysis with Pandas**.
+- [x] Determinado que **PDSH (VanderPlas) es el manual de NumPy más completo**; McK aporta álgebra lineal + I/O de arrays + generación aleatoria; NBeg aporta práctica aplicada (CSV, estadística, red neuronal) y EM4DS el fundamento matemático.
+- [x] Creado el índice combinado `01-fundamentos-python/05-recursos/INDICE_NUMPY_LIBROS.md` con 7 bloques (antes de NumPy, fundamentos de arrays, indexado/rebanado, operaciones/ufuncs, ordenación/estructuras, aleatorios e I/O, aplicaciones) y tabla por libro; enlazado desde `01-fundamentos-python/README.md` (sección Recursos).
+- [ ] Revisar si `90-archivo/NumPy-20251016.zip` (EPUB histórico de NumPy) merece incorporarse al catálogo de la biblioteca. Sin decisión tomada; pendiente de valoración.
+
+**Siguiente paso sugerido:** revisar el EPUB histórico de NumPy del ZIP y decidir si se añade a la bibliografía; validar los notebooks avanzados en ejecución real; probar los notebooks con el alumnado en clase.
+
+## Expansión NumPy avanzada — 2026-10-18
+
+- [x] Diagnóstico de cobertura: el material NumPy de UD1 cubre bien fundamentos, ufuncs, broadcasting, máscaras y vistas/copias, pero es superficial en **álgebra lineal**, **números aleatorios**, **entrada/salida de archivos** y **funciones universales/estadística avanzadas**.
+- [x] Creados **4 documentos de teoría nuevos** (sin modificar los existentes):
+  - `01-fundamentos-python/01-teoria/10-numpy-algebra-lineal-avanzado.md`
+  - `01-fundamentos-python/01-teoria/11-numpy-aleatoriedad-avanzado.md`
+  - `01-fundamentos-python/01-teoria/12-numpy-io-archivos-avanzado.md`
+  - `01-fundamentos-python/01-teoria/13-numpy-ufuncs-estadistica-avanzado.md`
+- [x] Creados **4 notebooks guiados equivalentes** en `02-ejemplos/` (numerados 11-14, cada uno con celdas markdown explicativas y código ejecutable). Validados con `nbclient` sin errores.
+- [x] Enlazados los nuevos documentos en: `01-teoria/README.md` (tabla de ruta), `01-fundamentos-python/README.md` (teoría), `docs/unidades/ud01.md` (enlaces directos a los 4 avanzados).
+- [x] `mkdocs build --strict` superado sin errores.
+- [ ] Revisar los notebooks con el dossier de nuevo contenido previo a mostrar en clase.
+
 «Semicerrado» significa que el repositorio está listo para uso docente y no tiene bloqueos operativos, pero seguirá admitiendo mejoras cuando una revisión en profundidad o el uso real en aula revele cambios convenientes.
 
 El repositorio reorganizado es utilizable como base docente para el curso 2026-2027. Los pendientes restantes no impiden compartirlo ni utilizarlo: dependen de Moodle, del comienzo real del curso o de futuras mejoras opcionales.

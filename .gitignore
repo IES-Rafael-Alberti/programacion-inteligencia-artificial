@@ -172,3 +172,9 @@ events.out.tfevents*
 !00-planificación/GUION_PRIMERA_CLASE_PIA_2026_09_29.md
 !00-planificación/CHECKLIST_MOODLE_UD1_2026_2027.md
 !00-planificación/CONFIGURACION_DIAGNOSTICO_INICIAL_PIA_2026_2027.md
+
+# Local agent tooling (not versioned)
+.codex/
+.opencode/
+.opencode/node_modules/
+.opencode/static/
