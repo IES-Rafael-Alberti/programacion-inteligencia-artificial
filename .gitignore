@@ -178,3 +178,6 @@ events.out.tfevents*
 .opencode/
 .opencode/node_modules/
 .opencode/static/
+
+# graphify regenerable AST cache (versioned graph lives in graphify-out/*)
+graphify-out/cache/
