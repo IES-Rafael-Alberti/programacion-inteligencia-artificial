@@ -21,6 +21,10 @@
 
 **Siguiente paso sugerido:** revisar el EPUB histórico de NumPy del ZIP y decidir si se añade a la bibliografía; validar los notebooks avanzados en ejecución real; probar los notebooks con el alumnado en clase.
 
+## Guion de la quinta clase (3 h) — 2026-10-18
+
+- [x] Creado `01-fundamentos-python/99-profesor/GUION_QUINTA_CLASE_PIA_UD1.md` (3 h): retoma NumPy donde quedó en la cuarta (se saltó la parte final y se pasó antes de tiempo a pandas), cierra ufuncs/estadística (13) como esencial, aleatoriedad (11) esencial en parte, I/O (12) como apunte, y deja **álgebra lineal (10) para UD3** (kNN/clustering/PCA) y **JAX** como ampliación; luego EDA con NumPy (repaso de `09_eda_numpy`, ya completo), ejercicios NumPy agrupados (ya hay 18) y **transición suave a pandas** (Series → DataFrame por Series → arranque de indexación con `loc`/`iloc` simples). No se ha creado teoría nueva de EDA ni ejercicios: ya están hechos.
+
 ## Expansión NumPy avanzada — 2026-10-18
 
 - [x] Diagnóstico de cobertura: el material NumPy de UD1 cubre bien fundamentos, ufuncs, broadcasting, máscaras y vistas/copias, pero es superficial en **álgebra lineal**, **números aleatorios**, **entrada/salida de archivos** y **funciones universales/estadística avanzadas**.
