@@ -6,11 +6,11 @@ Unidad introductoria que cubre los fundamentos de programación en Python orient
 
 ## Materiales incluidos
 
-- **Teoría (01-teoria/):** Índice de cobertura, guía de unidad, guías de Python, orientación a objetos y documentación de apoyo. Los conceptos básicos se trabajan como teoría guiada en los notebooks de `02-ejemplos/`.
+- **Teoría (01-teoria/):** Índice de cobertura, guía de unidad, guías de Python, orientación a objetos y documentación de apoyo. Los conceptos básicos se trabajan como teoría guiada en los notebooks de `02-ejemplos/`. Además de la introducción a NumPy y el bloque avanzado, hay cuatro guías avanzadas complementarias sobre álgebra lineal, aleatoriedad, entrada/salida de datos, y funciones universales/estadística (órdenes 11-14 de la ruta).
 - **Ejemplos (02-ejemplos/):** Notebooks demo de introducción a Python, variables, control de flujo, estructuras de datos, orientación a objetos (`05_orientacion_objetos_python.ipynb`), NumPy (incluido el módulo avanzado), broadcasting, JAX y R.
 - **Prácticas (03-practicas/):** Notebooks de repaso, estructuras de datos, ejercicios de POO (`06-ejercicios_poo.ipynb`), EDA y NumPy con tests.
 - **Evaluación (04-evaluacion/):** Rúbrica, checklist, cuestionario base y actividad breve de comparativa de lenguajes/formatos para IA.
-- **Recursos (05-recursos/):** Chuletas de Python básico, estructuras de datos y NumPy. Entorno conda (`pia-ud1.yml`).
+- **Recursos (05-recursos/):** Chuletas de Python básico, estructuras de datos y NumPy. Índice de bibliografía de apoyo (`INDICE_NUMPY_LIBROS.md`). Entorno conda (`pia-ud1.yml`).
 - **Archivo (90-archivo/):** ZIP con tutoriales externos de NumPy.
 
 ## Prácticas asociadas
