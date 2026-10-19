@@ -1,3 +1,5 @@
+$CATEGORY: PIA/UD1/NumPy/EDA y estadística
+
 ::UD1_EDA_NUMPY_01::¿Cuál es la regla básica de compatibilidad del broadcasting desde la última dimensión? {
 =Cada par de dimensiones debe ser igual o una de ellas debe valer 1. #La comparación se realiza de derecha a izquierda.
 ~La primera dimensión siempre debe ser igual. #La comparación comienza por la última dimensión.
@@ -26,7 +28,7 @@
 ~Se concatenan por filas. #La suma no concatena arrays.
 }
 
-::UD1_EDA_NUMPY_05::¿Para qué sirve fijar `np.random.seed(7)` antes de generar datos aleatorios? {
+::UD1_EDA_NUMPY_05::¿Para qué sirve crear `rng \= np.random.default_rng(7)` antes de generar datos aleatorios con ese generador? {
 =Para hacer reproducible la secuencia pseudoaleatoria generada. #La misma semilla permite repetir la misma secuencia en condiciones iguales.
 ~Para eliminar todos los valores atípicos. #La semilla no modifica la distribución de esa forma.
 ~Para convertir los datos en enteros. #El tipo depende de la función y sus argumentos.
@@ -37,7 +39,7 @@
 =`x[x > 4]` #La comparación crea una máscara booleana que indexa el array.
 ~`x[4]` #Eso intenta acceder a una posición concreta y no compara valores.
 ~`x > 4` #Eso devuelve la máscara, no los valores seleccionados.
-~`np.where(x)` #`where` requiere una condición y no expresa esa selección por sí sola.
+~`np.where(x)` #Es válido, pero devuelve índices donde x es no nulo, no los valores mayores que 4.
 }
 
 ::UD1_EDA_NUMPY_07::¿Cómo se detectan los valores NaN de un array `x`? {
@@ -66,4 +68,77 @@
 ~Una correlación demuestra por sí sola una relación de causa y efecto. #Correlación no basta para establecer causa y efecto.
 ~La normalización min-max elimina necesariamente los outliers. #Escala los valores, pero no elimina necesariamente extremos.
 ~`np.where` solo sirve para generar números aleatorios. #`where` selecciona o asigna según una condición.
+}
+
+// Ampliación 2026-10-19. Estadística ya trabajada y aplicación al EDA del 20-10.
+// Activar las preguntas de EDA después del ejemplo guiado de clase.
+
+::UD1_EDA_NUMPY_11::Para los salarios [1000, 1100, 1200, 1300, 10000], ¿qué descripción es correcta? {
+=La media es 2920 y la mediana 1200; el valor extremo afecta más a la media. #La mediana corresponde al valor central una vez ordenados.
+~La media y la mediana deben coincidir porque todos son números. #La simetría y la distribución importan.
+~La mediana es 10000 porque es el máximo. #Máximo y mediana son estadísticos distintos.
+~La media demuestra que la mayoría cobra más de 2900. #La media no describe por sí sola cuántos valores quedan a cada lado.
+}
+
+::UD1_EDA_NUMPY_12::Se calcula `z \= (x - x.min()) / (x.max() - x.min())` para un array no constante y sin ausentes. ¿Qué hace esta operación? {
+=Escala los valores al intervalo [0, 1], pero no elimina atípicos. #La transformación min-max cambia la escala; los extremos siguen representados.
+~Elimina todas las observaciones marcadas por IQR. #No hay ninguna selección ni eliminación en esa expresión.
+~Garantiza media 0 y desviación típica 1. #Eso corresponde a la estandarización, no al escalado min-max.
+~Funciona sin tratamiento adicional aunque todos los valores sean iguales. #En un array constante el denominador vale cero.
+}
+
+::UD1_EDA_NUMPY_13::¿Qué devuelve `np.histogram([0, 1, 2, 3, 4], bins\=[0, 2, 4])`? {
+=Conteos [2, 3] y bordes [0, 2, 4]. #Los intervalos son [0, 2) y [2, 4]; el último incluye su extremo derecho.
+~Solo los conteos [2, 3]. #La función devuelve dos arrays: conteos y bordes.
+~Conteos [3, 2] y bordes [0, 2, 4]. #El valor 2 pertenece al segundo intervalo.
+~Cinco conteos, uno por observación. #Se agrupan observaciones por intervalos.
+}
+
+::UD1_EDA_NUMPY_14::Con `x \= np.array([0, 2, 2, 3])`, ¿qué diferencia hay entre `np.bincount(x)` y las cuentas de `np.unique(x, return_counts\=True)`? {
+=bincount devuelve [1, 0, 2, 1]; las cuentas de unique son [1, 2, 1], asociadas a los valores [0, 2, 3]. #bincount reserva una posición para el entero ausente 1; unique enumera solo los presentes.
+~Las dos funciones devuelven siempre arrays de igual longitud. #Las categorías ausentes pueden cambiar la longitud de bincount.
+~unique devuelve las posiciones originales de los valores, por defecto. #Aquí se han pedido valores únicos y frecuencias, no índices.
+~bincount admite del mismo modo cadenas y enteros negativos. #Su entrada ordinaria son enteros no negativos.
+}
+
+::UD1_EDA_NUMPY_15::X tiene forma (100, 3), con observaciones por filas y variables por columnas. ¿Cómo se obtiene la matriz de correlación entre las tres variables? {
+=`np.corrcoef(X, rowvar\=False)`, que produce forma (3, 3). #rowvar False indica que cada columna es una variable.
+~`np.corrcoef(X)`, que siempre produce forma (3, 3). #Por defecto cada fila se considera una variable.
+~`np.mean(X, axis\=0)`, que devuelve una matriz de correlación. #Devuelve tres medias, no relaciones entre variables.
+~`X.reshape(3, 100)`, que calcula las correlaciones al cambiar la forma. #Reorganizar datos no calcula ningún estadístico de asociación.
+}
+
+::UD1_EDA_NUMPY_16::Si se multiplica una variable por 100, manteniendo la otra, ¿qué sucede con su covarianza y correlación de Pearson cuando ambas tienen varianza no nula? {
+=La covarianza se multiplica por 100 y la correlación permanece igual. #La covarianza depende de las unidades; la correlación normaliza las escalas. El factor es positivo.
+~Las dos se multiplican por 100. #La correlación normaliza por las desviaciones típicas.
+~Ninguna cambia, porque ambas ignoran las unidades. #La covarianza sí depende de la escala.
+~La correlación demuestra una relación causal después del cambio. #Cambiar unidades no demuestra causalidad.
+}
+
+::UD1_EDA_NUMPY_17::Para x sin ausentes y con desviación típica no nula, se calcula `z \= (x - x.mean()) / x.std()`. ¿Qué se espera usando la misma convención de std en la comprobación? {
+=Media aproximadamente 0 y desviación típica aproximadamente 1. #Es la estandarización z-score, con tolerancia por redondeo numérico.
+~Mínimo 0 y máximo 1 en todos los casos. #Esa propiedad corresponde al escalado min-max.
+~Ausencia de valores atípicos garantizada. #Estandarizar no elimina observaciones.
+~Transformar todos los datos a enteros. #No se está haciendo una conversión de dtype a enteros.
+}
+
+::UD1_EDA_NUMPY_18::Se simulan 10000 muestras con `rng.binomial(n\=10, p\=0.5, size\=10000)` y con `rng.poisson(lam\=3, size\=10000)`. ¿Qué se espera observar? {
+=Valores enteros con medias cercanas a 5 y 3, respectivamente; la binomial queda entre 0 y 10. #Son muestras finitas: sus medias no tienen por qué coincidir exactamente con las teóricas.
+~Valores continuos entre 0 y 1 en ambos casos. #Esas no son las distribuciones solicitadas.
+~Medias exactamente 5 y 3 para cualquier semilla. #La aleatoriedad produce fluctuaciones muestrales.
+~Ambas distribuciones tienen límite superior 10. #La distribución de Poisson no tiene ese límite superior.
+}
+
+::UD1_EDA_NUMPY_19::Se quieren marcar exactamente 15 registros distintos de un dataset de 1000 y simular categorías con probabilidades [0.5, 0.3, 0.2]. ¿Qué decisión es adecuada? {
+=Usar `rng.choice(1000, size\=15, replace\=False)` para los índices y `rng.choice(categorias, size\=1000, p\=[0.5, 0.3, 0.2])` para las categorías. #Sin reemplazo no se repiten índices; p fija probabilidades, no frecuencias exactas.
+~Usar replace True para garantizar 15 índices distintos. #Con reemplazo puede haber repeticiones.
+~Esperar siempre exactamente 500, 300 y 200 categorías. #Las probabilidades no fijan los conteos de una muestra aleatoria.
+~Usar probabilidades [5, 3, 2] sin normalizarlas. #Las probabilidades deben sumar 1.
+}
+
+::UD1_EDA_NUMPY_20::X contiene características e y sus etiquetas. ¿Qué opción conserva la correspondencia y distingue shuffle de permutation? {
+=Generar una sola permutación de índices y aplicarla a X e y; shuffle modifica su entrada y permutation devuelve un resultado barajado. #Una permutación común conserva el emparejamiento de las observaciones.
+~Barajar X e y por separado con llamadas sucesivas al mismo generador. #Las llamadas pueden producir permutaciones distintas.
+~Asignar `Xb \= rng.shuffle(X)` para obtener el array barajado. #shuffle modifica X en el sitio y devuelve None.
+~Volver a ordenar y después de barajar X, sin conservar índices. #La relación con las filas originales queda perdida.
 }

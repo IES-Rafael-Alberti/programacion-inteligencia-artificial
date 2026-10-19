@@ -1,3 +1,5 @@
+$CATEGORY: PIA/UD1/NumPy/Conceptos y aplicación
+
 ::UD1_NUMPY_01::¿Qué es un `ndarray` de NumPy? {
 =Una estructura multidimensional para almacenar datos homogéneos. #El array ofrece forma, tipo y operaciones vectorizadas.
 ~Una lista de Python que solo puede contener texto. #Una lista no tiene las mismas garantías ni operaciones.
@@ -66,4 +68,111 @@
 ~`dtype` #`dtype` describe tipos, no tiempos.
 ~`reshape` #`reshape` cambia la forma.
 ~`repr` #`repr` genera una representación textual.
+}
+
+// Ampliación 2026-10-19: interpretación y aplicación del núcleo NumPy.
+
+::UD1_NUMPY_11::Un array contiene 100 valores de tipo int32. Sin contar los metadatos del objeto, ¿cuántos bytes ocupan sus elementos? {
+=400 bytes; itemsize vale 4 y nbytes vale 400. #Cada int32 ocupa 32 bits, es decir, 4 bytes.
+~100 bytes; cada entero ocupa siempre un byte. #El tamaño depende del dtype.
+~3200 bytes; int32 significa 32 bytes por elemento. #32 son bits, no bytes.
+~No se puede calcular a partir de size y dtype. #nbytes es size por itemsize para este array.
+}
+
+::UD1_NUMPY_12::Con `A \= np.arange(12).reshape(3, 4)`, ¿qué devuelve `A[\:2, 1\:3]`? {
+=[[1, 2], [5, 6]], con forma (2, 2). #Los cortes excluyen el extremo final: filas 0 y 1, columnas 1 y 2.
+~[[1, 2, 3], [5, 6, 7]], con forma (2, 3). #El extremo 3 de las columnas no se incluye.
+~[1, 6], con forma (2,). #No se están seleccionando dos pares de coordenadas mediante indexado avanzado.
+~[[4, 5], [8, 9]], con forma (2, 2). #La fila inicial es 0 y la columna inicial es 1.
+}
+
+::UD1_NUMPY_13::Con `A \= np.array([[1, 2, 3], [4, 5, 6]])`, ¿qué resultado producen `A.sum(axis\=0)` y `A.sum(axis\=1)`, respectivamente? {
+=[5, 7, 9] y [6, 15]. #El eje 0 reduce filas y el eje 1 reduce columnas.
+~[6, 15] y [5, 7, 9]. #Se han intercambiado los ejes.
+~21 y 21. #Esos serían totales globales sin eje.
+~[1, 2, 3] y [4, 5, 6]. #Una reducción no selecciona simplemente las filas.
+}
+
+::UD1_NUMPY_14::X tiene forma (4, 3). Para centrar cada fila, ¿qué expresión conserva una forma adecuada para broadcasting? {
+=`X - X.mean(axis\=1, keepdims\=True)` #Las medias tienen forma (4, 1), equivalente a añadir un eje con medias[\:, None].
+~`X - X.mean(axis\=1)` #Las formas (4, 3) y (4,) no son compatibles.
+~`X - X.mean(axis\=0)` #Centra columnas, no filas.
+~`X.reshape(3, 4)` #Cambiar la forma no resta medias.
+}
+
+::UD1_NUMPY_15::Con `x \= np.array([2, 5, 8, 12])`, ¿qué expresión selecciona los valores mayores que 3 y menores que 10? {
+=`x[(x > 3) & (x < 10)]` #Combina máscaras con & y paréntesis; devuelve [5, 8].
+~`x[(x > 3) and (x < 10)]` #and intenta evaluar la verdad del array completo y falla en este caso.
+~`x[(x > 3) | (x < 10)]` #La disyunción acepta todos los valores de este ejemplo.
+~`(x > 3) & (x < 10)` #Devuelve la máscara, no los valores seleccionados.
+}
+
+::UD1_NUMPY_16::Con `x \= np.array([-2, 0, 3])`, ¿qué pareja de resultados es correcta? Se evalúan `np.where(x < 0, -1, 1)` y `np.select([x < 0, x > 0], [-1, 1], default\=0)`. {
+=[-1, 1, 1] y [-1, 0, 1]. #where usa dos alternativas; select contempla varias condiciones y un valor por defecto.
+~[-1, 0, 1] y [-1, 1, 1]. #Se han intercambiado los resultados.
+~[-2, 0, 3] en ambos casos. #Estas expresiones construyen categorías, no conservan necesariamente los valores originales.
+~Ambas expresiones modifican x directamente. #Las llamadas producen nuevos resultados; x no cambia.
+}
+
+::UD1_NUMPY_17::¿Qué devuelve `np.clip(np.array([-2., 0.5, 3.]), 0, 1)`? {
+=[0., 0.5, 1.], manteniendo tres elementos. #clip limita los valores, no elimina posiciones.
+~[0.5], eliminando los extremos. #Eso sería un filtrado por condición.
+~[-2., 0.5, 3.], sin cambios. #Los valores fuera del intervalo se sustituyen por los límites.
+~Un array cuya media y desviación son 0 y 1. #clip no hace estandarización z-score.
+}
+
+::UD1_NUMPY_18::Se ejecuta `b \= np.arange(4); vista \= b[1\:3]; copia \= b[[1, 2]]; vista[0] \= 99; copia[1] \= -1`. ¿Cómo termina b? {
+=[0, 99, 2, 3]. #El corte básico comparte memoria; la selección avanzada guardada en copia es independiente.
+~[0, 99, -1, 3]. #Modificar la copia avanzada no cambia b.
+~[0, 1, 2, 3]. #Modificar vista sí cambia b.
+~[99, -1, 2, 3]. #Los índices de la vista se corresponden con las posiciones originales 1 y 2.
+}
+
+::UD1_NUMPY_19::Con `x \= np.array([30, 10, 20])`, ¿qué devuelven `np.argsort(x)` y `np.argmax(x)`? {
+=[1, 2, 0] y 0. #argsort devuelve posiciones para ordenar; argmax devuelve la posición del máximo.
+~[10, 20, 30] y 30. #Son valores ordenados y valor máximo, no índices.
+~[0, 1, 2] y 2. #El máximo está en la posición 0 y el orden original no es ascendente.
+~[2, 1, 0] y 1. #La posición del mínimo es 1; no es la del máximo.
+}
+
+::UD1_NUMPY_20::Con a y b de forma (3,), ¿qué diferencia hay entre `np.concatenate([a, b])` y `np.stack([a, b])`? {
+=El primero tiene forma (6,) y el segundo (2, 3). #concatenate une sobre un eje existente; stack introduce un eje nuevo.
+~Ambos tienen forma (6,). #stack crea una dimensión adicional.
+~El primero tiene forma (2, 3) y el segundo (6,). #Se han intercambiado las funciones.
+~No se pueden combinar arrays unidimensionales. #Ambas funciones admiten estos operandos.
+}
+
+::UD1_NUMPY_21::Con `v \= np.array([1, 3, 2])`, ¿qué producen `np.add.reduce(v)` y `np.add.accumulate(v)`? {
+=6 y [1, 4, 6]. #reduce entrega el total; accumulate conserva los resultados parciales.
+~[1, 4, 6] y 6. #Se han intercambiado los métodos.
+~[2, 6, 4] y [1, 3, 2]. #No se está sumando v consigo mismo.
+~6 y [6, 6, 6]. #Cada parcial depende solo del prefijo recorrido.
+}
+
+::UD1_NUMPY_22::¿Qué resultado tiene `np.multiply.outer([1, 2], [10, 20, 30])`? {
+=[[10, 20, 30], [20, 40, 60]], de forma (2, 3). #Combina cada elemento del primer vector con todos los del segundo.
+~[10, 40, 90], de forma (3,). #Eso no describe el producto de todas las parejas.
+~Un escalar con valor 140. #outer no suma los productos.
+~Falla porque los vectores tienen longitudes distintas. #No exige longitudes iguales; construye las combinaciones.
+}
+
+::UD1_NUMPY_23::Con `x \= np.array([1.9, -1.9])`, ¿qué resultados distinguen conversión, suelo y redondeo? {
+=`x.astype(int)` da [1, -1], `np.floor(x)` da [1., -2.] y `np.round(x)` da [2., -2.]. #La conversión trunca hacia cero, floor baja al entero inferior y round redondea al más próximo.
+~Las tres operaciones dan [2, -2]. #Truncar no equivale a redondear.
+~astype y floor siempre son iguales para los negativos. #En -1.9 dan -1 y -2, respectivamente.
+~np.round elimina la parte decimal sin redondear. #Eso describe truncamiento, no redondeo.
+}
+
+::UD1_NUMPY_24::Se guarda un array numérico con `np.save('datos.npy', x)`. ¿Cómo se recupera conservando forma y dtype? {
+=`np.load('datos.npy')` #El formato binario NumPy conserva esos metadatos.
+~`np.loadtxt('datos.npy')` #loadtxt interpreta texto, no el formato npy.
+~`np.savetxt('datos.npy', x)` #Es otra escritura; además usar esa extensión no convierte el texto en formato npy.
+~`np.array('datos.npy')` #Crea un array con la cadena, no lee el archivo.
+}
+
+::UD1_NUMPY_25::¿Qué opción permite guardar dos arrays con nombre y recuperarlos de un archivo npz cerrándolo después? {
+=Guardar con `np.savez_compressed('datos.npz', a\=a, b\=b)` y abrir con `with np.load('datos.npz') as datos`, accediendo a `datos['a']`. #El archivo contiene arrays nombrados y el contexto cierra el recurso.
+~Guardar con np.save y cargar siempre con np.loadtxt. #Confunde formatos binarios y de texto.
+~Pasar todos los arrays a np.fromfile sin indicar dtype. #Un binario plano no conserva automáticamente sus metadatos y nombres.
+~Usar np.genfromtxt para cualquier archivo npz. #genfromtxt está orientada a texto, no a contenedores npz.
 }

@@ -3,7 +3,30 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
-## Revisión de cobertura de cuestionarios NumPy — 2026-10-19
+## Preparación para mañana: cuestionarios, R y actividad entregable — 2026-10-19
+
+- [x] Ampliado `01-fundamentos-python/04-evaluacion/cuestionario-numpy.gift`: de 10 a **25 preguntas**. Añadidas interpretación de tipos/memoria, cortes 2D, ejes, `keepdims`/`newaxis`, máscaras compuestas, selección, límites, vistas/copias, índices de ordenación, concatenación/apilado, ufuncs, redondeo e I/O básico.
+- [x] Ampliado `cuestionario-eda-numpy.gift`: de 10 a **20 preguntas**. Añadidas media/mediana, escalado/estandarización, histograma, frecuencias, correlación/covarianza, distribuciones, muestreo y correspondencia fila-etiqueta. Actualizada la semilla al `Generator` moderno y aclarado el feedback de `np.where(x)`.
+- [x] Mantenidas las **18 preguntas** del banco de código, con variantes habituales de respuesta para reducir rechazos por espacios o sintaxis equivalente. Separadas mediante categorías GIFT las preguntas 13–15 de álgebra para consulta/UD3; las otras 15 pertenecen al núcleo actual. No se garantiza aceptación de toda expresión Python equivalente: Moodle compara texto.
+- [x] Total de los tres bancos: **63 preguntas**, incluidas **25 nuevas**. Verificados identificadores únicos, delimitadores, alternativas, feedback y categorías; contrastados numéricamente los resultados/propiedades de las 25 nuevas. Falta validar la importación en Moodle.
+- [x] Preparado para alumnado el enunciado canónico `04-evaluacion/comparativa-lenguajes-formatos-ia.md`, conservando su ruta: retirado el apartado «Observación docente» y añadidos caso concreto, instrucciones/plantilla de entrega, fuentes/declaración de IA y ejemplo XML/HTML para RA1.f. La observación docente pasa al guion privado. Actualizado el README de evaluación.
+- [x] Generado el PDF entregable `Moodle/01-UD1/03-practicas/comparativa-lenguajes-formatos-ia.pdf` (paquete local ignorado), comprobado texto y ajuste de tablas a la página.
+- [x] Ajustado el guion `99-profesor/06-GUION_SEXTA_CLASE_PIA_EDA_NUMPY_PANDAS.md`: R base 5–20 min, comparativa en clase 20–55, EDA NumPy 55–85 y pandas después, con pausa y mini-práctica. Ausentes/agrupaciones pasan a ampliación para que las tres horas sean viables. Ejecutados ocho bloques Python y un ejemplo R; comprobadas las rutas.
+- [ ] **Mañana, 20-10, antes de clase: subir/importar los tres cuestionarios NumPy actualizados a Moodle**, comprobar categorías/recuentos/feedback y publicar los recursos que procedan. No subir el GIFT fuente como archivo visible. Excluir álgebra de UD3 del repaso obligatorio y activar EDA tras el ejemplo.
+- [ ] **Mañana, 20-10: subir el PDF de la comparativa y habilitar su tarea de entrega** para realizarla en clase después de la introducción a R; comprobar plazo y acceso del alumnado.
+- [x] Registrada también la decisión de comparar gráficas Python/R al impartir visualización en UD2. Ese trabajo queda pendiente para ese bloque, no para mañana.
+
+**Siguiente paso:** terminar la publicación selectiva del enunciado para el alumnado y consolidar los bancos y el guion solo en el repositorio docente. La subida/importación a Moodle permanece pendiente para mañana.
+
+## Decisión docente — visualización comparada Python/R (2026-10-19)
+
+- [x] Acordado con el profesor que, cuando se trabajen las gráficas en Python, también se harán ejemplos equivalentes en R y se compararán código y resultados con los mismos datos y preguntas de análisis.
+- [ ] Al preparar el bloque de visualización de UD2, incorporar la comparación Python/R: tipos de gráfico, sintaxis, etiquetas, tratamiento de datos y lectura del resultado. Elegir las herramientas concretas de R al preparar ese bloque; no se presupone hoy un paquete nuevo.
+- [x] La introducción breve de R de mañana se limita a vectores, operaciones, `data.frame` y un resumen. La comparación gráfica queda para el bloque de visualización, no para la sesión del 20 de octubre.
+
+**Siguiente paso:** recuperar esta decisión al preparar las clases de gráficas de UD2.
+
+## Revisión de cobertura de cuestionarios NumPy — 2026-10-19 (diagnóstico previo a la ampliación)
 
 - [x] Contrastados los tres bancos específicos con los ejemplos NumPy 05–13 y el avance comunicado: `04-evaluacion/cuestionario-numpy.gift` (10 preguntas conceptuales), `cuestionario-eda-numpy.gift` (10 preguntas) y `cuestionario-numpy-completo.gift` (18 respuestas cortas). Total: **38 preguntas específicas**. El cuestionario base de Python añade una pregunta general sobre el propósito de NumPy, pero no cubre los huecos avanzados.
 - [x] **Diagnóstico: cobertura parcial, no completa respecto a los materiales trabajados.** El banco «completo» acompaña los 18 ejercicios, pero solo pregunta una operación por ejercicio. Una función mencionada en feedback o como distractor no se considera evaluada directamente. Ejemplo: la pregunta 17 pide solo el percentil 25, no histograma, covarianza, correlación ni valores únicos del ejercicio 17.
@@ -13,16 +36,16 @@
 - [x] Separado el alcance temporal: preguntas 13–15 del banco completo (producto matricial, norma y `solve`) corresponden al material de consulta/UD3. El EDA previsto para el 20 de octubre todavía no consta como impartido: sus preguntas se activarán tras trabajarlo, sin contabilizarlo como hueco de una clase ya dada.
 - [x] Comprobación estática: 10 + 10 + 18 identificadores y bloques de respuesta. Sin nuevos errores graves de respuesta detectados en esta lectura. Sigue pendiente la importación real en Moodle; las respuestas cortas literales no ejecutan Python ni admiten automáticamente todas las expresiones equivalentes.
 - [x] Mejora de redacción localizada para una futura edición: en EDA 06, `np.where(x)` sí es una llamada válida que devuelve índices de elementos no nulos; no selecciona los valores mayores de 4. EDA 05 usa la semilla global antigua, válida pero menos alineada con el `Generator` moderno trabajado. No se han modificado los bancos durante esta revisión.
-- [ ] Completar la cobertura antes de dar por cerrado el banco de repaso NumPy: propuesta de ampliación agrupada con unas 20–25 preguntas de interpretación y aplicación sobre las capacidades esenciales ausentes, y separar álgebra/EDA según el momento docente. La ampliación queda pendiente de encargo; la auditoría no genera preguntas nuevas.
+- [x] Ampliación encargada y realizada en este turno: 25 preguntas nuevas en los dos bancos existentes; álgebra separada por categoría y EDA asociado a su momento de clase. El diagnóstico de 38 preguntas anterior es la situación previa, sustituida por los recuentos 25+20+18 de la preparación actual.
 
-**Siguiente paso recomendado:** ampliar el banco conceptual existente y el de EDA sin crear un cuestionario por documento; mantener el de código como acompañamiento de la práctica. Validar después importación y respuestas aceptadas en Moodle.
+**Siguiente paso recomendado:** importar y validar los tres bancos actualizados en Moodle, tal como figura en los pendientes de mañana. La ampliación de cobertura está completada.
 
 ## Próxima clase — EDA NumPy y pandas (preparada el 2026-10-19)
 
 - [x] Registrado el avance real comunicado por el profesor: NumPy está prácticamente terminado. Pandas ya se había iniciado con Series, DataFrame e inicio de indexación.
-- [x] Creado `01-fundamentos-python/99-profesor/06-GUION_SEXTA_CLASE_PIA_EDA_NUMPY_PANDAS.md` para el 2026-10-20: 3 horas de referencia, con un ejemplo EDA NumPy de cierre (35 minutos) y transición usando los mismos datos a pandas. Prioridad: `loc`/`iloc`, filtros y columnas calculadas; después ausentes y agrupación sencilla según el ritmo.
+- [x] Creado `01-fundamentos-python/99-profesor/06-GUION_SEXTA_CLASE_PIA_EDA_NUMPY_PANDAS.md` para el 2026-10-20. Plan actualizado: 3 horas con R breve, comparativa entregable, EDA NumPy de cierre (30 minutos) y transición usando los mismos datos a pandas. Prioridad en pandas: `loc`/`iloc`, filtros y columnas calculadas; ausentes/agrupación solo si hay margen.
 - [x] Revisado el EDA existente: el guion aclara nombres y tipos en arrays homogéneos, selección aleatoria sin reemplazo, interpretación de valores fuera de escala y atípicos, y conservación de originales. Incluye un recorrido ejecutable sin la celda de conversión Jupytext del cuaderno antiguo.
-- [x] Ejecutados en orden los siete bloques Python del nuevo guion y comprobadas sus seis rutas de recursos. Los notebooks y prácticas públicos existentes no se modifican en esta preparación.
+- [x] Verificación inicial: siete bloques Python y seis rutas; tras añadir R se ejecutaron ocho bloques Python y un ejemplo R. Los notebooks públicos existentes se mantienen; el enunciado entregable sí se actualiza en la preparación posterior.
 - [x] Actualizado `NOTAS_PROXIMA_SESION.md` para sustituir la antigua preparación NumPy/JAX por el estado real y el guion de mañana. Guion y continuidad quedan solo en el repositorio docente.
 
 **Siguiente paso:** comprobar disponibilidad de los recursos antes de clase e impartir el EDA de cierre y pandas. Registrar después el punto real alcanzado en UD2; no volver a planificar un repaso completo de NumPy.

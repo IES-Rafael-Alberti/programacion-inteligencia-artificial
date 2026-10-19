@@ -2,6 +2,8 @@
 // Respuestas cortas literales. La retroalimentación general va DENTRO de las llaves.
 // Validar la importación y las variantes de respuesta aceptadas en Moodle.
 
+$CATEGORY: PIA/UD1/NumPy/Práctica de código
+
 ::UD1_NUMPY_COMPLETO_01::Ejercicio 1 — Escribe la expresión que crea los enteros de 0 a 11 y los reorganiza en una matriz 3×4. {
 =np.arange(12).reshape(3, 4)#Correcto.
 ####Solución de referencia: a \= np.arange(12).reshape(3, 4). Comprueba a.shape.
@@ -14,21 +16,27 @@
 
 ::UD1_NUMPY_COMPLETO_03::Ejercicio 3 — Con A bidimensional, selecciona todas las filas de la tercera columna. {
 =A[\:, 2]#Correcto: el índice 2 corresponde a la tercera columna.
+=A[\:,2]#Correcto: los espacios no cambian este corte.
 ####Solución: col2 \= A[\:, 2]. Los índices empiezan en 0.
 }
 
 ::UD1_NUMPY_COMPLETO_04::Ejercicio 4 — Selecciona de datos solo los valores negativos mediante indexado booleano. {
 =datos[datos < 0]#Correcto.
+=datos[datos<0]#Correcto.
 ####Solución: mascara \= datos < 0; negativos \= datos[mascara].
 }
 
 ::UD1_NUMPY_COMPLETO_05::Ejercicio 5 — Calcula la suma de cada columna de M. {
 =M.sum(axis\=0)#Correcto: reduce las filas y conserva una suma por columna.
+=np.sum(M, axis\=0)#Correcto: la función y el método calculan la misma reducción.
+=np.sum(M,axis\=0)#Correcto.
 ####Solución: suma_col \= M.sum(axis\=0).
 }
 
 ::UD1_NUMPY_COMPLETO_06::Ejercicio 6 — Centra las columnas de X restando su media, sin bucles. {
 =X - X.mean(axis\=0)#Correcto: se aplica broadcasting.
+=X-X.mean(axis\=0)#Correcto.
+=X - X.mean(axis\=0, keepdims\=True)#Correcto: la media de forma (1, columnas) también es compatible.
 ####Solución: Xc \= X - X.mean(axis\=0). Verifica la media por columnas.
 }
 
@@ -39,6 +47,7 @@
 
 ::UD1_NUMPY_COMPLETO_08::Ejercicio 8 — Suma los cuadrados de todos los elementos de arr de forma vectorizada. {
 =np.sum(arr**2)#Correcto.
+=(arr**2).sum()#Correcto: la suma se realiza sobre el array de cuadrados.
 ####Solución: suma_vec \= np.sum(arr**2). Comprueba la igualdad antes de comparar tiempos.
 }
 
@@ -49,6 +58,8 @@
 
 ::UD1_NUMPY_COMPLETO_10::Ejercicio 10 — Genera 1000 valores de una normal de media 5 y desviación típica 2 usando rng. {
 =rng.normal(loc\=5, scale\=2, size\=1000)#Correcto: scale es la desviación típica.
+=rng.normal(5, 2, 1000)#Correcto: los argumentos posicionales son loc, scale y size.
+=rng.normal(5,2,1000)#Correcto.
 ####Solución: normales \= rng.normal(loc\=5, scale\=2, size\=1000).
 }
 
@@ -62,8 +73,13 @@
 ####Solución: train_idx \= idx[\:96]; test_idx \= idx[96\:].
 }
 
+// Las preguntas 13–15 no forman parte del repaso obligatorio de mañana.
+$CATEGORY: PIA/UD1/NumPy/Álgebra consulta UD3
+
 ::UD1_NUMPY_COMPLETO_13::Ejercicio 13 — Escribe la expresión del producto matricial de P por Q. {
 =P @ Q#Correcto: las dimensiones interiores deben coincidir.
+=P@Q#Correcto.
+=np.matmul(P, Q)#Correcto: equivalente a @ para estas matrices.
 ####Solución: R \= P @ Q. El operador * multiplica elemento a elemento.
 }
 
@@ -76,6 +92,8 @@
 =np.linalg.solve(A, bvec)#Correcto: no hace falta calcular la inversa.
 ####Solución: x_sol \= np.linalg.solve(A, bvec). Verifica A @ x_sol.
 }
+
+$CATEGORY: PIA/UD1/NumPy/Práctica de código
 
 ::UD1_NUMPY_COMPLETO_16::Ejercicio 16 — Devuelve las sumas parciales de v con una ufunc acumulativa. {
 =np.add.accumulate(v)#Correcto.
