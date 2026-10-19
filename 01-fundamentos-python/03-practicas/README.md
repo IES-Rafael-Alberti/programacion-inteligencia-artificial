@@ -15,6 +15,7 @@ alguna actividad requiere una entrega.
 | `10-ejercicios_numpy.ipynb` | Ejercicios NumPy en notebook. |
 | `10-ejercicios_numpy-tests.md` | Enunciados con enfoque de autocorrección. |
 | `10-ejercicios_numpy-tests.ipynb` | Ejercicios NumPy con tests. |
+| `15-ejercicios_numpy_completo.ipynb` | Recorrido completo de NumPy en 18 ejercicios guiados con tests, coordinado con `cuestionario-numpy-completo.gift`. |
 | `06-ejercicios_poo.ipynb` | Ejercicios de orientación a objetos. |
 
 El cuaderno de POO es una ampliación: úsalo cuando se hayan trabajado clases,

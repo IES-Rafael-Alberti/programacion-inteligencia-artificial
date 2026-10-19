@@ -3,7 +3,7 @@
 Este documento amplía el trabajo con NumPy hacia la **persistencia de datos**: guardar
 y cargar arrays en formato binario de NumPy, y leer/escribir archivos de texto como
 CSV. Es material **avanzado** y complementa [`06-numpy-avanzado.md`](06-numpy-avanzado.md)
-y la [guía de casos prácticos](07c-casos-practicos-numpy.md).
+y la [guía de casos prácticos](10-numpy-casos-practicos.md).
 
 > En este bloque se entiende cómo mover datos hacia y desde NumPy con eficiencia.
 > Para estructuras tabulares con etiquetas y columnas heterogéneas, en UD2 se usará
