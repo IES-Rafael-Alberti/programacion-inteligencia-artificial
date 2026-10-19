@@ -3,6 +3,20 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Revisión de cobertura de cuestionarios NumPy — 2026-10-19
+
+- [x] Contrastados los tres bancos específicos con los ejemplos NumPy 05–13 y el avance comunicado: `04-evaluacion/cuestionario-numpy.gift` (10 preguntas conceptuales), `cuestionario-eda-numpy.gift` (10 preguntas) y `cuestionario-numpy-completo.gift` (18 respuestas cortas). Total: **38 preguntas específicas**. El cuestionario base de Python añade una pregunta general sobre el propósito de NumPy, pero no cubre los huecos avanzados.
+- [x] **Diagnóstico: cobertura parcial, no completa respecto a los materiales trabajados.** El banco «completo» acompaña los 18 ejercicios, pero solo pregunta una operación por ejercicio. Una función mencionada en feedback o como distractor no se considera evaluada directamente. Ejemplo: la pregunta 17 pide solo el percentil 25, no histograma, covarianza, correlación ni valores únicos del ejercicio 17.
+- [x] Bien cubiertos: concepto de `ndarray`, creación y conversión de tipos, `shape`/`reshape`, suma/media por eje 0, vectorización básica, reglas de broadcasting, máscaras simples, semilla/Generator y normal, permutación/split y detección elemental de NaN/IQR.
+- [x] Huecos esenciales detectados: cortes y selección 2D más allá de una columna; ejes 0/1, `keepdims` y `newaxis`; condiciones compuestas con `&`/`|` y paréntesis; `where`/`select`/`clip`; efecto de modificar vistas frente a copias; `sort`/`argsort`/`argmax`; concatenación/apilado; resultados de `reduce`/`accumulate`/`outer`; redondeo, histogramas/`bincount`/`unique`; correlación/covarianza e interpretación; comparación media/mediana/desviación y escalado. No hace falta una pregunta por función, pero sí cubrir estas capacidades con situaciones representativas.
+- [x] Cobertura parcial de bloques secundarios: aleatoriedad pregunta generador, normal y permutación, pero no `choice` con probabilidades, distinción `shuffle`/`permutation` ni interpretación de distribuciones. I/O pregunta solo `save`; faltan recuperación y diferencias básicas `.npy`/`.npz`/CSV. Las ampliaciones de distribuciones y formatos se ajustarán a lo efectivamente impartido, no a toda la biblioteca.
+- [x] Separado el alcance temporal: preguntas 13–15 del banco completo (producto matricial, norma y `solve`) corresponden al material de consulta/UD3. El EDA previsto para el 20 de octubre todavía no consta como impartido: sus preguntas se activarán tras trabajarlo, sin contabilizarlo como hueco de una clase ya dada.
+- [x] Comprobación estática: 10 + 10 + 18 identificadores y bloques de respuesta. Sin nuevos errores graves de respuesta detectados en esta lectura. Sigue pendiente la importación real en Moodle; las respuestas cortas literales no ejecutan Python ni admiten automáticamente todas las expresiones equivalentes.
+- [x] Mejora de redacción localizada para una futura edición: en EDA 06, `np.where(x)` sí es una llamada válida que devuelve índices de elementos no nulos; no selecciona los valores mayores de 4. EDA 05 usa la semilla global antigua, válida pero menos alineada con el `Generator` moderno trabajado. No se han modificado los bancos durante esta revisión.
+- [ ] Completar la cobertura antes de dar por cerrado el banco de repaso NumPy: propuesta de ampliación agrupada con unas 20–25 preguntas de interpretación y aplicación sobre las capacidades esenciales ausentes, y separar álgebra/EDA según el momento docente. La ampliación queda pendiente de encargo; la auditoría no genera preguntas nuevas.
+
+**Siguiente paso recomendado:** ampliar el banco conceptual existente y el de EDA sin crear un cuestionario por documento; mantener el de código como acompañamiento de la práctica. Validar después importación y respuestas aceptadas en Moodle.
+
 ## Próxima clase — EDA NumPy y pandas (preparada el 2026-10-19)
 
 - [x] Registrado el avance real comunicado por el profesor: NumPy está prácticamente terminado. Pandas ya se había iniciado con Series, DataFrame e inicio de indexación.
