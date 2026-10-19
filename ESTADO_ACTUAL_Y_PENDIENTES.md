@@ -3,9 +3,23 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Renumerado de los materiales avanzados de NumPy — 2026-10-19
+
+Para que cada documento de teoría `.md` y su notebook guiado compartan el mismo número de archivo, se renumeró el bloque avanzado de NumPy:
+
+- **Casos prácticos**: `07c-casos-practicos-numpy.md` → `10-numpy-casos-practicos.md` (emparejado con el notebook `10_numpy_casos_practicos.ipynb`, ya numerado 10).
+- **Aleatoriedad**: el notebook `12_numpy_aleatoriedad_avanzado.ipynb` → `11_numpy_aleatoriedad_avanzado.ipynb` (el `.md` ya era `11-numpy-aleatoriedad-avanzado.md`).
+- **Entrada/salida**: el notebook `13_numpy_io_archivos_avanzado.ipynb` → `12_numpy_io_archivos_avanzado.ipynb` (el `.md` ya era `12-numpy-io-archivos-avanzado.md`).
+- **Ufuncs/estadística**: el notebook `14_numpy_ufuncs_estadistica_avanzado.ipynb` → `13_numpy_ufuncs_estadistica_avanzado.ipynb` (el `.md` ya era `13-numpy-ufuncs-estadistica-avanzado.md`).
+- **Álgebra lineal avanzada**: tanto el `.md` `10-numpy-algebra-lineal-avanzado.md` como el notebook `11_numpy_algebra_lineal_avanzado.ipynb` pasan a **14** (`14-numpy-algebra-lineal-avanzado.md` y `14_numpy_algebra_lineal_avanzado.ipynb`), quedando como material de consulta/UD3 tras la serie.
+
+Resultado final (pares alineados): casos=10, aleatoriedad=11, io=12, ufuncs=13, álgebra=14. Se actualizaron las referencias en `01-teoria/README.md`, `docs/unidades/ud01.md`, `NOTAS_PROXIMA_SESION.md`, guiones 04/05 de clase, README del paquete Moodle y los enlaces internos de los propios `.md`. Los notebooks renombrados son JSON válidos (renombrados con `git mv`).
+
+**Siguiente paso:** regenerar los PDF del paquete Moodle de UD1 con los nuevos nombres de origen si se publica el material en Moodle.
+
 ## Mejoras al notebook avanzado de aleatoriedad — 2026-10-19
 
-- [x] Añadidas a `01-fundamentos-python/02-ejemplos/12_numpy_aleatoriedad_avanzado.ipynb` las **gráficas de las distribuciones**: una figura 2×3 (15×8) con histogramas de las continuas (Uniforme, Normal, Exponencial) y barras de frecuencias de las discretas (Binomial, Poisson, enteros uniformes), todo con `default_rng(0)` y 10 000 muestras.
+- [x] Añadidas a `01-fundamentos-python/02-ejemplos/11_numpy_aleatoriedad_avanzado.ipynb` las **gráficas de las distribuciones**: una figura 2×3 (15×8) con histogramas de las continuas (Uniforme, Normal, Exponencial) y barras de frecuencias de las discretas (Binomial, Poisson, enteros uniformes), todo con `default_rng(0)` y 10 000 muestras.
 - [x] Añadida la sección **"Dataset 2D: barajar bien vs. mal"** con ejemplo didáctico: muestra el fallo de permutar `X` y `y` por separado (se rompe la correspondencia fila-etiqueta) frente a la forma correcta de permutar los índices una sola vez y aplicarlos a ambas (`idx = rng.permutation(n); X[idx]; y[idx]`), con verificación de que cada fila conserva su etiqueta.
 - [x] Notebook validado: JSON correcto (28 celdas) y todas las celdas de código compilan con `ast`.
 
@@ -37,7 +51,7 @@
 
 - [x] Diagnóstico de cobertura: el material NumPy de UD1 cubre bien fundamentos, ufuncs, broadcasting, máscaras y vistas/copias, pero es superficial en **álgebra lineal**, **números aleatorios**, **entrada/salida de archivos** y **funciones universales/estadística avanzadas**.
 - [x] Creados **4 documentos de teoría nuevos** (sin modificar los existentes):
-  - `01-fundamentos-python/01-teoria/10-numpy-algebra-lineal-avanzado.md`
+  - `01-fundamentos-python/01-teoria/14-numpy-algebra-lineal-avanzado.md`
   - `01-fundamentos-python/01-teoria/11-numpy-aleatoriedad-avanzado.md`
   - `01-fundamentos-python/01-teoria/12-numpy-io-archivos-avanzado.md`
   - `01-fundamentos-python/01-teoria/13-numpy-ufuncs-estadistica-avanzado.md`
@@ -55,7 +69,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 
 ## Estado operativo actual
 
-- [x] Ampliado y publicado en `origin/main` el material de NumPy: guía avanzada `06-numpy-avanzado.md`, broadcasting con ejemplos aplicados, casos prácticos `07c-casos-practicos-numpy.md`, notebook canónico `09_numpy_avanzado.ipynb` y taller `10_numpy_casos_practicos.ipynb` (commit `8a81bb4c`); corrección de errata en broadcasting publicada en `d65f9959`. El notebook JAX usa un benchmark moderado para el aula.
+- [x] Ampliado y publicado en `origin/main` el material de NumPy: guía avanzada `06-numpy-avanzado.md`, broadcasting con ejemplos aplicados, casos prácticos `10-numpy-casos-practicos.md`, notebook canónico `09_numpy_avanzado.ipynb` y taller `10_numpy_casos_practicos.ipynb` (commit `8a81bb4c`); corrección de errata en broadcasting publicada en `d65f9959`. El notebook JAX usa un benchmark moderado para el aula.
 - [x] Creada, enlazada desde la portada y publicada la ficha `docs/accesos-rapidos.md` con las direcciones de GitHub Pages y del repositorio del alumnado (commit `8a81bb4c`).
 - [x] Preparada la cuarta clase de PIA (NumPy ampliado y JAX). Revisada la teoría y los ejemplos de pandas de UD2: hay material suficiente (`01-pandas-introduccion.md`, `02-pandas-ejemplos-guia.md` y opcionalmente `05-preparacion-datos-ml.md`), así que solo se enlaza como bloque opcional de preparación de datos en el guion si sobra tiempo tras NumPy/JAX, sin crear teoría nueva.
 
@@ -69,7 +83,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 - [x] Añadida a la guía de Python de UD1 la trampa práctica de listas y otros valores mutables como parámetros por defecto, con el patrón recomendado de `None`; enlazada desde la ampliación del guion de segunda clase. La corrección de redacción se sincronizó en el repo docente `f9edfd54` y en el público `179592f4`; el PDF regenerado permanece en el paquete Moodle local.
 - [x] Preparados tres bancos GIFT adicionales de UD1 (POO, NumPy y EDA, diez preguntas cada uno). Permanecen como fuentes docentes con respuesta correcta; queda pendiente validarlos e importarlos a Moodle cuando se decida activarlos.
 - [x] Preparado el guion de la segunda clase de PIA según el avance real: revisión de control de flujo, funciones con parámetros y `return`, y aplicación a listas con una ruta alternativa de refuerzo.
-- [x] Ampliada la secuencia de NumPy en UD1: `06-numpy-avanzado.md`, guía de casos `07c-casos-practicos-numpy.md`, broadcasting extendido y notebook de casos con muchos ejemplos. El guion de cuarta clase prioriza NumPy/JAX; pandas y R quedan como enganches optativos.
+- [x] Ampliada la secuencia de NumPy en UD1: `06-numpy-avanzado.md`, guía de casos `10-numpy-casos-practicos.md`, broadcasting extendido y notebook de casos con muchos ejemplos. El guion de cuarta clase prioriza NumPy/JAX; pandas y R quedan como enganches optativos.
 - [x] Preparado y publicado el apéndice optativo de IA clásica en UD11: guía de búsqueda y juegos, ejemplos Python autocontenidos de DFS/BFS/A* y minimax/alfa-beta. Commit privado `be2b1a6d`, publicación en `origin/main` `703f3aa8`; no añade evaluación ordinaria.
 - [x] Corregida la estructura de las tres tablas Markdown del guion docente y revisadas las tildes y la ortografía del documento.
 - [x] Corregido el separador de tres columnas en la tabla de ritmo principal del guion docente de primera clase.
@@ -104,7 +118,7 @@ El repositorio reorganizado es utilizable como base docente para el curso 2026-2
 - [ ] Validar los cuestionarios base GIFT de UD1 y UD2 en Moodle; el diagnóstico inicial ya consta como importado. El mantenimiento histórico no se considera un bloqueo actual sin una nueva comprobación.
 - [x] Creados y validados sintácticamente los tres cuestionarios GIFT específicos de UD1 (`cuestionario-poo-python.gift`, `cuestionario-numpy.gift` y `cuestionario-eda-numpy.gift`), con 10 preguntas cada uno y contenidos limitados a los materiales activos.
 - [ ] Pendiente validar e importar en Moodle los tres cuestionarios GIFT específicos de UD1.
-- [x] Ampliado NumPy en UD1 con teoría, broadcasting, ejemplos prácticos y guion docente de cuarta clase. Rutas: `06-numpy-avanzado.md`, `07-broadcasting-numpy.md`, `07c-casos-practicos-numpy.md`, notebooks `09_numpy_avanzado.ipynb` y `10_numpy_casos_practicos.ipynb`, más `GUION_CUARTA_CLASE_PIA_UD1.md`. Build y ejecución de notebooks validados; queda pendiente confirmar su publicación en Moodle y la sincronización selectiva a GitHub Pages.
+- [x] Ampliado NumPy en UD1 con teoría, broadcasting, ejemplos prácticos y guion docente de cuarta clase. Rutas: `06-numpy-avanzado.md`, `07-broadcasting-numpy.md`, `10-numpy-casos-practicos.md`, notebooks `09_numpy_avanzado.ipynb` y `10_numpy_casos_practicos.ipynb`, más `GUION_CUARTA_CLASE_PIA_UD1.md`. Build y ejecución de notebooks validados; queda pendiente confirmar su publicación en Moodle y la sincronización selectiva a GitHub Pages.
 - [x] Cerrado el hueco documental de rendimiento y vectorización de NumPy con `01-fundamentos-python/01-teoria/07-numpy-rendimiento.md`, enlazado como material principal al notebook `06_numpy_rendimiento.ipynb`. Queda pendiente únicamente validar y publicar el material en Moodle.
 
 ## Revisión de `00-planificación` — 2026-08-20

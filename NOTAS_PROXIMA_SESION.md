@@ -19,7 +19,7 @@ Guion docente: `01-fundamentos-python/99-profesor/GUION_CUARTA_CLASE_PIA_UD1.md`
   indexación, máscaras, vistas y agregaciones.
 - `01-fundamentos-python/01-teoria/07-broadcasting-numpy.md`: regla de formas,
   centrado, normalización, productos exteriores y distancias.
-- `01-fundamentos-python/01-teoria/07c-casos-practicos-numpy.md`: ejes,
+- `01-fundamentos-python/01-teoria/10-numpy-casos-practicos.md`: ejes,
   `keepdims`, máscaras, `where`, linalg, random, normalización y ejercicios.
 - `01-fundamentos-python/02-ejemplos/09_numpy_avanzado.ipynb`: notebook
   canónico avanzado.

@@ -17,12 +17,12 @@ Esta carpeta contiene la teoría de apoyo y las guías de la unidad. Para no dup
 | 06 | NumPy avanzado | `06-numpy-avanzado.md` | `../02-ejemplos/09_numpy_avanzado.ipynb` |
 | 07 | Rendimiento y vectorización | `07-numpy-rendimiento.md` | `../02-ejemplos/06_numpy_rendimiento.ipynb` |
 | 08 | Broadcasting y vectorización | `07-broadcasting-numpy.md`, `07b-broadcasting-numpy-infografia.md` | `../02-ejemplos/07_numpy_broadcasting_vectorizacion.ipynb` |
-| 09 | Casos prácticos de NumPy | `07c-casos-practicos-numpy.md` | `../02-ejemplos/10_numpy_casos_practicos.ipynb` |
+| 10 | Casos prácticos de NumPy | `10-numpy-casos-practicos.md` | `../02-ejemplos/10_numpy_casos_practicos.ipynb` |
 | 10 | Introducción comparativa a JAX | `../02-ejemplos/08_introduccion_jax_comparativa.ipynb` | `08-guia-numpy-jax.md` |
-| 11 | Álgebra lineal avanzada | `10-numpy-algebra-lineal-avanzado.md` | `../02-ejemplos/11_numpy_algebra_lineal_avanzado.ipynb` |
-| 12 | Aleatoriedad avanzada | `11-numpy-aleatoriedad-avanzado.md` | `../02-ejemplos/12_numpy_aleatoriedad_avanzado.ipynb` |
-| 13 | Entrada/salida de datos | `12-numpy-io-archivos-avanzado.md` | `../02-ejemplos/13_numpy_io_archivos_avanzado.ipynb` |
-| 14 | Ufuncs y estadística avanzada | `13-numpy-ufuncs-estadistica-avanzado.md` | `../02-ejemplos/14_numpy_ufuncs_estadistica_avanzado.ipynb` |
+| 11 | Aleatoriedad avanzada | `11-numpy-aleatoriedad-avanzado.md` | `../02-ejemplos/11_numpy_aleatoriedad_avanzado.ipynb` |
+| 12 | Entrada/salida de datos | `12-numpy-io-archivos-avanzado.md` | `../02-ejemplos/12_numpy_io_archivos_avanzado.ipynb` |
+| 13 | Ufuncs y estadística avanzada | `13-numpy-ufuncs-estadistica-avanzado.md` | `../02-ejemplos/13_numpy_ufuncs_estadistica_avanzado.ipynb` |
+| 14 | Álgebra lineal avanzada | `14-numpy-algebra-lineal-avanzado.md` | `../02-ejemplos/14_numpy_algebra_lineal_avanzado.ipynb` |
 | 15 | R como complemento | `09-guia-r-complementario.md` | `../02-ejemplos/06_introduccion_R_fundamentos.ipynb` |
 | 16 | Comparativa de lenguajes y formatos para IA | `../04-evaluacion/comparativa-lenguajes-formatos-ia.md` | Python, R, Java, JavaScript/NodeJS, JSON, YAML, Markdown, XML/HTML |
 

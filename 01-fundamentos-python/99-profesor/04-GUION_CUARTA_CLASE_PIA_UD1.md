@@ -30,7 +30,7 @@ cierra NumPy/JAX con holgura y hay tiempo.
 ## Recursos
 
 - Teoría avanzada: `01-fundamentos-python/01-teoria/06-numpy-avanzado.md`.
-- Guía de casos prácticos: `01-fundamentos-python/01-teoria/07c-casos-practicos-numpy.md`.
+- Guía de casos prácticos: `01-fundamentos-python/01-teoria/10-numpy-casos-practicos.md`.
 - Ejemplos canónicos: `01-fundamentos-python/02-ejemplos/09_numpy_avanzado.ipynb` y
   `01-fundamentos-python/02-ejemplos/10_numpy_casos_practicos.ipynb`.
 - Broadcasting: `01-fundamentos-python/01-teoria/07-broadcasting-numpy.md` y

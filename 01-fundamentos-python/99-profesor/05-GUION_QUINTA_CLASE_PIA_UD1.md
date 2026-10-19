@@ -26,10 +26,10 @@ Al terminar, el alumnado podrá:
 
 | Documento | Tratamiento en clase | Motivo |
 |---|---|---|
-| `13-numpy-ufuncs-estadistica-avanzado.md` (+ nb 14) | **Esencial, se imparte** | reduce/accumulate, clip, percentiles, corrcoef, unique, select. Sostienen el EDA. |
-| `11-numpy-aleatoriedad-avanzado.md` (+ nb 12) | **Esencial en parte**, resto consulta | default_rng, distribuciones, choice/shuffle, semilla. La parte de distribuciones específicas se deja como consulta. |
-| `12-numpy-io-archivos-avanzado.md` (+ nb 13) | **Apuntes breves** | save/load, savetxt/loadtxt. Se menciona y se remite al material; el grueso se usa en UD2/UD3. |
-| `10-numpy-algebra-lineal-avanzado.md` (+ nb 11) | **NO en clase: consulta** | norm/@/solve/eig/svd se activan en UD3 (kNN, clustering, PCA). Solo mención y enlace. |
+| `13-numpy-ufuncs-estadistica-avanzado.md` (+ nb 13) | **Esencial, se imparte** | reduce/accumulate, clip, percentiles, corrcoef, unique, select. Sostienen el EDA. |
+| `11-numpy-aleatoriedad-avanzado.md` (+ nb 11) | **Esencial en parte**, resto consulta | default_rng, distribuciones, choice/shuffle, semilla. La parte de distribuciones específicas se deja como consulta. |
+| `12-numpy-io-archivos-avanzado.md` (+ nb 12) | **Apuntes breves** | save/load, savetxt/loadtxt. Se menciona y se remite al material; el grueso se usa en UD2/UD3. |
+| `14-numpy-algebra-lineal-avanzado.md` (+ nb 14) | **NO en clase: consulta** | norm/@/solve/eig/svd se activan en UD3 (kNN, clustering, PCA). Solo mención y enlace. |
 
 > La cuarta clase dejó pendiente álgebra lineal y JAX. **No** se reintroduce
 > ahora como bloque: el álgebra lineal se retoma con contexto en UD3, y JAX queda
@@ -55,11 +55,11 @@ Al terminar, el alumnado podrá:
   - `01-fundamentos-python/01-teoria/13-numpy-ufuncs-estadistica-avanzado.md`
   - `01-fundamentos-python/01-teoria/11-numpy-aleatoriedad-avanzado.md`
   - `01-fundamentos-python/01-teoria/12-numpy-io-archivos-avanzado.md` (apunte)
-  - `01-fundamentos-python/01-teoria/10-numpy-algebra-lineal-avanzado.md` (consulta/UD3)
+  - `01-fundamentos-python/01-teoria/14-numpy-algebra-lineal-avanzado.md` (consulta/UD3)
 - Notebooks guiados:
-  - `01-fundamentos-python/02-ejemplos/14_numpy_ufuncs_estadistica_avanzado.ipynb`
-  - `01-fundamentos-python/02-ejemplos/12_numpy_aleatoriedad_avanzado.ipynb`
-  - `01-fundamentos-python/02-ejemplos/11_numpy_algebra_lineal_avanzado.ipynb` (consulta)
+  - `01-fundamentos-python/02-ejemplos/13_numpy_ufuncs_estadistica_avanzado.ipynb`
+  - `01-fundamentos-python/02-ejemplos/11_numpy_aleatoriedad_avanzado.ipynb`
+  - `01-fundamentos-python/02-ejemplos/14_numpy_algebra_lineal_avanzado.ipynb` (consulta)
 - EDA y ejercicios:
   - `01-fundamentos-python/03-practicas/09_eda_numpy.md` y `09_eda_numpy.ipynb`
   - `01-fundamentos-python/03-practicas/10-ejercicios_numpy.md` y `10-ejercicios_numpy.ipynb`

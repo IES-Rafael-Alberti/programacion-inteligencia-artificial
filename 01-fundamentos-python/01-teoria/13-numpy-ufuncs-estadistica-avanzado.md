@@ -2,7 +2,7 @@
 
 Este documento amplía el trabajo con **ufuncs** y **estadística descriptiva** más allá
 de lo visto en [`06-numpy-avanzado.md`](06-numpy-avanzado.md) y en la
-[guía de casos prácticos](07c-casos-practicos-numpy.md). Es material **avanzado**:
+[guía de casos prácticos](10-numpy-casos-practicos.md). Es material **avanzado**:
 asume que ya manejas arrays, `axis`, máscaras y `np.where`.
 
 ## 1. Qué es una ufunc y qué aprovechar

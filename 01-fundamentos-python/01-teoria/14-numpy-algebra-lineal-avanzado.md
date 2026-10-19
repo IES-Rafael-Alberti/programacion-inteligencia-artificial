@@ -1,7 +1,7 @@
 # Álgebra lineal avanzada con NumPy
 
 Este documento amplía [`06-numpy-avanzado.md`](06-numpy-avanzado.md) y la
-[guía de casos prácticos](07c-casos-practicos-numpy.md) con un bloque dedicado al
+[guía de casos prácticos](10-numpy-casos-practicos.md) con un bloque dedicado al
 álgebra lineal: normas, productos de matrices, resolución de sistemas, autovalores,
 descomposiciones y sus aplicaciones directas al machine learning.
 
