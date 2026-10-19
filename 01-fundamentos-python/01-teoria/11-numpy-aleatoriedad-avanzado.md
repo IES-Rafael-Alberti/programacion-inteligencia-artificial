@@ -1,3 +1,182 @@
 # Aleatoriedad y números aleatorios avanzados con NumPy
 
-Este documento profundiza en la generación de números aleatorios más allá de lo\nvisto en [`06-numpy-avanzado.md`](06-numpy-avanzado.md) (donde se introdujo\n`default_rng` y `normal`). Aquí se trabajan las **distribuciones de probabilidad**, la\nselección y permutación, la reproducibilidad y patrones útiles para simulación y ML.\n\n> Material **avanzado**: presupone el uso de `default_rng` con semilla. No repite la\n> introducción; amplía las distribuciones, sus usos y buenas prácticas.\n\n## 1. La API moderna: `Generator` y `default_rng`\n\nNumPy recomendó abandonar la API global antigua (`np.random.rand`, `np.random.normal`)\nen favor del objeto `Generator` creado con `np.random.default_rng`.\n\n```python\nimport numpy as np\n\nrng = np.random.default_rng(2026)   # semilla fija -> reproducible\nprint(rng.normal(size=5))\n```\n\nVentajas de `Generator`:\n\n- **Aislado**: los cambios de semilla no modifican el estado global del módulo.\n- **Más rápido** y con mejores algoritmos en varias distribuciones.\n- **Consistente**: mismo objeto, misma secuencia si las llames en el mismo orden.\n\n## 2. Distribuciones continuas\n\nCada método del `Generator` produce muestras de una distribución. Se usan para crear\ndatos sintéticos, inicializar pesos, añadir ruido o simular escenarios.\n\n```python\nrng = np.random.default_rng(0)\n\nuniformes  = rng.uniform(low=0, high=10, size=5)     # U(0,10)\nnormales   = rng.normal(loc=5, scale=2, size=5)      # N(5, 2)\nexponencial = rng.exponential(scale=1.0, size=5)     # Exp(1)\nprint(\"uniforme:\", uniformes)\nprint(\"normal:\", normales)\nprint(\"exponencial:\", exponencial)\n```\n\n| Método | Distribución | Uso típico |\n|---|---|---|\n| `uniform` | uniforme continua | ruido, coordenadas, parámetros |\n| `normal` | gaussiana | errores, datos sintéticos, pesos |\n| `exponential` | exponencial | tiempos entre eventos |\n| `beta` | beta | proporciones, prior en Bayes |\n| `gamma` | gamma | tiempos de vida, escalas |\n\n## 3. Distribuciones discretas\n\n```python\nrng = np.random.default_rng(1)\n\nenteros  = rng.integers(low=0, high=10, size=8)      # 0..9\nbinomial = rng.binomial(n=10, p=0.5, size=8)          # nº de éxitos en 10 pruebas\npoisson  = rng.poisson(lam=3.0, size=8)               # conteos con media 3\nprint(\"enteros:\", enteros)\nprint(\"binomial:\", binomial)\nprint(\"poisson:\", poisson)\n```\n\n| Método | Distribución | Uso típico |\n|---|---|---|\n| `integers` | uniforme discreta | índices, muestreo, datos categóricos |\n| `binomial` | binomial | nº de éxitos en pruebas |\n| `poisson` | poisson | conteos de eventos por intervalo |\n| `multinomial` | multinomial | extraer de categorías |\n\n## 4. Selección y permutación: `choice`, `shuffle`, `permutation`\n\nPara dividir datos, barajar conjuntos o elegir subconjuntos al azar:\n\n```python\nrng = np.random.default_rng(7)\ndatos = np.arange(10)\n\nbarajado = rng.permutation(datos)             # copia barajada\nrng.shuffle(datos)  # o baraja in-place (modifica datos)\nmuestra  = rng.choice(np.arange(20), size=5, replace=False)  # sin repetición\nprint(\"permutación:\", barajado)\nprint(\"choice sin repetición:\", muestra)\n```\n\n`rng.shuffle(arreglo)` modifica el array en el sitio; `rng.permutation(arreglo)`\ndevuelve una copia barajada. Con `replace=True` (por defecto `True` en `choice` según\nversión; especifícalo siempre) se permite repetir elementos.\n\nSelección con probabilidades:\n\n```python\ncategorias = np.array([\"a\", \"b\", \"c\"])\nprobs = np.array([0.5, 0.3, 0.2])\neleccion = rng.choice(categorias, size=1000, p=probs)\nprint(\"frecuencias (aprox.):\", np.unique(eleccion, return_counts=True)[1] / 1000)\n```\n\n## 5. Reproducibilidad: la semilla y el orden de las llamadas\n\nUna misma semilla reproduce la misma secuencia **si llamas a los métodos en el mismo\norden**.\n\n```python\nr1 = np.random.default_rng(42)\nr2 = np.random.default_rng(42)\nprint(np.array_equal(r1.normal(size=4), r2.normal(size=4)))  # True\n```\n\nPuntos a tener en cuenta:\n\n- La reproducibilidad es **determinística en el mismo entorno**, no entre plataformas\n  ni versiones de NumPy.\n- Un cambio de versión de NumPy puede alterar las secuencias.\n- Para reproducir exactamente un experimento conviene fijar la semilla al inicio de la\n  práctica y documentarla.\n\n## 6. Semillas por proceso o por bloque\n\nEn experimentos largos puede ser útil crear un `Generator` por bloque en lugar de uno\npor celda:\n\n```python\ndef experimento(semilla):\n    rng = np.random.default_rng(semilla)\n    return rng.normal(loc=0, scale=1, size=1000).mean()\n\nmedias = [experimento(s) for s in range(5)]\nprint(medias)\n```\n\nEsto permite que cada ejecución sea reproducible e independiente del resto.\n\n## 7. Aplicación: dividir un dataset en entrenamiento y test\n\nUna división típica consiste en barajar índices y partir:\n\n```python\nrng = np.random.default_rng(10)\nn = 100\nindices = rng.permutation(n)\nproporcion = 0.8\npunto = int(n * proporcion)\ntrain_idx, test_idx = indices[:punto], indices[punto:]\nprint(\"train:\", len(train_idx), \"test:\", len(test_idx))\n```\n\nEn el módulo usarás directamente `train_test_split` (scikit-learn) en UD3, que por\ndentro hace algo parecido; entender este patrón aclara la reproducibilidad del split\n(`random_state` es la semilla).\n\n## 8. Errores frecuentes\n\n1. Usar la API global (`np.random.rand`) mezclada con `Generator`; fija uno solo.\n2. Olvidar la semilla y no poder reproducir el experimento.\n3. Barajar el dataset **y sus etiquetas por separado** (se pierde la correspondencia).\n4. No distinguir `shuffle` (in-place) de `permutation` (copia).\n5. Llamar métodos en distinto orden entre dos copias con la misma semilla y esperar\n   idéntico resultado.\n6. Suponer que la media/desviación empírica de una muestra pequeña coincide con los\n   parámetros de la distribución (depende del tamaño).\n\n## 9. Ejercicios\n\n1. Con semilla `0`, genera 1000 `uniform(0,1)` y comprueba que la media ≈ 0.5.\n2. Genera 1000 `poisson(3)` y compara su media con 3.\n3. Tira 10 veces una moneda (binomial) 1000 veces y guarda la proporción de caras.\n4. Divide un array de 120 índices en 80/20 con la misma semilla dos veces y verifica\n   que ambas divisiones coinciden.\n5. Con `choice` y `p`, selecciona 1000 valores de tres categorías y compara frecuencias.\n6. Baraja un dataset de 2D conservando la correspondencia fila-etiqueta (baraja un\n   único vector de índices).\n7. Explica por qué no debes barajar características y etiquetas por separado.\n\n## Referencias\n\n- Wes McKinney, *Python for Data Analysis* (3.ª ed.), cap. 4.2 *Pseudorandom Number\n  Generation*.\n- [Documentación de `numpy.random`](https://numpy.org/doc/stable/reference/random/index.html).\n- [Guía de buenas prácticas para generación de números aleatorios de NumPy](https://numpy.org/doc/stable/reference/random/generator.html).\n
+Este documento profundiza en la generación de números aleatorios más allá de lo
+visto en [`06-numpy-avanzado.md`](06-numpy-avanzado.md) (donde se introdujo
+`default_rng` y `normal`). Aquí se trabajan las **distribuciones de probabilidad**, la
+selección y permutación, la reproducibilidad y patrones útiles para simulación y ML.
+
+> Material **avanzado**: presupone el uso de `default_rng` con semilla. No repite la
+> introducción; amplía las distribuciones, sus usos y buenas prácticas.
+
+## 1. La API moderna: `Generator` y `default_rng`
+
+NumPy recomendó abandonar la API global antigua (`np.random.rand`, `np.random.normal`)
+en favor del objeto `Generator` creado con `np.random.default_rng`.
+
+```python
+import numpy as np
+
+rng = np.random.default_rng(2026)   # semilla fija -> reproducible
+print(rng.normal(size=5))
+```
+
+Ventajas de `Generator`:
+
+- **Aislado**: los cambios de semilla no modifican el estado global del módulo.
+- **Más rápido** y con mejores algoritmos en varias distribuciones.
+- **Consistente**: mismo objeto, misma secuencia si las llames en el mismo orden.
+
+## 2. Distribuciones continuas
+
+Cada método del `Generator` produce muestras de una distribución. Se usan para crear
+datos sintéticos, inicializar pesos, añadir ruido o simular escenarios.
+
+```python
+rng = np.random.default_rng(0)
+
+uniformes  = rng.uniform(low=0, high=10, size=5)     # U(0,10)
+normales   = rng.normal(loc=5, scale=2, size=5)      # N(5, 2)
+exponencial = rng.exponential(scale=1.0, size=5)     # Exp(1)
+print(\"uniforme:\", uniformes)
+print(\"normal:\", normales)
+print(\"exponencial:\", exponencial)
+```
+
+| Método | Distribución | Uso típico |
+|---|---|---|
+| `uniform` | uniforme continua | ruido, coordenadas, parámetros |
+| `normal` | gaussiana | errores, datos sintéticos, pesos |
+| `exponential` | exponencial | tiempos entre eventos |
+| `beta` | beta | proporciones, prior en Bayes |
+| `gamma` | gamma | tiempos de vida, escalas |
+
+## 3. Distribuciones discretas
+
+```python
+rng = np.random.default_rng(1)
+
+enteros  = rng.integers(low=0, high=10, size=8)      # 0..9
+binomial = rng.binomial(n=10, p=0.5, size=8)          # nº de éxitos en 10 pruebas
+poisson  = rng.poisson(lam=3.0, size=8)               # conteos con media 3
+print(\"enteros:\", enteros)
+print(\"binomial:\", binomial)
+print(\"poisson:\", poisson)
+```
+
+| Método | Distribución | Uso típico |
+|---|---|---|
+| `integers` | uniforme discreta | índices, muestreo, datos categóricos |
+| `binomial` | binomial | nº de éxitos en pruebas |
+| `poisson` | poisson | conteos de eventos por intervalo |
+| `multinomial` | multinomial | extraer de categorías |
+
+## 4. Selección y permutación: `choice`, `shuffle`, `permutation`
+
+Para dividir datos, barajar conjuntos o elegir subconjuntos al azar:
+
+```python
+rng = np.random.default_rng(7)
+datos = np.arange(10)
+
+barajado = rng.permutation(datos)             # copia barajada
+rng.shuffle(datos)  # o baraja in-place (modifica datos)
+muestra  = rng.choice(np.arange(20), size=5, replace=False)  # sin repetición
+print(\"permutación:\", barajado)
+print(\"choice sin repetición:\", muestra)
+```
+
+`rng.shuffle(arreglo)` modifica el array en el sitio; `rng.permutation(arreglo)`
+devuelve una copia barajada. Con `replace=True` (por defecto `True` en `choice` según
+versión; especifícalo siempre) se permite repetir elementos.
+
+Selección con probabilidades:
+
+```python
+categorias = np.array([\"a\", \"b\", \"c\"])
+probs = np.array([0.5, 0.3, 0.2])
+eleccion = rng.choice(categorias, size=1000, p=probs)
+print(\"frecuencias (aprox.):\", np.unique(eleccion, return_counts=True)[1] / 1000)
+```
+
+## 5. Reproducibilidad: la semilla y el orden de las llamadas
+
+Una misma semilla reproduce la misma secuencia **si llamas a los métodos en el mismo
+orden**.
+
+```python
+r1 = np.random.default_rng(42)
+r2 = np.random.default_rng(42)
+print(np.array_equal(r1.normal(size=4), r2.normal(size=4)))  # True
+```
+
+Puntos a tener en cuenta:
+
+- La reproducibilidad es **determinística en el mismo entorno**, no entre plataformas
+  ni versiones de NumPy.
+- Un cambio de versión de NumPy puede alterar las secuencias.
+- Para reproducir exactamente un experimento conviene fijar la semilla al inicio de la
+  práctica y documentarla.
+
+## 6. Semillas por proceso o por bloque
+
+En experimentos largos puede ser útil crear un `Generator` por bloque en lugar de uno
+por celda:
+
+```python
+def experimento(semilla):
+    rng = np.random.default_rng(semilla)
+    return rng.normal(loc=0, scale=1, size=1000).mean()
+
+medias = [experimento(s) for s in range(5)]
+print(medias)
+```
+
+Esto permite que cada ejecución sea reproducible e independiente del resto.
+
+## 7. Aplicación: dividir un dataset en entrenamiento y test
+
+Una división típica consiste en barajar índices y partir:
+
+```python
+rng = np.random.default_rng(10)
+n = 100
+indices = rng.permutation(n)
+proporcion = 0.8
+punto = int(n * proporcion)
+train_idx, test_idx = indices[:punto], indices[punto:]
+print(\"train:\", len(train_idx), \"test:\", len(test_idx))
+```
+
+En el módulo usarás directamente `train_test_split` (scikit-learn) en UD3, que por
+dentro hace algo parecido; entender este patrón aclara la reproducibilidad del split
+(`random_state` es la semilla).
+
+## 8. Errores frecuentes
+
+1. Usar la API global (`np.random.rand`) mezclada con `Generator`; fija uno solo.
+2. Olvidar la semilla y no poder reproducir el experimento.
+3. Barajar el dataset **y sus etiquetas por separado** (se pierde la correspondencia).
+4. No distinguir `shuffle` (in-place) de `permutation` (copia).
+5. Llamar métodos en distinto orden entre dos copias con la misma semilla y esperar
+   idéntico resultado.
+6. Suponer que la media/desviación empírica de una muestra pequeña coincide con los
+   parámetros de la distribución (depende del tamaño).
+
+## 9. Ejercicios
+
+1. Con semilla `0`, genera 1000 `uniform(0,1)` y comprueba que la media ≈ 0.5.
+2. Genera 1000 `poisson(3)` y compara su media con 3.
+3. Tira 10 veces una moneda (binomial) 1000 veces y guarda la proporción de caras.
+4. Divide un array de 120 índices en 80/20 con la misma semilla dos veces y verifica
+   que ambas divisiones coinciden.
+5. Con `choice` y `p`, selecciona 1000 valores de tres categorías y compara frecuencias.
+6. Baraja un dataset de 2D conservando la correspondencia fila-etiqueta (baraja un
+   único vector de índices).
+7. Explica por qué no debes barajar características y etiquetas por separado.
+
+## Referencias
+
+- Wes McKinney, *Python for Data Analysis* (3.ª ed.), cap. 4.2 *Pseudorandom Number
+  Generation*.
+- [Documentación de `numpy.random`](https://numpy.org/doc/stable/reference/random/index.html).
+- [Guía de buenas prácticas para generación de números aleatorios de NumPy](https://numpy.org/doc/stable/reference/random/generator.html).

@@ -3,6 +3,14 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Mejoras al notebook avanzado de aleatoriedad — 2026-10-19
+
+- [x] Añadidas a `01-fundamentos-python/02-ejemplos/12_numpy_aleatoriedad_avanzado.ipynb` las **gráficas de las distribuciones**: una figura 2×3 (15×8) con histogramas de las continuas (Uniforme, Normal, Exponencial) y barras de frecuencias de las discretas (Binomial, Poisson, enteros uniformes), todo con `default_rng(0)` y 10 000 muestras.
+- [x] Añadida la sección **"Dataset 2D: barajar bien vs. mal"** con ejemplo didáctico: muestra el fallo de permutar `X` y `y` por separado (se rompe la correspondencia fila-etiqueta) frente a la forma correcta de permutar los índices una sola vez y aplicarlos a ambas (`idx = rng.permutation(n); X[idx]; y[idx]`), con verificación de que cada fila conserva su etiqueta.
+- [x] Notebook validado: JSON correcto (28 celdas) y todas las celdas de código compilan con `ast`.
+
+**Siguiente paso:** validar el notebook en ejecución real (p. ej. con `nbclient`) y publicar/regenerar el paquete Moodle de UD1 si procede.
+
 ## Revisión de sincronización y libros NumPy — 2026-10-18
 
 - [x] Revisado el estado local de PIA: hay cambios sin consolidar en cuatro notebooks (`01_introduccion_entorno_python.ipynb`, `02_variables_tipos_operadores.ipynb`, `10_numpy_casos_practicos.ipynb` y `01_pandas_fundamentos.ipynb`), además de `.codex/` y `.opencode/origin` locales. Se conservan como trabajo local.
@@ -36,6 +44,9 @@
 - [x] Creados **4 notebooks guiados equivalentes** en `02-ejemplos/` (numerados 11-14, cada uno con celdas markdown explicativas y código ejecutable). Validados con `nbclient` sin errores.
 - [x] Enlazados los nuevos documentos en: `01-teoria/README.md` (tabla de ruta), `01-fundamentos-python/README.md` (teoría), `docs/unidades/ud01.md` (enlaces directos a los 4 avanzados).
 - [x] `mkdocs build --strict` superado sin errores.
+- [x] Regenerados los PDF de NumPy avanzado con Pandoc + XeLaTeX en `Moodle/01-UD1/01-documentacion/`; comprobados existencia y tamaño no vacío. La tabla del README de documentación queda actualizada para los PDF 16–20.
+- [x] Saneado `11-numpy-aleatoriedad-avanzado.md`: convertidas las secuencias literales `\n` en saltos de línea reales y regenerado su PDF con Pandoc + XeLaTeX; Markdown y PDF verificados.
+- [x] Saneados los nombres de los cuatro PDF avanzados para que coincidan con el nombre base de sus fuentes Markdown (`10-numpy...pdf` a `13-numpy...pdf`), eliminando los nombres antiguos `17_...`–`20_...` sin duplicados.
 - [ ] Revisar los notebooks con el dossier de nuevo contenido previo a mostrar en clase.
 
 «Semicerrado» significa que el repositorio está listo para uso docente y no tiene bloqueos operativos, pero seguirá admitiendo mejoras cuando una revisión en profundidad o el uso real en aula revele cambios convenientes.
