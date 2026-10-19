@@ -3,6 +3,16 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Cuaderno integral de ejercicios y cuestionario NumPy — 2026-10-19
+
+- [x] Creado `01-fundamentos-python/03-practicas/15-ejercicios_numpy_completo.ipynb` con **18 ejercicios** que recorren fundamentos y contenidos avanzados de NumPy. Cada uno incluye enunciado Markdown, datos iniciales cuando hacen falta, celda de respuesta vacía y tests con `assert`; los ejercicios de broadcasting, vistas/copias, aleatoriedad, distancias, ufuncs e I/O incluyen pistas.
+- [x] Creado `01-fundamentos-python/04-evaluacion/cuestionario-numpy-completo.gift` con **18 preguntas de código**, una por ejercicio y en el mismo orden. Cada opción incluye retroalimentación para que el cuestionario acompañe al trabajo en el notebook.
+- [x] Enlazados ambos recursos en los README de prácticas y evaluación. Las soluciones del notebook se probaron junto con los tests: los 18 conjuntos pasan.
+- [x] Actualizado el grafo Graphify tras añadir los materiales: 3.793 nodos, 5.099 enlaces, 430 comunidades y 61 hiperconexiones; comprobado que no hay extremos de enlace ausentes. MkDocs `--strict` terminó con código 0.
+- [x] El GIFT contiene respuestas y retroalimentación con soluciones de referencia; se conserva en el remoto docente privado y no se publica como archivo fuente en `origin/main`. La entrega del cuestionario al alumnado se hará mediante Moodle.
+
+**Siguiente paso:** importar el GIFT en Moodle para validar el formato de la plataforma y probar la secuencia con una cuenta de estudiante; el alumnado debe tener disponibles ambos recursos.
+
 ## Renumerado de los materiales avanzados de NumPy — 2026-10-19
 
 Para que cada documento de teoría `.md` y su notebook guiado compartan el mismo número de archivo, se renumeró el bloque avanzado de NumPy:
