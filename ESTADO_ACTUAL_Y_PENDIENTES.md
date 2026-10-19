@@ -16,7 +16,9 @@
 - [ ] **Mañana, 20-10: subir el PDF de la comparativa y habilitar su tarea de entrega** para realizarla en clase después de la introducción a R; comprobar plazo y acceso del alumnado.
 - [x] Registrada también la decisión de comparar gráficas Python/R al impartir visualización en UD2. Ese trabajo queda pendiente para ese bloque, no para mañana.
 
-**Siguiente paso:** terminar la publicación selectiva del enunciado para el alumnado y consolidar los bancos y el guion solo en el repositorio docente. La subida/importación a Moodle permanece pendiente para mañana.
+- [x] Consolidado el material completo en `teacher/main` (`f0032c94`). Publicados solo el enunciado del alumnado y el README de evaluación en `origin/main` (`0e13064a`); bancos GIFT y guion permanecen privados. MkDocs `--strict`, comprobación de navegación pública y `git diff --check` superados.
+
+**Siguiente paso:** mañana, importar/probar los bancos y publicar la comparativa/tarea en Moodle antes de clase. La preparación y publicación en GitHub ya están completadas; Moodle sigue pendiente.
 
 ## Decisión docente — visualización comparada Python/R (2026-10-19)
 
