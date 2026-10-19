@@ -12,13 +12,16 @@
 - [x] Ejecutados con `nbclient` los ejemplos 10–13; los 18 ejercicios y sus tests pasan con soluciones inyectadas solo en memoria. Comprobada la estructura de las 18 preguntas GIFT; sigue pendiente su importación real en Moodle.
 - [x] Retirada del seguimiento la caché restante de `graphify-out/cache/`, conservada en disco e ignorada; el grafo permanece en el repositorio docente.
 
-**Siguiente paso:** consolidar la revisión en `teacher` y trasladar a `origin/main` el material público actualizado, incluidos renombrados y ejercicios; mantener el GIFT y los guiones en el remoto docente.
+- [x] Revisión consolidada y subida al remoto docente en `10050fbe`. Publicado en `origin/main` el subconjunto del alumnado en `9e346eef`: renumeración, teoría, ejemplos 10–14, gráficas de aleatoriedad, cuaderno integral de ejercicios e índices. GIFT, guiones, soluciones y grafo permanecen en el remoto docente.
+- [x] `mkdocs build --strict` y `scripts/check_public_unit_links.py` superados en la rama pública: 12 unidades, 60 secciones y cero enlaces internos rotos. `git diff --check` sin incidencias.
+
+**Siguiente paso:** importar y probar el cuestionario corregido en Moodle; actualizar allí los notebooks si se distribuyen mediante el paquete temporal. La preparación local o la publicación en GitHub no acredita su actualización en Moodle.
 
 ## Cuaderno integral de ejercicios y cuestionario NumPy — 2026-10-19
 
 - [x] Creado `01-fundamentos-python/03-practicas/15-ejercicios_numpy_completo.ipynb` con **18 ejercicios** que recorren fundamentos y contenidos avanzados de NumPy. Cada uno incluye enunciado Markdown, datos iniciales cuando hacen falta, celda de respuesta vacía y tests con `assert`; los ejercicios de broadcasting, vistas/copias, aleatoriedad, distancias, ufuncs e I/O incluyen pistas.
 - [x] Creado `01-fundamentos-python/04-evaluacion/cuestionario-numpy-completo.gift` con **18 preguntas de código**, una por ejercicio y en el mismo orden. Cada opción incluye retroalimentación para que el cuestionario acompañe al trabajo en el notebook.
-- [x] Enlazados ambos recursos en los README de prácticas y evaluación. Las soluciones del notebook se probaron junto con los tests: los 18 conjuntos pasan.
+- [x] Enlazado el notebook desde prácticas y descrito el cuestionario de Moodle desde evaluación, sin enlace público al GIFT docente. Las soluciones del notebook se probaron junto con los tests: los 18 conjuntos pasan; la revisión posterior corrige presentación e instrucciones y vuelve a verificarlos.
 - [x] Actualizado el grafo Graphify tras añadir los materiales: 3.793 nodos, 5.099 enlaces, 430 comunidades y 61 hiperconexiones; comprobado que no hay extremos de enlace ausentes. MkDocs `--strict` terminó con código 0.
 - [x] El GIFT contiene respuestas y retroalimentación con soluciones de referencia; se conserva en el remoto docente privado y no se publica como archivo fuente en `origin/main`. La entrega del cuestionario al alumnado se hará mediante Moodle.
 
