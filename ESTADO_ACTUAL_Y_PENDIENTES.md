@@ -3,6 +3,16 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Próxima clase — EDA NumPy y pandas (preparada el 2026-10-19)
+
+- [x] Registrado el avance real comunicado por el profesor: NumPy está prácticamente terminado. Pandas ya se había iniciado con Series, DataFrame e inicio de indexación.
+- [x] Creado `01-fundamentos-python/99-profesor/06-GUION_SEXTA_CLASE_PIA_EDA_NUMPY_PANDAS.md` para el 2026-10-20: 3 horas de referencia, con un ejemplo EDA NumPy de cierre (35 minutos) y transición usando los mismos datos a pandas. Prioridad: `loc`/`iloc`, filtros y columnas calculadas; después ausentes y agrupación sencilla según el ritmo.
+- [x] Revisado el EDA existente: el guion aclara nombres y tipos en arrays homogéneos, selección aleatoria sin reemplazo, interpretación de valores fuera de escala y atípicos, y conservación de originales. Incluye un recorrido ejecutable sin la celda de conversión Jupytext del cuaderno antiguo.
+- [x] Ejecutados en orden los siete bloques Python del nuevo guion y comprobadas sus seis rutas de recursos. Los notebooks y prácticas públicos existentes no se modifican en esta preparación.
+- [x] Actualizado `NOTAS_PROXIMA_SESION.md` para sustituir la antigua preparación NumPy/JAX por el estado real y el guion de mañana. Guion y continuidad quedan solo en el repositorio docente.
+
+**Siguiente paso:** comprobar disponibilidad de los recursos antes de clase e impartir el EDA de cierre y pandas. Registrar después el punto real alcanzado en UD2; no volver a planificar un repaso completo de NumPy.
+
 ## Revisión tras Unison — 2026-10-19
 
 - [x] Revisados los tres commits incorporados desde el instituto (`2952f991`, `4e89ea72`, `59cf253c`) y las modificaciones locales de los notebooks 10, 12 y 13. Se conservan las explicaciones y las salidas de clase.
