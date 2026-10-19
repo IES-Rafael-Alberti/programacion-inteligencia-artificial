@@ -14,7 +14,7 @@ actividades se realizan, cuáles requieren entrega y sus fechas.
   tecnologías para IA, cuando se asigne en Moodle.
 - **Cuestionarios:** apoyo para comprobar los conceptos trabajados; Moodle
   indicará cuándo se realizan y si forman parte de una actividad evaluable.
-  El cuestionario `cuestionario-numpy-completo.gift` sigue el mismo orden de los
+  El cuestionario completo de NumPy, disponible en Moodle cuando se active, sigue el mismo orden de los
   18 ejercicios de `03-practicas/15-ejercicios_numpy_completo.ipynb`; las
   preguntas de respuesta corta piden escribir un fragmento de código y muestran
   retroalimentación con una solución de referencia. Moodle compara el texto de

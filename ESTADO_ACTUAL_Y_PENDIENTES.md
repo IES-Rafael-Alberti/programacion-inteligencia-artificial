@@ -3,6 +3,17 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Revisión tras Unison — 2026-10-19
+
+- [x] Revisados los tres commits incorporados desde el instituto (`2952f991`, `4e89ea72`, `59cf253c`) y las modificaciones locales de los notebooks 10, 12 y 13. Se conservan las explicaciones y las salidas de clase.
+- [x] Corregido `03-practicas/15-ejercicios_numpy_completo.ipynb`: saltos de línea Markdown, variable `a` explícita, instrucciones de indexado/correlación, demostración efectiva de vista y copia (99 y −1), `int64` para la suma de cuadrados y test de tiempos sin exigir aceleración mínima. Los ejercicios 13–15 quedan identificados como consulta para UD3.
+- [x] Corregidos en `02-ejemplos/13_numpy_ufuncs_estadistica_avanzado.ipynb` dos encabezados que se renderizaban como código y una descripción que prometía una normalización inexistente. En el notebook 12 se usan archivos temporales aislados y se cierra el `.npz` con `with`.
+- [x] Reparado `04-evaluacion/cuestionario-numpy-completo.gift`: retroalimentación general dentro de las llaves y caracteres de sintaxis escapados. El README remite al cuestionario de Moodle, sin enlazar la fuente docente.
+- [x] Ejecutados con `nbclient` los ejemplos 10–13; los 18 ejercicios y sus tests pasan con soluciones inyectadas solo en memoria. Comprobada la estructura de las 18 preguntas GIFT; sigue pendiente su importación real en Moodle.
+- [x] Retirada del seguimiento la caché restante de `graphify-out/cache/`, conservada en disco e ignorada; el grafo permanece en el repositorio docente.
+
+**Siguiente paso:** consolidar la revisión en `teacher` y trasladar a `origin/main` el material público actualizado, incluidos renombrados y ejercicios; mantener el GIFT y los guiones en el remoto docente.
+
 ## Cuaderno integral de ejercicios y cuestionario NumPy — 2026-10-19
 
 - [x] Creado `01-fundamentos-python/03-practicas/15-ejercicios_numpy_completo.ipynb` con **18 ejercicios** que recorren fundamentos y contenidos avanzados de NumPy. Cada uno incluye enunciado Markdown, datos iniciales cuando hacen falta, celda de respuesta vacía y tests con `assert`; los ejercicios de broadcasting, vistas/copias, aleatoriedad, distancias, ufuncs e I/O incluyen pistas.
@@ -33,15 +44,15 @@ Resultado final (pares alineados): casos=10, aleatoriedad=11, io=12, ufuncs=13, 
 - [x] Añadida la sección **"Dataset 2D: barajar bien vs. mal"** con ejemplo didáctico: muestra el fallo de permutar `X` y `y` por separado (se rompe la correspondencia fila-etiqueta) frente a la forma correcta de permutar los índices una sola vez y aplicarlos a ambas (`idx = rng.permutation(n); X[idx]; y[idx]`), con verificación de que cada fila conserva su etiqueta.
 - [x] Notebook validado: JSON correcto (28 celdas) y todas las celdas de código compilan con `ast`.
 
-**Siguiente paso:** validar el notebook en ejecución real (p. ej. con `nbclient`) y publicar/regenerar el paquete Moodle de UD1 si procede.
+**Validación completada el 2026-10-19:** notebook ejecutado correctamente con `nbclient`. Queda actualizar el paquete Moodle si procede.
 
 ## Revisión de sincronización y libros NumPy — 2026-10-18
 
 - [x] Revisado el estado local de PIA: hay cambios sin consolidar en cuatro notebooks (`01_introduccion_entorno_python.ipynb`, `02_variables_tipos_operadores.ipynb`, `10_numpy_casos_practicos.ipynb` y `01_pandas_fundamentos.ipynb`), además de `.codex/` y `.opencode/origin` locales. Se conservan como trabajo local.
-- [ ] Consolidar con Unison al volumen EVO: el perfil `RafaelAlberti_26-27-EVO` apunta a `/media/jmsa/Evo500/IESRafaelAlberti/RafaelAlberti26_27`, pero ese volumen no está montado en este equipo. No se sincronizó ni sobrescribió ningún cambio.
+- [x] El intento del 2026-10-18 quedó bloqueado por el volumen EVO no montado; el 2026-10-19 el usuario confirma que los cambios del instituto ya están incorporados mediante Unison. Revisados en esta sesión, sin repetir la sincronización.
 - [x] Localizado el archivo histórico `01-fundamentos-python/90-archivo/NumPy-20251016.zip` (7,8 MB), que contiene el EPUB de referencia según `DECISIONES_MATERIAL_ARCHIVADO.md`; el material activo está en `01-fundamentos-python/01-teoria/` y `02-ejemplos/`.
 
-**Siguiente paso:** montar el volumen EVO y repetir Unison limitado a `Modulos/PIA`; después decidir si se revisa el EPUB del ZIP histórico.
+**Siguiente paso:** mantener la sincronización entre equipos; la revisión del EPUB histórico sigue siendo opcional.
 
 ## Catálogo de bibliografía NumPy — 2026-10-18
 
@@ -51,7 +62,7 @@ Resultado final (pares alineados): casos=10, aleatoriedad=11, io=12, ufuncs=13, 
 - [x] Creado el índice combinado `01-fundamentos-python/05-recursos/INDICE_NUMPY_LIBROS.md` con 7 bloques (antes de NumPy, fundamentos de arrays, indexado/rebanado, operaciones/ufuncs, ordenación/estructuras, aleatorios e I/O, aplicaciones) y tabla por libro; enlazado desde `01-fundamentos-python/README.md` (sección Recursos).
 - [ ] Revisar si `90-archivo/NumPy-20251016.zip` (EPUB histórico de NumPy) merece incorporarse al catálogo de la biblioteca. Sin decisión tomada; pendiente de valoración.
 
-**Siguiente paso sugerido:** revisar el EPUB histórico de NumPy del ZIP y decidir si se añade a la bibliografía; validar los notebooks avanzados en ejecución real; probar los notebooks con el alumnado en clase.
+**Siguiente paso sugerido:** revisar el EPUB histórico si aporta valor y contrastar el material en clase. Los notebooks avanzados ya se validaron en ejecución; la revisión del 2026-10-19 vuelve a comprobar los ejemplos 10–13.
 
 ## Guion de la quinta clase (3 h) — 2026-10-18
 

@@ -1,39 +1,93 @@
-// Cuestionario en paralelo con 15-ejercicios_numpy_completo.ipynb.
-// Las respuestas son fragmentos de código de respuesta corta; el feedback
-// general ofrece la solución de referencia para poder continuar el notebook.
+// Cuestionario docente, en paralelo con 15-ejercicios_numpy_completo.ipynb.
+// Respuestas cortas literales. La retroalimentación general va DENTRO de las llaves.
+// Validar la importación y las variantes de respuesta aceptadas en Moodle.
 
-::UD1_NUMPY_COMPLETO_01::Ejercicio 1 — Escribe la expresión que crea los enteros de 0 a 11 y los reorganiza en una matriz 3×4. {=np.arange(12).reshape(3, 4)#Correcto: `np.arange(12).reshape(3, 4)` genera los valores 0..11 y les da forma 3×4.}####Solución de referencia: `a \= np.arange(12).reshape(3, 4)`. Comprueba que `a.shape` es `(3, 4)`.
+::UD1_NUMPY_COMPLETO_01::Ejercicio 1 — Escribe la expresión que crea los enteros de 0 a 11 y los reorganiza en una matriz 3×4. {
+=np.arange(12).reshape(3, 4)#Correcto.
+####Solución de referencia: a \= np.arange(12).reshape(3, 4). Comprueba a.shape.
+}
 
-::UD1_NUMPY_COMPLETO_02::Ejercicio 2 — Escribe la expresión que convierte `x` a `int32` sin modificar el array original. {=x.astype(np.int32)#Correcto: `astype` devuelve un array convertido; no cambia el `dtype` de `x`.}####Solución: `x_int \= x.astype(np.int32)`. Para redondear los valores por separado usa `np.round(x)`.
+::UD1_NUMPY_COMPLETO_02::Ejercicio 2 — Escribe la expresión que convierte x a int32 sin modificar el array original. {
+=x.astype(np.int32)#Correcto: astype devuelve un array convertido.
+####Solución: x_int \= x.astype(np.int32). Para redondear usa np.round(x).
+}
 
-::UD1_NUMPY_COMPLETO_03::Ejercicio 3 — Con `A` bidimensional, escribe el corte que selecciona todas las filas de la tercera columna. {=A[:, 2]#Correcto: `:` selecciona todas las filas y el índice 2 selecciona la tercera columna.}####Solución: `col2 \= A[:, 2]`. Recuerda que los índices empiezan en 0.
+::UD1_NUMPY_COMPLETO_03::Ejercicio 3 — Con A bidimensional, selecciona todas las filas de la tercera columna. {
+=A[\:, 2]#Correcto: el índice 2 corresponde a la tercera columna.
+####Solución: col2 \= A[\:, 2]. Los índices empiezan en 0.
+}
 
-::UD1_NUMPY_COMPLETO_04::Ejercicio 4 — Escribe la expresión de indexado booleano que selecciona de `datos` solo los valores negativos. {=datos[datos < 0]#Correcto: la condición `datos < 0` construye la máscara booleana que filtra los valores.}####Solución: `mascara \= datos < 0; negativos \= datos[mascara]`. Para asignar categorías puedes usar `np.where(mascara, 'neg', 'pos/cero')`.
+::UD1_NUMPY_COMPLETO_04::Ejercicio 4 — Selecciona de datos solo los valores negativos mediante indexado booleano. {
+=datos[datos < 0]#Correcto.
+####Solución: mascara \= datos < 0; negativos \= datos[mascara].
+}
 
-::UD1_NUMPY_COMPLETO_05::Ejercicio 5 — Escribe la reducción que calcula la suma de cada columna de `M`. {=M.sum(axis\=0)#Correcto: `axis\=0` reduce las filas y conserva una suma por columna.}####Solución: `suma_col \= M.sum(axis\=0)`. En cambio, `axis\=1` calcula una suma por fila.
+::UD1_NUMPY_COMPLETO_05::Ejercicio 5 — Calcula la suma de cada columna de M. {
+=M.sum(axis\=0)#Correcto: reduce las filas y conserva una suma por columna.
+####Solución: suma_col \= M.sum(axis\=0).
+}
 
-::UD1_NUMPY_COMPLETO_06::Ejercicio 6 — Escribe la expresión que centra las columnas de `X` restando la media de cada columna, sin bucles. {=X - X.mean(axis\=0)#Correcto: la media por columnas tiene forma `(n_columnas,)` y NumPy la transmite por broadcasting a cada fila.}####Solución: `Xc \= X - X.mean(axis\=0)`. Verifica que `Xc.mean(axis\=0)` es aproximadamente cero.
+::UD1_NUMPY_COMPLETO_06::Ejercicio 6 — Centra las columnas de X restando su media, sin bucles. {
+=X - X.mean(axis\=0)#Correcto: se aplica broadcasting.
+####Solución: Xc \= X - X.mean(axis\=0). Verifica la media por columnas.
+}
 
-::UD1_NUMPY_COMPLETO_07::Ejercicio 7 — Escribe el método que crea una copia independiente de `b` (no una vista). {=b.copy()#Correcto: `.copy()` crea un array que no comparte memoria con `b`.}####Solución: `copia \= b.copy()`. Por contraste, `vista \= b[0]` comparte memoria con el array original.
+::UD1_NUMPY_COMPLETO_07::Ejercicio 7 — Crea una copia independiente de b. {
+=b.copy()#Correcto: no comparte memoria con b.
+####Solución: copia \= b.copy(). En cambio, vista \= b[0] comparte memoria.
+}
 
-::UD1_NUMPY_COMPLETO_08::Ejercicio 8 — Escribe una expresión vectorizada que suma los cuadrados de todos los elementos de `arr`. {=np.sum(arr**2)#Correcto: primero se elevan al cuadrado todos los elementos y luego se suman.}####Solución: `suma_vec \= np.sum(arr**2)`. No es lo mismo que elevar al cuadrado `np.sum(arr)`.
+::UD1_NUMPY_COMPLETO_08::Ejercicio 8 — Suma los cuadrados de todos los elementos de arr de forma vectorizada. {
+=np.sum(arr**2)#Correcto.
+####Solución: suma_vec \= np.sum(arr**2). Comprueba la igualdad antes de comparar tiempos.
+}
 
-::UD1_NUMPY_COMPLETO_09::Ejercicio 9 — Escribe cómo crear un generador reproducible con semilla 42 usando la API moderna. {=np.random.default_rng(42)#Correcto: `default_rng` crea un `Generator` inicializado con la semilla indicada.}####Solución: `rng \= np.random.default_rng(42)`. Dos generadores con la misma semilla y las mismas llamadas producen la misma secuencia.
+::UD1_NUMPY_COMPLETO_09::Ejercicio 9 — Crea un generador reproducible con semilla 42 usando la API moderna. {
+=np.random.default_rng(42)#Correcto.
+####Solución: rng \= np.random.default_rng(42). Repite las llamadas en el mismo orden.
+}
 
-::UD1_NUMPY_COMPLETO_10::Ejercicio 10 — Escribe la llamada que genera 1000 valores de una normal de media 5 y desviación típica 2 usando `rng`. {=rng.normal(loc\=5, scale\=2, size\=1000)#Correcto: `loc` es la media, `scale` la desviación típica y `size` el número de muestras.}####Solución: `normales \= rng.normal(loc\=5, scale\=2, size\=1000)`. Para una uniforme en `[0,10]` usa `rng.uniform(0, 10, size\=1000)`.
+::UD1_NUMPY_COMPLETO_10::Ejercicio 10 — Genera 1000 valores de una normal de media 5 y desviación típica 2 usando rng. {
+=rng.normal(loc\=5, scale\=2, size\=1000)#Correcto: scale es la desviación típica.
+####Solución: normales \= rng.normal(loc\=5, scale\=2, size\=1000).
+}
 
-::UD1_NUMPY_COMPLETO_11::Ejercicio 11 — Escribe la expresión que crea una permutación de índices para barajar un dataset de etiquetas `y`; esa misma variable debe aplicarse a `X` y a `y`. {=rng.permutation(len(y))#Correcto: genera un único vector de índices que debes guardar como `idx` y reutilizar para ambos arrays.}####Solución: `idx \= rng.permutation(len(y)); Xb \= X[idx]; yb \= y[idx]`. No barajes `X` e `y` por separado: romperías la correspondencia.
+::UD1_NUMPY_COMPLETO_11::Ejercicio 11 — Genera una permutación de índices que se aplicará tanto a X como a y. Usa len(y). {
+=rng.permutation(len(y))#Correcto: reutiliza un único vector de índices.
+####Solución: idx \= rng.permutation(len(y)); Xb \= X[idx]; yb \= y[idx].
+}
 
-::UD1_NUMPY_COMPLETO_12::Ejercicio 12 — Con `idx` ya barajado y `n\=120`, escribe el corte que obtiene los primeros 96 índices para entrenamiento. {=idx[:96]#Correcto: 96 es el 80 % de 120.}####Solución completa: `punto \= int(n * 0.8); train_idx \= idx[:punto]; test_idx \= idx[punto:]`. Genera la permutación una sola vez para mantener una partición sin solapamiento.
+::UD1_NUMPY_COMPLETO_12::Ejercicio 12 — Con idx ya barajado, escribe el corte que obtiene los primeros 96 índices. {
+=idx[\:96]#Correcto: 96 es el 80 % de 120.
+####Solución: train_idx \= idx[\:96]; test_idx \= idx[96\:].
+}
 
-::UD1_NUMPY_COMPLETO_13::Ejercicio 13 — Escribe el operador de NumPy que calcula el producto matricial de `P` por `Q`. {=P @ Q#Correcto: `@` expresa el producto matricial y requiere dimensiones compatibles.}####Solución: `R \= P @ Q`. `P * Q` es una multiplicación elemento a elemento, no un producto matricial.
+::UD1_NUMPY_COMPLETO_13::Ejercicio 13 — Escribe la expresión del producto matricial de P por Q. {
+=P @ Q#Correcto: las dimensiones interiores deben coincidir.
+####Solución: R \= P @ Q. El operador * multiplica elemento a elemento.
+}
 
-::UD1_NUMPY_COMPLETO_14::Ejercicio 14 — Escribe la llamada que calcula la norma euclídea de cada fila de `pts`. {=np.linalg.norm(pts, axis\=1)#Correcto: `axis\=1` reduce las coordenadas de cada fila y devuelve una norma por punto.}####Solución: `normas \= np.linalg.norm(pts, axis\=1)`. Para todas las distancias por parejas, combina broadcasting con `np.linalg.norm(..., axis\=2)`.
+::UD1_NUMPY_COMPLETO_14::Ejercicio 14 — Calcula la norma euclídea de cada fila de pts. {
+=np.linalg.norm(pts, axis\=1)#Correcto.
+####Solución: normas \= np.linalg.norm(pts, axis\=1).
+}
 
-::UD1_NUMPY_COMPLETO_15::Ejercicio 15 — Escribe la función que resuelve el sistema lineal `A x \= bvec`. {=np.linalg.solve(A, bvec)#Correcto: `solve` encuentra `x` sin calcular explícitamente la inversa.}####Solución: `x_sol \= np.linalg.solve(A, bvec)`. Para autovalores usa `np.linalg.eigvals(C)` y para valores singulares `np.linalg.svd(C, compute_uv\=False)`.
+::UD1_NUMPY_COMPLETO_15::Ejercicio 15 — Resuelve el sistema lineal A x \= bvec. {
+=np.linalg.solve(A, bvec)#Correcto: no hace falta calcular la inversa.
+####Solución: x_sol \= np.linalg.solve(A, bvec). Verifica A @ x_sol.
+}
 
-::UD1_NUMPY_COMPLETO_16::Ejercicio 16 — Escribe la ufunc acumulativa que devuelve las sumas parciales de `v`. {=np.add.accumulate(v)#Correcto: `accumulate` devuelve el resultado parcial tras cada elemento.}####Solución: `suma_acum \= np.add.accumulate(v)`. `np.add.reduce(v)` devuelve solo la suma total; `np.clip(v, 2, 3)` limita los valores al intervalo.
+::UD1_NUMPY_COMPLETO_16::Ejercicio 16 — Devuelve las sumas parciales de v con una ufunc acumulativa. {
+=np.add.accumulate(v)#Correcto.
+####Solución: suma_acum \= np.add.accumulate(v). reduce devuelve solo el total.
+}
 
-::UD1_NUMPY_COMPLETO_17::Ejercicio 17 — Escribe la llamada que calcula el percentil 25 de `dat`. {=np.percentile(dat, 25)#Correcto: `percentile` recibe el percentil en la escala 0–100.}####Solución: `p25 \= np.percentile(dat, 25)`. También practica `np.unique`, `np.histogram`, `np.corrcoef(x, y)[0, 1]` y `np.cov(x, y)[0, 1]`.
+::UD1_NUMPY_COMPLETO_17::Ejercicio 17 — Calcula el percentil 25 de dat. {
+=np.percentile(dat, 25)#Correcto: la escala es 0–100.
+####Solución: p25 \= np.percentile(dat, 25). La correlación escalar se extrae con np.corrcoef(x, y)[0, 1].
+}
 
-::UD1_NUMPY_COMPLETO_18::Ejercicio 18 — Escribe la llamada que guarda el array `m` en formato binario `.npy`. {=np.save('m.npy', m)#Correcto: `np.save` escribe el array en formato binario NumPy.}####Solución: guarda con `np.save('m.npy', m)` y recupera con `np.load('m.npy')`. Para texto se usan `np.savetxt` y `np.loadtxt`; para varios arrays, `np.savez_compressed`.
+::UD1_NUMPY_COMPLETO_18::Ejercicio 18 — Guarda m en formato binario m.npy. {
+=np.save('m.npy', m)#Correcto.
+####Solución: np.save('m.npy', m) y np.load('m.npy'). Para texto usa savetxt/loadtxt.
+}
