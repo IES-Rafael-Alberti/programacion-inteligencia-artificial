@@ -2,6 +2,12 @@
 
 La hoja de ruta completa está en `ESTADO_ACTUAL_Y_PENDIENTES.md`. El flujo de publicación está en `ESTRATEGIA_REPOSITORIOS.md`.
 
+## Retomar en el ordenador del instituto
+
+Abrir primero el bloque **«RETOMAR EN EL ORDENADOR DEL INSTITUTO»** al inicio de `ESTADO_ACTUAL_Y_PENDIENTES.md`: contiene la lista operativa pendiente y las rutas completas. Esperar a Unison y revisar el estado local antes de actualizar la rama `teacher` desde el remoto privado.
+
+El PDF de la comparativa vive en `Moodle/`, ignorada por Git: debe llegar mediante Unison o regenerarse desde el Markdown versionado. Un pull no lo recupera. La importación de cuestionarios y la publicación de la tarea en Moodle siguen pendientes; marcarlas como hechas solo tras comprobarlas en la plataforma.
+
 ## Avance real
 
 - El profesor confirma que el 19 de octubre se ha hecho prácticamente toda la parte de NumPy.

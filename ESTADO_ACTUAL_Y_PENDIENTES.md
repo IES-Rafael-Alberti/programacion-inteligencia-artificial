@@ -3,6 +3,22 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## RETOMAR EN EL ORDENADOR DEL INSTITUTO — antes de clase del 20-10-2026
+
+La preparación está terminada y publicada en GitHub; **la importación/publicación en Moodle aún no está hecha**. Este es el orden de trabajo pendiente:
+
+1. [ ] **Comprobar sincronización en el instituto.** Esperar a que Unison termine y revisar `git status --short`. Trabajar en la rama docente `teacher` y comprobar que contiene la ampliación de cuestionarios y el guion actualizado (material en `f0032c94`, cierre en `808a97ca` o posteriores). Si hay cambios locales, revisarlos antes de actualizar desde GitHub. No mezclar el historial docente en `main` del alumnado.
+2. [ ] **Importar en Moodle los tres bancos actualizados**, desde `01-fundamentos-python/04-evaluacion/`:
+   - `cuestionario-numpy.gift`: **25 preguntas**.
+   - `cuestionario-eda-numpy.gift`: **20 preguntas**.
+   - `cuestionario-numpy-completo.gift`: **18 preguntas**; 15 de práctica de código y 3 en **Álgebra consulta UD3**.
+   - Comprobar categorías, recuentos, respuestas cortas/variantes y retroalimentación. Evitar duplicados si se reimportan bancos previos. Crear/actualizar los recursos de cuestionario, ajustar acceso y visibilidad, y probar con rol de estudiante. Mantener álgebra fuera del repaso obligatorio y activar EDA después de su ejemplo. No publicar los GIFT como archivos descargables.
+3. [ ] **Publicar la comparativa y habilitar su entrega para hacerla en clase.** PDF preparado: `Moodle/01-UD1/03-practicas/comparativa-lenguajes-formatos-ia.pdf`. Fuente entregable, sin observación docente: `01-fundamentos-python/04-evaluacion/comparativa-lenguajes-formatos-ia.md`. Mostrar plazo, formatos admitidos y lugar de entrega. **`Moodle/` está ignorada por Git: comprobar que el PDF haya llegado con Unison; si falta, recuperarlo/regenerarlo desde la fuente, no asumir que vendrá de un pull.**
+4. [ ] **Preparar el inicio de R y abrir el guion docente:** `01-fundamentos-python/99-profesor/06-GUION_SEXTA_CLASE_PIA_EDA_NUMPY_PANDAS.md`. Comprobar R en el equipo del profesor; si falta en los equipos del alumnado, usar demostración sin instalar durante la clase. Plan: R breve → comparativa entregable → EDA NumPy → pandas. Confirmar acceso a los notebooks EDA y pandas.
+5. [ ] **Después de clase:** marcar aquí lo importado/publicado realmente, registrar entrega de la comparativa y punto alcanzado en pandas, y actualizar `NOTAS_PROXIMA_SESION.md`. No marcar Moodle como completado solo por tener archivos locales o por estar en GitHub.
+
+**Recordatorio posterior:** cuando se impartan gráficas en Python (UD2), hacer ejemplos equivalentes en R y comparar código y resultados sobre los mismos datos. No corresponde a la introducción breve de mañana.
+
 ## Preparación para mañana: cuestionarios, R y actividad entregable — 2026-10-19
 
 - [x] Ampliado `01-fundamentos-python/04-evaluacion/cuestionario-numpy.gift`: de 10 a **25 preguntas**. Añadidas interpretación de tipos/memoria, cortes 2D, ejes, `keepdims`/`newaxis`, máscaras compuestas, selección, límites, vistas/copias, índices de ordenación, concatenación/apilado, ufuncs, redondeo e I/O básico.
