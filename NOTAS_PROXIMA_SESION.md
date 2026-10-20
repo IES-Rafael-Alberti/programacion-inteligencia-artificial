@@ -22,7 +22,8 @@ La hoja de ruta completa está en `ESTADO_ACTUAL_Y_PENDIENTES.md`. El flujo de p
 
 ## Pendientes
 
-- Preparar un guion corto de 2 h para esta próxima clase (el vigente `06-GUION_SEXTA_CLASE_PIA_EDA_NUMPY_PANDAS.md` es de 3 h y para la sexta), o ajustarlo.
+- Guion corto de 2 h ya preparado: `01-fundamentos-python/99-profesor/07-GUION_SEPTIMA_CLASE_PIA_R_COMPARATIVA_PANDAS.md` (commit docente `359f1924`). Guía R/VS Code publicada en `origin/main` (`1bfdfd91`).
+- Corregir la exposición de material docente en la rama pública `origin/teacher`: recibió por error el commit `359f1924`; no es un staging privado. Consultar la incidencia registrada en la hoja de ruta antes de nuevas publicaciones.
 - Subir/habilitar la comparativa en Moodle y decidir la distribución del notebook 16 en Moodle.
 - Importar y probar los tres GIFT actualizados (`cuestionario-numpy.gift`, `cuestionario-eda-numpy.gift`, `cuestionario-numpy-completo.gift`).
 - Registrar, tras la clase, qué se impartió realmente de R, comparativa y pandas y continuar desde ese punto.

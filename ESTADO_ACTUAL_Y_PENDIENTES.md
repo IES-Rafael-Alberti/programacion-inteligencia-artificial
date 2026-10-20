@@ -5,6 +5,14 @@
 
 ## Resultado real de la sexta clase y preparación de la siguiente (2 h) — 2026-10-21
 
+### Cierre y publicación — 2026-10-21
+
+- [x] Creado el guion de 2 h `01-fundamentos-python/99-profesor/07-GUION_SEPTIMA_CLASE_PIA_R_COMPARATIVA_PANDAS.md`; material consolidado en `359f1924` y subido a `teacher/main`.
+- [x] Publicada la guía de instalación R/VS Code y sus enlaces en `origin/main` (`1bfdfd91`). Build estricto de MkDocs superado.
+- [ ] **Incidencia de publicación:** también se ejecutó por error `git push origin teacher`, actualizando la rama `teacher` del repositorio público a `359f1924`. Esa rama ya existía en `7fd5e3ba`, pero no constituye un espacio privado ni un staging seguro. Revisar su exposición y acordar su retirada y el tratamiento del historial recuperable; no considerar resuelta la incidencia por la publicación selectiva correcta en `origin/main`.
+
+**Siguiente paso de mantenimiento:** resolver la exposición de `origin/teacher` antes de nuevas publicaciones. El trabajo docente para la próxima clase está preparado; Moodle conserva los pendientes indicados abajo.
+
 ### Sesión 6 (20-10) — lo realmente impartido
 
 - [x] **EDA con NumPy visto en su totalidad** usando el recorrido del guion (estructura, ausentes, filtros, IQR y conclusión), sobre el dataset de empleados.
