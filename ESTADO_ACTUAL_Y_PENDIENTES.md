@@ -86,7 +86,7 @@ La preparación está terminada y publicada en GitHub; **la importación/publica
 
 ## Cuaderno alternativo de ejercicios NumPy — 2026-10-20
 
-- [x] Creado `01-fundamentos-python/03-practicas/16-ejercicios_numpy_aplicados.ipynb` para el alumnado: dataset sintético reproducible de consumo energético de edificios, con columnas y contexto distintos del cuaderno de empleados.
+- [x] Creado y renombrado `01-fundamentos-python/03-practicas/16-eda_numpy_edificios.ipynb` para el alumnado: EDA con dataset sintético reproducible de consumo energético de edificios, con columnas y contexto distintos del cuaderno de empleados.
 - [x] Incluidos ejercicios sin soluciones sobre indexado, máscaras, faltantes, IQR, `np.where`, agregaciones por grupos, escalado, correlaciones, resumen estadístico y exportación `.npz`, con comprobaciones `assert`.
 - [x] Añadido el nuevo notebook al índice de `01-fundamentos-python/03-practicas/README.md`.
 - [x] Validado localmente el JSON y la sintaxis de las celdas de código; queda pendiente decidir su publicación/importación en Moodle si se distribuye como material adicional.
