@@ -3,6 +3,32 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Resultado real de la sexta clase y preparación de la siguiente (2 h) — 2026-10-21
+
+### Sesión 6 (20-10) — lo realmente impartido
+
+- [x] **EDA con NumPy visto en su totalidad** usando el recorrido del guion (estructura, ausentes, filtros, IQR y conclusión), sobre el dataset de empleados.
+- [x] **Creado un nuevo notebook para que el EDA lo hagan los alumnos:** `01-fundamentos-python/03-practicas/16-eda_numpy_edificios.ipynb`, con dataset sintético de edificios y ejercicios sin soluciones (indexado, máscaras, faltantes, IQR, `np.where`, grupos, escalado, correlaciones, resumen y exportación `.npz`). Está enlazado en el README de prácticas. **Pendiente: decidir su publicación/distribución en Moodle.**
+- [~] **R no llegó a verse con las herramientas previstas.** Los alumnos intentaron instalar **RStudio**, pero la página de descarga devolvía un XML en lugar de comenzar la descarga. Como alternativa se pasó a **instalar R directamente desde CRAN** y a **instalar los plugins de VS Code para R**. La introducción a R en sí (sintaxis, `data.frame`, resumen) quedó para esta próxima sesión.
+- [x] Pandas: la parte tratada previamente (Series, DataFrame, inicio de indexación) aún no se ha ampliado; sigue pendiente el repaso y la continuación planificada.
+
+### Decisión: instalar R y usar notebooks R en VS Code, sin RStudio
+
+- [x] Documentada la ruta de arranque (instalar R desde CRAN, conectar kernel R en VS Code mediante Jupyter/IRkernel) en `01-fundamentos-python/05-recursos/guia-instalacion-r-vscode.md`. Incluye pasos, comprobación, uso de notebooks con kernel R y problemas frecuentes (página de RStudio con XML, `R` sin `PATH`, kernel no visible, `IRkernel::installspec` sin jupyter).
+- [x] Enlazada la guía desde `01-fundamentos-python/01-teoria/09-guia-r-complementario.md`, desde la tabla de teoría (`README.md`, fila 15) y desde el README de la unidad.
+- [ ] **Antes de la próxima clase:** el alumnado debe instalar R y registrar el kernel (la guía va al comienzo de la clase para hacerlo). Comprobar que el notebook `06_introduccion_R_fundamentos.ipynb` abre con kernel R en el equipo docente.
+
+### Próxima clase (2 h) — plan
+
+El tiempo de la sesión previa queda muy repartido: lo que no se llegó a hacer (R, comparativa, repaso inicial de pandas) pasa a esta sesión de **2 horas**, más corta que la de 3 horas planeada.
+
+1. **Arranque (instalar R + VS Code):** seguir `05-recursos/guia-instalacion-r-vscode.md` para instalar R, los plugins de VS Code (R y Jupyter) y registrar IRkernel. Un primer notebook R con kernel seleccionado. Todo el ritmo de esta sesión está en `99-profesor/07-GUION_SEPTIMA_CLASE_PIA_R_COMPARATIVA_PANDAS.md`.
+2. **Introducción breve a R** con `01-teoria/09-guia-r-complementario.md` y `02-ejemplos/06_introduccion_R_fundamentos.ipynb`: vectores, `data.frame`, resumen (sin bucles/funciones completas ni paquetes nuevos).
+3. **Comparativa de lenguajes y formatos** (entregable): `04-evaluacion/comparativa-lenguajes-formatos-ia.md` (subir/habilitar tarea en Moodle) usando el R recién visto como referencia frente a Python.
+4. **Repaso de lo primero de pandas:** Series, DataFrame como conjunto de columnas/Series e inicio de indexación, antes de continuar con `loc`/`iloc`, filtros y transformaciones.
+
+**Siguiente paso:** subir la comparativa y decidir la distribución del notebook 16 en Moodle; el guion corto de 2 h ya está creado (`99-profesor/07-GUION_SEPTIMA_CLASE_PIA_R_COMPARATIVA_PANDAS.md`).
+
 ## RETOMAR EN EL ORDENADOR DEL INSTITUTO — antes de clase del 20-10-2026
 
 La preparación está terminada y publicada en GitHub; **la importación/publicación en Moodle aún no está hecha**. Este es el orden de trabajo pendiente:

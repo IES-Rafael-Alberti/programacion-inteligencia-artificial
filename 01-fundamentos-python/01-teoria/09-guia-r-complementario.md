@@ -1,5 +1,7 @@
 # Bloque complementario: Introducción a R
 
+> **Instalación de R y notebooks en VS Code:** para instalar R desde CRAN (sin RStudio), configurar VS Code y usar notebooks con kernel R, consultar `05-recursos/guia-instalacion-r-vscode.md`.
+
 ## 📌 Objetivos de la semana
 - Conocer la sintaxis básica de R.
 - Manejar variables y operaciones fundamentales.
