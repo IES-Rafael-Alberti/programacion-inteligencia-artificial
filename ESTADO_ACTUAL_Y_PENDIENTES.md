@@ -84,6 +84,13 @@ La preparación está terminada y publicada en GitHub; **la importación/publica
 
 ## Cuaderno integral de ejercicios y cuestionario NumPy — 2026-10-19
 
+## Cuaderno alternativo de ejercicios NumPy — 2026-10-20
+
+- [x] Creado `01-fundamentos-python/03-practicas/16-ejercicios_numpy_aplicados.ipynb` para el alumnado: dataset sintético reproducible de consumo energético de edificios, con columnas y contexto distintos del cuaderno de empleados.
+- [x] Incluidos ejercicios sin soluciones sobre indexado, máscaras, faltantes, IQR, `np.where`, agregaciones por grupos, escalado, correlaciones, resumen estadístico y exportación `.npz`, con comprobaciones `assert`.
+- [x] Añadido el nuevo notebook al índice de `01-fundamentos-python/03-practicas/README.md`.
+- [x] Validado localmente el JSON y la sintaxis de las celdas de código; queda pendiente decidir su publicación/importación en Moodle si se distribuye como material adicional.
+
 - [x] Creado `01-fundamentos-python/03-practicas/15-ejercicios_numpy_completo.ipynb` con **18 ejercicios** que recorren fundamentos y contenidos avanzados de NumPy. Cada uno incluye enunciado Markdown, datos iniciales cuando hacen falta, celda de respuesta vacía y tests con `assert`; los ejercicios de broadcasting, vistas/copias, aleatoriedad, distancias, ufuncs e I/O incluyen pistas.
 - [x] Creado `01-fundamentos-python/04-evaluacion/cuestionario-numpy-completo.gift` con **18 preguntas de código**, una por ejercicio y en el mismo orden. Cada opción incluye retroalimentación para que el cuestionario acompañe al trabajo en el notebook.
 - [x] Enlazado el notebook desde prácticas y descrito el cuestionario de Moodle desde evaluación, sin enlace público al GIFT docente. Las soluciones del notebook se probaron junto con los tests: los 18 conjuntos pasan; la revisión posterior corrige presentación e instrucciones y vuelve a verificarlos.

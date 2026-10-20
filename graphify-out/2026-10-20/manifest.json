@@ -1,0 +1,3860 @@
+{
+  "02-tratamiento-datos/03-practicas/ejercicios_seleccionados/generar_todos.py": {
+    "mtime": 1782255138.8672237,
+    "seen": 1792438050.7516818,
+    "ast_hash": "c553728009c466b1a7058356f7d90fa6",
+    "semantic_hash": "c553728009c466b1a7058356f7d90fa6"
+  },
+  "02-tratamiento-datos/05-recursos/grafica3D.py": {
+    "mtime": 1782255138.8815198,
+    "seen": 1792438050.7516856,
+    "ast_hash": "448e48e16cc3dbe24cbcb434d3042fbc",
+    "semantic_hash": "448e48e16cc3dbe24cbcb434d3042fbc"
+  },
+  "03-machine-learning/02-ejemplos/fastapi/main.py": {
+    "mtime": 1782255139.1513228,
+    "seen": 1792438050.7516882,
+    "ast_hash": "8f18370ae5553f6515efb87f664fc416",
+    "semantic_hash": "8f18370ae5553f6515efb87f664fc416"
+  },
+  "03-machine-learning/02-ejemplos/flaml/flaml_holdout_sintetico.py": {
+    "mtime": 1785261021.7711213,
+    "seen": 1792438050.75169,
+    "ast_hash": "822cc23e569542da29d361aa86d2cef4",
+    "semantic_hash": "822cc23e569542da29d361aa86d2cef4"
+  },
+  "03-machine-learning/02-ejemplos/grafo-peliculas-python/grafo_a_ml.py": {
+    "mtime": 1787074142.0075753,
+    "seen": 1792438050.7516994,
+    "ast_hash": "034b81982fe595015b1caad52fe5c066",
+    "semantic_hash": "034b81982fe595015b1caad52fe5c066"
+  },
+  "03-machine-learning/02-ejemplos/scripts/ensuciar_bank_marketing.py": {
+    "mtime": 1782255139.1527603,
+    "seen": 1792438050.7517018,
+    "ast_hash": "9bd332e0fdeea28303e431935fef4c55",
+    "semantic_hash": "9bd332e0fdeea28303e431935fef4c55"
+  },
+  "03-machine-learning/02-ejemplos/streamlit/app.py": {
+    "mtime": 1782255139.15318,
+    "seen": 1792438050.7517035,
+    "ast_hash": "61e7791efa77dbd58aea1ca221751971",
+    "semantic_hash": "61e7791efa77dbd58aea1ca221751971"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/caso_practico/main.py": {
+    "mtime": 1782255139.1807382,
+    "seen": 1792438050.7517052,
+    "ast_hash": "8621fe623eb4b1911f15b6f809f128cc",
+    "semantic_hash": "8621fe623eb4b1911f15b6f809f128cc"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/mi_dataset_peliculas/src/mi_dataset_peliculas/__init__.py": {
+    "mtime": 1782255139.1842237,
+    "seen": 1792438050.7517068,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/mi_dataset_peliculas/src/mi_dataset_peliculas/build_capstone_dataset.py": {
+    "mtime": 1785521813.628966,
+    "seen": 1787097079.2510653,
+    "ast_hash": "5230d760eb05288faa3145f4bcdfcd75",
+    "semantic_hash": "5230d760eb05288faa3145f4bcdfcd75"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/mi_dataset_peliculas/src/mi_dataset_peliculas/build_dataset.py": {
+    "mtime": 1785521307.0529504,
+    "seen": 1792438050.7517126,
+    "ast_hash": "9a4712e35805d365a58119632845298d",
+    "semantic_hash": "9a4712e35805d365a58119632845298d"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/mi_dataset_peliculas/src/mi_dataset_peliculas/config.py": {
+    "mtime": 1785502250.161639,
+    "seen": 1792438050.7517142,
+    "ast_hash": "7c6d290b55cc510877828a2414cc1cb2",
+    "semantic_hash": "7c6d290b55cc510877828a2414cc1cb2"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/mi_dataset_peliculas/src/mi_dataset_peliculas/merge.py": {
+    "mtime": 1785521306.8899503,
+    "seen": 1792438050.751716,
+    "ast_hash": "4b2f3c7fdd4cb697ab7bb78dd48d8a9c",
+    "semantic_hash": "4b2f3c7fdd4cb697ab7bb78dd48d8a9c"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/mi_dataset_peliculas/src/mi_dataset_peliculas/omdb.py": {
+    "mtime": 1785521306.7309504,
+    "seen": 1792438050.7517173,
+    "ast_hash": "b10f4ba7e856a8421524a7bad7559bb1",
+    "semantic_hash": "b10f4ba7e856a8421524a7bad7559bb1"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/mi_dataset_peliculas/src/mi_dataset_peliculas/tmdb.py": {
+    "mtime": 1785521306.5699503,
+    "seen": 1792438050.751719,
+    "ast_hash": "53e54482718e4397eca675962f62870f",
+    "semantic_hash": "53e54482718e4397eca675962f62870f"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/mi_dataset_peliculas/tests/__init__.py": {
+    "mtime": 1782255139.1866546,
+    "seen": 1792438050.7517204,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/mi_dataset_peliculas/tests/test_capstone_dataset.py": {
+    "mtime": 1785521855.8349674,
+    "seen": 1792438050.751722,
+    "ast_hash": "caa58aff4236fa93985e84c6ed6047d1",
+    "semantic_hash": "caa58aff4236fa93985e84c6ed6047d1"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/mi_dataset_peliculas/tests/test_lab1_dataset.py": {
+    "mtime": 1785521239.9279482,
+    "seen": 1792438050.7517235,
+    "ast_hash": "445da82e96322cfe74f19dfe355ed02e",
+    "semantic_hash": "445da82e96322cfe74f19dfe355ed02e"
+  },
+  "03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/movies.manifest.json": {
+    "mtime": 1785512022.9119844,
+    "seen": 1792438050.751725,
+    "ast_hash": "af485ee8222fa38ff8ac55bfc867e17b",
+    "semantic_hash": "af485ee8222fa38ff8ac55bfc867e17b"
+  },
+  "04-deep-learning/02-ejemplos/fundamentos-scripts/backpropagation.py": {
+    "mtime": 1782255189.7184951,
+    "seen": 1792438050.7517266,
+    "ast_hash": "d52edf6ba72593ddb01ba32a9b6bff0d",
+    "semantic_hash": "d52edf6ba72593ddb01ba32a9b6bff0d"
+  },
+  "04-deep-learning/02-ejemplos/fundamentos-scripts/generate_images_cap01.py": {
+    "mtime": 1782255189.718866,
+    "seen": 1787097079.2510793,
+    "ast_hash": "c54cb91d529bf5bc52236033761a9a5f",
+    "semantic_hash": "c54cb91d529bf5bc52236033761a9a5f"
+  },
+  "04-deep-learning/02-ejemplos/fundamentos-scripts/generate_images_cap02.py": {
+    "mtime": 1782255189.7193048,
+    "seen": 1792438050.7517307,
+    "ast_hash": "a708a1e4d4117fc5d0117587aa581462",
+    "semantic_hash": "a708a1e4d4117fc5d0117587aa581462"
+  },
+  "04-deep-learning/02-ejemplos/fundamentos-scripts/generate_images_cap03.py": {
+    "mtime": 1782255189.7197318,
+    "seen": 1792438050.7517328,
+    "ast_hash": "4c5f8378e2fd9d2254b4014ca971c7be",
+    "semantic_hash": "4c5f8378e2fd9d2254b4014ca971c7be"
+  },
+  "04-deep-learning/02-ejemplos/fundamentos-scripts/generate_images_cap04.py": {
+    "mtime": 1782255189.7201188,
+    "seen": 1792438050.7517347,
+    "ast_hash": "2d819bb50c926e20d8a5bf4fa7f3b2b8",
+    "semantic_hash": "2d819bb50c926e20d8a5bf4fa7f3b2b8"
+  },
+  "04-deep-learning/02-ejemplos/fundamentos-scripts/generate_images_cap05.py": {
+    "mtime": 1782255189.7205184,
+    "seen": 1792438050.7517364,
+    "ast_hash": "0f663bf3d9ca99ec69721ed4178cea34",
+    "semantic_hash": "0f663bf3d9ca99ec69721ed4178cea34"
+  },
+  "04-deep-learning/02-ejemplos/fundamentos-scripts/generate_images_cap06.py": {
+    "mtime": 1782255189.7209208,
+    "seen": 1792438050.7517378,
+    "ast_hash": "214a7c741ceeeae1f9a24064a97a25eb",
+    "semantic_hash": "214a7c741ceeeae1f9a24064a97a25eb"
+  },
+  "04-deep-learning/02-ejemplos/fundamentos-scripts/generate_images_cap07.py": {
+    "mtime": 1782255189.7212892,
+    "seen": 1792438050.7517395,
+    "ast_hash": "a0d99626438355f1291d774cd77ccf15",
+    "semantic_hash": "a0d99626438355f1291d774cd77ccf15"
+  },
+  "04-deep-learning/02-ejemplos/fundamentos-scripts/generate_images_cap08.py": {
+    "mtime": 1782255189.7216759,
+    "seen": 1792438050.751741,
+    "ast_hash": "e2a6cebb78f3f8b01c4928f1420f415f",
+    "semantic_hash": "e2a6cebb78f3f8b01c4928f1420f415f"
+  },
+  "04-deep-learning/02-ejemplos/fundamentos-scripts/gradient_descent_animation.py": {
+    "mtime": 1782255189.7220373,
+    "seen": 1792438050.7517426,
+    "ast_hash": "7bf74da446ca847c51b2a47a6b7d8fe7",
+    "semantic_hash": "7bf74da446ca847c51b2a47a6b7d8fe7"
+  },
+  "04-deep-learning/02-ejemplos/modelado-avanzado-ejemplos/fashion-mnist-flask/fashion-mnist/application.py": {
+    "mtime": 1782255189.7229476,
+    "seen": 1792438050.7517443,
+    "ast_hash": "eefe6784623bb3aaa888c03846715b38",
+    "semantic_hash": "eefe6784623bb3aaa888c03846715b38"
+  },
+  "04-deep-learning/02-ejemplos/modelado-avanzado-ejemplos/fashion-mnist-flask/fashion-mnist/train.py": {
+    "mtime": 1782255189.8954444,
+    "seen": 1792438050.7517457,
+    "ast_hash": "d7fe1b44a5e4120b020d45ca09a5147b",
+    "semantic_hash": "d7fe1b44a5e4120b020d45ca09a5147b"
+  },
+  "04-deep-learning/03-practicas/laboratorios/Laboratorio2/backPropScratch.py": {
+    "mtime": 1782255190.876942,
+    "seen": 1792438050.7517471,
+    "ast_hash": "55a988643462b6b8f3292be3c5796f4c",
+    "semantic_hash": "55a988643462b6b8f3292be3c5796f4c"
+  },
+  "04-deep-learning/03-practicas/laboratorios/Laboratorio2/backpropagationRNAscratch.py": {
+    "mtime": 1782255190.876439,
+    "seen": 1792438050.7517486,
+    "ast_hash": "319ebd5ceb1c61e4431e660d82eab61f",
+    "semantic_hash": "319ebd5ceb1c61e4431e660d82eab61f"
+  },
+  "04-deep-learning/03-practicas/modelado-proyectos/boston-housing/scripts/bostonHousesPrice_Keras.py": {
+    "mtime": 1783277598.9356518,
+    "seen": 1792438050.7517507,
+    "ast_hash": "95b809c40027ae15894e34bd2e2dd795",
+    "semantic_hash": "95b809c40027ae15894e34bd2e2dd795"
+  },
+  "04-deep-learning/03-practicas/modelado-proyectos/boston-housing/scripts/bostonHousesPrice_Pytorch.py": {
+    "mtime": 1783185698.976293,
+    "seen": 1787097079.251096,
+    "ast_hash": "992621431ea209e1721835d6187d58bf",
+    "semantic_hash": "992621431ea209e1721835d6187d58bf"
+  },
+  "04-deep-learning/03-practicas/modelado-proyectos/boston-housing/scripts/bostonHousesPrice_SciKeras.py": {
+    "mtime": 1783185698.976534,
+    "seen": 1787097079.2510972,
+    "ast_hash": "34b00f0171ce79d052a92af6e1dd4632",
+    "semantic_hash": "34b00f0171ce79d052a92af6e1dd4632"
+  },
+  "04-deep-learning/03-practicas/modelado-proyectos/boston-housing/scripts/bostonHousesPrice_SciPytorch.py": {
+    "mtime": 1783185723.6480033,
+    "seen": 1792438050.751757,
+    "ast_hash": "a94714a9765ebe62412dbff8aaa09648",
+    "semantic_hash": "a94714a9765ebe62412dbff8aaa09648"
+  },
+  "04-deep-learning/03-practicas/modelado-proyectos/euromillones/scripts/LSTM-euromillions.py": {
+    "mtime": 1782255190.9016807,
+    "seen": 1792438050.7517586,
+    "ast_hash": "2512e35601feeadc91a93eb57abb15d2",
+    "semantic_hash": "2512e35601feeadc91a93eb57abb15d2"
+  },
+  "04-deep-learning/03-practicas/modelado-proyectos/euromillones/scripts/LSTM_PytorchMultiVariate.py": {
+    "mtime": 1782255190.902059,
+    "seen": 1787097079.2511008,
+    "ast_hash": "0fcaf8e1e630f3a1754a2287f443f90b",
+    "semantic_hash": "0fcaf8e1e630f3a1754a2287f443f90b"
+  },
+  "04-deep-learning/03-practicas/modelado-proyectos/euromillones/scripts/LSTM_PytorchUniVariate.py": {
+    "mtime": 1782255190.902448,
+    "seen": 1792438050.751762,
+    "ast_hash": "4009b98602c0d1f51938190d7698d9b6",
+    "semantic_hash": "4009b98602c0d1f51938190d7698d9b6"
+  },
+  "04-deep-learning/05-recursos/modelado-entornos/install_jax.sh": {
+    "mtime": 1783354884.370786,
+    "seen": 1792438050.751764,
+    "ast_hash": "1581aee7983676e4ba4dd1f6e1bf7753",
+    "semantic_hash": "1581aee7983676e4ba4dd1f6e1bf7753"
+  },
+  "04-deep-learning/05-recursos/modelado-entornos/install_keras3.sh": {
+    "mtime": 1783354884.3705654,
+    "seen": 1792438050.751766,
+    "ast_hash": "e2327357aab32f550f95fb2c50b68908",
+    "semantic_hash": "e2327357aab32f550f95fb2c50b68908"
+  },
+  "04-deep-learning/05-recursos/modelado-entornos/install_mlx.sh": {
+    "mtime": 1783354884.3709955,
+    "seen": 1792438050.7517676,
+    "ast_hash": "5d39464c8b8900bbb3e2b33c80b3d5e2",
+    "semantic_hash": "5d39464c8b8900bbb3e2b33c80b3d5e2"
+  },
+  "04-deep-learning/05-recursos/modelado-entornos/install_onnx.sh": {
+    "mtime": 1783354884.3702984,
+    "seen": 1792438050.751769,
+    "ast_hash": "dde2ad28f7ab16088c229c73108d2a2d",
+    "semantic_hash": "dde2ad28f7ab16088c229c73108d2a2d"
+  },
+  "04-deep-learning/05-recursos/modelado-entornos/install_pytorch.sh": {
+    "mtime": 1783354884.3695302,
+    "seen": 1792438050.7517707,
+    "ast_hash": "ab0a5293192b0c687126c16b6cf8ec46",
+    "semantic_hash": "ab0a5293192b0c687126c16b6cf8ec46"
+  },
+  "04-deep-learning/05-recursos/modelado-entornos/install_tensorflow.sh": {
+    "mtime": 1783354884.3699882,
+    "seen": 1792438050.7517722,
+    "ast_hash": "f4a17f1ba456bcc4d6a06db8aac3a022",
+    "semantic_hash": "f4a17f1ba456bcc4d6a06db8aac3a022"
+  },
+  "04-deep-learning/90-archivo/fundamentos-old/Codigo/activationFunctions.py": {
+    "mtime": 1783353541.590264,
+    "seen": 1792438050.7517734,
+    "ast_hash": "3b9fbc7a656931b9276d38298c85848a",
+    "semantic_hash": "3b9fbc7a656931b9276d38298c85848a"
+  },
+  "04-deep-learning/90-archivo/fundamentos-old/Codigo/backpropGraf.py": {
+    "mtime": 1782255205.6698759,
+    "seen": 1792438050.751775,
+    "ast_hash": "6fda48e229d975bf40fbb43ddb927db3",
+    "semantic_hash": "6fda48e229d975bf40fbb43ddb927db3"
+  },
+  "04-deep-learning/90-archivo/fundamentos-old/Codigo/irisKeras-rapids.py": {
+    "mtime": 1782255205.672327,
+    "seen": 1787097079.2511244,
+    "ast_hash": "e4b5b4b3ac1a5dd1141c711fba8b727b",
+    "semantic_hash": "e4b5b4b3ac1a5dd1141c711fba8b727b"
+  },
+  "04-deep-learning/90-archivo/fundamentos-old/Codigo/irisKeras.py": {
+    "mtime": 1782255205.6726854,
+    "seen": 1792438050.7517784,
+    "ast_hash": "59044177c9641733113d43dede88a892",
+    "semantic_hash": "59044177c9641733113d43dede88a892"
+  },
+  "04-deep-learning/90-archivo/fundamentos-old/Codigo/irisPytorch-rapids.py": {
+    "mtime": 1782255205.6730437,
+    "seen": 1792438050.7517798,
+    "ast_hash": "88602fad19b6fb5532743c2cb02a5bd5",
+    "semantic_hash": "88602fad19b6fb5532743c2cb02a5bd5"
+  },
+  "04-deep-learning/90-archivo/fundamentos-old/Codigo/irisPytorch.py": {
+    "mtime": 1782255205.6732125,
+    "seen": 1792438050.7517815,
+    "ast_hash": "127ad4551771f42b135c2158cb5db513",
+    "semantic_hash": "127ad4551771f42b135c2158cb5db513"
+  },
+  "05-cloud-mlops/03-practicas/esqueletoAWS.py": {
+    "mtime": 1782255205.8554394,
+    "seen": 1792438050.7517827,
+    "ast_hash": "8520d6b1dca1cf65cc9076415d181e36",
+    "semantic_hash": "8520d6b1dca1cf65cc9076415d181e36"
+  },
+  "05-cloud-mlops/03-practicas/scriptAWS.sh": {
+    "mtime": 1782255205.8561075,
+    "seen": 1792438050.751784,
+    "ast_hash": "e739944503530e7719e2020d2e867dcf",
+    "semantic_hash": "e739944503530e7719e2020d2e867dcf"
+  },
+  "05-cloud-mlops/05-recursos/indexed_docs.json": {
+    "mtime": 1782255205.871664,
+    "seen": 1787097079.2511308,
+    "ast_hash": "8b0522f6920b189df8e18e07bc7eb050",
+    "semantic_hash": "8b0522f6920b189df8e18e07bc7eb050"
+  },
+  "05-cloud-mlops/05-recursos/predict_example.py": {
+    "mtime": 1782255205.872212,
+    "seen": 1792438050.7517874,
+    "ast_hash": "cb8ccb86646f8e80b22ba51ebd409bdb",
+    "semantic_hash": "cb8ccb86646f8e80b22ba51ebd409bdb"
+  },
+  "06-llm-agentes/01-teoria/nlp-deep-learning-ud4/nlp-docs/NLP-nuevo/demo_embeddings.py": {
+    "mtime": 1782255140.568843,
+    "seen": 1792438050.7517893,
+    "ast_hash": "7741865c11018b65a523ea099cd5dba5",
+    "semantic_hash": "7741865c11018b65a523ea099cd5dba5"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/docs/ver_sesiones_codex.sh": {
+    "mtime": 1782255190.0411878,
+    "seen": 1792438050.7517908,
+    "ast_hash": "dc1a835c4171e59b684ccc67e3443853",
+    "semantic_hash": "dc1a835c4171e59b684ccc67e3443853"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/scripts/ejemplo_transformers_1_traduccion_en_es.py": {
+    "mtime": 1782255190.800215,
+    "seen": 1787097079.2511358,
+    "ast_hash": "1c566cbd12600dea5bf03f4e5278985d",
+    "semantic_hash": "1c566cbd12600dea5bf03f4e5278985d"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/scripts/ejemplo_transformers_2_generacion_decoder_only.py": {
+    "mtime": 1782255190.8009748,
+    "seen": 1792438050.751794,
+    "ast_hash": "bd0086b8e2ee9265234ba3fa9aa65105",
+    "semantic_hash": "bd0086b8e2ee9265234ba3fa9aa65105"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/scripts/ejemplo_transformers_3_reformulacion.py": {
+    "mtime": 1782255190.801215,
+    "seen": 1787097079.251138,
+    "ast_hash": "9c00110b2f0e523e0b9850a2690ea195",
+    "semantic_hash": "9c00110b2f0e523e0b9850a2690ea195"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/scripts/ejemplo_transformers_4_encoder_only_clasificacion.py": {
+    "mtime": 1782255190.8017492,
+    "seen": 1792438050.7517974,
+    "ast_hash": "b0a0e105372d29bcffb1d5fe249b8f54",
+    "semantic_hash": "b0a0e105372d29bcffb1d5fe249b8f54"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/scripts/transformerPytorch.py": {
+    "mtime": 1782255190.8024986,
+    "seen": 1792438050.751799,
+    "ast_hash": "1eb5a345588b57ed598e638e7bb40e84",
+    "semantic_hash": "1eb5a345588b57ed598e638e7bb40e84"
+  },
+  "06-llm-agentes/03-practicas/nlp-tareas-ud4/export_models.py": {
+    "mtime": 1782255193.538247,
+    "seen": 1787097079.251142,
+    "ast_hash": "a4ea320281139399aa5d0197d02c66e3",
+    "semantic_hash": "a4ea320281139399aa5d0197d02c66e3"
+  },
+  "06-llm-agentes/05-recursos/mcp-refuerzo/asistente_mcp.py": {
+    "mtime": 1782564620.0335014,
+    "seen": 1792438050.7518027,
+    "ast_hash": "75867ebdf45b2bd2bd248345e24e9037",
+    "semantic_hash": "75867ebdf45b2bd2bd248345e24e9037"
+  },
+  "07-convergencia-herramientas/02-ejemplos/pipeline_completo/scripts/clean.py": {
+    "mtime": 1782255205.9889119,
+    "seen": 1792438050.7518039,
+    "ast_hash": "7d5652c53dd94b2076eb4bf056712881",
+    "semantic_hash": "7d5652c53dd94b2076eb4bf056712881"
+  },
+  "07-convergencia-herramientas/02-ejemplos/pipeline_completo/scripts/extract.py": {
+    "mtime": 1782255205.9892125,
+    "seen": 1792438050.7518055,
+    "ast_hash": "c43d6db45f7311524783edad45d6bd3c",
+    "semantic_hash": "c43d6db45f7311524783edad45d6bd3c"
+  },
+  "07-convergencia-herramientas/02-ejemplos/pipeline_completo/scripts/features.py": {
+    "mtime": 1782255205.9897702,
+    "seen": 1792438050.751807,
+    "ast_hash": "2f76aa4da9c1b02607f137648ee7aac2",
+    "semantic_hash": "2f76aa4da9c1b02607f137648ee7aac2"
+  },
+  "07-convergencia-herramientas/02-ejemplos/pipeline_completo/scripts/split.py": {
+    "mtime": 1782255205.9901335,
+    "seen": 1792438050.7518082,
+    "ast_hash": "c5f457cd42fdd8519b91c043f1fade1d",
+    "semantic_hash": "c5f457cd42fdd8519b91c043f1fade1d"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/dlib_opencv_landmarks.py": {
+    "mtime": 1782255189.0044596,
+    "seen": 1792438050.7518098,
+    "ast_hash": "db4e2017eeb1c1bac84dc3b2bb570c1d",
+    "semantic_hash": "db4e2017eeb1c1bac84dc3b2bb570c1d"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/comparativa.py": {
+    "mtime": 1782255189.0206306,
+    "seen": 1792438050.751811,
+    "ast_hash": "950f8d8dbd60cce79ab9500f2b13ce05",
+    "semantic_hash": "950f8d8dbd60cce79ab9500f2b13ce05"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/metricas.py": {
+    "mtime": 1782255189.0437255,
+    "seen": 1792438050.7518127,
+    "ast_hash": "2a795c0fb5529cb3f6a036855e341500",
+    "semantic_hash": "2a795c0fb5529cb3f6a036855e341500"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/scripts_lfm/ejemplo_lfm_1_traduccion_en_es.py": {
+    "mtime": 1782255189.1064901,
+    "seen": 1792438050.7518141,
+    "ast_hash": "4172137273f3b891c439bbff70620b42",
+    "semantic_hash": "4172137273f3b891c439bbff70620b42"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/scripts_lfm/ejemplo_lfm_2_generacion_decoder_only.py": {
+    "mtime": 1782255189.1068912,
+    "seen": 1792438050.7518158,
+    "ast_hash": "463924db365f3cac91feda33e1841f0f",
+    "semantic_hash": "463924db365f3cac91feda33e1841f0f"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/scripts_lfm/ejemplo_lfm_3_clasificacion_intenciones.py": {
+    "mtime": 1782255189.107279,
+    "seen": 1787097079.2511623,
+    "ast_hash": "46325f46452d6708cbdca00578266027",
+    "semantic_hash": "46325f46452d6708cbdca00578266027"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/scripts_lfm/ejemplo_lfm_4_reformulacion.py": {
+    "mtime": 1782255189.1076782,
+    "seen": 1792438050.751819,
+    "ast_hash": "7f9f1588e58da92e59996291e85c09f9",
+    "semantic_hash": "7f9f1588e58da92e59996291e85c09f9"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/scripts_lfm/lfm_blocks.py": {
+    "mtime": 1782255189.1080718,
+    "seen": 1792438050.751821,
+    "ast_hash": "9df92f66980810eeabedcb1370df196e",
+    "semantic_hash": "9df92f66980810eeabedcb1370df196e"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/scripts_mamba/ejemplo_mamba_1_traduccion_en_es.py": {
+    "mtime": 1782255189.108553,
+    "seen": 1792438050.7518222,
+    "ast_hash": "63f9b5dca2e26c80552bcc39349fc208",
+    "semantic_hash": "63f9b5dca2e26c80552bcc39349fc208"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/scripts_mamba/ejemplo_mamba_2_generacion_decoder_only.py": {
+    "mtime": 1782255189.1089485,
+    "seen": 1792438050.7518241,
+    "ast_hash": "cd2bf53c748cca6eee680ab5ac02a434",
+    "semantic_hash": "cd2bf53c748cca6eee680ab5ac02a434"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/scripts_mamba/ejemplo_mamba_3_clasificacion_intenciones.py": {
+    "mtime": 1782255189.1093416,
+    "seen": 1792438050.7518256,
+    "ast_hash": "db8d71367a00ec44c628675388f95aaf",
+    "semantic_hash": "db8d71367a00ec44c628675388f95aaf"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/scripts_mamba/ejemplo_mamba_4_reformulacion.py": {
+    "mtime": 1782255189.109737,
+    "seen": 1787097079.2511697,
+    "ast_hash": "466feb8aee2962ca16ff170b5fc29261",
+    "semantic_hash": "466feb8aee2962ca16ff170b5fc29261"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/scripts_mamba/mamba_blocks.py": {
+    "mtime": 1782255189.1101255,
+    "seen": 1792438050.751829,
+    "ast_hash": "bbc35e88ce5453c009c77fc48ddad629",
+    "semantic_hash": "bbc35e88ce5453c009c77fc48ddad629"
+  },
+  "08-vision-xai/02-ejemplos/vision-scripts-ud4/prepare_oxford_flowers102.py": {
+    "mtime": 1782255190.866258,
+    "seen": 1792438050.7518306,
+    "ast_hash": "29f47728befd2e77117c5c5b2fc3c1d6",
+    "semantic_hash": "29f47728befd2e77117c5c5b2fc3c1d6"
+  },
+  "08-vision-xai/02-ejemplos/vision-yolo-ud4/comprueba_paquete_conda.sh": {
+    "mtime": 1782255190.8667896,
+    "seen": 1792438050.751832,
+    "ast_hash": "c9b14a2d39836fbac54a00bc87d5a670",
+    "semantic_hash": "c9b14a2d39836fbac54a00bc87d5a670"
+  },
+  "08-vision-xai/03-practicas/vision-tareas-ud4/chihuahua_vs_muffin_challenge_pack/leaderboard.py": {
+    "mtime": 1782255195.5550716,
+    "seen": 1792438050.7518334,
+    "ast_hash": "8360466f0e1f34942ec0a8e4ae30bfb8",
+    "semantic_hash": "8360466f0e1f34942ec0a8e4ae30bfb8"
+  },
+  "08-vision-xai/03-practicas/vision-tareas-ud4/prepare_dataset_chihuahua_muffin.py": {
+    "mtime": 1782255195.5645726,
+    "seen": 1792438050.7518349,
+    "ast_hash": "11c6472aecb75e76b436743d778524e5",
+    "semantic_hash": "11c6472aecb75e76b436743d778524e5"
+  },
+  "08-vision-xai/05-recursos/vision-data-ud4/oxford_flowers102/oxford_flowers102_28x28_gray.json": {
+    "mtime": 1782255205.2131124,
+    "seen": 1792438050.7518368,
+    "ast_hash": "3a82a476b40629244e468b9c270394b5",
+    "semantic_hash": "3a82a476b40629244e468b9c270394b5"
+  },
+  "08-vision-xai/05-recursos/vision-data-ud4/oxford_flowers102/oxford_flowers102_64x64_rgb.json": {
+    "mtime": 1782255205.2375562,
+    "seen": 1792438050.751838,
+    "ast_hash": "dba4f0be4b241796caecaa619fc4ff95",
+    "semantic_hash": "dba4f0be4b241796caecaa619fc4ff95"
+  },
+  "10-series-temporales/03-practicas/scripts/ampliar_notebook_02.py": {
+    "mtime": 1782255206.1208222,
+    "seen": 1792438050.7518394,
+    "ast_hash": "e77b8552475384188f09138de69096e9",
+    "semantic_hash": "e77b8552475384188f09138de69096e9"
+  },
+  "10-series-temporales/03-practicas/scripts/crear_notebooks_taller.py": {
+    "mtime": 1782255206.1212924,
+    "seen": 1792438050.751841,
+    "ast_hash": "597acb0f8fb8496a6e90c23c18b01f39",
+    "semantic_hash": "597acb0f8fb8496a6e90c23c18b01f39"
+  },
+  "10-series-temporales/03-practicas/scripts/generar_datos_demo.py": {
+    "mtime": 1782255206.121823,
+    "seen": 1787097079.2511826,
+    "ast_hash": "7a3927ae653ea74dd53c77b5166dda3c",
+    "semantic_hash": "7a3927ae653ea74dd53c77b5166dda3c"
+  },
+  "10-series-temporales/03-practicas/scripts/generar_datos_proyecto_07.py": {
+    "mtime": 1782255206.1221488,
+    "seen": 1792438050.7518446,
+    "ast_hash": "4a179f410d6a2adf314cc36bd1459759",
+    "semantic_hash": "4a179f410d6a2adf314cc36bd1459759"
+  },
+  "10-series-temporales/03-practicas/src/__init__.py": {
+    "mtime": 1782255206.122588,
+    "seen": 1792438050.7518458,
+    "ast_hash": "a1d8b1c04e8a0059895207744f1ee1a6",
+    "semantic_hash": "a1d8b1c04e8a0059895207744f1ee1a6"
+  },
+  "10-series-temporales/03-practicas/src/generador_consumo.py": {
+    "mtime": 1782255206.1229997,
+    "seen": 1792438050.7518475,
+    "ast_hash": "c463fff9e8afa8aa40da6770064c470b",
+    "semantic_hash": "c463fff9e8afa8aa40da6770064c470b"
+  },
+  "10-series-temporales/03-practicas/src/series_temporales/__init__.py": {
+    "mtime": 1782255206.1232123,
+    "seen": 1792438050.7518487,
+    "ast_hash": "a1d8b1c04e8a0059895207744f1ee1a6",
+    "semantic_hash": "a1d8b1c04e8a0059895207744f1ee1a6"
+  },
+  "10-series-temporales/03-practicas/src/series_temporales/generador_consumo.py": {
+    "mtime": 1782255206.1237845,
+    "seen": 1792438050.75185,
+    "ast_hash": "c463fff9e8afa8aa40da6770064c470b",
+    "semantic_hash": "c463fff9e8afa8aa40da6770064c470b"
+  },
+  "docs/javascripts/mathjax.js": {
+    "mtime": 1782564620.0712192,
+    "seen": 1792438050.751912,
+    "ast_hash": "b888e2fa3b17f312c7a46f253c80e41c",
+    "semantic_hash": "b888e2fa3b17f312c7a46f253c80e41c"
+  },
+  "hooks/nav_generator.py": {
+    "mtime": 1790547317.0312037,
+    "seen": 1792438050.7519143,
+    "ast_hash": "3c31b11f8d379001589cdccb140db0ee",
+    "semantic_hash": ""
+  },
+  "scripts/check_public_unit_links.py": {
+    "mtime": 1785530602.1097052,
+    "seen": 1792438050.7519157,
+    "ast_hash": "a39b8c6833e6521068b2f265eb2bbd09",
+    "semantic_hash": "a39b8c6833e6521068b2f265eb2bbd09"
+  },
+  ".github/workflows/mkdocs-deploy.yml": {
+    "mtime": 1785530178.891629,
+    "seen": 1792438050.7519176,
+    "ast_hash": "2736ea2f80e8bfb4df0c85fc0c91d74d",
+    "semantic_hash": "2736ea2f80e8bfb4df0c85fc0c91d74d"
+  },
+  "01-fundamentos-python/01-teoria/00-guia-unidad.md": {
+    "mtime": 1791224062.2097015,
+    "seen": 1792438050.751973,
+    "ast_hash": "19b6fc273b2d4182e9899c5a827d920c",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/01-teoria/01-guia-python-basico.md": {
+    "mtime": 1784137773.7997053,
+    "seen": 1792438050.7519743,
+    "ast_hash": "9953c8cfb79d1ee08afff2f43142724d",
+    "semantic_hash": "9953c8cfb79d1ee08afff2f43142724d"
+  },
+  "01-fundamentos-python/01-teoria/02-python-esencial-variables-texto-imports.md": {
+    "mtime": 1782564618.8113787,
+    "seen": 1792438050.751976,
+    "ast_hash": "6a021d02d47c88bd00450a94db84cbe6",
+    "semantic_hash": "6a021d02d47c88bd00450a94db84cbe6"
+  },
+  "01-fundamentos-python/01-teoria/03-python-esencial-control-funciones-patrones.md": {
+    "mtime": 1791062831.517967,
+    "seen": 1792438050.7519777,
+    "ast_hash": "fdf717c81383a361d11b48b0d836ecbe",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/01-teoria/04-estructuras-datos-basicas-practica.md": {
+    "mtime": 1782564618.812313,
+    "seen": 1787097079.2511985,
+    "ast_hash": "597ed9fe393986d9981a16c7048a27ca",
+    "semantic_hash": "597ed9fe393986d9981a16c7048a27ca"
+  },
+  "01-fundamentos-python/01-teoria/04b-estructuras-datos-adicionales.md": {
+    "mtime": 1782564618.8204527,
+    "seen": 1792438050.7519813,
+    "ast_hash": "dd76c4ffe8050cc8dc6b816d65f8a7ea",
+    "semantic_hash": "dd76c4ffe8050cc8dc6b816d65f8a7ea"
+  },
+  "01-fundamentos-python/01-teoria/07-broadcasting-numpy.md": {
+    "mtime": 1791930561.3028727,
+    "seen": 1792438050.7519877,
+    "ast_hash": "83a03935f05bd2735001cfa2171ab1aa",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/01-teoria/07b-broadcasting-numpy-infografia.md": {
+    "mtime": 1782564618.8240333,
+    "seen": 1792438050.751991,
+    "ast_hash": "5aae8ce547facb0c9cd1daaaaac9c406",
+    "semantic_hash": "5aae8ce547facb0c9cd1daaaaac9c406"
+  },
+  "01-fundamentos-python/01-teoria/09-guia-r-complementario.md": {
+    "mtime": 1783033719.7516758,
+    "seen": 1792438050.7519941,
+    "ast_hash": "a34c9d401beeb9f3be52a25b5decb40b",
+    "semantic_hash": "a34c9d401beeb9f3be52a25b5decb40b"
+  },
+  "01-fundamentos-python/01-teoria/README.md": {
+    "mtime": 1792437387.4200404,
+    "seen": 1792438050.7520046,
+    "ast_hash": "559fb82e4707b0dfd0040396feb23d04",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/03-practicas/09_eda_numpy.md": {
+    "mtime": 1782564618.83107,
+    "seen": 1792438050.752006,
+    "ast_hash": "fd17713f44c96247c2ed9e3580aa20a5",
+    "semantic_hash": "fd17713f44c96247c2ed9e3580aa20a5"
+  },
+  "01-fundamentos-python/03-practicas/10-ejercicios_numpy-tests.md": {
+    "mtime": 1782564618.831703,
+    "seen": 1792438050.752008,
+    "ast_hash": "8c952bfaf8ae8e7134eef20cc11a43d9",
+    "semantic_hash": "8c952bfaf8ae8e7134eef20cc11a43d9"
+  },
+  "01-fundamentos-python/03-practicas/10-ejercicios_numpy.md": {
+    "mtime": 1782564618.8322072,
+    "seen": 1792438050.7520094,
+    "ast_hash": "d7d13fddad33578ac85ab3eea2e28236",
+    "semantic_hash": "d7d13fddad33578ac85ab3eea2e28236"
+  },
+  "01-fundamentos-python/03-practicas/README.md": {
+    "mtime": 1792437387.4295368,
+    "seen": 1792438050.752011,
+    "ast_hash": "d8e3668c75b8bdb78111da143b31ffbc",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/04-evaluacion/README.md": {
+    "mtime": 1792437890.4721186,
+    "seen": 1792438050.7520125,
+    "ast_hash": "029725a4dd58aaa1c396542303e77687",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/04-evaluacion/checklist-entrega.md": {
+    "mtime": 1783021034.6946669,
+    "seen": 1792438050.7520142,
+    "ast_hash": "82459e165883538f7cd4b0605b323c6d",
+    "semantic_hash": "82459e165883538f7cd4b0605b323c6d"
+  },
+  "01-fundamentos-python/04-evaluacion/comparativa-lenguajes-formatos-ia.md": {
+    "mtime": 1785566956.145192,
+    "seen": 1792438050.7520154,
+    "ast_hash": "44a67300c5a63adfe43c4c3dc6fdec49",
+    "semantic_hash": "44a67300c5a63adfe43c4c3dc6fdec49"
+  },
+  "01-fundamentos-python/04-evaluacion/rubrica.md": {
+    "mtime": 1782564618.8348916,
+    "seen": 1792438050.7520168,
+    "ast_hash": "d8f5e69c7e703dd35619c26daa741270",
+    "semantic_hash": "d8f5e69c7e703dd35619c26daa741270"
+  },
+  "01-fundamentos-python/05-recursos/00_ChuletaLsts_Tupls_Diccs_Sets.md": {
+    "mtime": 1782255136.1283069,
+    "seen": 1792438050.7520185,
+    "ast_hash": "3e523c1a56a6600e8a28567da5047b58",
+    "semantic_hash": "3e523c1a56a6600e8a28567da5047b58"
+  },
+  "01-fundamentos-python/05-recursos/00_ChuletaPythonBasico.md": {
+    "mtime": 1782255136.1288662,
+    "seen": 1792438050.75202,
+    "ast_hash": "dd2c241aba23ca3d3d9af87e4f3bb0c3",
+    "semantic_hash": "dd2c241aba23ca3d3d9af87e4f3bb0c3"
+  },
+  "01-fundamentos-python/05-recursos/09-ChuletaNumpy.md": {
+    "mtime": 1782255136.1322243,
+    "seen": 1792438050.7520213,
+    "ast_hash": "d18f783d7c621e85e810c8eb3298176f",
+    "semantic_hash": "d18f783d7c621e85e810c8eb3298176f"
+  },
+  "01-fundamentos-python/05-recursos/pia-ud1.yml": {
+    "mtime": 1782255136.1329916,
+    "seen": 1792438050.7520244,
+    "ast_hash": "4048ad6f1479f61554e1089bd5ac9eaf",
+    "semantic_hash": "4048ad6f1479f61554e1089bd5ac9eaf"
+  },
+  "01-fundamentos-python/README.md": {
+    "mtime": 1792359972.8806524,
+    "seen": 1792438050.7520356,
+    "ast_hash": "1e390ffbe49e1bfbb6253ebd820ac297",
+    "semantic_hash": ""
+  },
+  "02-tratamiento-datos/00-r-itinerario-laboral.md": {
+    "mtime": 1783358326.3271048,
+    "seen": 1792438050.752037,
+    "ast_hash": "2d59f825691303ae293cc45d7c90ce16",
+    "semantic_hash": "2d59f825691303ae293cc45d7c90ce16"
+  },
+  "02-tratamiento-datos/01-teoria/00-guia-unidad.md": {
+    "mtime": 1782564618.8614526,
+    "seen": 1792438050.7520385,
+    "ast_hash": "8ae8ed2b519fea9a169822e23ea57f30",
+    "semantic_hash": "8ae8ed2b519fea9a169822e23ea57f30"
+  },
+  "02-tratamiento-datos/01-teoria/01-pandas-introduccion.md": {
+    "mtime": 1782564618.8626602,
+    "seen": 1792438050.75204,
+    "ast_hash": "844cfc615f882272c92e0d92ec25c9ce",
+    "semantic_hash": "844cfc615f882272c92e0d92ec25c9ce"
+  },
+  "02-tratamiento-datos/01-teoria/02-pandas-ejemplos-guia.md": {
+    "mtime": 1782564618.8632534,
+    "seen": 1792438050.752041,
+    "ast_hash": "4d3f7cff03d5c495f73f1a6f2354c154",
+    "semantic_hash": "4d3f7cff03d5c495f73f1a6f2354c154"
+  },
+  "02-tratamiento-datos/01-teoria/03-pandas-chuleta.md": {
+    "mtime": 1782564618.863807,
+    "seen": 1792438050.7520428,
+    "ast_hash": "8cd8eea90eaffdabb2ae8586bea0e0dd",
+    "semantic_hash": "8cd8eea90eaffdabb2ae8586bea0e0dd"
+  },
+  "02-tratamiento-datos/01-teoria/04-eda-pasos.md": {
+    "mtime": 1782564618.864376,
+    "seen": 1787097079.2512279,
+    "ast_hash": "3d6bc809ae85f89bc4718d1f41ef8c33",
+    "semantic_hash": "3d6bc809ae85f89bc4718d1f41ef8c33"
+  },
+  "02-tratamiento-datos/01-teoria/05-preparacion-datos-ml.md": {
+    "mtime": 1782564618.8650248,
+    "seen": 1792438050.752046,
+    "ast_hash": "1c4e0caee551532d5be1d68bc98fabe0",
+    "semantic_hash": "1c4e0caee551532d5be1d68bc98fabe0"
+  },
+  "02-tratamiento-datos/01-teoria/06-matplotlib-fundamentos.md": {
+    "mtime": 1782564618.8655639,
+    "seen": 1792438050.7520473,
+    "ast_hash": "6b9dc83f86a1e1f19968ea646cec5832",
+    "semantic_hash": "6b9dc83f86a1e1f19968ea646cec5832"
+  },
+  "02-tratamiento-datos/01-teoria/07-matplotlib-parte1.md": {
+    "mtime": 1782993273.800807,
+    "seen": 1787097079.251231,
+    "ast_hash": "d54b36141f3bdcffe6ab8575a568a2f7",
+    "semantic_hash": "d54b36141f3bdcffe6ab8575a568a2f7"
+  },
+  "02-tratamiento-datos/01-teoria/08-matplotlib-parte2.md": {
+    "mtime": 1782564618.8665624,
+    "seen": 1792438050.7520504,
+    "ast_hash": "fbbea64352bd6b730b294768e477cad0",
+    "semantic_hash": "fbbea64352bd6b730b294768e477cad0"
+  },
+  "02-tratamiento-datos/01-teoria/09-seaborn.md": {
+    "mtime": 1782564618.8738656,
+    "seen": 1792438050.752052,
+    "ast_hash": "07e09f2df2b1e45969ef151398168788",
+    "semantic_hash": "07e09f2df2b1e45969ef151398168788"
+  },
+  "02-tratamiento-datos/01-teoria/10-altair-hvplot.md": {
+    "mtime": 1783033719.7519941,
+    "seen": 1792438050.7520535,
+    "ast_hash": "c69f81445c653a44c4ca04ec33800a9d",
+    "semantic_hash": "c69f81445c653a44c4ca04ec33800a9d"
+  },
+  "02-tratamiento-datos/01-teoria/11-cudf-introduccion.md": {
+    "mtime": 1782564618.8749912,
+    "seen": 1792438050.7520554,
+    "ast_hash": "55103e0b781b63f5ceebc8cc5b2d1d3d",
+    "semantic_hash": "55103e0b781b63f5ceebc8cc5b2d1d3d"
+  },
+  "02-tratamiento-datos/01-teoria/12-polars-intro.md": {
+    "mtime": 1782564618.8755476,
+    "seen": 1792438050.7520566,
+    "ast_hash": "343f4aa3ea0a621cf65e3cdfe0b9a984",
+    "semantic_hash": "343f4aa3ea0a621cf65e3cdfe0b9a984"
+  },
+  "02-tratamiento-datos/01-teoria/13-polars-vs-pandas.md": {
+    "mtime": 1782564618.8760753,
+    "seen": 1792438050.7520578,
+    "ast_hash": "170f7acc9a57a3659503014643aa49c6",
+    "semantic_hash": "170f7acc9a57a3659503014643aa49c6"
+  },
+  "02-tratamiento-datos/01-teoria/14-eda-visual-practicas.md": {
+    "mtime": 1782564618.8844526,
+    "seen": 1792438050.7520595,
+    "ast_hash": "5dc65e155e1d34ea8e216cfd1c5c9aa3",
+    "semantic_hash": "5dc65e155e1d34ea8e216cfd1c5c9aa3"
+  },
+  "02-tratamiento-datos/01-teoria/14b-plotly-express-interactividad.md": {
+    "mtime": 1782564618.8860614,
+    "seen": 1792438050.752061,
+    "ast_hash": "3059c02ceae2b0caf927f48be5597f04",
+    "semantic_hash": "3059c02ceae2b0caf927f48be5597f04"
+  },
+  "02-tratamiento-datos/01-teoria/14c-duckdb-analitica-local.md": {
+    "mtime": 1782564618.8865979,
+    "seen": 1792438050.7520623,
+    "ast_hash": "2d901291e546e306d3979a906e261143",
+    "semantic_hash": "2d901291e546e306d3979a906e261143"
+  },
+  "02-tratamiento-datos/01-teoria/15-lamina-errores-altair.md": {
+    "mtime": 1782993273.806807,
+    "seen": 1787097079.2512412,
+    "ast_hash": "71e46dd3c09877c5a73d326ee7288edb",
+    "semantic_hash": "71e46dd3c09877c5a73d326ee7288edb"
+  },
+  "02-tratamiento-datos/01-teoria/16-guia-pandas-visualizacion.md": {
+    "mtime": 1783033719.7522426,
+    "seen": 1792438050.7520652,
+    "ast_hash": "30e4dbe1ed74503621fbc70e3cf84b47",
+    "semantic_hash": "30e4dbe1ed74503621fbc70e3cf84b47"
+  },
+  "02-tratamiento-datos/01-teoria/17-guia-visualizacion-avanzada.md": {
+    "mtime": 1783033719.7524583,
+    "seen": 1792438050.752067,
+    "ast_hash": "4edfaf86c0f75894b1b907e94d372efe",
+    "semantic_hash": "4edfaf86c0f75894b1b907e94d372efe"
+  },
+  "02-tratamiento-datos/01-teoria/18-guia-polars-duckdb.md": {
+    "mtime": 1783010682.1749332,
+    "seen": 1792438050.7520683,
+    "ast_hash": "518f36cad657fc9a6b70a581bf2198f9",
+    "semantic_hash": "518f36cad657fc9a6b70a581bf2198f9"
+  },
+  "02-tratamiento-datos/01-teoria/19-guia-pandas-polars-visualizacion.md": {
+    "mtime": 1783010799.3805091,
+    "seen": 1792438050.7520697,
+    "ast_hash": "66f75e223c9f04af592b2226cc177d83",
+    "semantic_hash": "66f75e223c9f04af592b2226cc177d83"
+  },
+  "02-tratamiento-datos/01-teoria/README.md": {
+    "mtime": 1783356529.7937255,
+    "seen": 1792438050.7520711,
+    "ast_hash": "83197c88b9ca4d1a50a6828def833555",
+    "semantic_hash": "83197c88b9ca4d1a50a6828def833555"
+  },
+  "02-tratamiento-datos/03-practicas/r_exercises_titanic_with_tests/00D-Chuleta-R.md": {
+    "mtime": 1783356556.657781,
+    "seen": 1792438050.7520728,
+    "ast_hash": "527f110529502224f927cb5078a4cb89",
+    "semantic_hash": "527f110529502224f927cb5078a4cb89"
+  },
+  "02-tratamiento-datos/03-practicas/r_exercises_titanic_with_tests/00_instalacion_y_entorno_R.md": {
+    "mtime": 1783444596.461125,
+    "seen": 1792438050.7520742,
+    "ast_hash": "738d73e482bd912a45e8cd5e1779029b",
+    "semantic_hash": "738d73e482bd912a45e8cd5e1779029b"
+  },
+  "02-tratamiento-datos/03-practicas/r_exercises_titanic_with_tests/06_comparativa_pandas_dplyr.md": {
+    "mtime": 1783356982.3499417,
+    "seen": 1792438050.7520757,
+    "ast_hash": "d81b302c7b8d1db98f691aca1a80ee7d",
+    "semantic_hash": "d81b302c7b8d1db98f691aca1a80ee7d"
+  },
+  "02-tratamiento-datos/03-practicas/r_exercises_titanic_with_tests/07_entrega_itinerario_R.md": {
+    "mtime": 1783358296.3386626,
+    "seen": 1792438050.7520773,
+    "ast_hash": "f93be63aa9388dea3c734a0200f7f5d5",
+    "semantic_hash": "f93be63aa9388dea3c734a0200f7f5d5"
+  },
+  "02-tratamiento-datos/03-practicas/r_exercises_titanic_with_tests/README.md": {
+    "mtime": 1783358296.3936589,
+    "seen": 1792438050.7520785,
+    "ast_hash": "07293e2fb3a385819a01083ae8f959fe",
+    "semantic_hash": "07293e2fb3a385819a01083ae8f959fe"
+  },
+  "02-tratamiento-datos/04-evaluacion/README.md": {
+    "mtime": 1785539008.4699202,
+    "seen": 1792438050.7520802,
+    "ast_hash": "16a6ba31e3b168dc3d73292f57ec4a40",
+    "semantic_hash": "16a6ba31e3b168dc3d73292f57ec4a40"
+  },
+  "02-tratamiento-datos/04-evaluacion/checklist-entrega.md": {
+    "mtime": 1783356529.7946196,
+    "seen": 1792438050.7520816,
+    "ast_hash": "627d40120430d8eaa949e2caa842d792",
+    "semantic_hash": "627d40120430d8eaa949e2caa842d792"
+  },
+  "02-tratamiento-datos/04-evaluacion/rubrica-itinerario-r.md": {
+    "mtime": 1783358296.3416624,
+    "seen": 1792438050.752083,
+    "ast_hash": "f5d9baa6a35b31d326fae1f9483cc483",
+    "semantic_hash": "f5d9baa6a35b31d326fae1f9483cc483"
+  },
+  "02-tratamiento-datos/04-evaluacion/rubrica.md": {
+    "mtime": 1782564618.924894,
+    "seen": 1787097079.2512562,
+    "ast_hash": "932c33a0c2366713ddead84278afb0fb",
+    "semantic_hash": "932c33a0c2366713ddead84278afb0fb"
+  },
+  "02-tratamiento-datos/05-recursos/EDA-Comparativa.md": {
+    "mtime": 1782564618.9349134,
+    "seen": 1792438050.7520866,
+    "ast_hash": "1125c6c9f009cf14eeca72d745b8a5f5",
+    "semantic_hash": "1125c6c9f009cf14eeca72d745b8a5f5"
+  },
+  "02-tratamiento-datos/05-recursos/EDA-CuDF.md": {
+    "mtime": 1782564618.935523,
+    "seen": 1792438050.7520878,
+    "ast_hash": "33fda2560a990c8f3af8102a3ae83177",
+    "semantic_hash": "33fda2560a990c8f3af8102a3ae83177"
+  },
+  "02-tratamiento-datos/05-recursos/EDA-CuDF_test_almn.md": {
+    "mtime": 1782564618.936156,
+    "seen": 1787097079.2512593,
+    "ast_hash": "a9629a4f18df537556ce1f3ff524a108",
+    "semantic_hash": "a9629a4f18df537556ce1f3ff524a108"
+  },
+  "02-tratamiento-datos/05-recursos/EDA_DuckDB.md": {
+    "mtime": 1782564618.936711,
+    "seen": 1787097079.2512605,
+    "ast_hash": "ec192679068e4a95c44e017ac47ec6cd",
+    "semantic_hash": "ec192679068e4a95c44e017ac47ec6cd"
+  },
+  "02-tratamiento-datos/05-recursos/EDA_Pandas.md": {
+    "mtime": 1782564618.9372737,
+    "seen": 1792438050.7520926,
+    "ast_hash": "e774f770566b89b15a17ad4eebe692f3",
+    "semantic_hash": "e774f770566b89b15a17ad4eebe692f3"
+  },
+  "02-tratamiento-datos/README.md": {
+    "mtime": 1785539395.5179589,
+    "seen": 1792438050.7520943,
+    "ast_hash": "d100461e4e70eb8fe226a77ae62ba6f6",
+    "semantic_hash": "d100461e4e70eb8fe226a77ae62ba6f6"
+  },
+  "03-machine-learning/01-teoria/00-indice-ml-scikit-cuml.md": {
+    "mtime": 1785150826.5252054,
+    "seen": 1792438050.7520957,
+    "ast_hash": "e062310e61f965e97c4f578fffe5b6be",
+    "semantic_hash": "e062310e61f965e97c4f578fffe5b6be"
+  },
+  "03-machine-learning/01-teoria/01-ml-scikit-cuml-capitulo-i.md": {
+    "mtime": 1782564619.8506892,
+    "seen": 1792438050.7520971,
+    "ast_hash": "a8bf5f0c2a1c8b9e14ff2fac521c82da",
+    "semantic_hash": "a8bf5f0c2a1c8b9e14ff2fac521c82da"
+  },
+  "03-machine-learning/01-teoria/02-ml-scikit-cuml-capitulo-ii.md": {
+    "mtime": 1782564619.851201,
+    "seen": 1787097079.2512655,
+    "ast_hash": "8b6c94ef8a301211826b36e89db7138a",
+    "semantic_hash": "8b6c94ef8a301211826b36e89db7138a"
+  },
+  "03-machine-learning/01-teoria/03-ml-scikit-cuml-capitulo-iii.md": {
+    "mtime": 1782564619.8517869,
+    "seen": 1792438050.7521,
+    "ast_hash": "125f1dae40418248c41efc4eb7955f7f",
+    "semantic_hash": "125f1dae40418248c41efc4eb7955f7f"
+  },
+  "03-machine-learning/01-teoria/04-ml-scikit-cuml-capitulo-iv.md": {
+    "mtime": 1782564619.8523557,
+    "seen": 1792438050.7521017,
+    "ast_hash": "2076675c82a3fdbede6d1a97b3e2e670",
+    "semantic_hash": "2076675c82a3fdbede6d1a97b3e2e670"
+  },
+  "03-machine-learning/01-teoria/05-preparacion-datos-ml.md": {
+    "mtime": 1785150826.464679,
+    "seen": 1792438050.7521029,
+    "ast_hash": "c9ed235c1179180588ff90e63d9b0a71",
+    "semantic_hash": "c9ed235c1179180588ff90e63d9b0a71"
+  },
+  "03-machine-learning/01-teoria/05a-marco-crisp-dm.md": {
+    "mtime": 1785151128.328567,
+    "seen": 1787097079.2512722,
+    "ast_hash": "095f37013d3ad8c4f74f4840cf9b89bd",
+    "semantic_hash": "095f37013d3ad8c4f74f4840cf9b89bd"
+  },
+  "03-machine-learning/01-teoria/06-guia-creacion-datasets-propios.md": {
+    "mtime": 1785406434.5446792,
+    "seen": 1792438050.7521062,
+    "ast_hash": "d963e21f98b8f9e03da2e26674a18e17",
+    "semantic_hash": "d963e21f98b8f9e03da2e26674a18e17"
+  },
+  "03-machine-learning/01-teoria/07-referencia-datasets-peliculas.md": {
+    "mtime": 1782564619.8540556,
+    "seen": 1792438050.7521083,
+    "ast_hash": "158c33974f333cbd2c6d2e39729f3711",
+    "semantic_hash": "158c33974f333cbd2c6d2e39729f3711"
+  },
+  "03-machine-learning/01-teoria/08-guia-dataset-peliculas-que-hacer.md": {
+    "mtime": 1786460496.1967227,
+    "seen": 1792438050.7521098,
+    "ast_hash": "149f5de488eaa57ae8e3f258d93a34a4",
+    "semantic_hash": "149f5de488eaa57ae8e3f258d93a34a4"
+  },
+  "03-machine-learning/01-teoria/09-despliegue-streamlit-fastapi.md": {
+    "mtime": 1782564619.8550508,
+    "seen": 1792438050.7521112,
+    "ast_hash": "12d24d28f81b7a12dcc53224346ca2a3",
+    "semantic_hash": "12d24d28f81b7a12dcc53224346ca2a3"
+  },
+  "03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md": {
+    "mtime": 1785406271.792006,
+    "seen": 1787097079.2512772,
+    "ast_hash": "cc4c2b8f70a37f2b75448e73b030779f",
+    "semantic_hash": "cc4c2b8f70a37f2b75448e73b030779f"
+  },
+  "03-machine-learning/01-teoria/11-feature-store-hopsworks.md": {
+    "mtime": 1782564619.8621485,
+    "seen": 1792438050.7521145,
+    "ast_hash": "e7c4893491c988125cbc0a045ff8ad80",
+    "semantic_hash": "e7c4893491c988125cbc0a045ff8ad80"
+  },
+  "03-machine-learning/01-teoria/README.md": {
+    "mtime": 1786460496.1964638,
+    "seen": 1792438050.7521157,
+    "ast_hash": "521c10f495ff92118517c2b81f700e13",
+    "semantic_hash": "521c10f495ff92118517c2b81f700e13"
+  },
+  "03-machine-learning/01-teoria/apendice-dataset-grafos.md": {
+    "mtime": 1787074689.8403196,
+    "seen": 1792438050.7521172,
+    "ast_hash": "958b0dacbcc9b5df55df18934bed4951",
+    "semantic_hash": "958b0dacbcc9b5df55df18934bed4951"
+  },
+  "03-machine-learning/02-ejemplos/fastapi/Guia_FastAPI_Modelo.md": {
+    "mtime": 1785486231.5409086,
+    "seen": 1792438050.7521186,
+    "ast_hash": "5a065aead562be7260c2d7e67013adc2",
+    "semantic_hash": "5a065aead562be7260c2d7e67013adc2"
+  },
+  "03-machine-learning/02-ejemplos/flaml/README.md": {
+    "mtime": 1785255948.679982,
+    "seen": 1792438050.75212,
+    "ast_hash": "e5cebcdf8fed5af03c7b1c60c310d3c7",
+    "semantic_hash": "e5cebcdf8fed5af03c7b1c60c310d3c7"
+  },
+  "03-machine-learning/02-ejemplos/grafo-peliculas-python/README.md": {
+    "mtime": 1787074156.3755686,
+    "seen": 1792438050.7521217,
+    "ast_hash": "21e4b14a6ab7733d7321ba6391125153",
+    "semantic_hash": "21e4b14a6ab7733d7321ba6391125153"
+  },
+  "03-machine-learning/02-ejemplos/streamlit/Guia_Streamlit_Modelo.md": {
+    "mtime": 1785498207.43522,
+    "seen": 1787097079.2512844,
+    "ast_hash": "f2397da598d714076434e9bade10f5ca",
+    "semantic_hash": "f2397da598d714076434e9bade10f5ca"
+  },
+  "03-machine-learning/03-practicas/actividades/00-EDA-todos-los-Pasos.md": {
+    "mtime": 1782255139.1538055,
+    "seen": 1792438050.752125,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "03-machine-learning/03-practicas/actividades/EDA_to_Classification-Titanic.md": {
+    "mtime": 1782255139.1722274,
+    "seen": 1792438050.7521262,
+    "ast_hash": "1dae9cfa12c956a9d4b255bd1a71b85d",
+    "semantic_hash": "1dae9cfa12c956a9d4b255bd1a71b85d"
+  },
+  "03-machine-learning/03-practicas/actividades/UD2_EDA_Clasificacion_Titanic.md": {
+    "mtime": 1782255139.1798506,
+    "seen": 1792438050.7521276,
+    "ast_hash": "6b2714ad48b3f7265d33e3083454aa98",
+    "semantic_hash": "6b2714ad48b3f7265d33e3083454aa98"
+  },
+  "03-machine-learning/03-practicas/actividades/UD2_EDA_Regresion_AmesHousing.md": {
+    "mtime": 1782255139.1802235,
+    "seen": 1792438050.7521293,
+    "ast_hash": "37baf31cd4e5914f09f6c163523a88f4",
+    "semantic_hash": "37baf31cd4e5914f09f6c163523a88f4"
+  },
+  "03-machine-learning/03-practicas/actividades/automl-used-cars/README.md": {
+    "mtime": 1783185508.5389292,
+    "seen": 1792438050.752131,
+    "ast_hash": "bd25b32297951e91bf825c41ec8110e1",
+    "semantic_hash": "bd25b32297951e91bf825c41ec8110e1"
+  },
+  "03-machine-learning/03-practicas/actividades/grafo-peliculas/README.md": {
+    "mtime": 1787074699.0713153,
+    "seen": 1792438050.7521324,
+    "ast_hash": "e0888f02ab9e2d988245a6a1fa998818",
+    "semantic_hash": "e0888f02ab9e2d988245a6a1fa998818"
+  },
+  "03-machine-learning/03-practicas/actividades/grafo-peliculas/mini-tarea-alumnado.md": {
+    "mtime": 1787074314.415495,
+    "seen": 1792438050.7521338,
+    "ast_hash": "4ee28e7981970700531258fff72cf7d5",
+    "semantic_hash": "4ee28e7981970700531258fff72cf7d5"
+  },
+  "03-machine-learning/03-practicas/actividades/house-prices-kaggle/README.md": {
+    "mtime": 1783190023.683455,
+    "seen": 1792438050.7521355,
+    "ast_hash": "83d7a1b2781607ec50e5deb82a5f75d0",
+    "semantic_hash": "83d7a1b2781607ec50e5deb82a5f75d0"
+  },
+  "03-machine-learning/03-practicas/actividades/house-prices-kaggle/docs/rubrica.md": {
+    "mtime": 1782255191.1319973,
+    "seen": 1792438050.7521367,
+    "ast_hash": "ea15e4cd6abb7bdfa50eccab8b1ee039",
+    "semantic_hash": "ea15e4cd6abb7bdfa50eccab8b1ee039"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/CreacionDataset (1).md": {
+    "mtime": 1785003244.0697079,
+    "seen": 1792438050.7521381,
+    "ast_hash": "a144dc7d76c23f8d0adfc0ed03b1cb8a",
+    "semantic_hash": "a144dc7d76c23f8d0adfc0ed03b1cb8a"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/CreacionDataset.md": {
+    "mtime": 1785521334.138135,
+    "seen": 1787097079.2512965,
+    "ast_hash": "59ba4536cb6a2232d806de45a178c88b",
+    "semantic_hash": "59ba4536cb6a2232d806de45a178c88b"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/Entrega_Proyecto_Dataset_Peliculas.md": {
+    "mtime": 1782255139.182202,
+    "seen": 1787097079.2513003,
+    "ast_hash": "14660f0f4f7b5ff07981c7d0ba1dedaf",
+    "semantic_hash": "14660f0f4f7b5ff07981c7d0ba1dedaf"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab1/mi_dataset_peliculas/README.md": {
+    "mtime": 1785521349.4964237,
+    "seen": 1792438050.7521436,
+    "ast_hash": "9534c24ba96878bf54788e07918d989c",
+    "semantic_hash": "9534c24ba96878bf54788e07918d989c"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab2/CreacionDatasetMeteo.md": {
+    "mtime": 1782255139.1878746,
+    "seen": 1792438050.752145,
+    "ast_hash": "c3d0d537aa6fc0f5d61cef4a4cd5c837",
+    "semantic_hash": "c3d0d537aa6fc0f5d61cef4a4cd5c837"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab2/Entrega_Dataset_Meteo.md": {
+    "mtime": 1782255139.1882837,
+    "seen": 1792438050.7521465,
+    "ast_hash": "0332d5387367c6c04d0547273aab376c",
+    "semantic_hash": "0332d5387367c6c04d0547273aab376c"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab2/MeteoPrediccion/Entrega_Prediccion_Meteo.md": {
+    "mtime": 1782255139.1890604,
+    "seen": 1792438050.752148,
+    "ast_hash": "5330fb5eed0ee2fbb54338071cdce847",
+    "semantic_hash": "5330fb5eed0ee2fbb54338071cdce847"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab3/CreacionDatasetPropioBigData.md": {
+    "mtime": 1785405927.1232889,
+    "seen": 1792438050.7521496,
+    "ast_hash": "49b403c1be2195f25e3cf83b5a52b0a1",
+    "semantic_hash": "49b403c1be2195f25e3cf83b5a52b0a1"
+  },
+  "03-machine-learning/03-practicas/laboratorios/Lab3/Entrega_Dataset_Propio.md": {
+    "mtime": 1785405927.123452,
+    "seen": 1792438050.7521508,
+    "ast_hash": "25ccb0fb6fdfdb88a259d18b2860b67c",
+    "semantic_hash": "25ccb0fb6fdfdb88a259d18b2860b67c"
+  },
+  "03-machine-learning/03-practicas/midterm-capstone/Meteorologia/README.md": {
+    "mtime": 1782255139.1921468,
+    "seen": 1792438050.7521522,
+    "ast_hash": "a8ab05b851537f5647f71b60a1aad2f5",
+    "semantic_hash": "a8ab05b851537f5647f71b60a1aad2f5"
+  },
+  "03-machine-learning/03-practicas/midterm-capstone/Peliculas/00-CapstonePeliculas.md": {
+    "mtime": 1785502274.8056414,
+    "seen": 1792438050.7521536,
+    "ast_hash": "d6ee34732ff94a15940791365a1cf72f",
+    "semantic_hash": "d6ee34732ff94a15940791365a1cf72f"
+  },
+  "03-machine-learning/03-practicas/midterm-capstone/Peliculas/DefensaOralPeliculas-Chuleta.md": {
+    "mtime": 1782255139.1971335,
+    "seen": 1792438050.752155,
+    "ast_hash": "3f5dba765d9bb1fa48f4ef2a6a41625f",
+    "semantic_hash": "3f5dba765d9bb1fa48f4ef2a6a41625f"
+  },
+  "03-machine-learning/03-practicas/midterm-capstone/Peliculas/DefensaOralPeliculas.md": {
+    "mtime": 1782255139.1974893,
+    "seen": 1792438050.7521567,
+    "ast_hash": "a770cf734deeea7cd74f5fbaf3648ff9",
+    "semantic_hash": "a770cf734deeea7cd74f5fbaf3648ff9"
+  },
+  "03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/DATASET_CONTRACT.md": {
+    "mtime": 1785521845.8964908,
+    "seen": 1792438050.752158,
+    "ast_hash": "0e32959bf7622314213f5afe53b0caf9",
+    "semantic_hash": "0e32959bf7622314213f5afe53b0caf9"
+  },
+  "03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/docs/01-P1_EDA_Peliculas.md": {
+    "mtime": 1785502190.4144065,
+    "seen": 1792438050.752159,
+    "ast_hash": "2cf62b4bdf7f6f751114340f2958e476",
+    "semantic_hash": "2cf62b4bdf7f6f751114340f2958e476"
+  },
+  "03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/docs/02-P2_Modelado_PyCaret_Peliculas.md": {
+    "mtime": 1785502190.4146967,
+    "seen": 1792438050.7521641,
+    "ast_hash": "29f1d7edd5a67a201c10d880eacf9d40",
+    "semantic_hash": "29f1d7edd5a67a201c10d880eacf9d40"
+  },
+  "03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/docs/03-P3_Modelo_Final_Peliculas.md": {
+    "mtime": 1785502190.4148984,
+    "seen": 1792438050.7521653,
+    "ast_hash": "89c7a5518936a16aaa3d8d924f68336d",
+    "semantic_hash": "89c7a5518936a16aaa3d8d924f68336d"
+  },
+  "03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/docs/04-ANEXO_GPU_RAPIDS.md": {
+    "mtime": 1782255139.200079,
+    "seen": 1792438050.7521672,
+    "ast_hash": "b9b6b9a7486e50e9e9b866656465c9c7",
+    "semantic_hash": "b9b6b9a7486e50e9e9b866656465c9c7"
+  },
+  "03-machine-learning/03-practicas/midterm-capstone/Peliculas/Practica_Peliculas_OK/docs/05-Plantilla_Entrega_tipo_SBD.md": {
+    "mtime": 1782255139.2004695,
+    "seen": 1792438050.7521684,
+    "ast_hash": "e7a622bc338c0d56e5e656dec2103669",
+    "semantic_hash": "e7a622bc338c0d56e5e656dec2103669"
+  },
+  "03-machine-learning/03-practicas/tarea07/00-Tarea-Eda-DataPrep-Clasif.md": {
+    "mtime": 1782255139.2040284,
+    "seen": 1792438050.75217,
+    "ast_hash": "c043aadb3af477cf186d9b887e175936",
+    "semantic_hash": "c043aadb3af477cf186d9b887e175936"
+  },
+  "03-machine-learning/04-evaluacion/06-Rubrica_Peliculas.md": {
+    "mtime": 1782255139.2052932,
+    "seen": 1792438050.7521715,
+    "ast_hash": "9bee4ec0bc71a5503cfd9a00e32499e3",
+    "semantic_hash": "9bee4ec0bc71a5503cfd9a00e32499e3"
+  },
+  "03-machine-learning/04-evaluacion/README.md": {
+    "mtime": 1782909625.7174556,
+    "seen": 1792438050.752173,
+    "ast_hash": "a8f90ba904e92fa10f465048914f9201",
+    "semantic_hash": "a8f90ba904e92fa10f465048914f9201"
+  },
+  "03-machine-learning/04-evaluacion/RubricaPeliculas.md": {
+    "mtime": 1785150859.6426666,
+    "seen": 1792438050.7521744,
+    "ast_hash": "60743e6720b195bee14273b34325ce3f",
+    "semantic_hash": "60743e6720b195bee14273b34325ce3f"
+  },
+  "03-machine-learning/04-evaluacion/checklist-entrega.md": {
+    "mtime": 1785151127.847567,
+    "seen": 1787097079.2513244,
+    "ast_hash": "831f53dcb12669ec6e92196a81fbc9df",
+    "semantic_hash": "831f53dcb12669ec6e92196a81fbc9df"
+  },
+  "03-machine-learning/04-evaluacion/rubrica_datasets_peliculas.md": {
+    "mtime": 1785150859.6419792,
+    "seen": 1792438050.7521775,
+    "ast_hash": "1ee5f1b69931ef71cd71a5b9a398a9d1",
+    "semantic_hash": "1ee5f1b69931ef71cd71a5b9a398a9d1"
+  },
+  "03-machine-learning/README.md": {
+    "mtime": 1785405927.1213217,
+    "seen": 1792438050.752179,
+    "ast_hash": "14f8188e38c9ed66e0a777f02aaea5ae",
+    "semantic_hash": "14f8188e38c9ed66e0a777f02aaea5ae"
+  },
+  "04-deep-learning/00-decisiones-reorganizacion.md": {
+    "mtime": 1785535847.2127354,
+    "seen": 1792438050.7521803,
+    "ast_hash": "17192f18d8850db0de5238a026606dbc",
+    "semantic_hash": "17192f18d8850db0de5238a026606dbc"
+  },
+  "04-deep-learning/00-inventario.md": {
+    "mtime": 1783168429.7580006,
+    "seen": 1792438050.7521818,
+    "ast_hash": "53e599e1ec34b6e46ed4b3381f2d9284",
+    "semantic_hash": "53e599e1ec34b6e46ed4b3381f2d9284"
+  },
+  "04-deep-learning/00-pendientes-revision.md": {
+    "mtime": 1783362410.2840996,
+    "seen": 1792438050.752183,
+    "ast_hash": "bd1ba7b52b13242ae25e7dcd1e85cb25",
+    "semantic_hash": "bd1ba7b52b13242ae25e7dcd1e85cb25"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/01-UD4-DeepLearningAplicado.md": {
+    "mtime": 1782255139.3336287,
+    "seen": 1792438050.7521846,
+    "ast_hash": "30ecb11957dfcee73542e875b6bb5e32",
+    "semantic_hash": "30ecb11957dfcee73542e875b6bb5e32"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/GLOSARIO_UD4.md": {
+    "mtime": 1782255139.3340719,
+    "seen": 1792438050.7521858,
+    "ast_hash": "12c805700fe70957fef3a3f4cd69fff1",
+    "semantic_hash": "12c805700fe70957fef3a3f4cd69fff1"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/PreguntasRespuestas-BckProp-GradDesc.md": {
+    "mtime": 1782255139.425326,
+    "seen": 1787097079.2513335,
+    "ast_hash": "fa62a4230ee739f39188bb5d06752aa9",
+    "semantic_hash": "fa62a4230ee739f39188bb5d06752aa9"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4-DeepLearning-Indice-Parte1-Teoria.md": {
+    "mtime": 1782255139.4257603,
+    "seen": 1792438050.7521892,
+    "ast_hash": "d67fdf6a88d4cf124a80f51e744e9e32",
+    "semantic_hash": "d67fdf6a88d4cf124a80f51e744e9e32"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_01_Introduccion_Redes_Neuronales.md": {
+    "mtime": 1785535847.2288294,
+    "seen": 1792438050.7521904,
+    "ast_hash": "53aea23f89074e2b236f185eb9fbfc0d",
+    "semantic_hash": "53aea23f89074e2b236f185eb9fbfc0d"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_01_Introduccion_Redes_Neuronales_Alternativa.md": {
+    "mtime": 1783021412.4632885,
+    "seen": 1792438050.752192,
+    "ast_hash": "ab56d9e12c1710a822e67c3a589ea472",
+    "semantic_hash": "ab56d9e12c1710a822e67c3a589ea472"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_02_Redes_Neuronales_Artificiales.md": {
+    "mtime": 1785535847.2283328,
+    "seen": 1792438050.7521932,
+    "ast_hash": "02245f5a10e1e41632658a2e7ba1e275",
+    "semantic_hash": "02245f5a10e1e41632658a2e7ba1e275"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_03_Representacion_Matematica_Datos.md": {
+    "mtime": 1783021412.599139,
+    "seen": 1792438050.752195,
+    "ast_hash": "648d6ae2c390d76b39babcbceec2ab6d",
+    "semantic_hash": "648d6ae2c390d76b39babcbceec2ab6d"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_04_Operaciones_Tensores_Redes_Como_Funciones.md": {
+    "mtime": 1783021412.449015,
+    "seen": 1792438050.7521963,
+    "ast_hash": "0dbe16050a5461f41f9c655ed4c14c7a",
+    "semantic_hash": "0dbe16050a5461f41f9c655ed4c14c7a"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_05_Activacion_y_Funcion_de_Perdida.md": {
+    "mtime": 1785535847.2338567,
+    "seen": 1792438050.7521977,
+    "ast_hash": "8a382b4ba745e6433076e4924041b331",
+    "semantic_hash": "8a382b4ba745e6433076e4924041b331"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_05_Activacion_y_Funcion_de_Perdida_Alternativa.md": {
+    "mtime": 1783021412.4762204,
+    "seen": 1792438050.7521992,
+    "ast_hash": "44e6f4e48f9c07b2f76fa9d152abe320",
+    "semantic_hash": "44e6f4e48f9c07b2f76fa9d152abe320"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_06_Derivadas_y_Gradientes.md": {
+    "mtime": 1783021412.5311456,
+    "seen": 1792438050.7522004,
+    "ast_hash": "723d96ec085bc2502e5c269ea2058eaf",
+    "semantic_hash": "723d96ec085bc2502e5c269ea2058eaf"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_07_Gradiente_Descendente.md": {
+    "mtime": 1785535847.2344697,
+    "seen": 1792438050.752202,
+    "ast_hash": "276dae32c50ae704148ae882ead21cf5",
+    "semantic_hash": "276dae32c50ae704148ae882ead21cf5"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_08_Backpropagation-Complem-I.md": {
+    "mtime": 1783021412.5094516,
+    "seen": 1792438050.7522037,
+    "ast_hash": "9d7ff622a65e2f0c64f7c035a9ddbc0a",
+    "semantic_hash": "9d7ff622a65e2f0c64f7c035a9ddbc0a"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_08_Backpropagation-Complem-II.md": {
+    "mtime": 1783021412.4409466,
+    "seen": 1792438050.7522051,
+    "ast_hash": "fa7230948022cf9c6bf43c8b6b525baa",
+    "semantic_hash": "fa7230948022cf9c6bf43c8b6b525baa"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_Capitulo_08_Backpropagation.md": {
+    "mtime": 1785535847.2341359,
+    "seen": 1792438050.7522066,
+    "ast_hash": "fd664e282b9da1d9df5a07927033313a",
+    "semantic_hash": "fd664e282b9da1d9df5a07927033313a"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-I-Fundamentos/UD4_LaRecetaDeBackpropagation.md": {
+    "mtime": 1782255139.5082238,
+    "seen": 1792438050.7522082,
+    "ast_hash": "a26a6fbede07f23214aa6554e30d2ee4",
+    "semantic_hash": "a26a6fbede07f23214aa6554e30d2ee4"
+  },
+  "04-deep-learning/01-teoria/01-fundamentos-redes-neuronales/Parte-II-RedesEspecializadas/RedesRecurrentes_y_LSTM_intro.md": {
+    "mtime": 1783277348.5210156,
+    "seen": 1792438050.7522097,
+    "ast_hash": "3d9317e5acd15786a15a7400e1c8ad62",
+    "semantic_hash": "3d9317e5acd15786a15a7400e1c8ad62"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/002-Comparativa_Frameworks.md": {
+    "mtime": 1782255140.5445185,
+    "seen": 1792438050.7522109,
+    "ast_hash": "055ff00bca9e1a034c754502f2446630",
+    "semantic_hash": "055ff00bca9e1a034c754502f2446630"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-avanzados/001-DeepLearning_JAX.md": {
+    "mtime": 1782255139.518494,
+    "seen": 1792438050.7522125,
+    "ast_hash": "476babd53abbf8846a93795ed6de8ad9",
+    "semantic_hash": "476babd53abbf8846a93795ed6de8ad9"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-avanzados/001-DeepLearning_Keras3.md": {
+    "mtime": 1782255139.5189004,
+    "seen": 1792438050.752214,
+    "ast_hash": "ae7dadae153732460dfa93a6ade7502c",
+    "semantic_hash": "ae7dadae153732460dfa93a6ade7502c"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-avanzados/001-DeepLearning_MLX.md": {
+    "mtime": 1782255139.519343,
+    "seen": 1792438050.7522159,
+    "ast_hash": "a41e139ef573881d0dc4db219b72a451",
+    "semantic_hash": "a41e139ef573881d0dc4db219b72a451"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-avanzados/001-DeepLearning_ONNX.md": {
+    "mtime": 1782255139.519793,
+    "seen": 1792438050.7522173,
+    "ast_hash": "4ebf0814211371fd089f04fa5a150898",
+    "semantic_hash": "4ebf0814211371fd089f04fa5a150898"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-avanzados/001-DeepLearning_PyTorch.md": {
+    "mtime": 1782255139.520233,
+    "seen": 1792438050.752219,
+    "ast_hash": "84c15d1c6c82e7da5d654b6a4e8dfea7",
+    "semantic_hash": "84c15d1c6c82e7da5d654b6a4e8dfea7"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-avanzados/001-DeepLearning_PyTorch_Lightning.md": {
+    "mtime": 1782255139.5206938,
+    "seen": 1792438050.7522204,
+    "ast_hash": "c91ddf9831d041c8c3b9acda4f583013",
+    "semantic_hash": "c91ddf9831d041c8c3b9acda4f583013"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-avanzados/001-DeepLearning_TensorFlow.md": {
+    "mtime": 1782255139.5211651,
+    "seen": 1792438050.752222,
+    "ast_hash": "0c8b5a670b5d9a3b77899e91022b5706",
+    "semantic_hash": "0c8b5a670b5d9a3b77899e91022b5706"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-avanzados/ArquitecturaRedConvolucionalMaxPoolFiltros.md": {
+    "mtime": 1782255139.5215714,
+    "seen": 1792438050.7522235,
+    "ast_hash": "19c09c2488d260705e1eeab63fe8b2be",
+    "semantic_hash": "19c09c2488d260705e1eeab63fe8b2be"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-docs/introduccion/UD4_IntroPytorchLightning.md": {
+    "mtime": 1782255139.3267338,
+    "seen": 1792438050.7522254,
+    "ast_hash": "116ddc5aa2a619c53972c637cf735b75",
+    "semantic_hash": "116ddc5aa2a619c53972c637cf735b75"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-docs/introduccion/UD4_Intro_JAX.md": {
+    "mtime": 1782255139.317843,
+    "seen": 1792438050.7522266,
+    "ast_hash": "7a346c7501d5b61cf4a15b8f395d1141",
+    "semantic_hash": "7a346c7501d5b61cf4a15b8f395d1141"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-docs/introduccion/UD4_Intro_Keras.md": {
+    "mtime": 1782255139.320792,
+    "seen": 1787097079.251362,
+    "ast_hash": "afb7b0931cedd8d7242f26381c65de38",
+    "semantic_hash": "afb7b0931cedd8d7242f26381c65de38"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-docs/introduccion/UD4_Intro_PyTorch.md": {
+    "mtime": 1782255139.3237154,
+    "seen": 1792438050.7522297,
+    "ast_hash": "ca0b623813f470067dc38de729055ece",
+    "semantic_hash": "ca0b623813f470067dc38de729055ece"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-docs/introduccion/UD4_Intro_PyTorch_DataLoader.md": {
+    "mtime": 1782255139.3241706,
+    "seen": 1792438050.752231,
+    "ast_hash": "c257e876c76c0b88a48714a0b7a8dd04",
+    "semantic_hash": "c257e876c76c0b88a48714a0b7a8dd04"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-docs/optimizadores/OPTIMIZADORES_Teorico.md": {
+    "mtime": 1782255139.329464,
+    "seen": 1787097079.2513652,
+    "ast_hash": "e11518d302195e39ba278921961199dd",
+    "semantic_hash": "e11518d302195e39ba278921961199dd"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-docs/planificacion/UD4-DeepLearning-ComparativaFrameWorks.md": {
+    "mtime": 1785535847.2186482,
+    "seen": 1792438050.752234,
+    "ast_hash": "ce3144bc9874cdb0e52207979a211405",
+    "semantic_hash": "ce3144bc9874cdb0e52207979a211405"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-docs/planificacion/UD4-DeepLearning-Indice-Parte2-Practica.md": {
+    "mtime": 1782255139.3303313,
+    "seen": 1792438050.7522352,
+    "ast_hash": "50242cbbf53933baec97d07c6e62d2a5",
+    "semantic_hash": "50242cbbf53933baec97d07c6e62d2a5"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/frameworks-docs/planificacion/UD4-DeepLearning-Practica-QueHaremos.md": {
+    "mtime": 1782255139.3307226,
+    "seen": 1792438050.7522368,
+    "ast_hash": "7f43a72b2a9f775a20f360facbccbe14",
+    "semantic_hash": "7f43a72b2a9f775a20f360facbccbe14"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/tensorflow-avanzado/TensorFlow_BajoNivel.md": {
+    "mtime": 1782255139.5163589,
+    "seen": 1792438050.7522383,
+    "ast_hash": "9a7d59c42fb1439546b66580cbdb9b6e",
+    "semantic_hash": "9a7d59c42fb1439546b66580cbdb9b6e"
+  },
+  "04-deep-learning/01-teoria/02-frameworks-deep-learning/tensorflow-avanzado/TensorFlow_DataAPI.md": {
+    "mtime": 1782255139.5173442,
+    "seen": 1792438050.7522397,
+    "ast_hash": "25c268ea002cbbc53bc88618008a19e6",
+    "semantic_hash": "25c268ea002cbbc53bc88618008a19e6"
+  },
+  "04-deep-learning/01-teoria/03-metricas-evaluacion/002-MetricasPytorchKeras.md": {
+    "mtime": 1782255140.5270658,
+    "seen": 1792438050.752241,
+    "ast_hash": "d508983782fb49ba22363d1355972fd7",
+    "semantic_hash": "d508983782fb49ba22363d1355972fd7"
+  },
+  "04-deep-learning/01-teoria/03-metricas-evaluacion/003-MetricasRegresion.md": {
+    "mtime": 1782255140.528687,
+    "seen": 1787097079.2513726,
+    "ast_hash": "5fb3ceacbb5d91cae403a1d515244116",
+    "semantic_hash": "5fb3ceacbb5d91cae403a1d515244116"
+  },
+  "04-deep-learning/01-teoria/03-metricas-evaluacion/Curva-Precision_Recall.md": {
+    "mtime": 1782255140.5324616,
+    "seen": 1792438050.7522442,
+    "ast_hash": "35b032d92005101617c720f39fd09074",
+    "semantic_hash": "35b032d92005101617c720f39fd09074"
+  },
+  "04-deep-learning/01-teoria/03-metricas-evaluacion/Underfit-Overfit_BiasVariance.md": {
+    "mtime": 1783169488.2424514,
+    "seen": 1792438050.7522454,
+    "ast_hash": "b943df55be64f8be0871c134bde016bd",
+    "semantic_hash": "b943df55be64f8be0871c134bde016bd"
+  },
+  "04-deep-learning/01-teoria/README.md": {
+    "mtime": 1785535829.6935558,
+    "seen": 1792438050.752247,
+    "ast_hash": "579023848cfd090167eee6b99c618fc7",
+    "semantic_hash": "579023848cfd090167eee6b99c618fc7"
+  },
+  "04-deep-learning/02-ejemplos/frameworks/README.md": {
+    "mtime": 1785535830.029556,
+    "seen": 1792438050.7522488,
+    "ast_hash": "c9d75e9d9ea6e11816e027b49c54333e",
+    "semantic_hash": "c9d75e9d9ea6e11816e027b49c54333e"
+  },
+  "04-deep-learning/02-ejemplos/frameworks/actividades/rubrica_lightning_mnist.md": {
+    "mtime": 1782255189.4075596,
+    "seen": 1792438050.7522502,
+    "ast_hash": "91ad80f64ab269cfcfebf6fcdf1c50f3",
+    "semantic_hash": "91ad80f64ab269cfcfebf6fcdf1c50f3"
+  },
+  "04-deep-learning/02-ejemplos/frameworks/notebooks/optimizadores/jax/README.md": {
+    "mtime": 1785535847.2398543,
+    "seen": 1792438050.7522516,
+    "ast_hash": "97f3fb3623802ce722fc4de680129935",
+    "semantic_hash": "97f3fb3623802ce722fc4de680129935"
+  },
+  "04-deep-learning/02-ejemplos/frameworks/notebooks/optimizadores/keras/README.md": {
+    "mtime": 1785535847.239483,
+    "seen": 1787097079.2513802,
+    "ast_hash": "7c484ca6e3d15346f4a6405fde14b20c",
+    "semantic_hash": "7c484ca6e3d15346f4a6405fde14b20c"
+  },
+  "04-deep-learning/02-ejemplos/frameworks/notebooks/optimizadores/pytorch/README.md": {
+    "mtime": 1785535847.2396727,
+    "seen": 1792438050.752255,
+    "ast_hash": "5cefca5e533e9cc28a22036d09cfa170",
+    "semantic_hash": "5cefca5e533e9cc28a22036d09cfa170"
+  },
+  "04-deep-learning/02-ejemplos/frameworks/notebooks/redes-neuronales/jax/README.md": {
+    "mtime": 1785535847.2392352,
+    "seen": 1792438050.7522564,
+    "ast_hash": "683d877e3139a06fc6557a550d104181",
+    "semantic_hash": "683d877e3139a06fc6557a550d104181"
+  },
+  "04-deep-learning/02-ejemplos/frameworks/notebooks/redes-neuronales/keras/README.md": {
+    "mtime": 1785535847.2354944,
+    "seen": 1792438050.752258,
+    "ast_hash": "24bbc72feeb74c49f3ae0df94f0e00af",
+    "semantic_hash": "24bbc72feeb74c49f3ae0df94f0e00af"
+  },
+  "04-deep-learning/02-ejemplos/frameworks/notebooks/redes-neuronales/pytorch/README.md": {
+    "mtime": 1785535847.2356894,
+    "seen": 1792438050.7522595,
+    "ast_hash": "cc178b15ff4d82a289a2a83172a1a53b",
+    "semantic_hash": "cc178b15ff4d82a289a2a83172a1a53b"
+  },
+  "04-deep-learning/02-ejemplos/frameworks/requirements.txt": {
+    "mtime": 1782255189.697789,
+    "seen": 1792438050.7522612,
+    "ast_hash": "e79cb57ae1d9f87868866dd99c79c8cd",
+    "semantic_hash": "e79cb57ae1d9f87868866dd99c79c8cd"
+  },
+  "04-deep-learning/02-ejemplos/fundamentos-notebooks/README.md": {
+    "mtime": 1785535847.2402878,
+    "seen": 1792438050.7522626,
+    "ast_hash": "f9fc3a018f655c47f78cc5a547dc9cbc",
+    "semantic_hash": "f9fc3a018f655c47f78cc5a547dc9cbc"
+  },
+  "04-deep-learning/02-ejemplos/fundamentos-scripts/README.md": {
+    "mtime": 1785535847.2405086,
+    "seen": 1792438050.7522643,
+    "ast_hash": "79cb59d2d0c6c167756e4fce002c39c5",
+    "semantic_hash": "79cb59d2d0c6c167756e4fce002c39c5"
+  },
+  "04-deep-learning/02-ejemplos/modelado-avanzado-ejemplos/fashion-mnist-flask/README.txt": {
+    "mtime": 1782255189.8958213,
+    "seen": 1792438050.7522657,
+    "ast_hash": "30585d365defb3fef7d505dbad1c557c",
+    "semantic_hash": "30585d365defb3fef7d505dbad1c557c"
+  },
+  "04-deep-learning/02-ejemplos/modelado-avanzado-ejemplos/fashion-mnist-flask/fashion-mnist/README.txt": {
+    "mtime": 1782255189.894688,
+    "seen": 1792438050.7522674,
+    "ast_hash": "88b81989b18d2966bd9504bb865fb0b4",
+    "semantic_hash": "88b81989b18d2966bd9504bb865fb0b4"
+  },
+  "04-deep-learning/02-ejemplos/modelado-avanzado-ejemplos/fashion-mnist-flask/fashion-mnist/requirements.txt": {
+    "mtime": 1782255189.8950658,
+    "seen": 1792438050.7522688,
+    "ast_hash": "34115ea6bcb7276edb00e1832297d019",
+    "semantic_hash": "34115ea6bcb7276edb00e1832297d019"
+  },
+  "04-deep-learning/03-practicas/laboratorios/Laboratorio1/TensorFlowPlayGround-Rubrica.md": {
+    "mtime": 1782255190.8691595,
+    "seen": 1792438050.75227,
+    "ast_hash": "dde688a1961fb8c4fb26aa59ff719e1d",
+    "semantic_hash": "dde688a1961fb8c4fb26aa59ff719e1d"
+  },
+  "04-deep-learning/03-practicas/laboratorios/Laboratorio1/TensorFlowPlayGround_Entrega.md": {
+    "mtime": 1782255190.871292,
+    "seen": 1787097079.2513933,
+    "ast_hash": "b4e872c52fdbc404bd79f21d5712693b",
+    "semantic_hash": "b4e872c52fdbc404bd79f21d5712693b"
+  },
+  "04-deep-learning/03-practicas/laboratorios/Laboratorio2/EstudioImplementacionBackpropagation-Entrega.md": {
+    "mtime": 1782255190.8773663,
+    "seen": 1792438050.7522733,
+    "ast_hash": "9a722876b3d9b9112bfd3cc30af6de9c",
+    "semantic_hash": "9a722876b3d9b9112bfd3cc30af6de9c"
+  },
+  "04-deep-learning/03-practicas/laboratorios/Laboratorio2/EstudioImplementacionBackpropagation-Rubrica.md": {
+    "mtime": 1782255190.8777504,
+    "seen": 1792438050.752275,
+    "ast_hash": "26bfc6a35a8d7da3c42d02a0828756ca",
+    "semantic_hash": "26bfc6a35a8d7da3c42d02a0828756ca"
+  },
+  "04-deep-learning/03-practicas/laboratorios/Laboratorio3/DePlayground_a_CodigoReal-Entrega.md": {
+    "mtime": 1782255190.8793287,
+    "seen": 1792438050.7522764,
+    "ast_hash": "7fcb1a4f7ea3934e9f98c8769a8045f1",
+    "semantic_hash": "7fcb1a4f7ea3934e9f98c8769a8045f1"
+  },
+  "04-deep-learning/03-practicas/laboratorios/Laboratorio3/DePlayground_a_CodigoReal-Rubrica.md": {
+    "mtime": 1782255190.8797178,
+    "seen": 1792438050.7522779,
+    "ast_hash": "704048fda14fb09c2f23dd838754fb76",
+    "semantic_hash": "704048fda14fb09c2f23dd838754fb76"
+  },
+  "04-deep-learning/03-practicas/laboratorios/Laboratorio3/DePlayground_a_CodigoReal.md": {
+    "mtime": 1782255190.880064,
+    "seen": 1792438050.7522793,
+    "ast_hash": "cddbf4d950e394d525a4b01b30ca419b",
+    "semantic_hash": "cddbf4d950e394d525a4b01b30ca419b"
+  },
+  "04-deep-learning/03-practicas/laboratorios/README.md": {
+    "mtime": 1785566956.314192,
+    "seen": 1792438050.7522805,
+    "ast_hash": "ba91cdf3eea6dc8c379002e8e833aa47",
+    "semantic_hash": "ba91cdf3eea6dc8c379002e8e833aa47"
+  },
+  "04-deep-learning/03-practicas/modelado-proyectos/boston-housing/README.md": {
+    "mtime": 1783291260.5326166,
+    "seen": 1792438050.7522821,
+    "ast_hash": "6f0cf5228a6d99b047688f496a6de5e1",
+    "semantic_hash": "6f0cf5228a6d99b047688f496a6de5e1"
+  },
+  "04-deep-learning/03-practicas/modelado-proyectos/boston-housing/docs/BostonHousing-1.md": {
+    "mtime": 1782255190.8868806,
+    "seen": 1792438050.7522836,
+    "ast_hash": "e5bc2e55b34e9b807aab39d870f778f7",
+    "semantic_hash": "e5bc2e55b34e9b807aab39d870f778f7"
+  },
+  "04-deep-learning/03-practicas/modelado-proyectos/boston-housing/docs/BostonHousing-2.md": {
+    "mtime": 1782255190.8873081,
+    "seen": 1792438050.7522852,
+    "ast_hash": "c13da4aa0a83343dcebfb5f88d7673e0",
+    "semantic_hash": "c13da4aa0a83343dcebfb5f88d7673e0"
+  },
+  "04-deep-learning/03-practicas/modelado-proyectos/boston-housing/docs/BostonHousingDesc.txt": {
+    "mtime": 1782255190.8876991,
+    "seen": 1792438050.7522867,
+    "ast_hash": "8458ea83ff492f6a8c200cbe076acc80",
+    "semantic_hash": "8458ea83ff492f6a8c200cbe076acc80"
+  },
+  "04-deep-learning/03-practicas/modelado-proyectos/euromillones/README.md": {
+    "mtime": 1783278279.4699428,
+    "seen": 1792438050.7522883,
+    "ast_hash": "75ae265ab92d4423d9d1e796550ba1be",
+    "semantic_hash": "75ae265ab92d4423d9d1e796550ba1be"
+  },
+  "04-deep-learning/03-practicas/modelado-proyectos/used-cars-dl-tabular/README.md": {
+    "mtime": 1783279875.6987033,
+    "seen": 1792438050.7522898,
+    "ast_hash": "d4bed04b284453c539e0480d0f82a10d",
+    "semantic_hash": "d4bed04b284453c539e0480d0f82a10d"
+  },
+  "04-deep-learning/04-evaluacion/README.md": {
+    "mtime": 1783355008.8422725,
+    "seen": 1792438050.7522914,
+    "ast_hash": "684ce07742f223162b76b3a80100aa5a",
+    "semantic_hash": "684ce07742f223162b76b3a80100aa5a"
+  },
+  "04-deep-learning/04-evaluacion/checklist-entrega.md": {
+    "mtime": 1783175051.7450082,
+    "seen": 1792438050.7522926,
+    "ast_hash": "866a64b06b9f10ce63f5b8a1e00f3c81",
+    "semantic_hash": "866a64b06b9f10ce63f5b8a1e00f3c81"
+  },
+  "04-deep-learning/04-evaluacion/rubrica.md": {
+    "mtime": 1782908832.5320942,
+    "seen": 1792438050.752294,
+    "ast_hash": "a53cf27c8b6b71c8d0c799213d17bb6b",
+    "semantic_hash": "a53cf27c8b6b71c8d0c799213d17bb6b"
+  },
+  "04-deep-learning/05-recursos/README.md": {
+    "mtime": 1785535830.198556,
+    "seen": 1787097079.2514107,
+    "ast_hash": "99a234114d383db4e93ea1f25607dd6f",
+    "semantic_hash": "99a234114d383db4e93ea1f25607dd6f"
+  },
+  "04-deep-learning/05-recursos/modelado-datos/blackfriday/README.md": {
+    "mtime": 1783354845.9956224,
+    "seen": 1792438050.7522972,
+    "ast_hash": "e7e307699e57de34efb2bbcc64f735c5",
+    "semantic_hash": "e7e307699e57de34efb2bbcc64f735c5"
+  },
+  "04-deep-learning/05-recursos/modelado-entornos/README.md": {
+    "mtime": 1785535830.356556,
+    "seen": 1787097079.2514126,
+    "ast_hash": "1fb3d218503ba19c717e1fde6c8c4723",
+    "semantic_hash": "1fb3d218503ba19c717e1fde6c8c4723"
+  },
+  "04-deep-learning/05-recursos/modelado-entornos/environment.yml": {
+    "mtime": 1783354884.3712583,
+    "seen": 1792438050.7523003,
+    "ast_hash": "346aa0f1faf9b2a3d10f60b68d23d05e",
+    "semantic_hash": "346aa0f1faf9b2a3d10f60b68d23d05e"
+  },
+  "04-deep-learning/90-archivo/modelado-avanzado-docs/README.md": {
+    "mtime": 1783277474.1867483,
+    "seen": 1792438050.752302,
+    "ast_hash": "19c92ebfc14ed2c05ae0451f46e1f319",
+    "semantic_hash": "19c92ebfc14ed2c05ae0451f46e1f319"
+  },
+  "04-deep-learning/90-archivo/modelado-avanzado-docs/boston-housing/notas_housing.txt": {
+    "mtime": 1782255140.552822,
+    "seen": 1787097079.2514157,
+    "ast_hash": "3fd8bfc7f963e96dd9cfe5f9830b2042",
+    "semantic_hash": "3fd8bfc7f963e96dd9cfe5f9830b2042"
+  },
+  "04-deep-learning/90-archivo/modelado-avanzado-docs/conceptos/Mas_alla_del_entrenamiento.md": {
+    "mtime": 1782255139.5146983,
+    "seen": 1792438050.7523055,
+    "ast_hash": "de440b5185dd793ac5f6d2d49f28560e",
+    "semantic_hash": "de440b5185dd793ac5f6d2d49f28560e"
+  },
+  "04-deep-learning/90-archivo/modelado-avanzado-docs/fundamentos/001-ChatGPT-GradDesc-Backprop.md": {
+    "mtime": 1782255140.5409431,
+    "seen": 1792438050.752307,
+    "ast_hash": "626363580fbb0a0a57df23d0a04d59c7",
+    "semantic_hash": "626363580fbb0a0a57df23d0a04d59c7"
+  },
+  "04-deep-learning/90-archivo/modelado-avanzado-docs/fundamentos/001-DeepLearningV2.md": {
+    "mtime": 1782255140.5433125,
+    "seen": 1792438050.7523084,
+    "ast_hash": "31dcb2d72600fb7ede286b0d79f27693",
+    "semantic_hash": "31dcb2d72600fb7ede286b0d79f27693"
+  },
+  "04-deep-learning/90-archivo/modelado-avanzado-docs/guias-proyecto-ml/GUIA_PROYECTO_PYTHON_ML.md": {
+    "mtime": 1782564620.0091376,
+    "seen": 1792438050.75231,
+    "ast_hash": "a63c42e3e501dca8f54964b6717bd752",
+    "semantic_hash": "a63c42e3e501dca8f54964b6717bd752"
+  },
+  "04-deep-learning/90-archivo/modelado-avanzado-docs/notas-internas/planTrabajoPytorch.txt": {
+    "mtime": 1782255140.5592234,
+    "seen": 1792438050.7523115,
+    "ast_hash": "b8db443bcbe9de8cc2cd0b54b09bf275",
+    "semantic_hash": "b8db443bcbe9de8cc2cd0b54b09bf275"
+  },
+  "04-deep-learning/90-archivo/modelado-avanzado-docs/redes-recurrentes/RedesRecurrentes.md": {
+    "mtime": 1782255139.5158775,
+    "seen": 1792438050.7523131,
+    "ast_hash": "d0e4abad360e8543a6a4f3d55e0b2823",
+    "semantic_hash": "d0e4abad360e8543a6a4f3d55e0b2823"
+  },
+  "04-deep-learning/README.md": {
+    "mtime": 1791224062.2105272,
+    "seen": 1792438050.7523143,
+    "ast_hash": "626b0e8c50dd34771616f9d9f5287068",
+    "semantic_hash": ""
+  },
+  "05-cloud-mlops/01-teoria/01-feature-store.md": {
+    "mtime": 1782255205.7498257,
+    "seen": 1792438050.752316,
+    "ast_hash": "37d35e3e2a6251cd13f3dcca7a3d16e4",
+    "semantic_hash": "37d35e3e2a6251cd13f3dcca7a3d16e4"
+  },
+  "05-cloud-mlops/01-teoria/02-compute-cloud.md": {
+    "mtime": 1782255205.7523415,
+    "seen": 1792438050.7523174,
+    "ast_hash": "694e7d57ad1dd9486a4ada440dd45b65",
+    "semantic_hash": "694e7d57ad1dd9486a4ada440dd45b65"
+  },
+  "05-cloud-mlops/01-teoria/03-mlops.md": {
+    "mtime": 1782255205.7549036,
+    "seen": 1792438050.7523186,
+    "ast_hash": "62994d5586b702b83a36baa57e4e19b3",
+    "semantic_hash": "62994d5586b702b83a36baa57e4e19b3"
+  },
+  "05-cloud-mlops/01-teoria/04-almacenamiento-ia.md": {
+    "mtime": 1782255205.7574315,
+    "seen": 1792438050.7523203,
+    "ast_hash": "fb3017b09d2bc4f311f589cef63fdf38",
+    "semantic_hash": "fb3017b09d2bc4f311f589cef63fdf38"
+  },
+  "05-cloud-mlops/01-teoria/05-frameworks-ml.md": {
+    "mtime": 1782255205.759941,
+    "seen": 1787097079.2514286,
+    "ast_hash": "272cfdd54e51a0f61cba9a0c39d84e09",
+    "semantic_hash": "272cfdd54e51a0f61cba9a0c39d84e09"
+  },
+  "05-cloud-mlops/01-teoria/06-apis-llm.md": {
+    "mtime": 1782255205.770344,
+    "seen": 1787097079.2514296,
+    "ast_hash": "de14d4879f9355cf4d8908cb3afc25ef",
+    "semantic_hash": "de14d4879f9355cf4d8908cb3afc25ef"
+  },
+  "05-cloud-mlops/01-teoria/07-orquestacion-agents.md": {
+    "mtime": 1782255205.7728937,
+    "seen": 1792438050.7523253,
+    "ast_hash": "8ee202e354ccfc4092f2b4dbbca9c172",
+    "semantic_hash": "8ee202e354ccfc4092f2b4dbbca9c172"
+  },
+  "05-cloud-mlops/01-teoria/08-herramientas-datos.md": {
+    "mtime": 1782255205.7754796,
+    "seen": 1792438050.752327,
+    "ast_hash": "15541d5d551cc719acd2608bebd51ded",
+    "semantic_hash": "15541d5d551cc719acd2608bebd51ded"
+  },
+  "05-cloud-mlops/01-teoria/09-bases-vectoriales-recuperacion.md": {
+    "mtime": 1782255205.7780056,
+    "seen": 1792438050.7523284,
+    "ast_hash": "03cbec4bff22fd29c70e07bf5f8932ec",
+    "semantic_hash": "03cbec4bff22fd29c70e07bf5f8932ec"
+  },
+  "05-cloud-mlops/01-teoria/10-evaluacion-observabilidad-llm.md": {
+    "mtime": 1782255205.780688,
+    "seen": 1787097079.2514336,
+    "ast_hash": "2568e58d9f02eaccf321c91736e0837d",
+    "semantic_hash": "2568e58d9f02eaccf321c91736e0837d"
+  },
+  "05-cloud-mlops/01-teoria/11-serving-modelos-abiertos.md": {
+    "mtime": 1782255205.7834387,
+    "seen": 1792438050.7523315,
+    "ast_hash": "25620373e95880c9ca3af630c51f4e58",
+    "semantic_hash": "25620373e95880c9ca3af630c51f4e58"
+  },
+  "05-cloud-mlops/01-teoria/12-recuperacion-avanzada-rag.md": {
+    "mtime": 1785578430.9600763,
+    "seen": 1792438050.7523332,
+    "ast_hash": "3bb3a013d580dd2ea467f45a5b70ff8a",
+    "semantic_hash": "3bb3a013d580dd2ea467f45a5b70ff8a"
+  },
+  "05-cloud-mlops/01-teoria/13-ejemplos-stacks-ia.md": {
+    "mtime": 1782255205.7887897,
+    "seen": 1792438050.7523344,
+    "ast_hash": "44f27d8f08cf3cc53a820d0c3cb156cd",
+    "semantic_hash": "44f27d8f08cf3cc53a820d0c3cb156cd"
+  },
+  "05-cloud-mlops/01-teoria/14-guion-clase-recuperacion-stacks.md": {
+    "mtime": 1785578430.9603631,
+    "seen": 1792438050.7523358,
+    "ast_hash": "139df91c91aae23999a53bdba73271ed",
+    "semantic_hash": "139df91c91aae23999a53bdba73271ed"
+  },
+  "05-cloud-mlops/01-teoria/19-chuleta-modelos-ollama.md": {
+    "mtime": 1785578430.9605932,
+    "seen": 1792438050.7523372,
+    "ast_hash": "c036f09e61ff10883935c68ec0ddb5b5",
+    "semantic_hash": "c036f09e61ff10883935c68ec0ddb5b5"
+  },
+  "05-cloud-mlops/01-teoria/chuleta_contenedores.md": {
+    "mtime": 1782255205.792079,
+    "seen": 1787097079.25144,
+    "ast_hash": "03093599b8430c3e4732b5042a0710f0",
+    "semantic_hash": "03093599b8430c3e4732b5042a0710f0"
+  },
+  "05-cloud-mlops/01-teoria/documentos_demo/evaluacion.md": {
+    "mtime": 1782255205.792531,
+    "seen": 1792438050.7523403,
+    "ast_hash": "d78ac1040ec75c7563262b2a38e971bc",
+    "semantic_hash": "d78ac1040ec75c7563262b2a38e971bc"
+  },
+  "05-cloud-mlops/01-teoria/documentos_demo/faq.md": {
+    "mtime": 1782255205.7928658,
+    "seen": 1792438050.7523417,
+    "ast_hash": "9ae882df5c414c22b426481150493849",
+    "semantic_hash": "9ae882df5c414c22b426481150493849"
+  },
+  "05-cloud-mlops/01-teoria/documentos_demo/proyecto.md": {
+    "mtime": 1782255205.7931862,
+    "seen": 1792438050.7523432,
+    "ast_hash": "7bb2759ccb3c51dfbf23b62432534a9f",
+    "semantic_hash": "7bb2759ccb3c51dfbf23b62432534a9f"
+  },
+  "05-cloud-mlops/01-teoria/sesion-HerramientasIA-cloud.md": {
+    "mtime": 1783021357.6721823,
+    "seen": 1792438050.7523446,
+    "ast_hash": "826fb7635a8db6fa4188cb3df913b510",
+    "semantic_hash": "826fb7635a8db6fa4188cb3df913b510"
+  },
+  "05-cloud-mlops/01-teoria/sesion_RAG_index.md": {
+    "mtime": 1782255205.8458536,
+    "seen": 1792438050.7523458,
+    "ast_hash": "366d98d7d2a2a29c2676ccf47b8d28c2",
+    "semantic_hash": "366d98d7d2a2a29c2676ccf47b8d28c2"
+  },
+  "05-cloud-mlops/02-ejemplos/15-demo-rag-sencillo.md": {
+    "mtime": 1785578430.9594443,
+    "seen": 1792438050.7523475,
+    "ast_hash": "4cfcc6602efb8a7e796bfca100b8c322",
+    "semantic_hash": "4cfcc6602efb8a7e796bfca100b8c322"
+  },
+  "05-cloud-mlops/02-ejemplos/16-demo-rag-sencillo.ipynb.md": {
+    "mtime": 1782255205.8470733,
+    "seen": 1792438050.7523487,
+    "ast_hash": "2909ba197bf0552cd8cccb1f4f70ea18",
+    "semantic_hash": "2909ba197bf0552cd8cccb1f4f70ea18"
+  },
+  "05-cloud-mlops/02-ejemplos/17-demo-rag-ollama.md": {
+    "mtime": 1785578430.9596603,
+    "seen": 1792438050.75235,
+    "ast_hash": "891ae7e69e1a674ddbec01b6b8fb53a6",
+    "semantic_hash": "891ae7e69e1a674ddbec01b6b8fb53a6"
+  },
+  "05-cloud-mlops/02-ejemplos/18-demo-pageindex-rag.ipynb.md": {
+    "mtime": 1782255205.8485656,
+    "seen": 1792438050.7523518,
+    "ast_hash": "06a59a01172e1f3ce7e84aa65fc24586",
+    "semantic_hash": "06a59a01172e1f3ce7e84aa65fc24586"
+  },
+  "05-cloud-mlops/02-ejemplos/18-demo-pageindex-rag.md": {
+    "mtime": 1785578430.959853,
+    "seen": 1792438050.7523532,
+    "ast_hash": "f9a43f40ebeee4fc721415a033587ba6",
+    "semantic_hash": "f9a43f40ebeee4fc721415a033587ba6"
+  },
+  "05-cloud-mlops/02-ejemplos/ejemplo-comparativa.md": {
+    "mtime": 1782255205.8525612,
+    "seen": 1792438050.7523546,
+    "ast_hash": "69057ea4945f40650bff32f2e31f15f6",
+    "semantic_hash": "69057ea4945f40650bff32f2e31f15f6"
+  },
+  "05-cloud-mlops/03-practicas/rubrica-tarea.md": {
+    "mtime": 1782255205.855794,
+    "seen": 1792438050.752356,
+    "ast_hash": "57319f660ac1d13d3c2096c3ba29d591",
+    "semantic_hash": "57319f660ac1d13d3c2096c3ba29d591"
+  },
+  "05-cloud-mlops/03-practicas/tarea-comparativa-herramientas.md": {
+    "mtime": 1785539008.9499202,
+    "seen": 1792438050.752358,
+    "ast_hash": "163a4f05e7723d03ef8287bf800f40b3",
+    "semantic_hash": "163a4f05e7723d03ef8287bf800f40b3"
+  },
+  "05-cloud-mlops/04-evaluacion/README.md": {
+    "mtime": 1785539008.7909203,
+    "seen": 1792438050.7523596,
+    "ast_hash": "c31e977bfff6bd26762aef955809edb2",
+    "semantic_hash": "c31e977bfff6bd26762aef955809edb2"
+  },
+  "05-cloud-mlops/04-evaluacion/checklist-entrega.md": {
+    "mtime": 1783033719.7532876,
+    "seen": 1792438050.7523613,
+    "ast_hash": "90a6c278f6a464d024a30109b3c03c24",
+    "semantic_hash": "90a6c278f6a464d024a30109b3c03c24"
+  },
+  "05-cloud-mlops/README.md": {
+    "mtime": 1785539008.6309202,
+    "seen": 1792438050.7523646,
+    "ast_hash": "b44222bbbcb0dfb179848611652b1d51",
+    "semantic_hash": "b44222bbbcb0dfb179848611652b1d51"
+  },
+  "06-llm-agentes/01-teoria/DSPy_Documentacion.md": {
+    "mtime": 1782255205.9318366,
+    "seen": 1792438050.7523663,
+    "ast_hash": "d4706eee7ae92711dca01f7b54bdfef9",
+    "semantic_hash": "d4706eee7ae92711dca01f7b54bdfef9"
+  },
+  "06-llm-agentes/01-teoria/Documentacion_Notebooks.md": {
+    "mtime": 1782993273.806807,
+    "seen": 1787097079.251464,
+    "ast_hash": "91cb7a259fbf1d78a68a6b324de08787",
+    "semantic_hash": "91cb7a259fbf1d78a68a6b324de08787"
+  },
+  "06-llm-agentes/01-teoria/FastAPI_Documentacion.md": {
+    "mtime": 1782255205.932157,
+    "seen": 1792438050.7523696,
+    "ast_hash": "64a1f4f8bee16a21441a30ee282e7e7e",
+    "semantic_hash": "64a1f4f8bee16a21441a30ee282e7e7e"
+  },
+  "06-llm-agentes/01-teoria/Gradio_Documentacion.md": {
+    "mtime": 1782255205.9324746,
+    "seen": 1792438050.7523715,
+    "ast_hash": "080148fe5a65452080adcdababa83e30",
+    "semantic_hash": "080148fe5a65452080adcdababa83e30"
+  },
+  "06-llm-agentes/01-teoria/Herramientas_IA_Programacion.md": {
+    "mtime": 1782255205.9327931,
+    "seen": 1792438050.752373,
+    "ast_hash": "867149bcc6eb4532f6ebed887b6da1bd",
+    "semantic_hash": "867149bcc6eb4532f6ebed887b6da1bd"
+  },
+  "06-llm-agentes/01-teoria/LangChain_Documentacion.md": {
+    "mtime": 1782255205.9331303,
+    "seen": 1792438050.7523744,
+    "ast_hash": "b4ea757d0e107137ff0fa75b8b43ea17",
+    "semantic_hash": "b4ea757d0e107137ff0fa75b8b43ea17"
+  },
+  "06-llm-agentes/01-teoria/LangGraph_Documentacion.md": {
+    "mtime": 1782255205.9334571,
+    "seen": 1792438050.7523763,
+    "ast_hash": "d25c5cbb16e3ab4a2622177f956f1b99",
+    "semantic_hash": "d25c5cbb16e3ab4a2622177f956f1b99"
+  },
+  "06-llm-agentes/01-teoria/LlamaIndex_Documentacion.md": {
+    "mtime": 1782255205.9337676,
+    "seen": 1792438050.7523777,
+    "ast_hash": "795f53f0bc77739e786e6438560aa0b7",
+    "semantic_hash": "795f53f0bc77739e786e6438560aa0b7"
+  },
+  "06-llm-agentes/01-teoria/MLflow_Documentacion.md": {
+    "mtime": 1782255205.9340796,
+    "seen": 1792438050.7523792,
+    "ast_hash": "157f3e8ea84dd8c4dd6945f971d4e4d5",
+    "semantic_hash": "157f3e8ea84dd8c4dd6945f971d4e4d5"
+  },
+  "06-llm-agentes/01-teoria/Ollama_Documentacion.md": {
+    "mtime": 1782255205.9342124,
+    "seen": 1792438050.7523835,
+    "ast_hash": "55698e0f6d3808e8240cadb3197a9ca2",
+    "semantic_hash": "55698e0f6d3808e8240cadb3197a9ca2"
+  },
+  "06-llm-agentes/01-teoria/nlp-deep-learning-ud4/NLP_Atencion_desde_modelado_avanzado.md": {
+    "mtime": 1782255139.5150952,
+    "seen": 1792438050.7523851,
+    "ast_hash": "fd19e9865af3b77a6b8d82c52072111e",
+    "semantic_hash": "fd19e9865af3b77a6b8d82c52072111e"
+  },
+  "06-llm-agentes/01-teoria/nlp-deep-learning-ud4/nlp-docs/000-Introduccion_A_NLP.md": {
+    "mtime": 1782255140.560702,
+    "seen": 1787097079.2514756,
+    "ast_hash": "191931a004a860285891d0c3aebad7a6",
+    "semantic_hash": "191931a004a860285891d0c3aebad7a6"
+  },
+  "06-llm-agentes/01-teoria/nlp-deep-learning-ud4/nlp-docs/001-Keras-NLP.md": {
+    "mtime": 1782255140.5610726,
+    "seen": 1792438050.752389,
+    "ast_hash": "648b7e941b60346c35df1f10f14e9a58",
+    "semantic_hash": "648b7e941b60346c35df1f10f14e9a58"
+  },
+  "06-llm-agentes/01-teoria/nlp-deep-learning-ud4/nlp-docs/001-Pytorch-NLP.md": {
+    "mtime": 1782255140.5620677,
+    "seen": 1792438050.7523904,
+    "ast_hash": "a2a78feb48da5a407120a4e1f049db57",
+    "semantic_hash": "a2a78feb48da5a407120a4e1f049db57"
+  },
+  "06-llm-agentes/01-teoria/nlp-deep-learning-ud4/nlp-docs/002-NLP-Embeddings.md": {
+    "mtime": 1782255140.5655031,
+    "seen": 1792438050.752392,
+    "ast_hash": "707f70056d8a4ec1c08bae4043b6bcc5",
+    "semantic_hash": "707f70056d8a4ec1c08bae4043b6bcc5"
+  },
+  "06-llm-agentes/01-teoria/nlp-deep-learning-ud4/nlp-docs/003-spacy-guia.md": {
+    "mtime": 1782993273.806807,
+    "seen": 1787097079.25148,
+    "ast_hash": "24a5f5194aaa89585d50771e4204f459",
+    "semantic_hash": "24a5f5194aaa89585d50771e4204f459"
+  },
+  "06-llm-agentes/01-teoria/nlp-deep-learning-ud4/nlp-docs/NLP-nuevo/NLP_01_Introduccion.md": {
+    "mtime": 1782255140.5716562,
+    "seen": 1792438050.7523956,
+    "ast_hash": "0e34b7b5143960bc8026d765f9214311",
+    "semantic_hash": "0e34b7b5143960bc8026d765f9214311"
+  },
+  "06-llm-agentes/01-teoria/nlp-deep-learning-ud4/nlp-docs/NLP-nuevo/NLP_02_DeepLearning.md": {
+    "mtime": 1782255140.5749164,
+    "seen": 1792438050.752397,
+    "ast_hash": "2f0f8eaae8ad7039b8ec9c76a5984af0",
+    "semantic_hash": "2f0f8eaae8ad7039b8ec9c76a5984af0"
+  },
+  "06-llm-agentes/01-teoria/nlp-deep-learning-ud4/nlp-docs/NLP-nuevo/NLP_03_BERT.md": {
+    "mtime": 1782255140.5781357,
+    "seen": 1792438050.7523983,
+    "ast_hash": "e8a24130bbc94c635e1c3ba621092ee6",
+    "semantic_hash": "e8a24130bbc94c635e1c3ba621092ee6"
+  },
+  "06-llm-agentes/01-teoria/nlp-deep-learning-ud4/nlp-docs/NLP-nuevo/NLP_04_PRO.md": {
+    "mtime": 1782255140.5810378,
+    "seen": 1792438050.7524,
+    "ast_hash": "3170e68b5cf147e60eb7a37b234883a6",
+    "semantic_hash": "3170e68b5cf147e60eb7a37b234883a6"
+  },
+  "06-llm-agentes/01-teoria/nlp-deep-learning-ud4/nlp-docs/NLP-nuevo/NLP_05_PRO.md": {
+    "mtime": 1782255140.5841296,
+    "seen": 1792438050.7524014,
+    "ast_hash": "e122ee4a7b7e270f7d47de3826e34f29",
+    "semantic_hash": "e122ee4a7b7e270f7d47de3826e34f29"
+  },
+  "06-llm-agentes/01-teoria/nlp-deep-learning-ud4/nlp-docs/NLP-nuevo/demo_embeddings.md": {
+    "mtime": 1782255140.5684822,
+    "seen": 1792438050.752403,
+    "ast_hash": "b5015238b362f7c876046bec396a5e29",
+    "semantic_hash": "b5015238b362f7c876046bec396a5e29"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-spacy-ud4/README.md": {
+    "mtime": 1783010679.504446,
+    "seen": 1787097079.2514873,
+    "ast_hash": "0f08c5bdeb0fa479d55b73c8c788dd6b",
+    "semantic_hash": "0f08c5bdeb0fa479d55b73c8c788dd6b"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/docs/003-Transformers-1-EstructuraGeneral.md": {
+    "mtime": 1782255189.9262152,
+    "seen": 1792438050.7524061,
+    "ast_hash": "2856a57f83dc508dbde77582550149f3",
+    "semantic_hash": "2856a57f83dc508dbde77582550149f3"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/docs/003-Transformers-2-Anexo-CabezasAtencion.md": {
+    "mtime": 1782255189.9306889,
+    "seen": 1792438050.7524076,
+    "ast_hash": "308124f8f00a034d42b20b45507f03b2",
+    "semantic_hash": "308124f8f00a034d42b20b45507f03b2"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/docs/003-Transformers-2-Atencion.md": {
+    "mtime": 1782255189.946995,
+    "seen": 1792438050.7524087,
+    "ast_hash": "777ad73c55e66658a4de0fa125e43aa6",
+    "semantic_hash": "777ad73c55e66658a4de0fa125e43aa6"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/docs/003-Transformers-3-CodificacionPosicional.md": {
+    "mtime": 1782255189.9505014,
+    "seen": 1792438050.7524104,
+    "ast_hash": "6066edf534a5459906232ce31078fd1a",
+    "semantic_hash": "6066edf534a5459906232ce31078fd1a"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/docs/003-Transformers-4-AtencionEnmascarada.md": {
+    "mtime": 1782255189.9571009,
+    "seen": 1792438050.7524118,
+    "ast_hash": "f14646e5757fe0626ff1103ed6f21b7c",
+    "semantic_hash": "f14646e5757fe0626ff1103ed6f21b7c"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/docs/003-Transformers-5-AtencionEncoderDecoder.md": {
+    "mtime": 1782255189.9605484,
+    "seen": 1792438050.7524135,
+    "ast_hash": "96bd73c73cefe3774a3734a58859b146",
+    "semantic_hash": "96bd73c73cefe3774a3734a58859b146"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/docs/003-Transformers-6-AtencionMulticabez-Proyeccion.md": {
+    "mtime": 1782255189.9638858,
+    "seen": 1792438050.752415,
+    "ast_hash": "c31b6eef12bb8ab6583732fd9eec932a",
+    "semantic_hash": "c31b6eef12bb8ab6583732fd9eec932a"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/docs/003-Transformers-7-ComparativaLSTM_GRU.md": {
+    "mtime": 1782255189.9736423,
+    "seen": 1792438050.7524166,
+    "ast_hash": "057f745dfcbbc4f06fe45d4cd595a518",
+    "semantic_hash": "057f745dfcbbc4f06fe45d4cd595a518"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/docs/003-Transformers-8-VariantesYFamilias.md": {
+    "mtime": 1782255189.9772153,
+    "seen": 1792438050.752418,
+    "ast_hash": "e44002bb9b0ea9914c2586ab98859963",
+    "semantic_hash": "e44002bb9b0ea9914c2586ab98859963"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/docs/003-Transformers-9-ArquitecturasAlternativas.md": {
+    "mtime": 1782255189.9813385,
+    "seen": 1792438050.7524192,
+    "ast_hash": "7bf5570f0158e7d6ad4d223f2ae1821a",
+    "semantic_hash": "7bf5570f0158e7d6ad4d223f2ae1821a"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/docs/Tarea-Transformer-Portado.md": {
+    "mtime": 1782255190.0272985,
+    "seen": 1792438050.7524207,
+    "ast_hash": "5c1775aa67890898a750def4f56e8b26",
+    "semantic_hash": "5c1775aa67890898a750def4f56e8b26"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/docs/sesionInicialGemma4.md": {
+    "mtime": 1782255190.0268302,
+    "seen": 1792438050.752422,
+    "ast_hash": "4016e90ad921a9d1366cf4420f260e57",
+    "semantic_hash": "4016e90ad921a9d1366cf4420f260e57"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/scripts/003-Transformers-10-EjemploTraduccion.md": {
+    "mtime": 1782255190.77058,
+    "seen": 1787097079.2515016,
+    "ast_hash": "bf7156417ee14bb64aa01550fb80a70e",
+    "semantic_hash": "bf7156417ee14bb64aa01550fb80a70e"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/scripts/003-Transformers-11-EjemploGeneracionDecoderOnly.md": {
+    "mtime": 1782255190.773931,
+    "seen": 1787097079.2515025,
+    "ast_hash": "c4815d01f8b986ec0248a0f24e900488",
+    "semantic_hash": "c4815d01f8b986ec0248a0f24e900488"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/scripts/003-Transformers-12-EjemploReformulacion.md": {
+    "mtime": 1782255190.7773516,
+    "seen": 1792438050.7524276,
+    "ast_hash": "0240a096ca1e6d54283c645e2b15306d",
+    "semantic_hash": "0240a096ca1e6d54283c645e2b15306d"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/scripts/003-Transformers-13-EjemploEncoderOnlyClasificacion.md": {
+    "mtime": 1782255190.7807753,
+    "seen": 1792438050.7524288,
+    "ast_hash": "fc3a11ea15fe90ba8e3110c843a7a25e",
+    "semantic_hash": "fc3a11ea15fe90ba8e3110c843a7a25e"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/scripts/003-Transformers-14-TablaComparativaEjemplos.md": {
+    "mtime": 1782255190.7811344,
+    "seen": 1792438050.7524304,
+    "ast_hash": "c987102c2d91be72138b2da6f72d168e",
+    "semantic_hash": "c987102c2d91be72138b2da6f72d168e"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/scripts/003-Transformers-Anexo-LecturaGuiada-PyTorch.md": {
+    "mtime": 1782255190.7845306,
+    "seen": 1792438050.7524319,
+    "ast_hash": "87b959c968b8a1d79882cfeaf2225916",
+    "semantic_hash": "87b959c968b8a1d79882cfeaf2225916"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/scripts/poda_pytorch.md": {
+    "mtime": 1782255190.8021278,
+    "seen": 1792438050.7524333,
+    "ast_hash": "021cb82ae703e6df46c96766a8d0a5f7",
+    "semantic_hash": "021cb82ae703e6df46c96766a8d0a5f7"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/tareas/003-Tarea-Transformers-PyTorch-Entrega.md": {
+    "mtime": 1782255190.8029222,
+    "seen": 1792438050.752435,
+    "ast_hash": "8369c432c251430e58412148083d6351",
+    "semantic_hash": "8369c432c251430e58412148083d6351"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/tareas/003-Tarea-Transformers-PyTorch.md": {
+    "mtime": 1782255190.8066502,
+    "seen": 1792438050.7524362,
+    "ast_hash": "2a60cc64e08500819ec61b9ca8055811",
+    "semantic_hash": "2a60cc64e08500819ec61b9ca8055811"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/tareas/004-Tarea-Transformer-Ampliar-Entrega.md": {
+    "mtime": 1782255190.8070188,
+    "seen": 1792438050.7524378,
+    "ast_hash": "f665666a1c339cebb235a5ea93228c18",
+    "semantic_hash": "f665666a1c339cebb235a5ea93228c18"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/tareas/004-Tarea-Transformer-Ampliar.md": {
+    "mtime": 1782255190.8095589,
+    "seen": 1792438050.7524393,
+    "ast_hash": "54ea20c1f8909d5a863aaf0535436262",
+    "semantic_hash": "54ea20c1f8909d5a863aaf0535436262"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/tareas/005-Tarea-Transformer-Portado-Entrega.md": {
+    "mtime": 1782255190.809935,
+    "seen": 1787097079.251513,
+    "ast_hash": "993d96a3fb67fcd57da851604a3e5063",
+    "semantic_hash": "993d96a3fb67fcd57da851604a3e5063"
+  },
+  "06-llm-agentes/02-ejemplos/nlp-transformers-ud4/tareas/005-Tarea-Transformer-Portado.md": {
+    "mtime": 1782255190.812563,
+    "seen": 1787097079.2515142,
+    "ast_hash": "5c1775aa67890898a750def4f56e8b26",
+    "semantic_hash": "5c1775aa67890898a750def4f56e8b26"
+  },
+  "06-llm-agentes/03-practicas/nlp-tareas-ud4/USO_EXPORTACION.md": {
+    "mtime": 1782255193.5392146,
+    "seen": 1792438050.7524443,
+    "ast_hash": "15516223fb537f7c97aa034d586ac804",
+    "semantic_hash": "15516223fb537f7c97aa034d586ac804"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/00-guia-serving-orquestacion.md": {
+    "mtime": 1783033719.7535703,
+    "seen": 1792438050.7524457,
+    "ast_hash": "72e209534e7e7211e494b095aaf1ae5c",
+    "semantic_hash": "72e209534e7e7211e494b095aaf1ae5c"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/Documentacion/DSPy_Documentacion.md": {
+    "mtime": 1782255205.9465797,
+    "seen": 1792438050.7524471,
+    "ast_hash": "d4706eee7ae92711dca01f7b54bdfef9",
+    "semantic_hash": "d4706eee7ae92711dca01f7b54bdfef9"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/Documentacion/Documentacion_Notebooks.md": {
+    "mtime": 1782993273.866807,
+    "seen": 1787097079.2515182,
+    "ast_hash": "9d21ada469b5c42a76bc4852a9c818a9",
+    "semantic_hash": "9d21ada469b5c42a76bc4852a9c818a9"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/Documentacion/FastAPI_Documentacion.md": {
+    "mtime": 1782255205.946943,
+    "seen": 1792438050.7524505,
+    "ast_hash": "64a1f4f8bee16a21441a30ee282e7e7e",
+    "semantic_hash": "64a1f4f8bee16a21441a30ee282e7e7e"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/Documentacion/Gradio_Documentacion.md": {
+    "mtime": 1782255205.947289,
+    "seen": 1792438050.7524524,
+    "ast_hash": "080148fe5a65452080adcdababa83e30",
+    "semantic_hash": "080148fe5a65452080adcdababa83e30"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/Documentacion/Herramientas_IA_Programacion.md": {
+    "mtime": 1782255205.947652,
+    "seen": 1787097079.2515216,
+    "ast_hash": "867149bcc6eb4532f6ebed887b6da1bd",
+    "semantic_hash": "867149bcc6eb4532f6ebed887b6da1bd"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/Documentacion/LangChain_Documentacion.md": {
+    "mtime": 1782255205.9480164,
+    "seen": 1792438050.752456,
+    "ast_hash": "b4ea757d0e107137ff0fa75b8b43ea17",
+    "semantic_hash": "b4ea757d0e107137ff0fa75b8b43ea17"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/Documentacion/LangGraph_Documentacion.md": {
+    "mtime": 1782255205.9482124,
+    "seen": 1792438050.7524574,
+    "ast_hash": "d25c5cbb16e3ab4a2622177f956f1b99",
+    "semantic_hash": "d25c5cbb16e3ab4a2622177f956f1b99"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/Documentacion/LlamaIndex_Documentacion.md": {
+    "mtime": 1782255205.9508915,
+    "seen": 1792438050.752459,
+    "ast_hash": "795f53f0bc77739e786e6438560aa0b7",
+    "semantic_hash": "795f53f0bc77739e786e6438560aa0b7"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/Documentacion/MLflow_Documentacion.md": {
+    "mtime": 1782255205.9557981,
+    "seen": 1792438050.7524605,
+    "ast_hash": "157f3e8ea84dd8c4dd6945f971d4e4d5",
+    "semantic_hash": "157f3e8ea84dd8c4dd6945f971d4e4d5"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/Documentacion/Ollama_Documentacion.md": {
+    "mtime": 1782255205.9561687,
+    "seen": 1792438050.7524621,
+    "ast_hash": "55698e0f6d3808e8240cadb3197a9ca2",
+    "semantic_hash": "55698e0f6d3808e8240cadb3197a9ca2"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/Fase1/guia-fase1.md": {
+    "mtime": 1783033719.753765,
+    "seen": 1787097079.251528,
+    "ast_hash": "5e16e0119b16a7d4f37b548d0b2190d5",
+    "semantic_hash": "5e16e0119b16a7d4f37b548d0b2190d5"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/Fase2/guia-fase2.md": {
+    "mtime": 1783033719.7540648,
+    "seen": 1792438050.7524652,
+    "ast_hash": "42655090dbc52a400abd34d4137325d0",
+    "semantic_hash": "42655090dbc52a400abd34d4137325d0"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/SESION_CONTINUAR.md": {
+    "mtime": 1783010745.9655035,
+    "seen": 1792438050.752467,
+    "ast_hash": "ff98cee2724e4300a967f5d5a322a419",
+    "semantic_hash": "ff98cee2724e4300a967f5d5a322a419"
+  },
+  "06-llm-agentes/03-practicas/serving-orquestacion/SESION_SIGUIENTE_CURSO.md": {
+    "mtime": 1782255205.970826,
+    "seen": 1792438050.752468,
+    "ast_hash": "e156382e3fe50c490469ccb3946914e7",
+    "semantic_hash": "e156382e3fe50c490469ccb3946914e7"
+  },
+  "06-llm-agentes/04-evaluacion/README.md": {
+    "mtime": 1785539752.6519942,
+    "seen": 1792438050.75247,
+    "ast_hash": "8d28c30a7c0b8fffaebf91bd3aad58f2",
+    "semantic_hash": "8d28c30a7c0b8fffaebf91bd3aad58f2"
+  },
+  "06-llm-agentes/04-evaluacion/checklist-entrega.md": {
+    "mtime": 1783021004.3811312,
+    "seen": 1792438050.7524714,
+    "ast_hash": "22609b0b87434af21f3b17e59b715dd4",
+    "semantic_hash": "22609b0b87434af21f3b17e59b715dd4"
+  },
+  "06-llm-agentes/04-evaluacion/rubrica.md": {
+    "mtime": 1782759466.2184153,
+    "seen": 1792438050.7524729,
+    "ast_hash": "a73acef20f7db91b5bdef1665d0d8776",
+    "semantic_hash": "a73acef20f7db91b5bdef1665d0d8776"
+  },
+  "06-llm-agentes/05-recursos/mcp-refuerzo/00-test-inicial-mcp.md": {
+    "mtime": 1782564620.0331004,
+    "seen": 1792438050.7524743,
+    "ast_hash": "3d4adf9bc8fb446850b50a1aaa04a155",
+    "semantic_hash": "3d4adf9bc8fb446850b50a1aaa04a155"
+  },
+  "06-llm-agentes/05-recursos/mcp-refuerzo/README.md": {
+    "mtime": 1782564620.0338523,
+    "seen": 1792438050.7524757,
+    "ast_hash": "f04ef011d91c23734ad34d6643677220",
+    "semantic_hash": "f04ef011d91c23734ad34d6643677220"
+  },
+  "06-llm-agentes/05-recursos/mcp-refuerzo/requirements.txt": {
+    "mtime": 1782564620.0342007,
+    "seen": 1792438050.7524772,
+    "ast_hash": "f95b249ed6cbdf478eb0d0001dcae393",
+    "semantic_hash": "f95b249ed6cbdf478eb0d0001dcae393"
+  },
+  "06-llm-agentes/05-recursos/nlp-datos-ud4/el_quijote.txt": {
+    "mtime": 1782255195.7352142,
+    "seen": 1792438050.7524788,
+    "ast_hash": "a11a03ab70fead939d3842c3d5a8bb64",
+    "semantic_hash": "a11a03ab70fead939d3842c3d5a8bb64"
+  },
+  "06-llm-agentes/README.md": {
+    "mtime": 1785539752.4959943,
+    "seen": 1792438050.7524817,
+    "ast_hash": "0e25591c48b7c6578c681c5ea8949623",
+    "semantic_hash": "0e25591c48b7c6578c681c5ea8949623"
+  },
+  "07-convergencia-herramientas/01-teoria/00_RA_CE_UD7.md": {
+    "mtime": 1782255205.9743152,
+    "seen": 1792438050.7524834,
+    "ast_hash": "0af7c0773655ce06268520790384fe0f",
+    "semantic_hash": "0af7c0773655ce06268520790384fe0f"
+  },
+  "07-convergencia-herramientas/01-teoria/01_gap_produccion.md": {
+    "mtime": 1782278489.1181462,
+    "seen": 1792438050.7524848,
+    "ast_hash": "d3f58b7d8dd38d266101956822d48c4c",
+    "semantic_hash": "d3f58b7d8dd38d266101956822d48c4c"
+  },
+  "07-convergencia-herramientas/01-teoria/02_desarrollo_asistido.md": {
+    "mtime": 1782255205.9842124,
+    "seen": 1792438050.7524862,
+    "ast_hash": "1d15f8b085ff43d55cbc38102b866690",
+    "semantic_hash": "1d15f8b085ff43d55cbc38102b866690"
+  },
+  "07-convergencia-herramientas/01-teoria/03_pipeline_datos.md": {
+    "mtime": 1782255205.9855123,
+    "seen": 1792438050.7524877,
+    "ast_hash": "22da4e3304f9bf03db43e4a21f93b5b8",
+    "semantic_hash": "22da4e3304f9bf03db43e4a21f93b5b8"
+  },
+  "07-convergencia-herramientas/01-teoria/04_experimentacion_mlflow.md": {
+    "mtime": 1782255205.9859467,
+    "seen": 1792438050.7524893,
+    "ast_hash": "e1e0d6d510ab9ed8776092edffcfa141",
+    "semantic_hash": "e1e0d6d510ab9ed8776092edffcfa141"
+  },
+  "07-convergencia-herramientas/01-teoria/05_orquestacion_prefect.md": {
+    "mtime": 1782255205.986334,
+    "seen": 1787097079.251546,
+    "ast_hash": "4f7334d329d0aa74cb3f44d20f1fb036",
+    "semantic_hash": "4f7334d329d0aa74cb3f44d20f1fb036"
+  },
+  "07-convergencia-herramientas/01-teoria/06_serving_apis.md": {
+    "mtime": 1782255205.9867144,
+    "seen": 1792438050.7524924,
+    "ast_hash": "6872239ce55e90462cbec7040a04e74d",
+    "semantic_hash": "6872239ce55e90462cbec7040a04e74d"
+  },
+  "07-convergencia-herramientas/01-teoria/07_agentes_rag.md": {
+    "mtime": 1782255205.9870763,
+    "seen": 1792438050.752494,
+    "ast_hash": "221fe106a3e2617855d5db47eca957d7",
+    "semantic_hash": "221fe106a3e2617855d5db47eca957d7"
+  },
+  "07-convergencia-herramientas/01-teoria/08_observabilidad.md": {
+    "mtime": 1782255205.9874918,
+    "seen": 1792438050.7524953,
+    "ast_hash": "4928454ab80b21462b3c158efb1115db",
+    "semantic_hash": "4928454ab80b21462b3c158efb1115db"
+  },
+  "07-convergencia-herramientas/01-teoria/09_ia_responsable.md": {
+    "mtime": 1782255205.9878886,
+    "seen": 1792438050.752497,
+    "ast_hash": "be11a65f4d6962f4d12333800fbbb3db",
+    "semantic_hash": "be11a65f4d6962f4d12333800fbbb3db"
+  },
+  "07-convergencia-herramientas/01-teoria/10_stack_convergente.md": {
+    "mtime": 1785566956.483192,
+    "seen": 1792438050.7524981,
+    "ast_hash": "c524e5fce6626164470bab54fff9ecb4",
+    "semantic_hash": "c524e5fce6626164470bab54fff9ecb4"
+  },
+  "07-convergencia-herramientas/04-evaluacion/README.md": {
+    "mtime": 1782909625.7183113,
+    "seen": 1792438050.7524998,
+    "ast_hash": "8d650a18b90decbcd92d40468298bf7a",
+    "semantic_hash": "8d650a18b90decbcd92d40468298bf7a"
+  },
+  "07-convergencia-herramientas/04-evaluacion/criterios_evaluacion.md": {
+    "mtime": 1783422071.3547978,
+    "seen": 1792438050.7525012,
+    "ast_hash": "a30077d088ee3352e9060611b93bc9d1",
+    "semantic_hash": "a30077d088ee3352e9060611b93bc9d1"
+  },
+  "07-convergencia-herramientas/04-evaluacion/rubrica_proyecto.md": {
+    "mtime": 1783422071.355035,
+    "seen": 1787097079.2515547,
+    "ast_hash": "28dbe2231250887f917f53bf7d2c9392",
+    "semantic_hash": "28dbe2231250887f917f53bf7d2c9392"
+  },
+  "07-convergencia-herramientas/05-recursos/cheatsheet_stack_convergente.md": {
+    "mtime": 1782278489.130083,
+    "seen": 1787097079.251556,
+    "ast_hash": "eaa3078fa3405b79c46be37ad52239e1",
+    "semantic_hash": "eaa3078fa3405b79c46be37ad52239e1"
+  },
+  "07-convergencia-herramientas/05-recursos/enlaces_referencia.md": {
+    "mtime": 1782278489.1307485,
+    "seen": 1792438050.7525063,
+    "ast_hash": "1b82540f3b0ba5cfbc4e3b3c6f9df95d",
+    "semantic_hash": "1b82540f3b0ba5cfbc4e3b3c6f9df95d"
+  },
+  "07-convergencia-herramientas/README.md": {
+    "mtime": 1783422029.4385722,
+    "seen": 1792438050.7525094,
+    "ast_hash": "a28779e2b04420e4a4e2ac7ae12e8e84",
+    "semantic_hash": "a28779e2b04420e4a4e2ac7ae12e8e84"
+  },
+  "08-vision-xai/01-teoria/00-indice-vision-xai.md": {
+    "mtime": 1782993273.806807,
+    "seen": 1787097079.2515597,
+    "ast_hash": "f726e90a46733cac10fa2eb726c21749",
+    "semantic_hash": "f726e90a46733cac10fa2eb726c21749"
+  },
+  "08-vision-xai/01-teoria/01-segmentacion-imagenes.md": {
+    "mtime": 1782672949.0352523,
+    "seen": 1792438050.7525127,
+    "ast_hash": "97ab567cbf8eefb25979db6c81bb02c8",
+    "semantic_hash": "97ab567cbf8eefb25979db6c81bb02c8"
+  },
+  "08-vision-xai/01-teoria/02-tracking-objetos.md": {
+    "mtime": 1782672959.876254,
+    "seen": 1787097079.2515616,
+    "ast_hash": "744825d8336fe6506bc9f1b8a6aaa875",
+    "semantic_hash": "744825d8336fe6506bc9f1b8a6aaa875"
+  },
+  "08-vision-xai/01-teoria/03-explicabilidad-xai.md": {
+    "mtime": 1782672973.3082564,
+    "seen": 1792438050.752516,
+    "ast_hash": "ed645f1a8de6e81251dbe7c2a7b678db",
+    "semantic_hash": "ed645f1a8de6e81251dbe7c2a7b678db"
+  },
+  "08-vision-xai/01-teoria/README.md": {
+    "mtime": 1782672982.842258,
+    "seen": 1792438050.7525175,
+    "ast_hash": "4e479d76a8035df3cae781c9e279dbc4",
+    "semantic_hash": "4e479d76a8035df3cae781c9e279dbc4"
+  },
+  "08-vision-xai/01-teoria/deep-learning-desde-ud4/Datasets_para_vision_y_transfer_learning.md": {
+    "mtime": 1782255139.5118454,
+    "seen": 1792438050.7525191,
+    "ast_hash": "bf128a30e2420141f31d6b28e31eb7a0",
+    "semantic_hash": "bf128a30e2420141f31d6b28e31eb7a0"
+  },
+  "08-vision-xai/01-teoria/deep-learning-desde-ud4/Keras_vs_PyTorch_en_vision.md": {
+    "mtime": 1782255139.5122259,
+    "seen": 1792438050.752521,
+    "ast_hash": "1c3f2ee539e6ede86104a752b0065792",
+    "semantic_hash": "1c3f2ee539e6ede86104a752b0065792"
+  },
+  "08-vision-xai/01-teoria/deep-learning-desde-ud4/RedesConvolucionales.md": {
+    "mtime": 1782255139.5154788,
+    "seen": 1792438050.7525222,
+    "ast_hash": "525190846689ec75934f4fa9b23d3dc3",
+    "semantic_hash": "525190846689ec75934f4fa9b23d3dc3"
+  },
+  "08-vision-xai/01-teoria/deep-learning-desde-ud4/tf_df_imgs.md": {
+    "mtime": 1782255139.517867,
+    "seen": 1787097079.2515686,
+    "ast_hash": "c65e1d6d98fb964ff0d6c449c8e80c44",
+    "semantic_hash": "c65e1d6d98fb964ff0d6c449c8e80c44"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/00-VisionArtificialClasica.md": {
+    "mtime": 1782255140.6442235,
+    "seen": 1792438050.7525256,
+    "ast_hash": "694d646397a16def53c44c7f2f007785",
+    "semantic_hash": "694d646397a16def53c44c7f2f007785"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/002-ud4_cnn_y_evolucion_modelos.md": {
+    "mtime": 1782255140.6448267,
+    "seen": 1792438050.752527,
+    "ast_hash": "1287b80b9e8610935a46fe5eef93d775",
+    "semantic_hash": "1287b80b9e8610935a46fe5eef93d775"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/01-CNN.md": {
+    "mtime": 1782255140.6464934,
+    "seen": 1792438050.7525287,
+    "ast_hash": "9c06d773df9f8172351fddb3e47257ab",
+    "semantic_hash": "9c06d773df9f8172351fddb3e47257ab"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/88_ud4_EcosistemaDeepLearning2026.md": {
+    "mtime": 1782255140.733231,
+    "seen": 1787097079.2515733,
+    "ast_hash": "3841827f3ad1af5eb980f539db6b37f4",
+    "semantic_hash": "3841827f3ad1af5eb980f539db6b37f4"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/cats_and_dogs_filtered/readme[1].txt": {
+    "mtime": 1782255189.0021968,
+    "seen": 1792438050.7525325,
+    "ast_hash": "2d35b1b3693a9856bbb24a6af2d88823",
+    "semantic_hash": "2d35b1b3693a9856bbb24a6af2d88823"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/el_quijote.txt": {
+    "mtime": 1782255189.0052154,
+    "seen": 1792438050.752534,
+    "ast_hash": "a11a03ab70fead939d3842c3d5a8bb64",
+    "semantic_hash": "a11a03ab70fead939d3842c3d5a8bb64"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/environment.yml": {
+    "mtime": 1782255189.008137,
+    "seen": 1792438050.7525356,
+    "ast_hash": "3a36bfdf579e44fc49a9ede8042053d5",
+    "semantic_hash": "3a36bfdf579e44fc49a9ede8042053d5"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/00-README.md": {
+    "mtime": 1782255189.014875,
+    "seen": 1792438050.752537,
+    "ast_hash": "39e38480e23127bee6bb8083a6a4333f",
+    "semantic_hash": "39e38480e23127bee6bb8083a6a4333f"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/00-Sesion_chat.md": {
+    "mtime": 1782255189.0152366,
+    "seen": 1792438050.7525387,
+    "ast_hash": "69e5cb36554867e830204b6997d37f95",
+    "semantic_hash": "69e5cb36554867e830204b6997d37f95"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/00-Tabla_Comparativa_Ejemplos.md": {
+    "mtime": 1782255189.015617,
+    "seen": 1792438050.75254,
+    "ast_hash": "1db2459cf03aa99d70f0acd7e310b275",
+    "semantic_hash": "1db2459cf03aa99d70f0acd7e310b275"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/01-Practica_Comparativa.md": {
+    "mtime": 1782255189.015981,
+    "seen": 1792438050.7525418,
+    "ast_hash": "b37f16524427f019d15fefcd66298150",
+    "semantic_hash": "b37f16524427f019d15fefcd66298150"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/02-Plantilla_Informe.md": {
+    "mtime": 1782255189.0164711,
+    "seen": 1792438050.7525432,
+    "ast_hash": "397b1129d7054738865bc2f046b827e6",
+    "semantic_hash": "397b1129d7054738865bc2f046b827e6"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/03-Librerias_SSM_LFM.md": {
+    "mtime": 1782255189.0192628,
+    "seen": 1792438050.7525449,
+    "ast_hash": "1f970e630e36afc22cc143e92f024b55",
+    "semantic_hash": "1f970e630e36afc22cc143e92f024b55"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/88_ud4_LiquidFoundationModel.md": {
+    "mtime": 1782255189.0196555,
+    "seen": 1792438050.7525463,
+    "ast_hash": "000e1a255ad2999643d4bd74ff9be144",
+    "semantic_hash": "000e1a255ad2999643d4bd74ff9be144"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/Arquitecturas_comparativa.md": {
+    "mtime": 1783021553.0229602,
+    "seen": 1792438050.752548,
+    "ast_hash": "4bb0d9ddd5e05e3a3c41a13469daa0fc",
+    "semantic_hash": "4bb0d9ddd5e05e3a3c41a13469daa0fc"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/LFM_version_alumno.md": {
+    "mtime": 1782255189.029996,
+    "seen": 1792438050.75255,
+    "ast_hash": "b86e8463b539e870cdae4d7fc2fa9c5e",
+    "semantic_hash": "b86e8463b539e870cdae4d7fc2fa9c5e"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/Mamba_version_alumno.md": {
+    "mtime": 1782255189.042904,
+    "seen": 1792438050.752551,
+    "ast_hash": "283cc5deaa32c187ecc57922e02b887a",
+    "semantic_hash": "283cc5deaa32c187ecc57922e02b887a"
+  },
+  "08-vision-xai/01-teoria/redes-neuronales-vision-ud4/vision-teoria/modelos_alternativos/RWKV_version_alumno.md": {
+    "mtime": 1782255189.0472944,
+    "seen": 1792438050.752553,
+    "ast_hash": "f4791afea28f890f41e1720de9222d83",
+    "semantic_hash": "f4791afea28f890f41e1720de9222d83"
+  },
+  "08-vision-xai/02-ejemplos/00-guia-segmentacion.md": {
+    "mtime": 1782993273.820807,
+    "seen": 1787097079.2515898,
+    "ast_hash": "0eef7a16e0bf8d75328b7dc8c7d0e52c",
+    "semantic_hash": "0eef7a16e0bf8d75328b7dc8c7d0e52c"
+  },
+  "08-vision-xai/03-practicas/00-guia-tracking.md": {
+    "mtime": 1782993273.827807,
+    "seen": 1787097079.251591,
+    "ast_hash": "3717c1ad44f9afb28b1e6d77fb3a047b",
+    "semantic_hash": "3717c1ad44f9afb28b1e6d77fb3a047b"
+  },
+  "08-vision-xai/03-practicas/00-guia-xai.md": {
+    "mtime": 1782993273.847807,
+    "seen": 1787097079.251592,
+    "ast_hash": "e8bda61bbc01d1ea98cb234fa42582c7",
+    "semantic_hash": "e8bda61bbc01d1ea98cb234fa42582c7"
+  },
+  "08-vision-xai/03-practicas/modelado-notebooks-vision-ud4/transfer-learning/README.md": {
+    "mtime": 1783185508.5419292,
+    "seen": 1792438050.7525604,
+    "ast_hash": "846170193976cf8c26507a3223a81e72",
+    "semantic_hash": "846170193976cf8c26507a3223a81e72"
+  },
+  "08-vision-xai/03-practicas/vision-tareas-ud4/CompeticiionVision-DeepL.md": {
+    "mtime": 1782255195.5582538,
+    "seen": 1792438050.7525618,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "08-vision-xai/03-practicas/vision-tareas-ud4/Vision_ordenador_entrega_Clase1.md": {
+    "mtime": 1782255195.5656693,
+    "seen": 1792438050.752564,
+    "ast_hash": "c67886d811c85dd2fa88182a50ac9541",
+    "semantic_hash": "c67886d811c85dd2fa88182a50ac9541"
+  },
+  "08-vision-xai/03-practicas/vision-tareas-ud4/chihuahua_vs_muffin_challenge_pack/Muffin_vs_Chihuahua_Entrega.md": {
+    "mtime": 1782255195.5558639,
+    "seen": 1792438050.752567,
+    "ast_hash": "83844c3d52e031a6c0b5a6701fce0f86",
+    "semantic_hash": "83844c3d52e031a6c0b5a6701fce0f86"
+  },
+  "08-vision-xai/03-practicas/vision-tareas-ud4/chihuahua_vs_muffin_challenge_pack/enunciado_chihuahua_vs_muffin.md": {
+    "mtime": 1782255195.5545766,
+    "seen": 1792438050.7525687,
+    "ast_hash": "0bb4a69a442509b53148a05f18e8b39f",
+    "semantic_hash": "0bb4a69a442509b53148a05f18e8b39f"
+  },
+  "08-vision-xai/03-practicas/vision-tareas-ud4/chihuahua_vs_muffin_challenge_pack/niveles_dificultad.md": {
+    "mtime": 1782255195.5562303,
+    "seen": 1792438050.7525704,
+    "ast_hash": "e5d435bc8b88258533dc6337133b8249",
+    "semantic_hash": "e5d435bc8b88258533dc6337133b8249"
+  },
+  "08-vision-xai/03-practicas/vision-tareas-ud4/chihuahua_vs_muffin_challenge_pack/propuesta_duracion.md": {
+    "mtime": 1782255195.5570388,
+    "seen": 1792438050.7525718,
+    "ast_hash": "c52bc91ca07b469e9eb74563807f3ea4",
+    "semantic_hash": "c52bc91ca07b469e9eb74563807f3ea4"
+  },
+  "08-vision-xai/03-practicas/vision-tareas-ud4/chihuahua_vs_muffin_challenge_pack/rubrica_chihuahua_vs_muffin.md": {
+    "mtime": 1782255195.5572143,
+    "seen": 1792438050.7525733,
+    "ast_hash": "40fa82839271dbc04e6f598aec9985ea",
+    "semantic_hash": "40fa82839271dbc04e6f598aec9985ea"
+  },
+  "08-vision-xai/03-practicas/vision-tareas-ud4/chihuahua_vs_muffin_challenge_pack/trucos_docencia_challenge.md": {
+    "mtime": 1782255195.5578346,
+    "seen": 1792438050.7525747,
+    "ast_hash": "cdecccb90bf34fe285f81b782480ed97",
+    "semantic_hash": "cdecccb90bf34fe285f81b782480ed97"
+  },
+  "08-vision-xai/03-practicas/vision-tareas-ud4/fase2_transfer_learning_pack/entrega.md": {
+    "mtime": 1782255195.5590155,
+    "seen": 1792438050.7525764,
+    "ast_hash": "52cf92e3b0325bf95470a79e4cc47347",
+    "semantic_hash": "52cf92e3b0325bf95470a79e4cc47347"
+  },
+  "08-vision-xai/03-practicas/vision-tareas-ud4/fase2_transfer_learning_pack/enunciado.md": {
+    "mtime": 1782255195.5617325,
+    "seen": 1792438050.7525778,
+    "ast_hash": "a93b72333595efae9072a30508c6faf9",
+    "semantic_hash": "a93b72333595efae9072a30508c6faf9"
+  },
+  "08-vision-xai/03-practicas/vision-tareas-ud4/fase2_transfer_learning_pack/rubrica.md": {
+    "mtime": 1782255195.5632143,
+    "seen": 1792438050.7525797,
+    "ast_hash": "0be22646ffd6f6ac487f25425b6fcbac",
+    "semantic_hash": "0be22646ffd6f6ac487f25425b6fcbac"
+  },
+  "08-vision-xai/04-evaluacion/README.md": {
+    "mtime": 1785538479.1928668,
+    "seen": 1792438050.7525811,
+    "ast_hash": "d2e7d1184c9bfce760bbd69da09b977b",
+    "semantic_hash": "d2e7d1184c9bfce760bbd69da09b977b"
+  },
+  "08-vision-xai/04-evaluacion/checklist-entrega.md": {
+    "mtime": 1783021004.382235,
+    "seen": 1792438050.7525826,
+    "ast_hash": "cc54774398e008ae83aa01058ab2863a",
+    "semantic_hash": "cc54774398e008ae83aa01058ab2863a"
+  },
+  "08-vision-xai/04-evaluacion/rubrica.md": {
+    "mtime": 1782908040.1089454,
+    "seen": 1792438050.7525842,
+    "ast_hash": "c0f1a8f018240b45b307c2480590801f",
+    "semantic_hash": "c0f1a8f018240b45b307c2480590801f"
+  },
+  "08-vision-xai/05-recursos/recursos-vision-xai.md": {
+    "mtime": 1782672988.4502587,
+    "seen": 1792438050.7525856,
+    "ast_hash": "42d373d4ab5529f4ee3f726a41822a84",
+    "semantic_hash": "42d373d4ab5529f4ee3f726a41822a84"
+  },
+  "08-vision-xai/README.md": {
+    "mtime": 1785566956.650192,
+    "seen": 1787097079.2516105,
+    "ast_hash": "9a8854f7528edec191f5ea4953cff0ba",
+    "semantic_hash": "9a8854f7528edec191f5ea4953cff0ba"
+  },
+  "09-gpu-avanzado/01-teoria/00-guia-rapids-jax.md": {
+    "mtime": 1783033719.754284,
+    "seen": 1792438050.752589,
+    "ast_hash": "17afd651926f2b2b9eec3f56d2677491",
+    "semantic_hash": "17afd651926f2b2b9eec3f56d2677491"
+  },
+  "09-gpu-avanzado/01-teoria/01-rapids-cudf-cuml.md": {
+    "mtime": 1782937607.2199972,
+    "seen": 1792438050.7525907,
+    "ast_hash": "b2994e01e11e0f91f56a302dfbede556",
+    "semantic_hash": "b2994e01e11e0f91f56a302dfbede556"
+  },
+  "09-gpu-avanzado/01-teoria/02-jax-programacion-gpu.md": {
+    "mtime": 1782937607.2193482,
+    "seen": 1792438050.752592,
+    "ast_hash": "94b38ee8cae11e7172f43369b2be7d6a",
+    "semantic_hash": "94b38ee8cae11e7172f43369b2be7d6a"
+  },
+  "09-gpu-avanzado/01-teoria/03-benchmarks-optimizacion-gpu.md": {
+    "mtime": 1782937607.219659,
+    "seen": 1792438050.7525938,
+    "ast_hash": "26927ef3212b263164a6cfcfac24befe",
+    "semantic_hash": "26927ef3212b263164a6cfcfac24befe"
+  },
+  "09-gpu-avanzado/02-ejemplos/00-guia-ejemplos.md": {
+    "mtime": 1783033719.7544806,
+    "seen": 1792438050.7525952,
+    "ast_hash": "87e8d4efca3b202991b2b3069ab55293",
+    "semantic_hash": "87e8d4efca3b202991b2b3069ab55293"
+  },
+  "09-gpu-avanzado/03-practicas/00-guia-proyecto-gpu.md": {
+    "mtime": 1785566956.817192,
+    "seen": 1787097079.2516172,
+    "ast_hash": "6d6a2884cac9b2128d98307978b1f54f",
+    "semantic_hash": "6d6a2884cac9b2128d98307978b1f54f"
+  },
+  "09-gpu-avanzado/03-practicas/README.md": {
+    "mtime": 1785533709.0541742,
+    "seen": 1792438050.7525985,
+    "ast_hash": "1129f0a423d71163ce20ed67f6abb173",
+    "semantic_hash": "1129f0a423d71163ce20ed67f6abb173"
+  },
+  "09-gpu-avanzado/04-evaluacion/README.md": {
+    "mtime": 1785533171.4460773,
+    "seen": 1792438050.7526,
+    "ast_hash": "a4ed1492086ee00ddb287d8bdf109c13",
+    "semantic_hash": "a4ed1492086ee00ddb287d8bdf109c13"
+  },
+  "09-gpu-avanzado/04-evaluacion/checklist-entrega.md": {
+    "mtime": 1785533985.1512263,
+    "seen": 1792438050.7526016,
+    "ast_hash": "81d89c26634aa86733cbe747f369143b",
+    "semantic_hash": "81d89c26634aa86733cbe747f369143b"
+  },
+  "09-gpu-avanzado/04-evaluacion/rubrica.md": {
+    "mtime": 1785533985.3022263,
+    "seen": 1792438050.7526028,
+    "ast_hash": "646d2b88e37f3a7dbb95d81d909459d9",
+    "semantic_hash": "646d2b88e37f3a7dbb95d81d909459d9"
+  },
+  "09-gpu-avanzado/05-recursos/00-guia-presentacion-final.md": {
+    "mtime": 1782937607.3946466,
+    "seen": 1792438050.7526047,
+    "ast_hash": "a11aaecc68beee23fc11b55f28a44c16",
+    "semantic_hash": "a11aaecc68beee23fc11b55f28a44c16"
+  },
+  "09-gpu-avanzado/05-recursos/plantilla-autoevaluacion.md": {
+    "mtime": 1782937607.3949003,
+    "seen": 1792438050.752606,
+    "ast_hash": "f6be382b4547a5edf82da114b923f81a",
+    "semantic_hash": "f6be382b4547a5edf82da114b923f81a"
+  },
+  "09-gpu-avanzado/05-recursos/plantilla-informe.md": {
+    "mtime": 1782937607.3950105,
+    "seen": 1792438050.7526076,
+    "ast_hash": "4d47476310d579f6a9239dbd6e24d9ae",
+    "semantic_hash": "4d47476310d579f6a9239dbd6e24d9ae"
+  },
+  "09-gpu-avanzado/05-recursos/plantilla-presentacion.md": {
+    "mtime": 1782937607.394791,
+    "seen": 1792438050.752609,
+    "ast_hash": "59a5592ff81256730db4fe12021dffc5",
+    "semantic_hash": "59a5592ff81256730db4fe12021dffc5"
+  },
+  "09-gpu-avanzado/README.md": {
+    "mtime": 1785533170.9120772,
+    "seen": 1792438050.7526104,
+    "ast_hash": "931695b2aa1ac47ea44a4c829976d1b8",
+    "semantic_hash": "931695b2aa1ac47ea44a4c829976d1b8"
+  },
+  "10-series-temporales/01-teoria/01_introduccion_series_temporales.md": {
+    "mtime": 1782255206.0435617,
+    "seen": 1792438050.752612,
+    "ast_hash": "8dfd12536cf71dbbfee7b920cb641625",
+    "semantic_hash": "8dfd12536cf71dbbfee7b920cb641625"
+  },
+  "10-series-temporales/01-teoria/02_obtencion_procesamiento_datos.md": {
+    "mtime": 1782255206.0448372,
+    "seen": 1792438050.7526138,
+    "ast_hash": "f07f2629979c1b2c2a93cc57bcb3cee4",
+    "semantic_hash": "f07f2629979c1b2c2a93cc57bcb3cee4"
+  },
+  "10-series-temporales/01-teoria/03_analisis_visualizacion_series_temporales.md": {
+    "mtime": 1782255206.045848,
+    "seen": 1792438050.7526155,
+    "ast_hash": "7c9f7c7d8ed78597ccf773abb29ca819",
+    "semantic_hash": "7c9f7c7d8ed78597ccf773abb29ca819"
+  },
+  "10-series-temporales/01-teoria/04_baselines_evaluacion_forecasting.md": {
+    "mtime": 1782255206.0469189,
+    "seen": 1792438050.7526171,
+    "ast_hash": "740bc950b443910ca46d5b533b42c776",
+    "semantic_hash": "740bc950b443910ca46d5b533b42c776"
+  },
+  "10-series-temporales/01-teoria/05_forecasting_como_regresion.md": {
+    "mtime": 1782255206.0477774,
+    "seen": 1792438050.7526188,
+    "ast_hash": "eb3f65301e3ffe57b6d93b719b1c89df",
+    "semantic_hash": "eb3f65301e3ffe57b6d93b719b1c89df"
+  },
+  "10-series-temporales/01-teoria/06_feature_engineering_series_temporales.md": {
+    "mtime": 1782255206.0485942,
+    "seen": 1792438050.7526202,
+    "ast_hash": "5d76b07b850f05cbeb02c3fc933aa0ec",
+    "semantic_hash": "5d76b07b850f05cbeb02c3fc933aa0ec"
+  },
+  "10-series-temporales/01-teoria/07_deep_learning_intro.md": {
+    "mtime": 1782255206.0712125,
+    "seen": 1792438050.752622,
+    "ast_hash": "841759e8788f08cdec950d656fa4bcf0",
+    "semantic_hash": "841759e8788f08cdec950d656fa4bcf0"
+  },
+  "10-series-temporales/01-teoria/08_redes_convolucionales_tcn.md": {
+    "mtime": 1782255206.0726726,
+    "seen": 1792438050.7526233,
+    "ast_hash": "1d735b93ff91c73ebe6850f9f785bf01",
+    "semantic_hash": "1d735b93ff91c73ebe6850f9f785bf01"
+  },
+  "10-series-temporales/01-teoria/09_transformers_series_temporales.md": {
+    "mtime": 1782255206.0730362,
+    "seen": 1792438050.752625,
+    "ast_hash": "21ba1e945173027987cad8bec7b2db1c",
+    "semantic_hash": "21ba1e945173027987cad8bec7b2db1c"
+  },
+  "10-series-temporales/01-teoria/10_proyecto_final.md": {
+    "mtime": 1785539395.984959,
+    "seen": 1792438050.7526264,
+    "ast_hash": "f60d73031888dd8c789b4901bf2163ec",
+    "semantic_hash": "f60d73031888dd8c789b4901bf2163ec"
+  },
+  "10-series-temporales/01-teoria/11_guia_despliegue_minimo.md": {
+    "mtime": 1782255206.0737586,
+    "seen": 1792438050.7526278,
+    "ast_hash": "c3fc0e133cdb714d8531d5dd7159bd3a",
+    "semantic_hash": "c3fc0e133cdb714d8531d5dd7159bd3a"
+  },
+  "10-series-temporales/01-teoria/AGENTS.md": {
+    "mtime": 1782255206.0740745,
+    "seen": 1792438050.7526298,
+    "ast_hash": "868cba517cda8779ca9597559b8caa21",
+    "semantic_hash": "868cba517cda8779ca9597559b8caa21"
+  },
+  "10-series-temporales/01-teoria/presentaciones/01_intro_slides.md": {
+    "mtime": 1782255206.075254,
+    "seen": 1792438050.7526312,
+    "ast_hash": "5198cea10fa01fb4c2e589de9b8d46a9",
+    "semantic_hash": "5198cea10fa01fb4c2e589de9b8d46a9"
+  },
+  "10-series-temporales/01-teoria/presentaciones/02_procesamiento_slides.md": {
+    "mtime": 1782255206.077185,
+    "seen": 1792438050.752633,
+    "ast_hash": "b589178a3837d7323fac5da77582ce4e",
+    "semantic_hash": "b589178a3837d7323fac5da77582ce4e"
+  },
+  "10-series-temporales/01-teoria/presentaciones/03_analisis_slides.md": {
+    "mtime": 1782255206.079607,
+    "seen": 1792438050.7526345,
+    "ast_hash": "ba80193a2ac795efa64df4f6b0f39559",
+    "semantic_hash": "ba80193a2ac795efa64df4f6b0f39559"
+  },
+  "10-series-temporales/01-teoria/presentaciones/04_baselines_slides.md": {
+    "mtime": 1782255206.0803683,
+    "seen": 1792438050.7526364,
+    "ast_hash": "3398bad802bb4f6edbe02b3f691b1273",
+    "semantic_hash": "3398bad802bb4f6edbe02b3f691b1273"
+  },
+  "10-series-temporales/01-teoria/presentaciones/05_regresion_slides.md": {
+    "mtime": 1782255206.0812156,
+    "seen": 1792438050.7526379,
+    "ast_hash": "de9feb8c8b2411740c78f8e4bbbd0879",
+    "semantic_hash": "de9feb8c8b2411740c78f8e4bbbd0879"
+  },
+  "10-series-temporales/01-teoria/presentaciones/06_fe_slides.md": {
+    "mtime": 1782255206.0820591,
+    "seen": 1792438050.7526393,
+    "ast_hash": "7081045efdd2683971fd8491c445a888",
+    "semantic_hash": "7081045efdd2683971fd8491c445a888"
+  },
+  "10-series-temporales/01-teoria/presentaciones/07_dl_intro_slides.md": {
+    "mtime": 1782255206.0828862,
+    "seen": 1792438050.7526407,
+    "ast_hash": "e5b4fb686ad50a185a9288e820227978",
+    "semantic_hash": "e5b4fb686ad50a185a9288e820227978"
+  },
+  "10-series-temporales/01-teoria/presentaciones/08_tcn_slides.md": {
+    "mtime": 1782255206.0851889,
+    "seen": 1792438050.7526424,
+    "ast_hash": "586be4ad60e3de2708a21011fd058e03",
+    "semantic_hash": "586be4ad60e3de2708a21011fd058e03"
+  },
+  "10-series-temporales/01-teoria/presentaciones/09_transformers_slides.md": {
+    "mtime": 1782255206.0861518,
+    "seen": 1792438050.752644,
+    "ast_hash": "bf96aac8260b913b85c3dec4e708aef3",
+    "semantic_hash": "bf96aac8260b913b85c3dec4e708aef3"
+  },
+  "10-series-temporales/01-teoria/presentaciones/10_proyecto_final_slides.md": {
+    "mtime": 1782255206.0871472,
+    "seen": 1792438050.7526462,
+    "ast_hash": "2aad236b3e130b0cd93a86350f38ed39",
+    "semantic_hash": "2aad236b3e130b0cd93a86350f38ed39"
+  },
+  "10-series-temporales/01-teoria/registro_errores_preguntas_respuestas.md": {
+    "mtime": 1782255206.0880325,
+    "seen": 1792438050.7526479,
+    "ast_hash": "b8ce242cbd6d5600a5d2e6b14efa9ba2",
+    "semantic_hash": "b8ce242cbd6d5600a5d2e6b14efa9ba2"
+  },
+  "10-series-temporales/01-teoria/requirements.txt": {
+    "mtime": 1782255206.088349,
+    "seen": 1787097079.251653,
+    "ast_hash": "d93a6d2bd05a2044df346a0e16c60304",
+    "semantic_hash": "d93a6d2bd05a2044df346a0e16c60304"
+  },
+  "10-series-temporales/01-teoria/seguimiento_taller.md": {
+    "mtime": 1782255206.088672,
+    "seen": 1792438050.7526515,
+    "ast_hash": "1e15000ad2d867d5f8eaf8a8aa3f1a6a",
+    "semantic_hash": "1e15000ad2d867d5f8eaf8a8aa3f1a6a"
+  },
+  "10-series-temporales/04-evaluacion/README.md": {
+    "mtime": 1782908544.989625,
+    "seen": 1792438050.7526531,
+    "ast_hash": "d9abf01cd1fac8c57508f2592540b387",
+    "semantic_hash": "d9abf01cd1fac8c57508f2592540b387"
+  },
+  "10-series-temporales/04-evaluacion/checklist-entrega.md": {
+    "mtime": 1785539396.138959,
+    "seen": 1792438050.7526548,
+    "ast_hash": "c696199399e9993746800bb481361d73",
+    "semantic_hash": "c696199399e9993746800bb481361d73"
+  },
+  "10-series-temporales/04-evaluacion/rubrica.md": {
+    "mtime": 1782908544.989625,
+    "seen": 1792438050.752657,
+    "ast_hash": "98814c0e6c0febe7ee274eabe56323c3",
+    "semantic_hash": "98814c0e6c0febe7ee274eabe56323c3"
+  },
+  "10-series-temporales/README.md": {
+    "mtime": 1785539009.4499204,
+    "seen": 1792438050.7526581,
+    "ast_hash": "232737c5d04ea94f0d7bd98fb8895fee",
+    "semantic_hash": "232737c5d04ea94f0d7bd98fb8895fee"
+  },
+  "11-anexos/01-teoria/00-IA-NeuroSimbolica-Plan.md": {
+    "mtime": 1782255206.1684344,
+    "seen": 1792438050.7526598,
+    "ast_hash": "2658221b637a85e610fc0103ea37155f",
+    "semantic_hash": "2658221b637a85e610fc0103ea37155f"
+  },
+  "11-anexos/01-teoria/001-ReinfordementLearning.md": {
+    "mtime": 1782255206.168785,
+    "seen": 1787097079.2516608,
+    "ast_hash": "2472aeac4f3181eec8507a1e8e58b80b",
+    "semantic_hash": "2472aeac4f3181eec8507a1e8e58b80b"
+  },
+  "11-anexos/01-teoria/01-UD-IA-NeuroSimbolica-I.md": {
+    "mtime": 1782255206.1691067,
+    "seen": 1792438050.7526634,
+    "ast_hash": "436cb3877770ae99934a0261b352f38d",
+    "semantic_hash": "436cb3877770ae99934a0261b352f38d"
+  },
+  "11-anexos/01-teoria/Snake-RL.md": {
+    "mtime": 1782255206.1697977,
+    "seen": 1792438050.7526665,
+    "ast_hash": "78ceaee6996ddde0e62962981edaa218",
+    "semantic_hash": "78ceaee6996ddde0e62962981edaa218"
+  },
+  "11-anexos/04-evaluacion/README.md": {
+    "mtime": 1790549103.271639,
+    "seen": 1792438050.752668,
+    "ast_hash": "7342803d06c048b3597fcc39d9484d09",
+    "semantic_hash": ""
+  },
+  "11-anexos/README.md": {
+    "mtime": 1790549103.271639,
+    "seen": 1792438050.7526693,
+    "ast_hash": "6c0b6406c484bda051460570e58e4917",
+    "semantic_hash": ""
+  },
+  "12-proyecto-integrado/01-teoria/banco_ejemplos_proyectos.md": {
+    "mtime": 1782278489.132865,
+    "seen": 1787097079.2516658,
+    "ast_hash": "fa59385c9aa7cef0d02d733b06a2b62f",
+    "semantic_hash": "fa59385c9aa7cef0d02d733b06a2b62f"
+  },
+  "12-proyecto-integrado/01-teoria/checkpoints_proyecto_final.md": {
+    "mtime": 1783421877.8172338,
+    "seen": 1792438050.752673,
+    "ast_hash": "6c751364e02feb2832d932ff517ed1cb",
+    "semantic_hash": "6c751364e02feb2832d932ff517ed1cb"
+  },
+  "12-proyecto-integrado/01-teoria/evaluacion.md": {
+    "mtime": 1783421877.8175578,
+    "seen": 1792438050.7526746,
+    "ast_hash": "05bd0d92425f090c695c5f0749274cdb",
+    "semantic_hash": "05bd0d92425f090c695c5f0749274cdb"
+  },
+  "12-proyecto-integrado/01-teoria/faq.md": {
+    "mtime": 1782255206.2007074,
+    "seen": 1792438050.7526758,
+    "ast_hash": "1eb16cefc6bbef23126f54b14030ff63",
+    "semantic_hash": "1eb16cefc6bbef23126f54b14030ff63"
+  },
+  "12-proyecto-integrado/01-teoria/mapa_mini_proyectos.md": {
+    "mtime": 1782278489.1370285,
+    "seen": 1792438050.7526774,
+    "ast_hash": "c860f233687ecbfb7573859cf659cdb7",
+    "semantic_hash": "c860f233687ecbfb7573859cf659cdb7"
+  },
+  "12-proyecto-integrado/01-teoria/proyecto.md": {
+    "mtime": 1785566956.9971921,
+    "seen": 1792438050.7526789,
+    "ast_hash": "8ea087f1d64429bdc8dc2ad2ca999d8a",
+    "semantic_hash": "8ea087f1d64429bdc8dc2ad2ca999d8a"
+  },
+  "12-proyecto-integrado/04-evaluacion/README.md": {
+    "mtime": 1783021004.383242,
+    "seen": 1792438050.7526805,
+    "ast_hash": "0a5d438b25abef6940c3b09565893055",
+    "semantic_hash": "0a5d438b25abef6940c3b09565893055"
+  },
+  "12-proyecto-integrado/README.md": {
+    "mtime": 1783421877.8178065,
+    "seen": 1792438050.752682,
+    "ast_hash": "513a806eaa3005772878291b24daaa18",
+    "semantic_hash": "513a806eaa3005772878291b24daaa18"
+  },
+  "AGENTS.md": {
+    "mtime": 1792360177.0144384,
+    "seen": 1792438050.752709,
+    "ast_hash": "74847c84ea3956420fd008be0688796f",
+    "semantic_hash": "74847c84ea3956420fd008be0688796f"
+  },
+  "DECISIONES_MATERIAL_ARCHIVADO.md": {
+    "mtime": 1782669818.270814,
+    "seen": 1787097079.2516758,
+    "ast_hash": "ea5bd58ba705b02ae2d8e40e96e66e63",
+    "semantic_hash": "ea5bd58ba705b02ae2d8e40e96e66e63"
+  },
+  "README.md": {
+    "mtime": 1785566955.9781919,
+    "seen": 1792438050.7527184,
+    "ast_hash": "dc67004eb71ad55ce3100045416198f5",
+    "semantic_hash": "dc67004eb71ad55ce3100045416198f5"
+  },
+  "REVISION_COBERTURA_REAL_DECRETO_PIA.md": {
+    "mtime": 1783380980.4152603,
+    "seen": 1792438050.7527199,
+    "ast_hash": "da47301d0af27efe9f37ffd59b7b3b45",
+    "semantic_hash": "da47301d0af27efe9f37ffd59b7b3b45"
+  },
+  "SEGUIMIENTO_CURSO_PIA.md": {
+    "mtime": 1783373897.8641133,
+    "seen": 1792438050.7527215,
+    "ast_hash": "7e59c6dbb29957f0e395331f43510ae1",
+    "semantic_hash": "7e59c6dbb29957f0e395331f43510ae1"
+  },
+  "TRAZABILIDAD_CALIFICACIONES_RA_CE.md": {
+    "mtime": 1783369578.2390401,
+    "seen": 1792438050.7527235,
+    "ast_hash": "d4a58900bddbee2b7d86533f062f4aeb",
+    "semantic_hash": "d4a58900bddbee2b7d86533f062f4aeb"
+  },
+  "TRAZABILIDAD_LEGAL_PIA.md": {
+    "mtime": 1783380980.4144766,
+    "seen": 1792438050.752725,
+    "ast_hash": "7f24deec41895cf1da64bc51ba29b60e",
+    "semantic_hash": "7f24deec41895cf1da64bc51ba29b60e"
+  },
+  "docs/guia-inicio.md": {
+    "mtime": 1785530601.9457052,
+    "seen": 1792438050.752728,
+    "ast_hash": "9e683c5ee749e98b8e7a427c4922dfbe",
+    "semantic_hash": "9e683c5ee749e98b8e7a427c4922dfbe"
+  },
+  "docs/index.md": {
+    "mtime": 1791930243.9557927,
+    "seen": 1792438050.7527297,
+    "ast_hash": "e96699d3fabcc4c77528b7c2360098e8",
+    "semantic_hash": ""
+  },
+  "docs/manual-pixi-pia.md": {
+    "mtime": 1790547317.0312037,
+    "seen": 1792438050.752731,
+    "ast_hash": "4ada7497ae04631b7d8694a8873b10f7",
+    "semantic_hash": ""
+  },
+  "docs/normas-entregas-y-uso-de-ia.md": {
+    "mtime": 1784634952.0432994,
+    "seen": 1792438050.7527328,
+    "ast_hash": "44b35bd892c9b1313375300699a2fd5b",
+    "semantic_hash": "44b35bd892c9b1313375300699a2fd5b"
+  },
+  "docs/unidades/ud01.md": {
+    "mtime": 1792437387.4365222,
+    "seen": 1792438050.7527359,
+    "ast_hash": "72d4a929d0c5261a0977271938c668ee",
+    "semantic_hash": ""
+  },
+  "docs/unidades/ud02.md": {
+    "mtime": 1785530219.9275477,
+    "seen": 1792438050.7527373,
+    "ast_hash": "f27ebfa1f277256f99440d5f40505c87",
+    "semantic_hash": "f27ebfa1f277256f99440d5f40505c87"
+  },
+  "docs/unidades/ud03.md": {
+    "mtime": 1792360177.0156987,
+    "seen": 1792438050.7527387,
+    "ast_hash": "6d7d3717255abeb9d54de71f1c94d257",
+    "semantic_hash": "6d7d3717255abeb9d54de71f1c94d257"
+  },
+  "docs/unidades/ud04.md": {
+    "mtime": 1785530219.9277859,
+    "seen": 1792438050.7527404,
+    "ast_hash": "77c521e0670ff467897aec931a6f54b7",
+    "semantic_hash": "77c521e0670ff467897aec931a6f54b7"
+  },
+  "docs/unidades/ud05.md": {
+    "mtime": 1785530219.9279118,
+    "seen": 1792438050.7527418,
+    "ast_hash": "c065b66c3204d9eff7d81b7caeb41572",
+    "semantic_hash": "c065b66c3204d9eff7d81b7caeb41572"
+  },
+  "docs/unidades/ud06.md": {
+    "mtime": 1785530219.9280212,
+    "seen": 1792438050.7527435,
+    "ast_hash": "69dcc49d303053929d23aea915bbd9e5",
+    "semantic_hash": "69dcc49d303053929d23aea915bbd9e5"
+  },
+  "docs/unidades/ud07.md": {
+    "mtime": 1785530219.9281166,
+    "seen": 1792438050.7527452,
+    "ast_hash": "715e50b1fb24293da76464ce2705fa30",
+    "semantic_hash": "715e50b1fb24293da76464ce2705fa30"
+  },
+  "docs/unidades/ud08.md": {
+    "mtime": 1785530219.9282103,
+    "seen": 1792438050.7527468,
+    "ast_hash": "3875923ec06202f795a6511a7a3411ce",
+    "semantic_hash": "3875923ec06202f795a6511a7a3411ce"
+  },
+  "docs/unidades/ud09.md": {
+    "mtime": 1785530219.928301,
+    "seen": 1787097079.2516954,
+    "ast_hash": "facbb502e68965809397680fa3e28843",
+    "semantic_hash": "facbb502e68965809397680fa3e28843"
+  },
+  "docs/unidades/ud10.md": {
+    "mtime": 1792360177.0156987,
+    "seen": 1792438050.7527504,
+    "ast_hash": "664617319a8e31e10b54f9ee69837d91",
+    "semantic_hash": "664617319a8e31e10b54f9ee69837d91"
+  },
+  "docs/unidades/ud11.md": {
+    "mtime": 1790549103.2726393,
+    "seen": 1792438050.7527516,
+    "ast_hash": "321002e34e13ede18650a1a6c6bdf228",
+    "semantic_hash": ""
+  },
+  "docs/unidades/ud12.md": {
+    "mtime": 1785530219.9298866,
+    "seen": 1792438050.7527535,
+    "ast_hash": "99cdbe6d9b43f0ad8135a4ab6001448c",
+    "semantic_hash": "99cdbe6d9b43f0ad8135a4ab6001448c"
+  },
+  "environment.yml": {
+    "mtime": 1792360177.0156987,
+    "seen": 1792438050.752755,
+    "ast_hash": "64eec52580896de271923d70ffc58f48",
+    "semantic_hash": "64eec52580896de271923d70ffc58f48"
+  },
+  "mkdocs.yml": {
+    "mtime": 1782564620.099748,
+    "seen": 1792438050.752757,
+    "ast_hash": "4d9c451458373e6da73cc0ddc88bbf40",
+    "semantic_hash": "4d9c451458373e6da73cc0ddc88bbf40"
+  },
+  "04-deep-learning/90-archivo/modelado-avanzado-docs/generados/001-ChatGPT-GradDesc-Backprop.pdf": {
+    "mtime": 1782255140.541614,
+    "seen": 1787097079.251702,
+    "ast_hash": "6725f425347ecd0795d123a531ced69f",
+    "semantic_hash": "6725f425347ecd0795d123a531ced69f"
+  },
+  "00-planificaci\u00f3n/.atl/.skill-registry.cache.json": {
+    "mtime": 1792360176.6699874,
+    "seen": 1792438050.7516735,
+    "ast_hash": "bf6ad0573cf2d483d6de1a04239b425b",
+    "semantic_hash": ""
+  },
+  "11-anexos/02-ejemplos/ia_clasica_busqueda.py": {
+    "mtime": 1790549103.271639,
+    "seen": 1792438050.7518516,
+    "ast_hash": "dbf8f7ecbdfe89b3b4a24f1b24b01507",
+    "semantic_hash": ""
+  },
+  "11-anexos/02-ejemplos/ia_clasica_minimax.py": {
+    "mtime": 1790549103.271639,
+    "seen": 1792438050.7518532,
+    "ast_hash": "58eb81d66593870f67bbdc6a236f111e",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/.vscode/settings.json": {
+    "mtime": 1792360176.6863005,
+    "seen": 1792438050.7518556,
+    "ast_hash": "6ac4bf3a736da19e7abeafc05f09a3e8",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/data_extraction.py": {
+    "mtime": 1792360176.6863005,
+    "seen": 1792438050.7518582,
+    "ast_hash": "275f3180e351b00b99673b6a465ddd86",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/data_preprocessing.py": {
+    "mtime": 1792360176.6863005,
+    "seen": 1792438050.7518604,
+    "ast_hash": "1c137ec3b0eedaf3cb87aaf53073a84c",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo.py": {
+    "mtime": 1792360176.6863005,
+    "seen": 1792438050.7518625,
+    "ast_hash": "b1ad38300ff6f588d3907f18263d188f",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/__init__.py": {
+    "mtime": 1792360176.687218,
+    "seen": 1792438050.751865,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/charts/__init__.py": {
+    "mtime": 1792360176.687218,
+    "seen": 1792438050.751867,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/custom/__init__.py": {
+    "mtime": 1792360176.6873004,
+    "seen": 1792438050.7518692,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/data_exporters/__init__.py": {
+    "mtime": 1792360176.6873004,
+    "seen": 1792438050.7518713,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/data_exporters/export_titanic_clean.py": {
+    "mtime": 1792360176.6874561,
+    "seen": 1792438050.7518737,
+    "ast_hash": "2ba2414e3ab1bddb41027faab2b508f2",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/data_loaders/__init__.py": {
+    "mtime": 1792360176.6874561,
+    "seen": 1792438050.751876,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/data_loaders/load_titanic.py": {
+    "mtime": 1792360176.6875582,
+    "seen": 1792438050.7518787,
+    "ast_hash": "f0d73fdb4d0504f3820cc585f9a394fb",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/extensions/__init__.py": {
+    "mtime": 1792360176.6875582,
+    "seen": 1792438050.7518806,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/pipelines/__init__.py": {
+    "mtime": 1792360176.6875582,
+    "seen": 1792438050.7518833,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/pipelines/example_pipeline/__init__.py": {
+    "mtime": 1792360176.687909,
+    "seen": 1792438050.751886,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/scratchpads/__init__.py": {
+    "mtime": 1792360176.6879559,
+    "seen": 1792438050.751888,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/scratchpads/misty_shape.py": {
+    "mtime": 1792360176.688103,
+    "seen": 1792438050.751891,
+    "ast_hash": "057d9cc9ccaf73591d9455ca6cfe50f1",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/transformers/__init__.py": {
+    "mtime": 1792360176.688103,
+    "seen": 1792438050.7518933,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/transformers/fill_in_missing_values.py": {
+    "mtime": 1792360176.6882136,
+    "seen": 1792438050.7518952,
+    "ast_hash": "5de09d3e0ff588a3e941f1488518fdb7",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/utils/__init__.py": {
+    "mtime": 1792360176.6882136,
+    "seen": 1792438050.7518976,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/iris_ml_workflow.py": {
+    "mtime": 1792360176.6883004,
+    "seen": 1792438050.7519007,
+    "ast_hash": "767c43332d483f2f9a3d664b71897531",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/mage_data/demo_project/pipelines/example_pipeline/.variables/misty_shape/misty_shape_1/data.json": {
+    "mtime": 1792360176.6893005,
+    "seen": 1792438050.7519035,
+    "ast_hash": "3796ed7471e99214ac7ea988d7722296",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/mage_data/demo_project/pipelines/example_pipeline/.variables/misty_shape/misty_shape_1/sample_data.json": {
+    "mtime": 1792360176.6893005,
+    "seen": 1792438050.7519066,
+    "ast_hash": "3796ed7471e99214ac7ea988d7722296",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/train_model.py": {
+    "mtime": 1792360176.6893005,
+    "seen": 1792438050.7519085,
+    "ast_hash": "860cb4ca563e31793553139ae90f6a7d",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/validate_model.py": {
+    "mtime": 1792360176.6893005,
+    "seen": 1792438050.7519107,
+    "ast_hash": "dd59762ec60457ee488e415e8367165c",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/.atl/skill-registry.md": {
+    "mtime": 1792360176.6700761,
+    "seen": 1792438050.7519195,
+    "ast_hash": "a0abd24908c6d0f523b5878bdaaadf23",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/00_prompt_inventario_material_modulo_BASE.md": {
+    "mtime": 1792360176.6700761,
+    "seen": 1792438050.7519224,
+    "ast_hash": "6d1f6e183123284be5baaa4407c5c075",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/01_prompt_inventario_p1_barrido_BASE.md": {
+    "mtime": 1792360176.6700761,
+    "seen": 1792438050.7519245,
+    "ast_hash": "65943f15edc0ca8d3363bd1a461e21c4",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/02_prompt_inventario_p2_consolidacion_BASE.md": {
+    "mtime": 1792360176.6703005,
+    "seen": 1792438050.7519338,
+    "ast_hash": "5370d04743f390c2ac88c104e601af92",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/03_prompt_comparacion_seleccion_multicurso_BASE.md": {
+    "mtime": 1792360176.6703005,
+    "seen": 1792438050.7519355,
+    "ast_hash": "6d1ae30a11aad655843b13344d7b371d",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/04_prompt_reorganizacion_materia_BASE_DESDE_PIA.md": {
+    "mtime": 1792360176.6703005,
+    "seen": 1792438050.7519376,
+    "ast_hash": "596bc353a3d04dc7e0807dd27333fcb3",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/CHECKLIST_MOODLE_UD1_2026_2027.md": {
+    "mtime": 1792360176.6703005,
+    "seen": 1792438050.7519395,
+    "ast_hash": "1cd48d3d1f98a9dc1476a581ea479e70",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/CONFIGURACION_CALIFICADOR_MOODLE_2026_2027.md": {
+    "mtime": 1792360176.6703005,
+    "seen": 1792438050.7519414,
+    "ast_hash": "a9f6c4afe12786bf6b84e742762daab7",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/CONFIGURACION_DIAGNOSTICO_INICIAL_PIA_2026_2027.md": {
+    "mtime": 1792360176.6703005,
+    "seen": 1792438050.751943,
+    "ast_hash": "a641010b196d8722c6cd1b1d42a19ac2",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/MATRIZ_SEGUIMIENTO_RA_CE_2026_2027.md": {
+    "mtime": 1792360176.6703005,
+    "seen": 1792438050.751946,
+    "ast_hash": "a0691ab954fb51016ca9e42da573a4e6",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/PONDERACION_RA_SENECA_2026_2027.md": {
+    "mtime": 1792360176.6703005,
+    "seen": 1792438050.751948,
+    "ast_hash": "0d60e93ffa81233a279959cdc1f36374",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/RA_CE-Programacion_IA.md": {
+    "mtime": 1792360176.6703005,
+    "seen": 1792438050.75195,
+    "ast_hash": "8e76d0c54e47808ab93b6c9855e16dce",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/README.md": {
+    "mtime": 1792360176.6703005,
+    "seen": 1792438050.7519522,
+    "ast_hash": "8a73d26ced06b5890cbbfb7155de770e",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/comparativa_multicurso_pia.md": {
+    "mtime": 1792360176.6703005,
+    "seen": 1792438050.751954,
+    "ast_hash": "91dbef9483c60451962ab06a0682dbcf",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/inventario_bruto_gpt54mini.md": {
+    "mtime": 1792360176.6713004,
+    "seen": 1792438050.7519562,
+    "ast_hash": "33c6594b6aca9b95ba520e1857295e81",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/inventario_bruto_pia_2425.md": {
+    "mtime": 1792360176.6713004,
+    "seen": 1792438050.7519588,
+    "ast_hash": "d30db2f4f5768b336d61374d28165253",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/inventario_material_pia.md": {
+    "mtime": 1792360176.6713004,
+    "seen": 1792438050.7519608,
+    "ast_hash": "4ec47c726f3c35d431d7c43c7c214e10",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/inventario_material_pia_2425.md": {
+    "mtime": 1792360176.6713004,
+    "seen": 1792438050.7519627,
+    "ast_hash": "da86e9f9b25c1438597852ea12667c93",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/plantillas/normas_trabajo_equipo_entregas.md": {
+    "mtime": 1792360176.6723003,
+    "seen": 1792438050.7519646,
+    "ast_hash": "02bcc533e3f135746aa54614633b37c2",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/plantillas/plantilla_declaracion_uso_ia.md": {
+    "mtime": 1792360176.6724453,
+    "seen": 1792438050.7519667,
+    "ast_hash": "5ae8f318743c6ba449e1c9587e9ff296",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/plantillas/politica_uso_ia_pia.md": {
+    "mtime": 1792360176.6724453,
+    "seen": 1792438050.7519693,
+    "ast_hash": "a7ac4599024e39ab5a898ca7927a0c13",
+    "semantic_hash": ""
+  },
+  "00-planificaci\u00f3n/radar-avances-ia.md": {
+    "mtime": 1792360176.6724453,
+    "seen": 1792438050.7519712,
+    "ast_hash": "d458ba6c9cc5d75a7d3ef418acb1c507",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/01-teoria/04c-orientacion-objetos-python.md": {
+    "mtime": 1791224062.209837,
+    "seen": 1792438050.7519832,
+    "ast_hash": "713ede295284baf6d871ef39027b3d47",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/01-teoria/05-numpy-introduccion.md": {
+    "mtime": 1792359972.876344,
+    "seen": 1792438050.7519844,
+    "ast_hash": "c774d3c924c2372898d4fbbc1a72ea09",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/01-teoria/06-numpy-avanzado.md": {
+    "mtime": 1791930243.9547927,
+    "seen": 1792438050.7519863,
+    "ast_hash": "a993558601b540e4383ac8e06f52142d",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/01-teoria/07-numpy-rendimiento.md": {
+    "mtime": 1792359972.8776038,
+    "seen": 1792438050.7519896,
+    "ast_hash": "1802392c377d0951045c8ad0785b9724",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/01-teoria/08-guia-numpy-jax.md": {
+    "mtime": 1792359972.8778288,
+    "seen": 1792438050.7519925,
+    "ast_hash": "e8c530002f842a11c60b734e5379a562",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/01-teoria/11-numpy-aleatoriedad-avanzado.md": {
+    "mtime": 1792437387.418299,
+    "seen": 1792438050.7519977,
+    "ast_hash": "1904e3d7d3fb352542f743350da45f21",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/01-teoria/12-numpy-io-archivos-avanzado.md": {
+    "mtime": 1792437387.4188454,
+    "seen": 1792438050.7519994,
+    "ast_hash": "5f97e70463edcbe3f0d12a48b8b3acae",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/01-teoria/13-numpy-ufuncs-estadistica-avanzado.md": {
+    "mtime": 1792437387.4193175,
+    "seen": 1792438050.7520015,
+    "ast_hash": "618e8fc7d0c597adf5738207afd3d8f2",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/05-recursos/INDICE_NUMPY_LIBROS.md": {
+    "mtime": 1792359972.879344,
+    "seen": 1792438050.752023,
+    "ast_hash": "5109de954c47805c261c324c425c4d6e",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/99-profesor/03-practicas-soluciones/actividades/EDA_Numpy-Soluciones.md": {
+    "mtime": 1792360176.6749117,
+    "seen": 1792438050.752031,
+    "ast_hash": "b4803b2f292099781bdd471061bcb996",
+    "semantic_hash": ""
+  },
+  "05-cloud-mlops/99-profesor/modelos-gpt-5.4.md": {
+    "mtime": 1792360176.6843004,
+    "seen": 1792438050.752363,
+    "ast_hash": "3b7c7ff2970d8647995b0cdb3ae91e3e",
+    "semantic_hash": ""
+  },
+  "06-llm-agentes/99-profesor/nlp-spacy-ud4/README.md": {
+    "mtime": 1792360176.6851823,
+    "seen": 1792438050.7524803,
+    "ast_hash": "e1afd6de0dcf6c73d7fb135b248ab1a3",
+    "semantic_hash": ""
+  },
+  "07-convergencia-herramientas/99-profesor/guia_docente.md": {
+    "mtime": 1792360176.6853004,
+    "seen": 1792438050.752508,
+    "ast_hash": "d8b069441f9c61a435ea1fdecd1c46ed",
+    "semantic_hash": ""
+  },
+  "08-vision-xai/03-practicas/vision-tareas-ud4/chihuahua_vs_muffin_challenge_pack/Challenge_MuffinVS_Chihuahua.md": {
+    "mtime": 1782255195.5502143,
+    "seen": 1792438050.7525656,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "11-anexos/01-teoria/02-busqueda-y-juegos-ia-clasica.md": {
+    "mtime": 1790549103.271639,
+    "seen": 1792438050.7526648,
+    "ast_hash": "c2b1be6a8c7a02ea0927e789213cd60f",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/UDs_old/README.md": {
+    "mtime": 1792360176.6857698,
+    "seen": 1792438050.752684,
+    "ast_hash": "c93e18e9048a91d3346eaf34718a11fe",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/dbt/profiles.yml": {
+    "mtime": 1792360176.6875582,
+    "seen": 1792438050.7526865,
+    "ast_hash": "2007d7c51ace0af2ef01388a875d32a4",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/io_config.yaml": {
+    "mtime": 1792360176.6875582,
+    "seen": 1792438050.752689,
+    "ast_hash": "2e1db73efc6662ba1f33b5c9bf2ce1d2",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/metadata.yaml": {
+    "mtime": 1792360176.6875582,
+    "seen": 1792438050.7526987,
+    "ast_hash": "14cee8e9558433a8241fb46f0bc949d2",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/pipelines/example_pipeline/metadata.yaml": {
+    "mtime": 1792360176.6879559,
+    "seen": 1792438050.7527027,
+    "ast_hash": "ce165a2f52c29c514b95b1cd05107b6c",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/dags/demo_project/requirements.txt": {
+    "mtime": 1792360176.6879559,
+    "seen": 1792438050.752705,
+    "ast_hash": "b2a04f485d899b2000e6cc22aaab90d3",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/17-IntroConvergenciaTecnol\u00f3gica/docker-compose.yaml": {
+    "mtime": 1792360176.6893005,
+    "seen": 1792438050.752707,
+    "ast_hash": "670f42d1dd2244cee153b8e39636accd",
+    "semantic_hash": ""
+  },
+  "ESTADO_ACTUAL_Y_PENDIENTES.md": {
+    "mtime": 1792437950.9061077,
+    "seen": 1792438050.752713,
+    "ast_hash": "90a4af656a39e0d2f80e5004bb64067f",
+    "semantic_hash": ""
+  },
+  "ESTRATEGIA_REPOSITORIOS.md": {
+    "mtime": 1792360177.0153003,
+    "seen": 1792438050.7527146,
+    "ast_hash": "4dcd1958a65fa784ec83395a29e1e1b3",
+    "semantic_hash": ""
+  },
+  "NOTAS_PROXIMA_SESION.md": {
+    "mtime": 1792437387.4359412,
+    "seen": 1792438050.7527163,
+    "ast_hash": "87a545402bf119cefada357e51e3be22",
+    "semantic_hash": ""
+  },
+  "docs/accesos-rapidos.md": {
+    "mtime": 1791930243.9557927,
+    "seen": 1792438050.7527266,
+    "ast_hash": "8ac21fc2d75fa8a52864e1e0039274d3",
+    "semantic_hash": ""
+  },
+  "docs/presentacion-curso.md": {
+    "mtime": 1790547317.0312037,
+    "seen": 1792438050.7527342,
+    "ast_hash": "d97ecb280df7561f94c77fb60bc65696",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/18-SistemaConvergenciaTecnologica/DataPipelinesWithApacheAirflow.pdf": {
+    "mtime": 1792360177.0103004,
+    "seen": 1792438050.7527604,
+    "ast_hash": "8d51f3e9ea50a6c3b0691946e084011b",
+    "semantic_hash": ""
+  },
+  "90-archivo-historico/convergencia-anterior/18-SistemaConvergenciaTecnologica/TareaAutomatizacionDeTareas.pdf": {
+    "mtime": 1792360177.0133004,
+    "seen": 1792438050.752762,
+    "ast_hash": "75f0a8ef3847a643948e36724b31965e",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/01-teoria/10-numpy-casos-practicos.md": {
+    "mtime": 1792437387.4178731,
+    "seen": 1792438050.7519958,
+    "ast_hash": "fe75476c4af6cba8d8166ed793b4633a",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/01-teoria/14-numpy-algebra-lineal-avanzado.md": {
+    "mtime": 1792437387.4198153,
+    "seen": 1792438050.752003,
+    "ast_hash": "a1fa4ffab1dfda605e343bafe399d96e",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/99-profesor/01-GUION_PRIMERA_CLASE_PIA_2026_09_29.md": {
+    "mtime": 1792360176.6749117,
+    "seen": 1792438050.7520258,
+    "ast_hash": "dc9286b02a53fc17af9b5d60605e8a42",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/99-profesor/02-GUION_SEGUNDA_CLASE_PIA_UD1.md": {
+    "mtime": 1792360176.6749117,
+    "seen": 1792438050.7520278,
+    "ast_hash": "87e582663fd95a38887210c834905580",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/99-profesor/03-GUION_TERCERA_CLASE_PIA_UD1.md": {
+    "mtime": 1792360176.6753004,
+    "seen": 1792438050.7520294,
+    "ast_hash": "75ccb54b5ef5d2fb0307bed911ec6506",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/99-profesor/04-GUION_CUARTA_CLASE_PIA_UD1.md": {
+    "mtime": 1792437387.4308753,
+    "seen": 1792438050.7520328,
+    "ast_hash": "94d253e6b78ca7e94d0f90fb72977a11",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/99-profesor/05-GUION_QUINTA_CLASE_PIA_UD1.md": {
+    "mtime": 1792437387.4313095,
+    "seen": 1792438050.752034,
+    "ast_hash": "bdf38249711c2ad27376ea04063fb6e0",
+    "semantic_hash": ""
+  }
+}
