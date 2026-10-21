@@ -111,6 +111,10 @@ Debe aparecer una entrada `ir` (R).
 
 También se puede abrir un notebook `.ipynb` existente (por ejemplo `06_introduccion_R_fundamentos.ipynb`) y, si su kernel es **R** o se selecciona R, ejecutar sus celdas.
 
+### Alternativa: abrir la versión R Markdown en RStudio
+
+Si se utiliza RStudio, abrir `06_introduccion_R_fundamentos.Rmd` desde **File → Open File**. Es la versión R Markdown del mismo material: combina explicaciones Markdown con chunks de R y se puede ejecutar con **Knit** para generar HTML. Requiere tener instalados R, `knitr` y `rmarkdown`; RStudio no es obligatorio para seguir la unidad.
+
 ## 6. Comprobación rápida
 
 En una celda de un notebook con kernel R ejecutar:
@@ -134,7 +138,7 @@ Si se muestra el vector, la media y el `data.frame`, el kernel R funciona correc
 
 | Situación | Solución |
 |---|---|
-| La página de descarga de RStudio devuelve XML y no descarga. | **No usar RStudio**: instalar R desde CRAN (sección 1) y trabajar desde VS Code. |
+| La página de descarga de RStudio devuelve XML y no descarga. | RStudio es opcional: instalar R desde CRAN (sección 1) y trabajar con VS Code/Jupyter o descargar RStudio desde otra fuente oficial. |
 | `R` no se reconoce en la terminal. | Añadir R al `PATH` (Windows) o reinstalar marcando «añadir al PATH». |
 | `IRkernel::installspec()` falla por `jupyter-client has to be installed`. | El comando `jupyter` no está en `PATH`: activar primero el entorno que tenga Jupyter (sección 3) y repetir el registro. |
 | El kernel **R** no aparece en VS Code. | Reiniciar VS Code, refrescar el selector de kernel y confirmar que `jupyter kernelspec list` muestra `ir`. |
@@ -145,4 +149,5 @@ Si se muestra el vector, la media y el `data.frame`, el kernel R funciona correc
 
 - Introducción a R (teoría): `01-fundamentos-python/01-teoria/09-guia-r-complementario.md`.
 - Notebook de R: `01-fundamentos-python/02-ejemplos/06_introduccion_R_fundamentos.ipynb`.
+- Versión R Markdown para RStudio: `01-fundamentos-python/02-ejemplos/06_introduccion_R_fundamentos.Rmd`.
 - Comparativa de lenguajes y formatos para IA: `01-fundamentos-python/04-evaluacion/comparativa-lenguajes-formatos-ia.md`.
