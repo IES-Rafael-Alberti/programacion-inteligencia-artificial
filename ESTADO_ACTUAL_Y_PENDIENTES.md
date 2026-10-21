@@ -24,7 +24,7 @@
 
 - [x] Documentada la ruta de arranque (instalar R desde CRAN, conectar kernel R en VS Code mediante Jupyter/IRkernel) en `01-fundamentos-python/05-recursos/guia-instalacion-r-vscode.md`. Incluye pasos, comprobación, uso de notebooks con kernel R y problemas frecuentes (página de RStudio con XML, `R` sin `PATH`, kernel no visible, `IRkernel::installspec` sin jupyter).
 - [x] Enlazada la guía desde `01-fundamentos-python/01-teoria/09-guia-r-complementario.md`, desde la tabla de teoría (`README.md`, fila 15) y desde el README de la unidad.
-- [ ] **Antes de la próxima clase:** el alumnado debe instalar R y registrar el kernel (la guía va al comienzo de la clase para hacerlo). Comprobar que el notebook `06_introduccion_R_fundamentos.ipynb` abre con kernel R en el equipo docente.
+- [ ] **Antes de la próxima clase:** el alumnado debe instalar R y registrar el kernel (la guía va al comienzo de la clase para hacerlo). Comprobar que el notebook `06_introduccion_R_fundamentos.ipynb` abre con kernel R en el equipo docente. El notebook se ha ampliado con una progresión guiada de exploración, indexación, `NA` y operaciones vectorizadas; la ejecución con kernel R sigue pendiente de comprobar.
 
 ### Próxima clase (2 h) — plan
 
