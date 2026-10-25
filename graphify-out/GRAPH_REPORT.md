@@ -1,39 +1,39 @@
-# Graph Report - PIA  (2026-10-20)
+# Graph Report - PIA  (2026-10-21)
 
 ## Corpus Check
-- 617 files · ~916,433 words
+- 619 files · ~919,558 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 563 file(s) not represented in the graph (top: .ipynb 309, .log 175, .gift 18)
 
 ## Summary
-- 3823 nodes · 5130 edges · 443 communities (327 shown, 116 thin omitted)
+- 3853 nodes · 5158 edges · 442 communities (323 shown, 119 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 255 edges (avg confidence: 0.84)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `463199d4`
+- Built from commit: `359f2148`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- sys
+- build_dataset.py
 - demo_embeddings.py
 - Planificación Curso Siguiente (progresión MLOps)
 - UD2 — Tratamiento de Datos
 - metricas.py
 - Capstone Dataset de Películas (CRISP-DM)
 - Glosario UD4 - Fundamentos de Redes Neuronales
-- torch_nn
+- ejemplo_transformers_3_reformulacion.py
 - Mapa del ecosistema moderno de IA (2026)
 - ejemplo_transformers_1_traduccion_en_es.py
-- comparativa.py
+- main
 - ejemplo_transformers_4_encoder_only_clasificacion.py
 - ejemplo_transformers_2_generacion_decoder_only.py
 - TensorFlow bajo nivel (capítulo)
 - Proyecto de IA con datos meteorológicos
 - Evaluación — UD10 Series Temporales
-- mamba_blocks.py
-- Búsqueda y juegos: una introducción a la IA clásica
+- ejemplo_mamba_3_clasificacion_intenciones.py
+- Plan IA Simbólica / Neuro-Simbólica (curricular)
 - Demo técnica: RAG con PageIndex sin chunking clásico
 - Tarea: Implementación del Transformer en otra librería
 - Guion de la tercera clase de PIA — estructuras adicionales y POO
@@ -41,22 +41,22 @@
 - Optimizadores para redes neuronales (teoría)
 - Índice bloque UD4 práctica (Keras/PyTorch/JAX)
 - Transformers 10: Traducción Inglés-Español
-- lfm_blocks.py
-- ejemplo_mamba_3_clasificacion_intenciones.py
+- comparativa.py
+- build_capstone_dataset.py
 - Snake con RL (pyglet, gymnasium, Q-Table, DQN)
 - RedNeuronalVisual
 - backpropagationRNAscratch.py
 - Documentación de notebooks del bloque de serving y orquestación
 - Ejemplo de comparativa de herramientas cloud para IA
 - ejemplo_lfm_3_clasificacion_intenciones.py
-- Temario de NumPy combinado
+- 📘 Introducción a NumPy
 - series_temporales/generador_consumo.py
 - 02 Tratamiento de Datos - Teoría (Índice)
 - MLflow Platform
 - Guía del Proyecto Final — PIA
 - Unidad 5: Herramientas Cloud para IA (sesión)
 - gradient_descent_animation.py
-- F6 — Agentes y RAG en Producción
+- F0 — El Gap de Producción
 - ejemplo_lfm_1_traduccion_en_es.py
 - Álgebra lineal avanzada con NumPy
 - ejemplo_mamba_1_traduccion_en_es.py
@@ -76,7 +76,7 @@
 - Guion de primera clase — PIA — 29 de septiembre de 2026
 - UD9 — GPU Avanzado README
 - Deep Learning y modelos globales
-- check_public_unit_links.py
+- crear_notebooks_taller.py
 - Evaluación — UD9 GPU Avanzado
 - UD8 — Visión por Computadora y XAI README
 - Revisión de cobertura frente al Real Decreto
@@ -92,7 +92,7 @@
 - UD2 Módulo PIA: Pandas, Polars y visualización (2025)
 - Preparación del entorno R
 - Backpropagation
-- ejemplo_transformers_3_reformulacion.py
+- .__init__
 - Aleatoriedad y números aleatorios avanzados con NumPy
 - Liquid Foundation Models (LFM)
 - Guia Comparativa de Arquitecturas Secuenciales
@@ -111,13 +111,13 @@
 - Obtención y procesamiento de datos
 - Forecasting como regresión
 - Portal público PIA (índice)
-- 📘 Introducción a NumPy
+- Guion de la séptima clase de PIA — instalar R en VS Code, comparativa y repaso de pandas
 - Kit de aula — Dataset de películas como grafo
 - 00 — Guía de la unidad: Tratamiento de datos
 - Deep Learning con JAX (Flax/Equinox)
 - Deep Learning con PyTorch
-- torch
-- 08 - De NumPy a JAX: ampliación del cálculo numérico
+- MultivariateTimeSeriesDataset
+- write_outputs
 - LangChain
 - ejemplo_mamba_2_generacion_decoder_only.py
 - Guía de Presentación y Evaluación Final
@@ -125,9 +125,9 @@
 - Transformers en series temporales
 - Seaborn
 - Índice scikit-learn y CuML
-- esqueletoAWS.py
+- backPropScratch.py
 - Evaluación y observabilidad de LLM (teoría)
-- F5 — Serving y APIs para Modelos de IA
+- F3 — Experimentación y Registro con MLflow
 - export_models.py
 - Explicabilidad
 - argparse
@@ -165,11 +165,11 @@
 - Introducción a redes recurrentes y LSTM (UD4)
 - Deep Learning con PyTorch Lightning
 - ejemplo_lfm_4_reformulacion.py
-- ejemplo_mamba_4_reformulacion.py
+- Guía: instalar R, configurar VS Code y usar notebooks con R
 - Frameworks de ML en la nube (teoría)
 - Función de pérdida
 - Enunciado IA Vision Challenge — Chihuahua vs Muffin
-- Banco de Ejemplos de Proyecto Final — PIA
+- RAG (Retrieval-Augmented Generation)
 - Arquitectura LFM (hibrida: liquid blocks + GQA)
 - Continuación — 2026-07-05 (regla operativa)
 - Python
@@ -185,9 +185,9 @@
 - 05-cloud-mlops README
 - Continuación — 2026-07-31 (validación Streamlit/Pixi)
 - Tarea Transformers PyTorch — Entrega y Criterios
-- Plan IA Simbólica / Neuro-Simbólica (curricular)
-- Capítulo IA simbólica y enfoques neuro-simbólicos
-- crear_notebooks_taller.py
+- F5 — Serving y APIs para Modelos de IA
+- F6 — Agentes y RAG en Producción
+- prepare_oxford_flowers102.py
 - Embeddings
 - Transfer learning en visión
 - Redes Convolucionales Temporales (TCN)
@@ -199,10 +199,10 @@
 - Normas de entregas y uso de IA
 - Tarea EDA-DataPrep-Clasificación
 - Sobreajuste, subajuste, sesgo y varianza
-- Accesos rápidos al curso PIA
+- TimeSeriesDataset
 - Used Cars: regresión tabular
 - pandas
-- 11-anexos README
+- F4 — Orquestación con Prefect
 - irisPytorch-rapids.py
 - Continuación — 2026-08-01 (saneamiento previo al traslado)
 - Mini-tareas de Visión por Computador (Entrega Clase 1)
@@ -214,11 +214,11 @@
 - EDA Visual – Cuaderno de Prácticas Integradas
 - Altair
 - Bloque 17: Visualización avanzada y mini-EDA
-- .save
-- LiquidSeq2Seq
+- Manual práctico de Pixi para PIA
+- OmdbClient
 - Actividad House Prices Kaggle
 - NLP 05 — Embeddings de frases y búsqueda semántica
-- Bloque inicial: R y comparativa (5–55 min)
+- Resultado real de la sexta clase y preparación de la siguiente (2 h) — 2026-10-21
 - Continuación — 2026-07-22 (auditoría de `environment.yml`)
 - Métricas de clasificación y regresión
 - Deep learning frameworks practicals
@@ -230,7 +230,6 @@
 - Continuación — 2026-08-18 (consolidación del apéndice de grafos)
 - Instrucciones de trabajo del repositorio PIA
 - Continuación — 2026-08-18 (kit de aula del apéndice de grafos)
-- compare_models_results
 - 2. Catálogo de materiales docentes
 - Evaluación Base UD1
 - Ejemplos frecuentes con Pandas
@@ -238,10 +237,12 @@
 - DataFrame (chuleta)
 - Pandas Profiling
 - Dataset Spotify (EDA Polars)
+- Continuación — 2026-07-07 (R UD2 render validado)
 - EDA con cuDF con fallback a Pandas
 - Práctica guiada de EDA con cuDF
 - EDA con DuckDB en SQL puro
 - Arquitectura Streamlit y FastAPI
+- Continuación — 2026-07-28 (P3 capstone: flujo anti-fuga)
 - EDA regresión Ames Housing UD2
 - Anexo GPU con cuDF y cuML
 - Rúbrica histórica del proyecto Dataset de Películas
@@ -249,6 +250,10 @@
 - Rúbrica del dataset personalizado
 - Rúbrica alineada a RA/CE para P1, P2, P3 y GPU
 - scikit-learn y CuML
+- Continuación — 2026-07-31 (validación FastAPI/Pixi)
+- HousingModel
+- IrisNN
+- Continuación — 2026-07-31 (bloqueos de revisión UD3/Pixi)
 - Euromillones y límites del aprendizaje automático
 - Black Friday: recurso opcional
 - install_jax.sh
@@ -345,7 +350,7 @@
 - Rendimiento y vectorización con NumPy
 - Prompt para inventariar material docente de un módulo
 - Presentación del curso: Programación de Inteligencia Artificial
-- Handoff PIA — R, comparativa, EDA NumPy y pandas (2026-10-19)
+- Handoff PIA — R (instalación VS Code), comparativa y repaso de pandas (2026-10-21)
 - Skill Registry — 00-planificación
 - Configuracion del calificador Moodle - PIA 2026/2027
 - Matriz de cobertura y seguimiento individual RA/CE - PIA 2026/2027
@@ -386,33 +391,30 @@
 - Continuación — 2026-07-06 (regla anti-pendientes obsoletos)
 - Continuación — 2026-07-06 (seguimiento de curso)
 - Continuación — 2026-07-06 (seguimiento por CE)
-- Continuación — 2026-07-07 (R UD2 render validado)
+- Continuación — 2026-07-07 (UD7 evidencia de negocio, seguridad y decisión)
 - Continuación — 2026-07-07 (R UD2 sin metapaquete tidyverse)
 - Continuación — 2026-07-07 (RA1 lenguajes y formatos)
 - Continuación — 2026-07-07 (revisión cobertura Real Decreto)
 - Continuación — 2026-07-07 (UD12 evidencia de negocio y automatización)
-- Continuación — 2026-07-07 (UD7 evidencia de negocio, seguridad y decisión)
 - Continuación — 2026-07-14 (validación visual del seguimiento)
 - Continuación — 2026-07-21 (normas comunes de entrega y uso de IA)
 - Continuación — 2026-07-22 (piloto Pixi)
 - Continuación — 2026-07-22 (piloto uv)
 - Continuación — 2026-07-25 (decisión Poetry/Pixi)
-- Continuación — 2026-07-25 (migración inicial de Lab1 a Pixi)
 - Continuación — 2026-07-25 (prototipo Pixi del repositorio)
 - Continuación — 2026-07-25 (retirada de Poetry en Lab1)
 - Continuación — 2026-07-27 (CRISP-DM y prevención de fuga de datos en UD3)
 - Continuación — 2026-07-28 (entorno Pixi aislado para P2/PyCaret)
-- Continuación — 2026-07-28 (P3 capstone: flujo anti-fuga)
-- Continuación — 2026-07-29 (P3 ejecutable de extremo a extremo)
+- Continuación — 2026-07-25 (migración inicial de Lab1 a Pixi)
 - Continuación — 2026-07-29 (portabilidad de rutas del capstone)
 - Continuación — 2026-07-30 (migración de guías UD3 a Pixi)
 - Continuación — 2026-07-31 (P3 ejecutado con el snapshot real)
-- build_capstone_dataset.py
+- CapstoneDatasetContractTests
 - Continuación — 2026-07-31 (navegación pública P0)
 - Continuación — 2026-07-31 (P2 ejecutado con el snapshot real)
 - Continuación — 2026-07-31 (pipeline reproducible del dataset del capstone)
 - Continuación — 2026-07-31 (primer snapshot real del capstone)
-- Continuación — 2026-07-31 (validación FastAPI/Pixi)
+- Continuación — 2026-07-29 (P3 ejecutable de extremo a extremo)
 - Continuación — 2026-08-01 (cierre transversal de normas y portada)
 - Continuación — 2026-08-01 (ruta canónica de UD4)
 - Continuación — 2026-08-01 (ruta canónica de UD8)
@@ -426,7 +428,6 @@
 - Continuación — 2026-07-01 (READMEs evaluación)
 - Continuación — 2026-07-01 (UD10)
 - Continuación — 2026-07-01 (UD4)
-- Continuación — 2026-07-06 (commits temáticos)
 - Continuación — 2026-07-23 (manual inicial de Pixi)
 - Continuación — 2026-07-25 (auditoría de documentación Poetry)
 - Continuación — 2026-07-28 (Capstone P2: flujo anti-fuga)
@@ -439,7 +440,7 @@
 - Imports
 
 ## God Nodes (most connected - your core abstractions)
-1. `Estado actual y pendientes — PIA 2026-2027` - 118 edges
+1. `Estado actual y pendientes — PIA 2026-2027` - 119 edges
 2. `Planificación Curso Siguiente (progresión MLOps)` - 24 edges
 3. `Unidad 5: Herramientas Cloud para IA (sesión)` - 21 edges
 4. `Portal público PIA (índice)` - 20 edges
@@ -459,8 +460,8 @@
   09-gpu-avanzado/04-evaluacion/README.md → 04-deep-learning/01-teoria/02-frameworks-deep-learning/tensorflow-avanzado/TensorFlow_BajoNivel.md
 - `cuDF / RAPIDS (GPU NVIDIA)` --semantically_similar_to--> `cuDF`  [INFERRED] [semantically similar]
   02-tratamiento-datos/README.md → 09-gpu-avanzado/04-evaluacion/README.md
-- `Bloque de transición a pandas (140–175)` --references--> `index()`  [INFERRED]
-  01-fundamentos-python/99-profesor/05-GUION_QUINTA_CLASE_PIA_UD1.md → 03-machine-learning/02-ejemplos/fastapi/main.py
+- `Modelado exploratorio con PyCaret` --semantically_similar_to--> `PyCaret (UD3 P2)`  [INFERRED] [semantically similar]
+  03-machine-learning/03-practicas/midterm-capstone/Peliculas/00-CapstonePeliculas.md → docs/manual-pixi-pia.md
 
 ## Import Cycles
 - None detected.
@@ -528,11 +529,11 @@
 - **Stack Convergente de Herramientas** — 07_convergencia_herramientas_01_teoria_01_gap_produccion_dvc, 07_convergencia_herramientas_01_teoria_01_gap_produccion_mlflow, 07_convergencia_herramientas_01_teoria_01_gap_produccion_prefect, 07_convergencia_herramientas_01_teoria_01_gap_produccion_fastapi, 07_convergencia_herramientas_01_teoria_01_gap_produccion_crewai, 07_convergencia_herramientas_01_teoria_01_gap_produccion_evidently, 07_convergencia_herramientas_01_teoria_01_gap_produccion_llamaindex, 07_convergencia_herramientas_01_teoria_01_gap_produccion_guardrails_ai, 07_convergencia_herramientas_01_teoria_01_gap_produccion_shap [INFERRED 0.95]
 - **IA Vision Challenge Chihuahua vs Muffin teaching pack** — 08_vision_xai_03_practicas_vision_tareas_ud4_chihuahua_vs_muffin_challenge_pack_muffin_vs_chihuahua_entrega_doc, 08_vision_xai_03_practicas_vision_tareas_ud4_chihuahua_vs_muffin_challenge_pack_enunciado_chihuahua_vs_muffin_doc, 08_vision_xai_03_practicas_vision_tareas_ud4_chihuahua_vs_muffin_challenge_pack_niveles_dificultad_doc, 08_vision_xai_03_practicas_vision_tareas_ud4_chihuahua_vs_muffin_challenge_pack_propuesta_duracion_doc, 08_vision_xai_03_practicas_vision_tareas_ud4_chihuahua_vs_muffin_challenge_pack_rubrica_chihuahua_vs_muffin_doc, 08_vision_xai_03_practicas_vision_tareas_ud4_chihuahua_vs_muffin_challenge_pack_trucos_docencia_challenge_doc [INFERRED 0.95]
 
-## Communities (443 total, 116 thin omitted)
+## Communities (442 total, 119 thin omitted)
 
-### Community 0 - "sys"
-Cohesion: 0.06
-Nodes (12): build_lab1_dataset(), main(), get_api_keys(), merge_tmdb_omdb(), get_omdb_data(), OmdbClient, get_popular_movies(), Lab1DatasetContractTests (+4 more)
+### Community 0 - "build_dataset.py"
+Cohesion: 0.12
+Nodes (8): build_lab1_dataset(), main(), get_api_keys(), merge_tmdb_omdb(), get_omdb_data(), get_popular_movies(), Lab1DatasetContractTests, Hecho
 
 ### Community 1 - "demo_embeddings.py"
 Cohesion: 0.18
@@ -547,20 +548,20 @@ Cohesion: 0.06
 Nodes (41): Checklist de Entrega UD2, Rúbrica base UD2 Tratamiento de datos, EDA y clasificación Titanic, EDA clasificación Titanic UD2, Análisis exploratorio de datos, Dataset Titanic, Clasificación de supervivencia, Decisión — Itinerario R laboral (+33 more)
 
 ### Community 4 - "metricas.py"
-Cohesion: 0.12
-Nodes (5): main(), measure_inferencia_time(), MetricsCollector, plot_comparison_bars(), plot_loss_curves()
+Cohesion: 0.18
+Nodes (4): compare_models_results(), measure_inferencia_time(), plot_comparison_bars(), plot_loss_curves()
 
 ### Community 5 - "Capstone Dataset de Películas (CRISP-DM)"
-Cohesion: 0.14
-Nodes (18): Capstone Dataset de Películas (CRISP-DM), DATASET_CONTRACT.md, CRISP-DM, Defensa oral individual, EDA (Práctica 1), Ampliación GPU (cuDF/cuML), Modelo final sin PyCaret, Modelado exploratorio con PyCaret (+10 more)
+Cohesion: 0.20
+Nodes (12): Capstone Dataset de Películas (CRISP-DM), DATASET_CONTRACT.md, CRISP-DM, Defensa oral individual, EDA (Práctica 1), Ampliación GPU (cuDF/cuML), Modelo final sin PyCaret, Modelado exploratorio con PyCaret (+4 more)
 
 ### Community 6 - "Glosario UD4 - Fundamentos de Redes Neuronales"
 Cohesion: 0.08
 Nodes (10): UD4 - Deep Learning aplicado, Batch, Tensor, Glosario UD4 - Fundamentos de Redes Neuronales, Batch (lote), Epoch (época), Perceptrón multicapa (MLP), Neurona artificial (+2 more)
 
-### Community 7 - "torch_nn"
-Cohesion: 0.15
-Nodes (5): DecoderLayer, EncoderLayer, MultiHeadAttention, PositionalEncoding, PositionWiseFeedForward
+### Community 7 - "ejemplo_transformers_3_reformulacion.py"
+Cohesion: 0.09
+Nodes (15): build_vocab(), collate_batch(), encode(), greedy_generate(), load_pairs(), main(), ReformulationDataset, tokenize() (+7 more)
 
 ### Community 8 - "Mapa del ecosistema moderno de IA (2026)"
 Cohesion: 0.08
@@ -570,17 +571,17 @@ Nodes (34): An Image Is Worth 16×16 Words: Transformers for Image Recognition (
 Cohesion: 0.10
 Nodes (15): build_vocab(), collate_batch(), DecoderLayer, encode(), EncoderLayer, greedy_translate(), load_parallel_data(), main() (+7 more)
 
-### Community 10 - "comparativa.py"
+### Community 10 - "main"
 Cohesion: 0.08
-Nodes (13): ClasificacionDataset, Config, load_clasificacion_data(), load_seq2seq_data(), main(), plot_comparison(), PositionalEncoding, print_summary() (+5 more)
+Nodes (11): ClasificacionDataset, load_clasificacion_data(), main(), plot_comparison(), PositionalEncoding, print_summary(), set_seed(), train_and_measure() (+3 more)
 
 ### Community 11 - "ejemplo_transformers_4_encoder_only_clasificacion.py"
 Cohesion: 0.10
 Nodes (15): build_label_vocab(), build_vocab(), ClassificationDataset, collate_batch(), encode(), EncoderLayer, EncoderOnlyClassifier, load_dataset() (+7 more)
 
 ### Community 12 - "ejemplo_transformers_2_generacion_decoder_only.py"
-Cohesion: 0.10
-Nodes (13): build_char_vocab(), CharDataset, DecoderOnlyLayer, DecoderOnlyTransformer, encode_text(), generate_text(), load_text(), main() (+5 more)
+Cohesion: 0.15
+Nodes (9): build_char_vocab(), CharDataset, DecoderOnlyTransformer, encode_text(), generate_text(), load_text(), main(), sample_next_token() (+1 more)
 
 ### Community 13 - "TensorFlow bajo nivel (capítulo)"
 Cohesion: 0.09
@@ -594,13 +595,13 @@ Nodes (9): FLAML: AutoML ligero, PyCaret (herramienta P2), Trazas MLflow (mlruns
 Cohesion: 0.05
 Nodes (56): Mecanismos de atención, BERT, Char-RNN (Shakespeare), NLP: RNNs y Atención (UD4 teoría), GPT, Biblioteca Transformers de Hugging Face, Blog char-rnn de Andrej Karpathy (2015), NMT codificador-decodificador (+48 more)
 
-### Community 16 - "mamba_blocks.py"
-Cohesion: 0.12
-Nodes (5): MambaBlock, MambaDecoderBlock, MambaEncoderBlock, PositionalEncoding, RMSNorm
+### Community 16 - "ejemplo_mamba_3_clasificacion_intenciones.py"
+Cohesion: 0.07
+Nodes (17): build_label_vocab(), build_vocab(), ClassificationDataset, collate_batch(), encode(), evaluate(), load_dataset(), main() (+9 more)
 
-### Community 17 - "Búsqueda y juegos: una introducción a la IA clásica"
-Cohesion: 0.14
-Nodes (14): 1. Representar un problema de búsqueda, 2. DFS, BFS y A*, 3. Juegos adversarios: minimax, 4. Qué relación tiene con la IA actual, Búsqueda A*, Búsqueda en anchura (BFS), Búsqueda en profundidad (DFS), Búsqueda y juegos: una introducción a la IA clásica (+6 more)
+### Community 17 - "Plan IA Simbólica / Neuro-Simbólica (curricular)"
+Cohesion: 0.05
+Nodes (43): AlphaFold (DeepMind), Representación del conocimiento / grafos, IA neuro-simbólica, IA simbólica (reglas, lógica, ontologías), Motores de inferencia, Lógica proposicional y de primer orden, Plan IA Simbólica / Neuro-Simbólica (curricular), Redes neuronales (límites) (+35 more)
 
 ### Community 18 - "Demo técnica: RAG con PageIndex sin chunking clásico"
 Cohesion: 0.17
@@ -630,14 +631,6 @@ Nodes (13): Comparativa Keras vs PyTorch vs JAX, JAX, Keras, PyTorch, TPUs / inv
 Cohesion: 0.14
 Nodes (18): Transformers 10: Traducción Inglés-Español, Script ejemplo_transformers_1_traduccion_en_es.py, Greedy decoding, Dataset mini_trad_es_en_ampliado.tsv, Decoder-only, Transformers 11: Generación de texto Decoder-Only, Máscara causal, Corpus mini_estilo_quijote.txt (+10 more)
 
-### Community 25 - "lfm_blocks.py"
-Cohesion: 0.12
-Nodes (5): LiquidBlock, LiquidDecoderBlock, LiquidDecoderOnly, LiquidEncoderBlock, PositionalEncoding
-
-### Community 26 - "ejemplo_mamba_3_clasificacion_intenciones.py"
-Cohesion: 0.17
-Nodes (12): build_label_vocab(), build_vocab(), ClassificationDataset, collate_batch(), encode(), evaluate(), load_dataset(), main() (+4 more)
-
 ### Community 27 - "Snake con RL (pyglet, gymnasium, Q-Table, DQN)"
 Cohesion: 0.14
 Nodes (20): Agente y entorno (RL), CartPole, Factor de descuento (gamma), Aprendizaje por Refuerzo (teoría), MDP (Proceso de Decisión de Markov), Política (pi) y ciclo de Bellman, Función de valor V(s) y Q-valor, Snake con RL (pyglet, gymnasium, Q-Table, DQN) (+12 more)
@@ -655,12 +648,12 @@ Cohesion: 0.15
 Nodes (17): Anthropic, AWS EC2, Categoría Compute Cloud, Ejemplo de comparativa de herramientas cloud para IA, Feast, Categoría Feature Store, Google AI, Google Colab (+9 more)
 
 ### Community 32 - "ejemplo_lfm_3_clasificacion_intenciones.py"
-Cohesion: 0.17
-Nodes (12): build_label_vocab(), build_vocab(), ClassificationDataset, collate_batch(), encode(), evaluate(), load_dataset(), main() (+4 more)
+Cohesion: 0.08
+Nodes (16): build_label_vocab(), build_vocab(), ClassificationDataset, collate_batch(), encode(), evaluate(), load_dataset(), main() (+8 more)
 
-### Community 33 - "Temario de NumPy combinado"
-Cohesion: 0.18
-Nodes (10): Bloque 0. Antes de NumPy, Bloque 1. Fundamentos de arrays, Bloque 2. Indexado y rebanado, Bloque 3. Operaciones y funciones, Bloque 4. Ordenación y estructuras avanzadas, Bloque 6. Aplicaciones de ejemplo, Libros considerados (los que tratan NumPy), Libros según objetivo (+2 more)
+### Community 33 - "📘 Introducción a NumPy"
+Cohesion: 0.04
+Nodes (30): 🧠 Categorías principales de funciones en NumPy, 📚 Conclusión, 🔬 Ejemplo práctico, 🧩 Estructura básica: el array de NumPy, 📘 Introducción a NumPy, 🔗 Librerías que usan NumPy, 🧮 Operaciones básicas con arrays, ⚙️ ¿Para qué se usa? (+22 more)
 
 ### Community 34 - "series_temporales/generador_consumo.py"
 Cohesion: 0.11
@@ -675,8 +668,8 @@ Cohesion: 0.16
 Nodes (16): MLflow: documentación práctica, Experimentos, MLflow Platform, Model Registry, Model Serving, Tracking de RAG y LLM, Runs, TensorBoard (+8 more)
 
 ### Community 37 - "Guía del Proyecto Final — PIA"
-Cohesion: 0.22
-Nodes (15): Checkpoints CP0–CP7 del proyecto final, Checkpoints del Proyecto Final — PIA, Evaluación del Proyecto Final — PIA, Mapa de Mini-Proyectos — PIA, Modelo de dos carriles (mini-proyectos + proyecto final progresivo), Guía del Proyecto Final — PIA, Stack convergente UD7 (Prefect + FastAPI + MLflow + LlamaIndex + CrewAI), Checkpoints del proyecto final (+7 more)
+Cohesion: 0.17
+Nodes (18): Banco de Ejemplos de Proyecto Final — PIA, Familias de proyecto (8 familias recomendadas), Checkpoints CP0–CP7 del proyecto final, Checkpoints del Proyecto Final — PIA, Evaluación del Proyecto Final — PIA, Mapa de Mini-Proyectos — PIA, Modelo de dos carriles (mini-proyectos + proyecto final progresivo), Guía del Proyecto Final — PIA (+10 more)
 
 ### Community 38 - "Unidad 5: Herramientas Cloud para IA (sesión)"
 Cohesion: 0.18
@@ -686,9 +679,9 @@ Nodes (12): MLflow, Almacenamiento para IA (teoría), Delta Lake, Apache Iceberg
 Cohesion: 0.22
 Nodes (5): 7. Filtrar y transformar (140–160 min), df(), f(), update(), cargar_resultados()
 
-### Community 40 - "F6 — Agentes y RAG en Producción"
-Cohesion: 0.14
-Nodes (17): Caso UD7: Clasificador de Incidencias Técnicas, Mapa de Evaluación RA/CE (RA3 60% / RA4 40%), UD7 Mapa RA/CE (RA3 + RA4), RA3 — Convergencia Tecnológica, CrewAI, DVC, F0 — El Gap de Producción, FastAPI (+9 more)
+### Community 40 - "F0 — El Gap de Producción"
+Cohesion: 0.23
+Nodes (12): Caso UD7: Clasificador de Incidencias Técnicas, Mapa de Evaluación RA/CE (RA3 60% / RA4 40%), UD7 Mapa RA/CE (RA3 + RA4), RA3 — Convergencia Tecnológica, RA4 — Automatización Industrial y de Negocio, DVC, Evidently, F0 — El Gap de Producción (+4 more)
 
 ### Community 41 - "ejemplo_lfm_1_traduccion_en_es.py"
 Cohesion: 0.23
@@ -699,8 +692,8 @@ Cohesion: 0.15
 Nodes (13): 10. Errores frecuentes, 11. Ejercicios, 1. Por qué álgebra lineal en NumPy, 2. Productos de matriz y vector: `dot` / `matmul` / `@`, 3. Normas y distancia, 4. Resolver sistemas lineales: `solve`, 5. Inversa, determinante y traza, 6. Autovalores y autovectores: `eig` (+5 more)
 
 ### Community 43 - "ejemplo_mamba_1_traduccion_en_es.py"
-Cohesion: 0.17
-Nodes (10): build_vocab(), collate_batch(), encode(), greedy_translate(), load_parallel_data(), main(), tokenize(), train_model() (+2 more)
+Cohesion: 0.10
+Nodes (19): build_vocab(), collate_batch(), encode(), greedy_translate(), load_parallel_data(), main(), tokenize(), train_model() (+11 more)
 
 ### Community 44 - "Guion de la segunda clase de PIA — continuación de UD1"
 Cohesion: 0.15
@@ -731,8 +724,8 @@ Cohesion: 0.05
 Nodes (43): Mini API FastAPI, Artefactos exportados (joblib/keras/json), copy_to_api_models(), USO_EXPORTACION — script de exportación de modelos, export_lstm_assets(), export_tfidf_assets(), Serving y orquestación — Fase 1, DSPy (intro) (+35 more)
 
 ### Community 51 - "ejemplo_lfm_2_generacion_decoder_only.py"
-Cohesion: 0.16
-Nodes (8): build_char_vocab(), CharDataset, encode_text(), generate_text(), load_text(), main(), sample_next_token(), train_model()
+Cohesion: 0.18
+Nodes (9): build_char_vocab(), CharDataset, encode_text(), generate_text(), load_text(), main(), sample_next_token(), train_model() (+1 more)
 
 ### Community 52 - "Casos prácticos de NumPy"
 Cohesion: 0.17
@@ -766,9 +759,9 @@ Nodes (17): Prefect, Agente virtual, Airflow, Bloque 04-06 — Agentes y Automat
 Cohesion: 0.28
 Nodes (8): Cross-Learning, Deep Learning y modelos globales, LSTM, MLP, 07_deep_learning_intro.ipynb, PyTorch Lightning, Tensor 3D Batch-Secuencia-Features, TimeSeriesDataset con ventanas
 
-### Community 60 - "check_public_unit_links.py"
-Cohesion: 0.13
-Nodes (13): mkdocs build --strict, Workflow MkDocs Deploy (GitHub Actions), clean_title(), on_config(), scan_files(), scan_unit(), should_exclude_path(), Configuración mkdocs (Material) (+5 more)
+### Community 60 - "crear_notebooks_taller.py"
+Cohesion: 0.08
+Nodes (28): code(), extra_cells(), main(), md(), build_01(), build_02(), build_03(), build_04() (+20 more)
 
 ### Community 61 - "Evaluación — UD9 GPU Avanzado"
 Cohesion: 0.30
@@ -803,8 +796,8 @@ Cohesion: 0.18
 Nodes (12): API local de Ollama, Ollama: documentación práctica, Ollama con MLflow, Ollama (modelos locales), Ollama como generador RAG, API local de Ollama, Ollama: documentación práctica (serving), Ollama con LangChain (+4 more)
 
 ### Community 69 - "Guion de la sexta clase de PIA — R, comparativa, EDA NumPy y pandas"
-Cohesion: 0.12
-Nodes (16): 10. Cierre y ajuste al ritmo, 1. Decisión de alcance, 2. Material que conviene abrir antes de clase, 3. Ritmo de 180 minutos, 4. EDA NumPy: una pregunta y un recorrido breve, 5. Puente: los mismos empleados, ahora con etiquetas (85–100 min), 6. Indexación con intención (110–140 min), 8. Ampliación si queda margen: ausentes y resumen por grupo (+8 more)
+Cohesion: 0.10
+Nodes (19): 10. Cierre y ajuste al ritmo, 1. Decisión de alcance, 2. Material que conviene abrir antes de clase, 3. Ritmo de 180 minutos, 4. EDA NumPy: una pregunta y un recorrido breve, 5. Puente: los mismos empleados, ahora con etiquetas (85–100 min), 6. Indexación con intención (110–140 min), 8. Ampliación si queda margen: ausentes y resumen por grupo (+11 more)
 
 ### Community 70 - "Stack Convergente de Herramientas IA (UD7)"
 Cohesion: 0.18
@@ -830,9 +823,9 @@ Nodes (10): Preparación del entorno R, R Markdown / Quarto (informes reproducib
 Cohesion: 0.40
 Nodes (5): Backpropagation visual, Backpropagation, Receta de backpropagation, Imágenes y backpropagation, Regla de la cadena
 
-### Community 76 - "ejemplo_transformers_3_reformulacion.py"
-Cohesion: 0.21
-Nodes (10): build_vocab(), collate_batch(), encode(), greedy_generate(), load_pairs(), main(), ReformulationDataset, tokenize() (+2 more)
+### Community 76 - ".__init__"
+Cohesion: 0.18
+Nodes (4): DecoderOnlyLayer, MultiHeadAttention, PositionalEncoding, PositionWiseFeedForward
 
 ### Community 77 - "Aleatoriedad y números aleatorios avanzados con NumPy"
 Cohesion: 0.18
@@ -871,8 +864,8 @@ Cohesion: 0.20
 Nodes (10): Haystack, Herramientas de IA para Programacion, Instructor, LangGraph, LiteLLM, LlamaIndex, PydanticAI, Ragas (+2 more)
 
 ### Community 87 - "Tarea: Implementación del Transformer en otra librería"
-Cohesion: 0.25
-Nodes (6): Ejemplos Transformers de la UD4 (traducción, generación, reformulación, clasificación), Tarea Transformer Portado Entrega, Flax (JAX), Keras (TensorFlow), PyTorch Lightning, Tarea: Implementación del Transformer en otra librería
+Cohesion: 0.22
+Nodes (7): Ejemplos Transformers de la UD4 (traducción, generación, reformulación, clasificación), Tarea Transformer Portado Entrega, Flax (JAX), Keras (TensorFlow), PyTorch Lightning, Tarea: Implementación del Transformer en otra librería, UD4 — Deep Learning
 
 ### Community 88 - "DSPy Framework"
 Cohesion: 0.24
@@ -899,12 +892,12 @@ Cohesion: 0.25
 Nodes (8): Seasonal Naive, Feature Importance, Forecasting como regresión, HistGradientBoosting, 05_forecasting_como_regresion.ipynb, Random Forest, Supervisión artificial, El torneo de modelos
 
 ### Community 94 - "Portal público PIA (índice)"
-Cohesion: 0.20
-Nodes (20): Guía de inicio / cómo trabajar los materiales, Guía de Inicio (ruta común de trabajo con los materiales), Entornos Pixi del curso, Repositorio programacion-inteligencia-artificial, Portal público PIA (índice), Portal común SBD-PIA-DWES, Proyecto Integrado final, Unidades UD1-UD12 (+12 more)
+Cohesion: 0.18
+Nodes (19): Accesos rápidos al curso PIA, Portal del curso, Repositorio del alumnado, Guía de inicio / cómo trabajar los materiales, Guía de Inicio (ruta común de trabajo con los materiales), Entornos Pixi del curso, Repositorio programacion-inteligencia-artificial, Portal público PIA (índice) (+11 more)
 
-### Community 95 - "📘 Introducción a NumPy"
-Cohesion: 0.22
-Nodes (9): 📚 Conclusión, 🔬 Ejemplo práctico, 🧩 Estructura básica: el array de NumPy, 📘 Introducción a NumPy, 🔗 Librerías que usan NumPy, 🧮 Operaciones básicas con arrays, ⚙️ ¿Para qué se usa?, 🧠 ¿Qué es NumPy? (+1 more)
+### Community 95 - "Guion de la séptima clase de PIA — instalar R en VS Code, comparativa y repaso de pandas"
+Cohesion: 0.13
+Nodes (14): 1. Decisión de alcance (sesión más corta: 2 h), 2. Material que conviene abrir antes de clase, 3. Ritmo de 120 minutos, 4. Bloque de arranque: instalar R + VS Code y abrir el primer notebook R (0–20 min), 5. Comparativa de lenguajes y formatos (entregable, 35–70 min), 6. Repaso de lo primero de pandas (75–100 min), 7. Mini-práctica breve y cierre (100–120 min), 8. Cierre y ajuste al ritmo (+6 more)
 
 ### Community 96 - "Kit de aula — Dataset de películas como grafo"
 Cohesion: 0.31
@@ -922,13 +915,9 @@ Nodes (8): Deep Learning con JAX (Flax/Equinox), Equinox, Flax, PyTree, Guía de
 Cohesion: 0.22
 Nodes (6): Deep Learning con PyTorch, nn.Module, PyTorch, Capa convolucional, Arquitectura de Red Convolucional, MaxPool y Filtros, PyTorch (CUDA 13.0)
 
-### Community 100 - "torch"
-Cohesion: 0.12
-Nodes (4): MultivariateLSTM, MultivariateTimeSeriesDataset, LSTMModel, TimeSeriesDataset
-
-### Community 101 - "08 - De NumPy a JAX: ampliación del cálculo numérico"
-Cohesion: 0.25
-Nodes (6): 08 - De NumPy a JAX: ampliación del cálculo numérico, Actividad guiada, Antes de empezar, Qué aporta JAX, Qué debes poder explicar, Referencias
+### Community 101 - "write_outputs"
+Cohesion: 0.20
+Nodes (8): build_manifest(), sha256(), validate_output_paths(), write_outputs(), Continuación — 2026-07-31 (coherencia transaccional del snapshot), Hecho, Pendiente real, Siguiente paso recomendado
 
 ### Community 102 - "LangChain"
 Cohesion: 0.22
@@ -958,17 +947,17 @@ Nodes (8): Seaborn Mega Chuleta, Dataset flights, Matplotlib (base de Seaborn), 
 Cohesion: 0.20
 Nodes (15): Índice scikit-learn y CuML, Scikit-learn, CuML y RAPIDS, Aprendizaje supervisado CPU y GPU, Aprendizaje no supervisado CPU y GPU, ML transversal y GPU, Preparación de datos sin fuga, Marco CRISP-DM, Creación y servicio de datasets (+7 more)
 
-### Community 109 - "esqueletoAWS.py"
-Cohesion: 0.18
+### Community 109 - "backPropScratch.py"
+Cohesion: 0.39
 Nodes (3): NeuralNetwork, sigmoid(), sigmoid_derivative()
 
 ### Community 110 - "Evaluación y observabilidad de LLM (teoría)"
 Cohesion: 0.25
 Nodes (7): Evaluación y observabilidad de LLM (teoría), DeepEval, Helicone, LangSmith, Arize Phoenix, Promptfoo, Ragas
 
-### Community 111 - "F5 — Serving y APIs para Modelos de IA"
-Cohesion: 0.09
-Nodes (22): RA4 — Automatización Industrial y de Negocio, Evidently, MLflow, Prefect, Claude Code, Cursor, F1 — Desarrollo Asistido por IA, GitHub Copilot (+14 more)
+### Community 111 - "F3 — Experimentación y Registro con MLflow"
+Cohesion: 0.16
+Nodes (7): MLflow, Claude Code, Cursor, F1 — Desarrollo Asistido por IA, GitHub Copilot, F3 — Experimentación y Registro con MLflow, MLflow Model Registry
 
 ### Community 112 - "export_models.py"
 Cohesion: 0.27
@@ -1107,12 +1096,12 @@ Cohesion: 0.33
 Nodes (5): Deep Learning con PyTorch Lightning, LightningDataModule, LightningModule, Trainer, PyTorch Lightning
 
 ### Community 148 - "ejemplo_lfm_4_reformulacion.py"
-Cohesion: 0.23
-Nodes (9): build_vocab(), collate_batch(), encode(), greedy_generate(), load_pairs(), main(), ReformulationDataset, tokenize() (+1 more)
+Cohesion: 0.17
+Nodes (10): build_vocab(), collate_batch(), encode(), greedy_generate(), load_pairs(), main(), ReformulationDataset, tokenize() (+2 more)
 
-### Community 149 - "ejemplo_mamba_4_reformulacion.py"
-Cohesion: 0.23
-Nodes (9): build_vocab(), collate_batch(), encode(), greedy_generate(), load_pairs(), main(), ReformulationDataset, tokenize() (+1 more)
+### Community 149 - "Guía: instalar R, configurar VS Code y usar notebooks con R"
+Cohesion: 0.15
+Nodes (12): 0. Resumen de pasos, 1. Instalar R desde CRAN, 2. Instalar las extensiones de VS Code, 3. Asegurar un entorno con Jupyter, 4. Instalar IRkernel y registrar el kernel, 5. Crear o abrir un notebook con kernel R, 6. Comprobación rápida, 7. Problemas frecuentes (+4 more)
 
 ### Community 150 - "Frameworks de ML en la nube (teoría)"
 Cohesion: 0.25
@@ -1126,9 +1115,9 @@ Nodes (4): Activaciones y pérdidas: guía alternativa, Activación y función d
 Cohesion: 0.14
 Nodes (12): CNN, Enunciado IA Vision Challenge — Chihuahua vs Muffin, Modelos híbridos CNN+ViT, Leaderboard, Vision Transformer (ViT), CNN sencilla baseline, Data augmentation, Niveles de dificultad del challenge (+4 more)
 
-### Community 153 - "Banco de Ejemplos de Proyecto Final — PIA"
-Cohesion: 0.32
-Nodes (6): Banco de Ejemplos de Proyecto Final — PIA, Familias de proyecto (8 familias recomendadas), Base vectorial (búsqueda semántica), Preguntas frecuentes sobre las herramientas cloud del proyecto, RAG (Retrieval-Augmented Generation), Versión mínima viable del proyecto
+### Community 153 - "RAG (Retrieval-Augmented Generation)"
+Cohesion: 0.83
+Nodes (3): Base vectorial (búsqueda semántica), Preguntas frecuentes sobre las herramientas cloud del proyecto, RAG (Retrieval-Augmented Generation)
 
 ### Community 154 - "Arquitectura LFM (hibrida: liquid blocks + GQA)"
 Cohesion: 0.33
@@ -1190,17 +1179,17 @@ Nodes (3): Continuación — 2026-07-31 (validación Streamlit/Pixi), Pendientes
 Cohesion: 0.31
 Nodes (13): DecoderLayer, Lectura Guiada del Script Transformer en PyTorch, EncoderLayer, generate_mask, MultiHeadAttention, PositionalEncoding, PositionWiseFeedForward, scaled_dot_product_attention (+5 more)
 
-### Community 169 - "Plan IA Simbólica / Neuro-Simbólica (curricular)"
-Cohesion: 0.18
-Nodes (12): AlphaFold (DeepMind), Representación del conocimiento / grafos, IA neuro-simbólica, IA simbólica (reglas, lógica, ontologías), Motores de inferencia, Lógica proposicional y de primer orden, Plan IA Simbólica / Neuro-Simbólica (curricular), Redes neuronales (límites) (+4 more)
+### Community 169 - "F5 — Serving y APIs para Modelos de IA"
+Cohesion: 0.21
+Nodes (10): F2 — Pipeline de Datos Automatizado, Feature Store, pandera, Autenticación con API Key, F5 — Serving y APIs para Modelos de IA, Documentación OpenAPI/Swagger, Pydantic (validación de esquemas), slowapi (rate limiting) (+2 more)
 
-### Community 170 - "Capítulo IA simbólica y enfoques neuro-simbólicos"
-Cohesion: 0.18
-Nodes (8): Cajas negras y explicabilidad limitada, Representación del conocimiento (hechos/reglas), Capítulo IA simbólica y enfoques neuro-simbólicos, Motores de reglas y encadenamiento, IA neuro-simbólica, Reglas IF-THEN, Restricciones y consistencia, Russell & Norvig: AIMA
+### Community 170 - "F6 — Agentes y RAG en Producción"
+Cohesion: 0.27
+Nodes (8): CrewAI, LlamaIndex, AutoGen (patrón Debate), F6 — Agentes y RAG en Producción, LlamaIndex HierarchicalNodeParser, Ollama (modelos locales), Caso ParkingCorp (documentación jerárquica de aparcamientos), LlamaIndex RecursiveRetriever
 
-### Community 171 - "crear_notebooks_taller.py"
-Cohesion: 0.11
-Nodes (20): make_cell(), make_notebook(), load_split_gray(), load_split_rgb(), main(), code(), extra_cells(), main() (+12 more)
+### Community 171 - "prepare_oxford_flowers102.py"
+Cohesion: 0.43
+Nodes (3): load_split_gray(), load_split_rgb(), main()
 
 ### Community 172 - "Embeddings"
 Cohesion: 0.40
@@ -1246,17 +1235,13 @@ Nodes (4): Tarea EDA-DataPrep-Clasificación, Dataset Bank Marketing (UCI), Opti
 Cohesion: 0.50
 Nodes (3): Curva precisión-exhaustividad, Sobreajuste, subajuste, sesgo y varianza, Generalización del modelo
 
-### Community 183 - "Accesos rápidos al curso PIA"
-Cohesion: 0.67
-Nodes (3): Accesos rápidos al curso PIA, Portal del curso, Repositorio del alumnado
-
 ### Community 185 - "pandas"
-Cohesion: 0.05
-Nodes (8): load_model(), HousingModel, IrisNN, extract_data(), preprocess_data(), test_airflow(), train_model(), validate_model()
+Cohesion: 0.09
+Nodes (6): load_model(), extract_data(), preprocess_data(), test_airflow(), train_model(), validate_model()
 
-### Community 186 - "11-anexos README"
-Cohesion: 0.24
-Nodes (9): Actividad RL Catch the Fruit, Evaluación — UD11 Anexos, DQN, Q-Table, CartPole (Q-Learning y DQN), 11-anexos README, Neuro-simbólica, Reinforcement Learning (+1 more)
+### Community 186 - "F4 — Orquestación con Prefect"
+Cohesion: 0.29
+Nodes (5): Prefect, Apache Airflow, Programación y Disparadores (CronSchedule), F4 — Orquestación con Prefect, Prefect Tasks y Flows
 
 ### Community 188 - "Continuación — 2026-08-01 (saneamiento previo al traslado)"
 Cohesion: 0.67
@@ -1294,9 +1279,9 @@ Nodes (3): Errores comunes y checklist rápido de Altair, Altair, Seaborn (compa
 Cohesion: 0.67
 Nodes (3): Bloque 17: Visualización avanzada y mini-EDA, Matplotlib (bloque 17), Plotly (bloque 17)
 
-### Community 198 - ".save"
-Cohesion: 0.40
-Nodes (3): 🧠 Categorías principales de funciones en NumPy, Bloque 5. Números aleatorios e I/O, Revisión de cobertura de cuestionarios NumPy — 2026-10-19 (diagnóstico previo a la ampliación)
+### Community 198 - "Manual práctico de Pixi para PIA"
+Cohesion: 0.47
+Nodes (6): CPU, GPU y CUDA, FLAML (AutoML experimental), Manual práctico de Pixi para PIA, Pixi (features y environments), PyCaret (UD3 P2), uv vs Conda/Mamba
 
 ### Community 200 - "Actividad House Prices Kaggle"
 Cohesion: 0.67
@@ -1306,9 +1291,9 @@ Nodes (3): Rúbrica House Prices (selección/entrenamiento/evaluación), Activid
 Cohesion: 0.67
 Nodes (4): Similitud coseno, NLP 05 — Embeddings de frases y búsqueda semántica, Búsqueda semántica, Embeddings de frases
 
-### Community 202 - "Bloque inicial: R y comparativa (5–55 min)"
-Cohesion: 0.67
-Nodes (3): Bloque inicial: R y comparativa (5–55 min), Comparativa entregable en 35 minutos, R base en 15 minutos
+### Community 202 - "Resultado real de la sexta clase y preparación de la siguiente (2 h) — 2026-10-21"
+Cohesion: 0.40
+Nodes (5): Cierre y publicación — 2026-10-21, Decisión: instalar R y usar notebooks R en VS Code, sin RStudio, Próxima clase (2 h) — plan, Resultado real de la sexta clase y preparación de la siguiente (2 h) — 2026-10-21, Sesión 6 (20-10) — lo realmente impartido
 
 ### Community 203 - "Continuación — 2026-07-22 (auditoría de `environment.yml`)"
 Cohesion: 0.67
@@ -1354,9 +1339,25 @@ Nodes (3): Continuación — 2026-08-18 (kit de aula del apéndice de grafos), H
 Cohesion: 0.06
 Nodes (35): 1. Resumen ejecutivo, 2.10 UD7 — Convergencia tecnológica, 2.11 Herramientas transversales (sin unidad fija), 2.12 Herramientas de generación de código con IA, 2.13 Datasets, 2.14 Planificación, 2.15 Proyecto integrador, 2.16 Cronograma (+27 more)
 
+### Community 222 - "Continuación — 2026-07-07 (R UD2 render validado)"
+Cohesion: 0.50
+Nodes (4): Continuación — 2026-07-07 (R UD2 render validado), Hecho, Resultado, Siguiente paso recomendado
+
+### Community 227 - "Continuación — 2026-07-28 (P3 capstone: flujo anti-fuga)"
+Cohesion: 0.50
+Nodes (4): Continuación — 2026-07-28 (P3 capstone: flujo anti-fuga), Hecho, Pendiente real, Siguiente paso recomendado
+
+### Community 236 - "Continuación — 2026-07-31 (validación FastAPI/Pixi)"
+Cohesion: 0.50
+Nodes (4): Continuación — 2026-07-31 (validación FastAPI/Pixi), Hecho, Pendiente real, Siguiente paso recomendado
+
+### Community 239 - "Continuación — 2026-07-31 (bloqueos de revisión UD3/Pixi)"
+Cohesion: 0.67
+Nodes (3): Continuación — 2026-07-31 (bloqueos de revisión UD3/Pixi), Pendiente real, Siguiente paso recomendado
+
 ### Community 332 - "Estado actual y pendientes — PIA 2026-2027"
 Cohesion: 0.06
-Nodes (31): Agenda de la próxima sesión — NumPy/JAX, Catálogo de bibliografía NumPy — 2026-10-18, Cierre de traslado — 2026-08-01, Cierre operativo — 2026-07-14, Completado, Continuación — 2026-07-01 (checklists), Cuaderno alternativo de ejercicios NumPy — 2026-10-20, Cuaderno integral de ejercicios y cuestionario NumPy — 2026-10-19 (+23 more)
+Nodes (34): Agenda de la próxima sesión — NumPy/JAX, Catálogo de bibliografía NumPy — 2026-10-18, Cierre de traslado — 2026-08-01, Cierre operativo — 2026-07-14, Completado, Continuación — 2026-07-01 (checklists), Continuación — 2026-07-06 (commits temáticos), Cuaderno alternativo de ejercicios NumPy — 2026-10-20 (+26 more)
 
 ### Community 333 - "3. Comparativa por unidad/bloque"
 Cohesion: 0.07
@@ -1482,9 +1483,9 @@ Nodes (6): Alcance del inventario, Consideraciones pedagógicas y curriculares, 
 Cohesion: 0.33
 Nodes (6): Entregas y uso de IA, Evaluación, Forma de trabajo, Presentación del curso: Programación de Inteligencia Artificial, Propósito, Proyecto integrado
 
-### Community 380 - "Handoff PIA — R, comparativa, EDA NumPy y pandas (2026-10-19)"
-Cohesion: 0.22
-Nodes (8): Avance real, Guion para el martes 20 de octubre, Handoff PIA — R, comparativa, EDA NumPy y pandas (2026-10-19), Materiales, Pendiente mañana 20-10: Moodle, antes de clase, Preparación y comprobaciones, Repositorios y pendientes, Retomar en el ordenador del instituto
+### Community 380 - "Handoff PIA — R (instalación VS Code), comparativa y repaso de pandas (2026-10-21)"
+Cohesion: 0.33
+Nodes (5): Handoff PIA — R (instalación VS Code), comparativa y repaso de pandas (2026-10-21), Nueva guía de instalación (creada en esta sesión), Pendientes, Próxima clase (2 horas), Resultado real de la sexta clase (20-10)
 
 ### Community 381 - "Skill Registry — 00-planificación"
 Cohesion: 0.33
@@ -1646,9 +1647,9 @@ Nodes (4): Continuación — 2026-07-06 (seguimiento de curso), Hecho, Queda pen
 Cohesion: 0.50
 Nodes (4): Continuación — 2026-07-06 (seguimiento por CE), Hecho, Queda pendiente, Siguiente paso recomendado
 
-### Community 423 - "Continuación — 2026-07-07 (R UD2 render validado)"
+### Community 423 - "Continuación — 2026-07-07 (UD7 evidencia de negocio, seguridad y decisión)"
 Cohesion: 0.50
-Nodes (4): Continuación — 2026-07-07 (R UD2 render validado), Hecho, Resultado, Siguiente paso recomendado
+Nodes (4): Continuación — 2026-07-07 (UD7 evidencia de negocio, seguridad y decisión), Hecho, Resultado, Siguiente paso recomendado
 
 ### Community 424 - "Continuación — 2026-07-07 (R UD2 sin metapaquete tidyverse)"
 Cohesion: 0.50
@@ -1665,10 +1666,6 @@ Nodes (4): Continuación — 2026-07-07 (revisión cobertura Real Decreto), Hech
 ### Community 427 - "Continuación — 2026-07-07 (UD12 evidencia de negocio y automatización)"
 Cohesion: 0.50
 Nodes (4): Continuación — 2026-07-07 (UD12 evidencia de negocio y automatización), Hecho, Resultado posterior, Siguiente paso recomendado
-
-### Community 428 - "Continuación — 2026-07-07 (UD7 evidencia de negocio, seguridad y decisión)"
-Cohesion: 0.50
-Nodes (4): Continuación — 2026-07-07 (UD7 evidencia de negocio, seguridad y decisión), Hecho, Resultado, Siguiente paso recomendado
 
 ### Community 429 - "Continuación — 2026-07-14 (validación visual del seguimiento)"
 Cohesion: 0.50
@@ -1690,10 +1687,6 @@ Nodes (4): Continuación — 2026-07-22 (piloto uv), Decisión provisional, Resu
 Cohesion: 0.50
 Nodes (4): Continuación — 2026-07-25 (decisión Poetry/Pixi), Decisión provisional, Pendiente real, Siguiente paso recomendado
 
-### Community 434 - "Continuación — 2026-07-25 (migración inicial de Lab1 a Pixi)"
-Cohesion: 0.50
-Nodes (4): Continuación — 2026-07-25 (migración inicial de Lab1 a Pixi), Hecho, Pendiente real, Siguiente paso recomendado
-
 ### Community 435 - "Continuación — 2026-07-25 (prototipo Pixi del repositorio)"
 Cohesion: 0.50
 Nodes (4): Continuación — 2026-07-25 (prototipo Pixi del repositorio), Hecho, Queda pendiente, Siguiente paso recomendado
@@ -1710,13 +1703,9 @@ Nodes (4): Continuación — 2026-07-27 (CRISP-DM y prevención de fuga de datos
 Cohesion: 0.50
 Nodes (4): Continuación — 2026-07-28 (entorno Pixi aislado para P2/PyCaret), Hecho, Pendiente real, Siguiente paso recomendado
 
-### Community 439 - "Continuación — 2026-07-28 (P3 capstone: flujo anti-fuga)"
+### Community 439 - "Continuación — 2026-07-25 (migración inicial de Lab1 a Pixi)"
 Cohesion: 0.50
-Nodes (4): Continuación — 2026-07-28 (P3 capstone: flujo anti-fuga), Hecho, Pendiente real, Siguiente paso recomendado
-
-### Community 440 - "Continuación — 2026-07-29 (P3 ejecutable de extremo a extremo)"
-Cohesion: 0.50
-Nodes (4): Continuación — 2026-07-29 (P3 ejecutable de extremo a extremo), Hecho, Pendiente real, Siguiente paso recomendado
+Nodes (4): Continuación — 2026-07-25 (migración inicial de Lab1 a Pixi), Hecho, Pendiente real, Siguiente paso recomendado
 
 ### Community 441 - "Continuación — 2026-07-29 (portabilidad de rutas del capstone)"
 Cohesion: 0.50
@@ -1730,9 +1719,9 @@ Nodes (4): Continuación — 2026-07-30 (migración de guías UD3 a Pixi), Hecho
 Cohesion: 0.50
 Nodes (4): Continuación — 2026-07-31 (P3 ejecutado con el snapshot real), Hecho, Pendiente real, Siguiente paso recomendado
 
-### Community 444 - "build_capstone_dataset.py"
-Cohesion: 0.10
-Nodes (13): build_dataframe(), build_manifest(), main(), sha256(), validate_dataset(), validate_output_paths(), write_outputs(), capstone_record() (+5 more)
+### Community 444 - "CapstoneDatasetContractTests"
+Cohesion: 0.16
+Nodes (5): build_dataframe(), main(), validate_dataset(), capstone_record(), CapstoneDatasetContractTests
 
 ### Community 446 - "Continuación — 2026-07-31 (navegación pública P0)"
 Cohesion: 0.50
@@ -1750,9 +1739,9 @@ Nodes (4): Continuación — 2026-07-31 (pipeline reproducible del dataset del c
 Cohesion: 0.50
 Nodes (4): Continuación — 2026-07-31 (primer snapshot real del capstone), Hecho, Pendiente real, Siguiente paso recomendado
 
-### Community 451 - "Continuación — 2026-07-31 (validación FastAPI/Pixi)"
+### Community 451 - "Continuación — 2026-07-29 (P3 ejecutable de extremo a extremo)"
 Cohesion: 0.50
-Nodes (4): Continuación — 2026-07-31 (validación FastAPI/Pixi), Hecho, Pendiente real, Siguiente paso recomendado
+Nodes (4): Continuación — 2026-07-29 (P3 ejecutable de extremo a extremo), Hecho, Pendiente real, Siguiente paso recomendado
 
 ### Community 452 - "Continuación — 2026-08-01 (cierre transversal de normas y portada)"
 Cohesion: 0.50
@@ -1806,10 +1795,6 @@ Nodes (3): Continuación — 2026-07-01 (UD10), Hecho, Siguiente paso
 Cohesion: 0.67
 Nodes (3): Continuación — 2026-07-01 (UD4), Hecho, Siguiente paso
 
-### Community 466 - "Continuación — 2026-07-06 (commits temáticos)"
-Cohesion: 0.67
-Nodes (3): Continuación — 2026-07-06 (commits temáticos), Hecho, Siguiente paso recomendado
-
 ### Community 468 - "Continuación — 2026-07-23 (manual inicial de Pixi)"
 Cohesion: 0.67
 Nodes (3): Continuación — 2026-07-23 (manual inicial de Pixi), Hecho, Siguiente paso recomendado
@@ -1839,24 +1824,24 @@ Cohesion: 0.67
 Nodes (3): Pendiente opcional, Resultado, Revisión — 2026-08-10 (bases de datos de grafos)
 
 ## Knowledge Gaps
-- **1544 isolated node(s):** `install_jax.sh script`, `install_keras3.sh script`, `install_mlx.sh script`, `install_onnx.sh script`, `install_pytorch.sh script` (+1539 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1996 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **116 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **1565 isolated node(s):** `install_jax.sh script`, `install_keras3.sh script`, `install_mlx.sh script`, `install_onnx.sh script`, `install_pytorch.sh script` (+1560 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2019 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **119 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Normas de entregas y uso de IA` connect `Normas de entregas y uso de IA` to `UD4 Teoría de Deep Learning base`, `Planificación Curso Siguiente (progresión MLOps)`, `Guía del Proyecto Final — PIA`, `05-cloud-mlops README`, `Construir dataset de películas (Lab1)`, `Portal público PIA (índice)`, `Prácticas UD9: GPU Avanzado`, `UD8 — Visión por Computadora y XAI README`?**
-  _High betweenness centrality (0.209) - this node is a cross-community bridge._
+  _High betweenness centrality (0.196) - this node is a cross-community bridge._
 - **Why does `Evaluación UD6 LLM y Agentes` connect `Planificación Curso Siguiente (progresión MLOps)` to `Normas de entregas y uso de IA`?**
-  _High betweenness centrality (0.178) - this node is a cross-community bridge._
+  _High betweenness centrality (0.171) - this node is a cross-community bridge._
 - **What connects `install_jax.sh script`, `install_keras3.sh script`, `install_mlx.sh script` to the rest of the system?**
-  _1544 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `sys` be split into smaller, more focused modules?**
-  _Cohesion score 0.06448979591836734 - nodes in this community are weakly interconnected._
+  _1565 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `build_dataset.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.1225071225071225 - nodes in this community are weakly interconnected._
 - **Should `Planificación Curso Siguiente (progresión MLOps)` be split into smaller, more focused modules?**
   _Cohesion score 0.05878332194121668 - nodes in this community are weakly interconnected._
 - **Should `UD2 — Tratamiento de Datos` be split into smaller, more focused modules?**
   _Cohesion score 0.0627177700348432 - nodes in this community are weakly interconnected._
-- **Should `metricas.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.125 - nodes in this community are weakly interconnected._
+- **Should `Glosario UD4 - Fundamentos de Redes Neuronales` be split into smaller, more focused modules?**
+  _Cohesion score 0.08095238095238096 - nodes in this community are weakly interconnected._

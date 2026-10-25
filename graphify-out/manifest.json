@@ -648,15 +648,15 @@
     "semantic_hash": "5aae8ce547facb0c9cd1daaaaac9c406"
   },
   "01-fundamentos-python/01-teoria/09-guia-r-complementario.md": {
-    "mtime": 1783033719.751675,
-    "seen": 1792508813.312753,
-    "ast_hash": "a34c9d401beeb9f3be52a25b5decb40b",
-    "semantic_hash": "a34c9d401beeb9f3be52a25b5decb40b"
+    "mtime": 1792569123.6709113,
+    "seen": 1792594974.4124584,
+    "ast_hash": "54007ecc87bf784fb95384926862ef8f",
+    "semantic_hash": ""
   },
   "01-fundamentos-python/01-teoria/README.md": {
-    "mtime": 1792422978.2092874,
-    "seen": 1792508813.3127759,
-    "ast_hash": "559fb82e4707b0dfd0040396feb23d04",
+    "mtime": 1792569123.6715646,
+    "seen": 1792594974.4124854,
+    "ast_hash": "1a67342d999859eab4f1bcf7a9c76885",
     "semantic_hash": ""
   },
   "01-fundamentos-python/03-practicas/09_eda_numpy.md": {
@@ -732,9 +732,9 @@
     "semantic_hash": "4048ad6f1479f61554e1089bd5ac9eaf"
   },
   "01-fundamentos-python/README.md": {
-    "mtime": 1792415125.2407422,
-    "seen": 1792508813.3127975,
-    "ast_hash": "1e390ffbe49e1bfbb6253ebd820ac297",
+    "mtime": 1792569123.6726494,
+    "seen": 1792594974.412573,
+    "ast_hash": "f2fbcc94feb514ed7bb0ade01459fcf3",
     "semantic_hash": ""
   },
   "02-tratamiento-datos/00-r-itinerario-laboral.md": {
@@ -3774,9 +3774,9 @@
     "semantic_hash": ""
   },
   "ESTADO_ACTUAL_Y_PENDIENTES.md": {
-    "mtime": 1792509043.007162,
-    "seen": 1792509074.6310146,
-    "ast_hash": "bc3827b09b3e1381fd35da722a78152e",
+    "mtime": 1792594811.0407817,
+    "seen": 1792594974.4142456,
+    "ast_hash": "ffdef1c1265343a2d585a73b32c31221",
     "semantic_hash": ""
   },
   "ESTRATEGIA_REPOSITORIOS.md": {
@@ -3786,9 +3786,9 @@
     "semantic_hash": ""
   },
   "NOTAS_PROXIMA_SESION.md": {
-    "mtime": 1792480283.6593435,
-    "seen": 1792508813.3132586,
-    "ast_hash": "cdbf3dc712499025804456277b601fcb",
+    "mtime": 1792569123.6761403,
+    "seen": 1792594974.4142528,
+    "ast_hash": "a299763183fdc7b522ac4e1852819cd4",
     "semantic_hash": ""
   },
   "docs/accesos-rapidos.md": {
@@ -3861,6 +3861,18 @@
     "mtime": 1792480283.657062,
     "seen": 1792508813.312796,
     "ast_hash": "eaebeda6ac7bc2a33026c9c75d696646",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/05-recursos/guia-instalacion-r-vscode.md": {
+    "mtime": 1792569123.6721013,
+    "seen": 1792594974.4125304,
+    "ast_hash": "5cdd25bca56cbf9a5fd11cd91fd01b0a",
+    "semantic_hash": ""
+  },
+  "01-fundamentos-python/99-profesor/07-GUION_SEPTIMA_CLASE_PIA_R_COMPARATIVA_PANDAS.md": {
+    "mtime": 1792569123.672352,
+    "seen": 1792594974.4125686,
+    "ast_hash": "0923cebb49d9ce1ce609aae8d4058518",
     "semantic_hash": ""
   }
 }
