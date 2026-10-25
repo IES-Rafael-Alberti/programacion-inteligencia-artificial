@@ -23,7 +23,7 @@ Esta carpeta contiene la teoría de apoyo y las guías de la unidad. Para no dup
 | 12 | Entrada/salida de datos | `12-numpy-io-archivos-avanzado.md` | `../02-ejemplos/12_numpy_io_archivos_avanzado.ipynb` |
 | 13 | Ufuncs y estadística avanzada | `13-numpy-ufuncs-estadistica-avanzado.md` | `../02-ejemplos/13_numpy_ufuncs_estadistica_avanzado.ipynb` |
 | 14 | Álgebra lineal avanzada | `14-numpy-algebra-lineal-avanzado.md` | `../02-ejemplos/14_numpy_algebra_lineal_avanzado.ipynb` |
-| 15 | R como complemento | `09-guia-r-complementario.md` (instalación: `../05-recursos/guia-instalacion-r-vscode.md`) | `../02-ejemplos/06_introduccion_R_fundamentos.ipynb` |
+| 15 | R como complemento | `09-guia-r-complementario.md` (instalación: `../05-recursos/guia-instalacion-r-vscode.md`) | `../02-ejemplos/06_introduccion_R_fundamentos.ipynb` (VS Code) · [`06_introduccion_R_fundamentos.Rmd`](../02-ejemplos/06_introduccion_R_fundamentos.Rmd) (RStudio/knitr) |
 | 16 | Comparativa de lenguajes y formatos para IA | `../04-evaluacion/comparativa-lenguajes-formatos-ia.md` | Python, R, Java, JavaScript/NodeJS, JSON, YAML, Markdown, XML/HTML |
 
 ## Cobertura
