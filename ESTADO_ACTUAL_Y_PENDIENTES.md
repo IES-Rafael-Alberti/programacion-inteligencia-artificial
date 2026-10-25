@@ -60,11 +60,18 @@ El tiempo de la sesión previa queda muy repartido: lo que no se llegó a hacer 
 La preparación está terminada y publicada en GitHub; **la importación/publicación en Moodle aún no está hecha**. Este es el orden de trabajo pendiente:
 
 1. [ ] **Comprobar sincronización en el instituto.** Esperar a que Unison termine y revisar `git status --short`. Trabajar en la rama docente `teacher` y comprobar que contiene la ampliación de cuestionarios y el guion actualizado (material en `f0032c94`, cierre en `808a97ca` o posteriores). Si hay cambios locales, revisarlos antes de actualizar desde GitHub. No mezclar el historial docente en `main` del alumnado.
-2. [ ] **Importar en Moodle los tres bancos actualizados**, desde `01-fundamentos-python/04-evaluacion/`:
+2. [x] **Importar en Moodle los tres bancos actualizados** (ya subidos por el profesor), desde `01-fundamentos-python/04-evaluacion/`:
    - `cuestionario-numpy.gift`: **25 preguntas**.
    - `cuestionario-eda-numpy.gift`: **20 preguntas**.
    - `cuestionario-numpy-completo.gift`: **18 preguntas**; 15 de práctica de código y 3 en **Álgebra consulta UD3**.
    - Comprobar categorías, recuentos, respuestas cortas/variantes y retroalimentación. Evitar duplicados si se reimportan bancos previos. Crear/actualizar los recursos de cuestionario, ajustar acceso y visibilidad, y probar con rol de estudiante. Mantener álgebra fuera del repaso obligatorio y activar EDA después de su ejemplo. No publicar los GIFT como archivos descargables.
+
+   **Recursos de cuestionario a crear en Moodle (uno por GIFT):**
+   - **[ ] Cuestionario NumPy** (desde `cuestionario-numpy.gift`, 25): conocimientos base, disponible desde el momento en que se haya visto NumPy.
+   - **[ ] Cuestionario EDA NumPy** (desde `cuestionario-eda-numpy.gift`, 20): activar **después** del ejemplo guiado de EDA; lo acompaña como recurso el notebook `03-practicas/16-eda_numpy_edificios.ipynb`.
+   - **[ ] Cuestionario NumPy completo** (desde `cuestionario-numpy-completo.gift`, 18): 15 de código en el mismo orden que `03-practicas/15-ejercicios_numpy_completo.ipynb` + 3 de álgebra en categoría consulta UD3, separadas del repaso obligatorio. Las respuestas cortas comparan texto, no ejecutan Python.
+
+   **Materiales de apoyo a colocar como recursos junto a cada cuestionario** (opcional, no son el cuestionario en sí): `15-ejercicios_numpy_completo.ipynb` (acompaña al completo), `16-eda_numpy_edificios.ipynb` (acompaña al EDA), `09_eda_numpy.ipynb` (referencia del EDA de empleados).
 3. [ ] **Publicar la comparativa y habilitar su entrega para hacerla en clase.** PDF preparado: `Moodle/01-UD1/03-practicas/comparativa-lenguajes-formatos-ia.pdf`. Fuente entregable, sin observación docente: `01-fundamentos-python/04-evaluacion/comparativa-lenguajes-formatos-ia.md`. Mostrar plazo, formatos admitidos y lugar de entrega. **`Moodle/` está ignorada por Git: comprobar que el PDF haya llegado con Unison; si falta, recuperarlo/regenerarlo desde la fuente, no asumir que vendrá de un pull.**
 4. [ ] **Preparar el inicio de R y abrir el guion docente:** `01-fundamentos-python/99-profesor/06-GUION_SEXTA_CLASE_PIA_EDA_NUMPY_PANDAS.md`. Comprobar R en el equipo del profesor; si falta en los equipos del alumnado, usar demostración sin instalar durante la clase. Plan: R breve → comparativa entregable → EDA NumPy → pandas. Confirmar acceso a los notebooks EDA y pandas.
 5. [ ] **Después de clase:** marcar aquí lo importado/publicado realmente, registrar entrega de la comparativa y punto alcanzado en pandas, y actualizar `NOTAS_PROXIMA_SESION.md`. No marcar Moodle como completado solo por tener archivos locales o por estar en GitHub.
