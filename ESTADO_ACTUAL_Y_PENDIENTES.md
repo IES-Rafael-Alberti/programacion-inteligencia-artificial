@@ -62,6 +62,14 @@ El tiempo de la sesión previa queda muy repartido: lo que no se llegó a hacer 
 - [x] Por estar bajo `99-profesor/`, la carpeta queda fuera del repositorio público (`.gitignore`) y solo vive en `teacher`.
 - [x] Estructura: subcarpeta por actividad/entrega (p. ej. `UD1-comparativa/`, `UD1-ejercicios-numpy/`) con `registro-correccion.md` cuando proceda. Documentada en un `README.md` dentro de la carpeta.
 
+### Decisión: guion de la octava clase (3 h) y ubicación de R (2026-10-25)
+
+- [x] Creado `01-fundamentos-python/99-profesor/08-GUION_OCTAVA_CLASE_PIA_PANDAS.md`, de **180 min**: pandas desde cero (Series/DataFrame, selección y `.loc`/`.iloc`, transformaciones, `groupby`, ausentes e I/O) y, **al final**, comparación R ↔ pandas sobre los mismos datos y operaciones.
+- [x] **Decisión: R va al final, no al principio.** Pandas es el contenido nuevo y necesita la atención fresca inicial; R se acaba de ver y un recordatorio aislado no tiene referencia con la que compararse; al final, con pandas ya trabajado, la comparación lado a lado tiene sentido y prepara la comparación de gráficas Python/R prevista para UD2.
+- [x] Si el grupo llega sin R resuelto, el bloque final se hace como **demostración proyectada o con Colab**, sin dedicar la clase a instalaciones. Si la comparativa entregable no se cerró en la séptima clase, no se reabre: queda como entrega en Moodle para corregir en `00-entregas-y-correcciones/`.
+- [x] Se mantiene el método de **notebook en directo con chequeo de predicción** antes de ejecutar; el guion incluye chequeos en los cinco bloques de pandas y en la comparación con R.
+- [ ] **Antes de clase:** confirmar el punto real alcanzado en la séptima clase (R y comparativa) y ajustar los tres casos previstos en el guion; comprobar `pyarrow` si se va a enseñar Parquet.
+
 ## RETOMAR EN EL ORDENADOR DEL INSTITUTO — antes de clase del 20-10-2026
 
 La preparación está terminada y publicada en GitHub; **la importación/publicación en Moodle aún no está hecha**. Este es el orden de trabajo pendiente:
