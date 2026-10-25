@@ -16,6 +16,16 @@
 - **Pandas (repaso + continuación):** retomar Series, DataFrame y arranque de indexación para continuar después con `loc`/`iloc`, filtros y columnas calculadas en la siguiente sesión. No abrir agrupaciones en profundidad ni visualización.
 - **Lo que queda para después:** ausencias y agrupaciones de pandas, carga/limpieza de datos, visualización comparada Python/R y continuación de UD2.
 
+## 1b. Método de la sesión: notebook en directo con predicción antes de ejecutar (2026-10-21)
+
+- El alumnado se **desconecta durante la teoría y los ejemplos**; se reduce la explicación pasiva y se trabaja todo con **notebook en directo**.
+- **Patrón por bloque:** 1) formular la pregunta; 2) mostrar/llenar la celda; 3) **chequeo de predicción** («¿qué salida esperas aquí?») antes de ejecutar; 4) ejecutar y **comparar lo esperado con lo real**; 5) interpretar el resultado en una frase.
+- Cada bloque de contenido se convierte en **pequeños pasos ejecutables** en el notebook, no en un discurso previo.
+- Ejecutar **cada alumno/equipo la celda a la vez** en su entorno (local o Colab) y **no pasar a la siguiente celda hasta que la mayoría salga**.
+- Mantener las celdas de teoría breve y los chequeos anotados en los bloques siguientes (R, comparativa y pandas).
+- Refuerzo disponible si se agota (queda en la recámara): **celdas vacías** para que el alumnado complete durante la explicación (patrón de `16-eda_numpy_edificios.ipynb`).
+- Reorganización por mini-proyectos (otra opción considerada) se **descarta ahora**: no hay tiempo de rehacer el material preparado; se valoraría otro curso u otra unidad.
+
 ## 2. Material que conviene abrir antes de clase
 
 Rutas relativas a la raíz del módulo:
@@ -120,6 +130,12 @@ print(np.nanmean(notas))
 
 Cinco ideas: asignación `<-`, vector con `c`, índice inicial 1, `NA` y funciones de resumen; un `data.frame` organiza columnas. Es una primera lectura, no un dominio de R. No afirmar que R sea siempre mejor para estadística ni que Python sea siempre más rápido: depende de herramientas, tarea y contexto.
 
+**Chequeos de predicción en este bloque** (antes de ejecutar cada celda):
+- Antes de `print(notas[1])`: «¿qué imprime R, el 6 o el 8?» → recordar que el índice empieza en 1.
+- Antes de `print(notas[!is.na(notas) & notas >= 7])`: «¿cuántos valores esperas que devuelva y cuáles?».
+- Antes de `print(mean(notas, na.rm = TRUE))`: «¿qué pasa si no usáramos `na.rm`?».
+- Antes de `print(summary(alumnos))`: «¿qué apartado de resumen crees que no tiene sentido para `nombre`?».
+
 ## 5. Comparativa de lenguajes y formatos (entregable, 35–70 min)
 
 Abrir el enunciado público **sin observación docente**: `04-evaluacion/comparativa-lenguajes-formatos-ia.md`. Conserva su ruta canónica. Reparto sugerido: 5 min para interpretar el caso, 18 para la tabla, 8 para conclusión y marcado, 4 para revisar y entregar.
@@ -127,6 +143,8 @@ Abrir el enunciado público **sin observación docente**: `04-evaluacion/compara
 Explicar antes de empezar que se comparan tecnologías con funciones distintas: lenguajes (Python, R, Java, JavaScript/NodeJS) frente a formatos (JSON), configuración (YAML), documentación (Markdown) y marcado (XML/HTML). Java/JavaScript se valoran por su papel en la aplicación, sin programarlos hoy. No pedir tidyverse ni gráficos.
 
 **Observación docente, solo aquí:** el R recién visto (vectores y `data.frame`) da una referencia concreta para la fila R: análisis estadístico, visualización e informes reproducibles. Al retomar visualización en UD2, se compararán gráficos Python/R sobre los mismos datos.
+
+**Chequeos de predicción en este bloque:** antes de cada fila de la tabla, preguntar «¿qué función distintiva le pondrías a esta tecnología?» y pedir una justificación de una frase, antes de leer la definición en la fila. Al final, un chequeo de cierre: «¿cuál de estas tecnologías descartarías primero para el caso de empleados y por qué?» para fijar la decisión técnica.
 
 ## 6. Repaso de lo primero de pandas (75–100 min)
 
@@ -171,6 +189,12 @@ print(df.loc[1:3, ["edad", "salario"]])
 
 Distinguir etiquetas frente a posiciones; `.loc` por etiquetas, `.iloc` por números y con convención de Python. No abrir aún ordenación avanzada, `groupby` ni visualización.
 
+**Chequeos de predicción en este bloque (repaso de pandas):**
+- Antes de `df.head()` tras `set_index("id")`: «¿qué índice muestra la primera fila, 0 o 1?» → destacar que posición y etiqueta ya no coinciden.
+- Antes de `type(df["salario"])` y `type(df[["salario"]])`: «¿por qué los dos no son lo mismo?» → Series frente a DataFrame.
+- Antes de `df.loc[1, ...]` frente a `df.iloc[0, :2]`: «¿devuelven lo mismo? ¿y `df.loc[1:3]` vs `df.iloc[0:3]`?» → subrayar que `.loc` incluye el extremo final y `.iloc` lo excluye.
+- Antes de `df["salario"].index[:3]`: «¿qué etiquetas esperas ver?» → índice de IDs desde 1.
+
 ## 7. Mini-práctica breve y cierre (100–120 min)
 
 Sobre el DataFrame de empleados ya en memoria:
@@ -179,7 +203,7 @@ Sobre el DataFrame de empleados ya en memoria:
 2. Crear una columna `salario_anual` igual a `salario * 12`.
 3. Mostrar la primera fila con `iloc` y el empleado con etiqueta 1 con `loc`; explicar la diferencia en una frase.
 
-Dedica 10 minutos a las tres consultas y 5 a la puesta en común. Para la corrección, comprobar formas, columnas e índices y pedir interpretación, no solo leer código.
+Dedica 10 minutos a las tres consultas y 5 a la puesta en común. Aplicar también aquí el chequeo de predicción antes de comparar cada solución: cada pareja predice la salida esperada de su consulta y la compara con el resultado real. Para la corrección, comprobar formas, columnas e índices y pedir interpretación, no solo leer código.
 
 **Ticket de salida:** escribir una selección por etiqueta, una por posición y un filtro con pandas; explicar en una frase por qué pandas facilita el EDA tabular frente a columnas numeradas de NumPy.
 

@@ -26,6 +26,16 @@
 - [x] **Decisión para el lunes:** si el grupo tiene el entorno local resuelto, **tiramos por local** (RStudio para unos, VS Code+IRkernel para otros). Si una parte relevante sigue sin dependencias de R, **no se dedica la clase a instalar**: se usa **Google Colab con kernel R** (`https://colab.research.google.com/notebook#create=true&language=r`) desde el navegador, subiendo el notebook `06_introduccion_R_fundamentos.ipynb`.
 - [x] Añadida la vía Colab al guion `99-profesor/07-GUION_SEPTIMA_CLASE_PIA_R_COMPARATIVA_PANDAS.md` (plan local vs. Colab, comprobación con `R.version.string`, pérdida de paquetes/archivos al reiniciar el entorno) y como material respaldo antes de clase.
 
+### Decisión metodológica: notebook en directo con predicción antes de ejecutar (2026-10-21)
+
+- [x] **Problema detectado:** el alumnado se desconecta durante la teoría y los ejemplos; la secuencia actual (explicar teoría → ejemplos → tareas) favorece la atención pasiva.
+- [x] **Opción elegida (4): notebook en directo compartido y predicción antes de ejecutar.** Cada alumno ejecuta las celdas a la vez en su equipo; antes de cada celda se formula un «chequeo de predicción» («¿qué salida esperas aquí?») y se ejecuta después, para comparar lo esperado con lo real. La teoría se convierte en una secuencia de pequeños pasos ejecutables.
+- [x] **Opción 3 en la recámara:** celdas de código vacías que el alumnado rellena durante la explicación (ya usada en `16-eda_numpy_edificios.ipynb`). Disponible como refuerzo si la opción 4 se agota.
+- [x] **Opción 5 descartada por ahora:** reorganizar cada unidad por mini-proyectos. No da tiempo a modificar todo el material preparado en los últimos meses; se valoraría otro curso u otra unidad.
+- [x] Aplicar la opción 4 a los guiones de clase (empezando por el de la séptima) anotando los chequeos de predicción en los bloques R, comparativa y pandas.
+
+**Siguiente paso:** ajustar `99-profesor/07-GUION_SEPTIMA_CLASE_PIA_R_COMPARATIVA_PANDAS.md` con los chequeos de predicción; extender el patrón a los próximos guiones sin rehacer el material ya preparado.
+
 ## Decisión previa: instalar R y usar notebooks R en VS Code, sin RStudio
 
 - [x] Documentada la ruta de arranque (instalar R desde CRAN, conectar kernel R en VS Code mediante Jupyter/IRkernel) en `01-fundamentos-python/05-recursos/guia-instalacion-r-vscode.md`. Incluye pasos, comprobación, uso de notebooks con kernel R y problemas frecuentes (página de RStudio con XML, `R` sin `PATH`, kernel no visible, `IRkernel::installspec` sin jupyter).
