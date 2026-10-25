@@ -6,7 +6,7 @@
 
 **Continuidad real de la séptima clase (2 h):** estaba planteada con arranque de R (local o Colab), R base breve, la comparativa entregable y un repaso inicial de pandas (Series, DataFrame e inicio de indexación). **Antes de empezar, confirmar el punto real alcanzado** y ajustar:
 
-- Si la comparativa **no se cerró**, no reabrirla hoy: queda como entrega en Moodle y se corrige con la carpeta `99-profesor/00-entregas-y-correcciones/`.
+- La comparativa **ya está encargada al alumnado y en curso**: hoy **no se reabre ni se le dedica tiempo de clase**; se recoge y corrige después desde `99-profesor/00-entregas-y-correcciones/`.
 - Si R **no llegó a ejecutarse**, el bloque final de comparación con R se hace como **demostración proyectada** (o Colab), sin dedicar la clase a instalaciones.
 - Si pandas **solo se vio hasta Series/DataFrame**, hoy se empieza de cero igualmente: la primera media hora reconstruye esa base y el resto avanza.
 

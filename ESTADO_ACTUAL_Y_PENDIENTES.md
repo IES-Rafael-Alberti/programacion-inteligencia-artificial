@@ -53,7 +53,7 @@ El tiempo de la sesión previa queda muy repartido: lo que no se llegó a hacer 
 3. **Comparativa de lenguajes y formatos** (entregable): `04-evaluacion/comparativa-lenguajes-formatos-ia.md` (subir/habilitar tarea en Moodle) usando el R recién visto como referencia frente a Python.
 4. **Repaso de lo primero de pandas:** Series, DataFrame como conjunto de columnas/Series e inicio de indexación, antes de continuar con `loc`/`iloc`, filtros y transformaciones.
 
-**Siguiente paso:** subir la comparativa y decidir la distribución del notebook 16 en Moodle; el guion corto de 2 h ya está creado (`99-profesor/07-GUION_SEPTIMA_CLASE_PIA_R_COMPARATIVA_PANDAS.md`).
+**Siguiente paso:** la comparativa **ya está encargada** al alumnado; falta decidir la distribución del notebook 16 en Moodle. Guion corto de 2 h en `99-profesor/07-GUION_SEPTIMA_CLASE_PIA_R_COMPARATIVA_PANDAS.md` y guion de la octava clase (3 h, pandas + comparación R al final) en `99-profesor/08-GUION_OCTAVA_CLASE_PIA_PANDAS.md`.
 
 ### Decisión: carpeta de entregas y correcciones (2026-10-21)
 
@@ -66,9 +66,10 @@ El tiempo de la sesión previa queda muy repartido: lo que no se llegó a hacer 
 
 - [x] Creado `01-fundamentos-python/99-profesor/08-GUION_OCTAVA_CLASE_PIA_PANDAS.md`, de **180 min**: pandas desde cero (Series/DataFrame, selección y `.loc`/`.iloc`, transformaciones, `groupby`, ausentes e I/O) y, **al final**, comparación R ↔ pandas sobre los mismos datos y operaciones.
 - [x] **Decisión: R va al final, no al principio.** Pandas es el contenido nuevo y necesita la atención fresca inicial; R se acaba de ver y un recordatorio aislado no tiene referencia con la que compararse; al final, con pandas ya trabajado, la comparación lado a lado tiene sentido y prepara la comparación de gráficas Python/R prevista para UD2.
-- [x] Si el grupo llega sin R resuelto, el bloque final se hace como **demostración proyectada o con Colab**, sin dedicar la clase a instalaciones. Si la comparativa entregable no se cerró en la séptima clase, no se reabre: queda como entrega en Moodle para corregir en `00-entregas-y-correcciones/`.
+- [x] Si el grupo llega sin R resuelto, el bloque final se hace como **demostración proyectada o con Colab**, sin dedicar la clase a instalaciones.
+- [x] **La comparativa ya está encargada al alumnado y en curso:** en la octava clase no se reabre ni se le dedica tiempo; se recogerá y corregirá después en `00-entregas-y-correcciones/`.
 - [x] Se mantiene el método de **notebook en directo con chequeo de predicción** antes de ejecutar; el guion incluye chequeos en los cinco bloques de pandas y en la comparación con R.
-- [ ] **Antes de clase:** confirmar el punto real alcanzado en la séptima clase (R y comparativa) y ajustar los tres casos previstos en el guion; comprobar `pyarrow` si se va a enseñar Parquet.
+- [ ] **Antes de clase:** confirmar el punto real alcanzado en la séptima clase respecto a R y ajustar los casos previstos en el guion; comprobar `pyarrow` si se va a enseñar Parquet.
 
 ## RETOMAR EN EL ORDENADOR DEL INSTITUTO — antes de clase del 20-10-2026
 
@@ -88,7 +89,7 @@ La preparación está terminada y publicada en GitHub; **la importación/publica
    - [x] El profesor confirma que los **tres recursos de cuestionario ya están subidos** y que en la **explicación de cada cuestionario** se ha anotado que las preguntas **versan sobre los notebooks correspondientes**.
 
    **Materiales de apoyo a colocar como recursos junto a cada cuestionario** (opcional, no son el cuestionario en sí): `15-ejercicios_numpy_completo.ipynb` (acompaña al completo), `16-eda_numpy_edificios.ipynb` (acompaña al EDA), `09_eda_numpy.ipynb` (referencia del EDA de empleados). **[x] El profesor confirma que los notebooks correspondientes ya están descargados/publicados en Moodle.**
-3. [ ] **Publicar la comparativa y habilitar su entrega para hacerla en clase.** PDF preparado: `Moodle/01-UD1/03-practicas/comparativa-lenguajes-formatos-ia.pdf`. Fuente entregable, sin observación docente: `01-fundamentos-python/04-evaluacion/comparativa-lenguajes-formatos-ia.md`. Mostrar plazo, formatos admitidos y lugar de entrega. **`Moodle/` está ignorada por Git: comprobar que el PDF haya llegado con Unison; si falta, recuperarlo/regenerarlo desde la fuente, no asumir que vendrá de un pull.**
+3. [x] **Publicar la comparativa y habilitar su entrega para hacerla en clase** (el profesor confirma que **ya la encargó**; el alumnado la está haciendo). PDF preparado: `Moodle/01-UD1/03-practicas/comparativa-lenguajes-formatos-ia.pdf`. Fuente entregable, sin observación docente: `01-fundamentos-python/04-evaluacion/comparativa-lenguajes-formatos-ia.md`. Mostrar plazo, formatos admitidos y lugar de entrega. **`Moodle/` está ignorada por Git: comprobar que el PDF haya llegado con Unison; si falta, recuperarlo/regenerarlo desde la fuente, no asumir que vendrá de un pull.**
 4. [ ] **Preparar el inicio de R y abrir el guion docente:** `01-fundamentos-python/99-profesor/06-GUION_SEXTA_CLASE_PIA_EDA_NUMPY_PANDAS.md`. Comprobar R en el equipo del profesor; si falta en los equipos del alumnado, usar demostración sin instalar durante la clase. Plan: R breve → comparativa entregable → EDA NumPy → pandas. Confirmar acceso a los notebooks EDA y pandas.
 5. [ ] **Después de clase:** marcar aquí lo importado/publicado realmente, registrar entrega de la comparativa y punto alcanzado en pandas, y actualizar `NOTAS_PROXIMA_SESION.md`. No marcar Moodle como completado solo por tener archivos locales o por estar en GitHub.
 
