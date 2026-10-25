@@ -69,7 +69,10 @@ El tiempo de la sesión previa queda muy repartido: lo que no se llegó a hacer 
 - [x] Si el grupo llega sin R resuelto, el bloque final se hace como **demostración proyectada o con Colab**, sin dedicar la clase a instalaciones.
 - [x] **La comparativa ya está encargada al alumnado y en curso:** en la octava clase no se reabre ni se le dedica tiempo; se recogerá y corregirá después en `00-entregas-y-correcciones/`.
 - [x] Se mantiene el método de **notebook en directo con chequeo de predicción** antes de ejecutar; el guion incluye chequeos en los cinco bloques de pandas y en la comparación con R.
-- [ ] **Antes de clase:** confirmar el punto real alcanzado en la séptima clase respecto a R y ajustar los casos previstos en el guion; comprobar `pyarrow` si se va a enseñar Parquet.
+- [x] **Teoría breve engarzada:** cada bloque de pandas sigue el patrón **teoría mínima (3–5 min) → notebook en directo (10–15 min) → «hazlo tú» (5 min)**. La teoría es un encuadre corto, no clase magistral.
+- [x] **Un cuaderno «hazlo tú» por notebook, preparados de antemano:** `02-tratamiento-datos/03-practicas/01_pandas_hazlo_tu.ipynb` (5 bloques + ticket) y `01-fundamentos-python/03-practicas/06_R_hazlo_tu.ipynb` (R base + comparación). Se usan los que correspondan a los notebooks que se impartan.
+- [x] **Valoración del cuaderno: binaria (hecho / no hecho).** Entregarlo en Moodle al final de clase **acredita asistencia**; que esté completo acredita **atención/seguimiento**. No se corrige acierto ni se usa como prueba; sirve para decidir si procede subir nota por participación. Soluciones docentes en `02-tratamiento-datos/99-profesor/01_pandas_hazlo_tu_SOLUCIONES.ipynb` y `01-fundamentos-python/99-profesor/03-practicas-soluciones/06_R_hazlo_tu_SOLUCIONES.ipynb`.
+- [ ] **Antes de clase:** confirmar el punto real alcanzado en la séptima clase respecto a R y ajustar los casos previstos en el guion; comprobar `pyarrow` si se va a enseñar Parquet; subir a Moodle la tarea de entrega de los cuadernos «hazlo tú».
 
 ## RETOMAR EN EL ORDENADOR DEL INSTITUTO — antes de clase del 20-10-2026
 

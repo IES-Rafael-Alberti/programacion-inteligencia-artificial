@@ -27,6 +27,25 @@ Pandas conserva solo lo ya presentado (Series, DataFrame e inicio de indexación
 - La teoría va dentro del notebook como **pequeños pasos ejecutables**, no como discurso previo.
 - Refuerzo en la recámara: **celdas vacías** que el alumnado completa (patrón de `16-eda_numpy_edificios.ipynb`) si el grupo se dispersa.
 
+## 1c. Estructura de cada bloque: teoría breve → notebook → «hazlo tú» (5 min)
+
+Para reducir las desconexiones, **cada bloque de pandas tiene tres partes encadenadas** y no una lección seguida:
+
+1. **Teoría mínima (3–5 min).** Un encuadre corto con una idea y un esquema simple en la pizarra o en una celda Markdown: qué problema resuelve, qué vocabulario usar y qué error típico evitar. No es volver a la clase magistral: en cuanto la idea está dicha, se pasa al notebook.
+2. **Notebook en directo (10–15 min).** La misma idea se ejecuta celda a celda con el **chequeo de predicción** ya acordado («¿qué salida esperas?»). La teoría queda así «enganchada» al código que acaban de ver.
+3. **«Hazlo tú» (5 min).** Una tarea pequeña y cerrada sobre el mismo DataFrame, con **resultado esperado** para autocorregirse. Se hace en pareja, se compara en voz alta y se pasa al bloque siguiente. No se corrige una a una: se pide a dos parejas que digan su resultado y se valida en pantalla.
+
+El «hazlo tú» es deliberadamente corto: **una o dos líneas de código**, no un ejercicio largo. Su función es que el alumnado **escriba y ejecute** cada 15–20 minutos, no evaluar.
+
+## 1d. Cuaderno «hazlo tú»: evidencia de asistencia y atención
+
+- Hay **un cuaderno «hazlo tú» por notebook**: `02-tratamiento-datos/03-practicas/01_pandas_hazlo_tu.ipynb` (cinco bloques de pandas) y `01-fundamentos-python/03-practicas/06_R_hazlo_tu.ipynb` (R base y comparación). Están preparados de antemano: se usan los que correspondan a los notebooks que finalmente se impartan.
+- Cada alumno resuelve en ellos las celdas de los bloques vistos y el ticket de salida.
+- **Se entrega en Moodle al final de la clase** el/los cuadernos usados. Entregarlo **acredita asistencia**; que esté **completo acredita atención y seguimiento**.
+- **Valoración binaria: hecho / no hecho.** No se corrige ejercicio a ejercicio ni se pone nota de acierto: se usa como **evidencia de seguimiento** para decidir si procede subir nota (participación, trabajo en clase), nunca como sustituto de una prueba.
+- No hace daño a quien no lo termine: puede acabarlo en casa y subirlo igualmente; lo que se registra es la entrega y su grado de completitud, no la perfección.
+- Las soluciones quedan en `02-tratamiento-datos/99-profesor/` (copia docente), no en el cuaderno público.
+
 ## 2. Material que conviene abrir antes de clase
 
 Rutas relativas a la raíz del módulo:
@@ -36,6 +55,9 @@ Rutas relativas a la raíz del módulo:
 | Teoría de pandas (repaso del profesor) | `02-tratamiento-datos/01-teoria/01-pandas-introduccion.md` |
 | Chuleta de pandas | `02-tratamiento-datos/01-teoria/03-pandas-chuleta.md` |
 | Notebook principal de pandas | `02-tratamiento-datos/02-ejemplos/01_pandas_fundamentos.ipynb` |
+| Cuaderno de entrega «hazlo tú» — pandas (alumnado) | `02-tratamiento-datos/03-practicas/01_pandas_hazlo_tu.ipynb` |
+| Cuaderno de entrega «hazlo tú» — R (alumnado) | `01-fundamentos-python/03-practicas/06_R_hazlo_tu.ipynb` |
+| Soluciones docentes de ambos | `02-tratamiento-datos/99-profesor/01_pandas_hazlo_tu_SOLUCIONES.ipynb`, `01-fundamentos-python/99-profesor/03-practicas-soluciones/06_R_hazlo_tu_SOLUCIONES.ipynb` |
 | Dataset de empleados (continuidad del EDA) | `01-fundamentos-python/03-practicas/09_eda_numpy.md` / `09_eda_numpy.ipynb` |
 | Guía de R (solo para el bloque final) | `01-fundamentos-python/01-teoria/09-guia-r-complementario.md` |
 | Notebook R (bloque final, opcional) | `01-fundamentos-python/02-ejemplos/06_introduccion_R_fundamentos.ipynb` |
@@ -54,21 +76,23 @@ Comprobar antes de entrar: que el entorno habitual importa `numpy` y `pandas`; q
 
 ## 3. Ritmo de 180 minutos
 
+Cada bloque de pandas repite el patrón **teoría (3–5) + notebook (10–15) + hazlo tú (5)**.
+
 | Minutos | Bloque | Comprobación |
 |---|---|---|
 | 0–10 | Arranque y objetivos; comprobar entorno (`import pandas`) y recuperar qué se vio de pandas. | Todo el mundo ejecuta una celda con `import pandas as pd`. |
-| 10–40 | **Pandas desde cero (1):** Series, DataFrame, creación, carga y exploración (`head`, `info`, `describe`). | Distingue Series de DataFrame y lee `info()`/`describe()`. |
-| 40–70 | **Pandas desde cero (2):** selección de columnas, `loc`/`iloc`, filtros simples y compuestos. | Elige `.loc` o `.iloc` con criterio y escribe un filtro compuesto. |
-| 70–80 | **Descanso.** | — |
-| 80–105 | **Pandas desde cero (3):** ordenación, columnas derivadas, `np.where`/`cut`, vectorizado frente a `apply`. | Explica por qué una operación vectorizada es preferible a `apply`. |
-| 105–130 | **Pandas desde cero (4):** `groupby` y agregaciones (`mean`, `agg`, `size` frente a `count`). | Predice cuántos grupos salen y qué columnas quedan. |
-| 130–147 | **Pandas desde cero (5):** valores ausentes (`isna`, `dropna`, `fillna`) y guardar/cargar CSV (Parquet si hay `pyarrow`). | Justifica si imputar o eliminar y por qué. |
-| 147–167 | **Comparación final R ↔ pandas** sobre los mismos datos y operaciones (R base). | Reconoce el equivalente en la otra herramienta para cada operación. |
-| 167–180 | **Mini-práctica y ticket de salida.** | Resuelve un filtro + columna derivada + resumen por grupo. |
+| 10–38 | **Pandas desde cero (1):** teoría Series/DataFrame/índice → notebook (creación, carga, `head`, `info`, `describe`) → **hazlo tú**. | Distingue Series de DataFrame y lee `info()`/`describe()`. |
+| 38–66 | **Pandas desde cero (2):** teoría etiqueta/posición → notebook (`loc`/`iloc`, filtros simples y compuestos) → **hazlo tú**. | Elige `.loc` o `.iloc` con criterio y escribe un filtro compuesto. |
+| 66–76 | **Descanso.** | — |
+| 76–102 | **Pandas desde cero (3):** teoría vectorización → notebook (ordenación, columnas derivadas, `np.where`/`cut`, `apply`) → **hazlo tú**. | Explica por qué una operación vectorizada es preferible a `apply`. |
+| 102–128 | **Pandas desde cero (4):** teoría split-apply-combine → notebook (`groupby`, `agg`, `size` frente a `count`) → **hazlo tú**. | Predice cuántos grupos salen y qué columnas quedan. |
+| 128–143 | **Pandas desde cero (5):** teoría ausentes y tipos → notebook (`isna`, `dropna`, `fillna`, CSV; Parquet si hay `pyarrow`) → **hazlo tú breve**. | Justifica si imputar o eliminar y por qué. |
+| 143–164 | **Comparación final R ↔ pandas** sobre los mismos datos y operaciones (R base). | Reconoce el equivalente en la otra herramienta para cada operación. |
+| 164–180 | **Mini-práctica y ticket de salida.** | Resuelve un filtro + columna derivada + resumen por grupo. |
 
-**Límites de tiempo:** el bloque 2 (selección) debe cerrarse en el minuto 70; el `groupby` en el 130; la comparación con R en el 167. Si se acumula retraso, recortar el bloque de ausentes/I/O (5) y no el `groupby` ni la comparación final.
+**Límites de tiempo:** el bloque 2 (selección) debe cerrarse en el minuto 66; el `groupby` en el 128; la comparación con R en el 164. El «hazlo tú» **nunca se salta** en los bloques 1–4: si el reloj aprieta, se recorta la demostración del notebook, no la práctica. Si se acumula retraso, recortar el bloque 5 (ausentes/I/O) y no el `groupby` ni la comparación final.
 
-## 4. Arranque y pandas desde cero (1): estructuras y exploración (0–40 min)
+## 4. Arranque y pandas desde cero (1): estructuras y exploración (0–38 min)
 
 ### 4a. Arranque (0–10 min)
 
@@ -85,7 +109,15 @@ print("Python", sys.version.split()[0], "| pandas", pd.__version__)
 
 Preguntar antes de ejecutar: «¿qué versión de pandas esperas ver y por qué importa?» (compatibilidad de API y de motores como PyArrow).
 
-### 4b. Series y DataFrame (10–40 min)
+### 4b. Series y DataFrame (10–38 min)
+
+**Teoría mínima (4 min).** Escribir en la pizarra, junto al notebook:
+
+- Una **Series** es una columna con **índice** (etiquetas) y un tipo; es 1-D.
+- Un **DataFrame** es una tabla 2-D formada por **columnas que comparten el mismo índice** (como una hoja de cálculo o un diccionario de Series alineadas).
+- Una fila se identifica por el **índice**; una columna, por su **nombre**. `dtypes` dice qué operaciones tienen sentido.
+
+Enlazar con lo ya visto: en el EDA de NumPy `data[:, 2]` era «la tercera columna por posición»; en pandas `df["salario"]` es «la columna **por nombre**», y el índice añade etiquetas. Ese es el salto conceptual del bloque.
 
 Empezar por lo mínimo, con un DataFrame diminuto, y crecer después al de empleados.
 
@@ -131,13 +163,30 @@ print(empleados.describe(include=[np.number]).drop(columns="id"))
 
 Cinco ideas: una columna es una Series; un DataFrame es una tabla con **índice común**; `info()` da tipos y nulos; `describe()` resume numéricas; `dtypes` revela tipos que luego condicionan operaciones.
 
+**Hazlo tú (5 min).** En el cuaderno de entrega (en pareja), sobre `empleados`:
+
+```python
+# 1) Selecciona las columnas edad y salario y muestra las 3 primeras filas.
+# 2) Imprime su forma (shape) y sus tipos (dtypes).
+```
+
+- **Resultado esperado:** 3 filas × 2 columnas; `edad` entera y `salario` decimal (`float64`).
+- **Comprobación rápida:** si `shape` sale `(3, 2)`, han usado lista de columnas; si sale `(3,)` con `df[["..."]]` mal escrito, han seleccionado una sola columna y conviene señalarlo.
+- **Puesta en común (1 min):** una pareja dicta el `shape` y otra los `dtypes`; se valida en pantalla.
+
 **Chequeos de predicción:**
 - Antes de `ventas.ndim`: «¿1 o 2 dimensiones?» → Series es 1-D; DataFrame es 2-D.
 - Antes de `empleados.shape`: «¿cuántas filas y columnas esperas?» → 1000 filas.
 - Antes de `empleados.info()`: «¿qué columna tendrá nulos y cuántos?» → `satisfaccion`, 15.
 - Antes de `describe(...).drop(columns="id")`: «¿por qué quitamos `id`?» → no es una medida; sesga la lectura.
 
-## 5. Pandas desde cero (2): selección, `.loc`/`.iloc` y filtros (40–70 min)
+## 5. Pandas desde cero (2): selección, `.loc`/`.iloc` y filtros (38–66 min)
+
+**Teoría mínima (4 min).** Tres ideas, escritas junto al notebook:
+
+- **Etiqueta frente a posición:** el índice guarda etiquetas. Si el índice es `id` (1…1000), la **posición** `0` y la **etiqueta** `1` ya no coinciden.
+- **`.loc` usa etiquetas y `.iloc` usa posiciones.** `.loc[1:3]` **incluye** el 3; `.iloc[0:3]` **excluye** la posición 3 (convención de Python).
+- **Filtro booleano:** `df[condición]` devuelve las filas donde la condición es `True`. En condiciones compuestas cada parte va **entre paréntesis**: `(a) & (b)`, nunca `a & b` sin paréntesis.
 
 ```python
 # Una columna -> Series ; lista de columnas -> DataFrame
@@ -169,6 +218,18 @@ print(empleados.query("salario > 3000 and nivel >= 3").head(3))
 
 Ideas clave: `df["col"]` es Series y `df[["col"]]` es DataFrame; con índice por etiqueta, **posición y etiqueta dejan de coincidir**; `.loc` incluye el extremo final y `.iloc` no; en filtros compuestos hay que **poner paréntesis** en cada condición.
 
+**Hazlo tú (5 min).** En el cuaderno de entrega (en pareja):
+
+```python
+# 1) Con empleados_idx (índice = id), obtén edad y salario de las etiquetas 2 a 5.
+# 2) Filtra los empleados con nivel == 4 y salario > 3000; muestra edad, salario y nivel.
+```
+
+- **Resultado esperado (1):** 4 filas (etiquetas 2, 3, 4 y 5), columnas `edad` y `salario`.
+- **Resultado esperado (2):** solo filas que cumplen **las dos** condiciones; el número de filas debe ser pequeño frente al total.
+- **Error frecuente a cazar:** `empleados.loc[2:5]` sí funciona por etiqueta; `empleados.iloc[2:5]` daría **3** filas (posición 5 excluida). Preguntar a una pareja cuántas filas le salen y por qué.
+- **Puesta en común (1 min):** proyectar una solución con `.loc` y otra con `.iloc` y contrastar el número de filas.
+
 **Chequeos de predicción:**
 - Antes de `type(empleados["salario"])` frente a `type(empleados[["salario"]])`: «¿los dos son lo mismo?».
 - Antes de `empleados_idx.loc[1, ...]` frente a `empleados_idx.iloc[0, ...]`: «¿devuelven la misma fila?».
@@ -176,9 +237,14 @@ Ideas clave: `df["col"]` es Series y `df[["col"]]` es DataFrame; con índice por
 - Antes del filtro compuesto: «¿qué pasa si quito los paréntesis?».
 - Antes de `query`: «¿devuelve lo mismo que el filtro compuesto?».
 
-## 6. Descanso (70–80 min)
+## 6. Descanso (66–76 min)
 
-## 7. Pandas desde cero (3): ordenación, columnas derivadas y transformaciones (80–105 min)
+## 7. Pandas desde cero (3): ordenación, columnas derivadas y transformaciones (76–102 min)
+
+**Teoría mínima (4 min).** Dos ideas:
+
+- **Vectorizado frente a fila a fila:** `df["salario"] * 12` opera sobre **toda la columna a la vez** (rápido, en C). `apply` recorre fila a fila en Python: se usa solo cuando no hay alternativa vectorizada.
+- **Tres formas de crear una columna:** asignación directa (`df["nueva"] = ...`), decisión por fila con `np.where(cond, a, b)` y tramos con `pd.cut` (bordes fijos) o `pd.qcut` (cuantiles). `assign` crea una copia transformada sin tocar el original.
 
 ```python
 # Ordenación por varias claves
@@ -213,6 +279,18 @@ print(empleados[["nivel", "nivel_txt"]].head())
 
 Ideas clave: las operaciones sobre columnas son **vectorizadas**; `np.where` equivale a un if/else por fila; `cut`/`qcut` crean tramos; `assign` devuelve una copia transformada; `apply` es la última opción porque recorre fila a fila y es más lenta.
 
+**Hazlo tú (5 min).** En el cuaderno de entrega, sobre `empleados`:
+
+```python
+# 1) Crea salario_miles = salario / 1000.
+# 2) Crea tramo_horas con pd.cut sobre horas: [0, 35, 42, 60] -> ["parcial", "completa", "extra"].
+# 3) Cuenta cuántos empleados hay en cada tramo.
+```
+
+- **Resultado esperado:** una columna nueva decimal y un `value_counts()` con tres tramos; la suma de los tres recuentos es 1000.
+- **Comprobación rápida:** si la suma no da 1000, hay valores fuera de los bordes (revisar `horas` negativas o extremas).
+- **Puesta en común (1 min):** una pareja dicta el tramo mayoritario y se valida en pantalla.
+
 **Chequeos de predicción:**
 - Antes de `sort_values` con dos claves: «¿qué desempata cuando hay empate en `nivel`?».
 - Antes de `np.where`: «¿cuántos `sí` esperas, aproximadamente?».
@@ -220,7 +298,12 @@ Ideas clave: las operaciones sobre columnas son **vectorizadas**; `np.where` equ
 - Antes de `assign`: «¿se modifica `empleados` original?» → no.
 - Antes de `apply`: «¿por qué es más lento que una operación vectorizada?».
 
-## 8. Pandas desde cero (4): `groupby` y agregaciones (105–130 min)
+## 8. Pandas desde cero (4): `groupby` y agregaciones (102–128 min)
+
+**Teoría mínima (4 min).** **Dividir–aplicar–combinar:** `groupby` parte las filas en grupos según una o varias columnas, aplica un cálculo a cada grupo y vuelve a combinar el resultado. Dos consecuencias prácticas:
+
+- La columna por la que se agrupa pasa a ser el **índice** del resultado (salvo `as_index=False`).
+- `size()` cuenta **filas**; `count()` cuenta **valores no nulos**. Con ausentes, no coinciden.
 
 ```python
 # Media de salario por nivel
@@ -249,13 +332,31 @@ print(por_nivel)
 
 Ideas clave: `groupby` **divide–aplica–combina**; la columna agrupada pasa a índice salvo `as_index=False`; `size()` cuenta filas y `count()` cuenta valores no nulos; nombrar agregaciones en un diccionario deja columnas legibles.
 
+**Hazlo tú (5 min).** En el cuaderno de entrega:
+
+```python
+# 1) Media de salario por senior (sí/no).
+# 2) Para satisfaccion, muestra size() y count() por nivel y explica la diferencia.
+```
+
+- **Resultado esperado (1):** dos filas (`no`, `sí`) con su salario medio.
+- **Resultado esperado (2):** `size()` suma 1000; `count()` suma 985 (15 nulos).
+- **Comprobación rápida:** si las dos columnas suman lo mismo, han usado mal `count()` o no quedan nulos en su DataFrame.
+- **Puesta en común (1 min):** preguntar «¿por qué no coinciden?» y validar con el dato de 15 ausentes.
+
 **Chequeos de predicción:**
 - Antes del primer `groupby`: «¿cuántos grupos esperas?» → niveles 0–4, cinco.
 - Antes de `agg(["mean","median","count"])`: «¿qué columnas saldrán?».
 - Antes de `size()` frente a `count()`: «¿coinciden? ¿por qué no?» → hay 15 NaN.
 - Antes de `as_index=False`: «¿cómo cambia la forma del resultado?».
 
-## 9. Pandas desde cero (5): ausentes y guardar/cargar (130–147 min)
+## 9. Pandas desde cero (5): ausentes y guardar/cargar (128–143 min)
+
+**Teoría mínima (3 min).** Un ausente (`NaN`) **no es un cero**: es «no sabemos». Por eso:
+
+- Se **diagnostica** primero (`isna().sum()` y la proporción con `isna().mean()`).
+- Se **decide** entre eliminar (`dropna`) o imputar (`fillna`); no hay una respuesta universal: depende de cuántos sean y de si faltan al azar.
+- Al **guardar**, CSV no conserva tipos ni nulos con fidelidad; Parquet sí (si hay `pyarrow`).
 
 ```python
 # Diagnóstico de ausentes
@@ -284,13 +385,23 @@ print(recargado.shape, recargado.dtypes.head())
 
 Ideas clave: `isna().sum()` localiza huecos y `isna().mean()` da su proporción; eliminar o imputar es una **decisión**, no un reflejo; la mediana es más robusta que la media ante atípicos; CSV pierde tipos y Parquet los conserva (si `pyarrow` está instalado).
 
+**Hazlo tú breve (3 min).** En el cuaderno de entrega:
+
+```python
+# 1) Cuenta los ausentes por columna.
+# 2) Crea satisfaccion_imp imputando con la mediana y comprueba que ya no quedan nulos.
+```
+
+- **Resultado esperado:** solo `satisfaccion` tiene 15; tras imputar, 0 en `satisfaccion_imp`.
+- **Puesta en común (1 min):** preguntar «¿por qué la mediana y no la media?» (atípicos).
+
 **Chequeos de predicción:**
 - Antes de `isna().sum()`: «¿en qué columna habrá 15?».
 - Antes de `dropna(subset=...)`: «¿cuántas filas se pierden?».
 - Antes de `fillna(median)`: «¿cuántos nulos quedan?» → cero en la columna imputada.
 - Antes de `to_csv`/`read_csv`: «¿los tipos se conservan igual?» → normalmente no.
 
-## 10. Comparación final R ↔ pandas (147–167 min)
+## 10. Comparación final R ↔ pandas (143–164 min)
 
 Mismos datos pequeños y mismas cuatro operaciones en las dos herramientas. Si el grupo no tiene R listo, **proyectar** desde el equipo del profesor o abrir Colab con kernel R; no instalar.
 
@@ -367,7 +478,7 @@ Cinco contrastes: asignación `<-` frente a `=`; índice desde 1 frente a 0; `$`
 
 **Cierre comparativo:** preguntar «¿en cuál de las dos escribirías este análisis más rápido y por qué?» y dejar claro que **no hay ganador universal**: es contexto y ecosistema.
 
-## 11. Mini-práctica y ticket de salida (167–180 min)
+## 11. Mini-práctica y ticket de salida (164–180 min)
 
 Sobre `empleados` (con `satisfaccion_imp` ya creada):
 
@@ -379,13 +490,15 @@ Aplicar el chequeo de predicción antes de mostrar cada solución: cada pareja a
 
 **Ticket de salida:** una frase que distinga `.loc` de `.iloc`, otra que explique qué hace `groupby`, y una comparación de una línea entre R y pandas para un filtro.
 
+**Entrega (cierre de clase, 3 min).** El alumnado sube a la tarea de Moodle **antes de salir** el/los cuadernos «hazlo tú» usados (`01_pandas_hazlo_tu.ipynb` y, si se ha hecho R, `06_R_hazlo_tu.ipynb`). Se comprueba: (a) que el archivo se ha subido → **asistencia**; (b) que las celdas de los cinco bloques y el ticket están resueltas → **atención/seguimiento**. Registro **binario (hecho / no hecho)** para la valoración de participación, sin corregir aciertos. Quien no lo termine puede subirlo más tarde.
+
 **Si sobra tiempo:** `pivot_table` mínimo de recuento (`pd.crosstab` o `pivot_table(index="nivel", columns="senior", aggfunc="size")`) y leer la tabla. No abrir visualización.
 
-**Si falta tiempo:** recortar el bloque 5 (ausentes/I/O) a un `isna().sum()` y guardar el CSV para la próxima; **no tocar** el `groupby` ni la comparación con R.
+**Si falta tiempo:** recortar el bloque 5 (ausentes/I/O) a un `isna().sum()`; **no tocar** el `groupby`, la comparación con R ni la entrega del cuaderno (aunque sea incompleto, debe subirse).
 
 ## 12. Cierre y ajuste al ritmo
 
-Al terminar, registrar: punto exacto alcanzado (selección, transformaciones, `groupby`, ausentes), si la comparación con R se hizo proyectada o local, y quién sigue sin entorno de pandas resuelto.
+Al terminar, registrar: punto exacto alcanzado (selección, transformaciones, `groupby`, ausentes), si la comparación con R se hizo proyectada o local, y quién sigue sin entorno de pandas resuelto. Anotar también **quién entregó el cuaderno** (asistencia) y si estaba completo (atención), para la valoración binaria de participación.
 
 **Siguiente paso recomendado:** continuar UD2 con carga/limpieza de un dataset realista y EDA con pandas (`02-pandas_eda_visualizacion.ipynb`), y entrar después en Matplotlib aplicando la decisión de comparar gráficas Python/R sobre los mismos datos. Dejar `pivot_table` avanzado, joins y visualización para sus bloques.
 
