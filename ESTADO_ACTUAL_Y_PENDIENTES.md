@@ -3,6 +3,12 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Plan inmediato acordado (2026-10-25)
+
+- [ ] **Lunes 2026-10-26 — octava clase (3 h):** pandas desde cero según `01-fundamentos-python/99-profesor/08-GUION_OCTAVA_CLASE_PIA_PANDAS.md`, con **cierre de recordatorio de R y la comparativa** (bloque 10, 148–158). Antes: ejecutar el **checklist Moodle (§2b del guion)** — notebook principal, cuaderno «hazlo tú», tarea de entrega, comparativa y comprobaciones técnicas (`pandas`, `pyarrow`, R/Colab).
+- [ ] **Martes 2026-10-27 — sesión de entornos (2 h) en UD2:** `02-tratamiento-datos/99-profesor/00-GUION_SESION_ENTORNOS_PYTHON.md`, con el ejercicio `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md`. Antes: verificar `pixi --version` y `pixi run --environment ud3 python -c "import sklearn"` en el aula, y subir el ejercicio a Moodle.
+- [x] Decidido: el bloque final de R del lunes queda en **10 min** (recordatorio + tabla de correspondencias + filtro/`groupby` en vivo + recordatorio de entrega de la comparativa). **R no es herramienta principal:** se ve para comparar y, más adelante, para gráficas. Los 11 min liberados pasan a ausentes (128–148) y mini-práctica (158–180).
+
 ## Resultado real de la sexta clase y preparación de la siguiente (2 h) — 2026-10-21
 
 ### Cierre y publicación — 2026-10-21
@@ -66,6 +72,7 @@ El tiempo de la sesión previa queda muy repartido: lo que no se llegó a hacer 
 
 - [x] Creado `01-fundamentos-python/99-profesor/08-GUION_OCTAVA_CLASE_PIA_PANDAS.md`, de **180 min**: pandas desde cero (Series/DataFrame, selección y `.loc`/`.iloc`, transformaciones, `groupby`, ausentes e I/O) y, **al final**, comparación R ↔ pandas sobre los mismos datos y operaciones.
 - [x] **Decisión: R va al final, no al principio.** Pandas es el contenido nuevo y necesita la atención fresca inicial; R se acaba de ver y un recordatorio aislado no tiene referencia con la que compararse; al final, con pandas ya trabajado, la comparación lado a lado tiene sentido y prepara la comparación de gráficas Python/R prevista para UD2.
+- [x] **Ajuste 2026-10-25: R no es herramienta principal y el bloque final baja a 10 min.** Se limita a recordar la comparativa, proyectar la tabla de correspondencias y ejecutar filtro y `groupby` en R frente a pandas. El código completo queda como referencia y en `06_R_hazlo_tu.ipynb`; no se recorre el temario de R. R vuelve cuando se vean gráficas.
 - [x] Si el grupo llega sin R resuelto, el bloque final se hace como **demostración proyectada o con Colab**, sin dedicar la clase a instalaciones.
 - [x] **La comparativa ya está encargada al alumnado y en curso:** en la octava clase no se reabre ni se le dedica tiempo; se recogerá y corregirá después en `00-entregas-y-correcciones/`.
 - [x] Se mantiene el método de **notebook en directo con chequeo de predicción** antes de ejecutar; el guion incluye chequeos en los cinco bloques de pandas y en la comparación con R.
@@ -73,6 +80,18 @@ El tiempo de la sesión previa queda muy repartido: lo que no se llegó a hacer 
 - [x] **Un cuaderno «hazlo tú» por notebook, preparados de antemano:** `02-tratamiento-datos/03-practicas/01_pandas_hazlo_tu.ipynb` (5 bloques + ticket) y `01-fundamentos-python/03-practicas/06_R_hazlo_tu.ipynb` (R base + comparación). Se usan los que correspondan a los notebooks que se impartan.
 - [x] **Valoración del cuaderno: binaria (hecho / no hecho).** Entregarlo en Moodle al final de clase **acredita asistencia**; que esté completo acredita **atención/seguimiento**. No se corrige acierto ni se usa como prueba; sirve para decidir si procede subir nota por participación. Soluciones docentes en `02-tratamiento-datos/99-profesor/01_pandas_hazlo_tu_SOLUCIONES.ipynb` y `01-fundamentos-python/99-profesor/03-practicas-soluciones/06_R_hazlo_tu_SOLUCIONES.ipynb`.
 - [ ] **Antes de clase:** confirmar el punto real alcanzado en la séptima clase respecto a R y ajustar los casos previstos en el guion; comprobar `pyarrow` si se va a enseñar Parquet; subir a Moodle la tarea de entrega de los cuadernos «hazlo tú».
+
+### Decisión: sesión de entornos de Python en UD2 (2026-10-25)
+
+- [x] Creado el guion `02-tratamiento-datos/99-profesor/00-GUION_SESION_ENTORNOS_PYTHON.md`, de **120 min**: por qué no instalar en el sistema, mapa pip/venv/uv/conda/Pixi/Poetry, demo de cada uno y criterio de elección. **Pixi ocupa el bloque principal (28 min)** y **conda el bloque de experimentación reutilizable (18 min)**; Poetry se reduce a empaquetado.
+- [x] Creado el documento público `docs/entornos-python.md` como base de la sesión. **No duplica el manual de Pixi:** enlaza a `docs/manual-pixi-pia.md`, `docs/guia-inicio.md` y `03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md`. Solo aporta lo que faltaba: comparación entre herramientas y criterio de elección.
+- [x] Creado el ejercicio entregable `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md` (venv/pip, lectura de `pia-ud1.yml`, entornos Pixi del repo y elección razonada). Entrega en Moodle con **valoración binaria (hecho/no hecho)**, igual que los cuadernos «hazlo tú».
+- [x] **Ubicación decidida: UD2, no UD3.** En UD1 el alumnado aún está aprendiendo las herramientas; en UD2 ya ha usado NumPy y pandas y puede ver el conflicto real (NumPy 2/pandas 2.2 del curso frente a NumPy <1.27/pandas <2.2 de PyCaret), además de herramientas distintas para tareas parecidas.
+- [x] Decisión de reutilización: **no se crea otro manual de Pixi ni otra guía de proyecto**; el material existente se usa tal cual y la sesión se limita a engarzarlo.
+- [x] Añadido el eje **experimentar / desplegar** al documento y al guion: Pixi y conda para experimentar; lockfile, wheel, Docker, conda-lock/micromamba y pipx para desplegar. Se insiste en separar dependencias de desarrollo y de runtime, y en no llevar Jupyter al artefacto de producción.
+- [x] Aclarado en el material que `poetry export` es plugin desde Poetry 2.0 y que `pip freeze` de un entorno de clase no es un lock de producción.
+- [x] Fecha prevista para la sesión de entornos: martes 2026-10-27, en UD2, después de la clase de pandas.
+- [ ] **Antes de impartirla:** verificar `pixi --version` y `pixi run --environment ud3 python -c "import sklearn"` en el equipo del aula, y subir el ejercicio a Moodle.
 
 ## RETOMAR EN EL ORDENADOR DEL INSTITUTO — antes de clase del 20-10-2026
 

@@ -1,4 +1,4 @@
-# Guion de la octava clase de PIA — pandas desde cero y comparación final con R
+# Guion de la octava clase de PIA — pandas desde cero y recordatorio final de R
 
 > **Documento interno del profesorado. Solo repositorio docente; no publicar en `main` del alumnado, GitHub Pages ni Moodle.**
 
@@ -7,18 +7,20 @@
 **Continuidad real de la séptima clase (2 h):** estaba planteada con arranque de R (local o Colab), R base breve, la comparativa entregable y un repaso inicial de pandas (Series, DataFrame e inicio de indexación). **Antes de empezar, confirmar el punto real alcanzado** y ajustar:
 
 - La comparativa **ya está encargada al alumnado y en curso**: hoy **no se reabre ni se le dedica tiempo de clase**; se recoge y corrige después desde `99-profesor/00-entregas-y-correcciones/`.
-- Si R **no llegó a ejecutarse**, el bloque final de comparación con R se hace como **demostración proyectada** (o Colab), sin dedicar la clase a instalaciones.
+- Si R **no llegó a ejecutarse**, el bloque final de recordatorio y comparación con R se hace como **demostración proyectada** (o Colab), sin dedicar la clase a instalaciones.
 - Si pandas **solo se vio hasta Series/DataFrame**, hoy se empieza de cero igualmente: la primera media hora reconstruye esa base y el resto avanza.
 
 Pandas conserva solo lo ya presentado (Series, DataFrame e inicio de indexación). Por eso **se empieza de cero**, sin dar por sabido lo anterior.
 
-## 1. Decisión de alcance: R al final, no al principio
+## 1. Decisión de alcance: R al final, solo 10 minutos
 
-- **Pandas es el contenido nuevo y ocupa el grueso de la clase (unas dos horas).** Necesita la atención fresca del arranque; no conviene gastar los primeros minutos en un recordatorio de R que aún no tiene con qué compararse.
+- **R no es una herramienta principal del módulo.** Se ve ahora para **comparar** con pandas y, más adelante, para las **gráficas**, que es uno de sus puntos fuertes. No se enseña R en profundidad ni se convierte en una segunda línea de trabajo.
+- **Pandas es el contenido nuevo y ocupa el grueso de la clase (unas dos horas y media).** Necesita la atención fresca del arranque; no conviene gastar los primeros minutos en un recordatorio de R que aún no tiene con qué compararse.
 - **R se acaba de ver.** Un repaso aislado al principio se percibe como «otra clase de R» y rompe el hilo hacia pandas.
-- **La comparación tiene más sentido al final**, cuando el alumnado ya ha hecho filtros, columnas derivadas y `groupby` en pandas: ahí el mismo problema resuelto en R y en pandas se lee de verdad. Además prepara la decisión ya tomada de comparar gráficas Python/R cuando llegue la visualización de UD2.
-- **Formato del bloque final:** comparación **lado a lado sobre los mismos datos y las mismas operaciones** (filtro, columna nueva, resumen por grupo), en R base (sin tidyverse) y en pandas. No es una clase nueva de R.
+- **El recordatorio tiene más sentido al final**, cuando el alumnado ya ha hecho filtros, columnas derivadas y `groupby` en pandas: ahí el mismo problema resuelto en R y en pandas se lee de verdad. Además prepara la decisión ya tomada de comparar gráficas Python/R cuando llegue la visualización de UD2.
+- **Formato del bloque final (10 min):** **recordatorio proyectado** con una tabla de correspondencias y **dos operaciones en vivo** (filtro y resumen por grupo), en R base (sin tidyverse) frente a pandas. El resto de equivalencias queda en el cuaderno `06_R_hazlo_tu.ipynb`. No es una clase nueva de R y no se recorre el temario de R.
 - **Si el grupo llega sin R resuelto:** el bloque final se hace con **demostración proyectada** desde el equipo del profesor o con **Colab**; no se invierte tiempo en instalaciones.
+- **Cierre administrativo:** en esos 10 min entra también **recordar la entrega de la comparativa** encargada; no se corrige en clase.
 
 ## 1b. Método de la sesión: notebook en directo con predicción antes de ejecutar (vigente)
 
@@ -61,7 +63,7 @@ Rutas relativas a la raíz del módulo:
 | Dataset de empleados (continuidad del EDA) | `01-fundamentos-python/03-practicas/09_eda_numpy.md` / `09_eda_numpy.ipynb` |
 | Guía de R (solo para el bloque final) | `01-fundamentos-python/01-teoria/09-guia-r-complementario.md` |
 | Notebook R (bloque final, opcional) | `01-fundamentos-python/02-ejemplos/06_introduccion_R_fundamentos.ipynb` |
-| Soluciones docentes de pandas | `02-tratamiento-datos/99-profesor/01_pandas_fundamentos_SOLUCIONES.ipynb` |
+| Soluciones docentes de pandas | `02-tratamiento-datos/99-profesor/practicas/01_pandas_fundamentos_SOLUCIONES.ipynb` |
 
 Comprobar antes de entrar: que el entorno habitual importa `numpy` y `pandas`; que `pyarrow` está disponible si se enseña Parquet (si no, quedarse en CSV); y que el portátil del profesor puede proyectar el notebook R o abrir Colab.
 
@@ -73,6 +75,34 @@ Comprobar antes de entrar: que el entorno habitual importa `numpy` y `pandas`; q
 - En R, ceñirse a **R base** (`data.frame`, `$`, `aggregate`, `summary`); sin `dplyr` ni tidyverse.
 - No afirmar que R sea siempre mejor para estadística ni que pandas sea siempre más rápido: depende de tarea, datos y herramientas.
 - Si el grupo llega sin la comparativa entregada, no bloquear la clase: recordar la entrega en Moodle y seguir.
+
+## 2b. Checklist Moodle antes de la clase
+
+**Obligatorio:**
+
+- [ ] **Notebook principal** `02-tratamiento-datos/02-ejemplos/01_pandas_fundamentos.ipynb` subido al tema de UD2 (o verificado si ya estaba). Es el que se proyecta; el alumnado debe poder abrirlo.
+- [ ] **Cuaderno de entrega** `02-tratamiento-datos/03-practicas/01_pandas_hazlo_tu.ipynb` subido como archivo descargable, no solo enlazado desde GitHub.
+- [ ] **Tarea «Hazlo tú — pandas»** creada: entrega de **archivo**, acepta `.ipynb`, cierre al final de la clase, reentrega permitida. Sin nota numérica: **completitud / registro binario** (hecho-no hecho) para participación.
+- [ ] **Tarea de la comparativa** revisada: visible, con plazo y formatos admitidos; se recuerda en el bloque R (148–158) y no se corrige en clase.
+- [ ] **Instrucciones de la tarea «Hazlo tú»** redactadas en Moodle: se entrega al salir; entregar acredita asistencia; completo acredita seguimiento; no se corrige acierto; quien no termine puede subirlo después.
+
+**Opcional (solo si se quiere dejar material de apoyo):**
+
+- [ ] `02-tratamiento-datos/01-teoria/03-pandas-chuleta.md` como página o PDF de consulta.
+- [ ] `01-fundamentos-python/03-practicas/06_R_hazlo_tu.ipynb` y `01-fundamentos-python/02-ejemplos/06_introduccion_R_fundamentos.ipynb`, solo si se quiere que el alumnado tenga la referencia R; el bloque de 10 min es proyectado.
+
+**No subir:**
+
+- Soluciones de `99-profesor/` (son docentes).
+- Dataset de empleados: se genera en el notebook con `np.random.default_rng(42)`.
+- `16-eda_numpy_edificios.ipynb`: ya está publicado y pertenece al cierre de UD1.
+
+**Comprobaciones técnicas antes de entrar:**
+
+- [ ] `pixi run python -c "import pandas, numpy; print(pandas.__version__, numpy.__version__)"`.
+- [ ] `pixi run python -c "import pyarrow"`: si falla, **no enseñar Parquet** y quedarse en CSV.
+- [ ] El portátil del profesor proyecta el notebook R o abre Colab con kernel R.
+- [ ] No abrir la celda `pd.get_option("mode.data_manager")` del notebook 01.
 
 ## 3. Ritmo de 180 minutos
 
@@ -86,11 +116,11 @@ Cada bloque de pandas repite el patrón **teoría (3–5) + notebook (10–15) +
 | 66–76 | **Descanso.** | — |
 | 76–102 | **Pandas desde cero (3):** teoría vectorización → notebook (ordenación, columnas derivadas, `np.where`/`cut`, `apply`) → **hazlo tú**. | Explica por qué una operación vectorizada es preferible a `apply`. |
 | 102–128 | **Pandas desde cero (4):** teoría split-apply-combine → notebook (`groupby`, `agg`, `size` frente a `count`) → **hazlo tú**. | Predice cuántos grupos salen y qué columnas quedan. |
-| 128–143 | **Pandas desde cero (5):** teoría ausentes y tipos → notebook (`isna`, `dropna`, `fillna`, CSV; Parquet si hay `pyarrow`) → **hazlo tú breve**. | Justifica si imputar o eliminar y por qué. |
-| 143–164 | **Comparación final R ↔ pandas** sobre los mismos datos y operaciones (R base). | Reconoce el equivalente en la otra herramienta para cada operación. |
-| 164–180 | **Mini-práctica y ticket de salida.** | Resuelve un filtro + columna derivada + resumen por grupo. |
+| 128–148 | **Pandas desde cero (5):** teoría ausentes y tipos → notebook (`isna`, `dropna`, `fillna`, CSV; Parquet si hay `pyarrow`) → **hazlo tú breve**. | Justifica si imputar o eliminar y por qué. |
+| 148–158 | **Recordatorio de R y comparativa** (10 min; R no es herramienta principal). | Reconoce el equivalente en pandas de un filtro y un resumen por grupo. |
+| 158–180 | **Mini-práctica, ticket de salida y entrega.** | Resuelve un filtro + columna derivada + resumen por grupo. |
 
-**Límites de tiempo:** el bloque 2 (selección) debe cerrarse en el minuto 66; el `groupby` en el 128; la comparación con R en el 164. El «hazlo tú» **nunca se salta** en los bloques 1–4: si el reloj aprieta, se recorta la demostración del notebook, no la práctica. Si se acumula retraso, recortar el bloque 5 (ausentes/I/O) y no el `groupby` ni la comparación final.
+**Límites de tiempo:** el bloque 2 (selección) debe cerrarse en el minuto 66; el `groupby` en el 128; el recordatorio de R en el 158. El «hazlo tú» **nunca se salta** en los bloques 1–4: si el reloj aprieta, se recorta la demostración del notebook, no la práctica. Si se acumula retraso, recortar el bloque 5 (ausentes/I/O) y no el `groupby` ni el recordatorio de R; este último puede bajar a 5 min, pero no desaparecer: incluye la entrega de la comparativa.
 
 ## 4. Arranque y pandas desde cero (1): estructuras y exploración (0–38 min)
 
@@ -163,7 +193,7 @@ print(empleados.describe(include=[np.number]).drop(columns="id"))
 
 Cinco ideas: una columna es una Series; un DataFrame es una tabla con **índice común**; `info()` da tipos y nulos; `describe()` resume numéricas; `dtypes` revela tipos que luego condicionan operaciones.
 
-**Hazlo tú (5 min).** En el cuaderno de entrega (en pareja), sobre `empleados`:
+**Hazlo tú (5 min).** En el cuaderno de entrega, **cada uno en el suyo** (se trabaja en pareja), sobre `empleados`:
 
 ```python
 # 1) Selecciona las columnas edad y salario y muestra las 3 primeras filas.
@@ -218,7 +248,7 @@ print(empleados.query("salario > 3000 and nivel >= 3").head(3))
 
 Ideas clave: `df["col"]` es Series y `df[["col"]]` es DataFrame; con índice por etiqueta, **posición y etiqueta dejan de coincidir**; `.loc` incluye el extremo final y `.iloc` no; en filtros compuestos hay que **poner paréntesis** en cada condición.
 
-**Hazlo tú (5 min).** En el cuaderno de entrega (en pareja):
+**Hazlo tú (5 min).** En el cuaderno de entrega, **cada uno en el suyo** (se trabaja en pareja):
 
 ```python
 # 1) Con empleados_idx (índice = id), obtén edad y salario de las etiquetas 2 a 5.
@@ -350,13 +380,15 @@ Ideas clave: `groupby` **divide–aplica–combina**; la columna agrupada pasa a
 - Antes de `size()` frente a `count()`: «¿coinciden? ¿por qué no?» → hay 15 NaN.
 - Antes de `as_index=False`: «¿cómo cambia la forma del resultado?».
 
-## 9. Pandas desde cero (5): ausentes y guardar/cargar (128–143 min)
+## 9. Pandas desde cero (5): ausentes y guardar/cargar (128–148 min)
 
 **Teoría mínima (3 min).** Un ausente (`NaN`) **no es un cero**: es «no sabemos». Por eso:
 
 - Se **diagnostica** primero (`isna().sum()` y la proporción con `isna().mean()`).
 - Se **decide** entre eliminar (`dropna`) o imputar (`fillna`); no hay una respuesta universal: depende de cuántos sean y de si faltan al azar.
 - Al **guardar**, CSV no conserva tipos ni nulos con fidelidad; Parquet sí (si hay `pyarrow`).
+
+**Notebook en directo (12 min).** Ejecutar el bloque en el notebook proyectado, con los chequeos de predicción antes de cada operación. No abrir Parquet si `pyarrow` no está disponible.
 
 ```python
 # Diagnóstico de ausentes
@@ -401,11 +433,18 @@ Ideas clave: `isna().sum()` localiza huecos y `isna().mean()` da su proporción;
 - Antes de `fillna(median)`: «¿cuántos nulos quedan?» → cero en la columna imputada.
 - Antes de `to_csv`/`read_csv`: «¿los tipos se conservan igual?» → normalmente no.
 
-## 10. Comparación final R ↔ pandas (143–164 min)
+## 10. Recordatorio de R y comparativa (148–158 min)
 
-Mismos datos pequeños y mismas cuatro operaciones en las dos herramientas. Si el grupo no tiene R listo, **proyectar** desde el equipo del profesor o abrir Colab con kernel R; no instalar.
+**No es una clase de R.** R no es una herramienta principal del módulo: ahora se usa para comparar y, más adelante, para las gráficas. En estos 10 minutos:
 
-**R base:**
+1. **Recordar la comparativa** encargada y su entrega en Moodle (1 min).
+2. **Proyectar la tabla de correspondencias** (3 min).
+3. **Ejecutar solo dos operaciones** en R y en pandas: un filtro y un resumen por grupo (4 min). No recorrer los dos bloques de código enteros.
+4. **Cerrar** con «no hay ganador universal; depende del ecosistema» (2 min).
+
+El código completo queda como **referencia para el profesor** y en el cuaderno `06_introduccion_R_fundamentos.ipynb`; el `06_R_hazlo_tu.ipynb` sirve para practicar. No se proyecta entero ni se copia en la pizarra. Si el grupo no tiene R listo, **proyectar** desde el equipo del profesor o abrir Colab con kernel R; no instalar.
+
+**R base (solo filtro y resumen):**
 
 ```r
 empleados <- data.frame(
@@ -415,23 +454,14 @@ empleados <- data.frame(
   nivel   = c(2, 3, 1, 4, 2)
 )
 
-head(empleados)
-summary(empleados)
-
 # 1) Filtro
 empleados[empleados$salario > 3000, c("nombre", "salario")]
 
-# 2) Columna derivada
-empleados$salario_anual <- empleados$salario * 12
-
-# 3) Resumen por grupo
+# 2) Resumen por grupo
 aggregate(salario ~ nivel, data = empleados, FUN = mean)
-
-# 4) Ausentes (si los hubiera)
-mean(empleados$salario, na.rm = TRUE)
 ```
 
-**Equivalente en pandas:**
+**Equivalente en pandas (solo filtro y resumen):**
 
 ```python
 empleados_r = pd.DataFrame({
@@ -441,21 +471,14 @@ empleados_r = pd.DataFrame({
     "nivel":   [2, 3, 1, 4, 2],
 })
 
-print(empleados_r.head())
-print(empleados_r.describe())
-
 # 1) Filtro
 print(empleados_r.loc[empleados_r["salario"] > 3000, ["nombre", "salario"]])
 
-# 2) Columna derivada
-empleados_r["salario_anual"] = empleados_r["salario"] * 12
-
-# 3) Resumen por grupo
+# 2) Resumen por grupo
 print(empleados_r.groupby("nivel")["salario"].mean())
-
-# 4) Ausentes
-print(empleados_r["salario"].mean())   # con NaN: skipna=True por defecto
 ```
+
+**Referencia completa (no proyectar entera):** el bloque ampliado con columna derivada, ausentes y tabla de correspondencias está en el cuaderno `01-fundamentos-python/02-ejemplos/06_introduccion_R_fundamentos.ipynb` y en el guion de la séptima clase. Aquí basta con los dos casos.
 
 Tabla de correspondencias para proyectar:
 
@@ -470,21 +493,20 @@ Tabla de correspondencias para proyectar:
 
 Cinco contrastes: asignación `<-` frente a `=`; índice desde 1 frente a 0; `$` frente a `[...]`; fórmula `salario ~ nivel` frente a `groupby`; `NA`/`na.rm` frente a `NaN`/`skipna`. Ambos son vectorizados; la elección depende del ecosistema (informes reproducibles y estadística en R; ML y producción en Python).
 
-**Chequeos de predicción:**
+**Chequeos de predicción (solo dos, para no gastar el bloque):**
 - Antes del filtro en R: «¿el índice de las filas que salen es 2 y 4?».
 - Antes de `aggregate`: «¿cuántas filas tendrá el resultado?» → una por nivel distinto (cuatro).
-- Antes de `mean(..., na.rm=TRUE)`: «¿qué pasa sin `na.rm`?» → devuelve `NA`.
-- Antes de `describe()` en pandas: «¿qué columnas incluye?».
 
-**Cierre comparativo:** preguntar «¿en cuál de las dos escribirías este análisis más rápido y por qué?» y dejar claro que **no hay ganador universal**: es contexto y ecosistema.
+**Cierre comparativo:** preguntar «¿en cuál de las dos escribirías este análisis más rápido y por qué?» y dejar claro que **no hay ganador universal**: es contexto y ecosistema. Recordar que R vuelve cuando lleguen las gráficas.
 
-## 11. Mini-práctica y ticket de salida (164–180 min)
+## 11. Mini-práctica, ticket y entrega (158–180 min)
 
 Sobre `empleados` (con `satisfaccion_imp` ya creada):
 
 1. Filtrar empleados con `salario > 3000` y `nivel >= 3`; mostrar `edad`, `salario`, `nivel`.
 2. Crear `coste_empresa = salario_anual * 1.3` (si no existe, calcular antes `salario_anual`).
 3. Media de `horas` por `nivel` con `agg`, ordenada de mayor a menor.
+4. Sobre el DataFrame original, contar ausentes por columna y justificar en una frase si imputar o eliminar `satisfaccion`.
 
 Aplicar el chequeo de predicción antes de mostrar cada solución: cada pareja anticipa forma, columnas e índice del resultado y lo compara con lo real. Corregir comprobando **forma, columnas e índice**, y pedir interpretación, no solo lectura del código.
 
@@ -494,11 +516,11 @@ Aplicar el chequeo de predicción antes de mostrar cada solución: cada pareja a
 
 **Si sobra tiempo:** `pivot_table` mínimo de recuento (`pd.crosstab` o `pivot_table(index="nivel", columns="senior", aggfunc="size")`) y leer la tabla. No abrir visualización.
 
-**Si falta tiempo:** recortar el bloque 5 (ausentes/I/O) a un `isna().sum()`; **no tocar** el `groupby`, la comparación con R ni la entrega del cuaderno (aunque sea incompleto, debe subirse).
+**Si falta tiempo:** recortar el bloque 5 (ausentes/I/O) a un `isna().sum()`; **no tocar** el `groupby`, el recordatorio de R ni la entrega del cuaderno (aunque sea incompleto, debe subirse).
 
 ## 12. Cierre y ajuste al ritmo
 
-Al terminar, registrar: punto exacto alcanzado (selección, transformaciones, `groupby`, ausentes), si la comparación con R se hizo proyectada o local, y quién sigue sin entorno de pandas resuelto. Anotar también **quién entregó el cuaderno** (asistencia) y si estaba completo (atención), para la valoración binaria de participación.
+Al terminar, registrar: punto exacto alcanzado (selección, transformaciones, `groupby`, ausentes), si el recordatorio de R se hizo proyectado o local, y quién sigue sin entorno de pandas resuelto. Anotar también **quién entregó el cuaderno** (asistencia) y si estaba completo (atención), para la valoración binaria de participación.
 
 **Siguiente paso recomendado:** continuar UD2 con carga/limpieza de un dataset realista y EDA con pandas (`02-pandas_eda_visualizacion.ipynb`), y entrar después en Matplotlib aplicando la decisión de comparar gráficas Python/R sobre los mismos datos. Dejar `pivot_table` avanzado, joins y visualización para sus bloques.
 
