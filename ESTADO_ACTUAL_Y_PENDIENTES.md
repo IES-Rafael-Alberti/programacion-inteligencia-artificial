@@ -55,6 +55,13 @@ El tiempo de la sesión previa queda muy repartido: lo que no se llegó a hacer 
 
 **Siguiente paso:** subir la comparativa y decidir la distribución del notebook 16 en Moodle; el guion corto de 2 h ya está creado (`99-profesor/07-GUION_SEPTIMA_CLASE_PIA_R_COMPARATIVA_PANDAS.md`).
 
+### Decisión: carpeta de entregas y correcciones (2026-10-21)
+
+- [x] Las entregas del alumnado y su corrección se guardan en `01-fundamentos-python/99-profesor/00-entregas-y-correcciones/`, separadas de los instrumentos de `04-evaluacion/` (cuestionarios GIFT, rúbricas, checklist).
+- [x] Se descarta renombrar `04-evaluacion/` y se descarta guardar entregas ahí: mezclaría instrumentos con trabajo interno y esa ruta se usa en preparación/publicación.
+- [x] Por estar bajo `99-profesor/`, la carpeta queda fuera del repositorio público (`.gitignore`) y solo vive en `teacher`.
+- [x] Estructura: subcarpeta por actividad/entrega (p. ej. `UD1-comparativa/`, `UD1-ejercicios-numpy/`) con `registro-correccion.md` cuando proceda. Documentada en un `README.md` dentro de la carpeta.
+
 ## RETOMAR EN EL ORDENADOR DEL INSTITUTO — antes de clase del 20-10-2026
 
 La preparación está terminada y publicada en GitHub; **la importación/publicación en Moodle aún no está hecha**. Este es el orden de trabajo pendiente:
