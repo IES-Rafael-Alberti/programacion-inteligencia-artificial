@@ -9,9 +9,9 @@
 
 - [x] Creado el guion de 2 h `01-fundamentos-python/99-profesor/07-GUION_SEPTIMA_CLASE_PIA_R_COMPARATIVA_PANDAS.md`; material consolidado en `359f1924` y subido a `teacher/main`.
 - [x] Publicada la guía de instalación R/VS Code y sus enlaces en `origin/main` (`1bfdfd91`). Build estricto de MkDocs superado.
-- [ ] **Incidencia de publicación:** también se ejecutó por error `git push origin teacher`, actualizando la rama `teacher` del repositorio público a `359f1924`. Esa rama ya existía en `7fd5e3ba`, pero no constituye un espacio privado ni un staging seguro. Revisar su exposición y acordar su retirada y el tratamiento del historial recuperable; no considerar resuelta la incidencia por la publicación selectiva correcta en `origin/main`.
+- [x] **Incidencia de publicación resuelta (rama):** se ejecutó por error `git push origin teacher`, subiendo material docente a la rama `teacher` del repositorio público (`359f1924`). Se ha **borrado la referencia `origin/teacher`** (`git push origin --delete teacher`); `origin` queda solo con `main`. El commit `359f1924` sigue recuperable por hash en el almacén de GitHub (no purgado), decisión de purgado de historial quedaría aparte y requiere coordinación. La rama local `teacher` y `teacher/main` (docente) no se han tocado e intactas.
 
-**Siguiente paso de mantenimiento:** resolver la exposición de `origin/teacher` antes de nuevas publicaciones. El trabajo docente para la próxima clase está preparado; Moodle conserva los pendientes indicados abajo.
+**Siguiente paso de mantenimiento:** revisar si procede una purga mayor del historial de la rama `origin/teacher` borrada (el commit `359f1924` sigue recuperable por hash). El trabajo docente para la próxima clase está preparado; Moodle conserva los pendientes indicados abajo.
 
 ### Sesión 6 (20-10) — lo realmente impartido
 
