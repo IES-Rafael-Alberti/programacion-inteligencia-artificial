@@ -20,7 +20,13 @@
 - [~] **R no llegó a verse con las herramientas previstas.** Los alumnos intentaron instalar **RStudio**, pero la página de descarga devolvía un XML en lugar de comenzar la descarga. Como alternativa se pasó a **instalar R directamente desde CRAN** y a **instalar los plugins de VS Code para R**. La introducción a R en sí (sintaxis, `data.frame`, resumen) quedó para esta próxima sesión.
 - [x] Pandas: la parte tratada previamente (Series, DataFrame, inicio de indexación) aún no se ha ampliado; sigue pendiente el repaso y la continuación planificada.
 
-### Decisión: instalar R y usar notebooks R en VS Code, sin RStudio
+### Decisión: R local (RStudio o VS Code) si está listo; si no, Google Colab
+
+- [x] **Estado del alumnado heterogéneo:** algunos ya tienen R instalado y también RStudio; otros eligieron VS Code y siguen con **plugins, kernels y dependencias de R no satisfechas**.
+- [x] **Decisión para el lunes:** si el grupo tiene el entorno local resuelto, **tiramos por local** (RStudio para unos, VS Code+IRkernel para otros). Si una parte relevante sigue sin dependencias de R, **no se dedica la clase a instalar**: se usa **Google Colab con kernel R** (`https://colab.research.google.com/notebook#create=true&language=r`) desde el navegador, subiendo el notebook `06_introduccion_R_fundamentos.ipynb`.
+- [x] Añadida la vía Colab al guion `99-profesor/07-GUION_SEPTIMA_CLASE_PIA_R_COMPARATIVA_PANDAS.md` (plan local vs. Colab, comprobación con `R.version.string`, pérdida de paquetes/archivos al reiniciar el entorno) y como material respaldo antes de clase.
+
+## Decisión previa: instalar R y usar notebooks R en VS Code, sin RStudio
 
 - [x] Documentada la ruta de arranque (instalar R desde CRAN, conectar kernel R en VS Code mediante Jupyter/IRkernel) en `01-fundamentos-python/05-recursos/guia-instalacion-r-vscode.md`. Incluye pasos, comprobación, uso de notebooks con kernel R y problemas frecuentes (página de RStudio con XML, `R` sin `PATH`, kernel no visible, `IRkernel::installspec` sin jupyter).
 - [x] Enlazada la guía desde `01-fundamentos-python/01-teoria/09-guia-r-complementario.md`, desde la tabla de teoría (`README.md`, fila 15) y desde el README de la unidad.

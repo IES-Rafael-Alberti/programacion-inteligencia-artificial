@@ -15,9 +15,9 @@ La hoja de ruta completa está en `ESTADO_ACTUAL_Y_PENDIENTES.md`. El flujo de p
 
 ## Próxima clase (2 horas)
 
-1. **Arranque:** instalar R + plugins de VS Code y registrar el kernel siguiendo la nueva guía.
-2. **Introducción breve a R:** `09-guia-r-complementario.md` + `06_introduccion_R_fundamentos.ipynb` (vectores, `data.frame`, resumen); sin bucles/funciones completas ni paquetes nuevos.
-3. **Comparativa de lenguajes y formatos** (entregable): `04-evaluacion/comparativa-lenguajes-formatos-ia.md`, con R recién visto como referencia frente a Python. Subir y habilitar la tarea en Moodle.
+1. **Arranque (local o Colab, según el lunes):** si buena parte del grupo tiene R listo (RStudio o VS Code+IRkernel), **tiramos por local**. Si una parte relevante sigue con plugins/kernels/dependencias de R sin resolver, **se usa Google Colab con kernel R** (`https://colab.research.google.com/notebook#create=true&language=r`) sin dedicar la clase a instalar.
+2. **Introducción breve a R:** `09-guia-r-complementario.md` + `06_introduccion_R_fundamentos.ipynb` (vectores, `data.frame`, resumen); sin bucles/funciones completas ni paquetes nuevos. En Colab, subir el notebook y confirmar kernel R.
+3. **Comparativa de lenguajes y formatos** (entregable): `04-evaluacion/comparativa-lenguajes-formatos-ia.md`, con R recién visto (local o Colab) como referencia frente a Python. Subir y habilitar la tarea en Moodle.
 4. **Repaso de lo primero de pandas:** Series, DataFrame y arranque de indexación, antes de `loc`/`iloc`, filtros y transformaciones.
 
 ## Pendientes
