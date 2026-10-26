@@ -12,7 +12,7 @@
 ## Preparación de Moodle — sesión de entornos UD2 — 2026-10-26
 
 - [x] Alineado `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md` con UD2: Pixi `default`, NumPy/pandas y ejercicio de proyecto de tratamiento de datos; retiradas las referencias a `ud3`, scikit-learn y `ud3-pycaret`.
-- [x] Definido el paquete temporal `Moodle/02-UD2/`: documentación base, guía de proyecto UD2 y ejercicio entregable; no se incluye ningún notebook porque la sesión trabaja comandos y razonamiento sobre entornos.
+- [x] Definido el paquete temporal `Moodle/02-UD2/`: documentación base, guía de proyecto UD2, ejercicio entregable y un notebook opcional de comprobación (`03_pandas_eda_visualizacion.ipynb`) para ejecutar una gráfica con el entorno recién creado.
 - [ ] Subir a Moodle los tres recursos prioritarios y configurar «Entornos Python — hazlo tú» como tarea binaria (hecho/no hecho), permitiendo terminarla después de clase.
 
 ## Compatibilidad de estilos Matplotlib — 2026-10-26

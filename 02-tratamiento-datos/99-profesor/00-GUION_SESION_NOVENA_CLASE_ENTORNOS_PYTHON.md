@@ -149,6 +149,8 @@ pixi run --environment default python -c "import numpy, pandas; print(numpy.__ve
 
 Y responde: ¿por qué no se debe afirmar que `default` sirve ya para visualizar? (Porque Matplotlib está declarado en `ud3`; hay que modificar la feature de UD2 o usar conda.)
 
+**Comprobación de integración (opcional, 8 min):** si ya se ha creado el entorno conda `pia-ud2`, o si existe el entorno Pixi de UD2 con Matplotlib, abrir `02-tratamiento-datos/02-ejemplos/03_pandas_eda_visualizacion.ipynb`, ejecutar las celdas iniciales y mostrar una gráfica. No se completa el EDA ni se entrega el notebook: solo se comprueba que el entorno ejecuta material real de la unidad.
+
 ### 5. Poetry y despliegue: experimentar no es desplegar (12 min)
 
 Proyectar la tabla «Experimentar / Desplegar» de `docs/entornos-python.md`. La idea que debe quedar: **el entorno de experimentación no se lleva tal cual a producción**; se separan dependencias de desarrollo y de runtime, y se despliega un artefacto construido desde el lockfile.

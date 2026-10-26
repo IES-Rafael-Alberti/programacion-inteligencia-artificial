@@ -61,7 +61,30 @@ Responde:
 - ¿Por qué Matplotlib no está todavía disponible en `default`?
 - ¿Qué dos ficheros hay que versionar para reproducir el entorno? ¿Cuál **no** se versiona?
 
-## 4. Elige herramienta (5 min)
+## 4. Comprueba el entorno con un notebook real (opcional, 8 min)
+
+Usa el entorno que acabas de preparar para abrir y ejecutar parcialmente el notebook:
+`02-tratamiento-datos/02-ejemplos/03_pandas_eda_visualizacion.ipynb`.
+
+Con conda:
+
+```bash
+conda activate pia-ud2
+jupyter lab
+```
+
+Con Pixi, usa el entorno de UD2 que incluya Matplotlib (`ud2` cuando se declare esa
+feature), no el `default` actual:
+
+```bash
+pixi run --environment ud2 jupyter lab
+```
+
+Ejecuta las celdas iniciales y al menos una gráfica. Comprueba que el notebook puede
+importar NumPy, pandas y Matplotlib desde el entorno elegido. No hace falta completar
+todo el EDA ni entregar el notebook: es una prueba de integración.
+
+## 5. Elige herramienta (5 min)
 
 Para cada caso, escribe la herramienta y una razón:
 
@@ -70,7 +93,7 @@ Para cada caso, escribe la herramienta y una razón:
 3. Script de 20 líneas que solo usa `requests`.
 4. Librería que quieres publicar en PyPI.
 
-## 5. Experimentar o desplegar (5 min)
+## 6. Experimentar o desplegar (5 min)
 
 Clasifica cada elemento como **experimentación (E)**, **despliegue (D)** o **ambos**, justificando el uso: un manifiesto o un lockfile puede servir en los dos momentos.
 
