@@ -3,6 +3,15 @@
 **Fecha de snapshot:** 2026-10-26
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Pendiente acordado: todo el material dentro de su unidad — 2026-10-26
+
+- [x] Decisión del profesor: todo el material de una unidad debe localizarse dentro de su carpeta, incluidos fuentes, PDF y archivos destinados a Moodle. La carpeta externa `Moodle/` dispersa el material y dificulta identificar la versión vigente. Buscar coherencia con la organización de los otros módulos.
+- [ ] Proponer y acordar una estructura interna sencilla para las versiones publicables de cada unidad; concretar la ubicación de los PDF y cómo mantenerlos sincronizados con su fuente, sin copias divergentes ni necesidad de salir de la unidad.
+- [ ] Tras aprobar esa estructura, trasladar el contenido útil de `Moodle/01-UD1/` y `Moodle/02-UD2/` a sus unidades, comprobar versiones y actualizar referencias. Conservar los materiales existentes hasta revisarlos.
+- [ ] Revisar en particular `Moodle/02-UD2/03-practicas/00_Entornos_Python_Hazlo_Tu.pdf`: es anterior al taller práctico vigente y necesita regeneración desde `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md`. No dar por publicada la nueva versión en Moodle sin confirmación.
+- **Aplazado por indicación del profesor:** ahora solo se registra el pendiente; la reorganización y la generación de PDF se abordarán en otro momento.
+- Siguiente paso de este bloque: presentar una propuesta breve de organización dentro de las unidades antes de mover o eliminar archivos.
+
 ## Decisión docente: entornos como taller práctico — 2026-10-26
 
 - [x] Sustituido el enfoque anterior por trabajo del alumnado **una herramienta cada vez: instalar/comprobar → configurar → ejecutar ejemplo → probar → modificar y volver a probar**. Se empieza trabajando; las ventajas, inconvenientes y criterios de elección se comparan después de probar.
