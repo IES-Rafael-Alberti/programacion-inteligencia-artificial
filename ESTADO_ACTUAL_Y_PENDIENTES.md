@@ -3,6 +3,13 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Consolidación del trabajo del instituto — 2026-10-26
+
+- [x] Incorporado el traslado del guion de la octava clase a `02-tratamiento-datos/99-profesor/01-GUION_OCTAVA_CLASE_PIA_PANDAS.md`; no se ha eliminado el material.
+- [x] Revisados y conservados los cambios importados en los cuatro notebooks pandas: fundamentos incluye nuevas celdas Arrow; EDA sin gráficas y EDA visual conservan las fuentes y añaden salidas; demo avanzada limpia salidas. También se conserva el índice graphify importado.
+- [ ] Revisar las nuevas celdas Arrow de `01_pandas_fundamentos.ipynb` antes de usarlas: opción `mode.data_manager` obsoleta, selección de `df`/`df1`, argumento `dtype_backend` y lectura del CSV. Esta consolidación no corrige el trabajo del profesor.
+- Siguiente paso: reunir los manuales de entornos y Pixi en la teoría de UD2 y añadir un manual específico de conda; después validar los enlaces y la web.
+
 ## Separación de guías de entornos UD2/UD3 — 2026-10-26
 
 - [x] Separadas las rutas: creada `02-tratamiento-datos/01-teoria/10a-guia-proyecto-python-pixi.md` como guía práctica de proyecto UD2, incluyendo la ruta alternativa conda y su entorno mínimo.
@@ -40,7 +47,7 @@
 
 - [x] **Cierre y sincronización:** guion de pandas con R reducido a 10 min, checklist Moodle y sesión de entornos UD2 consolidados en `2f507ebb` y subidos a `teacher/main`. Material público publicado en `origin/main` (`fa74575e`): `docs/entornos-python.md` y `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md`. Los cuadernos «hazlo tú» de pandas y R ya estaban publicados (`79bba3ce`). `mkdocs build --strict` superado. Los guiones y la hoja de ruta permanecen en el repositorio docente.
 - [x] **Revisión previa a publicación:** corregida la consulta de versión de Rich con `importlib.metadata`, mantenida la exclusión de dependencias de desarrollo al arrancar el ejemplo Docker y aclarado que manifiestos y lockfiles pueden usarse tanto para experimentar como para desplegar.
-- [ ] **Lunes 2026-10-26 — octava clase (3 h):** pandas desde cero según `01-fundamentos-python/99-profesor/08-GUION_OCTAVA_CLASE_PIA_PANDAS.md`, con **cierre de recordatorio de R y la comparativa** (bloque 10, 148–158). Antes: ejecutar el **checklist Moodle (§2b del guion)** — notebook principal, cuaderno «hazlo tú», tarea de entrega, comparativa y comprobaciones técnicas (`pandas`, `pyarrow`, R/Colab).
+- [ ] **Lunes 2026-10-26 — octava clase (3 h):** pandas desde cero según `02-tratamiento-datos/99-profesor/01-GUION_OCTAVA_CLASE_PIA_PANDAS.md`, con **cierre de recordatorio de R y la comparativa** (bloque 10, 148–158). Antes: ejecutar el **checklist Moodle (§2b del guion)** — notebook principal, cuaderno «hazlo tú», tarea de entrega, comparativa y comprobaciones técnicas (`pandas`, `pyarrow`, R/Colab).
 - [ ] **Martes 2026-10-27 — sesión de entornos (2 h) en UD2:** `02-tratamiento-datos/99-profesor/00-GUION_SESION_NOVENA_CLASE_ENTORNOS_PYTHON.md`, con el ejercicio `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md`. Antes: verificar `pixi --version` y `pixi run --environment default python -c "import numpy, pandas"` en el aula, y subir el ejercicio a Moodle.
 - [x] Decidido: el bloque final de R del lunes queda en **10 min** (recordatorio + tabla de correspondencias + filtro/`groupby` en vivo + recordatorio de entrega de la comparativa). **R no es herramienta principal:** se ve para comparar y, más adelante, para gráficas. Los 11 min liberados pasan a ausentes (128–148) y mini-práctica (158–180).
 
@@ -94,7 +101,7 @@ El tiempo de la sesión previa queda muy repartido: lo que no se llegó a hacer 
 3. **Comparativa de lenguajes y formatos** (entregable): `04-evaluacion/comparativa-lenguajes-formatos-ia.md` (subir/habilitar tarea en Moodle) usando el R recién visto como referencia frente a Python.
 4. **Repaso de lo primero de pandas:** Series, DataFrame como conjunto de columnas/Series e inicio de indexación, antes de continuar con `loc`/`iloc`, filtros y transformaciones.
 
-**Siguiente paso:** la comparativa **ya está encargada** al alumnado; falta decidir la distribución del notebook 16 en Moodle. Guion corto de 2 h en `99-profesor/07-GUION_SEPTIMA_CLASE_PIA_R_COMPARATIVA_PANDAS.md` y guion de la octava clase (3 h, pandas + comparación R al final) en `99-profesor/08-GUION_OCTAVA_CLASE_PIA_PANDAS.md`.
+**Siguiente paso:** la comparativa **ya está encargada** al alumnado. El notebook 16 ya está publicado en el repositorio del alumnado; confirmar su distribución en Moodle. Guion corto de 2 h en `01-fundamentos-python/99-profesor/07-GUION_SEPTIMA_CLASE_PIA_R_COMPARATIVA_PANDAS.md` y guion de la octava clase (3 h, pandas + comparación R al final) en `02-tratamiento-datos/99-profesor/01-GUION_OCTAVA_CLASE_PIA_PANDAS.md`.
 
 ### Decisión: carpeta de entregas y correcciones (2026-10-21)
 
@@ -105,7 +112,7 @@ El tiempo de la sesión previa queda muy repartido: lo que no se llegó a hacer 
 
 ### Decisión: guion de la octava clase (3 h) y ubicación de R (2026-10-25)
 
-- [x] Creado `01-fundamentos-python/99-profesor/08-GUION_OCTAVA_CLASE_PIA_PANDAS.md`, de **180 min**: pandas desde cero (Series/DataFrame, selección y `.loc`/`.iloc`, transformaciones, `groupby`, ausentes e I/O) y, **al final**, comparación R ↔ pandas sobre los mismos datos y operaciones.
+- [x] Creado el guion de **180 min**, actualmente en `02-tratamiento-datos/99-profesor/01-GUION_OCTAVA_CLASE_PIA_PANDAS.md`: pandas desde cero (Series/DataFrame, selección y `.loc`/`.iloc`, transformaciones, `groupby`, ausentes e I/O) y, **al final**, comparación R ↔ pandas sobre los mismos datos y operaciones.
 - [x] **Decisión: R va al final, no al principio.** Pandas es el contenido nuevo y necesita la atención fresca inicial; R se acaba de ver y un recordatorio aislado no tiene referencia con la que compararse; al final, con pandas ya trabajado, la comparación lado a lado tiene sentido y prepara la comparación de gráficas Python/R prevista para UD2.
 - [x] **Ajuste 2026-10-25: R no es herramienta principal y el bloque final baja a 10 min.** Se limita a recordar la comparativa, proyectar la tabla de correspondencias y ejecutar filtro y `groupby` en R frente a pandas. El código completo queda como referencia y en `06_R_hazlo_tu.ipynb`; no se recorre el temario de R. R vuelve cuando se vean gráficas.
 - [x] Si el grupo llega sin R resuelto, el bloque final se hace como **demostración proyectada o con Colab**, sin dedicar la clase a instalaciones.
