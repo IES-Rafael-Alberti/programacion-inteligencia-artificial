@@ -3,6 +3,17 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Ajuste de orden EDA — 2026-10-26
+
+- [x] Corregido el EDA comparativo sin gráficas: Generator reproducible, selección sin repetición de ausentes/extremos, copia original, winsorización bilateral, etiquetas de edad y `observed` explícito, explicación de NumPy y tipos anulables/Arrow sin opciones inexistentes. Salidas antiguas eliminadas.
+- [x] Numeración intercambiada: `02_eda_pandas.ipynb` antes de `03_pandas_eda_visualizacion.ipynb`; referencias locales actualizadas. Secuencia: fundamentos → EDA sin gráficas → introducción Matplotlib → EDA visual.
+- [x] Moodle: tarea «Hazlo tú — pandas» 454552 publicada con cuaderno, sin nota numérica, entrega el 26-10 a las 18:30 y reentrega. Notebook principal ya disponible. Comparativa visible, fecha 23-10, sin bloqueo de entregas.
+- [x] Moodle: ambas copias corregidas y renumeradas publicadas en la carpeta Notebooks (431047); retiradas las versiones anteriores y el ZIP temporal.
+- [x] EDA ejecutado completo con pandas 2.3.3 / NumPy 2.2.6, sin FutureWarning: 15 ausentes iniciales, cero tras imputar y todas las edades clasificadas. PyArrow ausente: rama opcional comprobada sin error.
+- [x] Cambios públicos consolidados en commit docente `c441d2a`; copia pública limpia preparada en `74a2413d` (worktree `/tmp/pia-public-eda`). Índice graphify actualizado sin llamadas LLM.
+- [ ] Publicar `74a2413d` en `origin/main`: la revisión automática bloqueó el push por requerir autorización explícita del usuario. No se ha enviado material a GitHub.
+- Siguiente paso: obtener autorización para publicar el commit público; seguir fundamentos → EDA sin gráficas → Matplotlib → EDA visual. Comprobar el bloque Arrow cuando se disponga de la dependencia.
+
 ## Plan inmediato acordado (2026-10-25)
 
 - [x] **Cierre y sincronización:** guion de pandas con R reducido a 10 min, checklist Moodle y sesión de entornos UD2 consolidados en `2f507ebb` y subidos a `teacher/main`. Material público publicado en `origin/main` (`fa74575e`): `docs/entornos-python.md` y `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md`. Los cuadernos «hazlo tú» de pandas y R ya estaban publicados (`79bba3ce`). `mkdocs build --strict` superado. Los guiones y la hoja de ruta permanecen en el repositorio docente.
