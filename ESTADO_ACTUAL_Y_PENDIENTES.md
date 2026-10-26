@@ -1,7 +1,20 @@
 # Estado actual y pendientes — PIA 2026-2027
 
-**Fecha de snapshot:** 2026-10-26
+**Fecha de snapshot:** 2026-10-27
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
+
+## Decisión docente: R/Titanic como ampliación voluntaria — 2026-10-27
+
+- [x] El profesor deja `02-tratamiento-datos/03-practicas/r_exercises_titanic_with_tests/` fuera del itinerario ordinario por ahora. Se conserva como material guiado de autoaprendizaje para quien quiera aprender más R: código prácticamente resuelto para ejecutar, comprender y modificar, sin entrega obligatoria ni evaluación; actualizado su README.
+- [x] `07_entrega_itinerario_R.md` es una propuesta disponible, no una tarea activada. Esta decisión no amplía el bloque breve de R base ni altera el eje pandas de UD2.
+- Siguiente paso: ofrecerlo como ampliación voluntaria cuando el profesor lo publique; no incorporarlo a las tareas obligatorias del grupo.
+
+## Cierre de preparación de clase — 2026-10-27
+
+- [x] El profesor da por resuelta la preparación de la próxima clase. Taller de entornos vigente en `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md`; R/Titanic queda como autoaprendizaje voluntario.
+- [x] Revisados los cambios pendientes para consolidar esta decisión en la rama `teacher` y sincronizar el repositorio docente. Se mantienen separados los historiales docente y público.
+- Se conserva aplazada la reorganización de PDF y material Moodle dentro de cada unidad. La generación del PDF actualizado y la publicación pública/Moodle no se dan por realizadas sin comprobación o confirmación específica.
+- Siguiente paso: impartir el taller y registrar los bloques realmente completados y la continuación necesaria; retomar la propuesta de organización cuando lo indique el profesor.
 
 ## Pendiente acordado: todo el material dentro de su unidad — 2026-10-26
 
