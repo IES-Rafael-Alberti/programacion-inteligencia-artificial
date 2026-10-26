@@ -3,6 +3,11 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Revisión de guía de ejemplos pandas — 2026-10-26
+
+- [x] Revisada `02-tratamiento-datos/01-teoria/02-pandas-ejemplos-guia.md`: añadidas explicaciones breves para los bloques de operaciones y advertencias sobre archivos externos, formatos variables y dependencias opcionales.
+- [x] Corregido el primer `assign` para conservar `ingresos` en `df` y corregido el cálculo de `crecimiento` para ordenar cronológicamente antes de aplicar `diff()`.
+
 ## Ajuste de orden EDA — 2026-10-26
 
 - [x] Corregido el EDA comparativo sin gráficas: Generator reproducible, selección sin repetición de ausentes/extremos, copia original, winsorización bilateral, etiquetas de edad y `observed` explícito, explicación de NumPy y tipos anulables/Arrow sin opciones inexistentes. Salidas antiguas eliminadas.
