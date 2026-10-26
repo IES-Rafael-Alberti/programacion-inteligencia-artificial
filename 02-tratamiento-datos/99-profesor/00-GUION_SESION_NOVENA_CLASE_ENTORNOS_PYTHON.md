@@ -77,15 +77,31 @@ Chequeo de predicción: «¿Qué herramienta usarías para un script de 20 líne
 
 ### 2. pip, venv y uv (18 min)
 
-Demo en vivo en una carpeta temporal:
+Demo en vivo en una carpeta de trabajo `pia-entornos`, creada y abierta desde el
+explorador de archivos o la terminal (la ubicación puede ser distinta en cada sistema):
 
 ```bash
-mkdir -p /tmp/pia-entornos && cd /tmp/pia-entornos
+# Desde la carpeta pia-entornos ya creada y abierta:
 python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-which python
-pip -V
-pip install rich
+```
+
+Activación según el sistema:
+
+```bash
+# Linux/macOS
+source .venv/bin/activate
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+# Windows CMD
+.venv\Scripts\activate.bat
+```
+
+Con el entorno activo:
+
+```bash
+python -c "import sys; print(sys.executable)"
+python -m pip -V
+python -m pip install rich
 python -c "from importlib.metadata import version; print(version('rich'))"
 deactivate
 python -c "import rich"
@@ -96,6 +112,10 @@ python -c "import rich"
 Mensaje: `venv` aísla, pero hay que activarlo; si se olvida, `pip` escribe en el sistema. `uv` hace lo mismo con lockfile y más rápido; se nombra, no se instala si no está.
 
 **«Hazlo tú» (5 min):** crear un `venv`, instalar `rich`, comprobar la versión dentro y que fuera no existe. Dos parejas dicen el resultado.
+
+La secuencia es válida en Linux, macOS y Windows. Si Windows no reconoce `conda
+activate`, ejecutar `conda init powershell`, cerrar y volver a abrir PowerShell (o
+reiniciarlo) y probar de nuevo.
 
 **Cierre del bloque:** `pip` no es un gestor de entornos; es un instalador. `venv`/`uv` ponen el aislamiento.
 

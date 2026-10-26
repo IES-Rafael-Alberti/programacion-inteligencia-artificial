@@ -6,15 +6,31 @@ Trabaja en pareja. Anota el comando, lo que esperabas y lo que salió. Si algo f
 
 ## 1. venv + pip (5 min)
 
-En una carpeta temporal:
+En el explorador de archivos o desde una terminal, crea y abre una carpeta de trabajo llamada
+`pia-entornos` (en cualquier ubicación de tu elección):
 
 ```bash
-mkdir -p /tmp/pia-entornos && cd /tmp/pia-entornos
+# Después de crear/abrir pia-entornos en el explorador, ejecuta desde esa carpeta:
 python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-which python
-pip -V
-pip install rich
+```
+
+Activa el entorno según tu sistema:
+
+```bash
+# Linux/macOS
+source .venv/bin/activate
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+# Windows CMD
+.venv\Scripts\activate.bat
+```
+
+Continúa con el entorno activo:
+
+```bash
+python -c "import sys; print(sys.executable)"
+python -m pip -V
+python -m pip install rich
 python -c "from importlib.metadata import version; print(version('rich'))"
 deactivate
 python -c "import rich"
@@ -23,7 +39,7 @@ python -c "import rich"
 Responde:
 
 - ¿La última línea funciona o falla? ¿Por qué?
-- ¿Qué cambia en `which python` al activar y desactivar?
+- ¿Qué cambia en la ruta mostrada por `sys.executable` al activar y desactivar?
 - ¿Dónde se han instalado los paquetes: en el sistema o en `.venv/`?
 
 ## 2. conda: leer y razonar (5 min)
