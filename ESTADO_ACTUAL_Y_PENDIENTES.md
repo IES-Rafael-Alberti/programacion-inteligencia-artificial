@@ -11,8 +11,8 @@
 - [x] Moodle: ambas copias corregidas y renumeradas publicadas en la carpeta Notebooks (431047); retiradas las versiones anteriores y el ZIP temporal.
 - [x] EDA ejecutado completo con pandas 2.3.3 / NumPy 2.2.6, sin FutureWarning: 15 ausentes iniciales, cero tras imputar y todas las edades clasificadas. PyArrow ausente: rama opcional comprobada sin error.
 - [x] Cambios públicos consolidados en commit docente `c441d2a`; copia pública limpia preparada en `74a2413d` (worktree `/tmp/pia-public-eda`). Índice graphify actualizado sin llamadas LLM.
-- [ ] Publicar `74a2413d` en `origin/main`: la revisión automática bloqueó el push por requerir autorización explícita del usuario. No se ha enviado material a GitHub.
-- Siguiente paso: obtener autorización para publicar el commit público; seguir fundamentos → EDA sin gráficas → Matplotlib → EDA visual. Comprobar el bloque Arrow cuando se disponga de la dependencia.
+- [x] Publicado `74a2413d` en `origin/main` con autorización explícita del profesor; push confirmado (26-10-2026). Solo notebooks y referencias del alumnado.
+- Siguiente paso: seguir fundamentos → EDA sin gráficas → Matplotlib → EDA visual. Comprobar el bloque Arrow cuando se disponga de la dependencia.
 
 ## Plan inmediato acordado (2026-10-25)
 
