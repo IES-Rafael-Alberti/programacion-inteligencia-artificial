@@ -4,6 +4,8 @@
 
 Trabaja en pareja. Anota el comando, lo que esperabas y lo que salió. Si algo falla, copia el error completo: es parte de la evidencia.
 
+Documentación de apoyo de UD2: [mapa de entornos](../01-teoria/00a-entornos-python.md), [manual de Pixi](../01-teoria/00b-manual-pixi-pia.md), [manual de conda](../01-teoria/00c-manual-conda-pia.md) y [guía de proyecto](../01-teoria/10a-guia-proyecto-python-pixi.md).
+
 ## 1. venv + pip (5 min)
 
 En el explorador de archivos o desde una terminal, crea y abre una carpeta de trabajo llamada

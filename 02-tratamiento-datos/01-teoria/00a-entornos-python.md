@@ -1,6 +1,6 @@
 # Entornos de Python: qué herramienta elegir
 
-> Documento de apoyo para la sesión de entornos de **UD2**. Se imparte después de UD1: el alumnado ya ha usado NumPy y pandas y puede ver el problema real. No sustituye al [manual práctico de Pixi](manual-pixi-pia.md): lo sitúa junto a las demás herramientas y explica **por qué** no instalamos las dependencias del módulo en el Python del sistema.
+> Documento base de la sesión de entornos de **UD2**. Se imparte después de UD1: el alumnado ya ha usado NumPy y pandas y puede ver el problema real. Presenta el mapa y el criterio de elección; el detalle operativo está en el [manual de Pixi](00b-manual-pixi-pia.md) y el [manual de conda](00c-manual-conda-pia.md). Estos materiales se retomarán en las unidades posteriores conforme se necesiten sus herramientas.
 
 ## 1. El problema
 
@@ -43,7 +43,7 @@ Un **entorno** es una carpeta aislada con su propio intérprete y sus propios pa
 
 **Idea clave:** pip, venv, uv y Poetry trabajan sobre todo con paquetes **Python**; conda y Pixi también resuelven **paquetes nativos** y versiones de Python. Por eso el módulo usa Pixi: hay CUDA, BLAS, compiladores y paquetes que no son Python puro.
 
-La comparación rápida de Pixi con `uv` y Conda ya está en [manual-pixi-pia.md](manual-pixi-pia.md); aquí solo se amplía el mapa completo.
+La comparación rápida de Pixi con `uv` y conda está en el [manual de Pixi](00b-manual-pixi-pia.md); aquí se amplía el mapa completo.
 
 ## 4. pip y venv: el mínimo
 
@@ -101,7 +101,7 @@ se puede seguir usando `conda` con sus comandos habituales.
 se escriben sustituyendo `conda` por `mamba`; para esta asignatura no son una
 dependencia adicional ni una ruta distinta que el alumnado tenga que instalar.
 
-El repositorio ya trae ejemplos reales: [`pia-ud1.yml`](../01-fundamentos-python/05-recursos/pia-ud1.yml) y [`environment.yml`](https://github.com/IES-Rafael-Alberti/programacion-inteligencia-artificial/blob/main/environment.yml). Para UD2, consulta la [guía de proyecto con Python, Pixi y conda](../02-tratamiento-datos/01-teoria/10a-guia-proyecto-python-pixi.md); la guía ML queda reservada a UD3.
+El repositorio ya trae ejemplos reales: [`pia-ud1.yml`](../../01-fundamentos-python/05-recursos/pia-ud1.yml) y [`environment.yml`](https://github.com/IES-Rafael-Alberti/programacion-inteligencia-artificial/blob/main/environment.yml). El [manual de conda de UD2](00c-manual-conda-pia.md) desarrolla la instalación, los comandos, Jupyter y los problemas frecuentes. La [guía de proyecto de UD2](10a-guia-proyecto-python-pixi.md) aplica las dos rutas al tratamiento de datos; la guía ML queda reservada a UD3.
 
 **Reutilizar sin multiplicar entornos.** La tentación es crear un entorno por experimento. Mejor:
 
@@ -125,7 +125,7 @@ En este módulo se usa para los proyectos porque:
 - **Tareas:** `pixi run` evita depender de que el alumnado active el entorno correcto.
 - **Aísla de verdad:** los entornos viven en el proyecto, no en una lista global.
 
-Todo el detalle (instalación, conceptos, comandos, features, entornos, problemas frecuentes y buenas prácticas) está en **[manual-pixi-pia.md](manual-pixi-pia.md)**. El proyecto real del curso es el [`pixi.toml`](https://github.com/IES-Rafael-Alberti/programacion-inteligencia-artificial/blob/main/pixi.toml) de la raíz. La [guía de proyecto de UD2](../02-tratamiento-datos/01-teoria/10a-guia-proyecto-python-pixi.md) cubre tratamiento de datos; la [guía de proyecto ML/UD3](../03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md) es específica de aprendizaje automático.
+Todo el detalle (instalación, conceptos, comandos, features, entornos, problemas frecuentes y buenas prácticas) está en el **[manual de Pixi de UD2](00b-manual-pixi-pia.md)**. El proyecto real del curso es el [`pixi.toml`](https://github.com/IES-Rafael-Alberti/programacion-inteligencia-artificial/blob/main/pixi.toml) de la raíz. La [guía de proyecto de UD2](10a-guia-proyecto-python-pixi.md) cubre tratamiento de datos; la [guía de proyecto ML/UD3](../../03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md) es específica de aprendizaje automático.
 
 **Inconvenientes:** hay que instalarlo una vez y entender `pixi run`; la primera resolución puede tardar y ocupar disco; no es la herramienta habitual en todas las empresas, así que conviene saber también conda y pip.
 
@@ -242,8 +242,9 @@ En este módulo **no es la ruta de ejecución**: no resuelve bien paquetes nativ
 
 ## Material relacionado
 
-- [Manual práctico de Pixi para PIA](manual-pixi-pia.md)
-- [Guía de inicio del curso](guia-inicio.md): qué entorno usar en cada unidad.
-- [Guía de proyecto UD2 con Python, Pixi y conda](../02-tratamiento-datos/01-teoria/10a-guia-proyecto-python-pixi.md)
-- [Guía de proyecto ML/UD3 con Python y Pixi](../03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md)
-- [Chuleta del stack convergente](../07-convergencia-herramientas/05-recursos/cheatsheet_stack_convergente.md)
+- [Manual práctico de Pixi para PIA](00b-manual-pixi-pia.md)
+- [Manual práctico de conda para PIA](00c-manual-conda-pia.md)
+- [Guía de inicio del curso](https://ies-rafael-alberti.github.io/programacion-inteligencia-artificial/guia-inicio/): qué entorno usar en cada unidad.
+- [Guía de proyecto UD2 con Python, Pixi y conda](10a-guia-proyecto-python-pixi.md)
+- [Guía de proyecto ML/UD3 con Python y Pixi](../../03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md)
+- [Chuleta del stack convergente](../../07-convergencia-herramientas/05-recursos/cheatsheet_stack_convergente.md)

@@ -38,4 +38,4 @@ Todas las tareas, prácticas y proyectos con entrega están sujetos a las [norma
 
 ## Entornos de trabajo
 
-Empieza por la [ruta común para trabajar con los materiales](guia-inicio.md): portal, copia local del repositorio, entorno indicado y ejecución. El [manual práctico de Pixi para PIA](manual-pixi-pia.md) amplía la instalación y el uso de los entornos disponibles.
+Empieza por la [ruta común para trabajar con los materiales](guia-inicio.md): portal, copia local del repositorio, entorno indicado y ejecución. La documentación de entornos vive en **UD2**: [criterio de elección](02-tratamiento-datos/01-teoria/00a-entornos-python.md), [manual de Pixi](02-tratamiento-datos/01-teoria/00b-manual-pixi-pia.md) y [manual de conda](02-tratamiento-datos/01-teoria/00c-manual-conda-pia.md).

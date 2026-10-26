@@ -21,12 +21,13 @@ Al terminar, el alumnado debe saber:
 
 ## 2. Material: no duplicar lo que ya está escrito
 
-La sesión se apoya en documentación existente. El documento nuevo `docs/entornos-python.md` solo cubre el mapa y el criterio de elección; el detalle de Pixi se sigue en el manual.
+La sesión se apoya en la teoría de UD2: `00a-entornos-python.md` cubre el mapa y el criterio de elección; `00b-manual-pixi-pia.md` y `00c-manual-conda-pia.md` desarrollan el manejo. Los manuales se retoman después conforme se necesiten, sin convertir esta sesión en un recorrido exhaustivo por ML, GPU o despliegue.
 
 | Uso | Ruta |
 |---|---|
-| Documento base de la sesión (alumnado) | `docs/entornos-python.md` |
-| Manual de Pixi (detalle, comandos, problemas) | `docs/manual-pixi-pia.md` |
+| Documento base de la sesión (alumnado) | `02-tratamiento-datos/01-teoria/00a-entornos-python.md` |
+| Manual de Pixi (detalle, comandos, problemas) | `02-tratamiento-datos/01-teoria/00b-manual-pixi-pia.md` |
+| Manual de conda (instalación, YAML, Jupyter, problemas) | `02-tratamiento-datos/01-teoria/00c-manual-conda-pia.md` |
 | Entornos disponibles del curso | `docs/guia-inicio.md` |
 | Guía práctica de proyecto UD2 | `02-tratamiento-datos/01-teoria/10a-guia-proyecto-python-pixi.md` |
 | Guía posterior de proyecto ML/UD3 | `03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md` |
@@ -65,7 +66,7 @@ Recoger 2–3 respuestas. No corregir todavía: la respuesta se construye en el 
 
 ### 1. Por qué no el sistema y qué hace cada herramienta (14 min)
 
-Teoría breve con la tabla de `docs/entornos-python.md`:
+Teoría breve con la tabla de `02-tratamiento-datos/01-teoria/00a-entornos-python.md`:
 
 - Entorno = intérprete + paquetes aislados; activar cambia el `PATH`.
 - Tres riesgos del sistema: conflictos, no reproducibilidad, romper el SO.
@@ -121,6 +122,8 @@ reiniciarlo) y probar de nuevo.
 
 ### 3. conda/mamba: reutilizar sin multiplicar (18 min)
 
+Referencia para resolver dudas o continuar en casa: `02-tratamiento-datos/01-teoria/00c-manual-conda-pia.md`. En clase se trabaja este bloque; no se recorre el manual completo.
+
 Abrir `01-fundamentos-python/05-recursos/pia-ud1.yml` y leerlo en voz alta: nombre, canal, Python y paquetes.
 
 ```bash
@@ -158,7 +161,7 @@ pixi task list
 2. Si ejecuto `python` sin `pixi run`, ¿usa el entorno del proyecto? (No necesariamente: depende del `PATH`.)
 3. ¿Qué fichero hay que versionar para que otra persona reproduzca el entorno? (`pixi.toml` **y** `pixi.lock`.)
 
-Mensaje clave: Pixi compone **features** y **entornos** sin duplicar definiciones; los entornos viven en `.pixi/`, que no se versiona. El detalle está en `docs/manual-pixi-pia.md`; no se repite aquí.
+Mensaje clave: Pixi compone **features** y **entornos** sin duplicar definiciones; los entornos viven en `.pixi/`, que no se versiona. El detalle está en `02-tratamiento-datos/01-teoria/00b-manual-pixi-pia.md`; no se repite aquí.
 
 **«Hazlo tú» (8 min):** en el repositorio, cada pareja ejecuta y anota:
 
@@ -173,7 +176,7 @@ Y responde: ¿por qué no se debe afirmar que `default` sirve ya para visualizar
 
 ### 5. Poetry y despliegue: experimentar no es desplegar (12 min)
 
-Proyectar la tabla «Experimentar / Desplegar» de `docs/entornos-python.md`. La idea que debe quedar: **el entorno de experimentación no se lleva tal cual a producción**; se separan dependencias de desarrollo y de runtime, y se despliega un artefacto construido desde el lockfile.
+Proyectar la tabla «Experimentar / Desplegar» de `02-tratamiento-datos/01-teoria/00a-entornos-python.md`. La idea que debe quedar: **el entorno de experimentación no se lleva tal cual a producción**; se separan dependencias de desarrollo y de runtime, y se despliega un artefacto construido desde el lockfile.
 
 **Poetry (3 min, sin instalar nada):**
 
@@ -199,7 +202,7 @@ Proyectar la tabla «Experimentar / Desplegar» de `docs/entornos-python.md`. La
 
 ### 6. Matriz de decisión y ticket (12 min)
 
-Proyectar la matriz de `docs/entornos-python.md` y resolver cinco casos en voz alta:
+Proyectar la matriz de `02-tratamiento-datos/01-teoria/00a-entornos-python.md` y resolver cinco casos en voz alta:
 
 1. Proyecto final con notebooks, scikit-learn y GPU → **Pixi** para experimentar; **imagen Docker** con la variante CUDA para desplegar.
 2. Cuatro prácticas de experimentación que comparten el 90 % de dependencias → **un entorno conda actualizado**, no cuatro.

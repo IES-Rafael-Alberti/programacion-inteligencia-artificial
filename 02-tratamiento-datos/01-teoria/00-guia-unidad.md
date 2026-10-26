@@ -45,6 +45,14 @@ La prioridad no es coleccionar librerías. La prioridad es que el alumnado entie
 
 ## Secuencia sugerida
 
+### Entornos: introducción en UD2 y uso progresivo
+
+Después de los primeros ejemplos de pandas se trabaja la sesión de entornos: [mapa de herramientas](00a-entornos-python.md) → [manual de Pixi](00b-manual-pixi-pia.md) y [manual de conda](00c-manual-conda-pia.md) → [aplicación al proyecto de UD2](10a-guia-proyecto-python-pixi.md) → [«hazlo tú»](../03-practicas/00-entornos-hazlo-tu.md).
+
+Estos manuales viven en la unidad donde se explican por primera vez. No hace falta agotar ahora sus apartados avanzados: las unidades de ML, GPU y despliegue retomarán esta base con sus necesidades específicas.
+
+### Tratamiento y visualización
+
 | Fase | Foco | Material base |
 |------|------|---------------|
 | 1 | Pandas básico | `01-pandas-introduccion.md`, `01_pandas_fundamentos.ipynb` |

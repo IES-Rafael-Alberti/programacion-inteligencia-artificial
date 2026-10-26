@@ -28,7 +28,7 @@ La tarea establece el directorio de trabajo del proyecto y el `PYTHONPATH` neces
 
 ## Requisitos previos
 
-- Pixi instalado siguiendo el [manual de Pixi para PIA](../../../../docs/manual-pixi-pia.md).
+- Pixi instalado siguiendo el [manual de Pixi para PIA (UD2)](../../../../02-tratamiento-datos/01-teoria/00b-manual-pixi-pia.md).
 - Una clave de TMDB: <https://developer.themoviedb.org/signup>.
 - Una clave gratuita de OMDb: <https://www.omdbapi.com/apikey.aspx>.
 

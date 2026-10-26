@@ -11,6 +11,7 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 | Paso | Material |
 |---|---|
 | Empieza aquí | [`01-teoria/00-guia-unidad.md`](01-teoria/00-guia-unidad.md), que ordena el núcleo de Pandas, EDA y visualización. |
+| Entornos de Python | [Mapa y criterio de elección](01-teoria/00a-entornos-python.md), [manual de Pixi](01-teoria/00b-manual-pixi-pia.md) y [manual de conda](01-teoria/00c-manual-conda-pia.md). Se introducen aquí y se retoman en las unidades posteriores. |
 | Práctica canónica | [`03-practicas/EDA_Visual_Practicas.ipynb`](03-practicas/EDA_Visual_Practicas.ipynb). Los ejercicios seleccionados y el itinerario R son refuerzo u opción docente. |
 | Entrega y evaluación | Notebook ejecutado, decisiones de limpieza y transformación justificadas, EDA, visualizaciones y conclusiones. [`04-evaluacion/rubrica.md`](04-evaluacion/rubrica.md) y [`04-evaluacion/checklist-entrega.md`](04-evaluacion/checklist-entrega.md) son una base revisable; el enunciado y la programación del grupo concretan la evaluación definitiva. El GIFT es un complemento si se activa en Moodle. |
 | Entorno real | La celda inicial del notebook enumera las dependencias de la práctica. La ruta común de ejecución está en [`docs/guia-inicio.md`](../docs/guia-inicio.md); el entorno Pixi `default` aporta la base, pero no declara por sí solo todos los extras de visualización. |
@@ -45,11 +46,13 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 ## 01-teoria/
 
 - **00:** Guía de la unidad
+- **00a–00c:** Entornos de Python, manual de Pixi y manual de conda (base común para el resto del módulo)
 - **01–03:** Pandas (intro, ejemplos guiados, chuleta)
 - **04–05:** EDA y preparación de datos para ML
 - **06–08:** Matplotlib
 - **09:** Seaborn
 - **10:** Altair/hvPlot/Panel (nivel 2)
+- **10a:** Guía de proyecto de tratamiento de datos con Pixi y conda
 - **11:** cuDF/RAPIDS (caso NVIDIA)
 - **12–13:** Polars y comparación con Pandas/Arrow
 - **14:** EDA visual

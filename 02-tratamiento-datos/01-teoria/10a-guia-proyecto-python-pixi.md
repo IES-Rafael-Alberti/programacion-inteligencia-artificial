@@ -1,6 +1,6 @@
 # Guía de proyecto de tratamiento de datos con Python, Pixi y conda
 
-Esta guía acompaña a UD2: no sustituye al [manual general de Pixi](../../docs/manual-pixi-pia.md). El alcance formativo es **Python 3.12**, NumPy, pandas, Matplotlib, Jupyter y el trabajo de EDA, limpieza, transformación, agrupación, exportación y visualización. No incluye scikit-learn, PyCaret, XGBoost, entrenamiento, inferencia, APIs ni datasets de ML.
+Esta guía acompaña a UD2 y aplica el [manual de Pixi](00b-manual-pixi-pia.md) y el [manual de conda](00c-manual-conda-pia.md). El alcance formativo es **Python 3.12**, NumPy, pandas, Matplotlib, Jupyter y el trabajo de EDA, limpieza, transformación, agrupación, exportación y visualización. No incluye scikit-learn, PyCaret, XGBoost, entrenamiento, inferencia, APIs ni datasets de ML.
 
 ## Ruta recomendada: Pixi
 
@@ -60,4 +60,4 @@ proyecto-datos/
 - [ ] Resultados exportados en `outputs/`, sin sobrescribir los datos originales.
 - [ ] Otra persona puede instalar, abrir Jupyter y repetir el análisis.
 
-Más información: [manual de Pixi](../../docs/manual-pixi-pia.md), [guía de inicio](../../docs/guia-inicio.md), [entornos de Python](../../docs/entornos-python.md).
+Más información: [manual de Pixi](00b-manual-pixi-pia.md), [manual de conda](00c-manual-conda-pia.md), [guía de inicio](https://ies-rafael-alberti.github.io/programacion-inteligencia-artificial/guia-inicio/), [entornos de Python](00a-entornos-python.md).

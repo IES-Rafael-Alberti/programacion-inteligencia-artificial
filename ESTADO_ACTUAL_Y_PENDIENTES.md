@@ -1,6 +1,6 @@
 # Estado actual y pendientes — PIA 2026-2027
 
-**Fecha de snapshot:** 2026-09-30
+**Fecha de snapshot:** 2026-10-26
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
 ## Consolidación del trabajo del instituto — 2026-10-26
@@ -8,7 +8,19 @@
 - [x] Incorporado el traslado del guion de la octava clase a `02-tratamiento-datos/99-profesor/01-GUION_OCTAVA_CLASE_PIA_PANDAS.md`; no se ha eliminado el material.
 - [x] Revisados y conservados los cambios importados en los cuatro notebooks pandas: fundamentos incluye nuevas celdas Arrow; EDA sin gráficas y EDA visual conservan las fuentes y añaden salidas; demo avanzada limpia salidas. También se conserva el índice graphify importado.
 - [ ] Revisar las nuevas celdas Arrow de `01_pandas_fundamentos.ipynb` antes de usarlas: opción `mode.data_manager` obsoleta, selección de `df`/`df1`, argumento `dtype_backend` y lectura del CSV. Esta consolidación no corrige el trabajo del profesor.
-- Siguiente paso: reunir los manuales de entornos y Pixi en la teoría de UD2 y añadir un manual específico de conda; después validar los enlaces y la web.
+- [x] Consolidado el trabajo importado en `55852a7`, con el traslado del guion reconocido como renombrado.
+- Siguiente paso: revisar las celdas Arrow cuando se retome el notebook de fundamentos; la reorganización de entornos se recoge en el bloque siguiente.
+
+## Documentación de entornos centralizada en UD2 — 2026-10-26
+
+- [x] Trasladado `docs/entornos-python.md` a `02-tratamiento-datos/01-teoria/00a-entornos-python.md` y `docs/manual-pixi-pia.md` a `02-tratamiento-datos/01-teoria/00b-manual-pixi-pia.md`. Las rutas antiguas que aparecen en anotaciones de publicación describen el estado histórico, no las fuentes actuales.
+- [x] Creado `02-tratamiento-datos/01-teoria/00c-manual-conda-pia.md`: instalación por plataforma, entornos nombrados, canales, YAML, actualización, exportación frente a lockfile, Jupyter/VS Code, pip y resolución de problemas.
+- [x] Decisión docente: entornos/Pixi/conda se explican inicialmente en UD2 y se retoman según las necesidades de las unidades posteriores. Pixi sigue siendo la ruta principal; conda es alternativa. La guía específica de ML permanece en UD3 y enlaza a esta base.
+- [x] Actualizados los enlaces en README del módulo, inicio web y guía de inicio, README/guía de UD2, guía de proyecto, práctica «hazlo tú», guion de la novena clase y laboratorio de UD3. Actualizado localmente `Moodle/02-UD2/README.md` con las fuentes canónicas; el paquete temporal Moodle permanece ignorado.
+- [x] `mkdocs build --strict` superado. Comprobados 22 enlaces locales de los tres manuales, sus tres páginas generadas y presencia en la navegación de UD2. Sin referencias activas a las rutas antiguas en los Markdown versionados (excepto historial de la hoja de ruta e índice graphify).
+- [x] Validados los JSON de los cuatro notebooks importados. Ejecutado `graphify update .` (solo AST, sin llamadas LLM): 3961 nodos y 5241 aristas; la extracción semántica de los documentos no se ha regenerado.
+- [ ] Publicar las nuevas rutas y manual de conda en el repositorio del alumnado/web cuando se decida la siguiente publicación; después actualizar enlaces de Moodle y regenerar el paquete PDF si se reutiliza. Los PDF de `Moodle/02-UD2/` todavía corresponden a la preparación anterior.
+- Siguiente paso: decidir la dependencia Matplotlib, confirmar la preparación de Moodle y preparar la siguiente publicación pública con las nuevas rutas; la reorganización se consolida en `teacher`.
 
 ## Separación de guías de entornos UD2/UD3 — 2026-10-26
 
@@ -121,12 +133,12 @@ El tiempo de la sesión previa queda muy repartido: lo que no se llegó a hacer 
 - [x] **Teoría breve engarzada:** cada bloque de pandas sigue el patrón **teoría mínima (3–5 min) → notebook en directo (10–15 min) → «hazlo tú» (5 min)**. La teoría es un encuadre corto, no clase magistral.
 - [x] **Un cuaderno «hazlo tú» por notebook, preparados de antemano:** `02-tratamiento-datos/03-practicas/01_pandas_hazlo_tu.ipynb` (5 bloques + ticket) y `01-fundamentos-python/03-practicas/06_R_hazlo_tu.ipynb` (R base + comparación). Se usan los que correspondan a los notebooks que se impartan.
 - [x] **Valoración del cuaderno: binaria (hecho / no hecho).** Entregarlo en Moodle al final de clase **acredita asistencia**; que esté completo acredita **atención/seguimiento**. No se corrige acierto ni se usa como prueba; sirve para decidir si procede subir nota por participación. Soluciones docentes en `02-tratamiento-datos/99-profesor/01_pandas_hazlo_tu_SOLUCIONES.ipynb` y `01-fundamentos-python/99-profesor/03-practicas-soluciones/06_R_hazlo_tu_SOLUCIONES.ipynb`.
-- [ ] **Antes de clase:** confirmar el punto real alcanzado en la séptima clase respecto a R y ajustar los casos previstos en el guion; comprobar `pyarrow` si se va a enseñar Parquet; subir a Moodle la tarea de entrega de los cuadernos «hazlo tú».
+- [ ] **Comprobaciones docentes:** confirmar el punto real alcanzado en la séptima clase respecto a R y ajustar los casos previstos en el guion; comprobar `pyarrow` si se va a enseñar Parquet. La tarea «Hazlo tú — pandas» ya está publicada en Moodle (454552), como consta en el bloque de ajuste EDA; no queda pendiente volver a subirla.
 
 ### Decisión: sesión de entornos de Python en UD2 (2026-10-25)
 
 - [x] Creado el guion `02-tratamiento-datos/99-profesor/00-GUION_SESION_NOVENA_CLASE_ENTORNOS_PYTHON.md`, de **120 min**: por qué no instalar en el sistema, mapa pip/venv/uv/conda/Pixi/Poetry, demo de cada uno y criterio de elección. **Pixi ocupa el bloque principal (28 min)** y **conda el bloque de experimentación reutilizable (18 min)**; Poetry se reduce a empaquetado.
-- [x] Creado el documento público `docs/entornos-python.md` como base de la sesión. **No duplica el manual de Pixi:** enlaza a `docs/manual-pixi-pia.md`, `docs/guia-inicio.md` y las guías específicas de proyecto UD2 y ML/UD3. Solo aporta lo que faltaba: comparación entre herramientas y criterio de elección.
+- [x] Creado el documento público de entornos, actualmente `02-tratamiento-datos/01-teoria/00a-entornos-python.md`, como base de la sesión. **No duplica los manuales:** enlaza al manual de Pixi `00b-manual-pixi-pia.md`, al manual de conda `00c-manual-conda-pia.md`, a la guía de inicio y a las guías específicas de proyecto UD2 y ML/UD3.
 - [x] Creado el ejercicio entregable `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md` (venv/pip, lectura de `pia-ud1.yml`, entornos Pixi del repo y elección razonada). Entrega en Moodle con **valoración binaria (hecho/no hecho)**, igual que los cuadernos «hazlo tú».
 - [x] **Ubicación decidida: UD2, no UD3.** En UD1 el alumnado aún está aprendiendo las herramientas; en UD2 ya ha usado NumPy y pandas y puede ver el conflicto real (NumPy 2/pandas 2.2 del curso frente a NumPy <1.27/pandas <2.2 de PyCaret), además de herramientas distintas para tareas parecidas.
 - [x] Decisión de alcance: se conserva el manual general de Pixi y se crea una guía breve específica de proyecto UD2, sin duplicarlo; la guía existente queda para ML/UD3.
