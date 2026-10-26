@@ -4,6 +4,8 @@ Este manual se introduce en **UD2** y queda como referencia para las unidades po
 
 **Pixi sigue siendo la herramienta principal del módulo.** Conda es una alternativa para experimentar con entornos nombrados y paquetes Python y nativos. Si una actividad indica una ruta concreta, sigue esa ruta. La [guía de proyecto de UD2](10a-guia-proyecto-python-pixi.md) concreta las dependencias de tratamiento de datos.
 
+**Primera sesión:** realiza el [taller práctico](../03-practicas/00-entornos-hazlo-tu.md): instalar o comprobar Miniforge/conda, preparar un entorno mínimo desde YAML, ejecutar un análisis, añadir una dependencia y volver a probar. Este manual sirve como consulta durante ese trabajo y para ampliarlo después.
+
 ## 1. Qué es cada cosa
 
 | Nombre | Significado |

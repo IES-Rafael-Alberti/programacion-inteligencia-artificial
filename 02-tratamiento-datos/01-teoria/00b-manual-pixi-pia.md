@@ -4,6 +4,8 @@ Este manual introduce **Pixi** desde cero en **UD2** y se retoma en las unidades
 
 El repositorio ya incluye `pixi.toml` y `pixi.lock`. Los ejemplos de diseño no equivalen a una migración completa: hay que comprobar las dependencias de cada actividad antes de sustituir `environment.yml`. Para empezar con datos tabulares, sigue la [guía de proyecto de UD2](10a-guia-proyecto-python-pixi.md); los apartados de ML y GPU se consultarán cuando se utilicen.
 
+**Primera sesión:** sigue el [taller práctico](../03-practicas/00-entornos-hazlo-tu.md), que instala Pixi y crea un proyecto pequeño con un ejemplo comprobable. Después usa este manual para ampliar; no hace falta resolver todos los entornos del curso para aprender el flujo básico.
+
 ## Ruta rápida
 
 1. Instala Pixi y comprueba la versión.
@@ -45,7 +47,13 @@ pixi --version
 pixi info
 ```
 
-En Windows, utiliza el método documentado para PowerShell o WinGet en la [guía oficial](https://pixi.sh/latest/installation/).
+En Windows (PowerShell):
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm -useb https://pixi.sh/install.ps1 | iex"
+```
+
+Abre una terminal nueva y comprueba `pixi --version`. Como alternativa, la [guía oficial](https://pixi.sh/latest/installation/) documenta la instalación con WinGet. Usa un solo método; no reinstales si ya funciona.
 
 ## Conceptos esenciales
 

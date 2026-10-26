@@ -47,7 +47,7 @@ La prioridad no es coleccionar librerías. La prioridad es que el alumnado entie
 
 ### Entornos: introducción en UD2 y uso progresivo
 
-Después de los primeros ejemplos de pandas se trabaja la sesión de entornos: [mapa de herramientas](00a-entornos-python.md) → [manual de Pixi](00b-manual-pixi-pia.md) y [manual de conda](00c-manual-conda-pia.md) → [aplicación al proyecto de UD2](10a-guia-proyecto-python-pixi.md) → [«hazlo tú»](../03-practicas/00-entornos-hazlo-tu.md).
+Después de los primeros ejemplos de pandas se realiza el **[taller práctico de entornos](../03-practicas/00-entornos-hazlo-tu.md)**: una herramienta cada vez (**venv + pip → uv → conda → Pixi**), instalar/comprobar, configurar, ejecutar un ejemplo, probarlo y modificarlo. Al terminar se comparan ventajas, inconvenientes y usos con el [mapa de herramientas](00a-entornos-python.md). El [manual de Pixi](00b-manual-pixi-pia.md) y el [manual de conda](00c-manual-conda-pia.md) se consultan conforme surgen dudas; la [guía de proyecto de UD2](10a-guia-proyecto-python-pixi.md) amplía después al trabajo completo de datos.
 
 Estos manuales viven en la unidad donde se explican por primera vez. No hace falta agotar ahora sus apartados avanzados: las unidades de ML, GPU y despliegue retomarán esta base con sus necesidades específicas.
 

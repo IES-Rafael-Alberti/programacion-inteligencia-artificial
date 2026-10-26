@@ -2,6 +2,10 @@
 
 > Documento base de la sesión de entornos de **UD2**. Se imparte después de UD1: el alumnado ya ha usado NumPy y pandas y puede ver el problema real. Presenta el mapa y el criterio de elección; el detalle operativo está en el [manual de Pixi](00b-manual-pixi-pia.md) y el [manual de conda](00c-manual-conda-pia.md). Estos materiales se retomarán en las unidades posteriores conforme se necesiten sus herramientas.
 
+## Cómo usar este documento en clase
+
+Empieza por el **[taller práctico de instalación y pruebas](../03-practicas/00-entornos-hazlo-tu.md)**. Trabaja una herramienta cada vez: **venv + pip → uv → conda → Pixi**, con instalación o comprobación, configuración, ejemplo ejecutado, prueba y modificación. Este documento sirve para consultar dudas y para comparar **ventajas, inconvenientes y cuándo usar cada opción después de probarla**; no es una exposición previa que haya que escuchar completa antes de empezar.
+
 ## 1. El problema
 
 Un proyecto de IA necesita una versión concreta de Python, de NumPy, de pandas, de scikit-learn, de PyTorch y, a veces, bibliotecas nativas (CUDA, BLAS, compiladores). Instalar todo en el Python del sistema produce tres problemas clásicos:
@@ -52,19 +56,21 @@ La comparación rápida de Pixi con `uv` y conda está en el [manual de Pixi](00
 ```bash
 python -m venv .venv
 source .venv/bin/activate        # Linux / macOS
-.venv\Scripts\activate           # Windows (PowerShell o CMD)
+.venv\Scripts\Activate.ps1       # Windows PowerShell
+.venv\Scripts\activate.bat       # Windows CMD
 
-which python                     # Linux / macOS
-where python                     # Windows
+python -c "import sys; print(sys.executable)"
 
-pip install numpy pandas
-pip list
+python -m pip install numpy pandas
+python -m pip list
 deactivate
 ```
 
+Ejecuta solo la activación correspondiente a tu shell. Para crear el entorno, en Linux/macOS puede ser necesario `python3 -m venv .venv` y en Windows `py -m venv .venv`. La práctica incluye instalación de Python y resolución de incidencias.
+
 Sin activar ningún entorno, `pip install` escribe en el Python del sistema (o del usuario). Ese es el error que queremos evitar.
 
-`uv` hace lo mismo con lockfile y mucha más velocidad (`uv venv`, `uv add`, `uv run`, `uv sync`). Es válido para proyectos pequeños, pero **no sustituye a Pixi** cuando hacen falta paquetes nativos o varios entornos compuestos.
+`uv` también ofrece un flujo de proyecto con `pyproject.toml`, `uv.lock`, `uv add`, `uv run` y `uv sync`. En el taller se instala y se prueba ese flujo; no se limita a mencionarlo. Es una opción para proyectos Python de distintos tamaños, mientras que Pixi incorpora además la gestión de paquetes conda y entornos compuestos. La velocidad depende también de la red y la caché: las descargas del aula no son un benchmark.
 
 ## 5. Conda, libmamba y mamba: entornos reutilizables
 

@@ -1,231 +1,119 @@
-# Guion de la sesión de entornos de Python — 2 horas
+# Guion de la novena clase — Taller práctico de entornos Python
 
 > **Documento interno del profesorado. Solo repositorio docente; no publicar en `main` del alumnado, GitHub Pages ni Moodle.**
 
-**Duración:** 120 min (2 h), con descanso de 10 min.
+**UD2 · 120 minutos, incluidos 10 de descanso.** Una herramienta cada vez: **instalar/comprobar → configurar → ejecutar → probar → modificar y volver a probar**. El alumnado trabaja desde el comienzo; las ventajas e inconvenientes se comparan al final a partir de la experiencia.
 
-**Ubicación:** **UD2 (`02-tratamiento-datos`)**, después de UD1. El alumnado ya ha instalado y usado NumPy y pandas, así que puede ver el problema real: convivir con **versiones distintas de las mismas herramientas** o con **herramientas distintas para tareas parecidas** sin que se pisen. No se imparte en UD1 porque allí el objetivo es aprender las herramientas, no gestionarlas.
+Este enfoque sustituye al guion anterior, que dedicaba bloques a teoría y permitía dejar conda en una lectura o `--dry-run`. Ahora las instalaciones y las comprobaciones son parte del aprendizaje. **Una demo del profesor no cuenta como una práctica realizada por el alumnado.**
 
-## 1. Objetivos
+## 1. Material que se entrega y objetivo visible
 
-Al terminar, el alumnado debe saber:
+Proyectar y facilitar como documento central:
 
-1. Explicar **por qué** no instalamos las dependencias del módulo en el Python del sistema.
-2. Distinguir qué gestiona cada herramienta: pip, venv, uv, conda/mamba, Pixi y Poetry.
-3. Usar **Pixi** como herramienta principal de los proyectos del módulo.
-4. Usar **conda/mamba** como alternativa para entornos reutilizables de experimentación, sin multiplicar entornos.
-5. Elegir herramienta con un criterio, no por costumbre.
-6. Separar **experimentación** y **despliegue**: qué herramienta y qué artefacto lleva cada momento.
+`02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md`
 
-**No** es objetivo de esta sesión: instalar CUDA, migrar el repositorio ni enseñar Poetry o Docker en profundidad.
+La práctica contiene instrucciones por sistema operativo, ejemplo común, salidas esperadas, cambios por herramienta y formato de registro. Es la fuente de comandos: este guion organiza la clase sin duplicarla.
 
-## 2. Material: no duplicar lo que ya está escrito
+Objetivo para decir en una frase:
 
-La sesión se apoya en la teoría de UD2: `00a-entornos-python.md` cubre el mapa y el criterio de elección; `00b-manual-pixi-pia.md` y `00c-manual-conda-pia.md` desarrollan el manejo. Los manuales se retoman después conforme se necesiten, sin convertir esta sesión en un recorrido exhaustivo por ML, GPU o despliegue.
+> «Al terminar, habrás ejecutado el mismo análisis de pandas con distintas herramientas, sabrás comprobar qué Python lo ejecuta y tendrás los archivos necesarios para repetirlo».
 
-| Uso | Ruta |
+Manuales de consulta, no de lectura lineal al empezar:
+
+| Necesidad | Fuente en `02-tratamiento-datos/01-teoria/` |
 |---|---|
-| Documento base de la sesión (alumnado) | `02-tratamiento-datos/01-teoria/00a-entornos-python.md` |
-| Manual de Pixi (detalle, comandos, problemas) | `02-tratamiento-datos/01-teoria/00b-manual-pixi-pia.md` |
-| Manual de conda (instalación, YAML, Jupyter, problemas) | `02-tratamiento-datos/01-teoria/00c-manual-conda-pia.md` |
-| Entornos disponibles del curso | `docs/guia-inicio.md` |
-| Guía práctica de proyecto UD2 | `02-tratamiento-datos/01-teoria/10a-guia-proyecto-python-pixi.md` |
-| Guía posterior de proyecto ML/UD3 | `03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md` |
-| Manifiesto real del repositorio | `pixi.toml` |
-| Entorno conda de UD1 | `01-fundamentos-python/05-recursos/pia-ud1.yml` |
-| Entorno conda raíz | `environment.yml` |
-| Ejercicio «hazlo tú» (alumnado) | `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md` |
-| Chuleta del stack | `07-convergencia-herramientas/05-recursos/cheatsheet_stack_convergente.md` |
+| Comparar herramientas después de probarlas | `00a-entornos-python.md` |
+| Instalar/consultar Pixi | `00b-manual-pixi-pia.md` |
+| Instalar/consultar conda | `00c-manual-conda-pia.md` |
+| Pasar después al trabajo completo de datos de UD2 | `10a-guia-proyecto-python-pixi.md` |
 
-> Si el grupo ya ha usado `pixi run` en clase, no se repite la instalación: se entra directamente en el bloque 4 y se recorta el bloque 1.
+## 2. Preparación antes de clase
 
-## 3. Ritmo (120 min)
+- Abrir la práctica actualizada y comprobar acceso a los instaladores oficiales de Python, uv, Miniforge y Pixi desde la red del aula. Tener identificados sistemas operativos, arquitecturas y equipos sin permisos.
+- Preparar los instaladores grandes de Miniforge apropiados para el aula si la red suele ser lenta. **Se instalan durante su bloque**, no todos al principio. Quien ya tenga la herramienta verifica versión/configuración y avanza al ejemplo.
+- Probar en el equipo docente los comandos de los cuatro bloques en carpetas temporales fuera del repositorio. La comprobación documental no equivale a una instalación ensayada en Windows, macOS y Linux.
+- Crear la tarea Moodle de registro **hecho/no hecho**, con posibilidad de completar lo pendiente después. Sustituir el enunciado/PDF anterior: la antigua actividad de preguntas y simulación de conda ya no es el taller vigente.
+- No es necesario resolver todos los entornos del `pixi.toml` raíz ni decidir primero la dependencia Matplotlib de `base/default`: el taller crea proyectos pequeños independientes, inicialmente con pandas.
 
-| Min | Bloque | Formato |
+## 3. Ritmo orientativo de 120 minutos
+
+| Minutos | Trabajo del alumnado | Punto de control |
 |---|---|---|
-| 0–8 | Arranque: el problema y los objetivos | Pregunta al grupo |
-| 8–22 | Por qué no el sistema + mapa + ejes experimentar/desplegar | Teoría breve + tabla |
-| 22–40 | pip, venv y uv | Demo + «hazlo tú» (5 min) |
-| 40–58 | conda/mamba: entornos reutilizables | Demo + «hazlo tú» (5 min) |
-| 58–68 | Descanso | — |
-| 68–96 | Pixi: la herramienta de los proyectos | Demo + «hazlo tú» (8 min) |
-| 96–108 | Poetry y despliegue: wheel, lock, Docker | Demo mínima + decisión |
-| 108–120 | Matriz de decisión y ticket de salida | Cierre |
+| 0–5 | Crear carpetas, copiar `analisis.py`, abrir el registro | Cada estudiante tiene archivos y terminal en el primer bloque. |
+| 5–23 | **venv + pip**: comprobar Python, crear/activar, instalar pandas, ejecutar y modificar datos | Python en `.venv`; total 60 y después 70; ambas pruebas OK. |
+| 23–43 | **uv**: instalar si falta, reabrir terminal, crear proyecto, ejecutar, añadir rich y sincronizar | Python en `.venv`, `pyproject.toml`, `uv.lock` y prueba OK. |
+| 43–53 | Descanso | Guardar el registro antes de salir. |
+| 53–80 | **conda**: instalar Miniforge si falta, inicializar, crear desde YAML, ejecutar, actualizar y exportar | `pia-taller-conda`, prueba OK, rich instalado y YAML exportado. |
+| 80–108 | **Pixi**: instalar si falta, crear proyecto, añadir paquetes, ejecutar, crear tarea y probar | `pixi.toml`, `pixi.lock`, tarea `analizar` y prueba OK. |
+| 108–115 | Comparar ventajas, inconvenientes y usos observados | Tabla individual y cuatro decisiones justificadas. |
+| 115–120 | Entregar el registro y anotar la continuación | Estado real por bloque, sin dar por hecho lo no ejecutado. |
 
-## 4. Bloques
+**Es una previsión, no una promesa de cuatro instalaciones completas en cualquier equipo.** Si los instaladores o la red consumen el tiempo, se termina el bloque en curso y se retoma el siguiente en la próxima sesión. Se reservan igualmente los últimos cinco minutos para entregar el estado real. La comparación global se completa al haber probado las cuatro herramientas; si faltan bloques, hoy solo se comparan los realizados.
 
-### 0. Arranque (8 min)
+## 4. Método dentro de cada bloque
 
-Pregunta de predicción, sin ejecutar nada:
+1. **Consigna de 60–90 segundos como máximo:** qué hay que conseguir y qué salida lo demuestra. No dar una charla sobre todas las opciones antes de ejecutar.
+2. **Manos al teclado:** cada estudiante sigue la sección de la práctica en su sistema. El profesor acompaña y resuelve incidencias, no ejecuta todo mientras los demás miran.
+3. **Punto de control visible:** pedir la ruta de Python y `PRUEBA OK`, además del manifiesto cuando corresponda. Usar una señal sencilla: «instalando / probando / terminado / bloqueo».
+4. **Modificación individual:** cambiar los datos, añadir una dependencia o crear una tarea, según el bloque. Volver a ejecutar y guardar evidencia.
+5. **Cierre de un minuto:** una ventaja o dificultad que acaban de observar. Las anécdotas largas y la matriz completa se dejan para el final.
 
-> «Si instalo `pandas 2.2` para este proyecto y otro proyecto necesita `pandas 1.5`, ¿qué crees que pasa en el Python del sistema?»
+En parejas se alternan los papeles de operador y ayudante, pero ambos ejecutan y registran. Si solo se puede usar un equipo, repetir la operación por turnos y anotar la limitación; tener un compañero que ejecuta no acredita automáticamente la práctica propia.
 
-Caso real del módulo, no inventado: UD1 y UD2 usan **NumPy 2** y **pandas 2.2**; UD2 trabaja con Python 3.12, Matplotlib y Jupyter. Si todo vive en el mismo Python, los proyectos pueden entrar en conflicto.
+## 5. Guía de acompañamiento por herramienta
 
-Recoger 2–3 respuestas. No corregir todavía: la respuesta se construye en el bloque 1. Enunciar los seis objetivos y avisar de que la sesión es **de criterio**, no de instalar todo.
+### A. venv + pip
 
-### 1. Por qué no el sistema y qué hace cada herramienta (14 min)
+- Empezar directamente por comprobar Python y crear `.venv`. `venv` viene con Python; en Linux puede faltar el paquete del sistema.
+- No exigir otra versión de Python solo para este bloque si el Python instalado es compatible con pandas. Las otras rutas fijan Python 3.12 explícitamente.
+- Comprobar `python -m pip --version` antes de instalar. El objetivo es que sepan identificar **dónde** instalan.
+- El análisis inicial suma 60; el cambio de 30 a 40 exige actualizar también la aserción a 70. Si falla la prueba, leer el mensaje y contrastar código y expectativa.
+- Al salir, comparar rutas de Python. No anunciar que `import pandas` necesariamente fallará fuera: podría estar instalado en otro entorno.
 
-Teoría breve con la tabla de `02-tratamiento-datos/01-teoria/00a-entornos-python.md`:
+### B. uv
 
-- Entorno = intérprete + paquetes aislados; activar cambia el `PATH`.
-- Tres riesgos del sistema: conflictos, no reproducibilidad, romper el SO.
-- Mapa: pip/venv/uv (Python puro) frente a conda/Pixi (también nativos) y Poetry (empaquetado).
-- Idea que debe quedar: **Pixi para los proyectos; conda para experimentación reutilizable; pip/venv/uv para lo pequeño; Poetry solo para publicar.** Mamba se menciona como interfaz compatible, pero no se instala aparte: conda moderno ya usa `conda-libmamba-solver` por defecto.
-- **Dos ejes que ordenan todo el mapa:** *experimentar* (probar, comparar, romper: Pixi, conda, venv/uv, Jupyter) y *desplegar* (ejecutar igual y sin Jupyter: lockfile, wheel, Docker). El mismo proyecto puede usar Pixi para experimentar y Docker para desplegar; lo que no se hace es llevar el entorno de experimentación tal cual a producción.
+- Instalar uv realmente donde falte; reabrir la terminal forma parte de la configuración del `PATH`.
+- Usar `uv init --bare --python 3.12`, añadir pandas y ejecutar el mismo script. No mezclar la activación del `venv` anterior con este proyecto.
+- Al añadir rich, pedir que localicen el cambio en `pyproject.toml`. Ejecutar `uv sync --locked` y volver a probar el análisis.
+- Pregunta de predicción ligada a la acción: «¿Hace falta activar manualmente `.venv` para usar `uv run`?»; ejecutar y comprobar la ruta.
 
-Chequeo de predicción: «¿Qué herramienta usarías para un script de 20 líneas que solo usa `requests`? ¿Y para el proyecto con PyTorch?».
+### C. conda
 
-### 2. pip, venv y uv (18 min)
+- Si falta, **instalar Miniforge**, abrir la terminal apropiada e inicializar la shell cuando sea necesario. El bloque no se sustituye por un `--dry-run`.
+- Crear `environment.yml` pequeño; no instalar el entorno raíz completo del curso ni el antiguo `pia-ud1.yml` para esta prueba.
+- Comprobar `conda env list`, activar `pia-taller-conda` y ejecutar `analisis.py`.
+- Añadir rich al YAML, actualizar **el mismo entorno**, ejecutar de nuevo y exportar a otro archivo. Aquí se observa la diferencia entre especificación y resolución.
+- Mencionar libmamba solo al comprobar el solver: no abrir otra ronda de instalación de mamba/micromamba.
 
-Demo en vivo en una carpeta de trabajo `pia-entornos`, creada y abierta desde el
-explorador de archivos o la terminal (la ubicación puede ser distinta en cada sistema):
+### D. Pixi
 
-```bash
-# Desde la carpeta pia-entornos ya creada y abierta:
-python -m venv .venv
-```
+- Instalar Pixi donde falte, comprobar `PATH` en una terminal nueva y trabajar en `04-pixi`, fuera del repositorio del curso.
+- Crear el proyecto con pandas; ejecutar y comprobar que Python vive en `.pixi/envs/default`.
+- Cada estudiante crea la tarea `analizar`, la ejecuta, añade rich y vuelve a probar desde el lock.
+- No recorrer el manifiesto completo del módulo, features de ML ni GPU. El cierre puede señalar que el curso amplía este mismo mecanismo con varios entornos, que se aprenderán cuando se usen.
 
-Activación según el sistema:
+## 6. Incidencias sin convertir al grupo en público
 
-```bash
-# Linux/macOS
-source .venv/bin/activate
-# Windows PowerShell
-.venv\Scripts\Activate.ps1
-# Windows CMD
-.venv\Scripts\activate.bat
-```
+- **Comando no encontrado:** reabrir la terminal, leer el mensaje del instalador y comprobar `PATH`. En conda, probar Miniforge Prompt antes de modificar más cosas.
+- **Error de ruta:** abrir la carpeta exacta del bloque y comprobar que `analisis.py` está allí.
+- **Instalación lenta:** registrar el comando y el estado; revisar el manifiesto o preparar el registro durante la descarga. Evitar explicaciones largas para llenar la espera.
+- **Bloqueo individual:** el profesor ayuda a ese equipo mientras los demás completan la modificación o la ampliación. Si se usa otro equipo, el alumno bloqueado pasa a operar y comprobar.
+- **Bloqueo general de permisos/red:** registrar el punto de parada y resolver la infraestructura o continuar el taller otro día. No declarar realizado un bloque mostrado solo en proyección.
+- **Alumnado que termina pronto:** ampliación de la práctica: añadir Matplotlib en uno de sus proyectos y generar una figura. No adelantar las siguientes herramientas mientras el grupo sigue en la anterior.
 
-Con el entorno activo:
+## 7. Comparación final y entrega
 
-```bash
-python -c "import sys; print(sys.executable)"
-python -m pip -V
-python -m pip install rich
-python -c "from importlib.metadata import version; print(version('rich'))"
-deactivate
-python -c "import rich"
-```
+Proyectar la tabla vacía de la práctica. Cada estudiante escribe antes de escuchar respuestas: **ventaja, inconveniente y cuándo usaría cada herramienta**. Contrastar después con el mapa de entornos durante unos minutos.
 
-**Predicción antes de ejecutar:** ¿la última línea funciona o falla? ¿Por qué?
+Orientación para la puesta en común:
 
-Mensaje: `venv` aísla, pero hay que activarlo; si se olvida, `pip` escribe en el sistema. `uv` hace lo mismo con lockfile y más rápido; se nombra, no se instala si no está.
+| Opción | Evidencia para apoyar la decisión |
+|---|---|
+| venv + pip | Poco extra si Python ya está instalado; hay que elegir bien intérprete/activación y conservar dependencias. |
+| uv | Manifiesto y lock para proyectos Python; no es un gestor general de paquetes nativos como conda/Pixi. |
+| conda | Entorno nombrado, Python y paquetes nativos; el YAML con rangos vuelve a resolver y no equivale a un lock exacto. |
+| Pixi | Proyecto, lock y tareas con paquetes conda/PyPI; requiere instalar el gestor y entender sus archivos. |
 
-**«Hazlo tú» (5 min):** crear un `venv`, instalar `rich`, comprobar la versión dentro y que fuera no existe. Dos parejas dicen el resultado.
+Poetry, pipx y Docker se sitúan en **dos frases de cierre** y quedan en los manuales para retomarlos cuando se utilicen. No reservar un bloque de doce minutos de exposición sobre despliegue en este taller.
 
-La secuencia es válida en Linux, macOS y Windows. Si Windows no reconoce `conda
-activate`, ejecutar `conda init powershell`, cerrar y volver a abrir PowerShell (o
-reiniciarlo) y probar de nuevo.
-
-**Cierre del bloque:** `pip` no es un gestor de entornos; es un instalador. `venv`/`uv` ponen el aislamiento.
-
-### 3. conda/mamba: reutilizar sin multiplicar (18 min)
-
-Referencia para resolver dudas o continuar en casa: `02-tratamiento-datos/01-teoria/00c-manual-conda-pia.md`. En clase se trabaja este bloque; no se recorre el manual completo.
-
-Abrir `01-fundamentos-python/05-recursos/pia-ud1.yml` y leerlo en voz alta: nombre, canal, Python y paquetes.
-
-```bash
-conda env list
-conda env create --dry-run -f 01-fundamentos-python/05-recursos/pia-ud1.yml
-conda activate pia-ud1
-conda list
-conda env update -f 01-fundamentos-python/05-recursos/pia-ud1.yml --prune
-```
-
-Si conda no está instalado o el solver tarda, se hace solo `--dry-run` y se explica la salida; **no se invierte la clase en instalar conda**. Desde conda 23.10 el solver `libmamba` viene configurado por defecto; `mamba` sigue siendo una interfaz compatible, pero no es una instalación necesaria para la sesión.
-
-**Predicción:** «Si añado una dependencia al `.yml` y ejecuto `conda env update --prune`, ¿se crea otro entorno o se actualiza el mismo?».
-
-Mensaje clave: **un `environment.yml` por familia de proyectos**, actualizar en vez de crear, y `--from-history` para exportar limpio. Crear un entorno por prueba es el error que queremos evitar.
-
-**«Hazlo tú» (5 min):** responder por parejas: (a) ¿qué versión de Python fija `pia-ud1.yml`?; (b) si mañana necesito `matplotlib` solo para una práctica, ¿creo `pia-ud1-v2` o actualizo `pia-ud1`?; (c) ¿qué riesgo tiene duplicar el entorno?
-
-### 4. Pixi: la herramienta de los proyectos (28 min)
-
-Abrir el `pixi.toml` real de la raíz y señalar `[feature.base]`, `[feature.ud3]` y `[environments]`. No recorrer todo el fichero. La guía de UD2 advierte que Matplotlib está ahora en `ud3`, no en `base/default`.
-
-```bash
-pixi --version
-pixi info
-pixi install
-pixi run --environment default python --version
-pixi run --environment default python -c "import numpy, pandas; print(numpy.__version__, pandas.__version__)"
-pixi task list
-```
-
-**Predicciones encadenadas:**
-
-1. ¿Qué contiene `default` y qué dependencia de visualización falta declarar? (Matplotlib no está en `base/default`.)
-2. Si ejecuto `python` sin `pixi run`, ¿usa el entorno del proyecto? (No necesariamente: depende del `PATH`.)
-3. ¿Qué fichero hay que versionar para que otra persona reproduzca el entorno? (`pixi.toml` **y** `pixi.lock`.)
-
-Mensaje clave: Pixi compone **features** y **entornos** sin duplicar definiciones; los entornos viven en `.pixi/`, que no se versiona. El detalle está en `02-tratamiento-datos/01-teoria/00b-manual-pixi-pia.md`; no se repite aquí.
-
-**«Hazlo tú» (8 min):** en el repositorio, cada pareja ejecuta y anota:
-
-```bash
-pixi run --environment default python --version
-pixi run --environment default python -c "import numpy, pandas; print(numpy.__version__, pandas.__version__)"
-```
-
-Y responde: ¿por qué no se debe afirmar que `default` sirve ya para visualizar? (Porque Matplotlib está declarado en `ud3`; hay que modificar la feature de UD2 o usar conda.)
-
-**Comprobación de integración (opcional, 8 min):** si ya se ha creado el entorno conda `pia-ud2`, o si existe el entorno Pixi de UD2 con Matplotlib, abrir `02-tratamiento-datos/02-ejemplos/03_pandas_eda_visualizacion.ipynb`, ejecutar las celdas iniciales y mostrar una gráfica. No se completa el EDA ni se entrega el notebook: solo se comprueba que el entorno ejecuta material real de la unidad.
-
-### 5. Poetry y despliegue: experimentar no es desplegar (12 min)
-
-Proyectar la tabla «Experimentar / Desplegar» de `02-tratamiento-datos/01-teoria/00a-entornos-python.md`. La idea que debe quedar: **el entorno de experimentación no se lleva tal cual a producción**; se separan dependencias de desarrollo y de runtime, y se despliega un artefacto construido desde el lockfile.
-
-**Poetry (3 min, sin instalar nada):**
-
-- `pyproject.toml` + `poetry.lock`; grupos `dev` frente a runtime (`poetry install --without dev`).
-- `poetry build` genera un wheel; se instala con `pip install dist/*.whl`.
-- `poetry export` **ya no viene en el núcleo desde Poetry 2.0**: es un plugin (`poetry-plugin-export`).
-- No resuelve binarios nativos/GPU: no es la ruta de ejecución del módulo.
-
-**Despliegue (9 min):**
-
-- **pip + `requirements.txt`**: universal; versiones fijadas y `--require-hashes`. **No** congeles con `pip freeze` de un entorno con Jupyter.
-- **pip-tools**: `pip-compile requirements.in` genera el lock; `pip-sync` lo instala.
-- **uv**: `uv export --format requirements.txt`; en imagen, `UV_NO_DEV=1 uv sync --locked`.
-- **conda-lock / micromamba**: lock de conda para CI o imagen, sin resolver en cada arranque.
-- **Docker**: empaqueta SO + Python + dependencias; la imagen se construye *desde* el lockfile y sin dev. Enseñar el Dockerfile mínimo del documento, **no ejecutarlo**.
-- **pipx**: para herramientas CLI aisladas, no para las librerías del proyecto.
-
-**Predicciones:**
-
-1. «¿La imagen de producción debe llevar Jupyter y pytest?» (No: solo runtime.)
-2. «¿`pip freeze` de mi entorno con notebooks es un buen lock de producción?» (No: arrastra desarrollo y ruido.)
-3. «¿Poetry serviría para el proyecto con PyTorch y CUDA?» (No como gestor de ejecución; sí, en todo caso, para publicar un wheel.)
-
-### 6. Matriz de decisión y ticket (12 min)
-
-Proyectar la matriz de `02-tratamiento-datos/01-teoria/00a-entornos-python.md` y resolver cinco casos en voz alta:
-
-1. Proyecto final con notebooks, scikit-learn y GPU → **Pixi** para experimentar; **imagen Docker** con la variante CUDA para desplegar.
-2. Cuatro prácticas de experimentación que comparten el 90 % de dependencias → **un entorno conda actualizado**, no cuatro.
-3. Servicio o API en producción → **Docker** construido desde un lock (uv/pip).
-4. Librería que se publica en PyPI → **wheel con Poetry** (o hatch/uv).
-5. Herramienta de línea de comandos → **pipx**.
-
-Ticket de salida (en el ejercicio): una frase por herramienta, un caso propio y la diferencia entre experimentar y desplegar. Se entrega en Moodle; valoración **binaria (hecho/no hecho)**, igual que los cuadernos «hazlo tú».
-
-## 5. Entregable y evaluación
-
-- Ejercicio: `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md`.
-- Entrega en Moodle al final de la sesión.
-- **Hecho / no hecho.** Entregar acredita asistencia; completo acredita seguimiento. No es prueba ni se corrige acierto.
-- Si alguien no termina, puede acabarlo en casa y subirlo igualmente.
-
-## 6. Precauciones
-
-- **No convertir la sesión en instalaciones.** Si falta conda o Pixi en algún equipo, se trabaja en parejas o con demostración proyectada. La ruta conda alternativa de UD2 crea `pia-ud2` con Python 3.12, NumPy, pandas, Matplotlib, JupyterLab e ipykernel; se comprueban versiones, se exporta con `--from-history` y se desactiva al terminar.
-- **No ejecutar `pixi install` de todos los entornos** en clase: la primera resolución puede tardar. Para esta sesión se usa `default`; la guía ML/UD3 queda como referencia posterior.
-- **No abrir** el `pixi.toml` entero línea a línea: confunde. Tres features y el bloque `[environments]`.
-- Verificar antes de clase: `pixi --version`, `pixi run --environment default python -c "import numpy, pandas"` y la situación de `pixi.lock`. No ejecutar comandos Pixi que requieran resolver en este entorno docente.
-- Si el grupo no tiene conda, el bloque 3 se reduce a leer el `.yml` y comparar con Pixi; el objetivo es el criterio, no la instalación.
-- **No instalar Docker en clase.** El bloque de despliegue es conceptual: se enseña el Dockerfile y se explica el artefacto; la práctica real de contenedores pertenece a UD5.
-- **No mezclar los dos ejes en el mismo ejemplo:** Pixi/conda para experimentar; lock + wheel/imagen para desplegar. Si se mezclan, el alumnado acaba creyendo que «producción = activar el entorno de clase».
-- No afirmar que una herramienta es «mejor» en abstracto: depende del caso. Insistir en la matriz.
+Recoger el registro con los bloques completos, en curso y pendientes. Mantener valoración **hecho/no hecho** de seguimiento, sin convertir las incidencias de instalación en una prueba de aciertos. Al finalizar, anotar en la hoja de ruta qué herramientas se han llegado a probar realmente y dónde se retomará la siguiente clase.

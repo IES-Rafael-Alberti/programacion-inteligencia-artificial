@@ -3,6 +3,17 @@
 **Fecha de snapshot:** 2026-10-26
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Decisión docente: entornos como taller práctico — 2026-10-26
+
+- [x] Sustituido el enfoque anterior por trabajo del alumnado **una herramienta cada vez: instalar/comprobar → configurar → ejecutar ejemplo → probar → modificar y volver a probar**. Se empieza trabajando; las ventajas, inconvenientes y criterios de elección se comparan después de probar.
+- [x] Rehechos `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md` y el guion `02-tratamiento-datos/99-profesor/00-GUION_SESION_NOVENA_CLASE_ENTORNOS_PYTHON.md`: **venv + pip → uv → conda → Pixi**, instalación por sistema operativo, carpetas independientes fuera del repositorio, mismo análisis pandas con salidas esperadas y modificación por bloque. Conda deja de ser lectura/simulación; uv deja de ser solo una mención.
+- [x] Mantenidos 120 min orientativos, incluidos 10 de descanso; si las instalaciones no caben, se registra el punto real y se continúa la siguiente sesión. No sustituir un bloque pendiente por una demo del profesor. Poetry/pipx/Docker quedan para consulta y uso posterior.
+- [x] Entrega: registro de instalación/configuración, intérprete, comandos, salidas y cambios, con bloques completos/en curso/pendientes; valoración binaria de seguimiento, sin penalizar una incidencia como un error de examen.
+- [x] Alineados mapa de entornos, manuales Pixi/conda, guía y README de UD2 y README local del paquete Moodle. Los ejemplos pequeños no dependen de ampliar el `pixi.toml` raíz ni de un entorno `ud2` todavía inexistente.
+- [x] Validada la nueva versión: ejemplo común ejecutado con total 60 y modificación con total 70, resumen por grupos y `PRUEBA OK`; 46 enlaces locales comprobados; horario continuo 0–120 min verificado; `mkdocs build --strict` y `git diff --check` superados. Esta validación no instala los gestores ni sustituye el ensayo en los equipos del aula.
+- [ ] Probar las instalaciones y comandos desde la red/equipos del aula (Windows/macOS/Linux según el grupo), preparar instaladores necesarios y publicar el nuevo enunciado. El paquete Moodle anterior debe regenerarse o sustituirse; no distribuirlo como si ya incluyera este taller.
+- Siguiente paso: ensayar la instalación desde los equipos/red del aula, actualizar Moodle desde el nuevo enunciado y recoger qué bloques llegan a completarse realmente en clase.
+
 ## Consolidación del trabajo del instituto — 2026-10-26
 
 - [x] Incorporado el traslado del guion de la octava clase a `02-tratamiento-datos/99-profesor/01-GUION_OCTAVA_CLASE_PIA_PANDAS.md`; no se ha eliminado el material.
@@ -30,10 +41,10 @@
 
 ## Preparación de Moodle — sesión de entornos UD2 — 2026-10-26
 
-- [x] Alineado `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md` con UD2: Pixi `default`, NumPy/pandas y ejercicio de proyecto de tratamiento de datos; retiradas las referencias a `ud3`, scikit-learn y `ud3-pycaret`.
+- [x] Alineado el ejercicio con UD2; **actualizado después a taller práctico con proyectos mínimos propios** (venv/pip, uv, conda y Pixi), sin depender de los entornos del repositorio ni de paquetes de ML. La versión anterior basada en preguntas ya está sustituida en la fuente.
 - [x] Revisadas la actividad y la documentación de la sesión de entornos UD2 para Linux, macOS y Windows; la ruta `venv` usa activación específica por shell, `python -m pip` y comprobación multiplataforma del intérprete.
-- [x] Definido el paquete temporal `Moodle/02-UD2/`: documentación base, guía de proyecto UD2, ejercicio entregable y un notebook opcional de comprobación (`03_pandas_eda_visualizacion.ipynb`) para ejecutar una gráfica con el entorno recién creado.
-- [ ] Subir a Moodle los tres recursos prioritarios y configurar «Entornos Python — hazlo tú» como tarea binaria (hecho/no hecho), permitiendo terminarla después de clase.
+- [x] Definido el paquete temporal `Moodle/02-UD2/`: documentación de consulta, guía de proyecto y notebook opcional de ampliación. **Sus PDF/copia de la práctica son anteriores al taller nuevo**: regenerarlos desde las fuentes actuales antes de distribuirlos.
+- [ ] Publicar en Moodle el **taller actualizado** y configurar «Entornos Python — hazlo tú» como tarea binaria de registro (hecho/no hecho), permitiendo completar los bloques después de clase. Añadir documentación como consulta y comparación posterior.
 
 ## Compatibilidad de estilos Matplotlib — 2026-10-26
 
@@ -60,7 +71,7 @@
 - [x] **Cierre y sincronización:** guion de pandas con R reducido a 10 min, checklist Moodle y sesión de entornos UD2 consolidados en `2f507ebb` y subidos a `teacher/main`. Material público publicado en `origin/main` (`fa74575e`): `docs/entornos-python.md` y `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md`. Los cuadernos «hazlo tú» de pandas y R ya estaban publicados (`79bba3ce`). `mkdocs build --strict` superado. Los guiones y la hoja de ruta permanecen en el repositorio docente.
 - [x] **Revisión previa a publicación:** corregida la consulta de versión de Rich con `importlib.metadata`, mantenida la exclusión de dependencias de desarrollo al arrancar el ejemplo Docker y aclarado que manifiestos y lockfiles pueden usarse tanto para experimentar como para desplegar.
 - [ ] **Lunes 2026-10-26 — octava clase (3 h):** pandas desde cero según `02-tratamiento-datos/99-profesor/01-GUION_OCTAVA_CLASE_PIA_PANDAS.md`, con **cierre de recordatorio de R y la comparativa** (bloque 10, 148–158). Antes: ejecutar el **checklist Moodle (§2b del guion)** — notebook principal, cuaderno «hazlo tú», tarea de entrega, comparativa y comprobaciones técnicas (`pandas`, `pyarrow`, R/Colab).
-- [ ] **Martes 2026-10-27 — sesión de entornos (2 h) en UD2:** `02-tratamiento-datos/99-profesor/00-GUION_SESION_NOVENA_CLASE_ENTORNOS_PYTHON.md`, con el ejercicio `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md`. Antes: verificar `pixi --version` y `pixi run --environment default python -c "import numpy, pandas"` en el aula, y subir el ejercicio a Moodle.
+- [ ] **Martes 2026-10-27 — taller de entornos (2 h) en UD2:** seguir el guion de la novena clase y `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md`: instalar/configurar/probar venv+pip, uv, conda y Pixi de forma secuencial; comparación al final. Antes: comprobar instaladores/red/permisos y comandos de los proyectos mínimos en el aula, y publicar el nuevo enunciado en Moodle. Registrar el bloque alcanzado para continuar si no cabe todo.
 - [x] Decidido: el bloque final de R del lunes queda en **10 min** (recordatorio + tabla de correspondencias + filtro/`groupby` en vivo + recordatorio de entrega de la comparativa). **R no es herramienta principal:** se ve para comparar y, más adelante, para gráficas. Los 11 min liberados pasan a ausentes (128–148) y mini-práctica (158–180).
 
 ## Resultado real de la sexta clase y preparación de la siguiente (2 h) — 2026-10-21
@@ -137,16 +148,16 @@ El tiempo de la sesión previa queda muy repartido: lo que no se llegó a hacer 
 
 ### Decisión: sesión de entornos de Python en UD2 (2026-10-25)
 
-- [x] Creado el guion `02-tratamiento-datos/99-profesor/00-GUION_SESION_NOVENA_CLASE_ENTORNOS_PYTHON.md`, de **120 min**: por qué no instalar en el sistema, mapa pip/venv/uv/conda/Pixi/Poetry, demo de cada uno y criterio de elección. **Pixi ocupa el bloque principal (28 min)** y **conda el bloque de experimentación reutilizable (18 min)**; Poetry se reduce a empaquetado.
+- [x] Creado y después **rehecho como taller práctico** el guion de la novena clase, de **120 min orientativos**: instalar/configurar/ejecutar/probar/modificar venv+pip, uv, conda y Pixi; comparación al final. El reparto anterior con teoría inicial y demos ya no es el vigente.
 - [x] Creado el documento público de entornos, actualmente `02-tratamiento-datos/01-teoria/00a-entornos-python.md`, como base de la sesión. **No duplica los manuales:** enlaza al manual de Pixi `00b-manual-pixi-pia.md`, al manual de conda `00c-manual-conda-pia.md`, a la guía de inicio y a las guías específicas de proyecto UD2 y ML/UD3.
-- [x] Creado el ejercicio entregable `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md` (venv/pip, lectura de `pia-ud1.yml`, entornos Pixi del repo y elección razonada). Entrega en Moodle con **valoración binaria (hecho/no hecho)**, igual que los cuadernos «hazlo tú».
+- [x] Creado y después sustituido por el taller entregable `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md`: instalación y pruebas de las cuatro opciones, registro de evidencias y comparación posterior. Conserva **valoración binaria (hecho/no hecho)**, como los cuadernos «hazlo tú».
 - [x] **Ubicación decidida: UD2, no UD3.** En UD1 el alumnado aún está aprendiendo las herramientas; en UD2 ya ha usado NumPy y pandas y puede ver el conflicto real (NumPy 2/pandas 2.2 del curso frente a NumPy <1.27/pandas <2.2 de PyCaret), además de herramientas distintas para tareas parecidas.
 - [x] Decisión de alcance: se conserva el manual general de Pixi y se crea una guía breve específica de proyecto UD2, sin duplicarlo; la guía existente queda para ML/UD3.
-- [x] Añadido el eje **experimentar / desplegar** al documento y al guion: Pixi y conda para experimentar; lockfile, wheel, Docker, conda-lock/micromamba y pipx para desplegar. Se insiste en separar dependencias de desarrollo y de runtime, y en no llevar Jupyter al artefacto de producción.
+- [x] Añadido el eje **experimentar / desplegar** al documento de consulta: las herramientas pueden participar en ambos según su uso. En el guion práctico vigente solo se sitúan Poetry/pipx/Docker brevemente al cerrar; el antiguo bloque expositivo de despliegue se ha retirado para dar tiempo a ejecutar.
 - [x] Aclarado en el material que `poetry export` es plugin desde Poetry 2.0 y que `pip freeze` de un entorno de clase no es un lock de producción.
 - [x] Actualizada la explicación de conda/mamba: conda 23.10+ usa `conda-libmamba-solver` por defecto; `mamba` y `micromamba` se mantienen como interfaces alternativas, sin exigir su instalación al alumnado.
 - [x] Fecha prevista para la sesión de entornos: martes 2026-10-27, en UD2, después de la clase de pandas.
-- [ ] **Antes de impartirla:** verificar `pixi --version` y `pixi run --environment default python -c "import numpy, pandas"` en el equipo del aula, y subir el ejercicio a Moodle.
+- [ ] **Antes de impartirla:** comprobar instaladores, conectividad y permisos del aula, ensayar los cuatro proyectos mínimos y publicar el taller actualizado en Moodle; registrar incidencias y continuación real tras la clase.
 
 ## RETOMAR EN EL ORDENADOR DEL INSTITUTO — antes de clase del 20-10-2026
 
