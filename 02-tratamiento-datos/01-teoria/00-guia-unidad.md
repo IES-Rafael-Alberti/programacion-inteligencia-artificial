@@ -48,8 +48,8 @@ La prioridad no es coleccionar librerías. La prioridad es que el alumnado entie
 | Fase | Foco | Material base |
 |------|------|---------------|
 | 1 | Pandas básico | `01-pandas-introduccion.md`, `01_pandas_fundamentos.ipynb` |
-| 2 | EDA y preparación | `04-eda-pasos.md`, `05-preparacion-datos-ml.md`, `02_pandas_eda_visualizacion.ipynb` |
-| 3 | Matplotlib | `06-matplotlib-fundamentos.md`, `07-matplotlib-parte1.md`, `08-matplotlib-parte2.md` |
+| 2 | EDA y preparación | `04-eda-pasos.md`, `05-preparacion-datos-ml.md`, `02_eda_pandas.ipynb` (sin gráficas) |
+| 3 | Matplotlib | `06-matplotlib-fundamentos.md`, `07-matplotlib-parte1.md`, `08-matplotlib-parte2.md`; después, `03_pandas_eda_visualizacion.ipynb` |
 | 4 | Seaborn | `09-seaborn.md`, `11_seaborn_spotify.ipynb` |
 | 5 | Interactividad | `14b-plotly-express-interactividad.md`, `17_plotly_express_interactivo.ipynb` |
 | 6 | Alternativas | `12-polars-intro.md`, `13-polars-vs-pandas.md`, `14c-duckdb-analitica-local.md` |
