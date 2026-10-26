@@ -28,7 +28,8 @@ La sesión se apoya en documentación existente. El documento nuevo `docs/entorn
 | Documento base de la sesión (alumnado) | `docs/entornos-python.md` |
 | Manual de Pixi (detalle, comandos, problemas) | `docs/manual-pixi-pia.md` |
 | Entornos disponibles del curso | `docs/guia-inicio.md` |
-| Pixi en un proyecto de ML | `03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md` |
+| Guía práctica de proyecto UD2 | `02-tratamiento-datos/01-teoria/10a-guia-proyecto-python-pixi.md` |
+| Guía posterior de proyecto ML/UD3 | `03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md` |
 | Manifiesto real del repositorio | `pixi.toml` |
 | Entorno conda de UD1 | `01-fundamentos-python/05-recursos/pia-ud1.yml` |
 | Entorno conda raíz | `environment.yml` |
@@ -58,7 +59,7 @@ Pregunta de predicción, sin ejecutar nada:
 
 > «Si instalo `pandas 2.2` para este proyecto y otro proyecto necesita `pandas 1.5`, ¿qué crees que pasa en el Python del sistema?»
 
-Caso real del módulo, no inventado: UD1 y UD2 usan **NumPy 2** y **pandas 2.2**, mientras que **PyCaret 3.3** (UD3) exige `NumPy < 1.27` y `pandas < 2.2`. Si todo vive en el mismo Python, una de las dos partes deja de funcionar.
+Caso real del módulo, no inventado: UD1 y UD2 usan **NumPy 2** y **pandas 2.2**; UD2 trabaja con Python 3.12, Matplotlib y Jupyter. Si todo vive en el mismo Python, los proyectos pueden entrar en conflicto.
 
 Recoger 2–3 respuestas. No corregir todavía: la respuesta se construye en el bloque 1. Enunciar los seis objetivos y avisar de que la sesión es **de criterio**, no de instalar todo.
 
@@ -120,22 +121,20 @@ Mensaje clave: **un `environment.yml` por familia de proyectos**, actualizar en 
 
 ### 4. Pixi: la herramienta de los proyectos (28 min)
 
-Abrir el `pixi.toml` real de la raíz y señalar solo tres cosas: `[feature.base]`, `[feature.ud3]` y `[environments]`. No recorrer todo el fichero.
+Abrir el `pixi.toml` real de la raíz y señalar `[feature.base]`, `[feature.ud3]` y `[environments]`. No recorrer todo el fichero. La guía de UD2 advierte que Matplotlib está ahora en `ud3`, no en `base/default`.
 
 ```bash
 pixi --version
 pixi info
 pixi install
-pixi run python --version
-pixi run --environment ud3 python -c "import sklearn; print(sklearn.__version__)"
-pixi run --environment ud3-pycaret python --version
-pixi list --environment ud3
+pixi run --environment default python --version
+pixi run --environment default python -c "import numpy, pandas; print(numpy.__version__, pandas.__version__)"
 pixi task list
 ```
 
 **Predicciones encadenadas:**
 
-1. `default` y `ud3-pycaret`, ¿misma versión de Python? (No: 3.12 frente a 3.11.)
+1. ¿Qué contiene `default` y qué dependencia de visualización falta declarar? (Matplotlib no está en `base/default`.)
 2. Si ejecuto `python` sin `pixi run`, ¿usa el entorno del proyecto? (No necesariamente: depende del `PATH`.)
 3. ¿Qué fichero hay que versionar para que otra persona reproduzca el entorno? (`pixi.toml` **y** `pixi.lock`.)
 
@@ -145,11 +144,10 @@ Mensaje clave: Pixi compone **features** y **entornos** sin duplicar definicione
 
 ```bash
 pixi run --environment default python --version
-pixi run --environment ud3 python -c "import sklearn; print(sklearn.__version__)"
-pixi run --environment ud3-pycaret python --version
+pixi run --environment default python -c "import numpy, pandas; print(numpy.__version__, pandas.__version__)"
 ```
 
-Y responde: ¿por qué `ud3-pycaret` no incluye `base`? (Porque PyCaret exige NumPy 1.26 y Python 3.11; es un entorno autónomo.)
+Y responde: ¿por qué no se debe afirmar que `default` sirve ya para visualizar? (Porque Matplotlib está declarado en `ud3`; hay que modificar la feature de UD2 o usar conda.)
 
 ### 5. Poetry y despliegue: experimentar no es desplegar (12 min)
 
@@ -198,10 +196,10 @@ Ticket de salida (en el ejercicio): una frase por herramienta, un caso propio y 
 
 ## 6. Precauciones
 
-- **No convertir la sesión en instalaciones.** Si falta conda o Pixi en algún equipo, se trabaja en parejas o con demostración proyectada.
-- **No ejecutar `pixi install` de todos los entornos** en clase: la primera resolución puede tardar. Con `default` y `ud3` es suficiente; `ud3-pycaret` solo se consulta.
+- **No convertir la sesión en instalaciones.** Si falta conda o Pixi en algún equipo, se trabaja en parejas o con demostración proyectada. La ruta conda alternativa de UD2 crea `pia-ud2` con Python 3.12, NumPy, pandas, Matplotlib, JupyterLab e ipykernel; se comprueban versiones, se exporta con `--from-history` y se desactiva al terminar.
+- **No ejecutar `pixi install` de todos los entornos** en clase: la primera resolución puede tardar. Para esta sesión se usa `default`; la guía ML/UD3 queda como referencia posterior.
 - **No abrir** el `pixi.toml` entero línea a línea: confunde. Tres features y el bloque `[environments]`.
-- Verificar antes de clase: `pixi --version`, `pixi run --environment ud3 python -c "import sklearn"` y que el `pixi.lock` está actualizado.
+- Verificar antes de clase: `pixi --version`, `pixi run --environment default python -c "import numpy, pandas"` y la situación de `pixi.lock`. No ejecutar comandos Pixi que requieran resolver en este entorno docente.
 - Si el grupo no tiene conda, el bloque 3 se reduce a leer el `.yml` y comparar con Pixi; el objetivo es el criterio, no la instalación.
 - **No instalar Docker en clase.** El bloque de despliegue es conceptual: se enseña el Dockerfile y se explica el artefacto; la práctica real de contenedores pertenece a UD5.
 - **No mezclar los dos ejes en el mismo ejemplo:** Pixi/conda para experimentar; lock + wheel/imagen para desplegar. Si se mezclan, el alumnado acaba creyendo que «producción = activar el entorno de clase».
