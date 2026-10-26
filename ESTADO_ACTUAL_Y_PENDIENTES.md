@@ -3,6 +3,10 @@
 **Fecha de snapshot:** 2026-09-30
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Compatibilidad de estilos Matplotlib — 2026-10-26
+
+- [x] Sustituido el estilo obsoleto `seaborn` por `seaborn-v0_8` en la teoría y el notebook de fundamentos de Matplotlib.
+
 ## Revisión de guía de ejemplos pandas — 2026-10-26
 
 - [x] Revisada `02-tratamiento-datos/01-teoria/02-pandas-ejemplos-guia.md`: añadidas explicaciones breves para los bloques de operaciones y advertencias sobre archivos externos, formatos variables y dependencias opcionales.

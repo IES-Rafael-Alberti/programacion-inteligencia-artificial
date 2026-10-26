@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 
 # Configuración para mejorar la visualización
-plt.style.use('seaborn')
+plt.style.use('seaborn-v0_8')
 # Para mostrar gráficos en Jupyter Notebook
 %matplotlib inline
 # Para establecer el tamaño predeterminado de las figuras
