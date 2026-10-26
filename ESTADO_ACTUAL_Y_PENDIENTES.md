@@ -125,6 +125,7 @@ El tiempo de la sesión previa queda muy repartido: lo que no se llegó a hacer 
 - [x] Decisión de alcance: se conserva el manual general de Pixi y se crea una guía breve específica de proyecto UD2, sin duplicarlo; la guía existente queda para ML/UD3.
 - [x] Añadido el eje **experimentar / desplegar** al documento y al guion: Pixi y conda para experimentar; lockfile, wheel, Docker, conda-lock/micromamba y pipx para desplegar. Se insiste en separar dependencias de desarrollo y de runtime, y en no llevar Jupyter al artefacto de producción.
 - [x] Aclarado en el material que `poetry export` es plugin desde Poetry 2.0 y que `pip freeze` de un entorno de clase no es un lock de producción.
+- [x] Actualizada la explicación de conda/mamba: conda 23.10+ usa `conda-libmamba-solver` por defecto; `mamba` y `micromamba` se mantienen como interfaces alternativas, sin exigir su instalación al alumnado.
 - [x] Fecha prevista para la sesión de entornos: martes 2026-10-27, en UD2, después de la clase de pandas.
 - [ ] **Antes de impartirla:** verificar `pixi --version` y `pixi run --environment default python -c "import numpy, pandas"` en el equipo del aula, y subir el ejercicio a Moodle.
 

@@ -59,6 +59,12 @@ conda env create --dry-run -f 01-fundamentos-python/05-recursos/pia-ud1.yml
 
 Si no lo tienes, no lo instales en clase: explica qué haría el comando.
 
+**Nota:** en las versiones actuales de conda, el solver basado en `libmamba` ya
+viene configurado por defecto. `mamba` sigue siendo una interfaz compatible y
+`micromamba` una alternativa ligera, pero no hace falta instalar ninguno para esta
+actividad. Si ya tienes `mamba`, sus comandos suelen ser equivalentes cambiando
+`conda` por `mamba`.
+
 **Caso:** mañana necesitas `matplotlib` solo para una práctica. ¿Creas `pia-ud1-v2` o actualizas `pia-ud1`? Justifica en una frase.
 
 ## 3. Pixi en el repositorio (8 min)

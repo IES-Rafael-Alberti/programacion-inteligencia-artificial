@@ -70,7 +70,7 @@ Teoría breve con la tabla de `docs/entornos-python.md`:
 - Entorno = intérprete + paquetes aislados; activar cambia el `PATH`.
 - Tres riesgos del sistema: conflictos, no reproducibilidad, romper el SO.
 - Mapa: pip/venv/uv (Python puro) frente a conda/Pixi (también nativos) y Poetry (empaquetado).
-- Idea que debe quedar: **Pixi para los proyectos; conda para experimentación reutilizable; pip/venv/uv para lo pequeño; Poetry solo para publicar.**
+- Idea que debe quedar: **Pixi para los proyectos; conda para experimentación reutilizable; pip/venv/uv para lo pequeño; Poetry solo para publicar.** Mamba se menciona como interfaz compatible, pero no se instala aparte: conda moderno ya usa `conda-libmamba-solver` por defecto.
 - **Dos ejes que ordenan todo el mapa:** *experimentar* (probar, comparar, romper: Pixi, conda, venv/uv, Jupyter) y *desplegar* (ejecutar igual y sin Jupyter: lockfile, wheel, Docker). El mismo proyecto puede usar Pixi para experimentar y Docker para desplegar; lo que no se hace es llevar el entorno de experimentación tal cual a producción.
 
 Chequeo de predicción: «¿Qué herramienta usarías para un script de 20 líneas que solo usa `requests`? ¿Y para el proyecto con PyTorch?».
@@ -131,7 +131,7 @@ conda list
 conda env update -f 01-fundamentos-python/05-recursos/pia-ud1.yml --prune
 ```
 
-Si conda no está instalado o el solver tarda, se hace solo `--dry-run` y se explica la salida; **no se invierte la clase en instalar conda**. `mamba` es el mismo comando con otro binario.
+Si conda no está instalado o el solver tarda, se hace solo `--dry-run` y se explica la salida; **no se invierte la clase en instalar conda**. Desde conda 23.10 el solver `libmamba` viene configurado por defecto; `mamba` sigue siendo una interfaz compatible, pero no es una instalación necesaria para la sesión.
 
 **Predicción:** «Si añado una dependencia al `.yml` y ejecuto `conda env update --prune`, ¿se crea otro entorno o se actualiza el mismo?».
 

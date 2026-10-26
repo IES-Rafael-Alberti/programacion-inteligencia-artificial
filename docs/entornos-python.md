@@ -37,7 +37,7 @@ Un **entorno** es una carpeta aislada con su propio intérprete y sus propios pa
 | **pip** | Paquetes de PyPI | Universal y sencillo | No aísla por sí solo; no gestiona Python | Instalar dentro de un entorno |
 | **venv** | Entorno virtual ligero (stdlib) | Sin instalar nada extra | Solo paquetes Python; no resuelve binarios | Proyectos pequeños o pruebas |
 | **uv** | Entorno, Python y paquetes | Muy rápido; lockfile | Ecosistema Python | Alternativa moderna a pip/venv |
-| **conda / mamba** | Python, paquetes y binarios | Paquetes nativos; entornos reutilizables | Más pesado; resolución lenta sin mamba | Experimentación y compatibilidad |
+| **conda** | Entornos, Python, paquetes y binarios | Paquetes nativos; entornos reutilizables | Más pesado que `venv`; depende de la configuración de canales | Experimentación y compatibilidad |
 | **Pixi** | Proyecto completo (conda + PyPI) | Reproducible, por proyecto, features y entornos | Curva de aprendizaje inicial | **Herramienta principal** |
 | **Poetry** | Dependencias y empaquetado | Publicar paquetes; `pyproject.toml` | No resuelve binarios nativos | Solo si se publica un paquete |
 
@@ -66,7 +66,7 @@ Sin activar ningún entorno, `pip install` escribe en el Python del sistema (o d
 
 `uv` hace lo mismo con lockfile y mucha más velocidad (`uv venv`, `uv add`, `uv run`, `uv sync`). Es válido para proyectos pequeños, pero **no sustituye a Pixi** cuando hacen falta paquetes nativos o varios entornos compuestos.
 
-## 5. Conda y mamba: entornos reutilizables
+## 5. Conda, libmamba y mamba: entornos reutilizables
 
 Conda gestiona entornos con paquetes Python y nativos. La especificación vive en un `environment.yml`:
 
@@ -89,6 +89,18 @@ conda list
 conda deactivate
 ```
 
+### ¿Dónde encaja mamba hoy?
+
+Desde **conda 23.10**, `conda` usa por defecto el solver `conda-libmamba-solver`,
+basado en la misma tecnología de resolución que utilizan `mamba` y `micromamba`.
+Por eso no hace falta instalar `mamba` aparte para obtener una resolución moderna:
+se puede seguir usando `conda` con sus comandos habituales.
+
+`mamba` sigue siendo una interfaz de línea de comandos compatible con conda y
+`micromamba` es una alternativa más pequeña. Si están instalados, muchos comandos
+se escriben sustituyendo `conda` por `mamba`; para esta asignatura no son una
+dependencia adicional ni una ruta distinta que el alumnado tenga que instalar.
+
 El repositorio ya trae ejemplos reales: [`pia-ud1.yml`](../01-fundamentos-python/05-recursos/pia-ud1.yml) y [`environment.yml`](https://github.com/IES-Rafael-Alberti/programacion-inteligencia-artificial/blob/main/environment.yml). Para UD2, consulta la [guía de proyecto con Python, Pixi y conda](../02-tratamiento-datos/01-teoria/10a-guia-proyecto-python-pixi.md); la guía ML queda reservada a UD3.
 
 **Reutilizar sin multiplicar entornos.** La tentación es crear un entorno por experimento. Mejor:
@@ -98,8 +110,6 @@ El repositorio ya trae ejemplos reales: [`pia-ud1.yml`](../01-fundamentos-python
 - Exportar una especificación portable con `conda env export --from-history > environment.yml`.
 - Duplicar (`conda create --clone`) solo para congelar una versión que comparar.
 - Para reproducibilidad estricta, `conda-lock` genera un lockfile por plataforma.
-
-`mamba` es un reemplazo compatible y mucho más rápido del solver: los mismos comandos con `mamba` delante.
 
 **Límite honesto:** conda no compone variantes de un mismo proyecto tan limpiamente como Pixi. Si necesitas «base + ML», «base + GPU» y «base + AutoML», acabas con varios entornos o con un `environment.yml` inflado.
 
@@ -127,7 +137,7 @@ Experimentar y desplegar tienen requisitos distintos. El error típico es llevar
 |---|---|---|
 | Objetivo | Probar, comparar, romper y repetir | Ejecutar igual, sin intervención manual |
 | Duración | Cambia cada semana | Congelado por versión |
-| Herramientas | Pixi, conda/mamba, venv + uv, Jupyter | pip/uv, Poetry, Docker, conda-lock |
+| Herramientas | Pixi, conda (con `mamba`/`micromamba` opcionales), venv + uv, Jupyter | pip/uv, Poetry, Docker, conda-lock |
 | Artefacto | `pixi.toml` + `pixi.lock`, `environment.yml` | Imagen Docker, wheel, `requirements.lock` |
 | Dependencias | También desarrollo (Jupyter, pytest, ruff) | Solo runtime |
 | Reproducibilidad | Lockfile del proyecto | Lockfile + imagen inmutable |
@@ -200,7 +210,7 @@ En este módulo **no es la ruta de ejecución**: no resuelve bien paquetes nativ
 |---|---|
 | Proyecto del módulo con notebooks, ML y GPU | **Pixi** |
 | Script pequeño de un día, solo paquetes Python | `venv` + `pip` o `uv` |
-| Reutilizar un entorno de experimentación entre prácticas | **conda/mamba** con un `environment.yml` |
+| Reutilizar un entorno de experimentación entre prácticas | **conda** con un `environment.yml` (`mamba`/`micromamba` son opcionales) |
 | Varias variantes del mismo proyecto (base, ML, GPU) | **Pixi** (features + entornos) |
 | Servicio o API en producción | **Docker** construido desde un lock (uv/pip) |
 | Trabajo por lotes con GPU | **Docker** con la variante CUDA validada |

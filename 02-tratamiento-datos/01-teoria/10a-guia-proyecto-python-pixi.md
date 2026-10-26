@@ -32,6 +32,11 @@ conda deactivate
 
 El `environment.yml` de la raíz está sobredimensionado para UD2: no debe presentarse como entorno mínimo. No se mezclan instalaciones Pixi y conda sin criterio; se elige una ruta para el proyecto y se documenta.
 
+**Nota sobre mamba:** desde conda 23.10, `conda` usa por defecto el solver
+`conda-libmamba-solver`, basado en la tecnología de `mamba`. `mamba` y
+`micromamba` siguen existiendo como interfaces alternativas, pero no es necesario
+instalarlos aparte para seguir esta guía.
+
 ## Pixi o conda
 
 Pixi es preferible cuando el proyecto viaja con `pixi.toml`/`pixi.lock` y necesita features o entornos por proyecto. Conda resulta útil para experimentar con un entorno nombrado y paquetes nativos. En ambos casos se conserva la especificación y se actualiza el entorno, en lugar de crear uno por cada prueba.
