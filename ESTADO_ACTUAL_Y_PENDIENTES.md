@@ -9,6 +9,12 @@
 - [x] La guía existente `03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md` queda identificada como guía específica de ML/UD3; navegación y guion de la novena clase actualizados.
 - [ ] Decidir si se declara Matplotlib en `base` o en un entorno/feature específico de UD2 en `pixi.toml`; si se hace, regenerar `pixi.lock`.
 
+## Preparación de Moodle — sesión de entornos UD2 — 2026-10-26
+
+- [x] Alineado `02-tratamiento-datos/03-practicas/00-entornos-hazlo-tu.md` con UD2: Pixi `default`, NumPy/pandas y ejercicio de proyecto de tratamiento de datos; retiradas las referencias a `ud3`, scikit-learn y `ud3-pycaret`.
+- [x] Definido el paquete temporal `Moodle/02-UD2/`: documentación base, guía de proyecto UD2 y ejercicio entregable; no se incluye ningún notebook porque la sesión trabaja comandos y razonamiento sobre entornos.
+- [ ] Subir a Moodle los tres recursos prioritarios y configurar «Entornos Python — hazlo tú» como tarea binaria (hecho/no hecho), permitiendo terminarla después de clase.
+
 ## Compatibilidad de estilos Matplotlib — 2026-10-26
 
 - [x] Sustituido el estilo obsoleto `seaborn` por `seaborn-v0_8` en la teoría y el notebook de fundamentos de Matplotlib.

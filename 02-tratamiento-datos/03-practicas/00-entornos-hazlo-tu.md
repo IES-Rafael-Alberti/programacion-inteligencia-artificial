@@ -51,22 +51,21 @@ Desde la raíz del módulo:
 
 ```bash
 pixi run --environment default python --version
-pixi run --environment ud3 python -c "import sklearn; print(sklearn.__version__)"
-pixi run --environment ud3-pycaret python --version
-pixi list --environment ud3
+pixi run --environment default python -c "import numpy, pandas; print(numpy.__version__, pandas.__version__)"
+pixi list --environment default
 ```
 
 Responde:
 
-- ¿Qué diferencia hay entre `default`, `ud3` y `ud3-pycaret`?
-- ¿Por qué `ud3-pycaret` no incluye la feature `base`?
+- ¿Qué dependencias incluye `default` y qué herramienta las gestiona?
+- ¿Por qué Matplotlib no está todavía disponible en `default`?
 - ¿Qué dos ficheros hay que versionar para reproducir el entorno? ¿Cuál **no** se versiona?
 
 ## 4. Elige herramienta (5 min)
 
 Para cada caso, escribe la herramienta y una razón:
 
-1. Proyecto final con notebooks, scikit-learn y una variante GPU.
+1. Proyecto de UD2 con notebooks, NumPy, pandas y Matplotlib.
 2. Cuatro prácticas de experimentación que comparten el 90 % de dependencias.
 3. Script de 20 líneas que solo usa `requests`.
 4. Librería que quieres publicar en PyPI.

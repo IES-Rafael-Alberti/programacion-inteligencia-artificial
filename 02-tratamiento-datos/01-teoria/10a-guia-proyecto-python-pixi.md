@@ -40,10 +40,10 @@ Una estructura razonable es:
 
 ```text
 proyecto-datos/
-├── data/
-├── notebooks/
-├── src/          # o scripts/
-└── outputs/figures/
+|-- data/
+|-- notebooks/
+|-- src/          # o scripts/
+`-- outputs/figures/
 ```
 
 ### Checklist reproducible
