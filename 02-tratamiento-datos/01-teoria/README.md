@@ -32,7 +32,7 @@
 - **Core obligatorio**: Pandas (`01–05`), Matplotlib (`06–08`) y Seaborn (`09`).
 - **Complementos de visualización**: Plotly (`14b`) como interactividad rápida; Altair/hvPlot/Panel (`10`) como nivel 2.
 - **Alternativas de datos**: Polars (`12–13`), DuckDB (`14c`) y cuDF/RAPIDS (`11`) como caso avanzado NVIDIA/CUDA.
-- La teoría **01–03** cubre Pandas base; los ejemplos asociados están en `../02-ejemplos/01_pandas_fundamentos.ipynb` y `02_pandas_eda_visualizacion.ipynb`.
+- La teoría **01–03** cubre Pandas base; los ejemplos asociados están en `../02-ejemplos/01_pandas_fundamentos.ipynb` y `02_eda_pandas.ipynb` (EDA sin gráficas, comparación con NumPy). Tras introducir Matplotlib, continuar con `03_pandas_eda_visualizacion.ipynb`.
 - Los documentos **06–08** son tres enfoques de Matplotlib: fundamentos (`06`), tutorial parte 1 (`07`) y parte 2 (`08`). No son excluyentes.
 - **10** documenta Altair y hvPlot; los ejemplos `15_altair_chuleta.ipynb` y `16_altair_online_retail.ipynb` los complementan, pero no sustituyen a Matplotlib/Seaborn/Plotly.
 - Las guías **16–19** son material de planificación docente, no teoría de alumno.
