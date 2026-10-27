@@ -4,10 +4,11 @@ Este bloque permite trabajar los mismos conceptos de tratamiento de datos desde 
 
 ## Decisión docente
 
-- **Estado:** material opcional de ampliación reforzado para competencia operativa básica.
+- **Estado vigente (decisión del profesor):** fuera del itinerario ordinario por ahora. Disponible únicamente como ampliación voluntaria para quien quiera aprender más R.
 - **Rol:** contraste Pandas ↔ dplyr para alumnado que quiera ver R como herramienta de análisis de datos.
 - **No sustituye** al eje obligatorio de UD2: Python, Pandas, Matplotlib y Seaborn.
-- **Uso recomendado:** refuerzo, ampliación o comparación metodológica, no práctica principal si el grupo aún no domina Pandas. Si se quiere que el alumnado se defienda profesionalmente con R, hay que ampliar este itinerario según `../../00-r-itinerario-laboral.md`.
+- **Uso actual:** consulta y práctica autónoma voluntaria, sin entrega obligatoria ni evaluación. El enunciado `07_entrega_itinerario_R.md` queda como propuesta de ampliación, no como tarea encargada. Una futura activación evaluable requiere una decisión expresa del profesor.
+- **Cómo aprender con los `.Rmd`:** el código está prácticamente resuelto; ejecútalo por bloques, interpreta los resultados y prueba modificaciones. Las preguntas y los retos permiten comprobar lo entendido. Son guías de autoaprendizaje, no ejercicios en blanco para entregar.
 
 ## Camino rápido
 

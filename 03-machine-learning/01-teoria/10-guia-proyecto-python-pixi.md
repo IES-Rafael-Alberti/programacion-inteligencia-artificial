@@ -19,7 +19,7 @@ pixi install --environment ud3-pycaret
 pixi run --environment ud3-pycaret jupyter lab
 ```
 
-Consulta `docs/manual-pixi-pia.md` para la instalación de Pixi, los entornos disponibles y la selección del intérprete en VS Code.
+Consulta el [manual de Pixi introducido en UD2](../../02-tratamiento-datos/01-teoria/00b-manual-pixi-pia.md) para la instalación, los entornos disponibles y la selección del intérprete en VS Code. El [manual de conda](../../02-tratamiento-datos/01-teoria/00c-manual-conda-pia.md) sirve de referencia para la ruta alternativa; aquí se desarrollan las necesidades específicas de ML.
 
 ## Estructura recomendada
 

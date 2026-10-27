@@ -1,6 +1,10 @@
 # Entornos de Python: qué herramienta elegir
 
-> Documento de apoyo para la sesión de entornos de **UD2**. Se imparte después de UD1: el alumnado ya ha usado NumPy y pandas y puede ver el problema real. No sustituye al [manual práctico de Pixi](manual-pixi-pia.md): lo sitúa junto a las demás herramientas y explica **por qué** no instalamos las dependencias del módulo en el Python del sistema.
+> Documento base de la sesión de entornos de **UD2**. Se imparte después de UD1: el alumnado ya ha usado NumPy y pandas y puede ver el problema real. Presenta el mapa y el criterio de elección; el detalle operativo está en el [manual de Pixi](00b-manual-pixi-pia.md) y el [manual de conda](00c-manual-conda-pia.md). Estos materiales se retomarán en las unidades posteriores conforme se necesiten sus herramientas.
+
+## Cómo usar este documento en clase
+
+Empieza por el **[taller práctico de instalación y pruebas](../03-practicas/00-entornos-hazlo-tu.md)**. Trabaja una herramienta cada vez: **venv + pip → uv → conda → Pixi**, con instalación o comprobación, configuración, ejemplo ejecutado, prueba y modificación. Este documento sirve para consultar dudas y para comparar **ventajas, inconvenientes y cuándo usar cada opción después de probarla**; no es una exposición previa que haya que escuchar completa antes de empezar.
 
 ## 1. El problema
 
@@ -37,13 +41,13 @@ Un **entorno** es una carpeta aislada con su propio intérprete y sus propios pa
 | **pip** | Paquetes de PyPI | Universal y sencillo | No aísla por sí solo; no gestiona Python | Instalar dentro de un entorno |
 | **venv** | Entorno virtual ligero (stdlib) | Sin instalar nada extra | Solo paquetes Python; no resuelve binarios | Proyectos pequeños o pruebas |
 | **uv** | Entorno, Python y paquetes | Muy rápido; lockfile | Ecosistema Python | Alternativa moderna a pip/venv |
-| **conda / mamba** | Python, paquetes y binarios | Paquetes nativos; entornos reutilizables | Más pesado; resolución lenta sin mamba | Experimentación y compatibilidad |
+| **conda** | Entornos, Python, paquetes y binarios | Paquetes nativos; entornos reutilizables | Más pesado que `venv`; depende de la configuración de canales | Experimentación y compatibilidad |
 | **Pixi** | Proyecto completo (conda + PyPI) | Reproducible, por proyecto, features y entornos | Curva de aprendizaje inicial | **Herramienta principal** |
 | **Poetry** | Dependencias y empaquetado | Publicar paquetes; `pyproject.toml` | No resuelve binarios nativos | Solo si se publica un paquete |
 
 **Idea clave:** pip, venv, uv y Poetry trabajan sobre todo con paquetes **Python**; conda y Pixi también resuelven **paquetes nativos** y versiones de Python. Por eso el módulo usa Pixi: hay CUDA, BLAS, compiladores y paquetes que no son Python puro.
 
-La comparación rápida de Pixi con `uv` y Conda ya está en [manual-pixi-pia.md](manual-pixi-pia.md); aquí solo se amplía el mapa completo.
+La comparación rápida de Pixi con `uv` y conda está en el [manual de Pixi](00b-manual-pixi-pia.md); aquí se amplía el mapa completo.
 
 ## 4. pip y venv: el mínimo
 
@@ -52,21 +56,23 @@ La comparación rápida de Pixi con `uv` y Conda ya está en [manual-pixi-pia.md
 ```bash
 python -m venv .venv
 source .venv/bin/activate        # Linux / macOS
-.venv\Scripts\activate           # Windows (PowerShell o CMD)
+.venv\Scripts\Activate.ps1       # Windows PowerShell
+.venv\Scripts\activate.bat       # Windows CMD
 
-which python                     # Linux / macOS
-where python                     # Windows
+python -c "import sys; print(sys.executable)"
 
-pip install numpy pandas
-pip list
+python -m pip install numpy pandas
+python -m pip list
 deactivate
 ```
 
+Ejecuta solo la activación correspondiente a tu shell. Para crear el entorno, en Linux/macOS puede ser necesario `python3 -m venv .venv` y en Windows `py -m venv .venv`. La práctica incluye instalación de Python y resolución de incidencias.
+
 Sin activar ningún entorno, `pip install` escribe en el Python del sistema (o del usuario). Ese es el error que queremos evitar.
 
-`uv` hace lo mismo con lockfile y mucha más velocidad (`uv venv`, `uv add`, `uv run`, `uv sync`). Es válido para proyectos pequeños, pero **no sustituye a Pixi** cuando hacen falta paquetes nativos o varios entornos compuestos.
+`uv` también ofrece un flujo de proyecto con `pyproject.toml`, `uv.lock`, `uv add`, `uv run` y `uv sync`. En el taller se instala y se prueba ese flujo; no se limita a mencionarlo. Es una opción para proyectos Python de distintos tamaños, mientras que Pixi incorpora además la gestión de paquetes conda y entornos compuestos. La velocidad depende también de la red y la caché: las descargas del aula no son un benchmark.
 
-## 5. Conda y mamba: entornos reutilizables
+## 5. Conda, libmamba y mamba: entornos reutilizables
 
 Conda gestiona entornos con paquetes Python y nativos. La especificación vive en un `environment.yml`:
 
@@ -89,7 +95,19 @@ conda list
 conda deactivate
 ```
 
-El repositorio ya trae ejemplos reales: [`pia-ud1.yml`](../01-fundamentos-python/05-recursos/pia-ud1.yml) y [`environment.yml`](https://github.com/IES-Rafael-Alberti/programacion-inteligencia-artificial/blob/main/environment.yml).
+### ¿Dónde encaja mamba hoy?
+
+Desde **conda 23.10**, `conda` usa por defecto el solver `conda-libmamba-solver`,
+basado en la misma tecnología de resolución que utilizan `mamba` y `micromamba`.
+Por eso no hace falta instalar `mamba` aparte para obtener una resolución moderna:
+se puede seguir usando `conda` con sus comandos habituales.
+
+`mamba` sigue siendo una interfaz de línea de comandos compatible con conda y
+`micromamba` es una alternativa más pequeña. Si están instalados, muchos comandos
+se escriben sustituyendo `conda` por `mamba`; para esta asignatura no son una
+dependencia adicional ni una ruta distinta que el alumnado tenga que instalar.
+
+El repositorio ya trae ejemplos reales: [`pia-ud1.yml`](../../01-fundamentos-python/05-recursos/pia-ud1.yml) y [`environment.yml`](https://github.com/IES-Rafael-Alberti/programacion-inteligencia-artificial/blob/main/environment.yml). El [manual de conda de UD2](00c-manual-conda-pia.md) desarrolla la instalación, los comandos, Jupyter y los problemas frecuentes. La [guía de proyecto de UD2](10a-guia-proyecto-python-pixi.md) aplica las dos rutas al tratamiento de datos; la guía ML queda reservada a UD3.
 
 **Reutilizar sin multiplicar entornos.** La tentación es crear un entorno por experimento. Mejor:
 
@@ -98,8 +116,6 @@ El repositorio ya trae ejemplos reales: [`pia-ud1.yml`](../01-fundamentos-python
 - Exportar una especificación portable con `conda env export --from-history > environment.yml`.
 - Duplicar (`conda create --clone`) solo para congelar una versión que comparar.
 - Para reproducibilidad estricta, `conda-lock` genera un lockfile por plataforma.
-
-`mamba` es un reemplazo compatible y mucho más rápido del solver: los mismos comandos con `mamba` delante.
 
 **Límite honesto:** conda no compone variantes de un mismo proyecto tan limpiamente como Pixi. Si necesitas «base + ML», «base + GPU» y «base + AutoML», acabas con varios entornos o con un `environment.yml` inflado.
 
@@ -115,7 +131,7 @@ En este módulo se usa para los proyectos porque:
 - **Tareas:** `pixi run` evita depender de que el alumnado active el entorno correcto.
 - **Aísla de verdad:** los entornos viven en el proyecto, no en una lista global.
 
-Todo el detalle (instalación, conceptos, comandos, features, entornos, problemas frecuentes y buenas prácticas) está en **[manual-pixi-pia.md](manual-pixi-pia.md)**. El proyecto real del curso es el [`pixi.toml`](https://github.com/IES-Rafael-Alberti/programacion-inteligencia-artificial/blob/main/pixi.toml) de la raíz, y el flujo de trabajo con Pixi en un proyecto de ML está en [10-guia-proyecto-python-pixi.md](../03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md).
+Todo el detalle (instalación, conceptos, comandos, features, entornos, problemas frecuentes y buenas prácticas) está en el **[manual de Pixi de UD2](00b-manual-pixi-pia.md)**. El proyecto real del curso es el [`pixi.toml`](https://github.com/IES-Rafael-Alberti/programacion-inteligencia-artificial/blob/main/pixi.toml) de la raíz. La [guía de proyecto de UD2](10a-guia-proyecto-python-pixi.md) cubre tratamiento de datos; la [guía de proyecto ML/UD3](../../03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md) es específica de aprendizaje automático.
 
 **Inconvenientes:** hay que instalarlo una vez y entender `pixi run`; la primera resolución puede tardar y ocupar disco; no es la herramienta habitual en todas las empresas, así que conviene saber también conda y pip.
 
@@ -127,7 +143,7 @@ Experimentar y desplegar tienen requisitos distintos. El error típico es llevar
 |---|---|---|
 | Objetivo | Probar, comparar, romper y repetir | Ejecutar igual, sin intervención manual |
 | Duración | Cambia cada semana | Congelado por versión |
-| Herramientas | Pixi, conda/mamba, venv + uv, Jupyter | pip/uv, Poetry, Docker, conda-lock |
+| Herramientas | Pixi, conda (con `mamba`/`micromamba` opcionales), venv + uv, Jupyter | pip/uv, Poetry, Docker, conda-lock |
 | Artefacto | `pixi.toml` + `pixi.lock`, `environment.yml` | Imagen Docker, wheel, `requirements.lock` |
 | Dependencias | También desarrollo (Jupyter, pytest, ruff) | Solo runtime |
 | Reproducibilidad | Lockfile del proyecto | Lockfile + imagen inmutable |
@@ -200,7 +216,7 @@ En este módulo **no es la ruta de ejecución**: no resuelve bien paquetes nativ
 |---|---|
 | Proyecto del módulo con notebooks, ML y GPU | **Pixi** |
 | Script pequeño de un día, solo paquetes Python | `venv` + `pip` o `uv` |
-| Reutilizar un entorno de experimentación entre prácticas | **conda/mamba** con un `environment.yml` |
+| Reutilizar un entorno de experimentación entre prácticas | **conda** con un `environment.yml` (`mamba`/`micromamba` son opcionales) |
 | Varias variantes del mismo proyecto (base, ML, GPU) | **Pixi** (features + entornos) |
 | Servicio o API en producción | **Docker** construido desde un lock (uv/pip) |
 | Trabajo por lotes con GPU | **Docker** con la variante CUDA validada |
@@ -232,7 +248,9 @@ En este módulo **no es la ruta de ejecución**: no resuelve bien paquetes nativ
 
 ## Material relacionado
 
-- [Manual práctico de Pixi para PIA](manual-pixi-pia.md)
-- [Guía de inicio del curso](guia-inicio.md): qué entorno usar en cada unidad.
-- [Guía de proyecto Python con Pixi](../03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md)
-- [Chuleta del stack convergente](../07-convergencia-herramientas/05-recursos/cheatsheet_stack_convergente.md)
+- [Manual práctico de Pixi para PIA](00b-manual-pixi-pia.md)
+- [Manual práctico de conda para PIA](00c-manual-conda-pia.md)
+- [Guía de inicio del curso](https://ies-rafael-alberti.github.io/programacion-inteligencia-artificial/guia-inicio/): qué entorno usar en cada unidad.
+- [Guía de proyecto UD2 con Python, Pixi y conda](10a-guia-proyecto-python-pixi.md)
+- [Guía de proyecto ML/UD3 con Python y Pixi](../../03-machine-learning/01-teoria/10-guia-proyecto-python-pixi.md)
+- [Chuleta del stack convergente](../../07-convergencia-herramientas/05-recursos/cheatsheet_stack_convergente.md)

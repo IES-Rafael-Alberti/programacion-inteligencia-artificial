@@ -81,5 +81,7 @@ Pendientes no bloqueantes:
 - [Guía del proyecto final](12-proyecto-integrado/01-teoria/proyecto.md)
 - [Evaluación del proyecto integrado](12-proyecto-integrado/01-teoria/evaluacion.md)
 - [Checkpoints del proyecto final](12-proyecto-integrado/01-teoria/checkpoints_proyecto_final.md)
-- [Manual de Pixi para PIA](docs/manual-pixi-pia.md)
+- [Entornos de Python — UD2](02-tratamiento-datos/01-teoria/00a-entornos-python.md)
+- [Manual de Pixi para PIA — UD2](02-tratamiento-datos/01-teoria/00b-manual-pixi-pia.md)
+- [Manual de conda para PIA — UD2](02-tratamiento-datos/01-teoria/00c-manual-conda-pia.md)
 - [Normas de entrega y uso de IA](docs/normas-entregas-y-uso-de-ia.md)

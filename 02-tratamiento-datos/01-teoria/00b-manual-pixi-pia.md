@@ -1,6 +1,10 @@
 # Manual práctico de Pixi para PIA
 
-Este manual introduce **Pixi** desde cero y propone un diseño piloto para gestionar los entornos del módulo PIA. No afirma que el curso ya se haya migrado: el ejemplo debe probarse con las dependencias reales antes de sustituir `environment.yml`.
+Este manual introduce **Pixi** desde cero en **UD2** y se retoma en las unidades posteriores conforme hagan falta más entornos. Se apoya en el [mapa de herramientas de Python](00a-entornos-python.md); para la alternativa tradicional, consulta el [manual de conda](00c-manual-conda-pia.md).
+
+El repositorio ya incluye `pixi.toml` y `pixi.lock`. Los ejemplos de diseño no equivalen a una migración completa: hay que comprobar las dependencias de cada actividad antes de sustituir `environment.yml`. Para empezar con datos tabulares, sigue la [guía de proyecto de UD2](10a-guia-proyecto-python-pixi.md); los apartados de ML y GPU se consultarán cuando se utilicen.
+
+**Primera sesión:** sigue el [taller práctico](../03-practicas/00-entornos-hazlo-tu.md), que instala Pixi y crea un proyecto pequeño con un ejemplo comprobable. Después usa este manual para ampliar; no hace falta resolver todos los entornos del curso para aprender el flujo básico.
 
 ## Ruta rápida
 
@@ -43,7 +47,13 @@ pixi --version
 pixi info
 ```
 
-En Windows, utiliza el método documentado para PowerShell o WinGet en la [guía oficial](https://pixi.sh/latest/installation/).
+En Windows (PowerShell):
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm -useb https://pixi.sh/install.ps1 | iex"
+```
+
+Abre una terminal nueva y comprueba `pixi --version`. Como alternativa, la [guía oficial](https://pixi.sh/latest/installation/) documenta la instalación con WinGet. Usa un solo método; no reinstales si ya funciona.
 
 ## Conceptos esenciales
 
@@ -164,7 +174,7 @@ pixi install --environment ud3-flaml
 pixi run --environment ud3-flaml python 03-machine-learning/02-ejemplos/flaml/flaml_holdout_sintetico.py
 ```
 
-El ejemplo reserva el 20 % de datos sintéticos antes de la búsqueda, limita el tiempo y usa F1. Sus métricas solo son una comprobación técnica: no se interpretan ni se entregan. Consulta su [README](../03-machine-learning/02-ejemplos/flaml/README.md) para el patrón completo.
+El ejemplo reserva el 20 % de datos sintéticos antes de la búsqueda, limita el tiempo y usa F1. Sus métricas solo son una comprobación técnica: no se interpretan ni se entregan. Consulta su [README](../../03-machine-learning/02-ejemplos/flaml/README.md) para el patrón completo.
 
 ## VS Code y Jupyter
 

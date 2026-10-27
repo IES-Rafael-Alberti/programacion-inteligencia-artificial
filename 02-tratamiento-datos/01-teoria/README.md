@@ -15,6 +15,7 @@
 | 08 | Matplotlib — parte 2: personalización | `08-matplotlib-parte2.md` |
 | 09 | Seaborn — mega chuleta | `09-seaborn.md` |
 | 10 | Altair y hvPlot — visualización declarativa | `10-altair-hvplot.md` |
+| 10a | Guía de proyecto UD2 con Python, Pixi y conda | `10a-guia-proyecto-python-pixi.md` |
 | 11 | cuDF — introducción (GPU) | `11-cudf-introduccion.md` |
 | 12 | Polars — introducción | `12-polars-intro.md` |
 | 13 | Polars vs Pandas / PyArrow | `13-polars-vs-pandas.md` |
@@ -26,6 +27,7 @@
 | 17 | Guía docente 4 (visualización) | `17-guia-visualizacion-avanzada.md` |
 | 18 | Guía docente 5 (Polars y DuckDB) | `18-guia-polars-duckdb.md` |
 | 19 | Guía de planificación avanzada | `19-guia-pandas-polars-visualizacion.md` |
+| 20 | Pandas 3 — novedades y nueva forma de trabajar | `20-pandas-3-novedades.md` |
 
 ## Notas
 

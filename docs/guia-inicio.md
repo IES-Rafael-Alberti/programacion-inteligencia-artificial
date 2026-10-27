@@ -35,7 +35,7 @@ No existe un único entorno válido para todas las unidades. Utiliza el nombre q
 
 Si una actividad no indica un entorno Pixi, sigue el procedimiento de su README o enunciado: puede utilizar un fichero de requisitos, un entorno propio o una herramienta externa. No asumas que `default` contiene las dependencias de todo el curso.
 
-Consulta el [manual práctico de Pixi](manual-pixi-pia.md) para instalar la herramienta y entender los entornos disponibles.
+La documentación de entornos se introduce en **UD2** y se retoma a lo largo del módulo: [mapa de herramientas](02-tratamiento-datos/01-teoria/00a-entornos-python.md), [manual práctico de Pixi](02-tratamiento-datos/01-teoria/00b-manual-pixi-pia.md) y [manual práctico de conda](02-tratamiento-datos/01-teoria/00c-manual-conda-pia.md).
 
 ## Ejecutar notebooks y prácticas
 
