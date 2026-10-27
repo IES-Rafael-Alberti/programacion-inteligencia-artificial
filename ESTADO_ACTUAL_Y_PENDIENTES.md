@@ -24,6 +24,12 @@
 - [ ] Añadir al `pixi.toml` un entorno con AutoGluon (soporta Python 3.10–3.13) y la dependencia Optuna para el flujo manual, cuando se prepare el bloque de AutoML de UD3. Revisar tamaños/dependencias antes de componer el entorno.
 - Siguiente paso: al preparar P2/UD3, diseñar el reparto concreto clase vs autoaprendizaje, actualizar material/guión y validar los entornos en el `pixi.toml`.
 
+## Equipo del profesorado: Pixi instalado y uv al día — 2026-10-27
+
+- [x] **Pixi instalado en este equipo** con el instalador oficial (`~/.pixi/bin/pixi`, versión **0.83.0**, `PATH` añadido a `~/.zshrc`). Se instala global a nivel de usuario, no dentro de un entorno conda. Antes de este paso, pixi no estaba presente en esta máquina (las pruebas/doc originales del taller se hicieron en el equipo del instituto).
+- [x] **uv actualizado a 0.13.6** vía pipx. La salida intermedia "No module named pip" de `pipx upgrade uv` es ruido de un paso interno; el upgrade completa correctamente (verificado con `pixi`/`uv --version`).
+- Siguiente paso: ninguno. Anotación de estado del equipo por si se retoma el taller en esta máquina.
+
 ## Decisión docente: R/Titanic como ampliación voluntaria — 2026-10-27
 
 - [x] El profesor deja `02-tratamiento-datos/03-practicas/r_exercises_titanic_with_tests/` fuera del itinerario ordinario por ahora. Se conserva como material guiado de autoaprendizaje para quien quiera aprender más R: código prácticamente resuelto para ejecutar, comprender y modificar, sin entrega obligatoria ni evaluación; actualizado su README.
