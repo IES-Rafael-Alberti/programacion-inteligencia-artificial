@@ -2,7 +2,7 @@
 
 **Primero lo hacemos; después comparamos.** Trabajaremos, por este orden, con **venv + pip → uv → conda → Pixi**. En cada bloque instalarás o comprobarás la herramienta, prepararás un entorno, ejecutarás el mismo análisis y harás una modificación. No basta con mirar una demostración o explicar qué haría un comando.
 
-**Entrega:** un registro `registro-entornos.md` o PDF en Moodle. **Valoración binaria:** hecho / no hecho, como evidencia de seguimiento; no es una prueba de aciertos. Entrega lo realizado al acabar la sesión y completa después lo que falte. No marques un bloque como terminado si solo has descargado el instalador.
+**Entrega:** consulta el documento [`entrega-entornos.md`](entrega-entornos.md) adjunto en la misma carpeta: define **exactamente qué hay que entregar** y trae la plantilla del registro. **Valoración binaria:** hecho / no hecho, como evidencia de seguimiento; no es una prueba de aciertos. Entrega lo realizado al acabar la sesión y completa después lo que falte. No marques un bloque como terminado si solo has descargado el instalador.
 
 Puedes resolver incidencias con tu pareja, pero cada estudiante ejecuta los pasos en su equipo y conserva su registro. Si una restricción del equipo lo impide, realiza el bloque en el equipo de la pareja por turnos y anota qué queda pendiente en el tuyo.
 

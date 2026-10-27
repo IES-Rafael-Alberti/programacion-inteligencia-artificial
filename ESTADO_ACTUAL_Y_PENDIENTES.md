@@ -24,6 +24,12 @@
 - [ ] Añadir al `pixi.toml` un entorno con AutoGluon (soporta Python 3.10–3.13) y la dependencia Optuna para el flujo manual, cuando se prepare el bloque de AutoML de UD3. Revisar tamaños/dependencias antes de componer el entorno.
 - Siguiente paso: al preparar P2/UD3, diseñar el reparto concreto clase vs autoaprendizaje, actualizar material/guión y validar los entornos en el `pixi.toml`.
 
+## Convención: entregables con «entrega.md» — 2026-10-27
+
+- [x] **Convención establecida:** toda tarea/actividad del curso que requiera una entrega llevará un documento de entrega **«al estilo de años anteriores»**, que defina **con pelos y señales** lo que se entrega: lista de control y, si procede, plantilla a rellenar. Objetivo: evitar que cada alumno entregue cosas distintas.
+- [x] **Primera aplicación — taller de entornos:** creado `02-tratamiento-datos/03-practicas/entrega-entornos.md` (lista de control + plantilla del registro + reglas rápidas) y enlazado desde `00-entornos-hazlo-tu.md`. Estamos **tarde** para esta tarea (pendiente publicar en Moodle), pero el documento queda listo.
+- [ ] **Pendiente:** garantizar que **todas** las tareas con entregable tengan su `entrega.md` antes de proponerse al alumnado. Al preparar cada tarea: revisar si ya hay un documento de entrega/criterios y, si no, crear el `entrega.md` (lista o plantilla). Aplicar al resto de tareas del curso.
+
 ## Equipo del profesorado: Pixi instalado y uv al día — 2026-10-27
 
 - [x] **Pixi instalado en este equipo** con el instalador oficial (`~/.pixi/bin/pixi`, versión **0.83.0**, `PATH` añadido a `~/.zshrc`). Se instala global a nivel de usuario, no dentro de un entorno conda. Antes de este paso, pixi no estaba presente en esta máquina (las pruebas/doc originales del taller se hicieron en el equipo del instituto).
