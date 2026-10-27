@@ -5,8 +5,9 @@
 
 ## Equipo del profesorado: instalación de uv — 2026-10-27
 
-- [x] **uv (0.5.18) está instalado vía pipx, no con el instalador oficial (curl/astral.sh).** Ruta: `~/.local/bin/uv` es un symlink a `~/.local/pipx/venvs/uv/bin/uv`. El paquete vive en un venv aislado de pipx y no depende de librerías de conda base. Python 3.10.13 del sistema, instalado desde PyPI.
-- [x] Decisión: **se deja como está**, funciona correctamente e independiente de conda/Pixi. Si algún día hubiera problemas y se quisiera migrar a la instalación oficial: `pipx uninstall uv` y después `curl -LsSf https://astral.sh/uv/install.sh | sh`.
+- [x] **uv (0.13.6) está instalado vía pipx, no con el instalador oficial (curl/astral.sh).** Ruta: `~/.local/bin/uv` es un symlink a `~/.local/pipx/venvs/uv/bin/uv`. El paquete vive en un venv aislado de pipx y usa Python 3.12.3, sin depender de librerías de conda base.
+- [x] **Reparada la instalación el 2026-10-27:** el venv anterior había perdido `pip` y `pipx upgrade uv` fallaba; `pipx reinstall uv` lo recreó correctamente. `pipx upgrade uv` queda verificado.
+- [x] Decisión: **se mantiene vía pipx**, independiente de conda/Pixi. Si algún día se quisiera migrar a la instalación oficial: `pipx uninstall uv` y después `curl -LsSf https://astral.sh/uv/install.sh | sh`.
 - Siguiente paso: ninguno. Anotación únicamente para recordar cómo se instaló (el equipo del alumnado usará la vía oficial del taller `00-entornos-hazlo-tu.md`).
 
 ## Documento de pandas 3 para el alumnado — 2026-10-27
