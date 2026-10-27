@@ -9,6 +9,14 @@
 - [x] Decisión: **se deja como está**, funciona correctamente e independiente de conda/Pixi. Si algún día hubiera problemas y se quisiera migrar a la instalación oficial: `pipx uninstall uv` y después `curl -LsSf https://astral.sh/uv/install.sh | sh`.
 - Siguiente paso: ninguno. Anotación únicamente para recordar cómo se instaló (el equipo del alumnado usará la vía oficial del taller `00-entornos-hazlo-tu.md`).
 
+## Decisión docente: AutoML en UD3 — añadir AutoGluon y scikit-learn+Optuna — 2026-10-27
+
+- [x] Se **añadirán** **AutoGluon** y **scikit-learn+Optuna** como alternativas de AutoML/prueba-y-mejora de modelos en UD3. **No se elimina nada de lo existente**: PyCaret (entorno aislado `ud3-pycaret`, Python 3.11) y FLAML (`ud3-flaml`) se conservan.
+- [x] PyCaret era el cuello de botella por quedar atrasado en versiones de Python (3.11, NumPy <1.27). Motivo de las nuevas opciones: tener herramientas al día con Python 3.12+ sin depender de un solo camino.
+- [x] Reparto previsto: **en clase** se verá una parte (a concretar cuando se prepare el bloque; los candidatos más alineados con el flujo manual de scikit-learn se enseñan en clase; el resto queda como **autoaprendizaje optativo**). La comparación automático vs manual (pipelines de scikit-learn) sigue siendo el eje docente.
+- [ ] Añadir al `pixi.toml` un entorno con AutoGluon (soporta Python 3.10–3.13) y la dependencia Optuna para el flujo manual, cuando se prepare el bloque de AutoML de UD3. Revisar tamaños/dependencias antes de componer el entorno.
+- Siguiente paso: al preparar P2/UD3, diseñar el reparto concreto clase vs autoaprendizaje, actualizar material/guión y validar los entornos en el `pixi.toml`.
+
 ## Decisión docente: R/Titanic como ampliación voluntaria — 2026-10-27
 
 - [x] El profesor deja `02-tratamiento-datos/03-practicas/r_exercises_titanic_with_tests/` fuera del itinerario ordinario por ahora. Se conserva como material guiado de autoaprendizaje para quien quiera aprender más R: código prácticamente resuelto para ejecutar, comprender y modificar, sin entrega obligatoria ni evaluación; actualizado su README.
