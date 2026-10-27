@@ -9,6 +9,12 @@
 - [x] Decisión: **se deja como está**, funciona correctamente e independiente de conda/Pixi. Si algún día hubiera problemas y se quisiera migrar a la instalación oficial: `pipx uninstall uv` y después `curl -LsSf https://astral.sh/uv/install.sh | sh`.
 - Siguiente paso: ninguno. Anotación únicamente para recordar cómo se instaló (el equipo del alumnado usará la vía oficial del taller `00-entornos-hazlo-tu.md`).
 
+## Documento de pandas 3 para el alumnado — 2026-10-27
+
+- [x] Creado `02-tratamiento-datos/01-teoria/20-pandas-3-novedades.md` (material público) explicando pandas 3.0/3.1: dtype `str` por defecto, Copy-on-Write y deprecado de `inplace=True`, con ejemplos adaptados al material del módulo, receta de migración en 4 pasos y enlaces a las guías oficiales de pandas (Migration Guides, string migration, PDEP-7/8/14).
+- [x] Añadida la entrada `20` al índice de `02-tratamiento-datos/01-teoria/README.md`.
+- [ ] **No migrar el material todavía:** el módulo sigue con pandas 2.3.x. Queda pendiente decidir cuándo (y en qué entornos) se sube a pandas 3 y aplicar la receta del documento a los notebooks con `inplace=`/filtros mutables (`01_pandas_fundamentos`, prácticas 04_Apply, notebooks EDA de UD3, chuletas).
+
 ## Decisión docente: AutoML en UD3 — añadir AutoGluon y scikit-learn+Optuna — 2026-10-27
 
 - [x] Se **añadirán** **AutoGluon** y **scikit-learn+Optuna** como alternativas de AutoML/prueba-y-mejora de modelos en UD3. **No se elimina nada de lo existente**: PyCaret (entorno aislado `ud3-pycaret`, Python 3.11) y FLAML (`ud3-flaml`) se conservan.

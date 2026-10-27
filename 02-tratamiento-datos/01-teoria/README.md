@@ -27,6 +27,7 @@
 | 17 | Guía docente 4 (visualización) | `17-guia-visualizacion-avanzada.md` |
 | 18 | Guía docente 5 (Polars y DuckDB) | `18-guia-polars-duckdb.md` |
 | 19 | Guía de planificación avanzada | `19-guia-pandas-polars-visualizacion.md` |
+| 20 | Pandas 3 — novedades y nueva forma de trabajar | `20-pandas-3-novedades.md` |
 
 ## Notas
 
