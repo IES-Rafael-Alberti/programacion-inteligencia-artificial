@@ -3,6 +3,12 @@
 **Fecha de snapshot:** 2026-10-27
 **Veredicto general:** **OPERATIVAMENTE TERMINADO / SEMICERRADO**
 
+## Equipo del profesorado: instalación de uv — 2026-10-27
+
+- [x] **uv (0.5.18) está instalado vía pipx, no con el instalador oficial (curl/astral.sh).** Ruta: `~/.local/bin/uv` es un symlink a `~/.local/pipx/venvs/uv/bin/uv`. El paquete vive en un venv aislado de pipx y no depende de librerías de conda base. Python 3.10.13 del sistema, instalado desde PyPI.
+- [x] Decisión: **se deja como está**, funciona correctamente e independiente de conda/Pixi. Si algún día hubiera problemas y se quisiera migrar a la instalación oficial: `pipx uninstall uv` y después `curl -LsSf https://astral.sh/uv/install.sh | sh`.
+- Siguiente paso: ninguno. Anotación únicamente para recordar cómo se instaló (el equipo del alumnado usará la vía oficial del taller `00-entornos-hazlo-tu.md`).
+
 ## Decisión docente: R/Titanic como ampliación voluntaria — 2026-10-27
 
 - [x] El profesor deja `02-tratamiento-datos/03-practicas/r_exercises_titanic_with_tests/` fuera del itinerario ordinario por ahora. Se conserva como material guiado de autoaprendizaje para quien quiera aprender más R: código prácticamente resuelto para ejecutar, comprender y modificar, sin entrega obligatoria ni evaluación; actualizado su README.
