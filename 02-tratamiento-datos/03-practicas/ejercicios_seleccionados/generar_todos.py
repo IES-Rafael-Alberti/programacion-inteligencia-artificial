@@ -63,7 +63,7 @@ notebooks_config = {
         "dataset": "Alcohol Consumption",
         "exercises": [
             ("Import", "Import pandas", "import pandas as pd", None, "assert 'pd' in dir()", "✓ OK"),
-            ("Load drinks", "https://raw.githubusercontent.com/justmarkham/DAT8/master/data/drinks.csv", "pd.read_csv()", "drinks", "assert drinks.shape[0] > 0", "✓ Cargado"),
+            ("Load drinks", "Archivo local: datasets/Alcohol_Consumption/drinks.csv", "pd.read_csv()", "drinks", "assert drinks.shape[0] > 0", "✓ Cargado"),
             ("Preview", "See first rows", ".head()", None, "print('OK')", "✓ Vista"),
             ("Beer by continent", "Which continent drinks most beer?", ".groupby('continent').beer.mean()", "beer_mean", "assert beer_mean is not None", "✓ OK"),
             ("Wine stats", "Stats for wine by continent", ".groupby('continent').wine.describe()", "wine_stats", "assert wine_stats is not None", "✓ OK"),
