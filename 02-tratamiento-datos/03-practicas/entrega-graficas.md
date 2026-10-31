@@ -4,30 +4,11 @@ Hay **dos actividades diferentes**, que se entregan cuando el profesor active ca
 
 **Valoración:** seguimiento hecho/no hecho, sin nota numérica de acierto. Entregar registra participación/asistencia; se revisa además qué apartados están completos. Si algo falla, registra el error y lo intentado. Puedes completar lo pendiente después de clase según indique el profesor. No se aplican los porcentajes de la rúbrica general de UD2 a estas actividades.
 
-## 1. Gráficas estáticas — al terminar el bloque Matplotlib
+## 1. Gráficas estáticas — piloto del caso
 
-Cuaderno: [02_matplotlib_hazlo_tu.ipynb](02_matplotlib_hazlo_tu.ipynb).
+La entrega de este bloque se define en [caso-informe-personal.md](caso-informe-personal.md): cuaderno `informe_personal.ipynb` y `salidas_estaticas/panel_personal.png`/`.svg`.
 
-Sube a la tarea Moodle **«Gráficas estáticas — hazlo tú»** un único `apellido_nombre_estaticas.zip` con:
-
-```text
-apellido_nombre_estaticas/
-├── 02_matplotlib_hazlo_tu.ipynb
-└── salidas_estaticas/
-    ├── panel_estatico.png
-    └── panel_estatico.svg
-```
-
-Lista de control:
-
-- [ ] Nombre, fecha e intérprete/versiones en el cuaderno.
-- [ ] Líneas, barras, histograma, dispersión y boxplot ejecutados.
-- [ ] Modificación de bins y alpha comentada; título, unidades y leyendas legibles.
-- [ ] Panel 2×2 con cuatro gráficos, anotación del salario máximo y dos archivos exportados.
-- [ ] PNG y SVG abiertos fuera del notebook; anotar si conservan la nitidez al ampliar.
-- [ ] Reflexiones, ticket y registro de lo completado/pendiente rellenos.
-
-Si la actividad sigue en curso, entrega el cuaderno con lo realmente hecho y el registro de pendientes; añade las exportaciones cuando llegues a ese apartado. No inventes que has generado un archivo.
+El cuaderno de trabajo es [02_matplotlib_hazlo_tu.ipynb](02_matplotlib_hazlo_tu.ipynb). La estructura del ZIP, la checklist y la valoración están en la ficha del caso; no se duplican aquí.
 
 ## 2. Gráficas interactivas — otra clase, después de Plotly
 

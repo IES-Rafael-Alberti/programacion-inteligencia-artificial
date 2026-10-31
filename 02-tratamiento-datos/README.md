@@ -13,7 +13,7 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 | Empieza aquí | [`01-teoria/00-guia-unidad.md`](01-teoria/00-guia-unidad.md), que ordena el núcleo de Pandas, EDA y visualización. |
 | Entornos de Python | [Mapa y criterio de elección](01-teoria/00a-entornos-python.md), [manual de Pixi](01-teoria/00b-manual-pixi-pia.md) y [manual de conda](01-teoria/00c-manual-conda-pia.md). Se introducen aquí y se retoman en las unidades posteriores. |
 | Taller de entornos | [Instalar, configurar y probar](03-practicas/00-entornos-hazlo-tu.md): venv + pip, uv, conda y Pixi, una herramienta cada vez; comparación después de la práctica. |
-| Cierre de gráficas estáticas | [Matplotlib — hazlo tú](03-practicas/02_matplotlib_hazlo_tu.ipynb), al terminar partes 1 y 2; se puede continuar en otra sesión. |
+| Piloto de Matplotlib | [Caso «informe de personal»](03-practicas/caso-informe-personal.md) y [cuaderno de trabajo](03-practicas/02_matplotlib_hazlo_tu.ipynb): cinco situaciones, checkpoints y panel final. |
 | Cierre de gráficas interactivas | [Plotly — hazlo tú](03-practicas/03_plotly_hazlo_tu.ipynb), para una clase posterior. Mismos datos para comparar formatos. [Archivos y listas de entrega](03-practicas/entrega-graficas.md). |
 | Práctica canónica | [`03-practicas/EDA_Visual_Practicas.ipynb`](03-practicas/EDA_Visual_Practicas.ipynb). Los ejercicios seleccionados y el itinerario R son refuerzo u opción docente. |
 | Entrega y evaluación | Notebook ejecutado, decisiones de limpieza y transformación justificadas, EDA, visualizaciones y conclusiones. [`04-evaluacion/rubrica.md`](04-evaluacion/rubrica.md) y [`04-evaluacion/checklist-entrega.md`](04-evaluacion/checklist-entrega.md) son una base revisable; el enunciado y la programación del grupo concretan la evaluación definitiva. El GIFT es un complemento si se activa en Moodle. |
@@ -82,7 +82,8 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 
 ## 03-practicas/
 
-- `02_matplotlib_hazlo_tu.ipynb` — cierre de gráficas estáticas: elección, panel, anotación y PNG/SVG; seguimiento hecho/no hecho.
+- `caso-informe-personal.md` — ficha del piloto de Matplotlib: caso, datos, orden de las situaciones y entregables.
+- `02_matplotlib_hazlo_tu.ipynb` — piloto del caso «informe de personal»: cinco situaciones, checkpoints, panel y exportación; seguimiento hecho/no hecho.
 - `03_plotly_hazlo_tu.ipynb` — cierre interactivo de otra clase: hover, facetas, leyenda y HTML autónomo.
 - `entrega-graficas.md` — dos entregas separadas, con estructura exacta de archivos y registro individual; se activan al cerrar cada bloque.
 - `EDA_Visual_Practicas.ipynb` — práctica integrada de visualización.
