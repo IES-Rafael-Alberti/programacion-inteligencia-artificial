@@ -4,6 +4,8 @@
 
 **Tarea Moodle:** «Sesión Titanic — Seaborn, Plotly y EDA».
 
+Como actividad cooperativa posterior, consulta la [comparativa de EDA con Polars, DuckDB y cuDF](actividad-comparativa-motores-titanic.md). Es una tarea distinta: cada estudiante trabaja un motor experto y luego comparte resultados en un grupo mixto.
+
 **Valoración:** hecho/no hecho y checklist; no es una prueba ni se corrige gráfico a gráfico.
 
 Trabaja en pareja, pero **cada estudiante entrega su propio cuaderno**.

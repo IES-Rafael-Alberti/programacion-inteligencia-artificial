@@ -83,6 +83,7 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 
 ## 03-practicas/
 
+- [Comparativa cooperativa de motores Titanic](03-practicas/actividad-comparativa-motores-titanic.md) — Polars, DuckDB y cuDF: tablas comunes, pregunta propia, grupos mixtos y exposición. [Entregas expertas/mixtas y checklist](03-practicas/entrega-comparativa-motores-titanic.md).
 - `caso-informe-personal.md` — ficha del piloto de Matplotlib: caso, datos, orden de las situaciones y entregables.
 - `02_matplotlib_hazlo_tu.ipynb` — piloto del caso «informe de personal»: cinco situaciones, checkpoints, panel y exportación; seguimiento hecho/no hecho.
 - `04_sesion_titanic.ipynb` — sesión de Seaborn, Plotly y EDA con Titanic, con preparación para ML y checkpoints.

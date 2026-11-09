@@ -2,7 +2,8 @@
 
 ## Objetivos de aprendizaje
 
-- Consolidar Pandas como referencia antes de comparar alternativas.
+- Presentar Polars como herramienta que puede usarse de forma independiente,
+  sin requerir Pandas.
 - Introducir **Polars** como DataFrame moderno orientado a rendimiento, Arrow y ejecución lazy.
 - Introducir **DuckDB** como motor SQL local para consultar CSV/Parquet sin servidor.
 - Distinguir cuándo una alternativa aporta valor y cuándo solo añade complejidad.
@@ -13,19 +14,25 @@
 |--------|---------|
 | Polars intro | `12-polars-intro.md`, `../02-ejemplos/24_polars_intro.ipynb` |
 | Polars operaciones | `../02-ejemplos/25_polars_operaciones.ipynb` |
+| Polars avanzado | `../02-ejemplos/26_polars_avanzado_con_graficos.ipynb` |
 | Polars vs Pandas | `13-polars-vs-pandas.md`, `../02-ejemplos/27_pandas_vs_polars.ipynb` |
 | DuckDB | `14c-duckdb-analitica-local.md`, `../02-ejemplos/23_duckdb_eda.ipynb` |
 
 ## Secuencia sugerida
 
-1. Resolver una tarea con Pandas.
-2. Repetirla con Polars para ver diferencias de API y mentalidad.
-3. Usar DuckDB para expresar una transformación equivalente con SQL.
-4. Comparar legibilidad, rendimiento percibido y coste cognitivo.
+1. Trabajar con Polars de forma nativa en los ejemplos 24 (introducción), 25
+   (operaciones) y 26 (Polars avanzado y gráficos).
+2. Continuar con el ejemplo 27 para comparar Pandas y Polars y practicar la
+   conversión o interoperabilidad únicamente cuando sea necesaria.
+3. Profundizar en Polars avanzado con el ejemplo 28 de transformaciones.
+4. Usar DuckDB para expresar una transformación equivalente con SQL y comparar
+   legibilidad, rendimiento percibido y coste cognitivo.
 
 ## Mensaje didáctico
 
-Pandas sigue siendo la base. Polars y DuckDB no se introducen para “sustituirlo todo”, sino para que el alumnado aprenda a elegir herramientas según el problema:
+Polars no necesita Pandas para los ejemplos nativos. La comparación y la
+interoperabilidad se introducen después, en el ejemplo 27, para que el alumnado
+aprenda a elegir herramientas según el problema:
 
 - Pandas: manipulación general en Python.
 - Polars: rendimiento, lazy execution y Arrow.

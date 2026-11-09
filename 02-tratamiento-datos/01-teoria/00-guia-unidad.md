@@ -63,6 +63,8 @@ Estos manuales viven en la unidad donde se explican por primera vez. No hace fal
 | 6 | Alternativas | `12-polars-intro.md`, `13-polars-vs-pandas.md`, `14c-duckdb-analitica-local.md` |
 | 7 | GPU | `11-cudf-introduccion.md`, `20_cudf_rapids_intro.ipynb` |
 
+Como práctica cooperativa de repaso, [EDA de Titanic con Polars, DuckDB y cuDF](../03-practicas/actividad-comparativa-motores-titanic.md) reúne los tres enfoques sobre el mismo CSV. No sustituye la [sesión Titanic con Pandas](../03-practicas/entrega-titanic.md) ni exige que cada estudiante ejecute los tres motores.
+
 ## Criterio de evaluación formativa
 
 Al finalizar la unidad, el alumnado debería poder:

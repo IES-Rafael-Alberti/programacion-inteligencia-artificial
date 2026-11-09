@@ -16,6 +16,16 @@ Se ha convertido en una alternativa potente a pandas, con el objetivo de ser:
 - 🧵 **Multihilo por defecto**
 - 🌐 **Seguro y estable** (gracias a Rust)
 
+### Itinerario de ejemplos
+
+Polars se puede aprender y utilizar **sin instalar ni conocer Pandas**. En este
+bloque, los ejemplos [24 (introducción)](../02-ejemplos/24_polars_intro.ipynb),
+[25 (operaciones)](../02-ejemplos/25_polars_operaciones.ipynb) y [26 (Polars
+avanzado y gráficos)](../02-ejemplos/26_polars_avanzado_con_graficos.ipynb)
+trabajan nativamente con Polars. El ejemplo 27 queda reservado para comparar
+Pandas y Polars, incluida la conversión y la interoperabilidad cuando sean
+ necesarias; el ejemplo 28 profundiza en operaciones avanzadas con Polars.
+
 ---
 
 ## 2. ¿Por qué usar Polars?
@@ -173,6 +183,10 @@ resultado = (
 
 ## 9. Comparación rápida: Pandas vs Polars
 
+La comparación detallada, la conversión y la interoperabilidad con Pandas se
+trabajan en el ejemplo 27. Polars no requiere Pandas para los ejemplos propios
+de este itinerario.
+
 ### **Pandas**
 
 ```python
@@ -266,9 +280,8 @@ resumen.head()
 
 ## 13. Conversión a Pandas (si fuera necesario)
 
-```python
-df_pandas = df.to_pandas()
-```
+La conversión se reserva para el ejemplo 27, dedicado a la comparación y la
+interoperabilidad. No es un requisito para trabajar con Polars.
 
 ---
 
@@ -282,7 +295,8 @@ Su velocidad, modelo columnar, y su ejecución en modo lazy lo convierten en una
 * análisis repetitivos
 * grandes volúmenes de datos
 
-Es la herramienta perfecta para sustituir o complementar a Pandas en muchos casos.
+Puede utilizarse de forma independiente o interoperar con Pandas cuando un
+caso concreto lo requiera; aprender Polars no depende de Pandas.
 
 
 Aquí va la **comparación clara y técnica** entre **Polars** y **Pandas con engine=“pyarrow”** (Pandas 2.x), porque mucha gente cree que “Pandas con Arrow ≈ Polars”, pero **no es así**.
@@ -311,4 +325,3 @@ Solo significa:
 * Pero **Pandas sigue siendo Pandas** (Python puro, sin paralelismo en su core).
 
 ---
-

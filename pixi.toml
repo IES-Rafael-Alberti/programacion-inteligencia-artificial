@@ -20,6 +20,10 @@ seaborn = ">=0.13,<1"
 plotly = ">=6,<7"
 scikit-learn = ">=1.5,<2"
 pyarrow = ">=17,<22"
+duckdb = ">=2.0.0,<3"
+
+[feature.ud2.target.linux-64.dependencies]
+duckdb-cli = ">=2.0.0,<3"
 
 # Machine Learning clásico (UD3).
 [feature.ud3.dependencies]
@@ -74,7 +78,6 @@ torchvision = ">=0.19,<1"
 
 [environments]
 default = ["base"]
-ud2 = ["base", "ud2"]
 ud3 = ["base", "ud3"]
 ud3-pycaret = ["ud3-pycaret"]
 ud3-flaml = ["base", "ud3", "ud3-flaml"]
@@ -82,3 +85,10 @@ ud3-datasets = ["base", "ud3", "ud3-datasets"]
 ud3-graph = ["base", "ud3", "ud3-graph"]
 ud4 = ["base", "ud4"]
 ud4-gpu = ["base", "ud4", "gpu"]
+
+[environments.ud2]
+features = ["base", "ud2"]
+
+[dependencies]
+polars = ">=2.1.0,<3"
+altair = ">=6.3.0,<7"
