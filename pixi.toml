@@ -13,6 +13,14 @@ scipy = ">=1.13,<2"
 jupyterlab = ">=4,<5"
 ipykernel = ">=6,<7"
 
+# Tratamiento de datos y visualización (UD2).
+[feature.ud2.dependencies]
+matplotlib = ">=3.8,<4"
+seaborn = ">=0.13,<1"
+plotly = ">=6,<7"
+scikit-learn = ">=1.5,<2"
+pyarrow = ">=17,<22"
+
 # Machine Learning clásico (UD3).
 [feature.ud3.dependencies]
 scikit-learn = ">=1.5,<2"
@@ -66,6 +74,7 @@ torchvision = ">=0.19,<1"
 
 [environments]
 default = ["base"]
+ud2 = ["base", "ud2"]
 ud3 = ["base", "ud3"]
 ud3-pycaret = ["ud3-pycaret"]
 ud3-flaml = ["base", "ud3", "ud3-flaml"]

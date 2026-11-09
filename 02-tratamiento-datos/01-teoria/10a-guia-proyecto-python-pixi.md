@@ -7,13 +7,13 @@ Esta guía acompaña a UD2 y aplica el [manual de Pixi](00b-manual-pixi-pia.md) 
 En la raíz del repositorio se versionan `pixi.toml` y `pixi.lock`. Desde esa carpeta:
 
 ```bash
-pixi install
-pixi run --environment default python --version
-pixi run --environment default python -c "import numpy, pandas; print(numpy.__version__, pandas.__version__)"
-pixi run --environment default jupyter lab
+pixi install --environment ud2
+pixi run --environment ud2 python --version
+pixi run --environment ud2 python -c "import numpy, pandas, matplotlib, seaborn, plotly; print(numpy.__version__, pandas.__version__, matplotlib.__version__, seaborn.__version__, plotly.__version__)"
+pixi run --environment ud2 jupyter lab
 ```
 
-La comprobación debe confirmar Python 3.12 y las versiones efectivamente resueltas. **Advertencia:** en el `pixi.toml` actual Matplotlib está declarado en `ud3`, no en `base/default`; por tanto no se debe afirmar que `default` ya lo contiene. Antes de impartir visualización hay que declararlo en la feature o entorno de UD2, o usar la ruta conda siguiente. La decisión de modificar el manifiesto y regenerar `pixi.lock` queda pendiente.
+La comprobación debe confirmar Python 3.12 y las versiones efectivamente resueltas. El entorno **`ud2`** declara Matplotlib, Seaborn, Plotly, scikit-learn y PyArrow para tratamiento y visualización. `base`/`default` no incluyen todos esos extras: no se debe afirmar que `default` ya los contiene. La ruta conda siguiente se conserva como alternativa.
 
 ## Ruta alternativa: conda
 

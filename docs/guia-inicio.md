@@ -27,6 +27,7 @@ No existe un único entorno válido para todas las unidades. Utiliza el nombre q
 | Entorno Pixi | Uso documentado |
 |---|---|
 | `default` | Base común de Python, NumPy, Pandas, SciPy y JupyterLab. |
+| `ud2` | Tratamiento de datos y visualización: Matplotlib, Seaborn, Plotly, scikit-learn y PyArrow. |
 | `ud3` | Machine Learning clásico con scikit-learn y XGBoost. |
 | `ud3-pycaret` | Práctica de PyCaret de UD3. |
 | `ud3-datasets` | Construcción de datasets de UD3. |

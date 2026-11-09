@@ -14,10 +14,11 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 | Entornos de Python | [Mapa y criterio de elección](01-teoria/00a-entornos-python.md), [manual de Pixi](01-teoria/00b-manual-pixi-pia.md) y [manual de conda](01-teoria/00c-manual-conda-pia.md). Se introducen aquí y se retoman en las unidades posteriores. |
 | Taller de entornos | [Instalar, configurar y probar](03-practicas/00-entornos-hazlo-tu.md): venv + pip, uv, conda y Pixi, una herramienta cada vez; comparación después de la práctica. |
 | Piloto de Matplotlib | [Caso «informe de personal»](03-practicas/caso-informe-personal.md) y [cuaderno de trabajo](03-practicas/02_matplotlib_hazlo_tu.ipynb): cinco situaciones, checkpoints y panel final. |
+| Sesión Titanic (2–3 h) | [Cuaderno](03-practicas/04_sesion_titanic.ipynb) y [entrega](03-practicas/entrega-titanic.md): Seaborn, Plotly, EDA y preparación para ML. |
 | Cierre de gráficas interactivas | [Plotly — hazlo tú](03-practicas/03_plotly_hazlo_tu.ipynb), para una clase posterior. Mismos datos para comparar formatos. [Archivos y listas de entrega](03-practicas/entrega-graficas.md). |
 | Práctica canónica | [`03-practicas/EDA_Visual_Practicas.ipynb`](03-practicas/EDA_Visual_Practicas.ipynb). Los ejercicios seleccionados y el itinerario R son refuerzo u opción docente. |
 | Entrega y evaluación | Notebook ejecutado, decisiones de limpieza y transformación justificadas, EDA, visualizaciones y conclusiones. [`04-evaluacion/rubrica.md`](04-evaluacion/rubrica.md) y [`04-evaluacion/checklist-entrega.md`](04-evaluacion/checklist-entrega.md) son una base revisable; el enunciado y la programación del grupo concretan la evaluación definitiva. El GIFT es un complemento si se activa en Moodle. |
-| Entorno real | La celda inicial del notebook enumera las dependencias de la práctica. La ruta común de ejecución está en [`docs/guia-inicio.md`](../docs/guia-inicio.md); el entorno Pixi `default` aporta la base, pero no declara por sí solo todos los extras de visualización. |
+| Entorno real | La celda inicial del notebook enumera las dependencias de la práctica. La ruta común de ejecución está en [`docs/guia-inicio.md`](../docs/guia-inicio.md); usa el entorno Pixi `ud2` para visualización (`pixi run --environment ud2 jupyter lab`). El entorno `default` no declara todos los extras de visualización. |
 | Guía de entorno/proyecto | [`01-teoria/10a-guia-proyecto-python-pixi.md`](01-teoria/10a-guia-proyecto-python-pixi.md), con rutas Pixi y conda para UD2. |
 
 ## Jerarquía de contenidos
@@ -84,6 +85,8 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 
 - `caso-informe-personal.md` — ficha del piloto de Matplotlib: caso, datos, orden de las situaciones y entregables.
 - `02_matplotlib_hazlo_tu.ipynb` — piloto del caso «informe de personal»: cinco situaciones, checkpoints, panel y exportación; seguimiento hecho/no hecho.
+- `04_sesion_titanic.ipynb` — sesión de Seaborn, Plotly y EDA con Titanic, con preparación para ML y checkpoints.
+- `entrega-titanic.md` — entrega de la sesión Titanic: cuaderno y HTML interactivo.
 - `03_plotly_hazlo_tu.ipynb` — cierre interactivo de otra clase: hover, facetas, leyenda y HTML autónomo.
 - `entrega-graficas.md` — dos entregas separadas, con estructura exacta de archivos y registro individual; se activan al cerrar cada bloque.
 - `EDA_Visual_Practicas.ipynb` — práctica integrada de visualización.
