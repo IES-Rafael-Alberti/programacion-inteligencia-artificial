@@ -9,9 +9,11 @@ Unidad dedicada al aprendizaje automático clásico con scikit-learn y CuML. Cub
 ### Teoría (`01-teoria/`)
 Guías de ML con scikit-learn y CuML (capítulos 00-04), preparación de datos, creación de datasets, despliegue con Streamlit/FastAPI, Pixi y feature stores con Hopsworks.
 
+- `05b-primeros-clasificadores.md` — referencia base y regresión logística, con interpretación y límites.
+
 ### Ejemplos (`02-ejemplos/`)
 - `01-bloque1-pandas-eda-visualizacion.ipynb` — Repaso Pandas, EDA y visualización
-- `02-bloque2-scikitlearn-modelos-basicos.ipynb` — Repaso Scikit-Learn
+- `02-bloque2-scikitlearn-modelos-basicos.ipynb` — Repaso Scikit-Learn; pendiente de revisión, no ejecutar completo como entrada.
 - `03-bloque3-pycaret-modelado-automatico.ipynb` — Repaso PyCaret
 - `04-cuml-vs-sklearn-demo.ipynb` — Comparativa CuML vs Scikit-Learn
 - `05-hopsworks-feature-store.ipynb` — Feature Store con Hopsworks
@@ -22,6 +24,7 @@ Guías de ML con scikit-learn y CuML (capítulos 00-04), preparación de datos, 
 - `scripts/` — Scripts auxiliares
 
 ### Prácticas (`03-practicas/`)
+- `01-primer-clasificador-titanic.ipynb` y `01-primer-clasificador-LEEME.md` — primera clasificación CPU, con CSV local, separación y pipeline.
 - `actividades/` — EDA-clasificación (Titanic, Ames Housing, California)
 - `laboratorios/Lab1/` — Creación de dataset de películas (TheMovieDB)
 - `laboratorios/Lab2/` — Creación de dataset meteorológico (OpenMeteo, AEMET)

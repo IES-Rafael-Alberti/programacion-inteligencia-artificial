@@ -92,6 +92,7 @@ El eje es **Pandas + Matplotlib + Seaborn**. A partir de esa base se introducen 
 - `entrega-graficas.md` — dos entregas separadas, con estructura exacta de archivos y registro individual; se activan al cerrar cada bloque.
 - `EDA_Visual_Practicas.ipynb` — práctica integrada de visualización.
 - `ejercicios_seleccionados/` — 10 ejercicios de Pandas con datasets.
+- [`ejercicios_seleccionados/00-FAQ-Repaso-pandas.ipynb`](03-practicas/ejercicios_seleccionados/00-FAQ-Repaso-pandas.ipynb) — FAQ de estructura, slicing e indexado: pregunta, razonamiento, pasos y parámetros. Compatible con pandas 2.2 y 3.x.
 - `r_exercises_titanic_with_tests/` — itinerario opcional R/Titanic para comparar Pandas ↔ dplyr; versiones profesor en `99-profesor/practicas/`.
 - Zips de apoyo para ejercicios Pandas/Polars/R.
 

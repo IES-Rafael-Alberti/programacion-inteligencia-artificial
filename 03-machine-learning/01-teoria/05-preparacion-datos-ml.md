@@ -9,10 +9,11 @@ Esto evita la *fuga de datos*: si un imputador, escalador o codificador conoce e
 ```python
 import pandas as pd
 
-# Dataset limpio tras el EDA; Survived es la variable objetivo.
-df = pd.read_parquet("datos/titanic_limpio.parquet")
+# CSV original distribuido con la práctica, situado junto al cuaderno.
+df = pd.read_csv("titanic.csv")
 y = df["Survived"]
-X = df.drop(columns=["Survived"])
+# Selección explícita: ni el objetivo ni una copia como Survived_label entran en X.
+X = df[["Age", "Fare", "Sex", "Embarked"]].copy()
 
 print("Dimensiones de X:", X.shape)
 print("Dimensiones de y:", y.shape)
@@ -68,7 +69,7 @@ preprocesado = ColumnTransformer(
     ]
 )
 
-# ÚNICO ajuste: aprende medianas, medias/desviaciones y categorías del entrenamiento.
+# Ejemplo didáctico: aprende parámetros únicamente del entrenamiento.
 X_train_preparado = preprocesado.fit_transform(X_train)
 # Solo aplica lo aprendido; no debe usarse fit_transform aquí.
 X_test_preparado = preprocesado.transform(X_test)
@@ -79,7 +80,7 @@ print("Prueba preparada:", X_test_preparado.shape)
 
 ## Entrenar sin romper la regla
 
-En la práctica, se recomienda encapsular preparación y modelo en un único `Pipeline`; así cada validación y predicción aplica el mismo flujo correctamente.
+En la práctica, se recomienda encapsular preparación y modelo en un único `Pipeline`; así cada validación y predicción aplica el mismo flujo correctamente. El `fit` siguiente ajusta de nuevo el preprocesador sobre entrenamiento dentro del pipeline; es una demostración independiente, no reutiliza los arrays preparados arriba.
 
 ```python
 from sklearn.linear_model import LogisticRegression

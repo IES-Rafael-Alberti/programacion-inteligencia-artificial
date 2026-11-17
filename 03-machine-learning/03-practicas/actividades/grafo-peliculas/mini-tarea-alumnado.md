@@ -10,7 +10,7 @@ Contexto: tras la demostración del profesorado, el grafo de películas ya está
 (Movie)-[:FEATURES]->(Actor)
 ```
 
-Consulta todo lo que necesites en la documentación del apéndice: [apéndice de dataset como grafo](../../01-teoria/apendice-dataset-grafos.md).
+Consulta todo lo que necesites en el [apéndice para el alumnado](apendice-alumnado.md).
 
 ## Entrega (al final de la sesión)
 
@@ -50,7 +50,7 @@ Comprueba: `Amy Adams` y `Jeremy Renner` coinciden solo en `Arrival`.
 
 ## Tarea 4 — Exportar una tabla de características (≈12 min)
 
-Ejecuta la consulta de características del apéndice (sección 4) y expórtala como CSV:
+Ejecuta la consulta de características del apéndice para el alumnado (sección 4) y expórtala como CSV:
 
 ```cypher
 MATCH (m:Movie)
@@ -78,4 +78,4 @@ El CSV/Parquet del capstone sigue siendo la fuente canónica para ML. Este grafo
 
 ## Ampliación programática (opcional)
 
-El módulo es Programación de IA: el objetivo último es usar el grafo desde un programa. Si te queda tiempo, prueba el ejemplo completo `03-machine-learning/02-ejemplos/grafo-peliculas-python/grafo_a_ml.py`, que consulta Neo4j desde Python, convierte el resultado a pandas y alimenta un modelo de scikit-learn con las características del grafo.
+El módulo es Programación de IA: una ampliación posterior puede consultar el grafo desde Python y utilizar sus características con un modelo de scikit-learn. Ese ejemplo necesita un fichero y un entorno adicionales; no forma parte del paquete básico de esta mini-tarea. Si te interesa, pide al profesor el material complementario.
